@@ -6,4 +6,3 @@ This repository contains the sources for [[http://docbook.org][DocBook.org]].
 
 Changes to this repository are processed by Travis CI published to
 DocBook.org automagically.
-
