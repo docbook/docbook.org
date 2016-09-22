@@ -338,7 +338,7 @@
 
 <!-- ============================================================ -->
 
-<xsl:template match="li[contains(@class,'first')]" mode="patchMenu">
+<xsl:template match="li[contains(@class,'first')]" mode="patchMenu" priority="10">
   <xsl:param name="title"/>
   <li>
     <xsl:copy-of select="@*"/>
