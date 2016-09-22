@@ -1,0 +1,197 @@
+| DocBook Technical Committee Meeting Minutes: 19 Mar 2002
+| ========================================================
+|
+| The DocBook Technical Committee met on Tuesday, 19 Mar 2002 at
+| 01:00p EST (10:00a PST, 18:00GMT, 19:00BST, 20:00CEST, 03:00JST+) for
+| one hour.
+|
+| Agenda
+|
+| 1. Roll call
+
+  Dick Hamilton
+  Nancy (Paisner) Harrison
+  Paul Grosso (prospective)
+  Sabine Ocker
+  Michael Smith
+  Bob Stayton
+  Norman Walsh
+
+Regrets
+
+  Dennis Evans
+
+Meeting called to order, 13:02EST.
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+None.
+
+| 4. Review of open action items {5 min}
+|
+|    a. Norm to write a concrete proposal for linking in DocBook 5.0
+|
+|      Action: continued.
+|
+|    d. Norm to post HTML Forms Module V1.1
+|
+|      Completed[10]
+|
+|    c. RFE 440667 Affiliation lacks CorpName: Norm to write concrete proposal
+|
+|      Completed[4]
+|
+|    d. Bob to propose explicit content models for Dublin Core metadata
+|
+|      Completed[below]
+|
+|    e. Norm to post the list of additional places for metadata to the list.
+|
+|      Completed[5]
+|
+|    f. Norm to follow-up on RFE 470599 Need an imagedata to fit to max size
+|
+|      Completed[6]
+|
+|    g. Norm to follow-up on RFE 473365 Allow optional in funcprototype
+|
+|      Continued.
+|
+|    h. Norm to put the following issues on the agenda for the next meeting:
+|
+|       RFE 488378 Support xml:lang on the agenda
+|       RFE 482818 Simplify ToC content model
+|       RFE 472229 Allow HTML tables
+|       RFE 480957 New name and address markup
+|       RFE 491629 Add <personname> to %gen.char.class
+|
+|       Completed[below]
+|
+| 5. Participation requirements for email ballots {5 min}
+
+Put action closing date on the email ballot subject. Voting members
+are expected to reply to all ballots, even if they indicate
+abstention.
+
+| 5b. Proposed: Make DocBook TC meetings 90 minutes instead of 60.
+
+Accepted.
+
+Action: Sabine to update the teleconference service.
+
+| 6. Review of publication plan {5 min}
+
+Feature freeze on 4.2 at this meeting.
+
+| 7. Dublin Core metadata {10 min}
+|
+|    Bob's proposal[7]
+
+Move to accept the proposal as amended[11]. Proposal passes without objection.
+
+| 8. Metadata location {10 min}
+|
+|    The proposed list was:
+|
+|      equation, example, figure, informalequation, informalexample,
+|      informalfigure, informaltable, itemizedlist, legalnotice, msgset,
+|      orderedlist, procedure, qandadiv, qandaentry, qandaset, table,
+|      variablelist
+|
+|    And there was no disagreement on the list. Of the proposed names,
+|    "blockinfo" or "blockmeta" and "metainfo" were in a dead heat.
+
+Proposal: adopt blockinfo. Proposal passes without objection.
+
+| 8b. What are we going to do about HelpSet? {5 min}
+
+Action: Dick to restart the discussion on the DocBook list.
+
+Action: Dick to compare his internal customizations to the last
+HelpSet proposal. There was some discussion following the last
+proposal[12], which should be a good place to start.
+
+Action: Nancy to review DITA for help authoring and summarize.
+
+| 9. Review of open RFEs[2] {20 min}
+|
+|      To browse a specific RFE, enter the URL (on one line):
+|
+|         http://sourceforge.net/tracker/index.php?func=detail&;
+|         group_id=21935&atid=384107&aid=XXXX
+|
+|      where XXXX is the RFE number.
+|
+|     480954 Extend textobject to insert external files
+|
+|            Confirm that we accepted this.
+
+Accepted.
+
+|     480957 New name and address markup
+|
+|            Proposal[8]
+
+Accepted.
+
+|     491629 Add <personname> to %gen.char.class
+
+Accepted.
+
+|     440667 Affiliation lacks CorpName
+|
+|            Proposal[4]
+
+Accepted.
+
+Add 'consortium' to the enumerated list of values for class. Accepted.
+
+|     472229 Allow HTML tables
+
+Action: Paul to attempt a merged table model
+
+Postpone until V4.3 at least.
+
+|     482818 Simplify ToC content model
+
+Postpone until V4.3 at least.
+
+|     488378 Support xml:lang
+|
+|            We could do this in 4.2 because the prefix is fixed.
+
+Postpone until there's more demand
+
+|     522552 Add title attribute to <ulink> element
+
+Action: Mike to write a proposal for some form of generic annotation mechanism.
+
+Meeting adjourned by lack of time, 14:00EST.
+
+|     473365 Allow optional in funcprototype
+|     488368 Simplify single index entries
+|     495853 add 'caption' to listitem content-model
+|     507975 revision should allow author*
+|     514244 Allowing xref inside link
+|     514425 Simplify info elements
+|     514435 Allow reference within refentry
+|     517604 Optional Title for GlossList
+|     518074 More database classes
+|     524225 iso-latin-5 ent
+|
+| [1] http://lists.oasis-open.org/archives/docbook/200201/msg00072.html
+| [2] http://www.openpublish.com.au/Index.html
+| [3] http://www.oasis-open.org/docbook/xmlcharent/entities-2002-02-04.html
+| [4] http://sourceforge.net/docman/display_doc.php?docid=9351&group_id=21935
+| [5] http://lists.oasis-open.org/archives/docbook/200201/msg00073.html
+| [6] http://sourceforge.net/docman/display_doc.php?docid=9357&group_id=21935
+| [7] http://lists.oasis-open.org/archives/docbook-tc/200202/msg00005.html
+| [8] http://sourceforge.net/docman/display_doc.php?docid=9354&group_id=21935
+| [9] http://sourceforge.net/docman/display_doc.php?docid=9356&group_id=21935
+[10] http://lists.oasis-open.org/archives/docbook/200203/msg00063.html
+[11] http://lists.oasis-open.org/archives/docbook-tc/200203/msg00010.html
+[12] http://lists.oasis-open.org/archives/docbook/200110/msg00082.html

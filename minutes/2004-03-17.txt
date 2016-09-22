@@ -1,0 +1,237 @@
+DocBook Technical Committee Meeting Minutes: 17 March 2004
+=============================================================
+
+The DocBook Technical Committee met on Wednesday, 17 Mar 2004 at
+05:00p EST (02:00p PST, 22:00GMT, 22:00BST, 23:00CEST, 07:00JST+,
+03:30a India+) for 90 minutes.
+
+
+1. Attendees:
+Steven Cogorno, Gary Cornelius, Adam Di Carlo, Paul Grosso,
+Dick Hamilton, Scott Hudson, Mark Johnson,
+Jirka Kosek, Larry Rowland, Michael Smith, Robert Stayton,
+Norman Walsh
+
+Absent: Nancy Harrison
+
+2. Accepted the minutes[1] of the previous meeting
+
+3. Next meeting: 21 April 2004.
+
+No regrets.
+
+4. Review of the agenda.
+
+No additions.
+
+5. Review of open action items
+
+    a. Mike to provide a better proposal for choicelist markup.
+       CONTINUE.
+    b. Mike to reconsider the annotation problem and post his thoughts.
+       CONTINUE.
+    c. Norm to add <anchor> and remap attribute to simplified DocBook.
+       CONTINUE.
+    d. Dick to examine the use of alt, possibly as part
+       of the annotation discussion.
+       CONTINUE.
+    e. Bob to test HTML tables in 4.3.
+       COMPLETED.
+
+6. Any response from OASIS to Norm's letter about Kavi? [2]
+
+OASIS is developing a requirements document for a new document
+management system.  The requirements have been discussed on
+the chairs mailing list.
+
+ACTION: Norm will summarize the document and discussion.
+
+There was some discussion of docbook.org and the DocBook
+SourceForge site about consolidating DocBook standards
+documents and tools onto one site.  It is something the
+SourceForge development team could discuss.
+
+7. DocBook V4.3 CR3
+
+No new bugs reported, and Bob completed some testing of
+HTML tables.  Mark pointed out that when it is released
+in a Debian package it will get a lot more testing.
+The group decided to not wait.
+Bob pointed out that the reference pages on
+docbook.org for the new elements are not complete,
+Mike asked if a flattened version of the DTD could be
+included (see agenda item 7b).
+
+The committee approved the release of the 4.3 DTD.
+
+ACTION: Norm to publish the 4.3 DTD as an
+official committee specification, in both
+XML and SGML forms.
+
+ACTION: Norm to complete the reference pages for the
+new 4.3 elements on the docbook.org site.
+
+7b.  Additional forms of the 4.3 DTD.
+
+The group decided that it would publish only the
+XML and SGML DTDs as the normative standard.
+We would also permit the publishing of other
+formats as non-normative.
+
+ACTION: Norm to publish these unofficial versions
+
+  - RelaxNG XML version
+  - RelaxNG compact syntax version
+  - W3C XML Schema
+  - flattened version of the XML DTD
+
+
+8. DocBook V5.0 (RELAX NG)
+
+Norm reported that the RelaxNG version of 5.0
+is complete, and he has been using it.
+He reported that the Trang conversion tool has
+less flexibility when generating DTDs than XML
+Schemas.  The DTD that comes out will be flat,
+lacking parameter entities, and thus will not
+be as easy to customize.  Nor will one be able to
+port an existing customization layer, or customize
+with PEs in the internal subset the way you
+can now.  Mike suggested that
+people customize the RelaxNG version and
+rengenerate the DTD.
+
+Norm wrote a paper with Sebastian Rahtz to
+enable merger of TEI and DocBook elements.
+
+ACTION: Norm to post a reference to the paper.
+
+Will there be a 4.4 DTD before 5.0?  The committee
+left that as a possibility, depending on whether it
+was needed and when 5.0 would be ready.
+
+9. biblioref proposal [3]
+   (formerly Improved citation support, RFE 810932).
+   Additional replies for consideration [4] [5]
+
+The committee reviewed the latest proposal. [10]
+The committee changed some of the attribute names
+to be more consistent:
+
+# define new biblioref element
+     biblioref = element biblioref {
+       biblioref.attlist
+     }
+     biblioref.attlist &=
+         attribute linkend { xsd:IDREF },
+         attribute endterm { xsd:IDREF }?,
+         attribute units { xsd:token }?,
+         attribute begin {xsd:token }?,
+         attribute end { xsd:token }?,
+         attribute xrefstyle { xsd:token }?
+
+The renderas attribute was changed to xrefstyle
+because it is so similar to the xrefstyle in
+the xref element. It will be CDATA rather than
+enumerated values because the group felt it
+was not possible to cover everyone's needs with
+a fixed list of values.  The documentation will
+include a list of suggested values, and a
+stylesheet will ultimately determine which
+values are supported in a given environment.
+
+10. Reconsider the policy for backwards incompatible changes.
+
+The current practice is that backwards incompatible
+changes to the DTD are to be described one full release
+before they are released.  That is, any such changes
+for 5.0 should have been commented on in version 4.0.
+However, version 4.0 was released in May 2000, almost
+four years ago.  The changes due to converting to
+RelaxNG could not have been anticipated then.
+Norm proposed a one-time exception to the process
+for 5.0 because it will change the validation process
+significantly.  The committee approved.
+
+The group felt it was important to help those using
+version 4 to prepare for the eventual release of 5.0
+by publicizing the development.
+
+ACTION: Norm to produce a draft spec of 5.0.
+
+11.  Revisit addition of 'language' attribute
+to programlisting and synopsis (use MIME?).
+See [6] for the original RFE 798616.
+See [7] for the minutes of the decision.
+See [8] and [9] for further discussion about it.
+
+The committee discussed adding a 'syntax' attribute,
+but declined because of potential confusion with
+the 'language' attribute.  Norm suggested that
+MIME types could be used to indicate both
+language and syntax in a 'language' attribute,
+using the well-known MIME standard.
+The commitee decided to close the RFE with
+no action.
+
+12. Generalizing programlisting (Steve).
+
+Steve got a lukewarm response to his posting about
+changing the name of programlisting.  There was
+no strong demand to change it, and no clear
+benefit for such a significant backwards incompatible
+change.  Mike suggested adapting the textdata
+element to support the request.
+
+ACTION: Bob to add using textdata to the next agenda
+(near the top).
+
+13. Review of Requests for Enhancement
+
+Ran out of time.  Norm suggested we allocate time
+at the next meeting.
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;;
+      group_id=21935&atid=384107&aid=XXXX
+
+      543064 JavaObject tag
+      675024 form, script, applet support
+      698026 cannot embed <superscript> within <guibutton>
+      702185 add procedure as child of para
+      711815 Tagging for subtler breaks or "pauses" within a chapter
+      742373 Splitting Segmented List
+      752632 Color control of CALS table element
+      798616 syntax="" or notation="" needed for code listings
+      828720 'spacing' attr. for 'variablelist'
+      882791 Allow 'procedure' within 'para'
+
+
+     The following RFEs are awaiting action items
+
+      413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+      431411 RFE 70: add generic linking capability (Norm)
+      522552 Add title attribute to <ulink> element (Mike, annotations)
+      541444 caption in mediaobjectco (Dick)
+      565637 Associate non-inline image with link (Norm, generic linking)
+      574880 Add annotation element (Mike)
+      613293 Generalize programlisting (Steve)
+      623524 (Re)Consider "choicelist" markup (Mike)
+
+     The following RFEs are identified as V6.0 or later
+
+      531851 Remove inline person name elements
+      532088 Remove RevHistory from qandaentry
+- ---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200402/msg00012.html
+[2] http://lists.oasis-open.org/archives/docbook-tc/200402/msg00013.html
+[3] http://lists.oasis-open.org/archives/docbook-tc/200311/msg00014.html
+[4] http://lists.oasis-open.org/archives/docbook-tc/200401/msg00007.html
+[5] http://lists.oasis-open.org/archives/docbook-tc/200401/msg00008.html
+[6] http://sourceforge.net/tracker/index.php?func=detail&aid=798616&group_id=21935&atid=384107
+[7] http://lists.oasis-open.org/archives/docbook/200309/msg00037.html
+[8] http://lists.oasis-open.org/archives/docbook/200401/msg00011.html
+[9] http://lists.oasis-open.org/archives/docbook/200401/msg00019.html
+[10] http://lists.oasis-open.org/archives/docbook-tc/200403/msg00008.html

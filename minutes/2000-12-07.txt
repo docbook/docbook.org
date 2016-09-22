@@ -1,0 +1,219 @@
+DocBook TC Minutes, 7 Dec 2000                               
+
+Summary                                                       
+                                                              
+These notes summarize the DocBook Technical Committee (TC)    
+meeting that took place in Washington D.C. on 6 and 7 Dec     
+2000 as part of the OASIS meetings colocated with XML 2000.   
+                                                              
+  ---------------------------------------------------------   
+                                                              
+6 Dec                                                         
+                                                              
+Failed to achieve quorum. No official meeting.                
+                                                              
+  ---------------------------------------------------------   
+                                                              
+7 Dec                                                         
+                                                              
+Meeting called to order by the chair.                         
+                                                              
+Present                                                       
+                                                              
+  o Dennis Evans                                              
+                                                              
+  o Tony Graham                                               
+                                                              
+  o Sabine Ocker (provisional member)                         
+                                                              
+  o Michael Sabrio                                            
+                                                              
+  o Norman Walsh (Chair)                                      
+                                                              
+Agenda                                                        
+                                                              
+  o Determine meeting dates for 2001                          
+                                                              
+  o Discuss plans for DocBook 5.0                             
+                                                              
+  o Review RFEs                                               
+                                                              
+  o Discuss Linking in DocBook                                
+                                                              
+  o Discuss parameter entity reorganization                   
+                                                              
+  o Discuss XML Schema                                        
+                                                              
+Determine meeting dates for 2001                              
+                                                              
+Moved: we will meet face to face for 1 day at XML Europe      
+(Berlin) and XML 2001 (Orlando, FL). We will request that our 
+meetings be scheduled on the last day of the conference so as 
+to overlap with other technical activities as little as       
+possible. Furthermore, we will have telcons on 23 Feb, 27     
+Jul, and 28 Sep.                                              
+                                                              
+The motion was adopted without objection.                     
+                                                              
+Discuss plans for DocBook 5.0                                 
+                                                              
+In accordance with earlier plans, DocBook 5.0 will be an XML  
+DTD. However, there was little support for completely         
+abandoning SGML. Many existing SGML systems will continue to  
+be SGML based for some time and there are features (most      
+notably exclusions) that are lost in XML.                     
+                                                              
+Moved: the committee will produce an XML version of DocBook   
+5.0 with sufficient parameterization to allow SGML features   
+to be "turned on" with a very small customization layer. The  
+committee will provide the customization layer.               
+                                                              
+The motion was adopted without objection.                     
+                                                              
+There was some discussion of using the public text display    
+version to distinguish between the XML and SGML DTDs but it   
+was eventually rejected.                                      
+                                                              
+Moved: the FPI for the XML version of DocBook V5.0 will be:   
+                                                              
+-//OASIS//DTD DocBook XML V5.0//EN                            
+                                                              
+and the FPI for the SGML version will be:                     
+                                                              
+-//OASIS//DTD DocBook SGML V5.0//EN                           
+                                                              
+The motion was adopted without objection.                     
+                                                              
+Review RFEs                                                   
+                                                              
+It was observed that the RFE database is in a rather jumbled  
+state. Action to norm: fix it.                                
+                                                              
+RFE #140: Allow multiple MsgExplan inside SimpleMsgEntry      
+                                                              
+   Moved: change the content model of SimpleMsgEntry to allow 
+   MsgExplan+.                                                
+                                                              
+   The motion was adopted without objection.                  
+                                                              
+   The fact that we were adopting a motion that made the      
+   content model of SimpleMsgEntry more complex was not lost  
+   on us.                                                     
+                                                              
+RFE #144: Add introductory material to lists                  
+                                                              
+   This continues to be an issue for Sun documentation.       
+                                                              
+   Recap: Authors sometimes need to provide a paragraph or    
+   two of description before the items of a list. These       
+   paragraphs are considered to be part of the list, so it's  
+   perhaps not appropriate to put them before the list.       
+   Putting them before the list is problematic because        
+   grabbing the list and moving it elsewhere will not capture 
+   the necessary introductory material. Procedure already     
+   allows this structure.                                     
+                                                              
+   No problems have been reported due to the fact that        
+   procedure allows this structure.                           
+                                                              
+   Moved: add %%component mix;*; (minus the list elements) to 
+   orderedlist, itemizedlist, calloutlist, and variablelist   
+   before the first list item.                                
+                                                              
+   The motion was adopted without objection.                  
+                                                              
+RFE #145: Allow additional material after the last step in    
+Procedure                                                     
+                                                              
+   Tabled: waiting for feedback from Sun on whether or not    
+   this solves the particular problem they've encountered.    
+                                                              
+RFE #93: Add markup for forms                                 
+                                                              
+   Tabled: wait for the W3C XForms WG to finish then consider 
+   plugging it in similar to the MathML plugin.               
+                                                              
+RFE #114: Support for EBNF (XML Spec productions)             
+                                                              
+   Tabled: leave as customization layer until                 
+   interoperability is demonstrated. Action to the people who 
+   claim to need this: give us feedback!                      
+                                                              
+RFE #132: Allow date to occur inline                          
+                                                              
+   Action: discuss on TC mailing list. Is this in scope? Do   
+   we want to do this?                                        
+                                                              
+RFE #133: Add newsgroup element                               
+                                                              
+   Action: definitely in scope. Discuss on TC list: do we add 
+   this as an element (like email) or a class on systemitem?  
+                                                              
+RFE #134: Additional elements to describe file systems and    
+database objects                                              
+                                                              
+   The request for database-related elements seems already to 
+   be handled by the database element.                        
+                                                              
+   Moved: add a new class value to filename, "extension", to  
+   identify filename extensions.                              
+                                                              
+   The motion was adopted without objection.                  
+                                                              
+RFE #135: Support for a po tag for creating pot files for     
+easier doc translation                                        
+                                                              
+   Tabled: we don't understand the request. Action to norm:   
+   ask for additional detail.                                 
+                                                              
+RFE #136: Allow co in userinput                               
+                                                              
+   Tabled: callouts in the middle of a paragraph seem odd.    
+   Action to norm: ask for additional detail.                 
+                                                              
+RFE #138: Add PDF to ImageData format notations               
+                                                              
+   The motion was adopted without objection.                  
+                                                              
+RFE #139: Add SVG as a Notation                               
+                                                              
+   The motion was adopted without objection.                  
+                                                              
+RFE #141: Add 'contribution' attribute to OtherCredit         
+                                                              
+   This would allow the contribution made by persons given    
+   other credit to be identified. Discuss on TC list. What    
+   about multiple authors?                                    
+                                                              
+Discuss Linking in DocBook                                    
+                                                              
+Thinking about XLink:                                         
+                                                              
+  o Link/Ulink we think will be collapsed into Link using     
+    XLink "simple link" semantics.                            
+                                                              
+  o Xref will remain because of the gentext processing        
+    expectation. An empty "Link" cannot have the XRef         
+    semantic because it conflicts with the empty "Ulink"      
+    semantic.                                                 
+                                                              
+  o Olink could be collapsed into link because xpointer can   
+    replace targetdocent.                                     
+                                                              
+    Sun makes heavy use of OLink, action to Dennis:           
+    investigate the problems that removing OLink would cause. 
+                                                              
+  o Action to Norm: After Dennis reports, make a concrete     
+    proposal before 5.0 is officially published (if XLink is  
+    a Recommendation in time). Include an extendedlink        
+    element for use inside *info elements.                    
+                                                              
+Discuss parameter entity reorganization                       
+                                                              
+Discussion continues.                                         
+                                                              
+Discuss XML Schema                                            
+                                                              
+Discussion continues.                                         
+                                                              
+Meeting adjourned.                                            

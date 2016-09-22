@@ -1,0 +1,90 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='help'>
+<info>
+<title>Help!</title>
+</info>
+
+<para>Support for DocBook is available from several forums.</para>
+
+<section>
+<title>FAQ</title>
+
+<para><personname><firstname>Dave</firstname><surname>Pawson</surname>
+</personname> maintains the
+<link xlink:href="http://www.dpawson.co.uk/docbook/">DocBook FAQ</link>.
+</para>
+</section>
+
+<section>
+<title>Mailing Lists</title>
+
+<para>There are two public DocBook discussion lists to which you can
+subscribe. <link xlink:href="guidelines">Guidelines</link> for
+posting to these lists are posted periodically.</para>
+
+<para>Use the
+<link xlink:href="http://www.oasis-open.org/mlmanage/index.php">subscription
+manager</link> to subscribe or unsubscribe from these lists:</para>
+
+<variablelist>
+<varlistentry>
+<term><email>docbook@lists.oasis-open.org</email></term>
+<listitem>
+<para>For general DocBook questions. These include questions about the
+DTD or schemas, questions about the syntax or semantics of elements,
+and general DocBook markup questions. Please don’t post questions
+about the stylesheets, formatting or processing issues, or other
+application-specific questions to this list.
+</para>
+
+<para>This list is archived at OASIS:
+<link xlink:href="http://lists.oasis-open.org/archives/docbook/"/>.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><email>docbook-apps@lists.oasis-open.org</email></term>
+<listitem>
+<para>For stylesheet and application-related DocBook questions. This
+is the place to ask questions about formatting or processing issues,
+stylesheets, and other applications.
+</para>
+
+<para>This list is archived at OASIS:
+<link xlink:href="http://lists.oasis-open.org/archives/docbook-apps/"/>.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para>Digested versions of each list are available if you prefer to
+receive fewer messages.</para>
+
+<para>Please <emphasis>don't cross-post</emphasis> questions to
+both lists. In fact, please don't cross-post messages to either DocBook
+list and any other mailing list.</para>
+</section>
+
+<section>
+<title>IRC</title>
+
+<para>Many DocBook users, including several members of the Technical
+Committee regularly hang out on the
+<link xlink:href="http://en.wikipedia.org/wiki/Internet_Relay_Chat">IRC</link>
+channel
+“<link xlink:href="irc://irc.freenode.net/docbook">#docbook</link>”
+on <link xlink:href="http://www.freenode.net/">freenode</link>.</para>
+</section>
+
+<section>
+<title>Wiki</title>
+
+<para>There is a DocBook
+<link xlink:href="http://en.wikipedia.org/wiki/Wiki">wiki</link>
+at <link xlink:href="http://wiki.docbook.org/"/>.
+</para>
+</section>
+</article>

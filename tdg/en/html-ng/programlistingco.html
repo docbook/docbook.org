@@ -1,0 +1,115 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>programlistingco</title><link rel="stylesheet" href="defguide.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.64.1"><link rel="home" href="docbook.html" title="DocBook"><link rel="up" href="ref-elements.html" title="DocBook Element Reference"><link rel="previous" href="programlisting.html" title="programlisting"><link rel="next" href="prompt.html" title="prompt"></head><body><div class="navheader"><table border="0" cellpadding="0" cellspacing="0" width="100%" summary="Navigation table"><tr><td align="left">&nbsp;<a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a>&nbsp;<a title="programlisting" href="programlisting.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;<a title="DocBook Element Reference" href="ref-elements.html"><img src="figures/nav-up.png" alt="Up" border="0"></a>&nbsp;<a title="prompt" href="prompt.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td><td align="right"><i>DocBook: The Definitive Guide</i> 2.0.9 <span class="alpha-version">(<a href="co01.html"><em>Alpha</em></a>)</span> </td></tr></table></div><div class="refentry" lang="en"><a name="programlistingco.element"></a><div class="titlepage"><div><h1 class="title">programlistingco</h1></div><div><p class="releaseinfo">$Revision: 1.3 $</p></div><div><p class="pubdate">$Date: 2002/06/12 11:18:30 $</p></div></div><div class="refnamediv"><p>programlistingco &#8212; A program listing with associated areas used in callouts</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><h3><span class="bold"><b>Content Model</b></span></h3><pre class="synopsis">programlistingco ::=
+(<a href="areaspec.html"><tt class="sgmltag-element">areaspec</tt></a>,<a href="programlisting.html"><tt class="sgmltag-element">programlisting</tt></a>,<a href="calloutlist.html"><tt class="sgmltag-element">calloutlist</tt></a>*)</pre><h3><span class="bold"><b>Attributes</b></span></h3><p><a href="ref-elements.html#common.attributes" title="Common Attributes">Common attributes</a></p><div class="docbookng-synopsis"><h3>DocBook NG &#8220;Bourbon&#8221; Content Model</h3><div class="define-first"><div class="element">programlistingco ::=<ul><li>Sequence of:</li><ul class="group"><li><tt><a href="info.html">info</a></tt>? (db.info.titleforbidden)</li><li><tt><a href="areaspec.html">areaspec</a></tt></li><li><tt><a href="programlisting.html">programlisting</a></tt></li><li>Zero or more of:</li><ul class="zeroOrMore"><li><tt><a href="calloutlist.html">calloutlist</a></tt></li></ul></ul></ul><h4>DocBook NG &#8220;Bourbon&#8221; Attributes</h4><p>Common attributes and common linking attributes.</p></div></div></div></div><div class="refsect1" lang="en"><a name="d0e143616"></a><h2>Description</h2><p>
+Callouts, such as numbered bullets, are an annotation mechanism.  In an
+online system, these bullets are frequently &#8220;<span class="quote">hot,</span>&#8221; and clicking on
+them sends you to the corresponding annotation.
+</p><p>
+A <a href="programlistingco.html"><tt class="sgmltag-element">ProgramListingCO</tt></a> is a wrapper around an <a href="areaspec.html"><tt class="sgmltag-element">AreaSpec</tt></a> and
+a <a href="programlisting.html"><tt class="sgmltag-element">ProgramListing</tt></a>.  An <a href="areaspec.html"><tt class="sgmltag-element">AreaSpec</tt></a> identifies the locations
+(coordinates)
+in the <a href="programlisting.html"><tt class="sgmltag-element">ProgramListing</tt></a> where the callouts occur.
+The <a href="programlistingco.html"><tt class="sgmltag-element">ProgramListingCO</tt></a> may also contain the list of annotations in
+a <a href="calloutlist.html"><tt class="sgmltag-element">CalloutList</tt></a>, although the <a href="calloutlist.html"><tt class="sgmltag-element">CalloutList</tt></a> may also
+occur outside of the wrapper, elsewhere in the document.
+</p><p>
+It is also possible to embed <a href="co.html"><tt class="sgmltag-element">CO</tt></a> elements directly in the
+verbatim text, in order to avoid having to calculate the
+correct coordinates.  If you decided to go this route, use a 
+<a href="programlisting.html"><tt class="sgmltag-element">ProgramListing</tt></a> and a <a href="calloutlist.html"><tt class="sgmltag-element">CalloutList</tt></a> without the
+<a href="programlistingco.html"><tt class="sgmltag-element">ProgramListingCO</tt></a> wrapper.  A <a href="programlistingco.html"><tt class="sgmltag-element">ProgramListingCO</tt></a>
+must specify at least one coordinate.
+</p><p>
+For a complete description of callouts, see <a href="callout.html"><tt class="sgmltag-element">Callout</tt></a>.
+</p><div class="refsect2" lang="en"><a name="d0e143672"></a><h3>Processing expectations</h3><p>
+Formatted as a displayed block. This element is displayed verbatim;
+whitespace and linebreaks within this element are significant.
+</p><p>
+The mandatory processing expectations of a <a href="programlistingco.html"><tt class="sgmltag-element">ProgramListingCO</tt></a> are
+minimal: a system is expected to render the program listing and the
+callout list, if present.
+</p><p>
+If explicit <a href="co.html"><tt class="sgmltag-element">CO</tt></a> elements are embedded in a
+<a href="programlisting.html"><tt class="sgmltag-element">ProgramListing</tt></a>, they must generate appropriate
+callout marks.
+</p><p>
+In online environments, the processing system may be able to instantiate
+the linking relationships between the callout marks in the program listing and
+the annotations.
+Some systems may even be able to go a step further and generate
+the callout marks automatically from the coordinate information,
+but this level of sophistication is not mandatory.
+</p></div><div class="refsect2" lang="en"><a name="d0e143692"></a><h3>Parents</h3><p>These elements contain programlistingco:
+<span class="simplelist"><a href="answer.html"><tt class="sgmltag-element">answer</tt></a>, <a href="appendix.html"><tt class="sgmltag-element">appendix</tt></a>, <a href="article.html"><tt class="sgmltag-element">article</tt></a>, <a href="bibliodiv.html"><tt class="sgmltag-element">bibliodiv</tt></a>, <a href="bibliography.html"><tt class="sgmltag-element">bibliography</tt></a>, <a href="blockquote.html"><tt class="sgmltag-element">blockquote</tt></a>, <a href="callout.html"><tt class="sgmltag-element">callout</tt></a>, <a href="caption.html"><tt class="sgmltag-element">caption</tt></a>, <a href="caution.html"><tt class="sgmltag-element">caution</tt></a>, <a href="chapter.html"><tt class="sgmltag-element">chapter</tt></a>, <a href="colophon.html"><tt class="sgmltag-element">colophon</tt></a>, <a href="constraintdef.html"><tt class="sgmltag-element">constraintdef</tt></a>, <a href="dedication.html"><tt class="sgmltag-element">dedication</tt></a>, <a href="entry.html"><tt class="sgmltag-element">entry</tt></a>, <a href="example.html"><tt class="sgmltag-element">example</tt></a>, <a href="figure.html"><tt class="sgmltag-element">figure</tt></a>, <a href="footnote.html"><tt class="sgmltag-element">footnote</tt></a>, <a href="glossary.html"><tt class="sgmltag-element">glossary</tt></a>, <a href="glossdef.html"><tt class="sgmltag-element">glossdef</tt></a>, <a href="glossdiv.html"><tt class="sgmltag-element">glossdiv</tt></a>, <a href="important.html"><tt class="sgmltag-element">important</tt></a>, <a href="index.html"><tt class="sgmltag-element">index</tt></a>, <a href="indexdiv.html"><tt class="sgmltag-element">indexdiv</tt></a>, <a href="informalexample.html"><tt class="sgmltag-element">informalexample</tt></a>, <a href="informalfigure.html"><tt class="sgmltag-element">informalfigure</tt></a>, <a href="itemizedlist.html"><tt class="sgmltag-element">itemizedlist</tt></a>, <a href="legalnotice.html"><tt class="sgmltag-element">legalnotice</tt></a>, <a href="listitem.html"><tt class="sgmltag-element">listitem</tt></a>, <a href="msgexplan.html"><tt class="sgmltag-element">msgexplan</tt></a>, <a href="msgtext.html"><tt class="sgmltag-element">msgtext</tt></a>, <a href="note.html"><tt class="sgmltag-element">note</tt></a>, <a href="orderedlist.html"><tt class="sgmltag-element">orderedlist</tt></a>, <a href="para.html"><tt class="sgmltag-element">para</tt></a>, <a href="partintro.html"><tt class="sgmltag-element">partintro</tt></a>, <a href="preface.html"><tt class="sgmltag-element">preface</tt></a>, <a href="procedure.html"><tt class="sgmltag-element">procedure</tt></a>, <a href="qandadiv.html"><tt class="sgmltag-element">qandadiv</tt></a>, <a href="qandaset.html"><tt class="sgmltag-element">qandaset</tt></a>, <a href="question.html"><tt class="sgmltag-element">question</tt></a>, <a href="refsect1.html"><tt class="sgmltag-element">refsect1</tt></a>, <a href="refsect2.html"><tt class="sgmltag-element">refsect2</tt></a>, <a href="refsect3.html"><tt class="sgmltag-element">refsect3</tt></a>, <a href="refsection.html"><tt class="sgmltag-element">refsection</tt></a>, <a href="refsynopsisdiv.html"><tt class="sgmltag-element">refsynopsisdiv</tt></a>, <a href="revdescription.html"><tt class="sgmltag-element">revdescription</tt></a>, <a href="sect1.html"><tt class="sgmltag-element">sect1</tt></a>, <a href="sect2.html"><tt class="sgmltag-element">sect2</tt></a>, <a href="sect3.html"><tt class="sgmltag-element">sect3</tt></a>, <a href="sect4.html"><tt class="sgmltag-element">sect4</tt></a>, <a href="sect5.html"><tt class="sgmltag-element">sect5</tt></a>, <a href="section.html"><tt class="sgmltag-element">section</tt></a>, <a href="setindex.html"><tt class="sgmltag-element">setindex</tt></a>, <a href="sidebar.html"><tt class="sgmltag-element">sidebar</tt></a>, <a href="simplesect.html"><tt class="sgmltag-element">simplesect</tt></a>, <a href="step.html"><tt class="sgmltag-element">step</tt></a>, <a href="taskprerequisites.html"><tt class="sgmltag-element">taskprerequisites</tt></a>, <a href="taskrelated.html"><tt class="sgmltag-element">taskrelated</tt></a>, <a href="tasksummary.html"><tt class="sgmltag-element">tasksummary</tt></a>, <a href="td.html"><tt class="sgmltag-element">td</tt></a>, <a href="textobject.html"><tt class="sgmltag-element">textobject</tt></a>, <a href="th.html"><tt class="sgmltag-element">th</tt></a>, <a href="tip.html"><tt class="sgmltag-element">tip</tt></a>, <a href="variablelist.html"><tt class="sgmltag-element">variablelist</tt></a>, <a href="warning.html"><tt class="sgmltag-element">warning</tt></a></span>.</p></div><div class="refsect2" lang="en"><a name="d0e143891"></a><h3>Children</h3><p>The following elements occur in programlistingco:
+<span class="simplelist"><a href="areaspec.html"><tt class="sgmltag-element">areaspec</tt></a>, <a href="calloutlist.html"><tt class="sgmltag-element">calloutlist</tt></a>, <a href="programlisting.html"><tt class="sgmltag-element">programlisting</tt></a></span>.</p></div></div><div class="refsect1" lang="en"><a name="d0e143907"></a><h2>See Also</h2><p><span class="simplelist"><a href="areaspec.html"><tt class="sgmltag-element">areaspec</tt></a>, <a href="calloutlist.html"><tt class="sgmltag-element">calloutlist</tt></a>, <a href="co.html"><tt class="sgmltag-element">co</tt></a>, <a href="coref.html"><tt class="sgmltag-element">coref</tt></a>, <a href="graphicco.html"><tt class="sgmltag-element">graphicco</tt></a>, <a href="imageobjectco.html"><tt class="sgmltag-element">imageobjectco</tt></a>, <a href="mediaobjectco.html"><tt class="sgmltag-element">mediaobjectco</tt></a>, <a href="screenco.html"><tt class="sgmltag-element">screenco</tt></a></span>.
+</p></div><div class="refsect1" lang="en"><a name="d0e143937"></a><h2>Examples</h2><div class="informalexample"><pre class="programlisting">&lt;!DOCTYPE programlistingco PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+          "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"&gt;
+&lt;programlistingco&gt;
+&lt;areaspec&gt;
+&lt;areaset id="ex.plco.const" coords=""&gt;
+  &lt;area id="ex.plco.c1" coords='4'/&gt;
+  &lt;area id="ex.plco.c2" coords='8'/&gt;
+&lt;/areaset&gt;
+&lt;area id="ex.plco.ret" coords='12'/&gt;
+&lt;area id="ex.plco.dest" coords='12'/&gt;
+&lt;/areaspec&gt;
+&lt;programlisting&gt;
+sub do_nothing_useful {
+    my($a, $b, $c);
+
+    $a = new A;
+    
+    $a-&gt;does_nothing_either();
+
+    $b = new B; 
+
+    $c = "frog";
+
+    return ($a, $c);
+}
+&lt;/programlisting&gt;
+&lt;calloutlist&gt;
+&lt;callout arearefs="ex.plco.const"&gt;
+&lt;para&gt;
+These are calls to the constructor &lt;function&gt;new&lt;/function&gt; in the object
+classes.
+&lt;/para&gt;
+&lt;/callout&gt;
+&lt;callout arearefs="ex.plco.ret"&gt;
+&lt;para&gt;
+This function returns a two-element list.
+&lt;/para&gt;
+&lt;/callout&gt;
+&lt;callout arearefs="ex.plco.dest"&gt;
+&lt;para&gt;
+The &lt;emphasis&gt;destructor&lt;/emphasis&gt; (&lt;function&gt;DESTROY&lt;/function&gt;) for
+the object &lt;literal&gt;$b&lt;/literal&gt; will be called automatically for this
+object since there can be no other references to it outside this function.
+&lt;/para&gt;
+&lt;/callout&gt;
+&lt;/calloutlist&gt;
+&lt;/programlistingco&gt;</pre></div><div class="example-output"><div class="programlistingco"><pre class="programlisting">
+sub do_nothing_useful {
+    my($a, $b, $c);
+                                                           <span class="co"><img src="figures/callouts/1.png" alt="(1)"></span>
+    $a = new A;
+    
+    $a-&gt;does_nothing_either();
+                                                           <span class="co"><img src="figures/callouts/1.png" alt="(1)"></span>
+    $b = new B; 
+
+    $c = "frog";
+                                                           <span class="co"><img src="figures/callouts/2.png" alt="(2)"></span><span class="co"><img src="figures/callouts/3.png" alt="(3)"></span>
+    return ($a, $c);
+}
+</pre><div class="calloutlist"><table border="0" summary="Callout list"><tr><td width="5%" valign="top" align="left"><img src="figures/callouts/1.png" alt="1" border="0"></td><td valign="top" align="left"><p>
+These are calls to the constructor <tt class="function">new</tt> in the object
+classes.
+</p></td></tr><tr><td width="5%" valign="top" align="left"><img src="figures/callouts/2.png" alt="2" border="0"></td><td valign="top" align="left"><p>
+This function returns a two-element list.
+</p></td></tr><tr><td width="5%" valign="top" align="left"><img src="figures/callouts/3.png" alt="3" border="0"></td><td valign="top" align="left"><p>
+The <span class="emphasis"><em>destructor</em></span> (<tt class="function">DESTROY</tt>) for
+the object <tt class="literal">$b</tt> will be called automatically for this
+object since there can be no other references to it outside this function.
+</p></td></tr></table></div></div></div></div></div><div class="navfooter"><table width="100%" summary="Navigation table"><tr><td width="40%" align="left"><a title="programlisting" href="programlisting.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;</td><td width="20%" align="center"><a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a></td><td width="40%" align="right">&nbsp;<a title="prompt" href="prompt.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td></tr><tr><td width="40%" align="left">programlisting&nbsp;</td><td width="20%" align="center"><a title="DocBook Element Reference" href="ref-elements.html"><img src="figures/nav-up.png" alt="Up" border="0"></a></td><td width="40%" align="right">&nbsp;prompt</td></tr></table></div><div class="copyrightfooter"><p><a href="dbcpyright.html">Copyright</a> &copy; 1999, 2000, 2001, 2002, 2003 <a href="http://www.oreilly.com/">O'Reilly &amp; Associates, Inc.</a> All rights reserved.</p></div></body></html>

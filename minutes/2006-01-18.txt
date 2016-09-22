@@ -1,0 +1,129 @@
+DocBook Technical Committee Meeting Minutes: 18 January 2006
+=============================================================
+
+The DocBook Technical Committee met on Wednesday, 18 January 2006 at
+05:00p EST (02:00p PST, 22:00GMT, 22:00BST, 23:00CEST, 07:00JST+,
+03:30a India+) for 45 minutes.
+
+Agenda
+
+1. Roll call
+
+Present: Steve Cogorno, Gary Cornelius,
+Paul Grosso, Mark Johnson, Dick Hamilton, Scott Hudson, 
+Larry Rowland, Bob Stayton, Norman Walsh
+
+Leave: Jirka Kosek
+
+Absent: Adam Di Carlo, Kay Ethier, Nancy Harrison, Gershon Joseph,
+Alex Povzner
+
+2. Accepted the minutes[1] of the previous meeting.
+
+3. Next meeting: 15 February 2006
+
+4. Review of the agenda.
+
+   No additions.
+
+5. Review of open action items
+
+    a.  Norm to pursue the process of making DTD 4.5
+        an OASIS standard.
+ COMPLETED.
+    
+    b.  The Java language has added java annotations, and Norm
+        wondered how these would be marked up in a synopsis.
+        The C# language also has annotations, Jirka pointed out.
+    
+        ACTION: Norm to investigate this issue some more.
+ CONTINUED.
+    
+    c.  Norm to write up a description of how authors
+        should handle elements that have been dropped.
+
+ ACTION: Dick Hamilton will take over this action item.
+    
+    d.  Norm to investigate the submitter's example in
+        1358844 - allow multiple imageobject in imageobjectco.
+ COMPLETED.
+    
+
+6.  Default attribute values in DocBook 5.
+    Other DocBook 5 issues.
+
+The TC reviewed the default attribute values present in
+DocBook 4.5 to see of they should be carried over to
+version 5.  The group felt that most of them were 
+obvious and could be converted to IMPLIED rather than
+a default value.  But the following attributes were deemed
+sufficiently useful to be included in the RNG grammar
+and expressed in the DTD version of the schema:
+
+<!ATTLIST simplelist
+                type             (inline|vert|horiz)       "vert"
+
+<!ATTLIST methodparam
+                choice     (opt|req|plain)                "req"
+                rep        (norepeat|repeat)           "norepeat"
+
+<!ATTLIST arg
+                choice         (opt|req|plain)                'opt'
+                rep            (norepeat|repeat)        'norepeat'
+
+<!ATTLIST group
+                choice         (opt|req|plain)         'opt'
+                rep            (norepeat|repeat)        'norepeat'
+
+ACTION: Norm to add the DTD default attribute syntax
+to the V5 RNG grammar.
+
+ACTION: Norm to express the default value in the DTD version.
+
+Larry asked about a note in the XSD version that says it
+permits more than the RNG grammar.  Norm said that note
+is incorrect.
+
+ACTION: Norm to remove the note from the XSD version.
+
+ACTION: Larry to test token string in both XSD and RNG validation.
+
+7. Review of Requests for Enhancement
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;;
+      group_id=21935&atid=384107&aid=XXXX
+
+      1306027  Support for annotations in synopsis elements  
+               CONTINUED.
+
+      1358844  allow multiple imageobject in imageobjectco  
+
+Approved.  The group determined that if different file formats
+of an image were the same size and the areas could be
+specified with the same areaspec, then it should be permitted
+to have more than one imageobject inside an imageobjectco
+to reuse the areaspec.  Only one imageobject would be
+used per output form.  If an areaspec cannot be reused
+for more than one format, then the author must use 
+more than one imageobjectco elements with separate
+areaspec elements.
+
+ACTION: Norm to add to V5.
+
+ACTION: Norm to document it in The Definitive Guide.
+
+8.  Scott mentioned an email describing a problem
+in Simplified DocBook 1.1
+
+ACTION: Scott to file an RFE about the problem.
+
+- ---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200512/msg00017.html
+
+Bob Stayton
+Sagehill Enterprises
+DocBook Consulting
+bobs@sagehill.net

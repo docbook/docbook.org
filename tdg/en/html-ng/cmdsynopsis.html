@@ -1,0 +1,115 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>cmdsynopsis</title><link rel="stylesheet" href="defguide.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.64.1"><link rel="home" href="docbook.html" title="DocBook"><link rel="up" href="ref-elements.html" title="DocBook Element Reference"><link rel="previous" href="classsynopsisinfo.html" title="classsynopsisinfo"><link rel="next" href="co.html" title="co"></head><body><div class="navheader"><table border="0" cellpadding="0" cellspacing="0" width="100%" summary="Navigation table"><tr><td align="left">&nbsp;<a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a>&nbsp;<a title="classsynopsisinfo" href="classsynopsisinfo.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;<a title="DocBook Element Reference" href="ref-elements.html"><img src="figures/nav-up.png" alt="Up" border="0"></a>&nbsp;<a title="co" href="co.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td><td align="right"><i>DocBook: The Definitive Guide</i> 2.0.9 <span class="alpha-version">(<a href="co01.html"><em>Alpha</em></a>)</span> </td></tr></table></div><div class="refentry" lang="en"><a name="cmdsynopsis.element"></a><div class="titlepage"><div><h1 class="title">cmdsynopsis</h1></div><div><p class="releaseinfo">$Revision: 1.3 $</p></div><div><p class="pubdate">$Date: 2002/06/12 11:18:04 $</p></div></div><div class="refnamediv"><p>cmdsynopsis &#8212; A syntax summary for a software command</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><h3><span class="bold"><b>Content Model</b></span></h3><pre class="synopsis">cmdsynopsis ::=
+((<a href="command.html"><tt class="sgmltag-element">command</tt></a>|<a href="arg.html"><tt class="sgmltag-element">arg</tt></a>|<a href="group.html"><tt class="sgmltag-element">group</tt></a>|<a href="sbr.html"><tt class="sgmltag-element">sbr</tt></a>)+,
+ <a href="synopfragment.html"><tt class="sgmltag-element">synopfragment</tt></a>*)</pre><h3><span class="bold"><b>Attributes</b></span></h3><p><a href="ref-elements.html#common.attributes" title="Common Attributes">Common attributes</a></p><table border="0" width="100%" cellpadding="2" style="border-collapse: collapse; border-left: 0.5pt solid black; border-right: 0.5pt solid black; border-bottom: 0.5pt solid black;" summary="Attributes"><thead><tr><td class="th" style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; "><p><span class="bold"><b>Name</b></span></p></td><td class="th" style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; "><p><span class="bold"><b>Type</b></span></p></td><td class="th" style="border-bottom: 0.5pt solid ; "><p><span class="bold"><b>Default</b></span></p></td></tr></thead><tbody><tr><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">sepchar</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">CDATA</td><td style="border-bottom: 0.5pt solid ; " align="left" valign="top">" "</td></tr><tr><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">cmdlength</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">CDATA</td><td style="border-bottom: 0.5pt solid ; " align="left" valign="top"><span class="emphasis"><em>None</em></span></td></tr><tr><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">label</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">CDATA</td><td style="border-bottom: 0.5pt solid ; " align="left" valign="top"><span class="emphasis"><em>None</em></span></td></tr></tbody></table><div class="docbookng-synopsis"><h3>DocBook NG &#8220;Bourbon&#8221; Content Model</h3><div class="define-first"><div class="element">cmdsynopsis ::=<ul><li>Sequence of:</li><ul class="group"><li><tt><a href="info.html">info</a></tt>? (db.info.titleforbidden)</li><li>One or more of:</li><ul class="oneOrMore"><li><tt><a href="arg.html">arg</a></tt></li><li><tt><a href="command.html">command</a></tt></li><li><tt><a href="group.html">group</a></tt></li><li><tt><a href="sbr.html">sbr</a></tt></li></ul><li>Zero or more of:</li><ul class="zeroOrMore"><li><tt><a href="synopfragment.html">synopfragment</a></tt></li></ul></ul></ul><h4>DocBook NG &#8220;Bourbon&#8221; Attributes</h4><p>Common attributes and common linking attributes.</p><p>Additional attributes: (Required attributes, if any, are <b>bold</b>)</p><ul><li>cmdlength</li><li>label</li><li>sepchar</li></ul></div></div></div></div><div class="refsect1" lang="en"><a name="d0e48257"></a><h2>Description</h2><p>
+A <a href="cmdsynopsis.html"><tt class="sgmltag-element">CmdSynopsis</tt></a> summarizes the options and parameters of
+a command started from a text prompt.  This is usually a program started
+from the <span class="acronym">DOS</span>, Windows, or <span class="acronym">UNIX</span> shell prompt.
+</p><p>
+<a href="cmdsynopsis.html"><tt class="sgmltag-element">CmdSynopsis</tt></a> operates under the following general model:
+commands have arguments, that may be grouped; arguments and groups may
+be required or optional and may be repeated.
+</p><div class="refsect2" lang="en"><a name="d0e48276"></a><h3>Processing expectations</h3><p>
+The processing expectations of <a href="cmdsynopsis.html"><tt class="sgmltag-element">CmdSynopsis</tt></a> are fairly
+complex.
+</p><div class="itemizedlist"><ul type="disc"><li><p>
+Arguments are generally identified with a prefix character.
+</p><p>
+In the <span class="acronym">UNIX</span> world, this character is almost
+universally the dash or hyphen although plus signs and double dashes
+have become more common in recent years.
+</p><p>
+In the <span class="acronym">DOS</span>/Windows world, forward slashes are somewhat more common than
+dashes.
+</p><p>
+The DocBook processing expectations on this point are intentionally
+vague.  In some environments it may be most convenient to
+generate these characters automatically, in other environments
+it may be more convenient to insert them literally in the
+content.
+</p><p>
+Whichever processing model you choose, note that this will be an
+interchange issue if you share documents with other users (see
+<a href="appf.html" title="Interchanging DocBook Documents">Appendix&nbsp;F, <i>Interchanging DocBook Documents</i></a>).
+</p></li><li><p>
+Brackets are used to distinguish between optional, required, or
+plain arguments.  Usually square brackets are placed around
+optional arguments, <tt class="literal">[-g]</tt>, and curly brackets are placed around
+required arguments, <tt class="literal">{-g}</tt>.  Plain arguments are required, but are
+not decorated with brackets.
+</p></li><li><p>
+Repeatable arguments are followed by an ellipsis.
+</p></li><li><p>
+Multiple arguments within a group are considered exclusive and are
+separated by vertical bars.
+</p></li><li><p>
+Groups, like arguments, may be optional, required, or plain and may or
+may not repeat.  The same brackets and ellipses that are used to
+indicate these characteristics on arguments are used on groups.
+</p></li><li><p>
+Arguments and groups may nest more-or-less arbitrarily.
+</p></li><li><p>
+Formatted as a displayed block. The processing system is free to introduce line breaks
+where required, but the <a href="sbr.html"><tt class="sgmltag-element">SBR</tt></a> element may be introduced
+by the author to provide an explicit break location.
+</p></li></ul></div></div><div class="refsect2" lang="en"><a name="d0e48331"></a><h3>Parents</h3><p>These elements contain cmdsynopsis:
+<span class="simplelist"><a href="answer.html"><tt class="sgmltag-element">answer</tt></a>, <a href="appendix.html"><tt class="sgmltag-element">appendix</tt></a>, <a href="application.html"><tt class="sgmltag-element">application</tt></a>, <a href="article.html"><tt class="sgmltag-element">article</tt></a>, <a href="attribution.html"><tt class="sgmltag-element">attribution</tt></a>, <a href="bibliodiv.html"><tt class="sgmltag-element">bibliodiv</tt></a>, <a href="bibliography.html"><tt class="sgmltag-element">bibliography</tt></a>, <a href="bibliomisc.html"><tt class="sgmltag-element">bibliomisc</tt></a>, <a href="blockquote.html"><tt class="sgmltag-element">blockquote</tt></a>, <a href="callout.html"><tt class="sgmltag-element">callout</tt></a>, <a href="caution.html"><tt class="sgmltag-element">caution</tt></a>, <a href="chapter.html"><tt class="sgmltag-element">chapter</tt></a>, <a href="citation.html"><tt class="sgmltag-element">citation</tt></a>, <a href="citetitle.html"><tt class="sgmltag-element">citetitle</tt></a>, <a href="constraintdef.html"><tt class="sgmltag-element">constraintdef</tt></a>, <a href="emphasis.html"><tt class="sgmltag-element">emphasis</tt></a>, <a href="entry.html"><tt class="sgmltag-element">entry</tt></a>, <a href="example.html"><tt class="sgmltag-element">example</tt></a>, <a href="figure.html"><tt class="sgmltag-element">figure</tt></a>, <a href="firstterm.html"><tt class="sgmltag-element">firstterm</tt></a>, <a href="footnote.html"><tt class="sgmltag-element">footnote</tt></a>, <a href="foreignphrase.html"><tt class="sgmltag-element">foreignphrase</tt></a>, <a href="glossary.html"><tt class="sgmltag-element">glossary</tt></a>, <a href="glossdef.html"><tt class="sgmltag-element">glossdef</tt></a>, <a href="glossdiv.html"><tt class="sgmltag-element">glossdiv</tt></a>, <a href="glosssee.html"><tt class="sgmltag-element">glosssee</tt></a>, <a href="glossseealso.html"><tt class="sgmltag-element">glossseealso</tt></a>, <a href="glossterm.html"><tt class="sgmltag-element">glossterm</tt></a>, <a href="important.html"><tt class="sgmltag-element">important</tt></a>, <a href="index.html"><tt class="sgmltag-element">index</tt></a>, <a href="indexdiv.html"><tt class="sgmltag-element">indexdiv</tt></a>, <a href="informalexample.html"><tt class="sgmltag-element">informalexample</tt></a>, <a href="informalfigure.html"><tt class="sgmltag-element">informalfigure</tt></a>, <a href="itemizedlist.html"><tt class="sgmltag-element">itemizedlist</tt></a>, <a href="lineannotation.html"><tt class="sgmltag-element">lineannotation</tt></a>, <a href="link.html"><tt class="sgmltag-element">link</tt></a>, <a href="listitem.html"><tt class="sgmltag-element">listitem</tt></a>, <a href="literallayout.html"><tt class="sgmltag-element">literallayout</tt></a>, <a href="lotentry.html"><tt class="sgmltag-element">lotentry</tt></a>, <a href="member.html"><tt class="sgmltag-element">member</tt></a>, <a href="msgaud.html"><tt class="sgmltag-element">msgaud</tt></a>, <a href="msgexplan.html"><tt class="sgmltag-element">msgexplan</tt></a>, <a href="msgtext.html"><tt class="sgmltag-element">msgtext</tt></a>, <a href="note.html"><tt class="sgmltag-element">note</tt></a>, <a href="olink.html"><tt class="sgmltag-element">olink</tt></a>, <a href="orderedlist.html"><tt class="sgmltag-element">orderedlist</tt></a>, <a href="para.html"><tt class="sgmltag-element">para</tt></a>, <a href="partintro.html"><tt class="sgmltag-element">partintro</tt></a>, <a href="phrase.html"><tt class="sgmltag-element">phrase</tt></a>, <a href="preface.html"><tt class="sgmltag-element">preface</tt></a>, <a href="procedure.html"><tt class="sgmltag-element">procedure</tt></a>, <a href="productname.html"><tt class="sgmltag-element">productname</tt></a>, <a href="programlisting.html"><tt class="sgmltag-element">programlisting</tt></a>, <a href="qandadiv.html"><tt class="sgmltag-element">qandadiv</tt></a>, <a href="qandaset.html"><tt class="sgmltag-element">qandaset</tt></a>, <a href="question.html"><tt class="sgmltag-element">question</tt></a>, <a href="quote.html"><tt class="sgmltag-element">quote</tt></a>, <a href="refentrytitle.html"><tt class="sgmltag-element">refentrytitle</tt></a>, <a href="refsect1.html"><tt class="sgmltag-element">refsect1</tt></a>, <a href="refsect2.html"><tt class="sgmltag-element">refsect2</tt></a>, <a href="refsect3.html"><tt class="sgmltag-element">refsect3</tt></a>, <a href="refsection.html"><tt class="sgmltag-element">refsection</tt></a>, <a href="refsynopsisdiv.html"><tt class="sgmltag-element">refsynopsisdiv</tt></a>, <a href="remark.html"><tt class="sgmltag-element">remark</tt></a>, <a href="revdescription.html"><tt class="sgmltag-element">revdescription</tt></a>, <a href="screen.html"><tt class="sgmltag-element">screen</tt></a>, <a href="screeninfo.html"><tt class="sgmltag-element">screeninfo</tt></a>, <a href="sect1.html"><tt class="sgmltag-element">sect1</tt></a>, <a href="sect2.html"><tt class="sgmltag-element">sect2</tt></a>, <a href="sect3.html"><tt class="sgmltag-element">sect3</tt></a>, <a href="sect4.html"><tt class="sgmltag-element">sect4</tt></a>, <a href="sect5.html"><tt class="sgmltag-element">sect5</tt></a>, <a href="section.html"><tt class="sgmltag-element">section</tt></a>, <a href="seg.html"><tt class="sgmltag-element">seg</tt></a>, <a href="setindex.html"><tt class="sgmltag-element">setindex</tt></a>, <a href="sidebar.html"><tt class="sgmltag-element">sidebar</tt></a>, <a href="simpara.html"><tt class="sgmltag-element">simpara</tt></a>, <a href="simplesect.html"><tt class="sgmltag-element">simplesect</tt></a>, <a href="step.html"><tt class="sgmltag-element">step</tt></a>, <a href="synopsis.html"><tt class="sgmltag-element">synopsis</tt></a>, <a href="taskprerequisites.html"><tt class="sgmltag-element">taskprerequisites</tt></a>, <a href="taskrelated.html"><tt class="sgmltag-element">taskrelated</tt></a>, <a href="tasksummary.html"><tt class="sgmltag-element">tasksummary</tt></a>, <a href="td.html"><tt class="sgmltag-element">td</tt></a>, <a href="term.html"><tt class="sgmltag-element">term</tt></a>, <a href="th.html"><tt class="sgmltag-element">th</tt></a>, <a href="tip.html"><tt class="sgmltag-element">tip</tt></a>, <a href="tocback.html"><tt class="sgmltag-element">tocback</tt></a>, <a href="tocentry.html"><tt class="sgmltag-element">tocentry</tt></a>, <a href="tocfront.html"><tt class="sgmltag-element">tocfront</tt></a>, <a href="ulink.html"><tt class="sgmltag-element">ulink</tt></a>, <a href="variablelist.html"><tt class="sgmltag-element">variablelist</tt></a>, <a href="warning.html"><tt class="sgmltag-element">warning</tt></a></span>.</p></div><div class="refsect2" lang="en"><a name="d0e48617"></a><h3>Children</h3><p>The following elements occur in cmdsynopsis:
+<span class="simplelist"><a href="arg.html"><tt class="sgmltag-element">arg</tt></a>, <a href="command.html"><tt class="sgmltag-element">command</tt></a>, <a href="group.html"><tt class="sgmltag-element">group</tt></a>, <a href="sbr.html"><tt class="sgmltag-element">sbr</tt></a>, <a href="synopfragment.html"><tt class="sgmltag-element">synopfragment</tt></a></span>.</p></div></div><div class="refsect1" lang="en"><a name="d0e48639"></a><h2>Attributes</h2><div class="variablelist"><dl><dt><span class="term">cmdlength</span></dt><dd><p>
+<tt class="sgmltag-attribute">CmdLength</tt> indicates displayed length of
+the command; this information may be used to intelligently indent
+command synopses which extend beyond one line.
+</p></dd><dt><span class="term">label</span></dt><dd><p>
+<tt class="sgmltag-attribute">Label</tt> specifies an identifying number or string
+that may be used in presentation.
+</p></dd><dt><span class="term">sepchar</span></dt><dd><p>
+<tt class="sgmltag-attribute">SepChar</tt> specifies the character (a space
+by default) that should separate the <a href="command.html"><tt class="sgmltag-element">Command</tt></a> and its 
+top-level arguments.
+</p></dd></dl></div></div><div class="refsect1" lang="en"><a name="d0e48673"></a><h2>See Also</h2><p><span class="simplelist"><a href="arg.html"><tt class="sgmltag-element">arg</tt></a>, <a href="funcsynopsis.html"><tt class="sgmltag-element">funcsynopsis</tt></a>, <a href="group.html"><tt class="sgmltag-element">group</tt></a>, <a href="refsynopsisdiv.html"><tt class="sgmltag-element">refsynopsisdiv</tt></a>, <a href="sbr.html"><tt class="sgmltag-element">sbr</tt></a>, <a href="synopfragment.html"><tt class="sgmltag-element">synopfragment</tt></a>, <a href="synopfragmentref.html"><tt class="sgmltag-element">synopfragmentref</tt></a>, <a href="synopsis.html"><tt class="sgmltag-element">synopsis</tt></a></span>.
+</p></div><div class="refsect1" lang="en"><a name="d0e48703"></a><h2>Examples</h2><div class="informalexample"><pre class="programlisting">&lt;!DOCTYPE cmdsynopsis PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+          "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"&gt;
+&lt;cmdsynopsis&gt;
+  &lt;command&gt;cd&lt;/command&gt;
+  &lt;arg choice='req'&gt;&lt;replaceable&gt;directory&lt;/replaceable&gt;&lt;/arg&gt;
+&lt;/cmdsynopsis&gt;</pre></div><div class="example-output"><div class="cmdsynopsis"><p><tt class="command">cd</tt>  {<i class="replaceable"><tt>directory</tt></i>}</p></div></div><div class="informalexample"><pre class="programlisting">&lt;!DOCTYPE cmdsynopsis PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+          "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"&gt;
+&lt;cmdsynopsis&gt;
+  &lt;command&gt;cal&lt;/command&gt;
+  &lt;arg&gt;-j&lt;/arg&gt;
+  &lt;arg&gt;-y&lt;/arg&gt;
+  &lt;arg&gt;month &lt;arg&gt;year&lt;/arg&gt;&lt;/arg&gt;
+&lt;/cmdsynopsis&gt;</pre></div><div class="example-output"><div class="cmdsynopsis"><p><tt class="command">cal</tt>  [-j] [-y] [month  [year]]</p></div></div><div class="informalexample"><pre class="programlisting">&lt;!DOCTYPE cmdsynopsis PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+          "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"&gt;
+&lt;cmdsynopsis&gt;
+  &lt;command&gt;chgrp&lt;/command&gt;
+  &lt;arg&gt;-R
+    &lt;group&gt;
+      &lt;arg&gt;-H&lt;/arg&gt;
+      &lt;arg&gt;-L&lt;/arg&gt;
+      &lt;arg&gt;-P&lt;/arg&gt;
+    &lt;/group&gt;
+  &lt;/arg&gt;
+  &lt;arg&gt;-f&lt;/arg&gt;
+  &lt;arg choice='plain'&gt;&lt;replaceable&gt;group&lt;/replaceable&gt;&lt;/arg&gt;
+  &lt;arg rep='repeat' choice='plain'&gt;&lt;replaceable&gt;file&lt;/replaceable&gt;&lt;/arg&gt;
+&lt;/cmdsynopsis&gt;</pre></div><div class="example-output"><div class="cmdsynopsis"><p><tt class="command">chgrp</tt>  [-R
+     [[-H] |  [-L] |  [-P]]
+  ] [-f]  <i class="replaceable"><tt>group</tt></i>   <i class="replaceable"><tt>file</tt></i>... </p></div></div><div class="informalexample"><pre class="programlisting">&lt;!DOCTYPE cmdsynopsis PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+          "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"&gt;
+&lt;cmdsynopsis&gt;
+  &lt;command&gt;emacs&lt;/command&gt;
+  &lt;arg&gt;-t &lt;replaceable&gt;file&lt;/replaceable&gt;&lt;/arg&gt;
+  &lt;arg&gt;-q&lt;/arg&gt;
+  &lt;arg&gt;-u &lt;replaceable&gt;user&lt;/replaceable&gt;&lt;/arg&gt;
+  &lt;arg&gt;+&lt;replaceable&gt;number&lt;/replaceable&gt;&lt;/arg&gt;
+  &lt;arg rep='repeat'&gt;-f &lt;replaceable&gt;function&lt;/replaceable&gt;&lt;/arg&gt;
+  &lt;sbr/&gt;
+  &lt;arg rep='repeat'&gt;-l &lt;replaceable&gt;file&lt;/replaceable&gt;&lt;/arg&gt;
+  &lt;arg rep='repeat' choice='plain'&gt;&lt;replaceable&gt;file&lt;/replaceable&gt;&lt;/arg&gt;
+&lt;/cmdsynopsis&gt;</pre></div><div class="example-output"><div class="cmdsynopsis"><p><tt class="command">emacs</tt>  [-t <i class="replaceable"><tt>file</tt></i>] [-q] [-u <i class="replaceable"><tt>user</tt></i>] [+<i class="replaceable"><tt>number</tt></i>] [-f <i class="replaceable"><tt>function</tt></i>...]<br> [-l <i class="replaceable"><tt>file</tt></i>...]  <i class="replaceable"><tt>file</tt></i>... </p></div></div><p>
+Note the use of <a href="sbr.html"><tt class="sgmltag-element">SBR</tt></a> in this example to force line breaks
+at reasonable places in the synopsis.
+</p><p>For additional examples, see also
+<span class="simplelist"><a href="refentry.html"><tt class="sgmltag-element">refentry</tt></a>, <a href="synopfragment.html"><tt class="sgmltag-element">synopfragment</tt></a></span>.
+</p></div></div><div class="navfooter"><table width="100%" summary="Navigation table"><tr><td width="40%" align="left"><a title="classsynopsisinfo" href="classsynopsisinfo.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;</td><td width="20%" align="center"><a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a></td><td width="40%" align="right">&nbsp;<a title="co" href="co.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td></tr><tr><td width="40%" align="left">classsynopsisinfo&nbsp;</td><td width="20%" align="center"><a title="DocBook Element Reference" href="ref-elements.html"><img src="figures/nav-up.png" alt="Up" border="0"></a></td><td width="40%" align="right">&nbsp;co</td></tr></table></div><div class="copyrightfooter"><p><a href="dbcpyright.html">Copyright</a> &copy; 1999, 2000, 2001, 2002, 2003 <a href="http://www.oreilly.com/">O'Reilly &amp; Associates, Inc.</a> All rights reserved.</p></div></body></html>

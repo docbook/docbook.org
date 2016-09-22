@@ -1,0 +1,210 @@
+| DocBook Technical Committee Meeting Minutes: 20 Nov 2001
+| ========================================================
+|
+| Agenda
+|
+| 1. Roll call
+
+Dennis Evans
+Dick Hamilton
+Sabine Ocker
+Michael Smith
+Bob Stayton
+Norman Walsh
+Nancy (Paisner) Harrison (:30)
+
+Regrets:
+
+Patricia Gee-Best
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Welcome new members Dick Hamilton and Bob Stayton
+
+Dick Hamilton is a manager at HP. Currently managing the group that
+does a variety of things related to HP Unix documentation. Been
+involved with SGML since 1991 in various forms. Worked very closely
+with Michael Sabrio.
+
+Bob Stayton is the publications architect at Caldera (formerly SCO).
+Been involved in DocBook since the Davenport Group. Our group is doing
+more XML so I'm back into it. Responsible for publishing tools at
+Caldera.
+
+| 4. Review of the agenda
+
+No changes.
+
+| 5. Review of open action items
+|
+|    a. TC review of Augmented Metadata in XHTML[2]
+
+Completed.
+
+|    b. Mike Smith to formulate concrete proposal for OLink
+
+Completed[4]
+
+|    c. Norm to ask about RFE 440667 (Affiliation lacks CorpName) on list
+
+Completed[5]
+
+|    d. Norm to review RFE 441883 and post improved text to the list
+
+Action: continued
+
+|    e. Norm to ask about RFE 456174 (YearRange) on list
+
+Completed[6]
+
+|    f. Norm to ask Karl about f2f schedule in Orlando
+
+Completed[7]. There will be no official meeting, but there will be a BOF.
+Everyone is encouraged to attend.
+
+|    g. Norm to write a concrete proposal for linking in DocBook 5.0
+
+Completed[8]
+
+Action: Norm to make official proposal.
+
+|    h. Norm to propose new "name and address" markup
+
+Completed[9]
+
+Action: Norm to make official proposal.
+
+|    i. Sabine to draft initial proposal for help topic authoring
+
+Action: continued.
+
+|    j. Sabine to post a summary of continuing discussions about the
+|       content model of lists and procedures.
+
+Action: continued.
+
+|    k. Norm to review RFE 431413, former RFE 121 (add markup for signals)
+
+Completed.
+
+|    l. Norm to review RFE 436072 (need for an infosdiv.contents entity)
+
+Completed.
+
+|    m. Norm to publish HTML Module officially as V1.1
+
+Action: continued.
+
+| 6. Shall we allow email ballots?
+
+Proposed: If email ballots are acceptable, the number of votes returned
+   must equal or exceed the number of members required to achieve
+   quorem, otherwise the ballot is deemed not to have occurred?
+
+Motion passed by acclamation.
+
+Proposed: Shall the committee allow the chair to call for email ballots
+   under this policy?
+
+Motion passed by acclamation.
+
+Action: Norm to update committee pages to reflect this decision.
+Action: Norm to check with Karl to see if we can actually do this.
+       
+| 7. Discussion: XML Character Entities
+
+Proposed: Norm will publish a Working Draft of XML Character Entities.
+
+Motion passed by acclamation.
+
+| 8. Shall we release DocBook V4.2 beta 1?
+
+Proposed: Norm will publish DocBook V4.2 Beta 1.
+
+Motion passed by acclamation.
+
+| 9. Discussion: metadata
+
+Three lines of discussion:
+1. What goes in *Info?
+2. Where can *Info go?
+3. How many *Info's should there be?
+
+Action: Norm, Dick, and Bob to identify a mapping from Dublin Core to
+DocBook meta and publish that.
+
+Action: Nancy to provide a list of places to add it.
+
+Discussion continued to the next meeting.
+
+| 9b. OLink
+
+Discussion continued to the next meeting.
+
+| 10. Review of open RFEs[3]
+
+|    482821 Add introductory material to lists
+
+Action: Norm to post pointers to past discussion. This item is closed.
+
+Action: Norm to propose times for an interrum meeting before Dec 18 to
+discuss the RFEs.
+
+At this point, the meeting time expired. Meeting adjourned by the chair.
+
+|      To browse a specific RFE, enter the URL (on one line):
+|
+|         http://sourceforge.net/tracker/index.php?func=detail&;
+|         group_id=21935&atid=384107&aid=XXXX
+|
+|      where XXXX is the RFE number.
+|
+|    423598 Content models that allow BridgeHead
+|    440667 Affiliation lacks CorpName
+|    441883 endterm behavior in link
+|    470599 Need an imagedata to fit to max size
+|    472229 Allow HTML tables
+|    472984 end note support
+|    473193 Add text form for equations
+|    473365 Allow optional in funcprototype
+|    477073 Modularize the hierarchy further
+|    480954 Extend textobject to insert external files
+|    480955 Add coref
+|    480957 New name and address markup
+|    482810 MsgText has far too broad a content mode
+|    482811 Remove title from bibliocomponent.mix
+|    482812 Adjust content of CiteTitle
+|    482815 Remove %synop.class; from %para.char.mix
+|    482818 Simplify ToC content model
+|    482819 Keep 'cooked' and 'raw' separated
+|    482922 Allow MsgText only inside MsgSet
+|
+| 11. Review of pending RFEs
+|
+|    412476 Class on ProductName should be #IMPLIED
+|    413389 Enhance METHODNAME and VARNAME
+|    416415 Remove Constant class from SystemItem
+|    425730 Create an SVG module
+|    431411 RFE 70: add generic linking capability
+|    431412 RFE 113: proc. exp. of RevHistory order
+|    434838 add partintroinfo element
+|    435518 Allow bibliography in refsect1
+|    436067 splitting tech.char.class
+|    439938 specify link destination for area
+|    440081 No example for ReleaseInfo
+|    444337 epilogue in dtd?
+|    451030 xref to block
+|    456460 Ordering of attribute declarations
+|
+| [1] http://lists.oasis-open.org/archives/docbook/200109/msg00077.html
+| [2] http://www.doctypes.org/meta/NOTE-xhtml-augmeta.html
+| [3] http://sourceforge.net/tracker/index.php?group_id=21935&atid=384107
+
+[4] http://lists.oasis-open.org/archives/docbook-tc/200111/msg00001.html
+[5] http://lists.oasis-open.org/archives/docbook/200109/msg00075.html
+[6] http://lists.oasis-open.org/archives/docbook/200109/msg00076.html
+[7] http://www.oasis-open.org/members/meeting_schedule.shtml
+[8] http://lists.oasis-open.org/archives/docbook/200111/msg00127.html
+[9] http://lists.oasis-open.org/archives/docbook/200111/msg00118.html

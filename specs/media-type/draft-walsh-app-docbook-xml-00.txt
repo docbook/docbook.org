@@ -1,0 +1,560 @@
+
+
+
+Network Working Group                                           N. Walsh
+Internet-Draft                                          Sun Microsystems
+Intended status: Best Current                              July 12, 2007
+Practice
+Expires: January 13, 2008
+
+
+                The 'application/docbook+xml' Media Type
+                     draft-walsh-app-docbook-xml-00
+
+Status of this Memo
+
+   By submitting this Internet-Draft, each author represents that any
+   applicable patent or other IPR claims of which he or she is aware
+   have been or will be disclosed, and any of which he or she becomes
+   aware will be disclosed, in accordance with Section 6 of BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF), its areas, and its working groups.  Note that
+   other groups may also distribute working documents as Internet-
+   Drafts.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   The list of current Internet-Drafts can be accessed at
+   http://www.ietf.org/ietf/1id-abstracts.txt.
+
+   The list of Internet-Draft Shadow Directories can be accessed at
+   http://www.ietf.org/shadow.html.
+
+   This Internet-Draft will expire on January 13, 2008.
+
+Copyright Notice
+
+   Copyright (C) The IETF Trust (2007).
+
+
+
+
+
+
+
+
+
+
+
+
+
+Walsh                   Expires January 13, 2008                [Page 1]
+
+Internet-Draft  The 'application/docbook+xml' Media Type       July 2007
+
+
+Abstract
+
+   This document defines the 'application/docbook+xml' MIME media type
+   for DocBook-based markup languages.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Walsh                   Expires January 13, 2008                [Page 2]
+
+Internet-Draft  The 'application/docbook+xml' Media Type       July 2007
+
+
+1.  Introduction
+
+   The DocBook specification has for many years included an appendix
+   which defines a MIME media type for DocBook.  This document makes
+   that media type official.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Walsh                   Expires January 13, 2008                [Page 3]
+
+Internet-Draft  The 'application/docbook+xml' Media Type       July 2007
+
+
+2.  Registration of MIME media type application/docbook+xml
+
+   MIME media type name:  application
+
+   MIME subtype name:  docbook+xml
+
+   Required parameters:  None
+
+   Optional parameters:  charset
+
+      This parameter has identical semantics to the 'charset' parameter
+      of the 'application/xml' media type as specified in RFC 3023[1] or
+      its successors.
+
+   Encoding considerations:
+
+      By virtue of DocBook XML content being XML, it has the same
+      considerations when sent as 'application/docbook+xml' as does XML.
+      See RFC 3023[1], Section 3.2.
+
+   Security considerations:
+
+      Several DocBook elements may refer to arbitrary URIs.  In this
+      case, the security issues of RFC 3986[2], section 7, should be
+      considered.
+
+   Interoperability considerations:
+
+      None.
+
+   Published specification:
+
+      This media type registration is for DocBook documents as described
+      by DocBook: The Definitive Guide[3] or its successors.
+
+   Applications which use this media type:
+
+      There is no experimental, vendor specific, or personal tree
+      predecessor to 'application/docbook+xml', reflecting the fact that
+      no applications currently recognize it.  This new type is being
+      registered in order to allow for the deployment of DocBook on the
+      World Wide Web, as a first class XML application.
+
+   Additional information:
+
+
+
+
+
+
+
+Walsh                   Expires January 13, 2008                [Page 4]
+
+Internet-Draft  The 'application/docbook+xml' Media Type       July 2007
+
+
+
+
+      Magic number(s):
+
+         There is no single initial octet sequence that is always
+         present in DocBook documents.
+
+      file extension(s):
+
+         DocBook documents are most often identified with the extension
+         '.xml'.
+
+      Macintosh File Type Code(s):
+
+         TEXT
+
+   Person & email address to contact for further information:
+
+      Norman Walsh, Norman.Walsh@Sun.COM
+
+   Intended usage:
+
+      COMMON
+
+   Author/Change controller:
+
+      DocBook is a work product of the DocBook Technical Committee at
+      OASIS.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Walsh                   Expires January 13, 2008                [Page 5]
+
+Internet-Draft  The 'application/docbook+xml' Media Type       July 2007
+
+
+3.  Fragment identifiers
+
+   For documents labeled as 'application/docbook+xml', the fragment
+   identifier notation is exactly that for 'application/xml', as
+   specified in [1] or its successors.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Walsh                   Expires January 13, 2008                [Page 6]
+
+Internet-Draft  The 'application/docbook+xml' Media Type       July 2007
+
+
+4.  Security Considerations
+
+   An XML Resource Identifier does not in itself pose a security threat.
+   However, XML Resource Identifers are often converted to IRIs or URIs
+   and subsequently used to provide a compact set of instructions for
+   access to network resources, care must be taken to properly interpret
+   the data within an XML Resource Identifier, to prevent that data from
+   causing unintended access, and to avoid including data that should
+   not be revealed in plain text.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Walsh                   Expires January 13, 2008                [Page 7]
+
+Internet-Draft  The 'application/docbook+xml' Media Type       July 2007
+
+
+5.  References
+
+   [1]  Murata, M., St. Laurent, S., and D. Kohn, "XML Media Types",
+        RFC 3023, January 2001.
+
+   [2]  Berners-Lee, T., Fielding, R., and L. Masinter, "Uniform
+        Resource Identifier (URI): Generic Syntax", RFC 3986,
+        January 2005.
+
+   [3]  Walsh, N. and L. Muellner, "DocBook: The Definitive Guide",
+        October 1999.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Walsh                   Expires January 13, 2008                [Page 8]
+
+Internet-Draft  The 'application/docbook+xml' Media Type       July 2007
+
+
+Author's Address
+
+   Norman Walsh
+   Sun Microsystems
+   1 Network Drive
+   Building #2 MS UBUR02-201
+   Burlington, MA  01803
+   US
+
+   Email: Norman.Walsh@Sun.COM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Walsh                   Expires January 13, 2008                [Page 9]
+
+Internet-Draft  The 'application/docbook+xml' Media Type       July 2007
+
+
+Full Copyright Statement
+
+   Copyright (C) The IETF Trust (2007).
+
+   This document is subject to the rights, licenses and restrictions
+   contained in BCP 78, and except as set forth therein, the authors
+   retain all their rights.
+
+   This document and the information contained herein are provided on an
+   "AS IS" basis and THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS
+   OR IS SPONSORED BY (IF ANY), THE INTERNET SOCIETY, THE IETF TRUST AND
+   THE INTERNET ENGINEERING TASK FORCE DISCLAIM ALL WARRANTIES, EXPRESS
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF
+   THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED
+   WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+
+Intellectual Property
+
+   The IETF takes no position regarding the validity or scope of any
+   Intellectual Property Rights or other rights that might be claimed to
+   pertain to the implementation or use of the technology described in
+   this document or the extent to which any license under such rights
+   might or might not be available; nor does it represent that it has
+   made any independent effort to identify any such rights.  Information
+   on the procedures with respect to rights in RFC documents can be
+   found in BCP 78 and BCP 79.
+
+   Copies of IPR disclosures made to the IETF Secretariat and any
+   assurances of licenses to be made available, or the result of an
+   attempt made to obtain a general license or permission for the use of
+   such proprietary rights by implementers or users of this
+   specification can be obtained from the IETF on-line IPR repository at
+   http://www.ietf.org/ipr.
+
+   The IETF invites any interested party to bring to its attention any
+   copyrights, patents or patent applications, or other proprietary
+   rights that may cover technology that may be required to implement
+   this standard.  Please address the information to the IETF at
+   ietf-ipr@ietf.org.
+
+
+Acknowledgment
+
+   Funding for the RFC Editor function is provided by the IETF
+   Administrative Support Activity (IASA).
+
+
+
+
+
+Walsh                   Expires January 13, 2008               [Page 10]
+

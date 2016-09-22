@@ -1,0 +1,97 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>area</title><link rel="stylesheet" href="defguide.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.64.1"><link rel="home" href="docbook.html" title="DocBook"><link rel="up" href="ref-elements.html" title="DocBook Element Reference"><link rel="previous" href="application.html" title="application"><link rel="next" href="areaset.html" title="areaset"></head><body><div class="navheader"><table border="0" cellpadding="0" cellspacing="0" width="100%" summary="Navigation table"><tr><td align="left">&nbsp;<a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a>&nbsp;<a title="application" href="application.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;<a title="DocBook Element Reference" href="ref-elements.html"><img src="figures/nav-up.png" alt="Up" border="0"></a>&nbsp;<a title="areaset" href="areaset.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td><td align="right"><i>DocBook: The Definitive Guide</i> 2.0.9 <span class="alpha-version">(<a href="co01.html"><em>Alpha</em></a>)</span> </td></tr></table></div><div class="refentry" lang="en"><a name="area.element"></a><div class="titlepage"><div><h1 class="title">area</h1></div><div><p class="releaseinfo">$Revision: 1.4 $</p></div><div><p class="pubdate">$Date: 2003/08/17 14:31:00 $</p></div></div><div class="refnamediv"><p>area &#8212; A region defined for a <a href="callout.html"><tt class="sgmltag-element">Callout</tt></a> in a graphic or code example</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><h3><span class="bold"><b>Content Model</b></span></h3><pre class="synopsis">area ::=
+EMPTY</pre><h3><span class="bold"><b>Attributes</b></span></h3><p><a href="ref-elements.html#common.attributes" title="Common Attributes">Common attributes</a></p><table border="0" width="100%" cellpadding="2" style="border-collapse: collapse; border-left: 0.5pt solid black; border-right: 0.5pt solid black; border-bottom: 0.5pt solid black;" summary="Attributes"><thead><tr><td class="th" style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; "><p><span class="bold"><b>Name</b></span></p></td><td class="th" style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; "><p><span class="bold"><b>Type</b></span></p></td><td class="th" style="border-bottom: 0.5pt solid ; "><p><span class="bold"><b>Default</b></span></p></td></tr></thead><tbody><tr><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">coords</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">CDATA</td><td style="border-bottom: 0.5pt solid ; " align="left" valign="top"><span class="emphasis"><em>Required</em></span></td></tr><tr><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">otherunits</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">NMTOKEN</td><td style="border-bottom: 0.5pt solid ; " align="left" valign="top"><span class="emphasis"><em>None</em></span></td></tr><tr><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">label</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">CDATA</td><td style="border-bottom: 0.5pt solid ; " align="left" valign="top"><span class="emphasis"><em>None</em></span></td></tr><tr><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">units</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top"><table class="simplelist" border="0" summary="Simple list"><tr><td><i>Enumeration:</i></td></tr><tr><td>calspair</td></tr><tr><td>linecolumn</td></tr><tr><td>linecolumnpair</td></tr><tr><td>linerange</td></tr><tr><td>other</td></tr></table></td><td style="border-bottom: 0.5pt solid ; " align="left" valign="top"><span class="emphasis"><em>None</em></span></td></tr><tr><td style="border-right: 0.5pt solid ; " align="left" valign="top">linkends</td><td style="border-right: 0.5pt solid ; " align="left" valign="top">IDREFS</td><td style="" align="left" valign="top"><span class="emphasis"><em>None</em></span></td></tr></tbody></table><div class="docbookng-synopsis"><h3>DocBook NG &#8220;Bourbon&#8221; Content Model</h3><div class="define-first"><div class="element">area ::=<ul><li><em>EMPTY</em></li></ul><h4>DocBook NG &#8220;Bourbon&#8221; Attributes</h4><p>Common attributes (ID required).</p><p>Attributes: (Required attributes, if any, are <b>bold</b>)</p><ul><li><b>coords</b></li><li>label</li><li>linkends (IDREFS)</li><li><em>Exactly one of:</em><ul><li>units (enumeration)<ul><li>&#8220;calspair&#8221;</li><li>&#8220;linecolumn&#8221;</li><li>&#8220;linecolumnpair&#8221;</li><li>&#8220;linerange&#8221;</li></ul></li><li><em>Each of:</em><ul><li>units (enumeration)<ul><li>&#8220;other&#8221;</li></ul></li><li><b>otherunits</b> (NMTOKEN)</li></ul></li></ul></li></ul></div></div></div></div><div class="refsect1" lang="en"><a name="d0e24699"></a><h2>Description</h2><p>
+An <a href="area.html"><tt class="sgmltag-element">Area</tt></a> is an empty element holding information about a
+region in a graphic, program listing, or screen. 
+</p><p>
+The region is generally decorated with a number, symbol, or other
+distinctive mark.  The mark is usually used as the label for the
+<a href="callout.html"><tt class="sgmltag-element">Callout</tt></a> in a <a href="calloutlist.html"><tt class="sgmltag-element">CalloutList</tt></a>, which allows the
+reader to identify which callouts are associated with which regions.
+The marks may be generated by the processing application from the
+<a href="area.html"><tt class="sgmltag-element">Area</tt></a>s, or it may be added by some other process.  (This is
+an interchange issue. See <a href="appf.html" title="Interchanging DocBook Documents">Appendix&nbsp;F, <i>Interchanging DocBook Documents</i></a>.)
+</p><p>
+For a complete description of callouts, see <a href="callout.html"><tt class="sgmltag-element">Callout</tt></a>.
+</p><div class="refsect2" lang="en"><a name="d0e24725"></a><h3>Processing expectations</h3><p>
+Suppressed. This element provides data for processing but it
+is not expected to be rendered directly.
+</p><p>
+The processing expectations of <a href="callout.html"><tt class="sgmltag-element">Callout</tt></a>s are likely to deserve
+special consideration for interchange.  See <a href="appf.html" title="Interchanging DocBook Documents">Appendix&nbsp;F, <i>Interchanging DocBook Documents</i></a>.
+</p><p>
+The <tt class="sgmltag-attribute">Coords</tt>, which are required, identify
+the location of the region.  The coordinates are <span class="acronym">CDATA</span>;
+how they are interpreted depends on the 
+<tt class="sgmltag-attribute">Units</tt> specified:
+
+<div class="variablelist"><dl><dt><span class="term"><tt class="sgmltag-attvalue">CALSPair</tt></span></dt><dd><p>The coordinates are expressed using the semantics of the <span class="acronym">CALS</span> 
+graphic attributes.  The format of the coordinates is &#8220;x1,y1 x2,y2&#8221;.
+This identifies a rectangle with the lower-left corner at (x1,y1) and
+the upper-right corner at (x2,y2).  The X and Y coordinates are 
+integers in the range 0 to 10000; they express a percentage of the
+total distance from 0.00 to 100.00%. The lower-left corner is (0,0).
+</p></dd><dt><span class="term"><tt class="sgmltag-attvalue">LineColumn</tt></span></dt><dd><p>
+The coordinates are expressed using lines and columns.
+The format of the coordinates is &#8220;line column.&#8221;
+In a graphic context, the meaning of this unit is unspecified.
+</p></dd><dt><span class="term"><tt class="sgmltag-attvalue">LineRange</tt></span></dt><dd><p>
+The coordinates are expressed using lines.
+The format of the coordinates is &#8220;startingline endingline.&#8221;
+In a graphic context, the meaning of this unit is unspecified.
+</p></dd><dt><span class="term"><tt class="sgmltag-attvalue">LineColumnPair</tt></span></dt><dd><p>
+The coordinates are expressed as a continuous flow of characters.
+The format of the coordinates is &#8220;line1 col1 line2 col2&#8221;.
+This identifies a flow of characters that begins at col1 of line1 and
+extends to col2 of line2.  If line1 and line2 are different, then the
+region includes all of the intervening lines (including text that
+occurs before col1 and after col2).  In other words, this unit 
+does not specify a rectangle.
+In a graphic context, the meaning of this unit is unspecified.
+</p></dd><dt><span class="term"><tt class="sgmltag-attvalue">OtherUnits</tt></span></dt><dd><p>
+If specified, then the <tt class="sgmltag-attribute">OtherUnits</tt>
+attribute is expected to identify the units in some 
+implementation-specific way.
+</p></dd></dl></div>
+The <tt class="sgmltag-attribute">Units</tt> attribute is not required, if it
+is not specified, the semantics of the coordinates must be inherited from
+the surrounding <a href="areaspec.html"><tt class="sgmltag-element">AreaSpec</tt></a> or <a href="areaset.html"><tt class="sgmltag-element">AreaSet</tt></a> element
+or implied in
+some implementation-specific manner.
+</p><p>
+In processing systems in which the mark is inserted automatically, the
+<tt class="sgmltag-attribute">Label</tt> attribute is provided as a mechanism
+for specifying what the mark should be.
+</p><p>
+The author may point to any relevant information with <tt class="sgmltag-attribute">Linkends</tt>.  DocBook does not specify a semantic for
+these links.  One possible use would be for providing a link back to
+the appropriate <a href="callout.html"><tt class="sgmltag-element">Callout</tt></a> in an online environment.
+</p></div><div class="refsect2" lang="en"><a name="d0e24813"></a><h3>Parents</h3><p>These elements contain area:
+<span class="simplelist"><a href="areaset.html"><tt class="sgmltag-element">areaset</tt></a>, <a href="areaspec.html"><tt class="sgmltag-element">areaspec</tt></a></span>.</p></div></div><div class="refsect1" lang="en"><a name="d0e24826"></a><h2>Attributes</h2><div class="variablelist"><dl><dt><span class="term">coords</span></dt><dd><p>
+<tt class="sgmltag-attribute">Coords</tt> provides the coordinates of the
+<a href="area.html"><tt class="sgmltag-element">Area</tt></a>. The coordinates should be interpreted using the
+<tt class="sgmltag-attribute">Units</tt> (or <tt class="sgmltag-attribute">OtherUnits</tt>)
+specified.
+</p></dd><dt><span class="term">label</span></dt><dd><p>
+<tt class="sgmltag-attribute">Label</tt> specifies an identifying number or string
+that may be used in presentation. The <a href="area.html"><tt class="sgmltag-element">Area</tt></a> label might be drawn
+on top of the figure, for example, at the position indicated by
+<tt class="sgmltag-attribute">Coords</tt>.
+</p></dd><dt><span class="term">linkends</span></dt><dd><p>
+<tt class="sgmltag-attribute">Linkends</tt> points to the <a href="callout.html"><tt class="sgmltag-element">Callout</tt></a>(s) which refer
+to this <a href="area.html"><tt class="sgmltag-element">Area</tt></a>. (This provides bidirectional linking, which
+may be useful in online presentation.)
+</p></dd><dt><span class="term">otherunits</span></dt><dd><p>
+If none of the <tt class="sgmltag-attribute">Units</tt> are applicable, set
+<tt class="sgmltag-attribute">Units</tt> to <tt class="literal">Other</tt> and set 
+<tt class="sgmltag-attribute">OtherUnits</tt> to some application-specific
+description of the desired units.
+</p></dd><dt><span class="term">units</span></dt><dd><p>
+<tt class="sgmltag-attribute">Units</tt> indicate how the specified
+<tt class="sgmltag-attribute">Coords</tt> are to be interpreted. The default
+units vary according to the type of callout specified; <tt class="literal">CALSPair</tt>
+for graphics and <tt class="literal">LineColumn</tt> for line-oriented elements.
+</p></dd></dl></div></div><div class="refsect1" lang="en"><a name="d0e24914"></a><h2>Examples</h2><p>For examples, see
+<span class="simplelist"><a href="graphicco.html"><tt class="sgmltag-element">graphicco</tt></a>, <a href="mediaobjectco.html"><tt class="sgmltag-element">mediaobjectco</tt></a>, <a href="programlistingco.html"><tt class="sgmltag-element">programlistingco</tt></a></span>.
+</p></div></div><div class="navfooter"><table width="100%" summary="Navigation table"><tr><td width="40%" align="left"><a title="application" href="application.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;</td><td width="20%" align="center"><a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a></td><td width="40%" align="right">&nbsp;<a title="areaset" href="areaset.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td></tr><tr><td width="40%" align="left">application&nbsp;</td><td width="20%" align="center"><a title="DocBook Element Reference" href="ref-elements.html"><img src="figures/nav-up.png" alt="Up" border="0"></a></td><td width="40%" align="right">&nbsp;areaset</td></tr></table></div><div class="copyrightfooter"><p><a href="dbcpyright.html">Copyright</a> &copy; 1999, 2000, 2001, 2002, 2003 <a href="http://www.oreilly.com/">O'Reilly &amp; Associates, Inc.</a> All rights reserved.</p></div></body></html>

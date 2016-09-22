@@ -1,0 +1,177 @@
+DocBook Technical Committee Meeting Minutes: 16 Apr 2002
+=======================================================
+
+The DocBook Technical Committee met on Tuesday, 16 Apr 2002 at
+01:00p EDT (10:00a PDT, 17:00GMT, 18:00BST, 19:00CEST, 02:00JST+) for
+90 minutes.
+
+| Agenda
+|
+| 1. Roll call
+
+  Paul Grosso
+  Dennis Evans
+  Nancy Harrison
+  Sabine Ocker
+  Mike Smith
+  Bob Stayton
+  Norman Walsh
+
+Regrets:
+
+  Dick Hamilton
+
+Meeting called to order at 13:05 EDT.
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+None.
+
+| 4. Review of open action items {5 min}
+|
+|    a. Norm to write a concrete proposal for linking in DocBook 5.0
+|       Continued.
+|    b. Sabine to update the teleconference service to make the telcons 90 minutes.
+|       Completed.
+|    c. Dick to restart the discussion of help projects on the DocBook list.
+|       Completed[2]
+|    d. Dick to compare his internal customizations to the last HelpSet proposal[3]
+        Continued
+|    e. Nancy to review DITA for help authoring and summarize.
+        Continued
+|    f. Paul to attempt a merged table model.
+|       Completed[4]
+|    g. Mike to write a proposal for some form of generic annotation mechanism.
+        Completed[5]
+
+| 5. Discuss Help Authoring {15 min}
+
+Continued until the next meeting.
+
+| 6. Discuss RFE #472229 Allow HTML tables {15 min}
+
+Paul: Tried to leave the original files unchanged (some changes were
+required because there are aren't enough PEs in the original files);
+using the customization layer paradigm. In the long run we may want to
+just put the table model in. There are only three elements that have
+the same name: tgroup, thead, and tfoot. In those three cases, each
+needed a content model that was the HTML model or the CALS model. And
+each had to have an attribute set that was the union. In cases where
+the same attributes occurred, the value spaces had to be unioned.
+
+Proposed: we adopt this solution in principal for solving the HTML
+tables in DocBook request (RFE 472229). Accepted.
+
+Action: Norm to consider scheduling for 4.3, 5.0, 6.0 etc.
+
+Proposed: leave aside the decision about when to do HTML tables until
+after we've decided something about our schedule.
+
+Action: Norm and Paul to take up offline the particular issues of how
+to do the customization.
+
+| 7. Discuss Annotations {15 min}
+
+Mike: There have been a couple of different requests to provide some
+way to generating text for HTML TITLE attributes (for tooltips).
+Related is the ability to provide the expanded text for an acronym.
+This seems to fall under the umbrella of "annotations" on text.
+Footnotes are also a kind of annotation.
+
+An annotation element would be free of processing expectations and
+could therefore be used in new ways. There is an annotation element in
+electronic versions of PDF, but rendering it in HTML would be harder
+because there's only the title attribute or JavaScript.
+
+The W3C Amaya browser has annotation support.
+
+No consensuses forming.
+
+Action: Mike to provide a list of use cases to motivate discussion at
+the next meeting.
+
+| 8. Review of Requests for Enhancement {40 min}
+|
+|    To browse a specific RFE, enter the URL (on one line):
+|
+|         http://sourceforge.net/tracker/index.php?func=detail&amp;;
+|         group_id=21935&amp;atid=384107&amp;aid=XXXX
+|
+|    where XXXX is the RFE number.
+|
+|    473365 Allow optional in funcprototype
+
+How about optionalparamdefs instead? Do we need the same thing for
+methodsynopsis (optionalmethodparams)?
+
+Action: Norm to float this suggestion on the list and see if other
+people are having similar problems.
+
+|    488368 Simplify single index entries
+
+I think entities really are the right choice here, but I'm not sure
+what you'd do in an entity-free world. One concern I have about the
+pointing mechanism is that the pointed-to entries have no knowledge
+that they're pointed to, so apparently harmless changes could be
+dramatic.
+
+Proposed: Reject. Use entities for now. Using links is too much
+complexity for this problem. Accepted.
+
+|    495853 add 'caption' to listitem content-model
+
+This is a can of worms: what's the difference between a caption and a title?
+
+Action: Norm to ask the submitter: do you really want introductory
+text? If not, how do you imagine this would be rendered?
+
+|    507975 revision should allow author
+
+Proposed: accept this change. Accepted.
+
+|    514244 Allowing xref inside link
+
+This is really 'gentext': xref without link semantics. Otherwise there
+are nested linking issues.
+
+We could say that xref inside a link has no linking semantics, it just
+generates text.
+
+We could add an attribute to control this behavior.
+
+No consensuses forming.
+
+Action: Paul to report what the XHTML and XSL FO specs actually say
+about nested links.
+
+Insufficient time for remaining issues. (But we did make progress! :-)
+
+Meeting adjourned at 14:31 EDT.
+
+|    514425 Simplify info elements
+|    514435 Allow reference within refentry
+|    517604 Optional Title for GlossList
+|    518074 More database classes
+|    524225 iso-latin-5 ent
+|    533734 Allow methodsynopsis not to have paramet
+|    538187 Descriptions for XML character entities
+|    413389 Enhance METHODNAME and VARNAME
+|    425730 Create an SVG module
+|    431411 RFE 70: add generic linking capability
+|    436067 splitting tech.char.class
+|    468700 clarify version id in release filenames
+
+Done as of DocBook 4.2CR1
+
+|    482818 Simplify ToC content model
+|    522552 Add title attribute to <ulink> element
+|
+| [1] http://lists.oasis-open.org/archives/docbook-tc/200203/msg00013.html
+| [2] http://lists.oasis-open.org/archives/docbook/200203/msg00132.html
+| [3] http://sourceforge.net/docman/display_doc.php?docid=9352&group_id=21935
+| [4] http://lists.oasis-open.org/archives/docbook-tc/200204/msg00002.html
+| [5] http://lists.oasis-open.org/archives/docbook-tc/200204/msg00006.html

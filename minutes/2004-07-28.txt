@@ -1,0 +1,277 @@
+DocBook Technical Committee Meeting Minutes: 28 July 2004 
+| =============================================================
+| 
+| The DocBook Technical Committee met on Wednesday, 28 July 2004 at
+| 05:00p EDT (02:00p PDT, 21:00GMT, 22:00BST, 23:00CEST, 06:00JST+,
+| 02:30a India+) for 90 minutes.
+| 
+| Agenda
+| 
+| 1. Roll call
+
+Paul Grosso,
+Norman Walsh, chair and scribe
+Larry Rowland
+Dick Hamilton
+Nancy Harrison
+Gary Cornelius
+Scott Hudson
+Mark Johnson
+Mike Smith
+
+Regrets:
+
+Bob Stayton
+Adam Di Carlo
+Steven Cogorno
+Jirka Kosek
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Next meeting: 18 August 2004.
+
+Regrets: None.
+
+| 4. Review of the agenda.
+
+Accepted.
+
+| 5. Review of open action items
+|
+|     a. Mike to provide a better proposal for choicelist markup.
+
+Contined.
+
+|     b. Norm to publish flattened version of the 4.3 XML DTD.
+
+Completed.
+
+|     c. Norm to ask Karl about creating stable OASIS URIs.
+
+Completed.
+
+ACTION: Norm to generate web pages for 4.2, 4.3 and 4.4x
+
+|     d. Larry to look into section 508 accessibility issues
+|        with DocBook elements.
+
+Completed.
+
+|     e. Adam to ask the submitter for more information.
+|        about 950206 Nested bibliodivs
+
+Continued.
+
+|     f. Norm to create official releases for Simplified DocBook 1.1,
+|        MathML, and others that are dependent on DocBook 4.3.
+
+Completed.
+
+|     g. Bob to identify elements in DocBook that correspond to
+|        valid locations of HTML forms in HTML output.
+
+Continued.
+
+|     h. Scott will investigate places where
+|        anchor should be permitted.
+
+Continued.
+
+|     i. Norm to query the mailing list about removing xml:base
+|        from the SGML version of 4.4.
+
+Completed.
+
+|     j. Norm to query the mailing list about the impact for 4.4
+|        of making the rules attribute in tables into CDATA,
+|        not enumerated.
+
+Completed.
+
+|     k. Mike to communicate the decision about RFE 971095 (Allow authorgroup
+|        anywhere author is allowed) to the submittor.
+
+Completed.
+
+| 6. DTD version 4.4 beta
+
+No comments on the beta, we could promote it to CR.
+
+What about entities?
+
+Our sets are wrong, Norm is reluctant to produce another set that's
+the same as the W3C set. What should we do?
+
+Mike points out that it's just not that efficient to have multiple
+versions of these things lying around.
+
+Norm reviews the history: the only reason we ever started distributing
+them was that there was no other public set of XML versions of the
+character entities.
+
+Proposal: change the public identifiers to the W3C public identifiers,
+leave the system identifiers pointing into a directory under the DTD
+and ship bit-for-bit copies of the W3C entity sets as they existed
+when we released the DTD.
+
+Accepted.
+
+ACTION: Norm to produce 4.4b2 with those changes.
+
+| 7. Request for canonical URIs for Docbook DTDs. [2]
+|     (carried forward from last month)
+
+We can have them at the OASIS site. They'll have the same pattern
+that they used to have before Kavi was introduce. So, 4.3 will
+be http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd for example.
+
+Proposal: In the interest of efficiency, Norm proposes that we only
+put real releases on the OASIS site and leave betas and CRs only on
+docbook.org.
+
+Accepted.
+
+| 8. DocBook namespace (Nancy)
+
+Nancy: DITA (and other vocabularies) would more easily be able to
+interoperate with DocBook if it was in a namespace.
+
+Paul asks about breaking every stylesheet if we put DocBook in a
+namespace.
+
+Norm notes that, yes, we would, but we can work around it in XSL by
+doing two-passes.
+
+Nancy: What's driving it is interoperability. The latest DITA mail and
+they seem to have a lot of concerns about the processing implications.
+There's some desire on the DITA side to be able to incorporate
+material already encoded in DocBook.
+
+Norm notes that if we were starting from scratch, we'd definitely put
+DocBook in a namespace. He goes on to point out some of the
+irregularities of the "null" namespace, including the fact that you
+can't distinguish it from other documents in the null namespace and
+the fact that you can't assign a prefix to it.
+
+Proposal: DocBook V5.0 will be in a namespace. V4.x never will.
+
+Accepted.
+
+What will that namespace be? There are serious issues about extensibility
+and versioning that need to be discussed in email a bit.
+
+Nancy: when we go to a namespace in the schema model, we should
+continue to make the DTD not look like it's in a namespace.
+
+Norm: The logical thing to do is to have the DTD version of 5.x use
+the default namespace and #FIXED the xmlns attribute.
+
+| 9. Annotation proposal (Mike).  [3]
+
+Continued.
+
+| 10. Discuss guidelines for accepting or rejecting requests.
+
+Maybe we should try to do this in email a bit?
+
+ACTION: Mark to summarize the processes that Debian uses for this sort of thing.
+
+| 11. alt text for accessibility.
+|     Reports from action items?
+
+Larry used the WAVE tool that WebAIM has on their website. It revealed
+a few issues. Larry also looked over some guidelines and checklists for
+Section 508 and from the W3C.
+
+ - The guiicon element should provide for alt text.
+ - Attributes on tables should provide for summary information.
+   (Norm: We allow textobject in table for this purpose.)
+ - Anchors that are hrefs should support a TITLE attribute.
+ - Tables are supposed to have row and column heads that map with
+   spans or IDs onto cells of the tables.
+ - We're using bold and italic vs. strong and emphasis and there are
+   a half-dozen or so elements from HTML 4.0 that we should be using.
+   (strong, emphasis, dfn, ...)
+ - If you're using ASCII art (literallayout), then there needs to be a
+   summary and some way to skip past it.
+
+The short summary, though, is that it's hard to tell how close we're
+getting to meeting the requirements and recommendations of the
+accessibility groups.
+
+ACTION: Larry to write up a summary and send it in email, including
+links to the sites that offer tools and tests for accessibility.
+
+ACTION: Secretary to make sure that this issue appears on the Auguest
+agenda after we've had a chance to discuss Larry's list.
+
+| 12. html:form should be available in more places
+|    than in %divcomponent.mix;  [4] [5]
+|    (continue to next meeting when Bob can attend?)
+
+Continued.
+
+| 13. Review of Requests for Enhancement
+| 
+|     To browse a specific RFE, enter the URL (on one line):
+| 
+|       http://sourceforge.net/tracker/index.php?func=detail&;
+|       group_id=21935&atid=384107&aid=XXXX
+| 
+|       950206 Nested bibliodivs
+
+Norm: Just say no.
+
+Mark/Nancy agree with norm.
+
+Norm: From the RFE, it looks like the intent is for storing a database
+of bibliography entries. For that application, extending DocBook seems
+perfectly reasonable. When the actual document bibliography is
+formatted, it can be made flat.
+
+Proposal: Reject.
+
+Accepted.
+
+|       973446 Replace Footnote with Annotation 
+
+Reclassify as "awaiting action items" until we figure out what we're
+going to do with annotation markup.
+
+|       982763 Allow nested tables in td 
+
+Norm: when we constructed the content model of th/td, we used
+tabentry.mix which excludes tables because they can't be nested in
+CALS.
+
+Proposal: We should extend th/td to allow nested tables.
+
+Accepted.
+
+ACTION: Norm to fix for 4.4b2.
+
+ADJOURNED.
+
+|      The following RFEs are awaiting action items
+| 
+|       413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+|       431411 RFE 70: add generic linking capability (Norm)
+|       522552 Add title attribute to <ulink> element (Mike, annotations)
+|       541444 caption in mediaobjectco (closed?) (Dick)
+|       565637 Associate non-inline image with link (Norm, generic linking)
+|       574880 Add annotation element (Mike)
+|       623524 (Re)Consider "choicelist" markup (Mike)
+| 
+|      The following RFEs are identified as V6.0 or later
+| 
+|       531851 Remove inline person name elements
+|       532088 Remove RevHistory from qandaentry
+| - ---
+| 
+| [1] http://lists.oasis-open.org/archives/docbook-tc/200406/msg00019.html
+| [2] http://lists.oasis-open.org/archives/docbook-apps/200406/msg00084.html
+| [3] http://lists.oasis-open.org/archives/docbook-tc/200406/msg00003.html
+| [4] http://lists.oasis-open.org/archives/docbook-apps/200406/msg00081.html
+| [5] http://lists.oasis-open.org/archives/docbook/200404/msg00032.html

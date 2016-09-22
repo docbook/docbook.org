@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type"><title>The Simplified DocBook Document Type</title><link rel="stylesheet" href="http://www.oasis-open.org/spectools/css/oasis-wd.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.51.1"><meta name="description" content="Simplified DocBook is a subset of
+DocBook. It is a
+a general purpose XML document type suited to articles about computer hardware
+and software (though it is by no means limited to these applications).
+"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article"><div class="titlepage"><p class="logo"><a href="http://www.oasis-open.org/"><img src="http://www.oasis-open.org/spectools/images/oasis.png" alt="OASIS" border="0"></a></p><div><h1 class="title"><a name="id2837973"></a>The Simplified DocBook Document Type</h1></div><div><h2>Working Draft 1.0-CR2, 12 June 2002</h2></div><div><dl><dt><span class="docid-heading">Document identifier:</span></dt><dd><p>wd-docbook-simple-1.0-CR2 (<a href="wd-docbook-simple-1.0-CR2.xml" target="_top">XML</a>, <a href="wd-docbook-simple-1.0-CR2.html" target="_top">HTML</a>, <a href="wd-docbook-simple-1.0-CR2.pdf" target="_top">PDF</a>)</p></dd></dl></div><div></div><div></div><div></div><div><dl><dt><span class="loc-heading">Location:</span></dt><dd><p><a href="http://www.oasis-open.org/docbook/specs">http://www.oasis-open.org/docbook/specs</a></p></dd></dl></div><div><dl><dt><span class="editor-heading">Editor:</span></dt><dd><p>Norman Walsh, Sun Microsystems, Inc. <tt>&lt;<a href="mailto:Norman.Walsh@Sun.COM">Norman.Walsh@Sun.COM</a>&gt;</tt></p></dd></dl></div><div><dl><dt><a name="id2823892"></a><span class="abstract-heading">Abstract:</span></dt><dd><p>Simplified DocBook is a subset of
+<a href="http://www.oasis-open.org/docbook/" target="_top">DocBook</a>. It is a
+a general purpose XML document type suited to articles about computer hardware
+and software (though it is by no means limited to these applications).
+</p></dd></dl></div><div><dl><dt><a name="id2823917"></a><span class="status-heading">Status:</span></dt><dd><p>This is a working draft constructed by the editor. It is not
+an official committee work product and may not reflect the consensus
+opinion of the committee.</p><p>Please send comments on this specification to the
+<tt>&lt;<a href="mailto:docbook@lists.oasis-open.org">docbook@lists.oasis-open.org</a>&gt;</tt> list. To subscribe, send
+an email message to
+<tt>&lt;<a href="mailto:docbook-request@lists.oasis-open.org">docbook-request@lists.oasis-open.org</a>&gt;</tt> with the word
+&quot;<tt>subscribe</tt>&quot; as the body of the
+message.
+</p></dd></dl></div><div><p class="copyright">Copyright © 2001, 2002 The Organization for the Advancement of Structured Information
+Standards [OASIS]. All Rights Reserved.
+</p></div><hr></div><div class="toc"><h2>Table of Contents</h2><dl><dt>1. <a href="#s.intro">Introduction</a></dt><dt>2. <a href="#s.terminology">Terminology</a></dt><dt>3. <a href="#docbook">The Simplified DocBook Document Type V1.0CR2</a></dt><dt>4. <a href="#s.changes2">Changes in DocBook V1.0CR2</a></dt><dd><dl><dt>4.1. <a href="#s.bugs2">Bug Fixes</a></dt></dl></dd><dt>5. <a href="#s.changes1">Changes in DocBook V1.0CR1</a></dt><dd><dl><dt>5.1. <a href="#s.bugs1">Bug Fixes</a></dt></dl></dd><dt>6. <a href="#id2778275">Release Notes</a></dt></dl><h3>Appendixes</h3><dl><dt>A. <a href="#a.committee">OASIS DocBook Technical Committee (Non-Normative)</a></dt><dt>B. <a href="#a.notices">Notices</a></dt><dt>C. <a href="#a.ipr">Intellectual Property Rights</a></dt><dt>D. <a href="#a.revhistory">Revision History</a></dt><dt><a href="#bibl">References</a></dt></dl></div><hr><div class="section"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="s.intro"></a>1. Introduction</h2></div></div><p>DocBook is general purpose document type particularly well
+suited to books and papers about computer hardware and software
+(though it is by no means limited to these applications).
+</p><p>Simplified DocBook is an attempt to provide a proper subset of
+DocBook that is simultaneously smaller and still useful. Its original
+genesis was a desire to make 'the HTML subset of
+DocBook,' that is, a subset that had roughly as many tags as
+HTML and roughly the same descriptive power.</p><p>The <a href="mailto:docbook-tc@oasis-open.org" target="_top">DocBook
+Technical Committee</a> maintains the Simplified DocBook schema.
+Simplified DocBook is officially available as an [<a href="#xml-rec">XML</a>] Document Type
+Definition (DTD).</p><p>The Version 1.0 release is the first official release from the DocBook
+Technical Committee.</p><p>The DocBook Technical Committee welcomes bug reports and
+requests for enhancement (RFEs) from the user community. The current list
+of outstanding requests is available through the
+<a href="http://sourceforge.net/" target="_top">SourceForge</a>
+<a href="http://sourceforge.net/tracker//?atid=384107&amp;group_id=21935&amp;func=browse" target="_top">tracker</a>
+interface. This is also the preferred mechanism for submitting new requests.
+Old RFEs, from a previous legacy tracking system, are
+<a href="http://www.oasis-open.org/docbook/old-rfes.html" target="_top">archived</a>
+for reference.</p></div><div class="section"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="s.terminology"></a>2. Terminology</h2></div></div><p>The key words <i>must</i>, <i>must
+not</i>, <i>required</i>,
+<i>shall</i>, <i>shall not</i>,
+<i>should</i>, <i>should not</i>,
+<i>recommended</i>, <i>may</i>, and
+<i>optional</i> in this Standard are to be
+interpreted as described in [<a href="#rfc2119">RFC 2119</a>]. Note that for
+reasons of style, these words are not capitalized in this
+document.</p></div><div class="section"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="docbook"></a>3. The Simplified DocBook Document Type V1.0CR2</h2></div></div><p>The Simplified DocBook document type is a subset of
+<a href="http://www.oasis-open.org/docbook/xml/" target="_top">DocBook XML V4.1.2</a>.
+It is distributed from the
+<a href="http://www.oasis-open.org/docbook/" target="_top">DocBook site</a> at
+<a href="http://www.oasis-open.org/" target="_top">OASIS</a>.
+</p></div><div class="section"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="s.changes2"></a>4. Changes in DocBook V1.0CR2</h2></div></div><p>This release fixes a bug in CR1.
+</p><p>Each of the changes made between V1.0CR1 and V1.0CR2
+is summarized here.</p><div class="section"><div class="titlepage"><div><h3 class="title"><a name="s.bugs2"></a>4.1. Bug Fixes</h3></div></div><div class="itemizedlist"><ul type="disc"><li><p>The name of the
+<tt class="sgmltag-element">footnoteref</tt> element was misspelled in the declaration of
+The <tt class="sgmltag-paramentity">%xref.char.class;</tt>.</p></li><li><p>The DTD was incorrectly identified as 1.0b2 in several internal comments.</p></li></ul></div></div></div><div class="section"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="s.changes1"></a>5. Changes in DocBook V1.0CR1</h2></div></div><p>This release fixes several DocBook incompatibilities.
+</p><p>Each of the changes made between V1.0b2 and V1.0CR1
+is summarized here.</p><div class="section"><div class="titlepage"><div><h3 class="title"><a name="s.bugs1"></a>5.1. Bug Fixes</h3></div></div><div class="itemizedlist"><ul type="disc"><li><p>The <tt class="sgmltag-element">footnoteref</tt> and <tt class="sgmltag-element">xref</tt>
+elements were moved back into the <tt class="sgmltag-paramentity">%xref.char.class;</tt>.
+The <tt class="sgmltag-paramentity">%xref.char.class;</tt> was added to several
+other parameter entities.</p></li><li><p>The full CALS Table Model was selected instead of the XML Exchange
+Table Model.</p></li><li><p>The incorrect and unnecessary redefinition of the
+<tt class="sgmltag-element">systemitem</tt> element was removed.</p></li></ul></div></div></div><div class="section"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="id2778275"></a>6. Release Notes</h2></div></div><p>None.</p></div><div class="appendix"><h2 class="title" style="clear: both"><a name="a.committee"></a>A. OASIS DocBook Technical Committee (Non-Normative)</h2><p>The following individuals were members of the committee during
+the formulation of this Standard:</p><div class="itemizedlist"><ul type="disc" compact="compact"><li><p>Dennis Evans</p></li><li><p>Patricia Gee-Best</p></li><li><p>Paul Grosso</p></li><li><p>Dick Hamilton</p></li><li><p>Nancy (Paisner) Harrison</p></li><li><p>Sabine Ocker</p></li><li><p>Michael Sabrio</p></li><li><p>Michael Smith</p></li><li><p>Tim Teebken (prospective)</p></li><li><p>Norman Walsh (Chair, Editor)</p></li></ul></div></div><div class="appendix"><h2 class="title" style="clear: both"><a name="a.notices"></a>B. Notices</h2><p>Copyright © The Organization for the Advancement of
+Structured Information Standards [OASIS] 2001, 2002. All Rights
+Reserved.</p><p>OASIS takes no position regarding the validity
+or scope of any intellectual property or other rights
+that might be claimed to pertain to the implementation
+or use of the technology described in this document
+or the extent to which any license under such rights
+might or might not be available; neither does it represent
+that it has made any effort to identify any such rights.
+Information on OASIS's procedures with respect to rights
+in OASIS specifications can be found at the OASIS website.
+Copies of claims of rights made available for publication
+and any assurances of licenses to be made available,
+or the result of an attempt made to obtain a general
+license or permission for the use of such proprietary
+rights by implementors or users of this specification,
+can be obtained from the OASIS Executive Director.</p><p>OASIS invites any interested party to bring to
+its attention any copyrights, patents or patent applications,
+or other proprietary rights which may cover technology
+that may be required to implement this specification.
+Please address the information to the OASIS Executive
+Director.</p><p>This document and translations of it may be copied
+and furnished to others, and derivative works that comment
+on or otherwise explain it or assist in its implementation
+may be prepared, copied, published and distributed,
+in whole or in part, without restriction of any kind,
+provided that the above copyright notice and this paragraph
+are included on all such copies and derivative works.
+However, this document itself may not be modified in
+any way, such as by removing the copyright notice or
+references to OASIS, except as needed for the purpose
+of developing OASIS specifications, in which case the
+procedures for copyrights defined in the OASIS Intellectual
+Property Rights document must be followed, or as required
+to translate it into languages other than English.</p><p>The limited permissions granted above are perpetual
+and will not be revoked by OASIS or its successors or
+assigns.</p><p>This document and the information contained herein
+is provided on an 'AS IS' basis and OASIS DISCLAIMS
+ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION
+HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES
+OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</p><p>OASIS has been notified of intellectual property
+rights claimed in regard to some or all of the contents
+of this specification. For more information consult
+the online list of claimed rights.</p></div><div class="appendix"><h2 class="title" style="clear: both"><a name="a.ipr"></a>C. Intellectual Property Rights</h2><p>For information on wether any patents have been disclosed that may be
+essential to implementing this specification, and any offers of patent
+licensing terms, please refer to the Intellectual Property Rights section
+of the DocBook web page
+(<a href="http://www.oasis-open.org/docbook/" target="_top">http://www.oasis-open.org/docbook/</a>)
+</p></div><div class="appendix"><h2 class="title" style="clear: both"><a name="a.revhistory"></a>D. Revision History</h2><div class="revhistory"><table border="1" width="100%" summary="Revision history"><tr><td align="left">Revision 1.0-CR2</td><td align="left">12 Jun 2002</td><td align="left">ndw</td></tr><tr><td align="left" colspan="3">Candidate Release 2</td></tr><tr><td align="left">Revision 1.0-CR1</td><td align="left">05 Jun 2002</td><td align="left">ndw</td></tr><tr><td align="left" colspan="3">Candidate Release 1</td></tr><tr><td align="left">Revision 1.0b2</td><td align="left">08 Jan 2002</td><td align="left">ndw</td></tr><tr><td align="left" colspan="3">First beta release from the TC.</td></tr></table></div><p>
+</p></div><div class="bibliography"><div class="titlepage"><div><h2 class="title"><a name="bibl"></a>References</h2></div></div><div class="bibliodiv"><h3 class="title">Normative</h3><div class="bibliomixed"><a name="xml-rec"></a><p class="bibliomixed">[XML] Tim Bray,
+Jean Paoli, C. M. Sperberg-McQueen, and Eve Maler, editors.
+<span class="citetitle"><i><a href="http://www.w3.org/TR/REC-xml" target="_top">Extensible Markup
+Language (XML) 1.0 Second Edition</a></i></span>.
+World Wide Web Consortium, 2000.
+</p></div><div class="bibliomixed"><a name="rfc2119"></a><p class="bibliomixed">[RFC 2119] IETF
+(Internet Engineering Task Force).
+<span class="citetitle"><i><a href="http://www.ietf.org/rfc/rfc2119.txt" target="_top">RFC 2119:
+Key words for use in RFCs to Indicate Requirement Levels</a></i></span>.
+S. Bradner. 1997.</p></div></div></div></div></body></html>

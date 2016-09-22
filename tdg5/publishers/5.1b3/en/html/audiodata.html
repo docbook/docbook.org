@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.3.6), see www.w3.org" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>audiodata</title>
+<link rel="stylesheet" type="text/css" href="css/defguide.css" />
+<link rel="icon" href="figs/web/publishers-icon.png" type="image/png" />
+<script type="text/javascript" src="js/refentry.js">
+</script>
+</head>
+<body>
+<div class="navheader">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" summary="Navigation table">
+<tr>
+<td align="left">&#160;<a title="DocBook Publishers: The Definitive Guide" href="docbook.html"><img src="figs/web/nav/home-publishers.png" alt="Home" border="0" /></a>&#160;<a href="attribution.html" title="attribution"><img src="figs/web/nav/prev.png" alt="Prev" border="0" /></a>&#160;<a title="DocBook Element Reference" href="ref-elements.html"><img src="figs/web/nav/up.png" alt="Up" border="0" /></a>&#160;<a title="audioobject" href="audioobject.html"><img src="figs/web/nav/next.png" alt="Next" border=
+"0" /></a></td>
+<td align="right"><i>DocBook Publishers: The Definitive Guide</i> (Version <a href="ch00-online.html">1.1.0 for DocBook Publishers V1.1 (based on DocBook V5.1b3)</a>)</td>
+</tr>
+</table>
+</div>
+<div class="refentry" id="element.db.audiodata"><a class="indexterm" name="element.db.audiodata.1" id="element.db.audiodata.1"></a>
+<div class="refnamediv">
+<h2>audiodata</h2>
+<p><span class="refname">audiodata</span>&#160;—&#160;Pointer to external audio data.</p>
+</div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<div class="element-synopsis">
+<ul>
+<li><a href="titleforbidden.info.html"><tt class="tag-element">info</tt></a>?&#160;<span class="pattern">(db.titleforbidden.info)</span></li>
+</ul>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>Attributes</h3>
+</div>
+<p><a class="brokenlink" href="#common.attributes">Common attributes</a>.</p>
+<p>Additional attributes:</p>
+<div class="element-synopsis">
+<ul>
+<li><em>Each of:</em>
+<div class="element-synopsis">
+<ul>
+<li>format</li>
+<li><em>Exactly one of:</em>
+<div class="element-synopsis">
+<ul>
+<li><strong class="emphasis">fileref</strong> (anyURI)</li>
+<li><strong class="emphasis">entityref</strong> (ENTITY)</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<p>Required attributes are shown in <strong class="emphasis">bold</strong>.</p>
+</div>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>Description</h3>
+</div>
+<p>This empty element points to external audio data.</p>
+<div class="refsection" id="dbreproc.audiodata">
+<div class="refsection-titlepage">
+<h4>Processing expectations</h4>
+</div>
+<p>There are two ways to provide content for <a href="audiodata.html"><tt class="tag-element">audiodata</tt></a>: <tt class="tag-attribute">entityref</tt> or <tt class="tag-attribute">fileref</tt>. It is best to use only one of these methods. However, if multiple sources are provided, <tt class="tag-attribute">entityref</tt> will be used in favor of <tt class="tag-attribute">fileref</tt>.</p>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Attributes</h4>
+</div>
+<p><a class="brokenlink" href="#common.attributes">Common attributes</a>.</p>
+<div class="variablelist">
+<dl>
+<dt id="element.db.audiodata.6.4.3.1.1" class="attname">entityref</dt>
+<dd>
+<p>Identifies the location of the data by external identifier (entity name)</p>
+</dd>
+<dt id="element.db.audiodata.6.4.3.2.1" class="attname">fileref</dt>
+<dd>
+<p>Indentifies the location of the data by URI</p>
+</dd>
+<dt id="element.db.audiodata.6.4.3.3.1" class="attname">format</dt>
+<dd>
+<p>Specifies the format of the data</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Parents</h4>
+</div>
+<p>These elements contain <a href="audiodata.html"><tt class="tag-element">audiodata</tt></a>: <span class="simplelist"><span class="member"><a href="audioobject.html"><tt class="tag-element">audioobject</tt></a></span></span>.</p>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Children</h4>
+</div>
+<p>The following elements occur in audiodata: <span class="simplelist"><span class="member"><a href="titleforbidden.info.html"><tt class="tag-element">info</tt></a>&#160;<span class="pattern">(db.titleforbidden.info)</span></span></span>.</p>
+</div>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>Examples</h3>
+</div>
+<p>See <a href="audioobject.html"><tt class="tag-element">audioobject</tt></a> for an example.</p>
+</div>
+</div>
+<div class="navfooter">
+<table width="100%" summary="Navigation table">
+<tr>
+<td width="40%" align="left"><a title="attribution" href="attribution.html"><img src="figs/web/nav/prev.png" alt="Prev" border="0" /></a>&#160;</td>
+<td width="20%" align="center"><a title="DocBook Publishers: The Definitive Guide" href="docbook.html"><img src="figs/web/nav/home-publishers.png" alt="Home" border="0" /></a></td>
+<td width="40%" align="right">&#160;<a title="audioobject" href="audioobject.html"><img src="figs/web/nav/next.png" alt="Next" border="0" /></a></td>
+</tr>
+<tr>
+<td width="40%" align="left">attribution&#160;</td>
+<td width="20%" align="center"><a title="DocBook Element Reference" href="ref-elements.html"><img src="figs/web/nav/up.png" alt="Up" border="0" /></a></td>
+<td width="40%" align="right">&#160;audioobject</td>
+</tr>
+</table>
+</div>
+<div class="infofooter">Last revised by Norman Walsh on 6 Jun 2011 <span class="githash">(git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)</span></div>
+<div class="copyrightfooter">
+<p><a href="dbcpyright.html">Copyright</a> © 2010, 2011 Norman Walsh.</p>
+</div>
+</body>
+</html>

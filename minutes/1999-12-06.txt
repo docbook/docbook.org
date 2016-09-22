@@ -1,0 +1,219 @@
+DocBook TC Minutes, 06/07 Dec 1999                           
+                                           Summary            
+                                           06 December        
+                                           07 December        
+Summary                                                       
+                                                              
+These notes summarize the DocBook Technical Committee (TC)    
+meeting that took place in Philladelphia on 06 and 07 Dec     
+1999 as part of the OASIS meetings colocated with XML/MT'99.  
+                                                              
+  ---------------------------------------------------------   
+                                                              
+06 December                                                   
+                                                              
+Present                                                       
+                                                              
+  o Eve Maler                                                 
+                                                              
+  o Michael Sabrio                                            
+                                                              
+  o Terry Allen                                               
+                                                              
+  o Norman Walsh                                              
+                                                              
+  o Eduardo Gutentag                                          
+                                                              
+  o Sunthar Visuvalingam, InformIT, Pearson Education         
+                                                              
+Agenda                                                        
+                                                              
+  o Review and approve docbook 4.0 changes                    
+                                                              
+  o start work on docbook 5.0 - xmlifications                 
+                                                              
+  o review status of docbookx and its relationship to above   
+                                                              
+  o discuss docbook as xml schema                             
+                                                              
+RFE's for 4.0                                                 
+                                                              
+Issue 70: postponed for the 5.0 discussion                    
+                                                              
+Issue 93- Add markup for forms: since we don't have design    
+for it, Norm proposed to leave it for 5.0 - the candidates    
+would be IETMs, HTML, but really, realistically, only HTML is 
+a candidate. At issue is whether to use namespaces.           
+                                                              
+Issue 95 - Extend FuncSynopsis for modern programming         
+languages: Norm has a proposal from some time ago; this was   
+examined as to whether it is sufficient enough for Java, C++  
+and other object oriented languages. It was stated that the   
+goal is not to model code. Norm proposed to clean it up,      
+publish it once again to the list, alert people at xml.dev as 
+to what is happening at the list, and then plug it in 4.0 --  
+the proposal was accepted.                                    
+                                                              
+Isuee 96 - Extend inlines for modern programming languages:   
+We need a list - we could start with a few of the ones in 95  
+- methodname, exceptionname, interfacename. Norm will         
+document the rationale.                                       
+                                                              
+Issue 98 - Reorganize parameter entities: we're leaving this  
+open; it may become moot if/when we move to schemas, we would 
+do the work there, so why do it now.                          
+                                                              
+Issue 99 - Rework MsgSet: it's a mess, there are too many     
+subelements, Terry proposed a radical simplification that     
+would be backwards incompatible so would have to be in 5.0    
+                                                              
+Sunthar proposed an alternate to msgset. Eve expanded on      
+this: simple msg entry,with msgtext with option               
+attrs(level,audience, origin, class [with a default of main]) 
+followed by explan.                                           
+                                                              
+We will have parallel construction with SimpleMessageEntry,   
+which since it is not incompatible can go in 4.0 - will be    
+sent to the list for input. Question: should the attrs be     
+added to mssgentry or not? There is no problem in putting the 
+attrs there, but we should shift to a linking model, so class 
+will not be there for now, only level, audience and origin as 
+CDATA attrs of simplemessageentry.                            
+                                                              
+Issue 100 - Keep 'cooked' and 'raw' bibliographic metadata    
+separated: the RFE contains a proposal that solves the        
+problem, in a backwards incompatible manner, so it should be  
+incorporated in 5.0 - except as point 3. Norm will eliminate  
+point three from the RFE, since there is no proposal in it.   
+                                                              
+Issue 102 - There are name case inconsistencies in the        
+DocBook DTD: accepted.                                        
+                                                              
+Issue 103 - Extend Revision to allow longer descriptions:     
+accepted - Norm will decide what's the best content model for 
+RevDescription.                                               
+                                                              
+Issue 104 - add specification class attribute value for       
+Article: yes, it will be added.                               
+                                                              
+Issue 105 - Add notation for PNG graphics: we will add PNG    
+notation.                                                     
+                                                              
+Issue 106 - *.content PEs in wrong place in dbpool.mod: the   
+correct solution is to blow away all of them, since many are  
+used in just one place, so they are pointless.                
+                                                              
+Issue 107 - <qandaentry> disallows multiple phrasings of a    
+question and answer: Rejected, multiple questions are not     
+good, multiple answers are possible.                          
+                                                              
+Issue 108 - Content model disallows <note> in <answer>:       
+Accepted. It was not seen as a need originally, but it is now 
+obviously needed.                                             
+                                                              
+Issue 109 - Add FPI to content of dbgenent.mod: accepted.     
+                                                              
+Issue 110 - Allow revhistory in QandASet: We will add         
+revhistory to QandAEntry (not Set).                           
+                                                              
+Issue 111 - Support for the Euro symbol: will be added &euro; 
+as SDATA [ euro ] -- will be removed in an appropriate entity 
+set.                                                          
+                                                              
+Issue 112 - AckNo ought to be a block not an inline!:         
+rejected, it's supposed to be small.                          
+                                                              
+Another agenda item:                                          
+                                                              
+-- We will produce two versions of 4.0 asap. They will be as  
+nearly identical as possible, one will be xml compliant and   
+the other will be the traditional sgml dtd. There will be     
+only one version of docbook 5.0 and it will be both xml and   
+smgl compliant; this will be accomplished by making the dtd   
+looser from an xml point of view and by not using dtd xml     
+extensions. The tc has also agreed that it will investigate   
+and produce a schema version of docbook.                      
+                                                              
+The issue of the status of docbookx becomes moot, because     
+Norm will withdraw it as soon as v4.0 comes out.              
+                                                              
+A list of RFEs was presented by Sunthar.                      
+                                                              
+  o add titles to itemizedlist and orderedlist. - accepted as 
+    4.0 change                                                
+                                                              
+  o add an attribute for line numbering in programlisting     
+    only for the purposes of labeling -                       
+    linenumbering=(numbered|unnumbered)                       
+                                                              
+5.0 Issues                                                    
+                                                              
+Issue 93 - Add markup for forms: Initially: use html-*        
+instead of namespaces; they'll have the html attrs, for now   
+we won't add common.attrs. Then it was decided that if we     
+were going to use -*, we might as well use namespaces, but    
+there was no consensus as to what URI to use for the ns, and  
+what to do with future updates. So after more discussion, it  
+was decided to leave it off until 5.0.                        
+                                                              
+Issue 38 - Review nav.class availability: Norm reopened it    
+because loosening the content model of components and         
+sections too much would allow sects to be siblings of         
+recursive sections, etc.                                      
+                                                              
+A new rfe (#118) was filed regarding simplesects.             
+                                                              
+There are 7 RFEs left to be done for 5.0, and they will be    
+FU'd in 4.0                                                   
+                                                              
+Potentiall schema design characteristics                      
+                                                              
+  o Modularity, incorporating modules from elsewhere          
+                                                              
+  o Scope (all/some of Docbook?                               
+                                                              
+  o Build on strengths ( our core competency)                 
+                                                              
+  o Embedded documentation                                    
+                                                              
+  ---------------------------------------------------------   
+                                                              
+07 December                                                   
+                                                              
+Dennis Evans present.                                         
+                                                              
+Discussion on schemas.                                        
+                                                              
+What we would want to get out of schemas when/if we turn      
+docbook into a schema. Inheritance? Some obvious things it    
+would apply to, like admonitions, but it may not be too       
+useful in many places. Extensions, subsetting, how to         
+indicate whether a docbook related schema is a subset or an   
+extension of the docbook schema.                              
+                                                              
+Schema validity is different from dtd/sgml validity.          
+                                                              
+Three things to consider: do not allow anything from other    
+namespeces, or only from well known namespaces, or disallow   
+extensions.                                                   
+                                                              
+Further discussion on modularization, relationship between    
+that and namespaces, types and class hierarchies.             
+                                                              
+The goal should not be backward compatibility but rather what 
+we wanted originally but could not express in DTDs. We would  
+expect most documents to validate under both dtds and schemas 
+but we would not guarantee it at all. The isomorphic stage is 
+4.0, but not afterwards.                                      
+                                                              
+We will also start working on Xlink at the schema stage (see  
+Issue 70 above).                                              
+                                                              
+Timelines - Docbook 4.0 in SGML and XML by January 2000;      
+docbook 5.0 in XML by January 2001.                           
+                                                              
+Dates: Xtech in February, Paris in June, XML 2000 in December 
+4th                                                           
+                                                              
+AI for Eve to post some potential design and implementation   
+principles related to Schema development.                     

@@ -1,0 +1,173 @@
+| DocBook Technical Committee Meeting Minutes: 20 May 2003
+| =======================================================
+|
+| The DocBook Technical Committee met on Tuesday, 20 May 2003 at
+| 01:00p EDT (10:00a PDT, 17:00GMT, 18:00BST, 19:00CEST, 02:00JST+,
+| 10:30p India) for 60 minutes.
+|
+| 1. Roll call
+
+Steve Cogorno
+Paul Grosso
+Dick Hamilton
+Nancy Harrison
+Scott Hudson
+Mike Smith
+Norman Walsh
+
+Regrets:
+
+Bob Stayton
+Mark Johnson
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+Accepted.
+
+| 4. Review of open action items
+|
+|      a. Norm to follow-up on RFE 562343: &lt;packagename&gt; element
+Continued.
+|      b. Norm to write better documentation for option/optional
+Continued.
+|      c. Norm to ask Denis Evans for his opinions on REF #686733, allow
+|              bibliography under &lt;refentry&gt;
+Continued.
+|      d. Bob to write a concrete proposal for marking up keycaps
+Continued.
+|      e. Mike to post a summary of URI/URN to the list
+Continued.
+|      f. Norm to post a summary of the Task content models as described.
+Completed.
+|      g. Norm to write some stylesheets to demonstrate annotations
+Continued.
+|      h  Norm to respond to Bob's message on bibliographic inlines to
+|         see if we can get some email discussion going.
+Continued.
+
+| 6. Multiple refnamedivs per refentry[2] (related to RFE #514435)
+Continued until Bob is present.
+
+| 7. Task/Topic[3]
+Continued for another month.
+
+[[ There is no item 8 ]]
+
+| 9. Choicelist markup
+Continued until Mike has a chance to write up a proposal.
+
+| 10. Annotations [4]
+Continued for another month.
+
+Mike notes that the current state of discussion is really about
+processing expectations and not the markup per se.
+
+Norm agrees and promises to deliver on his action.
+
+| 11. Inline bibliography elements (related to RFE #679316) [5]
+Continued until Bob is present.
+
+| 12. Review of Requests for Enhancement
+|
+|    To browse a specific RFE, enter the URL (on one line):
+|
+|      http://sourceforge.net/tracker/index.php?func=detail&amp;
+|      group_id=21935&amp;atid=384107&amp;aid=XXXX
+|
+|    where XXXX is the RFE number.
+|
+|      691762 syntax=""
+
+Proposal: add language attribute (CDATA) to parallel classsynopsis on
+          all the verbatim environments.
+
+Accepted.
+
+|      697374 marking up keycaps according to their semantics
+
+Continued pending Bob's acttion item.
+
+|      698844 Add PDF to notation.class
+
+Accepted.
+
+|      705885 Add NS attribute to SGMLTAG
+
+No dissent.
+
+Processing expectations: none. This is for semantic markup. One could
+have the prefix provided automatically through a stylesheet.
+
+What should we call the attribute? 
+
+Norm notes that "ns" is the name of the attribute in RELAX NG.
+XSLT uses "namespace".
+
+We'll add "namespace" as a CDATA attribute.
+
+Accepted. 
+
+|      714764 new classifier attrib for &lt;indexterm&gt; and &lt;index&gt;
+
+Norm observes that one of the reasons this doesn't often arise in
+DocBook (as opposed to TeXinfo) is because we already have semantic
+markup for many of the things you would put in a different index.
+
+For example, if you wanted a index of functions, I wouldn't expect to
+add &lt;indexterm class="function"&gt; for all the functions, I'd expect to
+index the elements marked as &lt;function&gt;s.
+
+ACTION: Norm to describe how this might be done using stylesheet
+customization based on function and variable markup, for example.
+
+|      722775 More readable processing of &lt;simplelist type="inline"&gt;
+
+This would be fairly hard to do in its full generality. There are
+localization issues (what language should "and" be in?), generated
+text issues, and a number of other problems.
+
+There's no support for this change at this time. We may revisit this
+when we look at Mike's choicelist proposal which seems related.
+
+|      436067 splitting tech.char.class 
+|      473365 Allow optional in funcprototype 
+|      482818 Simplify ToC content model 
+|      514435 Allow reference within refentry 
+|      541444 caption in mediaobjectco 
+|      558443 include storage info in metadata 
+|      562343 &lt;packagename&gt; element 
+|      565637 Associate non-inline image with link 
+|      565716 URL and URN markup 
+|      573419 Add bidirectional text overrides 
+|      582822 VARARG and FUNCDEF together 
+|      623524 (Re)Consider "choicelist" markup 
+|      638456 RFE add a &lt;translator&gt; tag
+|      655526 funcprototype enhancement
+|      660044 Controlling line numbering in verbatims
+|      679316 Allow orgname tag within paragraphs
+|      686733 allow bibliography under &lt;refentry&gt;
+|
+|     The following RFEs are awaiting action items
+|
+|      413389 Enhance METHODNAME and VARNAME 
+|      431411 RFE 70: add generic linking capability
+|      522552 Add title attribute to &lt;ulink&gt; element
+|      574880 Add annotation element 
+|      613293 Generalize programlisting 
+|      621564 New element Task and children
+|
+|     The following RFEs are identified as V6.0 or later
+|
+|      531851 Remove inline person name elements
+|      532088 Remove RevHistory from qandaentry
+|
+| ----
+| [1] http://lists.oasis-open.org/archives/docbook/200304/msg00053.html
+| [2] http://lists.oasis-open.org/archives/docbook-tc/200303/msg00005.html
+| [3] http://lists.oasis-open.org/archives/docbook/200302/msg00050.html
+| [4] http://lists.oasis-open.org/archives/docbook-tc/200303/msg00001.html
+| [5] http://lists.oasis-open.org/archives/docbook-tc/200303/msg00006.html

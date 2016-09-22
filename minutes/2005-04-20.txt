@@ -1,0 +1,187 @@
+DocBook Technical Committee Meeting Minutes: 20 April 2005
+=============================================================
+
+The DocBook Technical Committee met on Wednesday, 20 April 2005 at
+05:00p EDT (02:00p PDT, 21:00GMT, 22:00BST, 23:00CEST, 06:00JST+,
+02:30a India+) for 90 minutes.
+
+1. Roll call
+
+Present: Steve Cogorno, Gary Cornelius, Adam Di Carlo,
+Nancy Harrison, Scott Hudson,
+Jirka Kosek, Larry Rowland, Bob Stayton, Norman Walsh 
+   
+Regrets: Paul Grosso, Dick Hamilton, Mark Johnson, 
+
+2. Accepted the minutes[1] of the previous meeting.
+
+3. Next meeting: 18 May 2005
+
+4. Review of the agenda.
+
+No new items.
+
+5. Review of open action items
+
+   a. Norm to obtain OASIS namespace naming rules.
+      CONTINUE.
+
+   b. Norm to publish a version of the 5.0 spec before
+      the next meeting.
+      CONTINUE.
+
+   c. Bob to create a new annotations proposal.
+      COMPLETED.
+
+   d. Norm to release Simplified DocBook 1.1.
+      COMPLETED.
+
+6.  OASIS TC Process changes
+
+Bob summarized the changes in TC process for the Committee.
+The "Committee Specification" is back, and we need to
+pay attention to the OASIS IPR and specification release
+process.
+
+7.  DTD V5 development status.
+
+Norm said the new version is still in development.
+Jirka has reviewed it and posted some suggestions.
+
+Some specific items:
+
+a.  Is caption allowed in mediaobject in 5.0? 
+Norm will consider adding it back, perhaps to formal
+and informal objects rather than mediaobject.
+
+b. Should title be required on equation.  It seems that
+in practice equations are numbered, not titled.
+So the title will be optional.
+
+c.  alt element will be put back into equation, along with other places.
+
+
+8.  DocBook namespaces.
+      
+A DocBook namespace is needed for version 5.  We want a stable,
+nonchanging name.  The Committee agreed that
+it would apply to the family of DocBook
+schemas, including Simplified DocBook and customizations.
+The name would not contain a version number.
+
+The OASIS naming rules are not yet adopted, so Norm proposed
+using "http://docbook.org/ns/docbook"; as the namespace name.
+There is some precedent for using a non-OASIS URI.
+
+AMENDED 25 April 2005:
+The resolution at the meeting was inadvertantly omitted from the minutes.
+Norm proposed:
+  Shall we adopt "http://docbook.org/ns/docbook"; as the namespace name
+  for DocBook V5.0.
+
+The proposal was adopted unanimously.
+END AMENDMENT
+
+
+9. Annotation proposal (Bob).  
+    See latest proposal and follow-ups.  [2]
+
+Bob reviewed his proposal for establishing the connection
+between an alt or annotation element and the thing it
+is annotating.  See the proposal for details.
+
+Scott asked how to annotate a point, since the proposal makes
+connections between elements.  Norm suggested using an anchor
+element to make the connection.
+
+Adam wondered if allowing both directions for making the connection
+are needed.  The Committee felt that different users will
+use different methods.
+
+Larry suggested that for the simple case, an annotation
+element without attributes be connected to its parent.
+Norm suggested that would be a problem if an attribute
+were added later, changing the meaning of the connection.
+The use of explicit attributes removes all ambiguity.
+
+Norm moved that we adopt the proposal as an experiment
+in DocBook V5 and see how people use it before making
+further changes.   The motion was approved.
+
+Norm to incorporate the new alt and annotation
+elements into DocBook V5.
+
+10.  Table model purity (Bob).
+      Continued from previous meeting.
+      See email discussion thread.  [3]
+
+      a.  Common attributes on HTML tables.
+      b.  pgwide, tabstyle, and floatstyle on HTML tables.
+
+The Committee recognized that CALS tables have extra
+attributes.  The Committee accepted the need to use
+effectivity attributes in almost all table elements.
+Once those were accepted, there was no reason to not accept
+the other DocBook common attributes.  And then there was
+no reason to not accept the extra CALS table attributes
+originally proposed.  
+
+Norm will add them to DocBook V5.
+
+11.  Next version of DocBook Simplified:
+     base it on DocBook 4.4?
+
+This led to a discussion of DocBook 4.5, since we have some 
+changes since 4.4.  Norm suggested we create a DocBook 4.5,
+adopt it as a Committee Specification, and then put it forth
+as an OASIS Standard.  Then we would base a new Simplified
+version on that.
+
+ACTION: Norm to produce a DocBook 4.5 DTD Working Draft.
+
+12. Review of Requests for Enhancement
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;;
+      group_id=21935&atid=384107&aid=XXXX
+
+      1182626 Update Elements/Attributes in HTML Forms Module
+
+Norm suggested we accept the suggestion to update the
+HTML Forms Module.  But the update should be based on 
+DocBook 4.5. We can update the modules for testing,
+but we should wait until the 4.5 process is completed
+before adopting Committee Specifications for the modules.
+
+Meeting adjourned at 6:30pm EDT.
+------------------------------------------------------------
+
+     The following RFEs are awaiting action items
+
+      973446 Replace Footnote with Annotation 
+      413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+      431411 RFE 70: add generic linking capability (Norm)
+      522552 Add title attribute to <ulink> element 
+      565637 Associate non-inline image with link (Norm, generic linking)
+      574880 Add annotation element 
+      623524 (Re)Consider "choicelist" markup 
+
+     The following RFEs are identified as V5.0 or later
+
+      1097183 Allow Task as a sibling of sections 
+      1084491 Add address, orgname, orgdiv to corpauthor, corpcredit, etc. 
+      974285 Check floatstyle/float attributes
+      958393 remove default class value from productname 
+      531851 Remove inline person name elements
+      532088 Remove RevHistory from qandaentry
+- ---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200503/msg00009.html
+[2] http://lists.oasis-open.org/archives/docbook-tc/200504/msg00012.html
+[3] http://lists.oasis-open.org/archives/docbook-tc/200504/msg00005.html
+
+Bob Stayton
+Sagehill Enterprises
+DocBook Consulting
+bobs@sagehill.net

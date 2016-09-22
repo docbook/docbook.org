@@ -1,0 +1,230 @@
+| DocBook Technical Committee Meeting Minutes: 15 Apr 2003
+| ========================================================
+| 
+| The DocBook Technical Committee met on Tuesday, 15 Apr 2003 at
+| 01:00p EDT (10:00a PDT, 17:00GMT, 18:00BST, 19:00CEST, 02:00JST+,
+| 10:30p India) for 90 minutes.
+|
+| Agenda
+|
+| 1. Roll call
+
+Steve Cogorno
+Dick Hamilton
+Paul Grosso
+Nancy Harrison
+Norman Walsh
+Mike Smith
+
+Regrets:
+
+Scott Hudson
+Bob Stayton
+
+Absent:
+
+Mark Johnson
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+Accepted.
+
+| 4. Review of open action items
+| 
+|     a. Norm to follow-up on RFE 562343: &lt;packagename&gt; element
+Continued.
+|     b. Norm to write better documentation for option/optional
+Continued.
+|     c. Norm to post simplified ToC proposal to the list again
+|        Completed[9]
+|     d. Norm to propose a new content model for mediaobjectco to bring
+|            it back in sync with mediaobject
+|        Completed[10]
+|     e. Norm to ask Denis Evans for his opinions on REF #686733, allow
+|             bibliography under &lt;refentry&gt;
+Continued.
+|     f. Paul to review how HTML table proposal would change if we went
+|        with Strict instead of Transitional XHTML.
+|        Completed[2]
+|     g. Norm to summarize what's been approved for DocBook V.next
+|        Completed[11]
+|     h. Norm to put inline biibliography elements on the agenda
+Completed.
+|     i. Norm to put choicelist markup on the agenda
+Completed.
+|     j. Norm to put annotations on the agenda
+Completed.
+|     k. Bob to write a concrete proposal for marking up keycaps
+Continued
+ 
+| 5. URI/URN markup[3]
+
+Mike summarized the proposal.
+
+Some discussion of the class values.
+
+Proposal is to add URI to tech.char.class without the class attribute.
+
+Accepted.
+
+ACTION: Mike to post a summary to the list, pointing out that we didn't adopt the
+        proposed class attribute.
+
+| 6. Multiple refnamedivs per refentry[4] (related to RFE #514435)
+
+Postpone until Bob's return.
+
+| 7. Task/Topic[5]
+
+NW: Would abstract do? Does it really need to be taskabstract/
+
+SC: TaskAbstract was originally Description, but the team wanted to make sure it
+    was very short. So the name was changed to TaskAbstract. We can
+    change that name.
+
+NH: What if you wanted pre requesites before each procedure.
+
+SC: Then you might need to restructure.
+
+Discussion of the proposal
+
+TaskSummary?
+TaskPrerequisites?
+Procedure
+Example*
+TaskRelated
+
+ACTION: Norm to post a summary of the content models as described.
+Plan to accept next month if there's no pushback.
+
+| 8. Bidi proposal[6]
+
+Proposal: Add
+
+   dir (ltr|rtl|lro|rlo) #IMPLIED
+
+as a global attribute.
+
+Accepted.
+
+| 9. Choicelist markup
+
+Postpone until Mike's return.
+
+| 10. Annotations [7]
+
+SC: When I hear 'annotation', I think of technical review comments.
+
+NW: Annotations could be used for that.
+
+DH: This is something HP would definitely use. We'd use it as pop-over or roll-over
+    tool tip text, for example.
+
+ACTION: Norm to write some stylesheets to demonstrate how this might
+look. Perhaps that will identify failings or at least motivate
+additional enthusiasm.
+
+| 11. Inline bibliography elements (related to RFE #679316) [8]
+
+NH: We've already got a huge number of inlines. The thought of adding
+a whole bunch of more things is really discouraging.
+
+ACTION: Norm to respond to Bob's message and see if we can get some
+email discussion going.
+
+11b. CALS and HTML Tables in DocBook
+
+Proposal: if we adopt the proposal to add HTML tables to DocBook, we
+should use Transitional not Strict on the basis that much of the
+motivation for doing it is in the attributes available only in
+Transional HTML model.
+
+Accepted.
+
+Proposal: adopt Paul's suggested changes to the DTD to allow both CALS
+and HTML Transitional tables in DocBook documents.
+
+Does anyone request that we do this by email?
+
+None.
+
+NH: Are we quorate?
+
+Yes.
+
+Steve Cogorno   No
+Dick Hamilton   Yes
+Paul Grosso     Yes
+Nancy Harrison  Yes
+Norman Walsh    Yes
+Mike Smith      Now absent
+
+Accepted.
+
+Adjourned.
+
+11c. Publish V.next
+
+| 12. Review of Requests for Enhancement
+| 
+|    To browse a specific RFE, enter the URL (on one line):
+| 
+|      http://sourceforge.net/tracker/index.php?func=detail&amp;
+|      group_id=21935&amp;atid=384107&amp;aid=XXXX
+| 
+|    where XXXX is the RFE number.
+| 
+|      691762 syntax=""
+|      697374 marking up keycaps according to their semantics
+|      698844 Add PDF to notation.class
+|      705885 Add NS attribute to SGMLTAG
+|      714764 new classifier attrib for &lt;indexterm&gt; and &lt;index&gt;
+| 
+|      436067 splitting tech.char.class 
+|      473365 Allow optional in funcprototype 
+|      482818 Simplify ToC content model 
+|      514435 Allow reference within refentry 
+|      541444 caption in mediaobjectco 
+|      558443 include storage info in metadata 
+|      562343 &lt;packagename&gt; element 
+|      565637 Associate non-inline image with link 
+|      565716 URL and URN markup 
+|      573419 Add bidirectional text overrides 
+|      582822 VARARG and FUNCDEF together 
+|      623524 (Re)Consider "choicelist" markup 
+|      638456 RFE add a &lt;translator&gt; tag
+|      655526 funcprototype enhancement
+|      660044 Controlling line numbering in verbatims
+|      679316 Allow orgname tag within paragraphs
+|      686733 allow bibliography under &lt;refentry&gt;
+| 
+|     The following RFEs are awaiting action items
+| 
+|      413389 Enhance METHODNAME and VARNAME 
+|      431411 RFE 70: add generic linking capability
+|      522552 Add title attribute to &lt;ulink&gt; element
+|      574880 Add annotation element 
+|      613293 Generalize programlisting 
+|      621564 New element Task and children
+| 
+|     The following RFEs are identified as V6.0 or later
+| 
+|      531851 Remove inline person name elements
+|      532088 Remove RevHistory from qandaentry
+| 
+| ----
+| [1] http://lists.oasis-open.org/archives/docbook/200303/msg00024.html
+| [2] http://lists.oasis-open.org/archives/docbook/200303/msg00026.html
+| [3] http://lists.oasis-open.org/archives/docbook-tc/200303/msg00000.html
+| [4] http://lists.oasis-open.org/archives/docbook-tc/200303/msg00005.html
+| [5] http://lists.oasis-open.org/archives/docbook/200302/msg00050.html
+| [6] http://lists.oasis-open.org/archives/docbook-tc/200302/msg00006.html
+| [7] http://lists.oasis-open.org/archives/docbook-tc/200303/msg00001.html
+| [8] http://lists.oasis-open.org/archives/docbook-tc/200303/msg00006.html
+| [9] http://lists.oasis-open.org/archives/docbook/200304/msg00051.html
+| [10] http://lists.oasis-open.org/archives/docbook/200304/msg00050.html
+| [11] http://lists.oasis-open.org/archives/docbook-tc/200304/msg00002.html

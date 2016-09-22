@@ -1,0 +1,106 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='custom-4x'>
+<title>DocBook 4.x Customizations</title>
+
+<toc/>
+
+<para>The schemas described below are customizations of DocBook V4.x.
+</para>
+
+<section xml:id="simple">
+<title>Simplified DocBook</title>
+
+<para>This is a community project; it <emphasis>is not</emphasis> an
+official product of the DocBook Technical Committee.</para>
+
+<para>Over the years, the notion of a "simple" DocBook subset has come up
+many times.  It has been observed that the number of elements in
+DocBook can be a little overwhelming to the new user.
+</para>
+
+<para>Simplified DocBook is a small subset of DocBook.
+The <link xlink:href="sdocbook/">online summary</link> shows just how
+small this subset is.
+</para>
+
+<para>This DTD is an attempt to make a small subset of DocBook.
+The goals of this subset are:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>Documents written in the subset must be 100% legal DocBook
+documents.
+</para>
+</listitem>
+<listitem>
+<para>This subset for single documents (articles, white papers, etc.),
+so there's no need for books or sets, just 'articles'.
+</para>
+</listitem>
+<listitem>
+<para>The markup should be the smallest practical subset, if you need
+richly structured markup, use full DocBook. In
+particular, the subset often selects a single element from a family of
+related elements; for example, <tag>programlisting</tag> is
+provided, but <tag>screen</tag> is not.
+</para>
+</listitem>
+<listitem>
+<para>The DTD must work in online browsers (it's XML not SGML). It
+must be small enough to download more-or-less painlessly.
+</para>
+</listitem>
+</itemizedlist>
+
+<?schemas module='simple' release='4.*'?>
+</section>
+
+<section xml:id="forms">
+<title>HTML Forms</title>
+
+<para>This is a community project; it <emphasis>is not</emphasis> an
+official product of the DocBook Technical Committee.</para>
+
+<para>The “forms” schema adds HTML forms elements to DocBook.</para>
+
+<?schemas module='htmlforms' release="4.*"?>
+
+</section>
+
+<section xml:id="mathml">
+<title>MathML</title>
+
+<para>This is an official product of the DocBook Technical Committee.</para>
+
+<para>The “MathML” schema adds MathML elements to DocBook equations.</para>
+
+<?schemas module='mathml' release="4.*"?>
+
+</section>
+
+<section xml:id="svg">
+<title>SVG</title>
+
+<para>This is an official product of the DocBook Technical Committee.</para>
+
+<para>The “SVG” schema adds SVG elements elements to DocBook graphics.</para>
+
+<?schemas module='svg' release="4.*"?>
+
+</section>
+
+<section xml:id="ebnf">
+<title>EBNF</title>
+
+<para>This is an official product of the DocBook Technical Committee.</para>
+
+<para>The “EBNF” schema adds EBNF (Extended Backus-Naur Forms)
+elements elements to DocBook.</para>
+
+<?schemas module='ebnf' release="4.*"?>
+
+</section>
+</article>

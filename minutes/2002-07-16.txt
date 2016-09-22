@@ -1,0 +1,200 @@
+| DocBook Technical Committee Meeting Minutes: 16 Jul 2002
+| ========================================================
+|
+| The DocBook Technical Committee met on Tuesday, 16 July 2002 at
+| 01:00p EDT (10:00a PDT, 17:00GMT, 18:00BST, 19:00CEST, 02:00JST+)
+| for 90 minutes.
+|
+| Agenda
+|
+| 1. Roll call
+
+Dennis Evans
+Paul Grosso
+Dick Hamilton
+Nancy Harrison
+Sabine Ocker
+Bob Stayton
+Mike Smith
+Norman Walsh
+
+Absent:
+
+Richard Lander
+Tim Teebken
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+Accepted.
+
+| 4. Review of open action items {5 min}
+|
+|    a. Bob to write a more detailed proposal for instance-based generated xref text
+
+Continued.
+
+|    b. Paul to start discussion of the unresolved processing expectations of annotations
+
+Completed.[2]
+
+|    c. Norm to start discussion of RFE #473365 Allow optional in funcprototype
+
+Completed.[3]
+
+|    d. Mike to ask the submitter of RFE #514435 about refpurpose
+
+Completed.[4]
+
+|    e. Mike to start discussion about refpurpose
+
+Completed.[5]
+
+|    f. Bob to investigage RFE #558443 include storage info in metadata
+
+Continued.
+
+| 5. Approve DocBook V4.2 {5 min}
+
+Proposed: We accept DocBook V4.2 CR 3 as the official Committee
+Specification of DocBook V4.2 and make that the current official
+version of DocBook.
+
+Accepted.
+
+Proposed: We advance DocBook V4.2 for approval as an OASIS Standard at
+our next opportunity.
+
+Accepted.
+
+| 6. Discuss future plans {10 min}
+
+Proposed: Next should be V5.0.
+
+Accepted.
+
+Proposed: Next release should be released officially in XML/SGML DTDs, RELAX
+NG, and W3C XML Schemas.
+
+Accepted.
+
+A 5.0 release might tentatively be scheduled for sometime around the
+end of the year, but not before.
+
+| 7. IPR Statements {5 min}
+
+ACTION: Norm to get some sort of template from Karl.
+
+| 8. Discuss Annotations {15 min}
+
+ACTION: Norm to take a stab at implementation. Answer Paul's seven questions in
+        light of that exercise.
+
+| 9. Discuss Help Authoring {10 min}
+
+Continued.
+
+Mike suggested that reviewing SiberLogic's SiberSafe product might be informative.
+
+ACTION: Dick to try it out
+
+| 10. Review of Requests for Enhancement {40 min}
+|
+|    To browse a specific RFE, enter the URL (on one line):
+|
+|         http://sourceforge.net/tracker/index.php?func=detail&amp;;
+|         group_id=21935&amp;atid=384107&amp;aid=XXXX
+|
+|    where XXXX is the RFE number.
+|
+|    473365 Allow optional in funcprototype
+
+Continued.
+
+ACTION: Norm to follow-up
+
+|    495853 add 'caption' to itemizedlist content-model
+
+Rejected: lack of response
+
+|    558443 include storage info in metadata
+
+Continued. (Bob is investigating.)
+
+|    562343 <packagename> element
+
+Package seems to be a highly overloaded term.
+
+We have two issues here: packagename as an inline and the ability to
+identify the package that a class (documented with classsynopsis)
+belongs to.
+
+WRT the inline, we'll add 'packagename' as class value on systemitem
+for the inline case.
+
+ACTION: Norm to continue discussion of packagename as part of
+classsynopsis.
+
+|    564776 process/service/daemon/server markup
+
+We have a long-standing tension between inlines and class values on
+system. Adding lots of elements seems fairly heavyweight. Adding class
+values "hides" them from new users.
+
+It's easy to add new class values, so we'll do that and let users who
+are finding that markup inconvenient demonstrate that they are needed
+broadly enough to warrant their own inline.
+
+We'll add 'process', 'service', 'server', and 'daemon' as class values
+to systemitem.
+
+|    565637 Associate non-inline image with link
+
+Leave pending until we settle our generalized linking questions.
+
+|    565716 URL and URN markup
+
+ACTION: Mike to follow-up to find out a little more about the users needs.
+
+We'll add 'uri' to the list of class values on systemitem. Subclassing of the
+URIs can be done role in the short term.
+
+|    565905 Add xrefstyle attribute
+
+Continued: Bob is investigating this.
+
+|    570068 Online values for pubwork
+
+Add class values: emailmessage, webpage, newsposting.
+
+Adjourned.
+
+|    571996 Add 'namespace' inline element
+|    571998 Add 'default' inline element
+|    573419 Add bidirectional text overrides
+|    573812 Allow blockinfo on blockquote
+|    574880 Add annotation element
+|
+|    The following RFEs are awaiting action items
+|
+|    472229 Allow HTML tables
+|    431411 RFE 70: add generic linking capability
+|
+|    The following RFEs have been moved to the bottom of this agenda in order
+|    to make sure that all RFEs get fairly discussed.
+|
+|    413389 Enhance METHODNAME and VARNAME
+|    425730 Create an SVG module
+|    436067 splitting tech.char.class
+|    482818 Simplify ToC content model
+|    522552 Add title attribute to <ulink> element
+|
+| [1] http://lists.oasis-open.org/archives/docbook-tc/200206/msg00016.html
+
+[2] http://lists.oasis-open.org/archives/docbook/200206/msg00153.html
+[3] http://lists.oasis-open.org/archives/docbook/200206/msg00005.html
+[4] http://sourceforge.net/tracker/index.php?func=detail&aid=514435&group_id=21935&atid=384107
+[5] http://lists.oasis-open.org/archives/docbook/200207/msg00102.html

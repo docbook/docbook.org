@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.3.6), see www.w3.org" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>simplelist</title>
+<link rel="stylesheet" type="text/css" href="css/defguide.css" />
+<link rel="icon" href="figs/web/publishers-icon.png" type="image/png" />
+<script type="text/javascript" src="js/refentry.js">
+</script>
+</head>
+<body>
+<div class="navheader">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" summary="Navigation table">
+<tr>
+<td align="left">&#160;<a title="DocBook Publishers: The Definitive Guide" href="docbook.html"><img src="figs/web/nav/home-publishers.png" alt="Home" border="0" /></a>&#160;<a href="simpara.html" title="simpara"><img src="figs/web/nav/prev.png" alt="Prev" border="0" /></a>&#160;<a title="DocBook Element Reference" href="ref-elements.html"><img src="figs/web/nav/up.png" alt="Up" border="0" /></a>&#160;<a title="simplesect" href="simplesect.html"><img src="figs/web/nav/next.png" alt="Next" border=
+"0" /></a></td>
+<td align="right"><i>DocBook Publishers: The Definitive Guide</i> (Version <a href="ch00-online.html">1.1.0 for DocBook Publishers V1.1 (based on DocBook V5.1b3)</a>)</td>
+</tr>
+</table>
+</div>
+<div class="refentry" id="element.db.simplelist"><a class="indexterm" name="element.db.simplelist.1" id="element.db.simplelist.1"></a>
+<div class="refnamediv">
+<h2>simplelist</h2>
+<p><span class="refname">simplelist</span>&#160;—&#160;An undecorated list of single words or short phrases.</p>
+</div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<div class="element-synopsis">
+<ul>
+<li>One or more of:
+<div class="element-synopsis">
+<ul>
+<li><a href="member.html"><tt class="tag-element">member</tt></a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>Attributes</h3>
+</div>
+<p><a class="brokenlink" href="#common.attributes">Common attributes</a> and <a class="brokenlink" href="#common.linking.attributes">common linking attributes</a>.</p>
+<p>Additional attributes:</p>
+<div class="element-synopsis">
+<ul>
+<li>columns (integer)</li>
+<li>type (enumeration) [default=“vert”]
+<div class="element-synopsis">
+<ul>
+<li>“horiz”</li>
+<li>“vert”</li>
+<li>“inline”</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>Description</h3>
+</div>
+<p>A <a href="simplelist.html"><tt class="tag-element">simplelist</tt></a> is a list of words or phrases. It offers a convenient alternative to the other list elements for inline content.</p>
+<div class="refsection" id="dbreproc.simplelist">
+<div class="refsection-titlepage">
+<h4>Processing expectations</h4>
+</div>
+<p>Ironically, the processing expectations of a <a href="simplelist.html"><tt class="tag-element">simplelist</tt></a> are quite complex. The value of the <tt class="tag-attribute">type</tt> attribute determines if the list is presented inline, or in a row- or column-major table. In the table cases, the <tt class="tag-attribute">columns</tt> attribute determines the number of columns in the table.</p>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Attributes</h4>
+</div>
+<p><a class="brokenlink" href="#common.attributes">Common attributes</a> and <a class="brokenlink" href="#common.linking.attributes">common linking attributes</a>.</p>
+<div class="variablelist">
+<dl>
+<dt id="element.db.simplelist.6.4.3.1.1" class="attname">columns</dt>
+<dd>
+<p>Specifies the number of columns for horizontal or vertical presentation</p>
+</dd>
+<dt id="element.db.simplelist.6.4.3.2.1" class="attname">type</dt>
+<dd>
+<p>Specifies the type of list presentation.</p>
+<div class="informaltable-wrapper">
+<div class="informaltable">
+<table border="0" style="border-collapse: collapse;">
+<colgroup>
+<col width="20.74%" align="left" />
+<col align="left" width="79.26%" /></colgroup>
+<thead>
+<tr>
+<th style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ;" colspan="2" align="left">Enumerated values:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ;" align="left">“horiz”</td>
+<td style="border-bottom: 0.5pt solid ;">
+<p>A tabular presentation in row-major order.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ;" align="left">“vert”</td>
+<td style="border-bottom: 0.5pt solid ;">
+<p>A tabular presentation in column-major order.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right: 0.5pt solid ;" align="left">“inline”</td>
+<td>
+<p>An inline presentation, usually a comma-delimited list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Parents</h4>
+</div>
+<p>These elements contain <a href="simplelist.html"><tt class="tag-element">simplelist</tt></a>: <span class="simplelist"><span class="member"><a href="acknowledgements.html"><tt class="tag-element">acknowledgements</tt></a></span>, <span class="member"><a href="answer.html"><tt class="tag-element">answer</tt></a></span>, <span class="member"><a href="appendix.html"><tt class="tag-element">appendix</tt></a></span>, <span class="member"><a href="article.html"><tt class="tag-element">article</tt></a></span>,
+<span class="member"><a href="bibliodiv.html"><tt class="tag-element">bibliodiv</tt></a></span>, <span class="member"><a href="bibliography.html"><tt class="tag-element">bibliography</tt></a></span>, <span class="member"><a href="bibliolist.html"><tt class="tag-element">bibliolist</tt></a></span>, <span class="member"><a href="blockquote.html"><tt class="tag-element">blockquote</tt></a></span>, <span class="member"><a href="callout.html"><tt class="tag-element">callout</tt></a></span>, <span class=
+"member"><a href="calloutlist.html"><tt class="tag-element">calloutlist</tt></a></span>, <span class="member"><a href="caption.html"><tt class="tag-element">caption</tt></a></span>, <span class="member"><a href="chapter.html"><tt class="tag-element">chapter</tt></a></span>, <span class="member"><a href="colophon.html"><tt class="tag-element">colophon</tt></a></span>, <span class="member"><a href="cover.html"><tt class="tag-element">cover</tt></a></span>, <span class="member"><a href=
+"dedication.html"><tt class="tag-element">dedication</tt></a></span>, <span class="member"><a href="dialogue.html"><tt class="tag-element">dialogue</tt></a></span>, <span class="member"><a href="drama.html"><tt class="tag-element">drama</tt></a></span>, <span class="member"><a href="entry.html"><tt class="tag-element">entry</tt></a></span>, <span class="member"><a href="example.html"><tt class="tag-element">example</tt></a></span>, <span class="member"><a href="figure.html"><tt class=
+"tag-element">figure</tt></a></span>, <span class="member"><a href="footnote.html"><tt class="tag-element">footnote</tt></a></span>, <span class="member"><a href="glossary.html"><tt class="tag-element">glossary</tt></a></span>, <span class="member"><a href="glossdef.html"><tt class="tag-element">glossdef</tt></a></span>, <span class="member"><a href="glossdiv.html"><tt class="tag-element">glossdiv</tt></a></span>, <span class="member"><a href="glosslist.html"><tt class=
+"tag-element">glosslist</tt></a></span>, <span class="member"><a href="index.html"><tt class="tag-element">index</tt></a></span>, <span class="member"><a href="informalexample.html"><tt class="tag-element">informalexample</tt></a></span>, <span class="member"><a href="informalfigure.html"><tt class="tag-element">informalfigure</tt></a></span>, <span class="member"><a href="itemizedlist.html"><tt class="tag-element">itemizedlist</tt></a></span>, <span class="member"><a href="legalnotice.html"><tt class=
+"tag-element">legalnotice</tt></a></span>, <span class="member"><a href="linegroup.html"><tt class="tag-element">linegroup</tt></a></span>, <span class="member"><a href="listitem.html"><tt class="tag-element">listitem</tt></a></span>, <span class="member"><a href="note.html"><tt class="tag-element">note</tt></a></span>, <span class="member"><a href="orderedlist.html"><tt class="tag-element">orderedlist</tt></a></span>, <span class="member"><a href="para.html"><tt class="tag-element">para</tt></a></span>,
+<span class="member"><a href="partintro.html"><tt class="tag-element">partintro</tt></a></span>, <span class="member"><a href="poetry.html"><tt class="tag-element">poetry</tt></a></span>, <span class="member"><a href="preface.html"><tt class="tag-element">preface</tt></a></span>, <span class="member"><a href="procedure.html"><tt class="tag-element">procedure</tt></a></span>, <span class="member"><a href="qandadiv.html"><tt class="tag-element">qandadiv</tt></a></span>, <span class="member"><a href=
+"qandaset.html"><tt class="tag-element">qandaset</tt></a></span>, <span class="member"><a href="question.html"><tt class="tag-element">question</tt></a></span>, <span class="member"><a href="revdescription.html"><tt class="tag-element">revdescription</tt></a></span>, <span class="member"><a href="section.html"><tt class="tag-element">section</tt></a></span>, <span class="member"><a href="setindex.html"><tt class="tag-element">setindex</tt></a></span>, <span class="member"><a href="sidebar.html"><tt class=
+"tag-element">sidebar</tt></a></span>, <span class="member"><a href="simplesect.html"><tt class="tag-element">simplesect</tt></a></span>, <span class="member"><a href="step.html"><tt class="tag-element">step</tt></a></span>, <span class="member"><a href="taskprerequisites.html"><tt class="tag-element">taskprerequisites</tt></a></span>, <span class="member"><a href="taskrelated.html"><tt class="tag-element">taskrelated</tt></a></span>, <span class="member"><a href="tasksummary.html"><tt class=
+"tag-element">tasksummary</tt></a></span>, <span class="member"><a href="textobject.html"><tt class="tag-element">textobject</tt></a></span>, <span class="member"><a href="toc.html"><tt class="tag-element">toc</tt></a></span>, <span class="member"><a href="variablelist.html"><tt class="tag-element">variablelist</tt></a></span></span>.</p>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Children</h4>
+</div>
+<p>The following elements occur in simplelist: <span class="simplelist"><span class="member"><a href="member.html"><tt class="tag-element">member</tt></a></span></span>.</p>
+</div>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>See Also</h3>
+</div>
+<p><span class="simplelist"><span class="member"><a href="calloutlist.html"><tt class="tag-element">calloutlist</tt></a></span>, <span class="member"><a href="itemizedlist.html"><tt class="tag-element">itemizedlist</tt></a></span>, <span class="member"><a href="listitem.html"><tt class="tag-element">listitem</tt></a></span>, <span class="member"><a href="orderedlist.html"><tt class="tag-element">orderedlist</tt></a></span>, <span class="member"><a href="variablelist.html"><tt class=
+"tag-element">variablelist</tt></a></span></span></p>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>Examples</h3>
+</div>
+<div class="programlisting">
+<pre>
+<span class="linenumber">  1</span><span class="linenumber-separator"> </span>&lt;article xmlns='http://docbook.org/ns/docbook'&gt;
+<span class="linenumber">  2</span><span class="linenumber-separator"> </span>&lt;title&gt;Example simplelist&lt;/title&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>
+<span class="linenumber">  4</span><span class="linenumber-separator"> </span>&lt;para&gt;Here is a &lt;tag&gt;SimpleList&lt;/tag&gt;, rendered inline: 
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;simplelist type='inline'&gt;
+<span class="linenumber">  6</span><span class="linenumber-separator"> </span>&lt;member&gt;A&lt;/member&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;member&gt;B&lt;/member&gt;
+<span class="linenumber">  8</span><span class="linenumber-separator"> </span>&lt;member&gt;C&lt;/member&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;member&gt;D&lt;/member&gt;
+<span class="linenumber"> 10</span><span class="linenumber-separator"> </span>&lt;member&gt;E&lt;/member&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;member&gt;F&lt;/member&gt;
+<span class="linenumber"> 12</span><span class="linenumber-separator"> </span>&lt;member&gt;G&lt;/member&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;/simplelist&gt;
+<span class="linenumber"> 14</span><span class="linenumber-separator"> </span>&lt;/para&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>
+<span class="linenumber"> 16</span><span class="linenumber-separator"> </span>&lt;/article&gt;
+</pre></div>
+<div class="example-output">
+<p>Here is a <a href="simplelist.html"><tt class="tag-element">SimpleList</tt></a>, rendered inline: <span class="simplelist"><span class="member">A</span>, <span class="member">B</span>, <span class="member">C</span>, <span class="member">D</span>, <span class="member">E</span>, <span class="member">F</span>, <span class="member">G</span></span></p>
+</div>
+<div class="programlisting">
+<pre>
+<span class="linenumber">  1</span><span class="linenumber-separator"> </span>&lt;article xmlns='http://docbook.org/ns/docbook'&gt;
+<span class="linenumber">  2</span><span class="linenumber-separator"> </span>&lt;title&gt;Example simplelist&lt;/title&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>
+<span class="linenumber">  4</span><span class="linenumber-separator"> </span>&lt;para&gt;Here is the same &lt;tag&gt;SimpleList&lt;/tag&gt; rendered horizontally with 
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>three columns:
+<span class="linenumber">  6</span><span class="linenumber-separator"> </span>&lt;simplelist type='horiz' columns='3'&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;member&gt;A&lt;/member&gt;
+<span class="linenumber">  8</span><span class="linenumber-separator"> </span>&lt;member&gt;B&lt;/member&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;member&gt;C&lt;/member&gt;
+<span class="linenumber"> 10</span><span class="linenumber-separator"> </span>&lt;member&gt;D&lt;/member&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;member&gt;E&lt;/member&gt;
+<span class="linenumber"> 12</span><span class="linenumber-separator"> </span>&lt;member&gt;F&lt;/member&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;member&gt;G&lt;/member&gt;
+<span class="linenumber"> 14</span><span class="linenumber-separator"> </span>&lt;/simplelist&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;/para&gt;
+<span class="linenumber"> 16</span><span class="linenumber-separator"> </span>
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;/article&gt;
+</pre></div>
+<div class="example-output">
+<p>Here is the same <a href="simplelist.html"><tt class="tag-element">SimpleList</tt></a> rendered horizontally with three columns:</p>
+<table class="simplelist" border="0" summary="Simple list">
+<tr>
+<td><span class="member">A</span></td>
+<td><span class="member">B</span></td>
+<td><span class="member">C</span></td>
+</tr>
+<tr>
+<td><span class="member">D</span></td>
+<td><span class="member">E</span></td>
+<td><span class="member">F</span></td>
+</tr>
+<tr>
+<td><span class="member">G</span></td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+</table>
+</div>
+<div class="programlisting">
+<pre>
+<span class="linenumber">  1</span><span class="linenumber-separator"> </span>&lt;article xmlns='http://docbook.org/ns/docbook'&gt;
+<span class="linenumber">  2</span><span class="linenumber-separator"> </span>&lt;title&gt;Example simplelist&lt;/title&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>
+<span class="linenumber">  4</span><span class="linenumber-separator"> </span>&lt;para&gt;Finally, here is the list rendered vertically:
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;simplelist type='vert' columns='3'&gt;
+<span class="linenumber">  6</span><span class="linenumber-separator"> </span>&lt;member&gt;A&lt;/member&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;member&gt;B&lt;/member&gt;
+<span class="linenumber">  8</span><span class="linenumber-separator"> </span>&lt;member&gt;C&lt;/member&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;member&gt;D&lt;/member&gt;
+<span class="linenumber"> 10</span><span class="linenumber-separator"> </span>&lt;member&gt;E&lt;/member&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;member&gt;F&lt;/member&gt;
+<span class="linenumber"> 12</span><span class="linenumber-separator"> </span>&lt;member&gt;G&lt;/member&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;/simplelist&gt;
+<span class="linenumber"> 14</span><span class="linenumber-separator"> </span>&lt;/para&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>
+<span class="linenumber"> 16</span><span class="linenumber-separator"> </span>&lt;/article&gt;
+</pre></div>
+<div class="example-output">
+<p>Finally, here is the list rendered vertically:</p>
+<table class="simplelist" border="0" summary="Simple list">
+<tr>
+<td><span class="member">A</span></td>
+<td><span class="member">D</span></td>
+<td><span class="member">G</span></td>
+</tr>
+<tr>
+<td><span class="member">B</span></td>
+<td><span class="member">E</span></td>
+<td>&#160;</td>
+</tr>
+<tr>
+<td><span class="member">C</span></td>
+<td><span class="member">F</span></td>
+<td>&#160;</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="navfooter">
+<table width="100%" summary="Navigation table">
+<tr>
+<td width="40%" align="left"><a title="simpara" href="simpara.html"><img src="figs/web/nav/prev.png" alt="Prev" border="0" /></a>&#160;</td>
+<td width="20%" align="center"><a title="DocBook Publishers: The Definitive Guide" href="docbook.html"><img src="figs/web/nav/home-publishers.png" alt="Home" border="0" /></a></td>
+<td width="40%" align="right">&#160;<a title="simplesect" href="simplesect.html"><img src="figs/web/nav/next.png" alt="Next" border="0" /></a></td>
+</tr>
+<tr>
+<td width="40%" align="left">simpara&#160;</td>
+<td width="20%" align="center"><a title="DocBook Element Reference" href="ref-elements.html"><img src="figs/web/nav/up.png" alt="Up" border="0" /></a></td>
+<td width="40%" align="right">&#160;simplesect</td>
+</tr>
+</table>
+</div>
+<div class="infofooter">Last revised by Norman Walsh on 6 Jun 2011 <span class="githash">(git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)</span></div>
+<div class="copyrightfooter">
+<p><a href="dbcpyright.html">Copyright</a> © 2010, 2011 Norman Walsh.</p>
+</div>
+</body>
+</html>

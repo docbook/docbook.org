@@ -1,0 +1,43 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='archives'>
+<info>
+<title>DocBook Archives</title>
+</info>
+
+<para>DocBook has been under active development for more than a decade.
+Earlier releases of DocBook are provided here for reference, they were
+never work products of the DocBook Technical Committee
+(see <link xlink:href="/whatis#history">A Short DocBook History</link>)
+and are not officially supported.
+</para>
+
+<?docbook-archives?>
+
+<section>
+<title>DocBook NG</title>
+
+<para>There were a whole series of “NG” releases before DocBook V5.0 became
+official.</para>
+
+<?schemas release="ng"?>
+
+<para>There were a few test releases of other modules as well.</para>
+
+<section>
+<title>DocBook Slides</title>
+
+<para>A version of Slides based on NG.</para>
+
+<?schemas release="ng" module="slides"?>
+</section>
+<section>
+<title>DocBook Websites</title>
+
+<para>A version of Website based on NG.</para>
+
+<?schemas release="ng" module="website"?>
+</section>
+</section>
+</article>

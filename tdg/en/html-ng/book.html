@@ -1,0 +1,74 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>book</title><link rel="stylesheet" href="defguide.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.64.1"><link rel="home" href="docbook.html" title="DocBook"><link rel="up" href="ref-elements.html" title="DocBook Element Reference"><link rel="previous" href="blockquote.html" title="blockquote"><link rel="next" href="bookinfo.html" title="bookinfo"></head><body><div class="navheader"><table border="0" cellpadding="0" cellspacing="0" width="100%" summary="Navigation table"><tr><td align="left">&nbsp;<a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a>&nbsp;<a title="blockquote" href="blockquote.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;<a title="DocBook Element Reference" href="ref-elements.html"><img src="figures/nav-up.png" alt="Up" border="0"></a>&nbsp;<a title="bookinfo" href="bookinfo.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td><td align="right"><i>DocBook: The Definitive Guide</i> 2.0.9 <span class="alpha-version">(<a href="co01.html"><em>Alpha</em></a>)</span> </td></tr></table></div><div class="refentry" lang="en"><a name="book.element"></a><div class="titlepage"><div><h1 class="title">book</h1></div><div><p class="releaseinfo">$Revision: 1.3 $</p></div><div><p class="pubdate">$Date: 2002/06/12 11:18:03 $</p></div></div><div class="refnamediv"><p>book &#8212; A book</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><h3><span class="bold"><b>Content Model</b></span></h3><pre class="synopsis">book ::=
+((<a href="title.html"><tt class="sgmltag-element">title</tt></a>,<a href="subtitle.html"><tt class="sgmltag-element">subtitle</tt></a>?,<a href="titleabbrev.html"><tt class="sgmltag-element">titleabbrev</tt></a>?)?,
+ <a href="bookinfo.html"><tt class="sgmltag-element">bookinfo</tt></a>?,
+ (<a href="dedication.html"><tt class="sgmltag-element">dedication</tt></a>|<a href="toc.html"><tt class="sgmltag-element">toc</tt></a>|<a href="lot.html"><tt class="sgmltag-element">lot</tt></a>|<a href="glossary.html"><tt class="sgmltag-element">glossary</tt></a>|<a href="bibliography.html"><tt class="sgmltag-element">bibliography</tt></a>|<a href="preface.html"><tt class="sgmltag-element">preface</tt></a>|<a href="chapter.html"><tt class="sgmltag-element">chapter</tt></a>|
+  <a href="reference.html"><tt class="sgmltag-element">reference</tt></a>|<a href="part.html"><tt class="sgmltag-element">part</tt></a>|<a href="article.html"><tt class="sgmltag-element">article</tt></a>|<a href="appendix.html"><tt class="sgmltag-element">appendix</tt></a>|<a href="index.html"><tt class="sgmltag-element">index</tt></a>|<a href="setindex.html"><tt class="sgmltag-element">setindex</tt></a>|<a href="colophon.html"><tt class="sgmltag-element">colophon</tt></a>)*)</pre><h3><span class="bold"><b>Attributes</b></span></h3><p><a href="ref-elements.html#common.attributes" title="Common Attributes">Common attributes</a></p><table border="0" width="100%" cellpadding="2" style="border-collapse: collapse; border-left: 0.5pt solid black; border-right: 0.5pt solid black; border-bottom: 0.5pt solid black;" summary="Attributes"><thead><tr><td class="th" style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; "><p><span class="bold"><b>Name</b></span></p></td><td class="th" style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; "><p><span class="bold"><b>Type</b></span></p></td><td class="th" style="border-bottom: 0.5pt solid ; "><p><span class="bold"><b>Default</b></span></p></td></tr></thead><tbody><tr><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">status</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">CDATA</td><td style="border-bottom: 0.5pt solid ; " align="left" valign="top"><span class="emphasis"><em>None</em></span></td></tr><tr><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">fpi</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">CDATA</td><td style="border-bottom: 0.5pt solid ; " align="left" valign="top"><span class="emphasis"><em>None</em></span></td></tr><tr><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">label</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">CDATA</td><td style="border-bottom: 0.5pt solid ; " align="left" valign="top"><span class="emphasis"><em>None</em></span></td></tr></tbody></table><div class="docbookng-synopsis"><h3>DocBook NG &#8220;Bourbon&#8221; Content Model</h3><div class="define-first"><div class="element">book ::=<ul><li>Sequence of:</li><ul class="group"><li>One of: </li><ul class="choice"><li>Sequence of:</li><ul class="group"><li>Interleave of:</li><ul class="interleave"><li><tt><a href="title.html">title</a></tt></li><li><tt><a href="titleabbrev.html">titleabbrev</a></tt>?</li><li><tt><a href="subtitle.html">subtitle</a></tt>?</li></ul><li><tt><a href="info.html">info</a></tt>? (db.info.titleforbidden)</li></ul><li><tt><a href="info.html">info</a></tt> (db.info.titlereq)</li></ul><li>One or more of:</li><ul class="oneOrMore"><li><tt><a href="appendix.html">appendix</a></tt></li><li><tt><a href="article.html">article</a></tt></li><li><tt><a href="bibliography.html">bibliography</a></tt></li><li><tt><a href="chapter.html">chapter</a></tt></li><li><tt><a href="colophon.html">colophon</a></tt></li><li><tt><a href="dedication.html">dedication</a></tt></li><li><tt><a href="glossary.html">glossary</a></tt></li><li><tt><a href="index.html">index</a></tt></li><li><tt><a href="part.html">part</a></tt></li><li><tt><a href="preface.html">preface</a></tt></li><li><tt><a href="reference.html">reference</a></tt></li><li><tt><a href="toc.html">toc</a></tt></li></ul></ul></ul><h4>DocBook NG &#8220;Bourbon&#8221; Attributes</h4><p>Common attributes and common linking attributes.</p><p>Additional attributes: (Required attributes, if any, are <b>bold</b>)</p><ul><li>label</li><li>status</li></ul><h4>DocBook NG &#8220;Bourbon&#8221; Additional Constraints</h4><ul><li>The root element must have a version attribute.</li></ul></div></div></div></div><div class="refsect1" lang="en"><a name="d0e38541"></a><h2>Description</h2><p>
+A complete book. This is probably the most common document starting 
+point in DocBook documents.  The content model of <a href="book.html"><tt class="sgmltag-element">Book</tt></a> was
+made dramatically less restrictive in DocBook <span class="acronym">V3.1</span>.
+</p><div class="refsect2" lang="en"><a name="d0e38552"></a><h3>Processing expectations</h3><p>
+Formatted as a displayed block. Generally causes a forced page break, restarts
+page numbering, and may generate additional front and back
+matter (tables of contents and indexes, for example) automatically.
+In a <a href="set.html"><tt class="sgmltag-element">Set</tt></a>, <a href="book.html"><tt class="sgmltag-element">Book</tt></a> almost always begins on the
+next available recto page.
+</p><p>
+The input order of major components is taken to be the desired output 
+order.
+</p></div><div class="refsect2" lang="en"><a name="d0e38565"></a><h3>Parents</h3><p>These elements contain book:
+<span class="simplelist"><a href="set.html"><tt class="sgmltag-element">set</tt></a></span>.</p></div><div class="refsect2" lang="en"><a name="d0e38575"></a><h3>Children</h3><p>The following elements occur in book:
+<span class="simplelist"><a href="appendix.html"><tt class="sgmltag-element">appendix</tt></a>, <a href="article.html"><tt class="sgmltag-element">article</tt></a>, <a href="bibliography.html"><tt class="sgmltag-element">bibliography</tt></a>, <a href="bookinfo.html"><tt class="sgmltag-element">bookinfo</tt></a>, <a href="chapter.html"><tt class="sgmltag-element">chapter</tt></a>, <a href="colophon.html"><tt class="sgmltag-element">colophon</tt></a>, <a href="dedication.html"><tt class="sgmltag-element">dedication</tt></a>, <a href="glossary.html"><tt class="sgmltag-element">glossary</tt></a>, <a href="index.html"><tt class="sgmltag-element">index</tt></a>, <a href="lot.html"><tt class="sgmltag-element">lot</tt></a>, <a href="part.html"><tt class="sgmltag-element">part</tt></a>, <a href="preface.html"><tt class="sgmltag-element">preface</tt></a>, <a href="reference.html"><tt class="sgmltag-element">reference</tt></a>, <a href="setindex.html"><tt class="sgmltag-element">setindex</tt></a>, <a href="subtitle.html"><tt class="sgmltag-element">subtitle</tt></a>, <a href="title.html"><tt class="sgmltag-element">title</tt></a>, <a href="titleabbrev.html"><tt class="sgmltag-element">titleabbrev</tt></a>, <a href="toc.html"><tt class="sgmltag-element">toc</tt></a></span>.</p></div></div><div class="refsect1" lang="en"><a name="d0e38636"></a><h2>Attributes</h2><div class="variablelist"><dl><dt><span class="term">fpi</span></dt><dd><p>
+<tt class="sgmltag-attribute">FPI</tt> holds the Formal Public Identifier for 
+the <a href="book.html"><tt class="sgmltag-element">Book</tt></a>.
+</p></dd><dt><span class="term">label</span></dt><dd><p>
+<tt class="sgmltag-attribute">Label</tt> specifies an identifying string for presentation purposes. The third <a href="book.html"><tt class="sgmltag-element">Book</tt></a> in a 
+<a href="set.html"><tt class="sgmltag-element">Set</tt></a> might be labeled &#8220;<span class="quote">Volume III</span>&#8221;, for example.
+</p><p>
+Generally, an explicit <tt class="sgmltag-attribute">Label</tt> attribute is
+used only if the processing system is incapable of generating the label
+automatically. If present, the <tt class="sgmltag-attribute">Label</tt> 
+is normative; it will used even
+if the processing system is capable of automatic labelling.
+</p></dd><dt><span class="term">status</span></dt><dd><p>
+<tt class="sgmltag-attribute">Status</tt> identifies the editorial or publication 
+status of the <a href="book.html"><tt class="sgmltag-element">Book</tt></a>.
+</p><p>
+Publication status might be used to control formatting (for example,
+printing a &#8220;<span class="quote">draft</span>&#8221; watermark on drafts) or processing (perhaps
+a document with a status of &#8220;<span class="quote">final</span>&#8221; should not include any
+components that are not final).
+</p></dd></dl></div></div><div class="refsect1" lang="en"><a name="d0e38698"></a><h2>See Also</h2><p><span class="simplelist"><a href="appendix.html"><tt class="sgmltag-element">appendix</tt></a>, <a href="article.html"><tt class="sgmltag-element">article</tt></a>, <a href="chapter.html"><tt class="sgmltag-element">chapter</tt></a>, <a href="colophon.html"><tt class="sgmltag-element">colophon</tt></a>, <a href="dedication.html"><tt class="sgmltag-element">dedication</tt></a>, <a href="part.html"><tt class="sgmltag-element">part</tt></a>, <a href="partintro.html"><tt class="sgmltag-element">partintro</tt></a>, <a href="preface.html"><tt class="sgmltag-element">preface</tt></a>, <a href="set.html"><tt class="sgmltag-element">set</tt></a></span>.
+</p></div><div class="refsect1" lang="en"><a name="d0e38731"></a><h2>Examples</h2><div class="informalexample"><pre class="programlisting">&lt;!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+          "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"&gt;
+&lt;book&gt;
+&lt;title&gt;An Example Book&lt;/title&gt;
+&lt;titleabbrev&gt;Example&lt;/titleabbrev&gt;
+&lt;bookinfo&gt;
+  &lt;legalnotice&gt;&lt;para&gt;No notice is required.&lt;/para&gt;&lt;/legalnotice&gt;
+  &lt;author&gt;&lt;firstname&gt;Norman&lt;/firstname&gt;&lt;surname&gt;Walsh&lt;/surname&gt;&lt;/author&gt;
+&lt;/bookinfo&gt;
+&lt;dedication&gt;
+&lt;para&gt;
+This book is dedicated to you.
+&lt;/para&gt;
+&lt;/dedication&gt;
+&lt;preface&gt;&lt;title&gt;Foreword&lt;/title&gt;
+&lt;para&gt;
+Some content is always required.
+&lt;/para&gt;
+&lt;/preface&gt;
+&lt;chapter&gt;&lt;title&gt;Required Chapter&lt;/title&gt;
+&lt;para&gt;
+At least one chapter, reference, part, or article is required in a book.
+&lt;/para&gt;
+&lt;/chapter&gt;
+&lt;appendix&gt;&lt;title&gt;Optional Appendix&lt;/title&gt;
+&lt;para&gt;
+Appendixes are optional.
+&lt;/para&gt;
+&lt;/appendix&gt;
+&lt;/book&gt;</pre></div><p>For additional examples, see also
+<span class="simplelist"><a href="appendix.html"><tt class="sgmltag-element">appendix</tt></a>, <a href="collab.html"><tt class="sgmltag-element">collab</tt></a>, <a href="set.html"><tt class="sgmltag-element">set</tt></a>, <a href="xref.html"><tt class="sgmltag-element">xref</tt></a></span>.
+</p></div></div><div class="navfooter"><table width="100%" summary="Navigation table"><tr><td width="40%" align="left"><a title="blockquote" href="blockquote.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;</td><td width="20%" align="center"><a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a></td><td width="40%" align="right">&nbsp;<a title="bookinfo" href="bookinfo.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td></tr><tr><td width="40%" align="left">blockquote&nbsp;</td><td width="20%" align="center"><a title="DocBook Element Reference" href="ref-elements.html"><img src="figures/nav-up.png" alt="Up" border="0"></a></td><td width="40%" align="right">&nbsp;bookinfo</td></tr></table></div><div class="copyrightfooter"><p><a href="dbcpyright.html">Copyright</a> &copy; 1999, 2000, 2001, 2002, 2003 <a href="http://www.oreilly.com/">O'Reilly &amp; Associates, Inc.</a> All rights reserved.</p></div></body></html>

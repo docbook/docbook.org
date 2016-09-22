@@ -1,0 +1,33 @@
+README
+
+This directory contains the current version of the DocBook DTD,
+its documentation, an SGML declaration, an SGML Open-style 
+entity catalogue, and some sample files.  
+
+As of 25 February 1995 the latest revision of the DTD is version 2.2.1.
+The previous version, 2.1, may be found in the subdirectory
+"docbook.2.1".
+
+As of 25 December 1995 the documentation for the DTD version 2.2.1
+consists of a "Guide" that includes an alphabetical list of 
+elements, with definitions, in both SGML and PostScript.  A sample 
+Chapter and sample RefEntry (man page) are also provided.
+The entity file "orathree" contains local entities
+for use with these examples.
+
+DocBook 2.2.1 is an expanded and revised version of 2.1
+Instances conforming to 2.1 may require some changes
+to conform to 2.2.1 (see the Guide for a list of changes in
+the DTD).
+
+More documentation may be made available as time permits.  Suggestions
+for improving the documentation are welcome.
+
+The DTD does not establish detailed rules for the usage of 
+elements.  This is a matter for editors and writers to deal with.
+
+Please note that the DTD has an associated SGML declaration.
+
+To get all of the files relevant to version 2.2.1, obtain the files
+named docbook.2.2.1.shar and docbook.ps.Z.
+

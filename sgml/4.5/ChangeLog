@@ -1,0 +1,43 @@
+2006-10-03 13:23  nwalsh
+
+	* catalog.xml, docbook.cat, docbook.dcl, docbook.dtd,
+	  trunk/docbook/xml/calstblx.dtd, trunk/docbook/xml/catalog.xml,
+	  trunk/docbook/xml/dbcentx.mod, trunk/docbook/xml/dbgenent.mod,
+	  trunk/docbook/xml/dbhierx.mod, trunk/docbook/xml/dbnotnx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbook.cat,
+	  trunk/docbook/xml/docbookx.dtd, trunk/docbook/xml/htmltblx.mod:
+	  DocBook V4.5 released
+
+2006-06-02 11:29  nwalsh
+
+	* catalog.xml, docbook.cat, docbook.dcl, docbook.dtd: Changed
+	  copyright dates and version numbers
+
+2006-03-07 13:11  nwalsh
+
+	* catalog.xml, docbook.cat, docbook.dcl, docbook.dtd,
+	  trunk/docbook/xml/calstblx.dtd, trunk/docbook/xml/catalog.xml,
+	  trunk/docbook/xml/dbcentx.mod, trunk/docbook/xml/dbgenent.mod,
+	  trunk/docbook/xml/dbhierx.mod, trunk/docbook/xml/dbnotnx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbook.cat,
+	  trunk/docbook/xml/docbookx.dtd, trunk/docbook/xml/freshmeat.xsl,
+	  trunk/docbook/xml/htmltblx.mod: Change version numbers to 4.5CR2
+
+2005-06-29 10:59  nwalsh
+
+	* docbook.dtd, trunk/docbook/xml/docbookx.dtd: DocBook V4.5CR1
+	  Released
+
+2005-06-29 10:58  nwalsh
+
+	* catalog.xml, docbook.cat, docbook.dcl,
+	  trunk/docbook/xml/calstblx.dtd, trunk/docbook/xml/catalog.xml,
+	  trunk/docbook/xml/dbcentx.mod, trunk/docbook/xml/dbgenent.mod,
+	  trunk/docbook/xml/dbhierx.mod, trunk/docbook/xml/dbnotnx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbook.cat,
+	  trunk/docbook/xml/htmltblx.mod: Updated version number
+
+2005-05-05 11:41  nwalsh
+
+	* docbook.dtd, trunk/docbook/xml/docbookx.dtd: DocBook V4.5b1
+	  Released

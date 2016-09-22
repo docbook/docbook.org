@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.3.6), see www.w3.org" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Changes to Core DocBook</title>
+<link rel="stylesheet" type="text/css" href="css/defguide.css" />
+<link rel="icon" href="figs/web/publishers-icon.png" type="image/png" />
+<script type="text/javascript" src="js/refentry.js">
+</script>
+</head>
+<body>
+<div class="navheader">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" summary="Navigation table">
+<tr>
+<td align="left">&#160;<a title="DocBook Publishers: The Definitive Guide" href="docbook.html"><img src="figs/web/nav/home-publishers.png" alt="Home" border="0" /></a>&#160;<a href="ch02.html" title="Additions to Core DocBook"><img src="figs/web/nav/prev.png" alt="Prev" border="0" /></a>&#160;<a title="Part&#160; I .&#160; Introduction" href="part1.html"><img src="figs/web/nav/up.png" alt="Up" border="0" /></a>&#160;<a title="Exclusions from Core DocBook" href="ch04.html"><img src="figs/web/nav/next.png"
+alt="Next" border="0" /></a></td>
+<td align="right"><i>DocBook Publishers: The Definitive Guide</i> (Version <a href="ch00-online.html">1.0.0 for DocBook Publishers V1.0</a>)</td>
+</tr>
+</table>
+</div>
+<div class="chapter" id="ch-gsxml">
+<div class="chapter-titlepage">
+<h2>Changes to Core DocBook</h2>
+</div>
+<p>The following content models from core DocBook have been customized to better support the needs of Publishers:</p>
+<div class="variablelist">
+<dl>
+<dt id="ch-gsxml.3.1.1"><a href="sidebar.html"><tt class="tag-element">sidebar</tt></a></dt>
+<dd>
+<p>Several publishers demonstrated a need to have nested sections within a <a href="sidebar.html"><tt class="tag-element">sidebar</tt></a>. As a result, the <a href="sidebar.html"><tt class="tag-element">sidebar</tt></a> model was modified to allow recursive <a href="section.html"><tt class="tag-element">section</tt></a> elements.</p>
+<p>Sidebar was also modified to allow <a href="subtitle.html"><tt class="tag-element">subtitle</tt></a> as well as <a href="title.html"><tt class="tag-element">title</tt></a>.</p>
+</dd>
+<dt id="ch-gsxml.3.2.1"><a href="person.html"><tt class="tag-element">person</tt></a></dt>
+<dd>
+<p>While not appropriate in technical documentation, several publishers requested that media objects (such as photos) be allowed within a <a href="person.html"><tt class="tag-element">person</tt></a> element. As a result, the <a href="person.html"><tt class="tag-element">person</tt></a> model was modified to include <a href="mediaobject.html"><tt class="tag-element">mediaobject</tt></a>.</p>
+</dd>
+<dt id="ch-gsxml.3.3.1"><a href="org.html"><tt class="tag-element">org</tt></a></dt>
+<dd>
+<p>While not appropriate in technical documentation, several publishers requested that media objects (such as logos) be allowed within an <a href="org.html"><tt class="tag-element">org</tt></a> element. The <a href="org.html"><tt class="tag-element">org</tt></a> element was modified to include <a href="mediaobject.html"><tt class="tag-element">mediaobject</tt></a>.</p>
+</dd>
+<dt id="ch-gsxml.3.4.1"><a href="info.html"><tt class="tag-element">info</tt></a></dt>
+<dd>
+<p>The various patterns defining <a href="info.html"><tt class="tag-element">info</tt></a> have been modified to allow either DocBook metadata OR Dublin Core metadata elements.</p>
+</dd>
+<dt id="ch-gsxml.3.5.1">block-level patterns</dt>
+<dd>
+<p>The block-level patterns in the schema have been modified to allow the newly created elements: <a href="dialogue.html"><tt class="tag-element">dialogue</tt></a>, <a href="poetry.html"><tt class="tag-element">poetry</tt></a>, <a href="drama.html"><tt class="tag-element">drama</tt></a>.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="navfooter">
+<table width="100%" summary="Navigation table">
+<tr>
+<td width="40%" align="left"><a title="Additions to Core DocBook" href="ch02.html"><img src="figs/web/nav/prev.png" alt="Prev" border="0" /></a>&#160;</td>
+<td width="20%" align="center"><a title="DocBook Publishers: The Definitive Guide" href="docbook.html"><img src="figs/web/nav/home-publishers.png" alt="Home" border="0" /></a></td>
+<td width="40%" align="right">&#160;<a title="Exclusions from Core DocBook" href="ch04.html"><img src="figs/web/nav/next.png" alt="Next" border="0" /></a></td>
+</tr>
+<tr>
+<td width="40%" align="left">Additions to Core DocBook&#160;</td>
+<td width="20%" align="center"><a title="Part&#160; I .&#160; Introduction" href="part1.html"><img src="figs/web/nav/up.png" alt="Up" border="0" /></a></td>
+<td width="40%" align="right">&#160;Exclusions from Core DocBook</td>
+</tr>
+</table>
+</div>
+<div class="copyrightfooter">
+<p><a href="dbcpyright.html">Copyright</a> © 2011 Norman Walsh.</p>
+</div>
+</body>
+</html>

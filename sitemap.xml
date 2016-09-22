@@ -1,0 +1,18 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='sitemap'>
+<info>
+<title>Site map</title>
+</info>
+
+<para>The following pages constitute the principle layout of this site:</para>
+
+<?sitemap?>
+
+<para>Additionally, there are pages for each DocBook release.</para>
+
+<?releasemap?>
+
+</article>
+

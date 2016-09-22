@@ -1,0 +1,246 @@
+From server@amber.ora.com Mon Sep  4 20:50:58 1995
+Return-Path: <server@amber.ora.com>
+Received: from ruby.ora.com by jasper.ora.com.noname (4.1/SMI-4.1)
+	id AA04080; Mon, 4 Sep 95 20:50:53 EDT
+Errors-To: listown@online.ora.com
+Received: from amber.ora.com (amber.ora.com [198.112.208.13]) by ruby.ora.com (8.6.12/8.6.11) with ESMTP id UAA09196; Mon, 4 Sep 1995 20:51:53 -0400
+Received: (from server@localhost) by amber.ora.com (8.6.11/8.6.11) id TAA07014; Mon, 4 Sep 1995 19:47:23 -0400
+Date: Mon, 4 Sep 1995 19:47:23 -0400
+Message-Id: <199509042342.TAA06731@village.doctools.com>
+Errors-To: listown@online.ora.com
+Reply-To: elm@arbortext.com
+Originator: davenport@online.ora.com
+Sender: davenport@online.ora.com
+Precedence: bulk
+From: elm@arbortext.com (Eve L. Maler)
+To: Multiple recipients of list <davenport@online.ora.com>
+Subject: Re: August Davenport meeting: decisions on DTD issues
+X-Listprocessor-Version: 6.0c -- ListProcessor by Anastasios Kotsikonas
+X-Comment: Davenport Group General Distribution List
+X-Comment: To unsubscribe send message to listproc@online.ora.com "unsubscribe davenport"
+
+Paul Grosso sent me some comments on the results of our recent Davenport
+meeting, and I'm posting them here with his permission (and with a few
+interleaved responses of my own).
+
+                        *               *               *
+
+X/Open needed to center tables:
+
+>> D1. Document the potential uses of the Table tabstyle attribute.
+>> 
+>>     What: X/Open needed to indicate how to position a table on the
+>>     page, for example, centered.
+>> 
+>>     Why: We discovered that tabstyle exists, and suggested it would
+>>     be the proper place to store this information.  We need to alert
+>>     people to its existence.
+
+Paul says:
+
+>Note that you may be introducing a processing-interoperability situation
+>by this.  The tabstyle attribute was defined by CALS to reference a table
+>style defined in a FOSI.  The SGML Open table Interoperability study shows
+>that only one vendor supported the tabstyle attribute as it is.
+>
+>In fact, ATI could "support" this attribute as well as it supports any
+>other attribute in that its value could be tested in a FOSI via an attspec.
+>But this isn't the semantics attached to this attribute by CALS.
+>
+>If all you want to do is horizontally position a table on the page, 
+>how is that any different from the issue of how to position any other
+>block-like structure such as a title or paragraph?  Are you sure you
+>want to use the tabstyle attribute here?  If you really have some
+>class of tables that need to be presented different from the default
+>table presentation, then maybe the Role attribute is more appropriate.
+
+I agree that Role is more appropriate, having been reminded what tabstyle
+was really for.  DocBook probably shouldn't contribute to the muddying 
+of tabstyle's purpose.
+
+                        *               *               *
+
+Several companies need various kinds of tracking and effectivity 
+information:
+
+>> E1. Effectivity control is different from tracking of authorship and
+>>     revision.  Add a set of common attributes defined as NAMES for
+>>     effectivity, since it's immediately needed for rendering.  The
+>>     others aren't.  Add these common attributes:
+>> 
+>> 	OS		NAMES		#IMPLIED
+>> 	Architecture	NAMES		#IMPLIED
+>> 	Vendor		NAMES		#IMPLIED
+>> 	UserLevel	NAMES		#IMPLIED
+>> 	Revision	CDATA		#IMPLIED
+>> 
+>>     Add this element:
+>> 
+>> 	Phrase - - (%para.char.mix;)*
+>> 	%common.attrib;
+>> 
+>> E3.  Add this common attribute (or restrict its application to not
+>>      put it on inlines except Phrase?):
+>> 
+>> 	RevisionFlag	(Changed
+>> 			|Deleted
+>> 			|Added)		#IMPLIED -- no default --
+>> 
+>>      We need to do a survey on where these should all go.  Make new
+>>      subcommon.attrib subclasses.
+>> 
+>>      Eduardo needs these (OS, Arch, UserLevel) within a month.  The
+>>      Phrase element is definitely needed.
+
+Paul says:
+
+>Sigh, change pages rears its very ugly head again.  Be careful.  Don't
+>put RevisionFlag on more than you have to.  What does it mean to nest
+>elements with RevisionFlag?  What does it mean to have an element marked
+>as Deleted when it's really still in the source?  What does it mean to
+>have deleted elements nested within added/changed elements and vice
+>versa?  How do you mark the case where something that was deleted in
+>the last rev is now being "undeleted?"  What processing expectations
+>do people have for things that are marked with all these various and
+>potentially nested levels of revision?  What about things (e.g., figures
+>and tables and footnotes) that are within a revision-marked area in
+>the source but that then "float" out to another area in the output?
+>What about things (e.g., titles and xrefs) that are within a 
+>revision-marked area in the source but that are picked up and then placed
+>elsewhere such as in the running header, toc, glossary, index, endnotes, etc.?
+>
+>Has anyone considered that SGML is the wrong language with which to handle
+>multiple versions of things?  That revision control is the purview of a
+>document management database, and that the correct version should be generated
+>by the database/sgml repository thereby generating the correct single version
+>in SGML? 
+
+We discussed some of these complexities at the meeting, and did agree
+that a simple SGML-based solution is needed for immediate problems and
+that complex solutions are out of our scope (and perhaps out of SGML's
+scope).
+
+Your questions are good reminders that we need to clarify the heck out
+of our processing expectations.  I'm still inclined to add at least
+the effectivity attributes immediately, though.  It seems to me that
+attributes are appropriate for effectivity, though less so for tracking;
+however, they both have some of the same scoping problems, so this needs
+to be solved anyway!
+
+                        *               *               *
+
+I proposed to add a "real" OMITTAG scheme:
+
+>> ***OMITTAG minimization scheme for those who want to change to YES
+>> 
+>> Yes, now that there are public-domain normalizers (e.g., spam).  The
+>> only requirement is not to make start-tags omissible.  This is a
+>> low-priority item.
+>> 
+>> Jon wonders how aggressive the scheme can be made.  I'm more inclined to
+>> be conservative.
+>> 
+>> General scheme: Major structural elements and some flat meta subelement
+>> series, but not heavily nested meta elements.  Most subelements of
+>> structured block/object/inline elements, unless they're really un-flat.
+>> Not objects or inlines themselves, except paragraphs.
+
+Paul says:
+
+>As you hinted above, I recommend you be very careful about this.  Minimization
+>is a basically stupid idea in general (disk space is not that valuable, and
+>tagging done "by hand" is a stupid model against which to model a DTD these 
+>days), and you can easily get into difficulties if you use it to any great 
+>extent without great care.
+
+It's been decided we'll do this after V2.3.  The scheme I've mapped out
+is quite conservative.  Even though most people don't need minimization,
+a few do (or think they do), and correctly done it's a cheap way to make
+them happy.
+
+                        *               *               *
+
+We sketched out an FPI naming scheme:
+ 
+>> ***FPIs
+>> 
+>> Beginning with the next version released (V2.3):
+>> 
+>> Official Davenport:
+>> -//Davenport//DTD DocBook Vn.n[.n]//EN
+>> -//Davenport//ELEMENTS DocBook Information Pool Vn.n[.n]//EN
+>> -//Davenport//ELEMENTS DocBook Document Hierarchy Vn.n[.n]//EN
+>> . . .
+>> -//Davenport//TEXT DocBook SGML Declaration Vn.n[.n]//EN
+>> 
+>> Variants (advisory):
+>> -//<real-owner>//DTD DocBook Vn.n[.n]-Based [Subset|Extension] 
+>> <description>//EN
+>> -//<real-owner>//ELEMENTS DocBook Vn.n[.n]-Based [Subset|Extension] 
+>> <description>//EN
+
+Paul says:
+
+>You might want to point out in some explanation that an SGML Declaration
+>cannot be referenced (via an FPI or otherwise) according to 8879.  Therefore,
+>the FPI serves as an identifier, but does not imply that it can be referenced
+>as DTDs and other exernal entities.  You might also want to point to the
+>SGML Open TR 9401:1995 catalog format that allows one to reference an
+>SGML declaration (though still not via its FPI).  Ask if you need more
+>explanation on this.  I am making final edits on this Resolution based
+>on conversations last week, and I expect it to be publically available
+>within a couple weeks.
+
+Noted...  Thanks.
+
+                        *               *               *
+
+I had incorporated the SGML Open "CALS-based" model into Docbook V2.3beta:
+
+>> ***CALS fragment usage
+>> 
+>> As long as behavior and markup model is identical (barring the known
+>> commonatts situation), use of the SGML Open module is perfectly acceptable.
+
+Paul says:
+
+>If/when the SO module causes a problem for DocBook, let me know (preferably
+>before a suggested problematic change), because we want the SO module to
+>work for DocBook as well as others.
+>
+>FYI, the current state of the SO work is that the current writeup will
+>be basically a report of the research into what is the current status
+>of support.  What has been called the "core" is really the (approximate)
+>intersetion of the surveyed current implementations.  SO also suggested
+>a reorganized version of the DTD fragment that allowed some reconfiguration
+>via marked sections and parm entities.  CALS appears to have accepted this
+>as the latest official fragment.  I hope/assume DocBook could use this fragment
+>with appropriate parm entity definitions thereby merely referencing this
+>latest CALS fragment rather than incorporating it physically into the DTD.
+>Please check on this.  Let me know if you need the latest fragment, and let
+>me know if you need changes to it for it to work this way for DocBook.  I
+>suspect you may want to continue to embed the table element decls in DocBook
+>vor V2.x, but I hope by V3 time there will be a stable CALS Table fragment
+>with recognized FPI that you can reference from DocBook.  Please advise
+>on this topic.
+
+The fragment in the August 2 draft of the SGML Open CALS table paper is
+parameterized in a way that's very suitable for DocBook use; it's looking
+very good.
+
+I have continued discussing the issue of the table module with Paul and 
+the sponsors.  There's some question about whether we should use the 
+SGML Open draft fragment in V2.3.  Regardless, DocBook users should rest 
+assured that we'll use a table model in V2.3 that's compatible with what's 
+in V2.2.1.
+
+                        *               *               *
+
+If anyone has comments on the above, please don't hesitate to send mail
+to this list or to me (elm@arbortext.com) and/or Terry (terry@ora.com).
+Thanks!
+
+        Eve
+
+
+

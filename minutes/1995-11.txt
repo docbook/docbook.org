@@ -1,0 +1,450 @@
+From server@amber.ora.com Mon Nov 27 12:16:05 1995
+Return-Path: <server@amber.ora.com>
+Received: from ruby.ora.com by jasper.ora.com.noname (4.1/SMI-4.1)
+	id AA10349; Mon, 27 Nov 95 12:16:01 EST
+Errors-To: listown@online.ora.com
+Received: from amber.ora.com (amber.ora.com [198.112.208.11]) by ruby.ora.com (8.6.12/8.6.11) with ESMTP id MAA22469; Mon, 27 Nov 1995 12:17:47 -0500
+Received: (from server@localhost) by amber.ora.com (8.6.12/8.6.11) id KAA07600; Mon, 27 Nov 1995 10:38:39 -0500
+Date: Mon, 27 Nov 1995 10:38:39 -0500
+Message-Id: <199511271525.KAA00709@village.doctools.com>
+Errors-To: listown@online.ora.com
+Reply-To: eve@doctools.com
+Originator: davenport@online.ora.com
+Sender: davenport@online.ora.com
+Precedence: bulk
+From: Eve Maler <eve@doctools.com>
+To: Multiple recipients of list <davenport@online.ora.com>
+Subject: November Davenport meeting: notes on DocBook issues
+X-Listprocessor-Version: 6.0c -- ListProcessor by Anastasios Kotsikonas
+X-Comment: Davenport Group General Distribution List
+X-Comment: To unsubscribe send message to listproc@online.ora.com "unsubscribe davenport"
+
+Folks-- Here are my DocBook-related notes from the recent Davenport
+meeting in Santa Clara (thanks to Ralph Ferris for hosting!).  I
+encourage everyone to comment on these provisional decisions for
+altering or enhancing DocBook's design.  I'll be following up
+sometime this week with messages that each focus on one major
+enhancement/issue, in the hope of gathering requirements and feedback
+from the general DocBook-using populace.
+
+The next Davenport meeting has tentatively been scheduled for
+February 1996, hosted by SunSoft in Menlo Park, CA.  In the next
+few weeks, we'll update the "Next Meetings" Web page at our archive
+to reflect the plans for this meeting (and all the meetings we're
+holding in 1996).
+
+Thanks for your attention!
+
+	Eve
+	elm@arbortext.com
+
+========================================================================
+13-15 November 1995 Davenport meeting notes on DocBook issues
+========================================================================
+
+Comments on V2.4beta2 changes to date:
+======================================
+
+Problems found with V2.4beta2:
+  Murray is getting warning about Set being defined but not referenced.
+  We think that because docbook.dtd has no ELEMENT declarations, A/E is
+  not identifying the document element correctly.  Note this in the
+  maint doc's Specific Tools section.
+
+  Several sponsors discovered a problem with ambiguous content in
+  SetInfo, introduced during bug fixing.  This is now corrected.
+
+Documentation:
+  For V2.4, the structure of the doc will be updated, and the content
+  will be accurate, but the RefEntries won't be filled in.  (Also,
+  the doc may follow the DTD release by a little.)  For V3.0, we hope
+  to have finished the job.  Murray will contribute DTDocumenter output
+  that we can munge into RefEntry.
+
+Proposed effectivity attributes:
+  Does the WS attribute cover the difference between windowing
+  *managers*?  Should the syntax of this attribute be managed entirely
+  within an indiv organization?  We decided not to add WS after all,
+  since it was suggested in the spirit of completeness but no one
+  actually wants to use it.
+
+  For V2.4, make a parameter entity just for the effectivity attributes
+  (which includes OS, Arch, UserLevel, and Revision (see the X/Open
+  issues below)), so that people can easily subset them.  Document that
+  they can be used for effectivity (that is, conditional inclusion in
+  various delivery forms) *or* for informational purposes, and put a
+  question in the questionnaire asking which way people used it.
+
+Table entry exclusion of formal.class:
+  There was a question why this was needed in V2.4beta2.  It is needed
+  because paragraphs can now contain formal objects.  Before, they
+  couldn't, so the exclusion wasn't needed.
+
+GlossTerm BaseForm:
+  There was a question about the purpose of this new attribute.  Use the
+  examples of "file name"/"file names" and "+"/"plus" to explain how the
+  base form is the lookup form people or automatic linking processes
+  should use to find the related glossary entry.  Change the text in the
+  DTD comment not to say "real content."
+
+dbgenent.mod file:
+  Document why there's no version number on it.  Explain why it has a
+  Davenport FPI, even though you're allowed (and expected) to edit it.
+
+New issues taken up for discussion at this meeting:
+===================================================
+
+ISO entity sets:
+  For now, we want to continue using 8879.  9573 seems as though it's
+  backwards incompatible, and people may want additional entities, but
+  these desired entities are still not in the 9573 sets.  People can
+  get the 9573 sets through the usual Internet sources.
+
+Math fragments:
+  Terry tried summation as a test case.  In TeX and eqn, it's marked up
+  mostly visually.  There's a bit of content-based choice.  In 12083,
+  nothing semantic is added to TeX and eqn methods.  Thus, an SGML 12083
+  migration for math seems to have little benefit.  Besides 12083, there
+  are other fragments: ArborText math (more semantics) and Anders's
+  (Euromath?) (many more semantics).  Math is not a monolithic
+  discipline; what math do we want to cover anyway?  Just "computing
+  math"?
+
+  Murray suggests: Bump this up to SGML Open and ask what they
+  recommend.  The Digital Library project of Univ of Illinois is leaning
+  towards 12083, so maybe we don't have to get more semantic if that
+  body doesn't feel it's necessary.
+
+Bibliographic material:
+  Can we ditch ArtHeader and replace it with an existing module, say,
+  TEI's bibliographic structure?
+
+  In general, is picking up other modules a good idea?  We should do
+  what we wanted X/Open to do with DocBook: Pick a specific stable
+  version.  Other DocBook elements to consider this approach for:
+  BookInfo (with BookBiblio), DocInfo, BiblioEntry, SeriesInfo.
+
+  Can't yet make a "FUTURE USE" recommendation.  Terry and I will do
+  research on the side.
+
+Article:
+  Is it needed?  Perhaps yes!  X/Open is planning to use it.  SCO has
+  encyclopedias with articles.  Are these different from journal
+  articles?  And are these uses in the scope of DocBook?  It sounds like
+  the encyclopedia kind is legitimately in the scope, but journal
+  articles aren't.  Remove Article from Book in V4.0 and make a new
+  Encyclopedia top-level element at that time.  Terry and I will discuss
+  this.
+
+ICADD:
+  The SGML LINK feature is the right way to handle the ICADD attributes.
+  We'll worry about making a link process declaration for ICADD (versus
+  blessing one or letting people make their own) when the ICADD
+  technology seems ready enough for use (for example, when the table
+  handling is robust).  For Panorama, which doesn't support LINK and for
+  now would prefer FIXED attributes, they can publish (or have made) a
+  customization layer that uses the local.xxx.attrib entities.
+
+  Bryan Caporlette: Passage has done DocBook to ICADD for the
+  Educational Testing System (putting in the architectural forms).
+  Tables were handled somehow.  Jeff Suttor did it.  Terry and I need to
+  find out from Passage if they've done something we can leverage.
+
+Address:
+  Address should be allowed in regular text somehow, rather than just
+  being available in obscure metainformation containers.  Add #PCDATA to
+  the Address content model, add the Format (linespecific) attribute to
+  it, and put Address in informal.class so that it's more generally
+  available.  Address data will now be "cooked" so that any punctuation
+  etc. will actually be supplied in the source.  (Note that its usage
+  is now, in terms of processing expectations, backwards incompatible,
+  but that its syntax is still compatible.)  The assumption is that
+  this is always a "block" address; it's not worth it to mark up inline
+  addresses.
+
+  Add Email to cptr.char.class so that it's more generally available,
+  too.
+
+Callouts:
+  Make the Coords attribute CDATA so that any unit and syntax can be
+  handled.  (These are not exactly units of measure, but rather units of
+  specification.)
+
+  New units:
+
+  o LineRange "linenum linenum".  Whole lines from n through m.
+
+  o LineColumnPair "startline startcol endline endcol".  Pair of
+    LineColumns, where area starts at first position and ends at second
+    position (including the beginnings of any intervening lines).  This
+    can also be used for areas on a single line.
+
+  Add a <co> element to ProgramListing and Screen and give it the
+  appropriate attributes that Area etc. have.  It is equivalent to a
+  LineColumn Area (that is, a single character location), but can be
+  used in plain ProgramListings and Screens to indicate the coordinates
+  directly by its presence, without the "CO" container.  You shouldn't
+  use both methods in the same element; the processing results are
+  undefined if you do.
+
+OptMult and ReqMult values on the Choice attribute on Group:
+  There is dual markup for the same purpose; the Repeat attribute makes
+  more sense then the *Mult values do.  Remove them in V4.0, unless
+  someone says they need it.  (The perceived need arose originally
+  from ancient COBOL documentation, so we're not expecting to hear that
+  this is needed.)
+
+Graphic attributes:
+  We want scale to fit with optional width / height, scale to a
+  percentage, and possibly width / height for cropping.  These seem to
+  match pretty well with the DSSSL ExternalGraphic capability.  We don't
+  have enough time for V2.4.  For V3.0, compare DSSSL and CALS semantics
+  and find the subset we want.  Jon will post the former to the
+  sponsors' list and I will post the latter.  Terry and I will work with
+  Jon on figuring this out.
+
+XRefLabel:
+  This attribute is a problem because it can't contain markup.  It turns
+  out to be used (to a limited extent) by people who are using (or plan
+  to be using) DocBook.  We are thinking of switching over to Mark
+  Buckley's XRefLabel element approach, where the attribute points to
+  the ID of the element.  But where could the element reside?  In
+  specific places in content models, collected at the beginning, as an
+  inclusion, etc.?  Consider using the same occurrence pattern as Anchor
+  has.  Is XRefLabel needed only for objects that are already titled?
+  Apparently not, but a first-step solution might be to add an XRefLabel
+  element after the relevant Title element in just these cases.
+
+  See also the Linkend(s) discussion just below.
+
+Linkend(s) for making many more elements "hot":
+  Maybe we just want a common Linkend(s) attribute on inlines.  Then
+  again, you could always surround the inline element with Link (though
+  now the linking is associated with the parent and not the inline).
+  Or, now that we have Phrase, you could put Linkend(s) on Phrase and
+  get rid of Link!  (We're not intending to do this, though.)  Also,
+  what about the ULink and OLink linking methods?  Linkend(s) isn't
+  enough for these.  What about pointing to a ULink or OLink that had an
+  ID and (possibly) was stored in a non-rendered area such as
+  metainformation?
+
+  Mark Buckley: We might need to store such elements (and others like
+  them, perhaps such as XRefLabel) in a "floating" or "asynchronous"
+  element that is a global inclusion.  We could instead have a NoRender
+  attribute on any element, but this is problematic.  An Asynchronous
+  element is better (though it may have problems we don't foresee now.)
+  The content model would be a strange list of elements that are not
+  rendered but provide important resources.  (Don't make the content be
+  ANY.)
+
+  Other possible names: Resource, Info (too vague), Meta (but too close
+  to something different in HTML).
+
+  Murray's proposal for link chaining in HTML suggests that our ULink
+  should have some of the same attributes as <A> and <LINK> in HTML.
+  This would allow it to pick up the chaining ability.
+
+  Potential contents of an Async element: RevHistory, Copyright, 
+  XRefLabel, DocInfo, what else?  Are some of these going too far,
+  trying to do the job of a real document management system?
+
+Sample documents:
+  Can all of us contribute sample documents or chapters?  Terry will put
+  them on the archive.
+
+X/Open issues (presented by Fred Dalrymple):
+  In addition to the RevisionFlag attribute, add another common attribute:
+  Revision (CDATA), to encode the particular editorial revision level
+  that this text applies to.
+
+  Add an "Off" attribute value to RevisionFlag.  It *might* be changed,
+  but you don't want to flag it (because it's insignificant, just
+  typographical, etc.).  The off switch is also needed for undoing the
+  setting in subtrees of flagged material, for example, every time you
+  negotiate and agree on a specific change with your interchange partner
+  during the revision process (so you can see which changes remain to be
+  examined).  The default is still #IMPLIED; the implied default is to
+  inherit from the parent.
+
+  Extension information: X/Open wants a "nonnormative" attribute to
+  indicate whether information is outside the official specification (or
+  whatever).
+
+Online help:
+  There are two issues: sharing source material in both documents and
+  help (similar to marked sections and to our effectivity approach), 
+  and storing help modules conveniently close to document information
+  (seemingly what Glenda's approach does).
+
+  Let's address the shared help/documentation information through the
+  effectivity method we plan to use for everything else.  The help ID
+  that ArborText needs should be identical to the "real" ID (the ID
+  attribute).
+
+  We don't really want to make a place in the document structure for
+  help modules that don't share content with document information;
+  document management systems should manage their connections.  We
+  should, however, look at any unique characteristics of help
+  "documents" (similar to the HelpTag DTD) and possibly create a new
+  top-level document for them.
+
+  Let's post to the list to start a discussion about help requirements.
+  February meeting: We'll have presentations on help.
+
+Footnotes in manpages:
+  There was a question about whether their presence is appropriate.  We
+  concluded that they can be handled by any processor in some sensible
+  way.  In general, even though manpages are usually viewed with a
+  simplistic viewer, footnotes etc.  are not "nonsensical", so they
+  should stay in the RefEntry content models.  But we should warn
+  processor implementors in the doc'n that they may want to subset for
+  authoring if their processors can't handle some kinds of input.
+
+Filename:
+  Add a Path attribute (#IMPLIED CDATA) to hold a search path of
+  directories where the filename can or should be found.  The separator
+  between directories is system dependent.  If you need to provide
+  one filename (or perhaps two variants on different systems) with
+  different system paths, use effectivity.
+
+Inline content model contraction:
+  Prune the content models of all computer terms for V4.0.  Warn now
+  that, most likely, these elements won't allow themselves and won't
+  allow all the other computer terms inside them.
+
+  Future major revision might address further pruning.
+
+Compact lists:
+  Add the Spacing=Compact/Normal.  Authors express something important
+  if indefinable that an automatic processor can't capture.  One person
+  described this as: Compact lists are to be read and understood as a
+  whole rather than as elucidated items.  (And this is no worse than the
+  SimpleList attributes.)  We're not exactly happy about adding this,
+  but the utility seems to outweigh the harm to the "semantic intent."
+
+Key presses:
+  Float the following design on the Davenport list, and put it in V2.4
+  with any necessary enhancements suggested.
+
+  Create a new element for instructing readers how to on operate keys
+  and buttons.  Call it Trigger for now.  (Is there a better name?
+  Actuate?  KeyMap?  KeyCombo?  KeyOperation?  Is it acceptable for the
+  name to have Key in it, even if its use is defined to be broader?)
+  [Note from Eve: I'll be getting more information from my
+  keyboard-specialist colleague on the wording in ISO standard 9995
+  and related national standards for this behavior.]
+
+  Put this element in the computer term class.  It contains one or more
+  of KeyCap, KeySym, Interface, some or all of the bursted Interface
+  elements (see the menu pick issue below), and Trigger itself.  It has
+  an Action attribute that is implied (so that the contents or context
+  can be examined to determine the default action) and has a token list:
+  Press, Sequential, Build/Chord/Simultaneous/Additive (it's additive in
+  that they must be pressed in sequence, but simultaneous in that each
+  must be held down as the next is pressed), Click, and possibly others
+  (double-click through quadruple-click?).
+
+  Its contents are intended to handle regular keys, modifier keys, mouse
+  buttons (if named), other input device buttons (if named), GUI buttons
+  (such as OK), pedals, etc.  This covers situations like "Ctrl-A
+  Ctrl-B" being a trigger (the following is pseudocode):
+
+  <Trigger Action="sequential">
+    <Trigger Action="simultaneous"><KeyCap>Ctrl</><KeyCap>A</></Trigger>
+    <Trigger Action="simultaneous"><KeyCap>Ctrl</><KeyCap>B</></Trigger>
+  </Trigger>
+
+  We recognize that KeySym and KeyCap are misused and confused, but so
+  far we're willing to keep them both.
+
+  Rationale: Marking up known structures so you can, for example, keep
+  them on a same line and format or delimit them specially.  Making the
+  connecting characters between multi-part presses consistent.  Allowing
+  active documents to do the press for you (to some reasonable extent).
+  At some point you still need prose to explain what's going on.
+
+Menu picks:
+  For starters, make new Button, Icon, Menu, and MenuItem elements (that
+  is, burst the Class attribute values of Interface into elements of
+  their own).  Still keep Interface for future kinds of interface
+  documentation that need to be distinguished (such as palettes).  Warn
+  that these class values may go away in a future version (not definitely
+  V4.0).  This whole issue needs to be discussed further by the sponsors.
+
+  Make a new MenuChoice element that contains an optional Trigger
+  (whatever the name is) element to hold a keyboard shortcut, followed
+  by a mixture of one or more of Interface and the newly bursted
+  interface elements.  Maybe eventually we'll find a need to link all
+  this to the description of the choice (for example, through a
+  special-purpose linkend).
+
+  Drop-down lists are similar to menus, but are not identical.  They are
+  sort of like unnamed menus.  What about palettes?  Are they the same
+  as persistent menus?  Will we need similar kinds of markup in the
+  future and/or will we need to generalize the solution we've got?
+  We'll be looking out for this.
+
+Aliasing GIs:
+  It was requested that we facilitate the renaming of element names in
+  DocBook.  We reaffirmed our decision that you shouldn't do this in
+  DocBook itself.  If you want to spot-change some names, you can either
+  customize the DTD or customize your tools.  For changing all the names
+  (say, to another language), you really want to try to customize your
+  tools.
+
+DocBook releases:
+  During the menu pick discussion, the idea came up that we could
+  release "experimental" modules for controversial designs.  The modules
+  wouldn't be part of DocBook proper (and may go away at any time), but
+  their existence would, we hope, encourage people to try them out.
+  We've already done this for callouts, but so far it's not widely done,
+  and we have to be careful about what output of Davenport is understood
+  as being real/usable/"normative."
+
+========================================================================
+Action items (for reference by Terry, Eve, sponsors)
+========================================================================
+
+For V2.4 release:
+
+Decide if we're definitely removing Article from Book in V4.0
+Eve: Post CALS graphic semantics to sponsor list
+Eve: Float key and menu designs on the list for V2.4 inclusion (see Nov notes)
+Compact lists (see Nov notes)
+Prune computer-term content models for V4.0
+Add BMP, PCX, WMF notations
+Ask list for info to go in Specific Apps section of maint guide
+Add DynaText IGNORE MS info to Specific Apps section
+Add A/E parameterization for document element to Specific Apps section
+Remove WS attribute
+Add Revision attribute (see Nov notes)
+Add to RevisionFlag (see Nov notes)
+Put OS, Arch, UserLevel, and Revision in a parameter entity
+Address and Email (see Nov notes)
+Callouts (see Nov notes)
+CmdSynopsis changes (V4.0 warning)
+Filename Path attribute (see Nov notes)
+Docn: 
+  Terry owns framework, preface, appxes, overview
+  Eve owns doc hierarchy part of UG, whole MG
+  We'll share RefEntries for elements
+  Explain use of effectivity attributes (see Nov notes)
+  Explain GlossTerm BaseForm (see Nov notes)
+  (maint) Explain dbgenent (see Nov notes)
+  V3.0: Murray and maybe others will contribute help; see about dtd2html
+  Warn that subsetting may be appropriate for preparing docs for simple 
+    processors (e.g. RefEntry)
+
+For research/future meetings:
+  Math; SGML Open's position on a math fragment; status of Euromath/Anders
+  Bibliographic material
+  Encyclopedia/article document types
+  Follow up on Passage's ICADD work
+  XRefLabel problem
+  More general Linkends and "resource" problem
+  Graphic attributes and DSSSL semantics
+  Extension/"nonnormative" effectivity information (X/Open)
+  Online help issues (emphasize at Feb meeting); help effectivity handling;
+    unique Help document types; start discussion on list
+
+

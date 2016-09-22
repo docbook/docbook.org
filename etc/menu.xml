@@ -1,0 +1,65 @@
+<ul xmlns="http://www.w3.org/1999/xhtml">
+  <li id="home">
+    <a href="/">Home</a>
+    <ul>
+      <li><a href="/">Welcome</a></li>
+      <li id="intro"><a href="/whatis">What is DocBook?</a></li>
+      <li id="sitemap"><a href="/sitemap">Site map</a></li>
+      <li id="meetups"><a href="/meetups">Meetups</a></li>
+    </ul>
+  </li>
+  <li id="tc">
+    <a href="/tc">OASIS TC</a>
+    <ul>
+      <li><a href="/tc">Overview</a></li>
+      <li id="minutes"><a href="/minutes">Minutes</a></li>
+    </ul>
+  </li>
+  <li id="docs">
+    <a href="/docs">Documentation</a>
+    <ul>
+      <li><a href="/docs">Overview</a></li>
+      <li id="tdg5"><a href="/tdg5/">TDG 5.0</a></li>
+      <li id="tdg51"><a href="/tdg51/">TDG 5.1</a></li>
+      <li id="tdg"><a href="/tdg/">TDG</a></li>
+      <li id="tdg5p"><a href="/tdg5/publishers/">Publishers</a></li>
+      <li id="howto"><a href="/docs/howto/">4.x to 5.0 HOWTO</a></li>
+      <li id="specs"><a href="/specs/">Specifications</a></li>
+    </ul>
+  </li>
+  <li id="schemas">
+    <a href="/schemas/">Schemas</a>
+    <ul>
+      <li><a href="/schemas/">Overview</a></li>
+      <li id="db5x"><a href="/schemas/5x.html">V5.x</a></li>
+      <li id="custom-5x"><a href="/schemas/5x-custom.html">V5.x customizations</a></li>
+      <li id="db4x"><a href="/schemas/4x.html">V4.x</a></li>
+      <li id="custom-4x"><a href="/schemas/4x-custom.html">V4.x customizations</a></li>
+      <li id="archives"><a href="/schemas/archives.html">Archives</a></li>
+    </ul>
+  </li>
+  <li id="ns">
+    <a href="/ns/">Namespaces</a>
+    <ul>
+      <li><a href="/ns/">Overview</a></li>
+      <li id="docbookns"><a href="/ns/docbook">DocBook Namespace</a></li>
+    </ul>
+  </li>
+  <li id="help">
+    <a href="/help">Help!</a>
+    <ul>
+      <li><a href="/help">Overview</a></li>
+      <li id="guidelines"><a href="/mailinglist/guidelines">Mailing List Guidelines</a></li>
+      <li id="rfe"><a href="/rfe/">Report a bug!</a></li>
+    </ul>
+  </li>
+  <li id="wiki">
+    <a href="https://github.com/docbook/wiki/wiki">Wiki</a>
+  </li>
+  <li id="tools">
+    <a href="/tools/">Tools</a>
+    <ul>
+      <li><a href="/tools/">Overview</a></li>
+    </ul>
+  </li>
+</ul>

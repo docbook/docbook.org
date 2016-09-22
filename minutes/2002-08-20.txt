@@ -1,0 +1,261 @@
+| DocBook Technical Committee Meeting Minutes: 20 Aug 2002
+| ========================================================
+|
+| The DocBook Technical Committee met on Tuesday, 20 August 2002
+| at 01:00p EDT (10:00a PDT, 17:00GMT, 18:00BST, 19:00CEST, 02:00JST+)
+| for 90 minutes.
+|
+| Agenda
+|
+| 1. Roll call
+
+  Paul Grosso
+  Nancy Harrison
+  Richard Lander
+  Sabine Ocker
+  Tim Teebken
+  Norman Walsh
+  Michael Smith [:30]
+
+Regrets:
+
+  Dennis Evans
+  Bob Stayton
+  Dick Hamilton
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+Accepted.
+
+| 4. Review of open action items {5 min}
+|
+|    a. Bob to write a more detailed proposal for instance-based generated xref text
+     Continued
+|    b. Bob to investigage RFE #558443 include storage info in metadata
+     Completed[3]
+|    c. Norm to get some sort of IPR template from Karl.
+     Completed
+
+ACTION: Norm to construct a template
+
+|    d. Norm to try implementing annotations. Consider Paul's questions[2].
+     Completed[4]
+|    e. Dick to experiment with SiberSafe for help authoring background
+     Continued
+|    f. Norm to follow-up on RFE 473365: Allow optional in funcprototype
+     Continued
+|    g. Norm to follow-up on RFE 562343: <packagename> element
+     Continued
+|    h. Mike to follow-up on RFE 565716: URL and URN markup
+     Completed
+|    i. Norm and Paul to propose new, combined table markup for CALS+HTML
+     Continued
+
+ACTION: Norm to post the materials
+
+| 5. Plans for 5.0.
+|
+|    Should we be more prescriptive? Should we add more inlines?
+
+NW: Do we need to create general principals for when we add new markup?
+
+NP: General reservations about adding more stuff. People are already
+intimidated by the size and complexity. Can we look at other
+architectures (TEI, DITA) for hints about how to proceed. We shouldn't
+be more prescriptive than they are. It won't buy us more on interchange.
+
+ACTION: Nancy to summarize what DITA and TEI have to say on the subject.
+
+RL: Agree that in the inline space we're already pretty weighty. It's
+easy for customizers to add and remove elements. The size may already
+be a barrier to entry for users that aren't able to customize.
+
+RL: On the flip side, there's a lot of intellectual capital in the
+existing list.
+
+NP: We might add one (or a few?) new inlines that we expect to treat like
+systemitem to provide a rough level of semantics with new class values.
+
+NW: So we should look at the collection of class values and see if we
+can group them and make some new generic elements.
+
+NP: Can we do this by generalizing some existing elements rather than
+adding new ones.
+
+ACTION: Norm to put this on the agenda for next month.
+
+| 6. Discuss Help Authoring
+|
+|    Anything new to discuss?
+
+RL: Most of the proposal was to create a hierarchy underneath set that
+was particular to Help documentation and somewhat parallel to
+article/chapter/etc.
+
+RL: My first thought was that in terms of having DocBook be
+appropriate for HTML Help documents, the meat of the matter isn't the
+hierarchy, it's further down in the document.
+
+RL: The sort of things that HTML Help has that are missing are
+interactive type elements (expand/collapsing), really specialized
+types of links (launching executables), fallbacks (if first isn't
+found), and other UI-type things.
+
+ACTION: Richard to provide some concrete examples of what might need to be added
+
+SO: Active project to rethink the way that we authoring help related
+topics. I asked for the 30,000 foot view of where they stand. What I
+could ask them to do would be to provide the same sort of things from
+the Sun perspective.
+
+ACTION: Sabine to provide some concrete examples as well
+
+TT: Our traditional help deliverable has been compiled HTML Help
+files. But we also deliver print and web materials. The web type
+deliverable is just as important. And as we move in this direction, we
+can't forget about print. There are a lot more things that we can do
+with the HTML Help 2 format.
+
+| 7. Discuss generalized linking strategy
+|
+|    Update on xml-dev discussions and XHTML 2.0
+
+NW: Update on xlink/XHTML status from xml-dev
+
+| 8. Review of Requests for Enhancement {40 min}
+|
+|    To browse a specific RFE, enter the URL (on one line):
+|
+          http://sourceforge.net/tracker/index.php?func=detail&amp;
+          group_id=21935&amp;atid=384107&amp;aid=XXXX
+|
+|    where XXXX is the RFE number.
+|
+|    571996 Add 'namespace' inline element
+
+Proposed: add prefix, namespace, localname to class attribute of sgmltag.
+
+Accepted.
+
+|    571998 Add 'default' inline element
+
+Unclear what 'default' would mean as an inline.
+
+Proposed: add initializer to paramdef
+
+Accepted.
+
+ACTION: Norm to check with submitter to make sure this covers the use case.
+
+|    573419 Add bidirectional text overrides
+
+Add bdo everywhere?
+
+ACTION: Paul to investigate what the content model needs to be and why simply
+        using a nested phrase is insufficient.
+
+|    573812 Allow blockinfo on blockquote
+
+Proposed: add blockinfo to blockquote
+
+Accepted.
+
+|    574880 Add annotation element
+
+RL: We did more than annotations, we did annotations and revision
+marking. It seems like there are three ways: muddy the DTD, write pure
+DTD and use tools to add annotations, allow a different namespace.
+
+Continued in view of the fact that I only just posted my example this morning
+
+|    582705 Namespace convention for MathML Module
+
+ACTION: Norm to investigate
+
+|    582822 VARARG and FUNCDEF together
+
+Proposed: change funcprototype to
+
+   (funcdef, (void|(paramdef*, varargs?)))
+
+ACTION: Norm to post this solution so we have a month to talk about it
+
+|    The following RFEs are awaiting action items
+|
+|    472229 Allow HTML tables
+|    431411 RFE 70: add generic linking capability
+|
+|    The following RFEs have been moved to the bottom of this agenda in order
+|    to make sure that all RFEs get fairly discussed.
+|
+|    413389 Enhance METHODNAME and VARNAME
+
+Waiting on linking.
+
+|    425730 Create an SVG module
+
+Done. Publish it.
+
+ACTION: Norm to publish as a working draft
+
+Accepted.
+
+|    436067 splitting tech.char.class
+
+Part of PE reorg.
+
+|    482818 Simplify ToC content model
+
+ACTION: Norm to republish the proposal for discussion next month
+
+|    522552 Add title attribute to <ulink> element
+
+Waiting for resolution of RFE 574880 (annotations)
+
+|    473365 Allow optional in funcprototype
+
+How about adding a choice attribute, like arg, with values 'opt' and
+'req' with the default being req?
+
+ACTION: Norm to propose this solution to the submitter and the list
+
+|    558443 include storage info in metadata
+
+I believe this is resolved with the biblio* elements[3].
+
+Continued for final closure when Bob is here.
+
+|    562343 <packagename> element
+
+Continued.
+
+|    565637 Associate non-inline image with link
+
+Waiting on linking.
+
+|    565716 URL and URN markup
+
+MS: He does want to do something different with them presentationally, so he does
+want to distinguish between them.
+
+NW: URIs may be important enough to add a new inline. But perhaps in
+light of our discussion under agenda item 5, we should wait and see
+how the categories shake out.
+
+Argument in favor of an element is so that it can have it's own class
+attribute.
+
+Continued until we do the classifications in item 5.
+
+|    565905 Add xrefstyle attribute
+
+Continued.
+
+| [1] http://lists.oasis-open.org/archives/docbook-tc/200207/msg00009.html
+| [2] http://lists.oasis-open.org/archives/docbook/200206/msg00153.html
+[3] http://lists.oasis-open.org/archives/docbook-tc/200207/msg00010.html
+[4] http://lists.oasis-open.org/archives/docbook/200208/msg00156.html

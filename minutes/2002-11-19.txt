@@ -1,0 +1,251 @@
+DocBook Technical Committee Meeting Minutes: 19 Nov 2002
+=======================================================
+
+The DocBook Technical Committee met on Tuesday, 19 November 2002 at
+01:00p EST (10:00a PST, 18:00GMT, 19:00CET, 03:00JST+) for 90 minutes.
+
+| Agenda
+|
+| 1. Roll call
+
+Attendees
+
+  Dennis Evans
+  Dick Hamilton
+  Nancy Harrison
+  Sabine Ocker
+  Michael Smith
+  Bob Stayton
+  Norman Walsh
+
+Regrets:
+
+  Paul Grosso
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+Accepted.
+
+| 4. Review of open action items {5 min}
+|
+|    a. Norm to construct an example of RFE #558443 using existing metadata
+
+Completed. By Bob, actually[2].
+
+|    b. Dick to experiment with SiberSafe for help authoring background
+
+DH: Basically seems like a neat product but didn't see anything that addressed
+help beyond what we already know about.
+
+NH: Did it look like it would add value for single-source help and print?
+
+DH: Yes. They do entity management and have thought a fair amount
+about the topic. In the particular context here, it doesn't seem much
+more, but in terms of use it's worth taking a look at.
+
+|    c. Norm to follow-up on RFE 562343: <packagename> element
+
+Continued.
+
+|    d. Norm to post combined table markup for CALS+HTML
+
+Completed[3].
+
+ACTION: Norm to put on agenda for discussion at next telcon
+
+|    e. Sabine to provide some concrete examples for HTML Help
+
+Withdrawn.
+
+|    f. Norm to investigate namespace convention in MathML Module (RFE #582705)
+
+Completed[4]
+
+|    g. Norm to republish simplified ToC proposal
+
+Completed[5]
+
+ACTION: Norm to put on agenda for discussion at next telcon
+
+|    h. Norm to post more detail about the PE reorganization with some documentation
+
+Continued.
+
+|    i. Norm to write better documentation for option/optional
+
+Continued.
+
+|    j. Dennis to find out if he can post the internal style guide documentation
+|       on option/optional
+
+Continued.
+
+ACTION: Norm and Dennis to discuss offline.
+
+|    k. Norm to find previous discussion of process/server/daemon markup
+|       (Dind't we fall back on systemitem?)
+
+Completed[6]
+
+|    l: Norm to put instance-based xref text on the agenda for next month.
+
+Compelted[. :-)]
+
+| 5. Advance Simplified DocBook to Committee Specification
+
+Simplified DocBook V1.0
+
+Any object to making Committee Specification? None. Accepted.
+
+DocBook SVG V1.0
+
+Any object to making Committee Specification? None. Accepted.
+
+DocBook EBNF V1.1
+
+Any object to making Committee Specification? None. Accepted.
+
+| 6. Instance-based cross-reference text
+
+This is on the agenda for Paul to consider use cases. Unfortunately,
+Paul isn't here this week.
+
+ACTION: Bob to discuss with Paul for next month. Plan to close next month.
+
+| 7. Procedure/Task/Topic
+
+MS: It would be nice to have a logical grouping for more contexts than
+just procedure (for example, in itemized and ordered lists). The other
+use is to reuse sets of steps.
+
+NH: It sounds like you want a grouping mechanism like group in
+cmdsynopsis.
+
+...ranging discussion...
+
+NW: I think we want to address some short-term pain with a tweak to
+procedure and deal with the long-term issues of addressing help or
+task/topic authoring by building a larger, broader design.
+
+BS: I'm not ready to decide this issue without reconsidering procedure
+as a smaller piece of a larger design.
+
+ACTION: Everyone to discuss in email
+
+Norm pleads with the group to please be ready to decide what to decide
+by next month. :-)
+
+ACTION: Norm to put on the agenda again next month
+
+| 8. Review of Requests for Enhancement {40 min}
+|
+|    To browse a specific RFE, enter the URL (on one line):
+|
+|           http://sourceforge.net/tracker/index.php?func=detail&amp;
+|           group_id=21935&amp;atid=384107&amp;aid=XXXX
+|
+|    where XXXX is the RFE number.
+|
+|     613293 Generalize programlisting
+
+General agreement that this is a fuzzy area and it doesn't really matter.
+
+MS: There doesn't seem to be much need to distinguish between these.
+
+ACTION: MS will consider possible attribute values on literallayout for
+        addressing this in a relatively inexpensive manner.
+
+|     615473 Extend float values on figure?
+
+All we can say is float yes or no. Modern systems provide more flexibility.
+
+NW: I propose "figstyle" as CDATA for keyword. This would allow
+authors to identify that, for example, figures and tables should be
+floated differently.
+
+We could also have 'exstyle' and 'eqstyle' for Examples and Equations.
+
+BS: Floating might be one type of style, but style could also mean
+other things.
+
+NW: Maybe 'floatstyle' makes more sense on all four.
+
+Any object to adding floatstyle to all four formal objects. Type CDATA
+with documentation saying that it is expected to be a keyword. None.
+
+Accepted.
+
+|     615587 Support xml:base
+
+Any object to adding xml:base to the common attributes? None.
+
+Accepted.
+
+|     615588 Support XInclude
+
+BS: I don't think it's possible because you can potentially XInclude
+required elements.
+
+Rejected. You should do XInclude before DTD validation.
+
+|     616216 recursive Subset tag
+
+We will add set to itself, allowing (set|book)+ where (book)+ is
+currently allowed in set. Any objection? None.
+
+Accepted.
+
+ADJOURNED
+
+|     616220 frontmatter body backmatter tags
+|     621564 New element Task and children
+|     623524 (Re)Consider "choicelist" markup
+|     638456 RFE add a <translator> tag
+|     640090 Add 'Steps' element for grouping steps
+|
+|    The following RFEs have been moved to the bottom of this agenda in order
+|    to make sure that all RFEs get fairly discussed.
+|
+|     413389 Enhance METHODNAME and VARNAME
+|     436067 splitting tech.char.class
+|     473365 Allow optional in funcprototype
+|     482818 Simplify ToC content model
+|     514435 Allow reference within refentry
+|     541444 caption in mediaobjectco
+|     558443 include storage info in metadata
+|     562343 <packagename> element
+|     564776 process/service/daemon/server markup
+|     565637 Associate non-inline image with link
+|     565716 URL and URN markup
+|     565905 Add xrefstyle attribute
+|     570068 Online values for pubwork
+|     571996 Add 'namespace' inline element
+|     571998 Add 'default' inline element
+|     573419 Add bidirectional text overrides
+|     573812 Allow blockinfo on blockquote
+|     574880 Add annotation element
+|     582705 Namespace convention for MathML Module
+|     582822 VARARG and FUNCDEF together
+|
+|    The following RFEs are awaiting action items
+|
+|     431411 RFE 70: add generic linking capability
+|     472229 Allow HTML tables
+|     522552 Add title attribute to <ulink> element
+|     609061 Add new Step sibling element Alternative
+|
+|    The following RFEs are identified as V6.0 or later
+|
+|     531851 Remove inline person name elements
+|     532088 Remove RevHistory from qandaentry
+|
+| [1] http://lists.oasis-open.org/archives/docbook-tc/200210/msg00005.html
+[2] http://lists.oasis-open.org/archives/docbook-tc/200207/msg00010.html
+[3] http://www.oasis-open.org/docbook/proposals/bothtables/
+[4] http://sourceforge.net/tracker/index.php?func=detail&aid=582705&group_id=21935&atid=384107
+[5] http://sourceforge.net/docman/display_doc.php?docid=9643&group_id=21935
+[6] http://lists.oasis-open.org/archives/docbook-tc/200207/msg00009.html

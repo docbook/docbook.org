@@ -1,0 +1,570 @@
+From server@amber.ora.com Fri Mar  8 22:47:30 1996
+Received: from ruby.ora.com (ruby.ora.com [198.112.208.25]) by jasper.ora.com (8.6.13/8.6.11) with ESMTP id WAA16621 for <norm@jasper.ora.com>; Fri, 8 Mar 1996 22:47:29 -0500
+Received: from amber.ora.com (amber.ora.com [198.112.208.11]) by ruby.ora.com (8.6.13/8.6.11) with ESMTP id WAA27361; Fri, 8 Mar 1996 22:50:05 -0500
+Received: (from server@localhost) by amber.ora.com (8.6.13/8.6.11) id MAA29647; Fri, 8 Mar 1996 12:19:01 -0500
+Date: Fri, 8 Mar 1996 12:19:01 -0500
+Message-Id: <96Mar8.162932gmt.487959(2)@oveja.u-net.net>
+Errors-To: listown@online.ora.com
+Reply-To: mtbryan@sgml.u-net.com
+Originator: davenport@online.ora.com
+Sender: davenport@online.ora.com
+Precedence: bulk
+From: Martin Bryan <mtbryan@sgml.u-net.com>
+To: Multiple recipients of list <davenport@online.ora.com>
+Subject: Re: Davenport Feb/Mar '96 meeting notes
+X-Listprocessor-Version: 6.0c -- ListProcessor by Anastasios Kotsikonas
+X-Comment: Davenport Group General Distribution List
+X-Comment: To unsubscribe send message to listproc@online.ora.com "unsubscribe davenport"
+Content-Type: multipart/mixed; boundary="=====================_826331077==_"
+Mime-Version: 1.0
+
+--=====================_826331077==_
+Content-Type: text/plain; charset="us-ascii"
+
+ Eve 
+>  o Add SGML notation, have two GIF notations, and add DeRose book's 
+>      graphic notations
+
+DeRose & Durand's set of notations are somewhat out of date and are
+referenced in terms of their book rather than the standards being referenced.
+ISO SC18/WG8, the developers of SGML, etc, are preparing a Part 9 to ISO
+9573, Techniques for Using SGML that will provide notation identifiers for
+all ISO coding schemes. I attach a file containing these ISO 9070
+identifiers and SGML notation declarations contained in this Technical Report.
+
+--=====================_826331077==_
+Content-Type: text/plain; charset="us-ascii"
+
+
+ISO 9070 public identifiers for ISO-defined Data Notations
+
+Text Interchange Standards
+--------------------------
+DSSSL:
+ISO/IEC 10179:1996//NOTATION Document Style Semantics and
+Specification Language (DSSSL)
+EDIFACT:
+ISO 9735:1988//NOTATION Electronic data interchange for
+administration, commerce and transport
+HyTime:
+ISO/IEC 10744:1992//NOTATION Hypermedia/Time-based Structuring
+Language (HyTime)
+ISO chemistry:
+ISO/IEC TR9573-7:????//NOTATION Techniques for using SGML - Chemistry
+Markup
+ISO maths:
+ISO/IEC TR9573-7:????//NOTATION Techniques for using SGML -
+Mathematics Markup
+ODA:
+ISO/IEC 8613-10:1991//NOTATION Office Document Architecture (ODA) -
+Part 10: Formal specifications
+SDIF:
+ISO/IEC 9069:1988//NOTATION SGML Document Interchange Format (SDIF)
+SGML:
+ISO 8879:1986//NOTATION Standard Generalized Markup Language (SGML)
+SPDL:
+ISO/IEC 10180:1995//NOTATION Standard Page Description Language
+
+Audiovisual/Moving Image Compression Standards
+----------------------------------------------
+ODA Video Content Architecture:
+ISO/IEC 8613-15:1995//NOTATION Video formatted processable content
+architecture
+MPEG-1 video:
+ISO/IEC 11172-2:1993//NOTATION Coding of moving pictures and audio at
+up to 1,5 Mbit/s - Part 2: Video
+MPEG-2 video:
+ISO/IEC 13818-2:1995//NOTATION  Coding of moving pictures and
+associated audio: Part 2. Video
+MHEG:
+ISO/IEC 13522:1996//NOTATION Coded representation of multimedia and
+hypermedia information objects (MHEG)
+
+Still Image Compression Standards
+---------------------------------
+CGM; binary encoding:
+ISO/IEC 8632-3:1992//NOTATION Metafile for the transfer of picture
+description information - Part 3: Binary encoding
+CGM; chararacter encoding:
+ISO/IEC 8632-2:1992//NOTATION Metafile for the transfer of picture
+description information - Part 2: Character encoding
+CGM; clear text encoding:
+ISO/IEC 8632-4:1992//NOTATION Metafile for the transfer of picture
+description information - Part 4: Clear text encoding
+GKS-3D:
+ISO 8805:1988//NOTATION Graphical Kernal System for Three Dimensions
+(GKS-3D)
+GKS:
+ISO 7942:1985//NOTATION Graphical Kernel System (GKS)
+Group 3 fax:
+UNREGISTERED::CCITT VII.3 T 4//NOTATION Facsimile encoding schemes for
+group 3 facsimile apparatus
+Group 4 fax:
+UNREGISTERED::CCITT VII.3 T 6//NOTATION Facsimile encoding schemes for
+group 4 facsimile apparatus
+Group 4; tiled raster:
+UNREGISTERED::CCITT VII.3 T 6//NOTATION Group 4 Facsimile Type 2 Tiled
+Raster
+Group 4; untiled raster:
+UNREGISTERED::CCITT VII.3 T 6//NOTATION Group 4 Facsimile Type 1
+Untiled Raster
+IGES:
+UNREGISTERED::NBS IR 88-3813//NOTATION Initial Graphics Exchange
+Specification (IGES)
+ISO9282:
+ISO/IEC 9282-2:1992//NOTATION Coded representation of pictures - Part 2:
+Incremental encoding of point lists
+JBIG:
+ISO/IEC 11544:1993//NOTATION Progressive bi-level image compression
+JPEG:
+ISO/IEC 10918:1993//NOTATION Digital Compression and Coding of
+Continuous-tone Still Images (JPEG)
+PHIGS Plus:
+ISO/IEC 9592-4:1992//NOTATION Programmer's Hierarchical Interactive
+Graphics System - Part 4: Lumiere und Surfaces
+PHIGS; Archive file format:
+ISO/IEC 9592-2:1989//NOTATION Programmer's Hierarchical Interactive
+Graphics System - Part 2: Archive file format
+PHIGS; Clear text encoding:
+ISO/IEC 9592-3:1989//NOTATION  Programmer's Hierarchical Interactive
+Graphics System - Part 3: Clear-text encoding
+
+Audio Interchange Standards
+---------------------------
+MPEG-1 audio:
+ISO/IEC 11172-3:1993//NOTATION Coding of moving pictures and audio at
+up to 1,5 Mbit/s - Part 3: Audio
+MPEG-2 audio:
+ISO/IEC 13818-3:1995//NOTATION Coding of moving pictures and
+associated audio: Part 3. Audio
+ODAafp:
+ISO/IEC 8613-9:1993//NOTATION Open Document Architecture - Part 9:
+Audio formatted processable content architecture
+
+Telecommunications Standards
+----------------------------
+ITU 601:
+UNREGISTERED::ITU::Recommendation 601//NOTATION Definition of
+analogue/digital video signals
+ITU 709:
+UNREGISTERED::ITU::Recommendation 790//NOTATION Basic parameter values
+for the HDTV standard for international programme exchange
+ITU F310:
+ITU/F.310//NOTATION Broadband Videotext
+ITU F821:
+
+UNREGISTERED::ITU::F.821//NOTATION Broadband TV Distribution
+ITU F822:
+UNREGISTERED::ITU::F.822//NOTATION Broadband HDTV Distribution
+ITU G711:
+UNREGISTERED::ITU::G.711//NOTATION Pulse code modulation (PCM) of
+voice frequencies
+ITU G721:
+UNREGISTERED::ITU::G.721//NOTATION 32kbit/s adaptive pulse code
+modulation (ADPCM)
+ITU G722:
+UNREGISTERED::ITU::G.722//NOTATION 7kHz audio-coding within 64kbit/s
+ITU J52:
+UNREGISTERED::ITU::J.52//NOTATION Digital transmission of high quality
+sound programme signals
+ITU J80:
+UNREGISTERED::ITU::J.80//NOTATION Transmission of component-coded
+digital TV signals at bit rates near 140 Mbit/s
+ITU J81:
+UNREGISTERED::ITU::J.81//NOTATION Transmission of component-coded
+digital TV signals at 34-45 Mbit/s
+ITU MBTF:
+UNREGISTERED::ITU::MBTF//NOTATION Multipoint Binary File Transfer
+ITU MDD:
+UNREGISTERED::ITU::MDV//NOTATION Multimedia Distribution Service
+ITU MDV:
+UNREGISTERED::ITU::MDV//NOTATION Multimedia Delivery Service
+ITU T100:
+UNREGISTERED::ITU::T.100//NOTATION Videotext
+ITU T120:
+UNREGISTERED::ITU::T.120//NOTATION Transmission protocols for
+multimedia data communications
+MOTIS:
+ISO/IEC 10021-6:1990//NOTATION Message-Oriented Text Interchange
+Systems (MOTIS) - Part 6: Protocol Specifications
+RO-comms:
+ISO/IEC 9072-2:1989//NOTATION Remote operation - Part 2: Protocol
+specification//EN
+RT-comms:
+ISO/IEC 9066-2:1989//NOTATION Reliable transfer - Part 2: Protocol
+specification
+SMPTE 17.131:
+UNREGISTERD::SMPTE::S17.131//NOTATION Bit-Serial Digital Interface for
+High-Definition Television Systems
+SMPTE 125M:
+UNREGISTERED::SMPTE::125M-1992//NOTATAION 10 Bit Component Video
+Signal 4:2:2 -  Bit-Parallel Digital Interface
+SMPTE 259M:
+UNREGISTERED::SMPTE::259M-1993//NOTATION 10 Bit 4:2:2 Component
+Digital Signals - Serial Digital Interface
+
+Programming Languages
+---------------------
+Ada:
+ISO 8652:1987//NOTATION Programming languages - Ada
+APL:
+ISO 8485:1989//NOTATION Programming languages - APL
+
+ASN.1:
+ISO/IEC 8824:1990//NOTATION Specification of Abstract Syntax Notation
+One (ASN.1)
+Basic:
+ISO/IEC 10279:1991//NOTATION Programming languages - Full BASIC
+C:
+ISO/IEC 9899:1990//NOTATION Programming languages - C
+Cobol:
+ISO 1989:1985//NOTATION Programming languages - COBOL
+Fortran:
+ISO/IEC 1539:1991//NOTATION Programming languages - FORTRAN
+Pascal:
+ISO 7185:1990//NOTATION Programming languages - Pascal//EN
+PL/1:
+ISO 6160:1979//NOTATION Programming languages - PL/1
+
+Miscellaneous Standards
+-----------------------
+DFR:
+ISO/IEC 10166-2:1991//NOTATION Document Filing and Retrieval (DFR) -
+Part 2: Protocol Specification
+DOAM:
+ISO/IEC 10031-2:1991//NOTATION Distributed-office-applications model -
+Part 2: Distinguished object reference
+DPA:
+ISO/IEC 10175:1996//NOTATION Document Printing Application (DPA)
+Fonts:
+ISO/IEC 9541-2:1991//NOTATION Font information interchange -Part 2:
+Interchange Format
+ISO 10367:
+ISO/IEC 10367:1991//NOTATION Standardized coded graphic character sets
+for use in 8-bit codes
+RDT:
+ISO/IEC 10740-2:1993//NOTATION Referenced Data Transfer - Part 2:
+Protocol specifications
+SQL:
+ISO/IEC 9075:1992//NOTATION Database languages - SQL
+
+SGML Notation Declarations for ISO-defined Data Notations
+----------------------------------------------------------
+<!-- (C) International Organization for Standardization 199?
+     Permission to copy in any form is granted with
+     conforming SGML systems and applications as defined
+     in ISO 8879, provided this notice is included in all
+     copies.                                             -->
+<!-- ISO standard data notations. Typical invocation:
+     <!ENTITY % ISOdata PUBLIC "ISO/IEC TR ????:????//ELEMENTS Data
+                                Notations Standardized by ISO//EN" >
+       %ISOdata;
+-->
+<!NOTATION FORTRAN  PUBLIC "ISO/IEC 1539:1991//NOTATION
+                            Information technology -
+                            Programming languages -
+                            FORTRAN//EN"                           >
+<!NOTATION COBOL    PUBLIC "ISO 1989:1985//NOTATION
+                            Programming languages -
+                            COBOL//EN"                             >
+
+<!NOTATION PL/1     PUBLIC "ISO 6160:1979//NOTATION
+                            Programming languages -
+                            PL/1//EN"                              >
+<!NOTATION PASCAL   PUBLIC "ISO 7185:1990//NOTATION
+                            Programming languages -
+                            Pascal//EN"                            >
+<!NOTATION GKS      PUBLIC "ISO 7942:1985//NOTATION
+                            Information processing systems -
+                            Computer graphics -
+                            Graphical Kernel System (GKS)
+                            functional description//EN"            >
+<!NOTATION APL      PUBLIC "ISO 8485:1989//NOTATION
+                            Programming languages -
+                            APL//EN"                               >
+<!NOTATION ODAafp   PUBLIC "ISO/IEC 8613-9:1993//NOTATION
+                            Information technology -
+                            Open Document Architecture (ODA)
+                            and Interchange Format - Part 9:
+                            Audio formatted processable content
+                            architecture//EN"                      >
+<!NOTATION ODA      PUBLIC "ISO/IEC 8613-10:1991//NOTATION
+                            Information processing -
+                            Text and office systems -
+                            Office Document Architecture (ODA)
+                            and interchange format -
+                            Part 10: Formal specifications//EN"    >
+<!NOTATION ODAvfp   PUBLIC "ISO/IEC 8613-15:1995//NOTATION Video
+                            formatted processable content
+architecture">
+<!NOTATION CGMchar  PUBLIC "ISO/IEC 8632-2:1992//NOTATION
+                            Information technology -
+                            Computer graphics -
+                            Metafile for the storage and transfer of
+                            picture description information -
+                            Part 2: Character encoding//EN"        >
+<!NOTATION CGMbin   PUBLIC "ISO/IEC 8632-3:1992//NOTATION
+                            Information technology -
+                            Computer graphics -
+                            Metafile for the storage and transfer of
+                            picture description information -
+                            Part 3: Binary encoding//EN"           >
+<!NOTATION CGMclear PUBLIC "ISO/IEC 8632-4:1992//NOTATION
+                            Information technology -
+                            Computer graphics -
+                            Metafile for the storage and transfer of
+                            picture description information -
+                            Part 4: Clear text encoding//EN"       >
+<!NOTATION ADA      PUBLIC "ISO 8652:1987//NOTATION
+                            Programming languages -
+                            Ada//EN"                               >
+<!NOTATION GKS-3D   PUBLIC "ISO 8805:1988//NOTATION
+                            Information technology -
+                            Computer graphics -
+                            Graphical Kernal System
+                            for Three Dimensions (GKS-3D)//EN"     >
+
+<!NOTATION ASN1     PUBLIC "ISO/IEC 8824:1990//NOTATION
+                            Information technology -
+                            Open Systems Interconnection -
+                            Specification of Abstract Syntax
+                            Notation One (ASN.1)//EN"              >
+<!NOTATION SGML     PUBLIC "ISO 8879:1986//NOTATION
+                            Information processing -
+                            Text and office systems -
+                            Standard Generalized Markup Language
+                            (SGML)//EN"                            >
+<!NOTATION RT-comms PUBLIC "ISO/IEC 9066-2:1989//NOTATION
+                            Text communication -
+                            Reliable transfer -
+                            Part 2: Protocol specification//EN"    >
+<!NOTATION RO-comms PUBLIC "ISO/IEC 9072-2:1989//NOTATION
+                            Text communication -
+                            Remote operation -
+                            Part 2: Protocol specification//EN"    >
+<!NOTATION SDIF     PUBLIC "ISO/IEC 9069:1988//NOTATION
+                            Information processing -
+                            SGML support facilities -
+                            SGML Document Interchange Format
+                            (SDIF)//EN"                            >
+<!NOTATION SQL      PUBLIC "ISO/IEC 9075:1992//NOTATION
+                            Information technology -
+                            Database languages - SQL//EN"          >
+<!NOTATION ISO9282  PUBLIC "ISO/IEC 9282-2:1992//NOTATION
+                            Information Processing -
+                            Coded representation of pictures -
+                            Part 2: Incremental encoding of point
+                            lists in a 7-bit or 8-bit
+                            environment//EN"                       >
+<!NOTATION fonts    PUBLIC "ISO/IEC 9541-2:1991//NOTATION
+                            Information technology -
+                            Font information interchange -
+                            Part 2: Interchange Format//EN"        >
+<!NOTATION ISOmath  PUBLIC "ISO/IEC TR9573-7:????//NOTATION
+                            Information processing -
+                            SGML support facilities -
+                            Techniques for using SGML -
+                            Mathematics Markup//EN"                >
+<!NOTATION ISOchem  PUBLIC "ISO/IEC TR9573-7:????//NOTATION
+                            Information processing -
+                            SGML support facilities -
+                            Techniques for using SGML -
+                            Chemistry Markup//EN"                  >
+<!NOTATION PHIGS-2  PUBLIC "ISO/IEC 9592-2:1989//NOTATION
+                            Information processing -
+                            Computer graphics -
+                            Programmer's Hierarchical Interactive
+                            Graphics System (PHIGS) -
+                            Part 2: Archive file format//EN"       >
+<!NOTATION PHIGS-3  PUBLIC "ISO/IEC 9592-3:1989//NOTATION
+                            Information processing -
+                            Computer graphics -
+
+                            Programmer's Hierarchical Interactive
+                            Graphics System (PHIGS) -
+                            Part 3: Clear-text encoding of
+                            archive file//EN">
+<!NOTATION PHIGS-4  PUBLIC "ISO/IEC 9592-4:1992//NOTATION
+                            Information processing -
+                            Computer graphics -
+                            Programmer's Hierarchical Interactive
+                            Graphics System (PHIGS) -
+                            Part 4: Plus Lumiere und Surfaces,
+                            PHIGS PLUS//EN">
+<!NOTATION EDIFACT  PUBLIC "ISO 9735:1988//NOTATION
+                            Electronic data interchange for
+                            administration, commerce and transport
+                            (EDIFACT) -
+                            Application level syntax rules//EN"    >
+<!NOTATION C        PUBLIC "ISO/IEC 9899:1990//NOTATION
+                            Programming languages - C//EN"         >
+<!NOTATION MOTIS    PUBLIC "ISO/IEC 10021:1990//NOTATION
+                            Text communication -
+                            Message-Oriented Text Interchange
+                            Systems (MOTIS) - Part 6: Protocol
+                            Specifications//EN">
+<!NOTATION DOAM     PUBLIC "ISO/IEC 10031-2:1991//NOTATION
+                            Information technology -
+                            Text and office systems -
+                            Distributed-office-applications model -
+                            Part 2: Distinguished object reference
+                            and associated procedures//EN">
+<!NOTATION DFR      PUBLIC "ISO/IEC 10166-2:1991//NOTATION
+                            Information technology -
+                            Text and office systems -
+                            Document Filing and Retrieval (DFR) -
+                            Part 2: Protocol Specification//EN"    >
+<!NOTATION DPA      PUBLIC "ISO/IEC 10175:1996//NOTATION
+                            Document Printing Application
+                            (DPA)//EN"                             >
+<!NOTATION DSSSL    PUBLIC "ISO/IEC 10179:1996//NOTATION
+                            Information processing -
+                            Text and office systems -
+                            Document Style Semantics and
+                            Specification Language (DSSSL)//EN"    >
+<!NOTATION SPDL     PUBLIC "ISO/IEC 10180:1995//NOTATION
+                            Information technology -
+                            Text communication -
+                            Standard Page Description Language
+                            (SPDL)//EN"                            >
+<!NOTATION BASIC    PUBLIC "ISO/IEC 10279:1991//NOTATION
+                            Information technology -
+                            Programming languages -
+                            Full BASIC//EN"                        >
+<!NOTATION ISO10367 PUBLIC "ISO/IEC 10367:1991//NOTATION
+                            Information technology -
+                            Standardized coded graphic character
+                            sets for use in 8-bit codes//EN"       >
+
+<!NOTATION RDT      PUBLIC "ISO/IEC 10740-2:1993//NOTATION
+                            Information technology -
+                            Text and office systems -
+                            Referenced Data Transfer -
+                            Part 2: Protocol specifications//EN"   >
+<!NOTATION HyTime   PUBLIC "ISO/IEC 10744:1992//NOTATION
+                            Information technology -
+                            Hypermedia/Time-based Structuring
+                            Language (HyTime)//EN"                 >
+<!NOTATION JPEG     PUBLIC "ISO/IEC 10918:1993//NOTATION
+                            Digital Compression and Coding of
+                            Continuous-tone Still Images
+                            (JPEG)//EN"                            >
+<!NOTATION MPEG1vid PUBLIC "ISO/IEC 11172-2:1993//NOTATION
+                            Information technology -
+                            Coding of moving pictures and associated
+                            audio for digital storage media at up to
+                            about 1,5 Mbit/s -
+                            Part 2: Video//EN"                     >
+<!NOTATION MPEG1aud PUBLIC "ISO/IEC 11172-3:1993//NOTATION
+                            Information technology -
+                            Coding of moving pictures and associated
+                            audio for digital storage media at up to
+                            about 1,5 Mbit/s -
+                            Part 3: Audio//EN"                     >
+<!NOTATION MPEG2vid PUBLIC "ISO/IEC 13818-2:1995//NOTATION
+                            Information technology -
+                            Coding of moving pictures and associated
+                            audio: Part 2. Video//EN"              >
+<!NOTATION MPEG2aud PUBLIC "ISO/IEC 13818-3:1995//NOTATION
+                            Coding of moving pictures and associated
+                            audio: Part 3. Audio//EN"              >
+<!NOTATION JBIG     PUBLIC "ISO/IEC 11544:1993//NOTATION
+                            Information technology -
+                            Coded representation of picture
+                            and audio information -
+                            Progressive bi-level image
+                            compression//EN"                       >
+<!NOTATION MHEG     PUBLIC "ISO/IEC 13522:1996//NOTATION
+                            Information technology -
+                            Coded representation of multimedia
+                            and hypermedia information objects
+                            (MHEG)//EN"                            >
+<!NOTATION IGES     PUBLIC "-//NBS IR 88-3813//NOTATION Initial
+                            Graphics Exchange Specification
+                            (IGES)//EN"                            >
+<!NOTATION G4-fax   PUBLIC "-//CCITT VII.3 T 6//NOTATION Blue book -
+                            Terminal equipment and protocols for
+                            telematic services - Facsimile encoding
+                            schemes and coding control functions for
+                            group 4 facsimile apparatus//EN"       >
+<!NOTATION G3-fax   PUBLIC "-//CCITT VII.3 T 4//NOTATION Red book -
+                            Terminal equipment and protocols for
+                            telematic services - Facsimile encoding
+                            schemes and coding control functions for
+
+                            group 3 facsimile apparatus//EN"       >
+<!NOTATION CCITT4-1 PUBLIC "-//CCITT VII.3 T 6//NOTATION Group 4
+                            Facsimile Type 1 Untiled Raster//EN">
+<!NOTATION CCITT4-2 PUBLIC "-//CCITT VII.3 T 6//NOTATION Group 4
+                            Facsimile Type 2 Tiled Raster//EN"   >
+<!NOTATION ITU-601  PUBLIC "-//ITU::Recommendation 601//NOTATION
+                            Definition of analogue/digital video
+                            signals//EN"                           >
+<!NOTATION ITU-709  PUBLIC "-//ITU::Recommendation 790//NOTATION
+                            Basic parameter values for the HDTV
+                            standard for international programme
+                            exchange//EN"                          >
+<!NOTATION ITU-G711 PUBLIC "-//ITU::G.711//NOTATION Pulse code
+                            modulation (PCM) of voice
+                            frequencies//EN"                       >
+<!NOTATION ITU-G721 PUBLIC "-//ITU::G.721//NOTATION 32kbit/s
+                            adaptive pulse code modulation
+                            (ADPCM)//EN"                           >
+<!NOTATION ITU-G722 PUBLIC "-//ITU::G.722//NOTATION 7kHz audio-coding
+                            within 64kbit/s//EN"                   >
+<!NOTATION ITU-J52  PUBLIC "-//ITU::J.52//NOTATION Digital
+                            transmission of high quality sound
+                            programme signals using one, two or
+                            three 64kbit/s channels per mono signal
+                            and up to six per stereo channel)//EN" >
+<!NOTATION ITU-J80  PUBLIC "-//ITU::J.80//NOTATION Transmission of
+                            component-coded digital TV signals
+                            for contribution applications at bit
+                            rates near 140 Mbit/s//EN"             >
+<!NOTATION ITU-J81  PUBLIC "-//ITU::J.81//NOTATION Transmission of
+                            component-codd digital TV signals for
+                            contribution-quality applications at
+                            the third hierarchical level of CCITT
+                            (34-45 Mbit/s)//EN"                    >
+<!NOTATION ITU-T100 PUBLIC "-//ITU::T.100//NOTATION Videotext//EN" >
+<!NOTATION ITU-T120 PUBLIC "-//ITU::T.120//NOTATION Transmission
+                            protocols for multimedia data
+                            communications//EN"                    >
+<!NOTATION ITU-F310 PUBLIC "-//ITU::F.310//NOTATION Broadband
+                            Videotext//EN"                         >
+<!NOTATION ITU-F821 PUBLIC "-//ITU::F.821//NOTATION Broadband
+                            TV Distribution//EN"                   >
+<!NOTATION ITU-F822 PUBLIC "-//ITU::F.822//NOTATION Broadband
+                            HDTV Distribution//EN"                 >
+<!NOTATION ITU-MDV  PUBLIC "-//ITU::MDV//NOTATION Multimedia
+                            Delivery Service//EN"                  >
+<!NOTATION ITU-MDD  PUBLIC "-//ITU::MDV//NOTATION Multimedia
+                            Distribution Service//EN"              >
+<!NOTATION ITU-MBTF PUBLIC "-//ITU::MBTF//NOTATION Multipoint
+                            Binary File Transfer//EN"              >
+
+<!NOTATION SMPTE125 PUBLIC "-//SMPTE::125M-1992//NOTATAION 10 Bit
+                            Component Video Signal 4:2:2 -
+                            Bit-Parallel Digital Interface//EN"    >
+<!NOTATION SMPTE259 PUBLIC "-//SMPTE::259M-1993//NOTATION 10 Bit
+
+                            4:2:2 Component and 4fsc NTSC Composite
+                            Digital Signals - Serial Digital
+                            Interface//EN"                         >
+<!NOTATION S17.131  PUBLIC "-//SMPTE::S17.131//NOTATION Bit-Serial
+                            Digital Interface for High-Definition
+                            Television Systems//EN"                >
+
+
+--=====================_826331077==_
+Content-Type: text/plain; charset="us-ascii"
+
+----
+Martin Bryan, The SGML Centre, Churchdown, Glos. GL3 2PU, UK 
+Phone/Fax: +44 1452 714029   WWW home page: http://www.u-net.com/~sgml/
+
+
+--=====================_826331077==_--
+
+
+

@@ -1,0 +1,77 @@
+From server@amber.ora.com Sat Mar  9 00:30:21 1996
+Received: from ruby.ora.com (ruby.ora.com [198.112.208.25]) by jasper.ora.com (8.6.13/8.6.11) with ESMTP id AAA26583 for <norm@jasper.ora.com>; Sat, 9 Mar 1996 00:30:20 -0500
+Received: from amber.ora.com (amber.ora.com [198.112.208.11]) by ruby.ora.com (8.6.13/8.6.11) with ESMTP id AAA29137; Sat, 9 Mar 1996 00:33:00 -0500
+Received: (from server@localhost) by amber.ora.com (8.6.13/8.6.11) id TAA13178; Fri, 8 Mar 1996 19:01:51 -0500
+Date: Fri, 8 Mar 1996 19:01:51 -0500
+Message-Id: <199603090001.QAA01016@ix9.ix.netcom.com>
+Errors-To: listown@online.ora.com
+Reply-To: lprice@ix.netcom.com
+Originator: davenport@online.ora.com
+Sender: davenport@online.ora.com
+Precedence: bulk
+From: "Lynne A. Price" <lprice@ix.netcom.com>
+To: Multiple recipients of list <davenport@online.ora.com>
+Subject: Re: Davenport Feb/Mar '96 meeting notes
+X-Listprocessor-Version: 6.0c -- ListProcessor by Anastasios Kotsikonas
+X-Comment: Davenport Group General Distribution List
+X-Comment: To unsubscribe send message to listproc@online.ora.com "unsubscribe davenport"
+Content-Type: text/plain; charset="us-ascii"
+Mime-Version: 1.0
+
+At 05:45 PM 3/5/96 -0500, Paul Grosso wrote:
+>
+>>   We should also add the SGML notation from IBMIDDOC:
+>> 
+>>     "+//ISO/IEC 8879:1986//NOTATION SGML Document//EN"
+>
+>Please double check this.  My reading of 8879 indicates that the above
+>is not a valid Formal Public Idendifier.  According to productions 79-81,
+>if an FPI is to have an ISO owner identifier, it does *not* have the
+>initial "+//".
+True. Also see the examples in Annex D of 8879. In fact, look at productions
+79-93. [80] defines three types of owner identifiers: ISO owner identifier,
+registered owner identifiers, and unregistered owner identifiers. [81] 
+defines an ISO owner identifier to be minimum data, [82] defines a registered
+owner identifier to start with "+//", and [83] defines an unregistered
+owner identifier to start with "-//".
+
+>In fact, my understanding is that "+//" is for registered
+>owner identifiers only, and at the present time, there is no official
+>registration body, so there can be no registered owners and therefore
+>no "+//" FPIs except those that use ISBNs (which are registered).
+True in practice. If you want to be technical, ANSI is the registration
+authority, but they do not have procedures in place for actually registering
+owners. The GCA has volunteered to actual do the work for ANSI and
+expects ANSI approval of their suggested procedures, but when I last 
+checked with Marion Elledge at the GCA a week or two ago, it hadn't
+happened yet.
+ 
+>
+>Furthermore, 8879 is officially "ISO 8879:1986" not "ISO/IEC 8879:1986"
+>(see, for example, all the FPIs for the character sets in annex D of 8879).
+True.
+
+>
+>I think having an official FPI for SGML notation is a great idea, but
+>since the owner of 8879 is SC18/WG8, I think you should ask them to
+>determine and bless an official FPI.  (The convenor of WG8 is James
+>Mason [MASONJD@oax.a1.ornl.gov] and the editor of the WG8 SGML
+>Rapporteur Group is Charles Goldfarb [charles@sgmlsource.com].)
+Can't hurt to ask.
+
+>  My
+>apologies if I'm off base on this, but the FPI above doesn't seem right
+>to me, and I do think it's important we don't proliferate
+>invalid/inappropriate FPIs.
+Again, true.
+
+        --Lynne
+
+
+Lynne A. Price
+Text Structure Consulting
+lprice@ix.netcom.com
+(510) 498-1125
+
+
+

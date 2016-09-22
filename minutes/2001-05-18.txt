@@ -1,0 +1,181 @@
+| Agenda
+| ------
+| 
+| 1. Roll call
+
+Norman Walsh
+Dennis Evans
+Michael Sabrio
+Michael Smith
+Sabine Ocker
+
+We have quorum, meeting called to order by the chair.
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+No changes requested.
+
+| 4. Review of open action items
+| 
+|    a. Norm to fix RFE database
+
+Norm suggests: let's move it to SourceForge; that's item 5 on today's
+agenda.
+
+Continued until item 5 in this agenda.
+
+|    b. Norm to raise on list: EBNF
+
+Completed.
+
+Proposed: we've made it an "official" module by providing explicit
+hooks for it.
+
+Accepted.
+
+Action: Norm to clarify this in the web pages.
+
+|    c. Norm to raise on list: newsgroup element or class on systemitem 
+
+Completed[a]. No one suggested that &lt;systemitem class="newsgroup"&gt; was
+too odious.
+
+Proposed: let's do that and revisit if someone objects.
+
+Accepted.
+
+|    d. Norm to ask for more detail on RFE 136 (co in userinput)
+
+Completed (in private email). The real issue is 
+
+   &lt;screen&gt;&lt;prompt&gt;#&lt;/prompt&gt; &lt;userinput&gt;foo &lt;co id="foo"&gt; \
+bar &lt;co id="bar"&gt; \
+baz &lt;co id="baz"&gt;&lt;/userinput&gt;&lt;/screen&gt;
+
+What we'd really like is &lt;co&gt; as an inclusion on &lt;screen&gt; but we
+can't have that.
+
+There is a question of what elements would be changed (prompt,
+userinput, computeroutput, anything else?)
+
+Michael Sabrio notes that
+
+ &lt;computeroutput&gt;a&lt;/computeroutput&gt;&lt;co id='x'/&gt;&lt;computeroutput&gt;b&lt;/computeroutput&gt;
+
+would be a workaround for some cases. Norm observes that you couldn't
+then point to the whole thing with an IDREF.
+
+Dennis expressed concern that there's lots of stuff in &lt;screen&gt; that
+could be effected. This looks like a slippery slope.
+
+Action: Norm to write a concrete proposal.
+
+|    e. Dennis to investigate problems caused by removing OLink
+
+Completed. Removing OLink would cause a lot of pain.
+
+|    f. Michael (Sabrio) to investigate problems caused by removing OLink
+
+Completed. There is some use of OLink, but conversion would not be painful.
+
+|    g. Norm to develop a concrete proposal for linking in 5.0
+
+Continued. XPointer/XLink aren't Recommendations yet.
+
+|    h. Norm to make a concrete proposal for extending textobject to insert
+|       external files
+
+Completed[b].
+
+|    i. Norm to make a concrete proposal for coref
+
+Completed[c].
+
+| 5. Report on the SourceForge DocBook Project[2] (moving the RFE database
+|    to SourceForge)
+
+Proposed: fix RFE database by moving it to SourceForge tracker.
+
+Accepted.
+
+Action: Norm will update the tracker with all outstanding RFEs and
+move the RFE history to a static page so that it is not lost.
+
+| 6. Metadata issues
+|   - The Open Source Metadata Framework[3]
+|   - Dublin core[4]
+|   - Metadata for elements at the block level
+|   - Names and addresses/the content model of author
+
+Norm: This is a big issue.
+
+Michael Sabrio: A f2f might be the way to go for this.
+
+Norm: There's an Open Source Documentation Summit at the O'Reilly
+Open Source Conference[d]
+
+Michael Smith: There are OMF[e] and ScrollKeeper[f] mailing lists.
+
+Michael Sabrio: Wouldn't it make sense to have a single wrapper for
+  "all block elements"
+
+Norm: That may be the way to go. We have 'N' flavors of *Info element now
+because it was imagined that organizations might want to constrain their
+content models differently.
+
+Action: Michael Sabrio will investigate specifically what elements his
+group would like to put metadata on.
+
+Norm mused that one rule for deciding what elements get metadata could
+be: "all elements with element content". (Elements with mixed content
+can't practically have metdata by way of a containing *info wrapper
+because of the way XML restricts mixed content models.)
+
+Action: Norm to propose new name and address stuff.
+
+With time running out, the chair interrupts the agenda.
+
+Proposed: we shall begin to meet monthly by teleconference at
+01:00p EDT (10:00a PDT, 17:00GMT, 18:00BST, 19:00CEST, 02:00JST+) on
+Tuesdays.
+
+Accepted.
+
+Proposed: we continue this agenda at an irregular meeting at
+01:00p EDT (10:00a PDT, 17:00GMT, 18:00BST, 19:00CEST, 02:00JST+) on
+Tuesday, 22 May 2001.
+
+Accepted.
+
+Meeting adjourned.
+
+| 7. Adapting DocBook for more topic-oriented manuals
+| 
+| 8. Addition of section.class parameter entity [5]
+| 
+| 9. Expand the content model of filename (and perhaps some related elements)
+|    to be broader than smallcptr.char.mix. [6][7]
+| 
+| 10. Content model issues relating to lists and procedures.[8][9]
+| 
+| 11. Any other business
+| 
+| Upcoming Meetings
+| -----------------
+| 27 Jul 2001: Teleconference
+| 28 Sep 2001: Teleconference
+| 14 Dec 2001: Face-to-face colocated with XML/MT 2001 (Orlando, FL)
+| 
+| [1] http://www.oasis-open.org/docbook/meetings/min20010223.html
+| [2] http://sourceforge.net/projects/docbook/
+| [3] http://www.ibiblio.org/osrt/omf/
+| [4] http://dublincore.org/
+| [5] http://lists.oasis-open.org/archives/docbook-tc/200103/msg00005.html
+| [6] http://lists.oasis-open.org/archives/docbook-tc/200103/msg00006.html
+| [7] http://lists.oasis-open.org/archives/docbook/200101/msg00059.html
+| [8] http://lists.oasis-open.org/archives/docbook-tc/200103/msg00001.html
+| [9] http://lists.oasis-open.org/archives/docbook/200104/msg00016.html

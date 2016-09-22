@@ -1,0 +1,149 @@
+buildscript {
+  repositories {
+    mavenCentral()
+    maven { url "http://maven.restlet.org" }
+  }
+
+  dependencies {
+    classpath group: 'org.docbook', name: 'docbook-xslt2', version: '2.0.19'
+    classpath group: 'com.xmlcalabash', name: 'xmlcalabash1-print', version: '1.1.4'
+    classpath group: 'com.xmlcalabash', name: 'xmlcalabash1-gradle', version: '1.1.2'
+  }
+}
+
+plugins {
+  id "de.undercouch.download" version "2.0.0"
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+defaultTasks 'website'
+
+apply plugin: 'org.docbook.task'
+apply plugin: 'com.xmlcalabash.task'
+
+import org.docbook.DocBookTask
+import com.xmlcalabash.XMLCalabashTask
+import de.undercouch.gradle.tasks.download.Download
+
+project.ext.docbookXslt = "docbook-xslt2-$docbookXsltVersion"
+
+task downloadDocBook(type: Download) {
+  src docbookXsltBaseUri + '/release/' + docbookXsltVersion + '/' + docbookXslt + '.zip'
+  dest new File(buildDir, docbookXslt + '.zip')
+}
+downloadDocBook.onlyIf { !file("$buildDir/${docbookXslt}.zip").exists() }
+
+task setupDocBook(dependsOn: downloadDocBook, type: Copy) {
+  from zipTree(downloadDocBook.dest)
+  into { "build" }
+  doLast {
+    copy {
+      from "build/$docbookXslt"
+      into 'build/docbook'
+    }
+  }
+}
+setupDocBook.onlyIf { !file("$buildDir/docbook").exists() }
+
+/* All of the hand-authored pages */
+def pages = [
+             'index',
+             'whatis',
+             'meetups',
+             'tc',
+             'help',
+             'sitemap',
+             'guidelines',
+             'docs/index',
+             'minutes/index',
+             'ns/docbook',
+             'ns/index',
+             'rfe/index',
+             'schemas/4x',
+             'schemas/4x-custom',
+             'schemas/5x',
+             'schemas/5x-custom',
+             'schemas/archives',
+             'schemas/index',
+             'search/index',
+             'specs/index',
+             'tdg/errata',
+             'tdg/index',
+             'tdg5/index',
+             'tdg5/publishers/index',
+             'tdg51/index',
+             'tools/index'
+            ]
+
+/* Create a task for each page to update it if necessary */
+pages.each { page ->
+  task "$page" (dependsOn: ['menus_home','setupDocBook'], type: XMLCalabashTask) {
+    inputs.file "${page}.xml"
+    inputs.file "etc/menu.xml"
+    inputs.file "style/webpage.xpl"
+    inputs.file "style/webpage.xsl"
+    outputs.file "${page}.html"
+
+    input("source", "${page}.xml")
+    output("result", "${page}.html")
+    pipeline "style/webpage.xpl"
+  }
+}
+
+/* The task that updates all of the page headers */
+task menus_home(type: XMLCalabashTask) {
+  inputs.file "etc/menu.xml"
+  inputs.file "style/menus.xsl"
+  inputs.file "style/menus.xpl"
+  outputs.file "menus/PLACEHOLDER.html"
+
+  input("source", "etc/menu.xml")
+  output("result", "menus/PLACEHOLDER.html")
+  pipeline "style/menus.xpl"
+}
+
+/* Make the summary of the directory listings */
+task dirlistings(type: Exec) {
+  commandLine "bin/find-distrib"
+  standardOutput = new FileOutputStream(new File("etc/dirlistings.xml"))
+}
+
+/* Make the directory listings */
+task dirpages(dependsOn: ['menus_home', 'dirlistings'], type: XMLCalabashTask) {
+  inputs.file "etc/dirlistings.xml"
+  inputs.file "etc/menu.xml"
+  inputs.file "style/dirlistings.xsl"
+  inputs.file "style/dirlistings.xpl"
+  outputs.file "xml/5.0/index.html"
+
+  input("source", "etc/dirlistings.xml")
+  pipeline "style/dirlistings.xpl"
+}
+
+/* The default task. It just depends on all the necessary pages */
+task website(dependsOn: [dirpages,pages]) {
+  /* Nothing to see here */
+}
+task clean
+task clean.doFirst {
+  delete "$buildDir"
+  delete ".gradle"
+  delete "menus/PLACEHOLDER.html"
+  delete "etc/dirlistings.xml"
+
+  /* Delete index.html files generated in releases */
+  [ "docbook-ng", "xsd", "rng", "sgml", "xml", "release" ].each { rel ->
+    delete "${rel}/index.html"
+    new File(rel).eachDirRecurse { dir ->
+      dir.eachFileMatch("index.html") { file ->
+        delete "$file"
+      }
+    }
+  }
+
+  pages.each { page -> delete "${page}.html" }
+}

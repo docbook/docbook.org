@@ -1,1 +1,9 @@
-README
+* README
+
+This repository contains the sources for [[http://docbook.org][DocBook.org]].
+
+** Update process
+
+Changes to this repository are processed by Travis CI published to
+DocBook.org automagically.
+

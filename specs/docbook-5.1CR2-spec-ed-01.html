@@ -1,0 +1,339 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>The DocBook Schema V5.1</title><meta charset="utf-8" /><meta name="generator" content="DocBook XSL 2.0 Stylesheets V2.0.3" /><link rel="stylesheet" href="http://docs.oasis-open.org/templates/DocBook/spec-0.5/css/oasis-spec.css" type="text/css" /><script type="text/javascript" src="http://docbook.github.com/release/2.0.3/base/js/dbmodnizr.js"></script></head><body class="OASIS TC Working Draft"><article><div class="titlepage"><div><p class="logo"><a href="http://www.oasis-open.org/"><img src="http://docs.oasis-open.org/templates/DocBook/spec-0.5/OASISLogo.jpg" alt="OASIS" border="0" /></a></p><div><h1 class="title">The DocBook Schema V5.1</h1></div><div><h2>Technical Committee Editorial Draft Candidate Release 2 (CR2)</h2><h2><span class="pubdate">20 May 2014</span></h2></div><div><dl><dt><span class="loc-heading">Specification URIs:</span></dt></dl><dl><dt><span class="loc-heading">This Version:</span></dt><dd>…</dd></dl><dl><dt><span class="loc-heading">Previous Version:</span></dt><dd>None</dd></dl><dl><dt><span class="loc-heading">Latest Version:</span></dt><dd>…</dd></dl></div><div><dl><dt><span class="loc-heading">Technical Committee:</span></dt><dd><a href="http://www.oasis-open.org/committees/workgroup.php?wg_abbrev=docbook">OASIS DocBook Technical Committee</a></dd></dl></div><div><dl><dt><span class="contrib-heading">Chairs:</span></dt><dd><span class="othercredit"><span class="firstname">Norman</span> <span class="surname">Walsh</span></span></dd></dl><dl><dt><span class="editor-heading">Editor:</span></dt><dd><span class="editor"><span class="firstname">Norman</span> <span class="surname">Walsh</span></span></dd></dl></div><div><dl><dt><span class="status-heading">Declared XML Namespaces:</span></dt><dd><p><a href="http://docbook.org/ns/docbook" target="_top">http://docbook.org/ns/docbook</a></p></dd></dl></div><div><dl><dt><span class="abstract-heading">Abstract:</span></dt><dd><p>DocBook is a general purpose [<a href="#xml-rec"><span class="abbrev">XML</span></a>] schema
+particularly well suited to books and papers about computer hardware
+and software (though it is by no means limited to these applications).
+</p><p>The Version 5.1 release introduces assemblies for topic-oriented
+authoring. It also addresses a selection of bugs and feature requests.
+</p><p>The Technical Committee provides the DocBook 5.1 schema in other
+schema languages, including W3C XML Schema and an
+XML DTD, but the RELAX NG Schema is the normative schema.</p></dd></dl></div><div><dl><dt><span class="status-heading">Status:</span></dt><dd><p>This document was last revised or approved by the DocBook
+Technical Committee on the above date. The level of approval is also
+listed above. Check the current location noted above for possible
+later revisions of this document. This document is updated
+periodically on no particular schedule.</p><p>Technical Committee members should send comments on this
+specification to the Technical Committee's email list. Others should
+send comments to the Technical Committee by using the "Send A Comment"
+button on the Technical Committee's web page at <a href="http://www.oasis-open.org/committees/docbook" target="_top">http://www.oasis-open.org/committees/docbook</a>.</p><p>For information on whether any patents have been disclosed that may
+be essential to implementing this specification, and any offers of
+patent licensing terms, please refer to the Intellectual Property
+Rights section of the Technical Committee web page (<a href="http://www.oasis-open.org/committees/docbook/ipr.php" target="_top">http://www.oasis-open.org/committees/docbook/ipr.php</a>).</p><p>The non-normative errata page for this specification is located at
+<a href="http://www.oasis-open.org/committees/docbook" target="_top">http://www.oasis-open.org/committees/docbook</a>.</p></dd></dl></div></div></div><section id="s.intro" class="section"><div class="section-titlepage"><h3>1. Introduction</h3></div><p>DocBook is general purpose XML schema
+particularly well suited to books and papers about computer hardware
+and software (though it is by no means limited to these applications).
+</p><p>The <a href="http://www.oasis-open.org/committees/docbook">DocBook
+Technical Committee</a> maintains the DocBook schema. Starting
+with V5.0, DocBook is normatively available as a
+[<a href="#iso19757-2"><span class="abbrev">RELAX NG</span></a>] Schema (with some additional
+[<a href="#iso19757-3"><span class="abbrev">Schematron</span></a>] assertions).
+W3C XML Schema and Document Type
+Definition (DTD) versions are also available.
+</p><p>The Version 5.1 introduces assemblies for topic-oriented authoring
+and addresses a selection of bugs and feature requests.</p><p>The DocBook Technical Committee welcomes bug reports and
+requests for enhancement (RFEs) from the user community. The current list
+of outstanding requests is available through the
+<a href="http://sourceforge.net/">SourceForge</a>
+<a href="http://sourceforge.net/p/docbook/rfes/">tracker</a>
+interface. This is also the preferred mechanism for submitting new requests.
+</p><section id="s.terminology" class="section"><div class="section-titlepage"><h4>1.1. Terminology</h4></div><p>The key words <em class="glossterm">must</em>, <em class="glossterm">must
+not</em>, <em class="glossterm">required</em>,
+<em class="glossterm">shall</em>, <em class="glossterm">shall not</em>,
+<em class="glossterm">should</em>, <em class="glossterm">should not</em>,
+<em class="glossterm">recommended</em>, <em class="glossterm">may</em>, and
+<em class="glossterm">optional</em> in this OASIS TC Working Draft are to be
+interpreted as described in [<a href="#rfc2119"><span class="abbrev">RFC 2119</span></a>].</p></section><section id="normative.refs" class="section"><div class="section-titlepage"><h4>1.2. Normative References</h4></div><div class="bibliolist">
+<div id="xml-rec" class="bibliomixed"><p>[<span class="abbrev">XML</span>] Tim Bray,
+Jean Paoli, C. M. Sperberg-McQueen, <em class="foreignphrase">et. al.</em>,
+editors.
+<span class="citetitle"><cite><a href="http://www.w3.org/TR/REC-xml">Extensible Markup
+Language (XML) 1.0 (Fourth Edition)</a></cite></span>.
+World Wide Web Consortium, 16 August 2006.
+</p></div>
+<div id="xlink11" class="bibliomixed"><p>[<span class="abbrev">XLink11</span>] Steven DeRose, Eve Maler,
+David Orchard, Norman Walsh, editors.
+<span class="citetitle"><cite><a href="http://www.w3.org/TR/xlink11">XML Linking Language (XLink)
+Version 1.1</a></cite></span>.
+World Wide Web Consortium, 2005.
+</p></div>
+<div id="xmlschema-2" class="bibliomixed"><p>[<span class="abbrev">W3C XML Datatypes</span>] Paul V. Biron
+and Ashok Malhotra, editors.
+<span class="citetitle"><cite><a href="http://www.w3.org/TR/xmlschema-2/">XML Schema Part 2: Datatypes</a></cite></span>.
+World Wide Web Consortium, 2000.
+</p></div>
+<div id="iso19757-2" class="bibliomixed"><p>[<span class="abbrev">RELAX NG</span>] 
+<span class="citetitle"><cite><a href="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=52348">ISO/IEC 19757-2:2008 Information Technology—Document
+Schema Definition Language (DSDL)—Part 2: Regular-grammar-based
+validation—RELAX NG</a></cite></span>.
+</p></div>
+<div id="iso19757-3" class="bibliomixed"><p>[<span class="abbrev">Schematron</span>] 
+<span class="citetitle"><cite><a href="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=40833">ISO/IEC 19757-3:2006 Information Technology—Document
+Schema Definition Language (DSDL)—Part 3: Rule-based
+validation—Schematron</a></cite></span>.
+</p></div>
+<div id="rfc2119" class="bibliomixed"><p>[<span class="abbrev">RFC 2119</span>] IETF
+(Internet Engineering Task Force).
+<span class="citetitle"><cite><a href="http://www.ietf.org/rfc/rfc2119.txt">RFC 2119:
+Key words for use in RFCs to Indicate Requirement Levels</a></cite></span>.
+S. Bradner. 1997.</p></div>
+<div id="rfc3023" class="bibliomixed"><p>[<span class="abbrev">RFC 3023</span>] IETF
+(Internet Engineering Task Force).
+<span class="citetitle"><cite><a href="http://www.ietf.org/rfc/rfc3023.txt">RFC 3023: XML
+Media Types</a></cite></span>.
+M. Murata, S. St. Laurent, D. Kohn. 2001.
+</p></div>
+<div id="bib.docbooktdg5" class="bibliomixed"><p>[<span class="abbrev">DocBook 5: TDG</span>] 
+Norman Walsh.
+<span class="citetitle"><cite><a href="http://shop.oreilly.com/product/9780596805012.do">DocBook 5.0:
+The Definitive Guide</a>. O'Reilly Media. April 2010.</cite></span>
+</p></div>
+<div id="bib.docbooktdg51" class="bibliomixed"><p>[<span class="abbrev">DocBook 5.1: TDG</span>] 
+Norman Walsh.
+<span class="citetitle"><cite><a href="http://docbook.org/tdg51/en/html/">DocBook 5.1:
+The Definitive Guide</a>.</cite></span>
+</p></div>
+</div></section><section id="non-normative.refs" class="section"><div class="section-titlepage"><h4>1.3. Non-Normative References</h4></div><div class="bibliolist">
+<div id="iso8879" class="bibliomixed"><p>[<span class="abbrev">SGML</span>] JTC 1, SC 34.
+<span class="citetitle"><cite>ISO 8879:1986
+Information processing -- Text and office systems --
+Standard Generalized Markup Language (SGML)</cite></span>. 1986.
+</p></div>
+<div id="xmlschema-1" class="bibliomixed"><p>[<span class="abbrev">W3C XML Schema</span>] Henry S. Thompson,
+David Beech, Murray Maloney, et. al., editors.
+<span class="citetitle"><cite><a href="http://www.w3.org/TR/xmlschema-1/">XML Schema Part 1: Structures</a></cite></span>.
+World Wide Web Consortium, 2000.
+</p></div>
+</div></section></section><section id="s.docbook" class="section"><div class="section-titlepage"><h3>2. The DocBook RELAX NG Schema</h3></div><p>The DocBook
+<a href="http://docs.oasis-open.org/docbook/rng/">RELAX NG Schema</a> is distributed
+from the
+<a href="http://docs.oasis-open.org/docbook/">DocBook site</a> at
+<a href="http://www.oasis-open.org/">OASIS</a>.
+DocBook is also available from the mirror on
+<a href="http://docbook.org/">http://docbook.org/</a>.
+</p><section id="s.assembly" class="section"><div class="section-titlepage"><h4>2.1. Assemblies</h4></div><p>One modern school of thought on technical documentation stresses
+the development of independent units of documentation, often called
+topics, rather than a single narrative. Instead of writing something
+that DocBook users would easily recognize as a book consisting of a
+preface, several consecutive chapters, and a few appendixes, the
+author (or authors) write a set of discrete topics covering different aspects of
+the system as if they were wholly independent.</p><p>In a typical online presentation system, for example the world
+wide web or online help, each topic is a page that stands alone.
+Except, of course, that just as no man is an island, no topic is
+completely unrelated to the other topics that are available.</p><p>From any given topic, there may be topics of obviously related
+interest. The nature of the relationships may vary. Some topics are
+related by physical proximity (if you're interested in the ink
+cartridges in a printer, you may also be interested in the print
+head), others by their procedural nature (adding or replacing memory,
+adding or replacing a hard drive, or even changing the CPU are all
+topics that might logically follow a topic that describes how to open
+the computer case).</p><p>In a single narrative, it is the responsibility of the author to
+manage these relationships. He or she can reasonably assume that
+anyone reading chapter 4 has read chapters 1, 2, and 3. If the reader
+needs to be directed elsewhere, a cross reference can be used (for
+example, “for more information on paper jams, see Section 3.5,
+<em class="citetitle">The Paper Path</em>”).</p><p>In a topic-oriented system, authors are explicitly instructed to
+write independent units. No linear order can be assumed and many forms
+of explicit cross-reference are discouraged.</p><p>Documentation managers treat the library of available topics
+very much as programmers treat libraries of available functions. Just
+as any given program can pick and choose from the available libraries,
+the documentation for any given system can pick and choose from the
+available topics.</p><p>If you imagine a large documentation group managing the documentation
+for several related systems (different models of printer, different
+configurations of a software system, computers assembled from
+different components, etc.) it's easy to see the appeal of topic-oriented
+authoring.</p><p>In a successful deployment, you might find a library of say 1,000
+topics which, taken together, document five or six related systems, each of
+which uses 700-800 topics. Some topics are used in every system, many are
+used in several systems, and a small number of topics are unique to a
+specific system.</p><p>In order to make such a documentation platform functional, you
+need not only the individual topics, but also some sort of “map” or
+“assembly” file that describes which topics from the library are used,
+what relationships exist between them and, at least for print
+presentation, what linear order is to be imposed upon them.</p><p>DocBook uses an
+<a href="http://docbook.org/tdg51/en/html/ch06.html">assemblies</a>
+for this purpose.
+</p></section></section><section id="s.identifying" class="section"><div class="section-titlepage"><h3>3. Identifying DocBook Documents and Schemas</h3></div><p>Historically, when DocBook was defined by a DTD, DocBook
+documents could be identified by the presence of standard public
+and/or system identifiers in the document type declaration. RELAX NG,
+the normative schema language for DocBook V5.0, does not provide
+any equivalent mechanism.</p><p>For systems that can make use of public identifiers, e.g., systems
+where the informative DTD is being used, the following
+public identifier <em class="glossterm">should</em> be used for DocBook V5.1:
+“<code class="literal">-//OASIS//DTD DocBook V5.1//EN//XML</code>”.</p></section><section id="s.conformance" class="section"><div class="section-titlepage"><h3>4. Conformance</h3></div><p>This specification normatively defines DocBook V5.1 with a RELAX NG
+grammar and a set of Schematron assertions. A conformant DocBook V5.1 document
+<em class="glossterm">must</em> be valid according to both the grammar and the
+assertions.</p><p>The reference documentation describes additional constraints and
+processing expectations. A conformant DocBook V5.1 document
+<em class="glossterm">should</em> respect those constraints and anticipate
+those processing expectations.</p></section><section id="s.relnotes" class="section"><div class="section-titlepage"><h3>5. Release Notes</h3></div><p>See <a href="http://www.relaxng.org/">http://www.relaxng.org/</a> for a list of tools that
+can validate an XML document using RELAX NG. Note that not all products
+are capable of evaluating the Schematron assertions in the schema.</p></section><article id="a.mimetype" class="appendix"><header class="appendix-titlepage"><h2>A. The DocBook Media Type</h2></header><div class="toc"><p><b>Table of Contents</b></p><ul class="toc"><li><span><a href="#media-type-registration">1. Registration of MIME media type application/docbook+xml</a></span></li><li><span><a href="#fragid">2. Fragment Identifiers</a></span></li></ul></div><p>This appendix registers a new MIME media type,
+“<span class="quote"><code class="code">application/docbook+xml</code></span>”.</p><section id="media-type-registration" class="section"><div class="section-titlepage"><h3>1. Registration of MIME media type application/docbook+xml</h3></div><div class="variablelist"><dl><dt><span class="term">MIME media type name:</span></dt><dd><p><code class="code">application</code>
+</p></dd><dt><span class="term">MIME subtype name:</span></dt><dd><p><code class="code">docbook+xml</code>
+</p></dd><dt><span class="term">Required parameters:</span></dt><dd><p>None.
+</p></dd><dt><span class="term">Optional parameters:</span></dt><dd><div class="variablelist"><dl><dt><span class="term"><code class="code">charset</code></span></dt><dd><p>This parameter has identical semantics to the <code class="code">charset</code>
+parameter of the <code class="code">application/xml</code> media type as
+specified in [<a href="#rfc3023"><span class="abbrev">RFC 3023</span></a>] or its successors.
+</p></dd></dl></div></dd><dt><span class="term">Encoding considerations:</span></dt><dd><p>By virtue of DocBook XML content being XML, it has the same
+considerations when sent as “<span class="quote"><code class="code">application/docbook+xml</code></span>”
+as does XML. See [<a href="#rfc3023"><span class="abbrev">RFC 3023</span></a>], Section 3.2.
+</p></dd><dt><span class="term">Security considerations:</span></dt><dd><p>Several DocBook elements may refer to arbitrary URIs.
+In this case, consider the security issues of RFC 2396, section 7.
+</p></dd><dt><span class="term">Interoperability considerations:</span></dt><dd><p>None.</p></dd><dt><span class="term">Published specification:</span></dt><dd><p>This media type registration is for DocBook documents as described by
+[<a href="#bib.docbooktdg5"><span class="abbrev">DocBook 5: TDG</span></a>].</p></dd><dt><span class="term">Applications which use this media type:</span></dt><dd><p>There is no experimental, vendor specific, or personal tree
+predecessor to “<span class="quote"><code class="code">application/docbook+xml</code></span>”,
+reflecting the fact that no applications currently recognize it. This
+new type is being registered in order to allow for the
+deployment of DocBook on the World Wide Web as a first class XML
+application.
+</p></dd><dt><span class="term">Additional information:</span></dt><dd><div class="variablelist"><dl><dt><span class="term">Magic number(s):</span></dt><dd><p>There is no single initial octet sequence that is always present in
+DocBook documents.
+  </p></dd><dt><span class="term">File extension(s):</span></dt><dd><p>DocBook documents are most often identified with the extension
+“<span class="quote"><code class="filename">.xml</code></span>”.
+  </p></dd><dt><span class="term">Macintosh File Type Code(s):</span></dt><dd><p>TEXT</p></dd></dl></div></dd><dt><span class="term">Person &amp; email address to contact for further information:</span></dt><dd><p>Norman Walsh, <code class="email">&lt;<a href="mailto:ndw@nwalsh.com">ndw@nwalsh.com</a>&gt;</code>.</p></dd><dt><span class="term">Intended usage:</span></dt><dd><p>COMMON</p></dd><dt><span class="term">Author/Change controller:</span></dt><dd><p>The DocBook specification is a work product of the DocBook
+Technical Committee at OASIS.</p></dd></dl></div></section><section id="fragid" class="section"><div class="section-titlepage"><h3>2. Fragment Identifiers</h3></div><p>For documents labeled as
+“<span class="quote"><code class="code">application/docbook+xml</code></span>”,
+the fragment
+identifier notation is exactly that for
+“<span class="quote"><code class="code">application/xml</code></span>”,
+as specified in [<a href="#rfc3023"><span class="abbrev">RFC 3023</span></a>] or its successors.</p></section></article><article id="a.committee" class="appendix non-normative"><header class="appendix-titlepage"><h2>B. Acknowledgements</h2></header><p>The following individuals have participated in the creation of
+this specification and are gratefully acknowledged:
+<span class="simplelist"><span class="member">Steve Cogorno</span>, <span class="member">Gary Cornelius</span>, <span class="member">Adam Di Carlo</span>, <span class="member">Paul Grosso</span>, <span class="member">Dick Hamilton</span>, <span class="member">Nancy Harrison</span>, <span class="member">Scott Hudson</span>, <span class="member">Mark Johnson</span>, <span class="member">Gershon Joseph</span>, <span class="member">Jirka Kosek</span>, <span class="member">Larry Rowland</span>, <span class="member">Michael Smith</span>, <span class="member">Robert Stayton (Secretary)</span>, <span class="member">Norman Walsh, (Chair, Editor)</span></span>.</p></article><article id="changes" class="appendix"><header class="appendix-titlepage"><h2>C. Revision History</h2></header><div class="toc"><p><b>Table of Contents</b></p><ul class="toc"><li><span><a href="#s.51CR2">1. Changes in DocBook V5.1CR2</a></span></li><li><span><a href="#s.51CR1">2. Changes in DocBook V5.1CR1</a></span></li></ul></div><section id="s.51CR2" class="section"><div class="section-titlepage"><h3>1. Changes in DocBook V5.1CR2</h3></div><p>This release contains bug fixes and improvements over V5.1CR1.</p><div class="orderedlist"><ol style="list-style: decimal;"><li><p><a href="https://github.com/ndw/xmlcalabash1/commit/14ea533a07c9685e2c507479042df0e5bf169a50">Use</a>
+final ITS 2.0 schemas.
+</p></li><li><p><a href="https://github.com/ndw/xmlcalabash1/commit/a3122aeb97efde2bb04fdbbe5215bae05a36860b">Fixed</a>
+issue <a href="http://sourceforge.net/p/docbook/rfes/303/">#303</a>;
+moved multimediaparam into the *data elements and allow the
+*data elements to be repeated.
+</p></li><li><p><a href="https://github.com/ndw/xmlcalabash1/commit/1284f2f261d37e2700129ba64a59e58f1012956c">Added</a>
+RDFa Lite attributes to DocBook; removed the separate customization layer.
+</p></li><li><p><a href="https://github.com/ndw/xmlcalabash1/commit/f70156e567bf985af80e956f3b7cd3d6535af8c6">Added</a>
+source for catalog.xml.
+</p></li></ol></div></section><section id="s.51CR1" class="section"><div class="section-titlepage"><h3>2. Changes in DocBook V5.1CR1</h3></div><p>This release contains bug fixes and improvements over V5.0.</p><div class="orderedlist"><ol style="list-style: decimal;"><li><p><a href="https://github.com/ndw/xmlcalabash1/commit/076d7ceaea3412272ed33185ff67cef0dfaf3180">Updated</a>
+the <code class="filename">db4-upgrade.</code> script.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/de2dbfe423a05a1a046697fcf40fbd28405abb57">Added</a>
+an RDFa Lite extension schema.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/42ac286f99ec89482da84478d9b1ca77c1b68d02">Merged</a>
+ITS changes.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/e0bb855919c1b5ab28a63d5f248166c9340971d2">Fixed</a>
+issue <a href="http://sourceforge.net/p/docbook/rfes/300/">#300</a>;
+added a class to see/seealso to handle the 'under' case.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/386f1c3707bc44ca80e1a81dd1d79345bbb0173b">Fixed</a>
+issue <a href="http://sourceforge.net/p/docbook/rfes/277/">#277</a>;
+added a result element.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/72b28baf7d21504f2b105e21fab3506b8de98ece">Added</a>
+@its:version, improved better handling of extensibility.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/c991275a911401bd73dff788dfa7aee8c0e5f99b">Merged</a>
+pull request <a href="https://github.com/docbook/docbook/issues/5">#5</a> from kosek/master.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/e3c65d3276c5606533461c75f4bba5f03345b2c6">Updated</a>
+ITS to support ITS 2.0
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/e2ab596a3777a0175882b4cbb4dadda8b09d0dee">Fixed</a>
+issue <a href="http://sourceforge.net/p/docbook/rfes/298/">#298</a>;
+don't allow secondary without primary in indexterm.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/69384bb3828f45636f38734713834c1fff29a496">Fixed</a>
+issue <a href="http://sourceforge.net/p/docbook/rfes/295/">#295</a>;
+allow navigation components at the beginnings of sections.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/1f38d2cc8d65158846a249a0490ad6b78e162e94">Fixed</a>
+issue <a href="http://sourceforge.net/p/docbook/rfes/293/">#293</a>;
+removed spurious, duplicate 'other' value.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/1d251b18cc4d1ab6bc57b3a17640ae926497dafd">Attempt</a>
+to implement the whole proposal for accessability attributes in CALS tables.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/81b006d0b284243b34e84780fe2216189ad8cd73">Fixed</a>
+issue <a href="http://sourceforge.net/p/docbook/rfes/293/">#293</a>;
+allow admonitions in formal objects.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/2b8fe8eb96d9df61f202fb6f3e5f597b4e089e02">Fixed</a>:
+issue <a href="http://sourceforge.net/p/docbook/rfes/299/">#299</a>;
+allow articles in sets.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/309ea9044c0f069c2738640516430938a2441d88">Added</a>
+scope attribute to CALS tables.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/5399344787f1ecae6d697b887f7950f71d271352">Removed</a>
+format attribute from output element; the standard effectivity attribute
+outputformat can be used instead.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/ee052ecb4d62eb25680f6d69ed8f345440af4907">Added</a>
+outputformat as an effectivity attribute.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/9f07078d70f5952c5f34525503679aef86288df1">Added</a>:
+AltGr and Return to keycap class values.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/aee4f50c0fba9a2219da2f8438da36c8673b30d2">Renamed</a>
+fileref attribute to href in on resources in assemblies.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/c9033eb65392bd5024efc37ac52e6f24acba6f99">Fixed</a>
+bug in Schematron assertions about XLink, thanks to Hussein Shafie
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/a2205c346fa387306fe11cf6616e10af932191f2">Fixed</a>
+issue <a href="http://sourceforge.net/p/docbook/rfes/292/">#292</a>;
+added pgwide to informalexample and informalequation.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/8773ef08053d8c778773726f9a1a5aca4aff375e">Made</a>
+info on structure and module optional in assemblies.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/a59c5daa60c051512487aa1d95a4c8304b67c6b1">Implemented</a>
+recent <a href="http://lists.oasis-open.org/archives/docbook-tc/201203/msg00000.html">TC decisions</a> about assemblies.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/6545b2b67e585fad81f3022f5f829653cc1fe811">Adopted</a>
+the recent proposals to add attributes/parameters to audio and video objects.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/af4c60a838ccf3d7bf326e611c1a3e8c03321e2d">Fixed</a>
+reference to broken pattern; make sure linking attributes are on areas.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/2fcdd2c3aee330a342e4f3e5a351d32d1a145a99">Fixed</a>
+issue <a href="http://sourceforge.net/p/docbook/rfes/285/">#285</a>;
+made content optional in components and sections.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/ea90a2e42261e31a38bfb2dd69f4d5a74b3381e6">Allow</a>
+link in extendedlink, in preparation for arc and locator being removed in V6.0.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/c088625346b747aabe4a4e51e8935cd0d18ff55e">Added</a>
+extendedlink changes to the V6.0 future use comments.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/620e6fb2ee4a5bb849dcebcacea12b088a131904">Fixed</a>
+issue <a href="http://sourceforge.net/p/docbook/rfes/289/">#289</a>;
+allow multiple procedure elements in task.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/6bc92fabff8d3fdf257d9cd65c4416e852236183">Fixed</a>
+issue <a href="http://sourceforge.net/p/docbook/rfes/288/">#288</a>;
+allow tag elements to nest
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/c903e3a4b81ff59c64a676a11cb9709aff6df1dc">Reworked</a>
+XLink attributes to support simple/extended links.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/c63650edc760015acc5f132f799dd67ee5e8b621">Added</a>
+pattern for imagedata, SVG, and MathML content
+(so that it can be extended by the XInclude schema).
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/822f1fc03764507ded7b5146c7763b47ca095ed6">Added</a>
+XInclude to images and equations; allow foreign,
+namespace-qualified attributes on the xi:include element.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/4973bdd776a19e3e4cfad2c438021a4b1215d350">Fixed</a>
+issue <a href="http://sourceforge.net/p/docbook/rfes/276/">#276</a>;
+broaden content model of contrib.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/e1322fcaa699c5489971647f99466c47cf1c7b77">Fixed</a>
+issue <a href="http://sourceforge.net/p/docbook/rfes/282/">#282</a>;
+update HTML informaltable attributes.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/04cbb9826b910d3766b10cc65dd5c8e939a53fce">Fixed</a>
+issue <a href="http://sourceforge.net/p/docbook/rfes/283/">#283</a>;
+allow production to contain rhs+.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/f72cf4e70b30149e9eb6c89498688515f9d0205d">Fixed</a>
+issue <a href="http://sourceforge.net/p/docbook/rfes/284/">#284</a>;
+support ISTC as a biblioid class.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/a0efdfaa59500aad0da39e0825b8a7f4876da793">Attempt</a>
+to implement Larry's latest suggestions about assemblies.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/24781f8e94f377dbef3be3ddfcaeb4cd5f536e65">Fixed</a>
+issue <a href="http://sourceforge.net/p/docbook/rfes/281/">#281</a>;
+allow xi:include in set.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/bcebc1eadb64a9cb0768bf2d018835ab3690031d">Fixed</a>
+issue <a href="http://sourceforge.net/p/docbook/rfes/280/">#280</a>;
+added securitycontext and other to systemitem.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/09af2716c3e9517a021c3536e55eaf4822de4e0a">Fixed</a>
+issue <a href="http://sourceforge.net/p/docbook/rfes/279/">#279</a>;
+allow dedication in article.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/615ec1877479d29e1b1c1b2cb9380f3e7491100c">Changed</a>
+Schematron namespace to official ISO Schematron URI.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/4ed6c92defe4d2282bbcccf0fe9edd633651240d">Allow</a>
+topic in chapter and appendix (as an alternative to narrative content)
+per May 2010 TC meeting.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/c2970817b99a3086d85930d3143e083f56b0c3a7">Fixed</a>
+content model of book and part to make topic an alternative,
+not part of the component mixture.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/2373fbf21d8296f9fd6f721126ebbedb8d58c776">Allow</a>
+the other major components of an assembly to be top level elements (so
+they can be stored in separate files, for example).
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/8f6523739cdf5a653f86ad23aac90c6e0cac6e2a">Allow</a>
+an assembly without any structure elements.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/5e6357268623a7691eaed9b1ba3b6b5483fd9778">Tweak</a>
+assembly schemas.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/c39b57eb183a2799c862ab6bbc60a7250d2a296e">Allow</a>
+override element in assemblies.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/b11e466836c3625c4653aa395764e665f4dcfb9a">Generalized</a>
+toc/index to db.navigation.components in assembly structure and module
+for consistency
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/d6f16d8d142ba9ccb22550cce5e9cf7a0b5cfd90">Updated</a>:
+in assembly, if at least one resource is required, then at least one
+structure should be required as well.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/41cd664615d69b4bf4515ea76e8ddc7e8ceec287">Removed</a>
+description attribute from assemblies (no content in attributes!);
+added some refpurpose documentation for attributes and attribute values.
+</p></li><li><p><a href="https://github.com/docbook/docbook/commit/bc8e5eaee9ed5d57670508a401091348652a7d85">Added</a>
+refpurpose for type attribute.
+</p></li></ol></div></section></article></article></body></html>

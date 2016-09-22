@@ -1,0 +1,127 @@
+The DocBook Technical Committee met on Wednesday, 21 December 2005 at
+05:00p EST (02:00p PST, 22:00GMT, 22:00BST, 23:00CEST, 07:00JST+,
+03:30a India+).
+
+| Agenda
+
+Scribe: Norm
+
+| 1. Roll call
+
+  Present: Norm, Larry, Jirka, Paul, Scott, Mark, Dick, Nancy [:20]
+  Regrets: Bob, Steve
+
+  Need 5 out of 10 for quorum.
+
+  New prospective members: Kay Ethier, Gershon Joseph
+  No longer voting: Adam, Mark
+
+  Absent : Gary, Adam
+
+| 2. Accepting the minutes[1] of the previous meeting, including
+|    Norm's amendment [2].
+
+Accepted. For the record: 5 ayes and no nays.
+
+| 3. Next meeting: 18 January 2005
+
+Accepted. Regrets: Scott (tentatively), Jirka
+
+| 4. Review of the agenda.
+
+Accepted.
+
+| 5. Review of open action items
+| 
+|     a.  Norm to pursue the process of making DTD 4.5
+|         an OASIS standard.
+
+Now that we've approved the minutes, Norm will make the next steps happen.
+
+|     b.  The Java language has added java annotations, and Norm
+|         wondered how these would be marked up in a synopsis.
+|         The C# language also has annotations, Jirka pointed out.
+| 
+|         ACTION: Norm to investigate this issue some more.
+
+Continued.
+
+|     c.  Nancy to email info on XML address standard xNAL.
+
+Completed. [4]
+
+|     d.  Jirka to write up the customization process for
+|         MathML and SVG support in DocBook 5.
+
+Completed; working with Norm to get it published
+
+|     e.  Norm to write up a description of how authors
+|         should handle elements that have been dropped.
+
+Continued.
+
+|     f.  Norm to fix equation content model in 5.0.
+
+Completed.
+
+|     g.  Bob to post a list of default attributes in 4.x.
+
+Completed.
+
+| 6.  Default attribute values in DocBook 5.
+
+Continued until Bob is present.
+
+|     Other DocBook 5 issues.
+
+See issues below.
+
+Proposed: Publish DocBook 5.0b2 when these changes have been made.
+
+| 7.  DocBook and DITA interoperability session at 
+|     OASIS Symposium 2006, 9-12 May 2006, San Francisco. [3]
+
+DocBook and DITA TCs will demonstrate interoperability. More news when
+the schedule is published. Proposals were due yesterday and we did get
+them in on time, I believe.
+
+| 8. Review of Requests for Enhancement
+| 
+|     To browse a specific RFE, enter the URL (on one line):
+| 
+|       http://sourceforge.net/tracker/index.php?func=detail&;;
+|       group_id=21935&atid=384107&aid=XXXX
+| 
+|       1306027  Support for annotations in synopsis elements
+
+Continued.
+
+|       1358844  allow multiple imageobject in imageobjectco
+
+There's some concern about whether the coordinates could really be
+expected to be the same.
+
+Norm: They're CALSPair coordinates which are percentages so it might
+work.
+
+Larry: If the coordinates are really reusable, it doesn't look like a
+bad idea.
+
+ACTION: Norm to investigate the submitter's example.
+
+|       1380477  Allow area to inherit from areaset
+
+See norm's message:
+http://lists.oasis-open.org/archives/docbook/200512/msg00021.html
+
+Larry: seems reasonable; how do you handle an areaset with an id and one
+of its children with an id. The child could have seperate linking.
+
+Accepted.
+
+|--
+| [1] http://lists.oasis-open.org/archives/docbook-tc/200511/msg00022.html
+| [2] http://lists.oasis-open.org/archives/docbook-tc/200512/msg00011.html
+| [3] http://www.oasis-open.org/events/symposium_2006/
+  [4] http://lists.oasis-open.org/archives/docbook-tc/200512/msg00016.html
+  [5] http://lists.oasis-open.org/archives/docbook-tc/200512/msg00012.html

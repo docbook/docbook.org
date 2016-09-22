@@ -1,0 +1,111 @@
+DocBook Technical Committee Meeting Minutes: 22 June 2005
+=============================================================
+
+The DocBook Technical Committee met on Wednesday, 22 June 2005 at
+05:00p EDT (02:00p PDT, 21:00GMT, 22:00BST, 23:00CEST, 06:00JST+,
+02:30a India+) for 30 minutes.
+
+1. Roll call
+
+Present: Steve Cogorno, Gary Cornelius, Paul Grosso, Nancy Harrison,
+Scott Hudson, Mark Johnson, Jirka Kosek, Larry Rowland, Bob Stayton,
+Norman Walsh
+
+Absent: Adam Di Carlo, Dick Hamilton
+
+2. Accepted the minutes[1] of the previous meeting.
+
+3. Next meeting: 20 July 2005
+
+No regrets.
+The August meeting will be moved from the 17th to the 31st.
+
+4. Review of the agenda.
+
+No changes.
+
+5. Review of open action items
+
+   a. Norm to obtain OASIS namespace naming rules.
+      CONTINUE.
+
+   b. Norm to publish a version of the 5.0 spec before the next meeting.
+      CONTINUE.
+
+   c. Bob to request more information from the proposer of RFEs 1190435
+      1190436.
+      COMPLETED.
+
+   d. Norm to raise RFE 1194196 on the docbook mailing list
+      and ask the proposer to participate.
+      COMPLETED.
+
+6.  Update on new OASIS attendance rules.
+
+Still under discussion at OASIS, but no new rules have been
+proposed yet.  Continue this item.
+
+7.  DTD 4.5 status.
+
+Norm announced the availability of beta version 4.5b1 
+on 5 May.  Not much feedback from the mailing list yet.
+
+Responding to a request, Norm will add a comment to each element
+declaration in the DTD to indicate the element's purpose.
+
+The Committee adopted a resolution to publish Candidate Release 1
+of DTD version 4.5. The Committee intends to adopt the CR
+as a Committee Specification at the July meeting, and then
+start the process of making it a full OASIS specification.
+
+ACTION: Norm to publish 4.5 CR1.
+
+8.  Schema V5 development status.
+
+The development version is stable for now.  Norm is close
+to completing a specification. When the spec is available
+the Committee will formally begin discussing version 5,
+using the development version as a test bed.
+
+9. Review of Requests for Enhancement
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;;
+      group_id=21935&atid=384107&aid=XXXX
+
+      1190435 Add rule tag 
+      1190436 Add requirement tag 
+      1194196 <qandaset> and <qandadiv> 
+
+For all three of these RFEs, more information has been
+requested from the request originator.  So far, there
+has been no response, so these items will be continued.
+
+No new RFEs.
+
+The meeting was adjourned at 5:30 EDT.
+
+     The following RFEs are awaiting action items
+
+      413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+      431411 RFE 70: add generic linking capability (Norm)
+      565637 Associate non-inline image with link (Norm, generic linking)
+      623524 (Re)Consider "choicelist" markup 
+
+     The following RFEs are identified as V5.0 or later
+
+      1097183 Allow Task as a sibling of sections 
+      1084491 Add address, orgname, orgdiv to corpauthor, corpcredit, etc. 
+      974285 Check floatstyle/float attributes
+      958393 remove default class value from productname 
+      531851 Remove inline person name elements
+      532088 Remove RevHistory from qandaentry
+---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200505/msg00002.html
+
+Bob Stayton
+Sagehill Enterprises
+DocBook Consulting
+bobs@sagehill.net

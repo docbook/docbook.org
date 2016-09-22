@@ -1,0 +1,218 @@
+#!/usr/bin/perl -- # -*- Perl -*-
+
+use strict;
+use English;
+use Time::Local;
+
+my @roots = ('rng', 'sgml', 'xml', 'xsd', 'docbook-ng', 'release');
+
+print "<releases xmlns='http://nwalsh.com/ns/releases'>\n";
+foreach my $root (@roots) {
+    findDirs($root);
+}
+print "</releases>\n";
+
+# ============================================================
+
+sub findDirs {
+    my $dir = shift;
+    my $found = shift;
+    my $depth = shift || 0;
+    my $justfound = 0;
+    my $module = "";
+    my $type = "";
+    my @dirs = ();
+
+    return if $dir eq 'xml/simple/sdocbook';
+
+    if ($dir =~ /\/(\d(\.\d+)+([a-z]+[0-9]*)?)$/i) {
+	$found = $1;
+	$justfound = 1;
+	$type = $1 if $dir =~ /^([^\/]+)\/.*$/;
+	$module = $1 if $dir =~ /[^\/]+\/([^\/]+)\/.*$/;
+    }
+
+    if ($dir =~ /\/(5(\.\d+)+([a-z]+[0-9]*)?)\/([^\/]+)$/i) {
+	$found = $1;
+	$justfound = 1;
+	$type = $4;
+    }
+
+    if ($dir =~ /\/(publishers)\/(\d\.[\db]+)(\/(.*))?$/) {
+        $found = $2;
+        $justfound = 1;
+        $type = $4;
+        $module = $1;
+    }
+
+#    print STDERR "$dir\n";
+#    print STDERR "\tfound=$found\n";
+#    print STDERR "\tjustf=$justfound\n";
+#    print STDERR "\ttype =$type\n";
+#    print STDERR "\tmodul=$module\n";
+
+#    print STDERR "==> $dir\n" if $type eq '';
+#    print STDERR "  > $dir\n" if $type ne '';
+
+    my $custom = "";
+    my $layer = "";
+
+    $layer = "$dir/sdocbook-custom.dtd" if $module eq 'simple';
+    $layer = "$dir/dbebnf.dtd" if $module eq 'ebnf';
+    $layer = "$dir/dbforms.dtd" if $module eq 'htmlforms';
+    $layer = "$dir/dbmathml.dtd" if $module eq 'mathml';
+    $layer = "$dir/dbsvg.dtd" if $module eq 'svg';
+
+    if ($layer and open(F, $layer)) {
+	while (<F>) {
+	    last if $custom;
+	    $custom = $1
+		if /<!ENTITY % docbook PUBLIC \".* (DocBook.*V.*)\/\/EN/;
+	}
+	close (F);
+    }
+
+    my $name = $dir;
+    $name =~ s/^.*\///s;
+
+    # Can we find a date?
+    my $date = "";
+#    opendir (DIR, $dir);
+#    while (my $name = readdir(DIR)) {
+#	next if $name =~ /^\.\.?$/;
+#	next if ! -f "$dir/$name";
+#	if ($name =~ /\.zip$/) {
+#	    open (F, "git log --date=iso $dir/$name |");
+#	    while (<F>) {
+#		chop;
+#                if (/Date:\s+(\d.*?\d) (\d.*?\d) ([\+\-]?\d+)/) {
+#                    my $d = $1;
+#                    my $t = $2;
+#                    my $tz = $3;
+#                    $date = gmt($d, $t, $tz)
+#                }
+#	    }
+#	    close (F);
+#	    last;
+#	}
+#    }
+#    closedir (DIR);
+
+    print " " x $depth;
+    print "<dir dir='$name' path='$dir'";
+    print " date='$date'" if $date;
+    print " release='$found'" if $justfound;
+    print " type='$type'" if $type;
+    print " module='$module'" if $module;
+    print " custom='$custom'" if $custom;
+    print ">\n";
+
+    opendir (DIR, $dir);
+    while (my $name = readdir(DIR)) {
+	next if $name =~ /^\.\.?$/;
+	next if $name eq '.svn';
+	next if $name eq '.hg';
+
+	next if ! -d "$dir/$name";
+	push (@dirs, "$dir/$name");
+    }
+    closedir (DIR);
+
+    foreach my $dir (@dirs) {
+	findDirs($dir, $found, $depth+2);
+    }
+
+    opendir (DIR, $dir);
+    while (my $name = readdir(DIR)) {
+	next if $name =~ /^\.\.?$/;
+	next if $name eq 'index.html';
+	next if ! -f "$dir/$name";
+	print " " x $depth, "  <file>$name</file>\n";
+    }
+    closedir (DIR);
+
+    print " " x $depth, "</dir>\n";
+}
+
+sub isodate {
+    my $date = shift;
+
+    my %months = ('Jan'=>1,'Feb'=>2,'Mar'=>3,'Apr'=>4,'May'=>5,'Jun'=>6,
+		  'Jul'=>7,'Aug'=>8,'Sep'=>9,'Oct'=>10,'Nov'=>11,'Dec'=>12);
+
+    # Fri Aug 11 12:11:00 2006 -0400
+    # Sigh...
+    die if $date !~ /\S+ (\S+) (\d+) (\d+):(\d+):(\d+) (\d+) ([\+\-]?\d+)/;
+    my $mon = $months{$1} || die;
+    my $day = $2;
+    my $hour = $3;
+    my $min = $4;
+    my $sec = $5;
+    my $year = $6;
+    my $ofs = $7;
+    my $wday = undef;
+    my $yday = undef;
+    my $isdst = undef;
+
+    my $time = timegm($sec,$min,$hour,$day,$mon-1,$year-1900);
+
+    if ($ofs =~ /^-(\d\d)(\d\d)/) {
+	my $seconds = ($1*60 + $2) * 60;
+	$time += $seconds;
+    } elsif ($ofs =~ /^\+?(\d\d)(\d\d)/) {
+	my $seconds = ($1*60 + $2) * 60;
+	$time -= $seconds;
+    } else {
+	die;
+    }
+
+    ($sec,$min,$hour,$day,$mon,$year,$wday,$yday,$isdst) =
+	gmtime($time);
+
+    my $isodate = sprintf("%04d-%02d-%02dT%02d:%02d:%02dZ",
+			  $year+1900,$mon+1,$day,
+			  $hour,$min,$sec);
+
+    return $isodate;
+}
+
+sub gmt {
+    my $date = shift;
+    my $time = shift;
+    my $tz = shift;
+
+    $date =~ /^(\d\d\d\d)-(\d\d)-(\d\d)$/ || die "Invalid date: $date\n";
+    my $year = $1;
+    my $mon = $2;
+    my $day = $3;
+
+    $time =~ /^(\d\d):(\d\d):(\d\d)$/ || die "Invalid time: $time\n";
+    my $hour = $1;
+    my $min = $2;
+    my $sec = $3;
+
+    $time = timegm($sec,$min,$hour,$day,$mon-1,$year-1900);
+
+    $tz =~ /([\+\-]?)(\d\d)(\d\d)/ || die "Invalid timezone: $tz\n";
+    my $sign = $1;
+
+    my $ofs = ($2 * 60) + $3;
+
+    if ($sign eq '-') {
+        $time += $ofs * 60;
+    } else {
+        $time -= $ofs * 60;
+    }
+
+    my $wday;
+    my $yday;
+    my $isdst;
+    ($sec,$min,$hour,$day,$mon,$year,$wday,$yday,$isdst) =
+	gmtime($time);
+
+    my $isodate = sprintf("%04d-%02d-%02dT%02d:%02d:%02dZ",
+			  $year+1900,$mon+1,$day,
+			  $hour,$min,$sec);
+
+    return $isodate;
+}

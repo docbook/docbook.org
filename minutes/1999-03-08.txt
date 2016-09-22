@@ -1,0 +1,247 @@
+DocBook TC Minutes, 07/08 Mar 1999                                       
+
+Summary                                                                   
+                                                                          
+These notes summarize the DocBook Technical Committee (TC) meeting that   
+took place in San Jose on 07 and 08 Mar 1999 as part of the OASIS         
+meetings colocated with XTech'99.                                         
+                                                                          
+Agenda                                                                    
+                                                                          
+  o Discuss XML migration                                                 
+                                                                          
+  o Review of RFEs                                                        
+                                                                          
+  o Discuss 4.0 to make sure we've identified all the backwards           
+    incompatible changes we want for 5.0                                  
+                                                                          
+  o Better support for other computer languages (funcsynopsis and         
+    inlines)                                                              
+                                                                          
+  o Additional inlines for Linux community                                
+                                                                          
+  o Revisit use of %nav.class; in book components and sections            
+                                                                          
+  o Review ToC/LoT apparatus, should LoT become ListOfTitles? Should TOC  
+    persist?                                                              
+                                                                          
+  o Marginal graphics                                                     
+                                                                          
+  ---------------------------------------------------------------------   
+                                                                          
+DocBook and XML                                                           
+                                                                          
+The TC has decided that DocBook v5.0 will be XML compatible. We will not  
+rename DocBook and the only change made to the FPI will be the version    
+number (we will not add "XML" to the FPI).                                
+                                                                          
+We will add a README file that explains the hardest issues, such as tag   
+omission, inclusions, exclusions, etc.                                    
+                                                                          
+  ---------------------------------------------------------------------   
+                                                                          
+Disposition of RFEs                                                       
+                                                                          
+Accepted                                                                  
+                                                                          
++-----------------------------------------------------------------------+ 
+| RFE | Type | Ver |                      Summary                       | 
+|-----+------+-----+----------------------------------------------------| 
+| 17  | enh  | 3.2 | Add common Condition attribute for generic         | 
+|     |      |     | effectivity                                        | 
+|-----+------+-----+----------------------------------------------------| 
+| 37  | bug  | 5.0 | MsgText has far too broad a content model          | 
+|-----+------+-----+----------------------------------------------------| 
+| 38  | enh  | 3.2 | Review nav.class availability                      | 
+|-----+------+-----+----------------------------------------------------| 
+| 65  | bug  | 3.2 | Additional inlines for Linux documentation         | 
+|-----+------+-----+----------------------------------------------------| 
+| 80  | enh  | 5.0 | DocBook should use the exchange table model        | 
+|-----+------+-----+----------------------------------------------------| 
+| 81  | bug  | 3.2 | Sidebar should have a *Info element                | 
+|-----+------+-----+----------------------------------------------------| 
+| 83  | bug  | 5.0 | remove Title from bibliocomponent.mix              | 
+|-----+------+-----+----------------------------------------------------| 
+| 84  | bug  | 5.0 | Adjust content of CiteTitle                        | 
+|-----+------+-----+----------------------------------------------------| 
+| 85  | bug  | 3.2 | Add "Journal", "Series", "Set" and "Manuscript"    | 
+|     |      |     | values to Pubwork on CiteTitle                     | 
+|-----+------+-----+----------------------------------------------------| 
+| 87  | bug  | 3.2 | SGMLTag doesn't deal well with XML                 | 
+|-----+------+-----+----------------------------------------------------| 
+| 88  | enh  | 3.2 | Add PEs to INCLUDE/IGNORE dbcent and dbnotn en     | 
+|     |      |     | masse                                              | 
+|-----+------+-----+----------------------------------------------------| 
+| 89  | bug  | 5.0 | Remove default values for (some) attributes        | 
+|-----+------+-----+----------------------------------------------------| 
+| 91  | bug  | 5.0 | Remove %synop.class; from %para.char.mix;?         | 
+|-----+------+-----+----------------------------------------------------| 
+| 92  | enh  | 3.2 | Add CO to Synopsis?                                | 
+|-----+------+-----+----------------------------------------------------| 
+| 94  | bug  | 5.0 | ErrorName is confusing and probably wrong          | 
+|-----+------+-----+----------------------------------------------------| 
+| 97  | enh  | 5.0 | Simplify ToC content model                         | 
++-----------------------------------------------------------------------+ 
+                                                                          
+Closed                                                                    
+                                                                          
++-----------------------------------------------------------------------+ 
+| RFE | Type | Ver |                      Summary                       | 
+|-----+------+-----+----------------------------------------------------| 
+| 23  | enh  |     | [ replaced by RFE 95 ]                             | 
+|-----+------+-----+----------------------------------------------------| 
+| 44  | enh  |     | [ replaced by RFE 96 ]                             | 
+|-----+------+-----+----------------------------------------------------| 
+| 82  | bug  | 3.1 | add citetitle to bibliocomponent.mix               | 
+|-----+------+-----+----------------------------------------------------| 
+| 86  | enh  | 4.0 | [ replaced by RFE 96 ]                             | 
+|-----+------+-----+----------------------------------------------------| 
+| 90  | enh  | 3.2 | [ dup of RFE 38 ]                                  | 
++-----------------------------------------------------------------------+ 
+                                                                          
+Pending                                                                   
+                                                                          
++-----------------------------------------------------------------------+ 
+| RFE | Type | Ver |                      Summary                       | 
+|-----+------+-----+----------------------------------------------------| 
+| 95  | enh  | 5.0 | Extend FuncSynopsis for modern programming         | 
+|     |      |     | languages                                          | 
+|-----+------+-----+----------------------------------------------------| 
+| 96  | enh  | 4.0 | Extend inlines for modern programming languages    | 
++-----------------------------------------------------------------------+ 
+                                                                          
+Rejected                                                                  
+                                                                          
++-----------------------------------------------------------------------+ 
+| RFE | Type | Ver |                      Summary                       | 
+|-----+------+-----+----------------------------------------------------| 
+| 36  | enh  |     | Creating marginal graphics                         | 
++-----------------------------------------------------------------------+ 
+                                                                          
+  ---------------------------------------------------------------------   
+                                                                          
+Accepted Changes                                                          
+                                                                          
+As a result of the preceding RFEs, the changes described below will be    
+made.                                                                     
+                                                                          
+Version 3.2                                                               
+                                                                          
+  o A new effectivity attribute, Condition will be added to the common    
+    attributes. (17)                                                      
+                                                                          
+  o The elements in the %nav.class ; parameter entity will be allowed at  
+    the component and section levels. (38)                                
+                                                                          
+  o The content model of components and sections will be made loose, as   
+    the content model of book was made loose in 3.1. (38)                 
+                                                                          
+  o The class values devicefile and libraryfile will be added to          
+    Filename. (65)                                                        
+                                                                          
+  o The class values username, groupname , and library will be added to   
+    SystemItem . (65)                                                     
+                                                                          
+  o A SideBarInfo element will be added to SideBar. (81)                  
+                                                                          
+  o The values Journal, Series, Set, and Manuscript will be added to      
+    PubWork attribute of CiteTitle. (85)                                  
+                                                                          
+  o The attribute values xmlpi (for <?pitarget ?>) and emptytag (for      
+    <foo/>) will be added to the Class attribute of SgmlTag               
+                                                                          
+  o Parameter entities will be added to allow a customization layer to    
+    remove the dbcent.mod and dbnotn.mod modules. (88)                    
+                                                                          
+  o CO will be added to the content models of Synopsis and LiteralLayout. 
+    (92)                                                                  
+                                                                          
+Version 5.0                                                               
+                                                                          
+  o The content model of MsgText will be reduced to a mixture that is     
+    equivalent to the current % example.mix;. (37)                        
+                                                                          
+  o The full CALS table model will be replaced with the OASIS Exchange    
+    Table model. (80)                                                     
+                                                                          
+  o Title will be removed from % bibliocomponent.mix;. The title in a     
+    bibliographic entry is properly a citation and not a title, so the    
+    appropriate markup is CiteTitle . CiteTitle was added to %            
+    bibliocomponent.mix; in DocBook 3.1. (83)                             
+                                                                          
+  o The content model of CiteTitle will be reduced to %title.char.mix;.   
+    (84)                                                                  
+                                                                          
+  o The Class attribute on ProductName will be made #IMPLIED. (89)        
+                                                                          
+  o The Synopsis element will be removed from %para.char.mix;. (91)       
+                                                                          
+  o ErrorName will be defined to be the name for an ErrorCode (ENOENT).   
+    ErrorCode will be defined to be the alphanumeric code for the error   
+    (-2). ErrorType remains the classification of the error. ErrorText    
+    will be added to hold the text of an error message. (94)              
+                                                                          
+  ---------------------------------------------------------------------   
+                                                                          
+Pending Changes                                                           
+                                                                          
+As a result of the preceding RFEs, the changes described below will be    
+made as soon as the details can be worked out.                            
+                                                                          
+Version 5.0                                                               
+                                                                          
+  o The content model of ToC will be simplified. The semantic of a ToC is 
+    that it only contains entries for the elements that are its peers and 
+    descendants of its peers. The semantic of an empty ToC is that it is  
+    a location where an automatically generated table of contents is to   
+    appear. (97) Perhaps:                                                 
+                                                                          
+ <!ELEMENT ToC - O ((%bookcomponent.title.content;)?,                     
+         (%component.mix;)*, (ToCDiv* | ToCEntry*))                       
+         %ndxterm.exclusion;>                                             
+ <!ATTLIST ToC                                                            
+         %pagenum.attrib;                                                 
+         %common.attrib;                                                  
+         %toc.role.attrib;                                                
+         %local.toc.attrib;>                                              
+                                                                          
+ <!ELEMENT ToCDiv - O ((%sect.title.content;)?,((%tocdivcomponent.mix;)*, 
+         ToCEntry+))>                                                     
+ <!ATTLIST ToCDiv                                                         
+         %linkend.attrib; --to element that this entry represents--       
+         %pagenum.attrib;                                                 
+         %common.attrib;                                                  
+         %toc.role.attrib;                                                
+         %local.toc.attrib;>                                              
+                                                                          
+ <!ELEMENT ToCEntry - - ((%para.char.mix;)+,ToCEntry*)>                   
+ <!ATTLIST ToCEntry                                                       
+         %linkend.attrib; --to element that this entry represents--       
+         %pagenum.attrib;                                                 
+         %common.attrib;                                                  
+         %tocentry.role.attrib;                                           
+         %local.tocentry.attrib;>                                         
+                                                                          
+                                                                          
+  o FuncSynopsis will be extended to provide support for modern           
+    programming languages.                                                
+                                                                          
+  o Additional inlines will be added to provide support for modern        
+    programming languages.                                                
+                                                                          
+  ---------------------------------------------------------------------   
+                                                                          
+Action Items                                                              
+                                                                          
+  o Look at DOM WG's IDL model for ideas about extending FuncSynopsis.    
+                                                                          
+  o Formulate proposal for new inlines (RFE 96).                          
+                                                                          
+  o Find out more about IETM forms (RFE 93).                              
+                                                                          
+  o Fix documentation for KeyCap. (Norm)                                  
+                                                                          
+  o Cleanup *Info contents and add an RFE for it. (Terry)                 
+                                                                          
+  o Ask list about renaming ToC and LoT to TableOfContents and            
+    ListOfTitles, respectively.                                           

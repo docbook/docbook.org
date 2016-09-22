@@ -1,0 +1,178 @@
+DocBook Technical Committee Meeting Minues: 21 April 2004
+=============================================================
+
+The DocBook Technical Committee met on Wednesday, 21 April 2004 at
+05:00p EDT (02:00p PDT, 21:00GMT, 22:00BST, 23:00CEST, 06:00JST+,
+02:30a India+) for 90 minutes.
+
+1. Attendees:
+Steven Cogorno, Gary Cornelius, Adam Di Carlo, Paul Grosso,
+Dick Hamilton, Nancy Harrison, Scott Hudson
+Jirka Kosek, Larry Rowland, Robert Stayton,
+Norman Walsh 
+
+Regrets: Gary Cornelius, Mark Johnson
+
+Absent: Michael Smith. 
+
+2. Accepted the minutes[1] of the previous meeting
+
+3. Next meeting: 19 May 2004.
+   No conflicts.
+
+4. Review of the agenda.
+   No additions.
+
+5. Review of open action items
+
+    a. Mike to provide a better proposal for choicelist markup.
+       CONTINUE.
+
+    b. Mike to reconsider the annotation problem and post his thoughts.
+       CONTINUE.
+
+    c. Dick to examine the use of alt, possibly as part 
+       of the annotation discussion.
+       CONTINUE: Dick and Larry to collaborate on this item.
+
+    d. Norm to summarize the OASIS requirements document for
+       the document management system and the ensuing discussion.
+       CONTINUE.
+
+    e. Norm to complete the reference pages for the
+       new 4.3 elements on the docbook.org site.
+       CONTINUE.
+
+    f. Norm to publish these unofficial versions
+        - RelaxNG XML version
+        - RelaxNG compact syntax version
+        - W3C XML Schema
+        - flattened version of the XML DTD
+ COMPLETED all but the flattened version.
+
+    g. Norm to post a reference to the paper written
+       with Sebastian Rahtz regarding TEI.
+       CONTINUE.
+
+    h. Norm to produce a draft spec of 5.0.
+       CONTINUE.
+
+6. OASIS document management system. 
+
+   No news.
+
+7. DocBook V4.3 bug report: no catalog entry
+   for HTML table module.
+
+   This may trigger a version 4.3.1 DTD.
+   Wait for one month to see if more bug reports released.
+   
+8. Where is new biblioref element permitted?
+   %xref.char.class is smaller than %link.char.class
+
+   Not sure why the allowed locations of xref and link are different.
+
+   ACTION: Norm to investigate and propose where biblioref should
+   be permitted.
+
+9. Using textdata to generalize programlisting.
+
+   The TC does not want to add another element for this purpose.
+   They felt that programlisting and literallayout, possibly with
+   role attribute, sufficiently satisfy the need.  The TC will
+   reconsider the element names for 5.0 to make them more general.
+
+10. Request for canonical URIs for Docbook DTDs. [2]
+
+   Norm says using OASIS as the canonical URIs is the right answer,
+   but the current document management system and its non-stable
+   URIs make that difficult. Perhaps use docbook.org instead?
+
+   ACTION: Norm to ask Karl about creating stable OASIS URIs.
+
+11. Review of Requests for Enhancement
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;;
+      group_id=21935&atid=384107&aid=XXXX
+
+543064 JavaObject tag
+and 675024 form, script, applet support
+
+  These two items were considered together. The TC felt adding 
+  DocBook elements to support HTML-only constructs is not a good
+  design. They suggested using processing instructions or
+  local extensions.  REJECTED.
+
+698026 cannot embed <superscript> within <guibutton>
+
+  Accepted in spirit, but not sure if super/subscript should
+  be added to the smallcptr.class.mix parameter entity.
+  ACTION: Norm to suggest how to implement this.
+
+702185 add procedure as child of para
+
+  Since para is a child of step, this request would end up
+  permitting nested procedures, which should be handled
+  with substeps, Also, the TC questions the original decision
+  to permit lists in para at all, so did not feel compelled
+  to add another even more complicated list structure.
+  REJECTED.
+  
+711815 Tagging for subtler breaks or "pauses" within a chapter
+
+  The TC did not see a sufficient need for this, and
+  suggested using a bridgehead or processing instruction instead.
+  REJECTED.
+
+742373 Splitting Segmented List
+
+  The TC felt this was a very specialized request, and would
+  require significant changes to support it.  The TC suggested
+  using text entities, XIncludes, or even a variablelist to
+  handle this need.  REJECTED.
+
+752632 Color control of CALS table element
+
+  This is a duplicate of RFE 685511, which was rejected in October 2003.
+  The TC suggested using a processing instruction or the HTML
+  table model, available in version 4.3 of the DTD. REJECTED.
+
+828720 'spacing' attr. for 'variablelist'
+
+  ACCEPTED.  Not sure when it will be released.
+  
+933955 Add subscript and superscript to Simplified.
+
+  ACCEPTED.
+
+541444 caption in mediaobjectco (Dick)
+  
+  ACTION: Dick to determine if this item is closed.
+
+562343 <packagename> element (Mark)
+
+  ACCEPTED, created <package> at the Feb 2004 meeting.
+
+613293 Generalize programlisting (Steve)
+
+  See agenda item #9 above.  REJECTED
+ 
+The following RFEs are awaiting action items
+
+413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+431411 RFE 70: add generic linking capability (Norm)
+522552 Add title attribute to <ulink> element (Mike, annotations)
+565637 Associate non-inline image with link (Norm, generic linking)
+574880 Add annotation element (Mike)
+623524 (Re)Consider "choicelist" markup (Mike)
+
+The following RFEs are identified as V6.0 or later
+
+531851 Remove inline person name elements
+532088 Remove RevHistory from qandaentry
+- ---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200403/msg00010.html
+[2] http://lists.oasis-open.org/archives/docbook/200404/msg00032.html

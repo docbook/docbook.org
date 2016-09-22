@@ -1,0 +1,310 @@
+| DocBook Technical Committee Meeting Minutes: 31 Jan 2003
+| ========================================================
+
+[Rescheduled from 21 Jan 2003]
+
+| The DocBook Technical Committee will met on Friday, 31 January 2003
+| at 01:00p EST (10:00a PST, 18:00GMT, 19:00CET, 03:00JST+) 
+| for 90 minutes.
+
+| Agenda
+|
+| 1. Roll call
+
+Dennis Evans and Sabine Ocker have resigned.
+
+Present:
+
+Steve Cogorno, Sun Microsystems
+Dick Hamilton, HP
+Nancy Harrison, Rational Software [-14:00]
+Scott Hudson, Sun Microsystems (Prospective)
+Bob Stayton, Individual Member
+Norman Walsh, Sun Microsystems, Chair
+Mark Johnson, Individual Member
+
+Regrets:
+
+Paul Grosso, Arbortext
+
+Absent:
+
+Michael Smith, Individual Member
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+Charter update.
+
+| 4. Review of open action items {5 min}
+|
+|    a. Norm to follow-up on RFE 562343: &lt;packagename&gt; element
+
+Continued.
+
+|    b. Norm to write better documentation for option/optional
+
+Continued.
+
+|    c. Mike to consider possible attribute values on literallayout for
+|       addressing RFE 613293 (generalize programlisting)
+
+Continued.
+
+|    d. Norm to review using Trang to generate DTDs and W3C XML Schemas
+
+Completed.
+
+|    e. Norm to make sure discussion of Task/Topic is on the agenda next month
+|       Completed
+|    f. Paul to summarize the differences between the HTML and CALS table models
+|       Completed[2]
+|    g. Norm to put HTML and CALS tables on the agenda again next month
+|       Completed
+|    h. Norm to post simplified ToC proposal to the list again
+
+Continued.
+
+|    i. Norm to check on the future-use status of simplified ToCs.
+|       Completed (it's a V6.0 change)
+
+Charter update: The TC process requires us to notify Karl Best if we
+amend our charter. We failed to do so in October, so Karl has just now
+begun reviewing it. At the OASIS board level there is some discussion
+about what a TC must or may say about IPR in its charter. We may be
+asked to revise our charter text at some point.
+
+| 5. Task/Topic
+
+Bob: My take was to leave procedure pretty much as is and then to
+possibly construct something larger to handle tasks/topics.
+
+Norm: It would be our first sort-of floating container. Like sidebar
+but more general.
+
+Steve: We look at this like a very special kind of section. The Task
+element can appear anywhere that a Sect2 or Sect3 can appear. We don't
+allow them at Sect4 or at the top of a chapter. They behave like any
+other kind of sections.
+
+Nancy: So they can't float inside para text. They have to be siblings
+to other sections.
+
+Steve: That's right. It's not like a figure or table, it works like a
+section.
+
+Nancy: So you could have a Sect3 and then a Task and then another Sect3.
+
+Steve: An attribute on section doesn't work because the tasks have
+very specific structures.
+
+Norm: So this is really a question of content models. You want tasks
+to behave like sections, but have a very different (or constrained)
+content model.
+
+Bob: How do we make sure we get something that's more flexible for the
+general needs of all DocBook users.
+
+Steve explains the contents of the Sun Task element. He will publish
+content models to the list. The full model includes five new elements.
+
+Nancy: I wonder if the really salient piece here is that this element
+must have as a child a procedure.
+
+Steve: Yes, it must absolutely.
+
+Nancy: If we were approaching it as a task topic, we might make this
+the requirement.
+
+Norm: This relates to Bob's earlier question of making this broad
+enough for the general user community.
+
+Norm: Should we try to write a formal requirements document to get a
+clearer picture of what we're trying to do.
+
+Dick: We have found that procedure sometimes need more stuff around it.
+
+Nancy: It would also be helpful to get some sort of requirements from
+people who have a different perspective.
+
+ACTION: Steve to provide a first draft of a requirements document.
+
+| 6. CALS+HTML Table Model
+
+Bob: Cutting and pasting of HTML tables is going to not be very
+useful. (See his pointer to the number of tables that contained markup
+on the docbook-tc list.) I think combining the models complicates the
+model and doesn't offer much advantage.
+
+Dick, Steve: agreement
+
+Norm: If we were starting over, I don't think there'd be much support for
+CALS over HTML.
+
+Bob: And using HTML tables would encourage people to think they could
+use other HTML markup.
+
+Norm: There seems to be no support for this proposal. Out of
+consideration for Paul who has been the strongest proponent, I think
+I'd like to leave it on the agenda for another month.
+
+| 9. Review of Requests for Enhancement
+|
+|    To browse a specific RFE, enter the URL (on one line):
+|
+|           http://sourceforge.net/tracker/index.php?func=detail&amp;amp;
+|           group_id=21935&amp;amp;atid=384107&amp;amp;aid=XXXX
+|
+|    where XXXX is the RFE number.
+|
+|     623524 (Re)Consider &quot;choicelist&quot; markup
+
+Wait for Mike to explain his motivation.
+
+|     638456 RFE add a &lt;translator&gt; tag
+
+Many folks rely on companies and not individuals.
+
+Steve: I wonder if we can have a compromise by suggesting some role values.
+
+Norm: We could use a class value.
+
+Nancy: I'm usually interested more in being able to track who did the
+translation. Our docs get translated by different groups. It would
+help me if I could know who did it.
+
+Norm: So let's add a class attribute on othercredit for identifying
+the nature of the credit.
+
+Bob: That doesn't help with translator companies.
+
+Norm: The DocBook solution would be to add a 'corpcredit' element.
+
+Bob: In managing translations, we use English as our primary source
+and then somewhere we'd like to manage who translated into each
+language.
+
+Norm: Add class attribute to othercredit. Initial suggestion:
+graphicdesigner, productioneditor, copyeditor, technicaleditor,
+translator?
+
+ACTION: Norm to post to list for other suggestions.
+
+Norm: Add corpcredit element to support crediting organizations?
+
+Bob: I think so because that's often the only information you have.
+
+Norm: Corpcredit would have class attribute with the same values as
+othercredit.
+
+ACTION: Norm to post proposal to the list.
+
+|     655526 funcprototype enhancement
+
+ACTION: Norm to post proposal to the list.
+
+|     660044 Controlling line numbering in verbatims
+
+Bob/Steve: What people really want is the ability to cross reference
+to line numbers.
+
+Norm: So you can use programlistingco or co in programlisting.
+
+Bob: Line numbers aren't really useful if you can't cross reference to
+them.
+
+[Nancy drops off]
+
+Some general agreement that this is a reasonable request given that we
+allow line numbers.
+
+Norm: We considering adding 'startinglinenumber' with a decimal number.
+
+Norm: We considering adding 'continuation' either (continues|restarts).
+
+ACTION: Norm to propose these to the list.
+
+|     671746 Addition of ulink or similar to author
+
+Norm: propose that we reject this citing Bob's followup on the tracker item.
+
+Accepted.
+
+|     570068 Addendum: A handful of other suggested values that Elliotte Rusty Harold
+|            posted in a message to docbook-apps.
+|
+|            CDROM
+|            DVD
+|            WikiWikiWeb
+|            gopher
+|            BBS
+
+Proposal: Accept these additional values in all lowercase:
+
+  cdrom
+  dvd
+  wiki
+  gopher
+  bbs
+
+Accepted.
+
+|     571998: Addendum: discuss &quot;default&quot;
+
+Proposal: leave closed. Address defaults in specific circumstances if they arise.
+
+Accepted.
+
+|     615473: Addendum: what about float and floatstyle on other objects?
+
+Nevermind. Can't recall what I wanted to discuss.
+
+ACTION: Norm to put pointers to the annotation proposals back on the
+agenda for next month.
+
+ADJOURNED.
+
+|    The following RFEs have been moved to the bottom of this agenda in order
+|    to make sure that all RFEs get fairly discussed.
+|
+|     413389 Enhance METHODNAME and VARNAME
+|     436067 splitting tech.char.class
+|     473365 Allow optional in funcprototype
+|     482818 Simplify ToC content model
+|     514435 Allow reference within refentry
+|     541444 caption in mediaobjectco
+|     558443 include storage info in metadata
+|     562343 &lt;packagename&gt; element
+|     564776 process/service/daemon/server markup
+|     565637 Associate non-inline image with link
+|     565716 URL and URN markup
+|     565905 Add xrefstyle attribute
+|     570068 Online values for pubwork
+|     571996 Add 'namespace' inline element
+|     571998 Add 'default' inline element
+|     573419 Add bidirectional text overrides
+|     573812 Allow blockinfo on blockquote
+|     574880 Add annotation element
+|     582705 Namespace convention for MathML Module
+|     582822 VARARG and FUNCDEF together
+|     613293 Generalize programlisting
+|
+|    The following RFEs are awaiting action items
+|
+|     431411 RFE 70: add generic linking capability
+|     472229 Allow HTML tables
+|     522552 Add title attribute to &lt;ulink&gt; element
+|     609061 Add new Step sibling element Alternative
+|     621564 New element Task and children
+|     640090 Add 'Steps' element for grouping steps
+|
+|    The following RFEs are identified as V6.0 or later
+|
+|     531851 Remove inline person name elements
+|     532088 Remove RevHistory from qandaentry
+|
+| [1] http://lists.oasis-open.org/archives/docbook-tc/200212/msg00002.html
+| [2] http://lists.oasis-open.org/archives/docbook-tc/200212/msg00003.html

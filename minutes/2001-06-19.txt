@@ -1,0 +1,252 @@
+DocBook Technical Committee Meeting Minutes: 19 Jun 2001
+========================================================
+
+Meeting called to order at 13:04 by the chair.
+
+| Agenda
+| ------
+|
+| 1. Roll call
+
+Norman Walsh, Chair
+Sabine Ocker
+Michael Sabrio
+Michael Smith
+
+Regrets:
+
+Dennis Evans
+
+Having failed to attend three consecutive meetings,
+Sunthar Visuvalingam's membership in the TC lapses.
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+Accepted.
+
+| 4. Review of open action items
+|
+|    a. Norm to clarify status of EBNF, MathML, and HTML Forms modules
+
+Completed[2].
+
+|    b. Norm to add class='newsgroup' to systemitem
+
+Completed.
+
+|    c. Norm to write concrete proposal for &lt;co&gt; in inlines that can
+|       occur in screen
+
+Completed[3].
+
+Moved to accept the proposal.
+
+Accepted without objection.
+
+Action: Norm to implement the proposal.
+
+|    d. Norm to write a concrete proposal for linking in DocBook 5.0
+
+Continued, the XLink WG isn't finished yet.
+
+|    e. Norm to move open RFEs to SourceForge
+
+Completed[4].
+
+|    f. Norm to publish closed RFEs as a static page for historical reference
+
+Continued.
+
+|    g. M. Sabrio to investigate what elements his group would like
+|       to put metadata on
+
+Completed.
+
+Action: M. Sabrio to post to the docbook list.
+
+Attibutes vs. elements?
+
+Norm suggests that elements are probably better since they would
+potentially allow for multiple namespaces (Dublin Core, OMF, etc.)
+They also allow for richer content.
+
+|    h. Norm to propose new "name and address" markup
+
+Continued.
+
+|    i. Dennis to ask local help author for information on help topic
+|       authoring
+
+Transferred to Sabine. See item 6, below.
+
+|    j. Norm to add section.class parameter entity
+
+Completed.
+
+|    k. Norm to post note about expanding the content model of filename
+|       and certain other inlines to the list.
+
+Completed[5].
+
+|    l. Norm to publish a version of the Simplified DocBook DTD as an
+|       official test release.
+
+Completed[2]
+
+| 5. Expanding the content model of filename and certain other inlines
+|
+|    Action, Command, Database, Filename, Hardware, Interface, KeyCap,
+|    Literal, Option, Parameter, Property, and SystemItem.
+
+Moved to accept the proposal.
+
+Accepted without objection.
+
+Action: Norm to implement the proposal.
+
+| 6. Adapting DocBook for more topic-oriented manuals
+
+Action: Sabine to continue Dennis's action item and write an initial
+        proposal.
+
+| 7. Content model issues relating to lists and procedures.
+
+Action: Sabine to post a summary of continuing discussions.
+
+| 8. Any other business
+
+None.
+
+| 9. Review of Requests for Enhancement (RFEs)
+|
+|    412476 Class on ProductName should be #IMPLIED
+
+Proposed: make it #IMPLIED in V6.0
+
+Accepted without objection.
+
+Action: Norm to implement the proposal
+
+|    413389 Enhance METHODNAME and VARNAME
+
+This is generic linking again, leave pending.
+
+|    416478 FigureGroup tag
+
+Rejected.
+
+It seems that the author could get the desired result in several other
+ways: by placing several images in a single &lt;figure&gt; wrapper, by using
+another container to hold them, or by using role attributes. This
+appears to be a rendering issue.
+
+|    417671 add section element to refentry
+
+Accepted.
+
+Action: Norm to implement.
+
+|    423598 Content models that allow BridgeHead
+
+Accepted.
+
+Action: Norm to implement.
+
+|    424577 Make refsection parallel to section
+
+Duplicate of 417671.
+
+|    425730 Create an SVG module
+
+Accepted.
+
+Action: Norm to implement.
+
+|    426382 Allow SimpleSect inside Section
+
+Accepted.
+
+Action: Norm to implement.
+
+|    431411 RFE 70: add generic linking capability
+
+Pending.
+
+|    431412 RFE 113: proc. exp. of RevHistory order
+
+Closed. Note that there is no order.
+
+Action: Norm to update the documentation.
+
+|    431413 RFE 121: add markup for signals
+
+Proposed: suggest adding two new class values, 'Event' and
+'EventHandler' to SystemItem.
+
+Accepted without objection.
+
+Action: Norm to contact the original author and see if this satisfies
+the use cases.
+
+|    431415 RFE 124: add markup for host identifiers
+
+Previously accepted:
+
+  We already have a class on systemitem for systename. We suggest that
+  these are further useful class values for systemitem but do not
+  warrant a unique element name. We'll add the following class
+  attributes to systemitem: domainname, fqdomainname, ipaddress,
+  netmask, etheraddress.  We consider hostname already covered by
+  systemname.
+
+Action: Norm to implement.
+
+|    431417 RFE 126: allow SimpleSect in Section
+
+Duplicate of 426382.
+
+|    431418 RFE 128: typing and linking in funcdef
+
+Previously accepted:
+
+  We'll add type to the content model of funcdef and paramdef to allow
+  authors to specify that types are in fact types. Linking will be
+  handled by XLink in some future version.
+
+Action: Norm to implement.
+
+|    431419 RFE 130: markup protocol, FS type, part.
+
+Previously accepted:
+
+  Protocol is another example of a case where we need to consider the
+  design more carefully (what other things are like protocols); in the
+  meantime use literal, phrase, or some other markup with a role
+  attribute.
+
+  We'll add 'filesystem' to the class attribute of systemitem.
+
+  We'll add 'partition' to the class attribute of filename.
+
+Action: Norm to implement.
+
+|    ?????? Add language attribute to fieldsynopsis et al.
+
+Proposal: Add language attribute to fieldsynopsis,
+          constructorsynopsis, destructorsynopsis, and methodsynopsis
+
+Accepted without objection.
+
+Action: Norm to implement.
+
+Meeting adjourned at 13:59 by the chair.
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200105/msg00009.html
+[2] http://www.oasis-open.org/docbook/
+[3] http://lists.oasis-open.org/archives/docbook/200106/msg00059.html
+[4] http://sourceforge.net/tracker/?atid=384107&amp;group_id=21935&amp;func=browse
+[5] http://lists.oasis-open.org/archives/docbook/200106/msg00049.html

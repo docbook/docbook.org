@@ -1,0 +1,57 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='db5x'>
+<info>
+<title>DocBook V5.<replaceable>x</replaceable></title>
+</info>
+
+<para>The version 5.0 release is a complete rewrite of DocBook in
+RELAX NG. The intent of this rewrite is to produce a schema that is
+true to the spirit of DocBook while simultaneously removing
+inconsistencies that have arisen as a natural consequence of DocBook's
+long, slow evolution. The Technical Committee has taken this
+opportunity to simplify a number of content models and tighten
+constraints where RELAX NG makes that possible.
+</para>
+
+<para>The Technical Committee provides the DocBook 5.0 schema in other
+schema languages, including W3C XML Schema and an
+XML DTD, but the RELAX NG Schema is the normative schema.</para>
+
+<section>
+<title>DocBook V5.1</title>
+
+<para>DocBook V5.1 is under development. There have been no official releases.</para>
+
+<?schemas release="^5\.1.*"?>
+</section>
+
+<section>
+<title>DocBook V5.0</title>
+
+<para>DocBook 5.0 is an OASIS standard.</para>
+
+<?schemas release="^5\.0.*"?>
+</section>
+
+<section>
+<title>DocBook V5.x XML Schema</title>
+
+<para>The XML Schema version of DocBook V5.x is now maintained
+separately; it is no longer mechanically generated from the RELAX NG
+version.</para>
+
+<para>This is an attempt to craft an XML Schema versions of DocBook
+V5.0 that is reasonably useful. It's impossible
+to accurately capture all of the grammatical constraints of DocBook in
+XML Schema, but these versions (should) accept all valid documents.
+They may also accept some invalid ones; always use the normative RELAX
+NG grammars to be sure.</para>
+<para>These initial releases are experimental, they have no normative
+standing.</para>
+
+<?schemas release="^5.*" module="xsd"?>
+</section>
+
+</article>

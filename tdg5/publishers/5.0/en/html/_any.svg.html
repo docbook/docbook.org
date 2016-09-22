@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.3.6), see www.w3.org" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>svg:*</title>
+<link rel="stylesheet" type="text/css" href="css/defguide.css" />
+<link rel="icon" href="figs/web/publishers-icon.png" type="image/png" />
+<script type="text/javascript" src="js/refentry.js">
+</script>
+</head>
+<body>
+<div class="navheader">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" summary="Navigation table">
+<tr>
+<td align="left">&#160;<a title="DocBook Publishers: The Definitive Guide" href="docbook.html"><img src="figs/web/nav/home-publishers.png" alt="Home" border="0" /></a>&#160;<a href="_any.mml.html" title="mml:*"><img src="figs/web/nav/prev.png" alt="Prev" border="0" /></a>&#160;<a title="DocBook Element Reference" href="ref-elements.html"><img src="figs/web/nav/up.png" alt="Up" border="0" /></a>&#160;<a title="Part&#160; III .&#160; Appendixes" href="part3.html"><img src="figs/web/nav/next.png" alt="Next"
+border="0" /></a></td>
+<td align="right"><i>DocBook Publishers: The Definitive Guide</i> (Version <a href="ch00-online.html">1.0.0 for DocBook Publishers V1.0</a>)</td>
+</tr>
+</table>
+</div>
+<div class="refentry" id="element.db._any.svg"><a class="indexterm" name="element.db._any.svg.1" id="element.db._any.svg.1"></a>
+<div class="refnamediv">
+<h2>svg:*</h2>
+<p><span class="refname">svg:*</span>&#160;—&#160;Any element from the SVG namespace.</p>
+</div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<div class="element-synopsis">
+<ul>
+<li>Any element from the http://www.w3.org/2000/svg namespace.</li>
+</ul>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>Attributes</h3>
+</div>
+<p>Attributes:</p>
+<div class="element-synopsis">
+<ul>
+<li><em>Zero or more:</em>
+<div class="element-synopsis">
+<ul>
+<li><em>Any attribute</em></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>Description</h3>
+</div>
+<p>This position in a content model can be occupied by any element in the SVG namespace.</p>
+<p>The <a href="http://www.w3.org/TR/SVG/">Scalable Vector Graphics</a> Recommendation from the W3C defines the features and syntax for SVG, a language for describing <span class="keep-together">two-</span><span class="keep-together">dimensional</span> vector and mixed vector/raster graphics in <span class="acronym">XML</span>.</p>
+<p>A complete description of SVG is outside the scope of this reference.</p>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Attributes</h4>
+</div>
+<div class="variablelist">
+<dl>
+<dt id="element.db._any.svg.6.5.2.1.1" class="attname">any attribute</dt>
+<dd>
+<p>Any attribute, including any attribute in any namespace.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Parents</h4>
+</div>
+<p>These elements contain <a href="_any.svg.html"><tt class="tag-element">svg:*</tt></a>: <span class="simplelist"><span class="member"><a href="imagedata.svg.html"><tt class="tag-element">imagedata</tt></a>&#160;<span class="pattern">(db.imagedata.svg)</span></span></span>.</p>
+</div>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>Examples</h3>
+</div>
+<div class="programlisting">
+<pre>
+<span class="linenumber">  1</span><span class="linenumber-separator"> </span>&lt;article xmlns='http://docbook.org/ns/docbook'
+<span class="linenumber">  2</span><span class="linenumber-separator"> </span>   version="5.0"&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;title&gt;Example svg-svg&lt;/title&gt;
+<span class="linenumber">  4</span><span class="linenumber-separator"> </span>
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;mediaobject&gt;
+<span class="linenumber">  6</span><span class="linenumber-separator"> </span>  &lt;imageobject&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>    &lt;imagedata&gt;
+<span class="linenumber">  8</span><span class="linenumber-separator"> </span>      &lt;svg xmlns="http://www.w3.org/2000/svg"
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>     width="100" height="100" version="1.1"&gt;
+<span class="linenumber"> 10</span><span class="linenumber-separator"> </span>  &lt;rect x="20" y="20" width="80" height="80"
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>        style="fill:blue; stroke:green; stroke-width: 2;
+<span class="linenumber"> 12</span><span class="linenumber-separator"> </span>               fill-opacity: 0.5; stroke-opacity: 0.9"/&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>      &lt;/svg&gt;
+<span class="linenumber"> 14</span><span class="linenumber-separator"> </span>    &lt;/imagedata&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>  &lt;/imageobject&gt;
+<span class="linenumber"> 16</span><span class="linenumber-separator"> </span>&lt;/mediaobject&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>
+<span class="linenumber"> 18</span><span class="linenumber-separator"> </span>&lt;/article&gt;
+</pre></div>
+</div>
+</div>
+<div class="navfooter">
+<table width="100%" summary="Navigation table">
+<tr>
+<td width="40%" align="left"><a title="mml:*" href="_any.mml.html"><img src="figs/web/nav/prev.png" alt="Prev" border="0" /></a>&#160;</td>
+<td width="20%" align="center"><a title="DocBook Publishers: The Definitive Guide" href="docbook.html"><img src="figs/web/nav/home-publishers.png" alt="Home" border="0" /></a></td>
+<td width="40%" align="right">&#160;<a title="Part&#160; III .&#160; Appendixes" href="part3.html"><img src="figs/web/nav/next.png" alt="Next" border="0" /></a></td>
+</tr>
+<tr>
+<td width="40%" align="left">mml:*&#160;</td>
+<td width="20%" align="center"><a title="DocBook Element Reference" href="ref-elements.html"><img src="figs/web/nav/up.png" alt="Up" border="0" /></a></td>
+<td width="40%" align="right">&#160;Part&#160; III .&#160; Appendixes</td>
+</tr>
+</table>
+</div>
+<div class="infofooter">Last revised by Norman Walsh on 6 Jun 2011 <span class="githash">(git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)</span></div>
+<div class="copyrightfooter">
+<p><a href="dbcpyright.html">Copyright</a> © 2011 Norman Walsh.</p>
+</div>
+</body>
+</html>

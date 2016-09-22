@@ -1,0 +1,120 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='custom-5x'>
+<title>DocBook 5.x Customizations</title>
+
+<toc/>
+
+<para>The schemas described below are customizations of DocBook V5.x.
+</para>
+
+<section xml:id="pub5x">
+<title>DocBook Publishers Schema</title>
+
+<para>This is an official product of the DocBook Technical Committee.</para>
+
+<para>The Publishers Schema is a subset of DocBook 5 designed
+specifically for non-technical publishing.
+</para>
+
+<?schemas module="publishers"?>
+</section>
+
+<section xml:id="simple">
+<title>Simplified DocBook</title>
+
+<para>This is a community project; it <emphasis>is not</emphasis> an
+official product of the DocBook Technical Committee.</para>
+
+<para>Over the years, the notion of a "simple" DocBook subset has come up
+many times.  It has been observed that the number of elements in
+DocBook can be a little overwhelming to the new user.
+</para>
+
+<para>Simplified DocBook is a small subset of DocBook.
+The <link xlink:href="sdocbook/">online summary</link> shows just how
+small this subset is.
+</para>
+
+<para>This DTD is an attempt to make a small subset of DocBook.
+The goals of this subset are:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>Documents written in the subset must be 100% legal DocBook
+documents.
+</para>
+</listitem>
+<listitem>
+<para>This subset for single documents (articles, white papers, etc.),
+so there's no need for books or sets, just 'articles'.
+</para>
+</listitem>
+<listitem>
+<para>The markup should be the smallest practical subset, if you need
+richly structured markup, use full DocBook. In
+particular, the subset often selects a single element from a family of
+related elements; for example, <tag>programlisting</tag> is
+provided, but <tag>screen</tag> is not.
+</para>
+</listitem>
+<listitem>
+<para>The DTD must work in online browsers (it's XML not SGML). It
+must be small enough to download more-or-less painlessly.
+</para>
+</listitem>
+</itemizedlist>
+
+<?schemas module='simple' release='5.*'?>
+</section>
+
+<section xml:id="slides">
+<title>DocBook “Slides”</title>
+
+<para>This is a community project; it <emphasis>is not</emphasis> an
+official product of the DocBook Technical Committee.</para>
+
+<para>The “slides” schema is designed for writing presentations: it has slides,
+foils, and foil groups as its hierarchy.</para>
+
+<?schemas module='slides' release="5.*"?>
+</section>
+
+<section xml:id="website">
+<title>DocBook “Website”</title>
+
+<para>This is a community project; it <emphasis>is not</emphasis> an
+official product of the DocBook Technical Committee.</para>
+
+<para>The “website” schema is designed for building websites: it is a collection
+of pages designed to be assembled through links.</para>
+
+<?schemas module='website' release="5.*"?>
+</section>
+
+<section xml:id="forms">
+<title>HTML Forms</title>
+
+<para>This is a community project; it <emphasis>is not</emphasis> an
+official product of the DocBook Technical Committee.</para>
+
+<para>The “forms” schema adds HTML forms elements to DocBook.</para>
+
+<?schemas module='htmlforms' release="5.*"?>
+
+</section>
+
+<section xml:id="rdfa">
+<title>RDFaLite</title>
+
+<para>This is a community project; it <emphasis>is not</emphasis> an
+official product of the DocBook Technical Committee.</para>
+
+<para>The “RDFaLite” schema adds RDFa attributes to DocBook.</para>
+
+<?schemas module='rdfalite' release="5.*"?>
+
+</section>
+</article>

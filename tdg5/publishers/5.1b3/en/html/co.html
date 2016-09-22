@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.3.6), see www.w3.org" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>co</title>
+<link rel="stylesheet" type="text/css" href="css/defguide.css" />
+<link rel="icon" href="figs/web/publishers-icon.png" type="image/png" />
+<script type="text/javascript" src="js/refentry.js">
+</script>
+</head>
+<body>
+<div class="navheader">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" summary="Navigation table">
+<tr>
+<td align="left">&#160;<a title="DocBook Publishers: The Definitive Guide" href="docbook.html"><img src="figs/web/nav/home-publishers.png" alt="Home" border="0" /></a>&#160;<a href="city.html" title="city"><img src="figs/web/nav/prev.png" alt="Prev" border="0" /></a>&#160;<a title="DocBook Element Reference" href="ref-elements.html"><img src="figs/web/nav/up.png" alt="Up" border="0" /></a>&#160;<a title="collab" href="collab.html"><img src="figs/web/nav/next.png" alt="Next" border="0" /></a></td>
+<td align="right"><i>DocBook Publishers: The Definitive Guide</i> (Version <a href="ch00-online.html">1.1.0 for DocBook Publishers V1.1 (based on DocBook V5.1b3)</a>)</td>
+</tr>
+</table>
+</div>
+<div class="refentry" id="element.db.co"><a class="indexterm" name="element.db.co.1" id="element.db.co.1"></a>
+<div class="refnamediv">
+<h2>co</h2>
+<p><span class="refname">co</span>&#160;—&#160;The location of a callout embedded in text.</p>
+</div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<div class="element-synopsis">
+<ul>
+<li><em>empty</em></li>
+</ul>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>Attributes</h3>
+</div>
+<p><a class="brokenlink" href="#common.attributes">Common attributes</a> (ID required).</p>
+<p>Additional attributes:</p>
+<div class="element-synopsis">
+<ul>
+<li>label</li>
+</ul>
+</div>
+<p>Required attributes are shown in <strong class="emphasis">bold</strong>.</p>
+</div>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>Description</h3>
+</div>
+<p>A <a href="co.html"><tt class="tag-element">co</tt></a> identifies (by its location) a point of reference for a callout. See <a href="callout.html"><tt class="tag-element">callout</tt></a>.</p>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Processing expectations</h4>
+</div>
+<p>Formatted inline.</p>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Attributes</h4>
+</div>
+<p><a class="brokenlink" href="#common.attributes">Common attributes</a> (ID required).</p>
+<div class="variablelist">
+<dl>
+<dt id="element.db.co.6.4.3.1.1" class="attname">label</dt>
+<dd>
+<p>Specifies an identifying string for presentation purposes</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Parents</h4>
+</div>
+<p>These elements contain <a href="co.html"><tt class="tag-element">co</tt></a>: <span class="simplelist"><span class="member"><a href="literallayout.html"><tt class="tag-element">literallayout</tt></a></span></span>.</p>
+</div>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>See Also</h3>
+</div>
+<p><span class="simplelist"><span class="member"><a href="areaspec.html"><tt class="tag-element">areaspec</tt></a></span>, <span class="member"><a href="calloutlist.html"><tt class="tag-element">calloutlist</tt></a></span>, <span class="member"><a href="coref.html"><tt class="tag-element">coref</tt></a></span>, <span class="member"><a href="imageobjectco.html"><tt class="tag-element">imageobjectco</tt></a></span></span></p>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>Examples</h3>
+</div>
+<div class="programlisting">
+<pre>
+<span class="linenumber">  1</span><span class="linenumber-separator"> </span>&lt;article xmlns='http://docbook.org/ns/docbook' version="5.0"&gt;
+<span class="linenumber">  2</span><span class="linenumber-separator"> </span>&lt;title&gt;Example co&lt;/title&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>
+<span class="linenumber">  4</span><span class="linenumber-separator"> </span>&lt;informalexample&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;screen&gt; Volume in drive C is SYSTEM         Serial number is 2350:717C
+<span class="linenumber">  6</span><span class="linenumber-separator"> </span> Directory of  C:\
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>
+<span class="linenumber">  8</span><span class="linenumber-separator"> </span>10/17/97   9:04         &amp;lt;DIR&gt;    bin
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>10/16/97  14:11         &amp;lt;DIR&gt;    DOS            &lt;co xml:id="co.dos"/&gt;
+<span class="linenumber"> 10</span><span class="linenumber-separator"> </span>10/16/97  14:40         &amp;lt;DIR&gt;    Program Files
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>10/16/97  14:46         &amp;lt;DIR&gt;    TEMP
+<span class="linenumber"> 12</span><span class="linenumber-separator"> </span>10/17/97   9:04         &amp;lt;DIR&gt;    tmp
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>10/16/97  14:37         &amp;lt;DIR&gt;    WINNT
+<span class="linenumber"> 14</span><span class="linenumber-separator"> </span>10/16/97  14:25             119  AUTOEXEC.BAT   &lt;co xml:id="co.autoexec.bat"/&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span> 2/13/94   6:21          54,619  COMMAND.COM    &lt;co xml:id="co.command.com"/&gt;
+<span class="linenumber"> 16</span><span class="linenumber-separator"> </span>10/16/97  14:25             115  CONFIG.SYS     &lt;co xml:id="co.config.sys"/&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>11/16/97  17:17      61,865,984  pagefile.sys
+<span class="linenumber"> 18</span><span class="linenumber-separator"> </span> 2/13/94   6:21           9,349  WINA20.386     &lt;co xml:id="co.wina20.386"/&gt;&lt;/screen&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;calloutlist&gt;
+<span class="linenumber"> 20</span><span class="linenumber-separator"> </span>&lt;callout arearefs="co.dos"&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;para&gt;This directory holds &lt;trademark&gt;MS-DOS&lt;/trademark&gt;, the
+<span class="linenumber"> 22</span><span class="linenumber-separator"> </span>operating system that was installed before &lt;trademark&gt;Windows
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>NT&lt;/trademark&gt;.
+<span class="linenumber"> 24</span><span class="linenumber-separator"> </span>&lt;/para&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;/callout&gt;
+<span class="linenumber"> 26</span><span class="linenumber-separator"> </span>
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;callout arearefs="co.autoexec.bat co.command.com co.config.sys"&gt;
+<span class="linenumber"> 28</span><span class="linenumber-separator"> </span>&lt;para&gt;System startup code for DOS.
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;/para&gt;
+<span class="linenumber"> 30</span><span class="linenumber-separator"> </span>&lt;/callout&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>
+<span class="linenumber"> 32</span><span class="linenumber-separator"> </span>&lt;callout arearefs="co.wina20.386"&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;para&gt;Some sort of &lt;trademark&gt;Windows 3.1&lt;/trademark&gt; hack for some
+<span class="linenumber"> 34</span><span class="linenumber-separator"> </span>386 processors, as I recall.
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;/para&gt;
+<span class="linenumber"> 36</span><span class="linenumber-separator"> </span>&lt;/callout&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;/calloutlist&gt;
+<span class="linenumber"> 38</span><span class="linenumber-separator"> </span>&lt;/informalexample&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>
+<span class="linenumber"> 40</span><span class="linenumber-separator"> </span>&lt;/article&gt;
+</pre></div>
+<div class="example-output">
+<div class="informalexample-wrapper">
+<div class="informalexample">
+<div class="screen">
+<pre>
+<span class="linenumber">  1</span> Volume in drive C is SYSTEM         Serial number is 2350:717C
+<span class="linenumber">  2</span> Directory of  C:\
+<span class="linenumber">   </span>
+<span class="linenumber">  4</span>10/17/97   9:04         &lt;DIR&gt;    bin
+<span class="linenumber">   </span>10/16/97  14:11         &lt;DIR&gt;    DOS            <a name="co.dos" id="co.dos"></a><img src="http://docbook.sf.net/release/xsl/current/images/callouts/3.png" alt="3" border="0" />
+<span class="linenumber">  6</span>10/16/97  14:40         &lt;DIR&gt;    Program Files
+<span class="linenumber">   </span>10/16/97  14:46         &lt;DIR&gt;    TEMP
+<span class="linenumber">  8</span>10/17/97   9:04         &lt;DIR&gt;    tmp
+<span class="linenumber">   </span>10/16/97  14:37         &lt;DIR&gt;    WINNT
+<span class="linenumber"> 10</span>10/16/97  14:25             119  AUTOEXEC.BAT   <a name="co.autoexec.bat" id="co.autoexec.bat"></a><img src="http://docbook.sf.net/release/xsl/current/images/callouts/4.png" alt="4" border="0" />
+<span class="linenumber">   </span> 2/13/94   6:21          54,619  COMMAND.COM    <a name="co.command.com" id="co.command.com"></a><img src="http://docbook.sf.net/release/xsl/current/images/callouts/5.png" alt="5" border="0" />
+<span class="linenumber"> 12</span>10/16/97  14:25             115  CONFIG.SYS     <a name="co.config.sys" id="co.config.sys"></a><img src="http://docbook.sf.net/release/xsl/current/images/callouts/6.png" alt="6" border="0" />
+<span class="linenumber">   </span>11/16/97  17:17      61,865,984  pagefile.sys
+<span class="linenumber"> 14</span> 2/13/94   6:21           9,349  WINA20.386     <a name="co.wina20.386" id="co.wina20.386"></a><img src="http://docbook.sf.net/release/xsl/current/images/callouts/7.png" alt="7" border="0" />
+</pre></div>
+<div class="calloutlist">
+<table border="0" summary="Callout list">
+<tr class="callout-row">
+<td class="callout-bug" valign="baseline" align="left">
+<p class="callout"><a href="chunk-co-d62e34541.html"><img src="http://docbook.sf.net/release/xsl/current/images/callouts/3.png" alt="3" border="0" /></a>&#160;&#160;</p>
+</td>
+<td class="callout-body" valign="baseline" align="left">
+<p>This directory holds <span class="trademark">MS-DOS™</span>, the operating system that was installed before <span class="trademark">Windows NT™</span>.</p>
+</td>
+</tr>
+<tr class="callout-row">
+<td class="callout-bug" valign="baseline" align="left">
+<p class="callout"><a href="chunk-co-d62e34543.html"><img src="http://docbook.sf.net/release/xsl/current/images/callouts/4.png" alt="4" border="0" /></a>&#160;<a href="chunk-co-d62e34545.html"><img src="http://docbook.sf.net/release/xsl/current/images/callouts/5.png" alt="5" border="0" /></a>&#160;<a href="chunk-co-d62e34547.html"><img src="http://docbook.sf.net/release/xsl/current/images/callouts/6.png" alt="6" border="0" /></a>&#160;&#160;</p>
+</td>
+<td class="callout-body" valign="baseline" align="left">
+<p>System startup code for DOS.</p>
+</td>
+</tr>
+<tr class="callout-row">
+<td class="callout-bug" valign="baseline" align="left">
+<p class="callout"><a href="chunk-co-d62e34549.html"><img src="http://docbook.sf.net/release/xsl/current/images/callouts/7.png" alt="7" border="0" /></a>&#160;&#160;</p>
+</td>
+<td class="callout-body" valign="baseline" align="left">
+<p>Some sort of <span class="trademark">Windows 3.1™</span> hack for some 386 processors, as I recall.</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navfooter">
+<table width="100%" summary="Navigation table">
+<tr>
+<td width="40%" align="left"><a title="city" href="city.html"><img src="figs/web/nav/prev.png" alt="Prev" border="0" /></a>&#160;</td>
+<td width="20%" align="center"><a title="DocBook Publishers: The Definitive Guide" href="docbook.html"><img src="figs/web/nav/home-publishers.png" alt="Home" border="0" /></a></td>
+<td width="40%" align="right">&#160;<a title="collab" href="collab.html"><img src="figs/web/nav/next.png" alt="Next" border="0" /></a></td>
+</tr>
+<tr>
+<td width="40%" align="left">city&#160;</td>
+<td width="20%" align="center"><a title="DocBook Element Reference" href="ref-elements.html"><img src="figs/web/nav/up.png" alt="Up" border="0" /></a></td>
+<td width="40%" align="right">&#160;collab</td>
+</tr>
+</table>
+</div>
+<div class="infofooter">Last revised by Norman Walsh on 9 Jun 2011 <span class="githash">(git hash: 8b56299e266638d7740ab38b86833eeafed584e9)</span></div>
+<div class="copyrightfooter">
+<p><a href="dbcpyright.html">Copyright</a> © 2010, 2011 Norman Walsh.</p>
+</div>
+</body>
+</html>

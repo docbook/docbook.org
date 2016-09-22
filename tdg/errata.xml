@@ -1,0 +1,133 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0">
+<info>
+<title>Errata for DocBook: The Definitive Guide</title>
+</info>
+
+<para>We invite your participation in the evolution of this book as a
+standard like its subject, the DocBook DTD. As DocBook continues to
+evolve, we will continue to update the online version of this book.
+The printed edition will also be updated in the regular way that
+O'Reilly updates its books, fixing errors and adding essential
+technical information as it reprints the book until a new edition is
+necessary.
+</para>
+
+<para>If you find an error or omission in <citetitle>DocBook: The
+Definitive Guide</citetitle>, please
+<link xlink:href="mailto:bookcomments@docbook.org">let us know</link>.
+</para>
+
+<section><title>Errata for the first edition</title>
+
+<itemizedlist>
+<listitem><para><emphasis role="bold">The XSL stylesheet in
+<link xlink:href="html/ch04.html#EX-XSL">Example 4-4</link> has
+out-dated namespace URIs</emphasis></para>
+<para>The XSL WG changed the URI before going to Proposed Recommendation.
+The correct URIs are now as follows:</para>
+
+<programlisting><![CDATA[<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:fo="http://www.w3.org/1999/XSL/Format">
+]]>
+</programlisting>
+
+<para>Fixed in online version 1.0.2.</para>
+</listitem>
+
+<listitem><para><emphasis role="bold">In 
+<link xlink:href="html/ch05.html#FG-DOCBOOK-FLOWCHART">Figure 5-1</link>,
+the <quote>Z</quote> in <quote>dbhierZ.redecl</quote> should be a
+numeral <quote>2</quote>.</emphasis></para>
+
+<para>Fixed in online version 1.0.2.</para>
+</listitem>
+
+<listitem><para><emphasis role="bold">In 
+<link xlink:href="html/ch04.html#SIMPLE.DOCUMENT">Example 4-6</link>,
+<quote>bold</quote> should read <quote>strong</quote>.</emphasis></para>
+
+<para>The line that reads:</para>
+
+<programlisting><![CDATA[<emphasis role=bold>This</emphasis> paragraph contains
+]]>
+</programlisting>
+
+<para>Should read:</para>
+
+<programlisting><![CDATA[<emphasis role=strong>This</emphasis> paragraph contains
+]]>
+</programlisting>
+<para>Fixed in online version 1.0.2.</para>
+</listitem>
+
+<listitem><para><emphasis role="bold">In 
+<link xlink:href="html/ch04.html#dsssl.expr.conditional">Section 4.3.6.7</link>,
+the examples for <literal>case</literal> and  <literal>cond</literal>
+are missing several closing parentheses.</emphasis></para>
+
+<para>The text should read as follows. Note the additional closing
+parenthesis at the end of each intermediate constant/condition
+clause:</para>
+
+<variablelist>
+<varlistentry><term><literal>case</literal></term>
+<listitem>
+<para>
+
+<literal>case</literal> selects from among several alternatives:
+</para>
+
+<programlisting>
+(case <replaceable>expression</replaceable>
+  ((<replaceable>constant1</replaceable>) (<replaceable>expression1</replaceable>))
+  ((<replaceable>constant2</replaceable>) (<replaceable>expression2</replaceable>))
+  ((<replaceable>constant3</replaceable>) (<replaceable>expression3</replaceable>))
+  (else <replaceable>else-expression</replaceable>))
+</programlisting>
+
+<para>
+The value of the expression is compared against each of the constants
+in turn and the expression associated with the first matching constant
+is evaulated.
+</para>
+</listitem></varlistentry>
+<varlistentry><term><literal>cond</literal></term>
+<listitem>
+<para>
+
+<literal>cond</literal> also selects from among several alternatives,
+but the selection is performed by evaluating each expression:
+</para>
+
+<programlisting>
+(cond
+  ((<replaceable>condition1</replaceable>) (<replaceable>expression1</replaceable>))
+  ((<replaceable>condition2</replaceable>) (<replaceable>expression2</replaceable>))
+  ((<replaceable>condition3</replaceable>) (<replaceable>expression3</replaceable>))
+  (else <replaceable>else-expression</replaceable>))
+</programlisting>
+
+<para>
+The value of each conditional is calculated in turn. The expression
+associated with the first condition that is true is evaluated.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para>Fixed in online version 1.0.2.</para>
+</listitem>
+
+<listitem><para><emphasis role="bold">Remove the <quote>de</quote>
+in the French example preceding 
+<link xlink:href="html/ch04.html#TBL.LANG">Table 4-1</link>.</emphasis></para>
+<para>Fixed in online version 1.0.2.</para>
+</listitem>
+
+</itemizedlist>
+
+</section>
+</article>
+

@@ -1,0 +1,93 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>xref</title><link rel="stylesheet" href="defguide.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.64.1"><link rel="home" href="docbook.html" title="DocBook"><link rel="up" href="ref-elements.html" title="DocBook Element Reference"><link rel="previous" href="wordasword.html" title="wordasword"><link rel="next" href="year.html" title="year"></head><body><div class="navheader"><table border="0" cellpadding="0" cellspacing="0" width="100%" summary="Navigation table"><tr><td align="left">&nbsp;<a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a>&nbsp;<a title="wordasword" href="wordasword.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;<a title="DocBook Element Reference" href="ref-elements.html"><img src="figures/nav-up.png" alt="Up" border="0"></a>&nbsp;<a title="year" href="year.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td><td align="right"><i>DocBook: The Definitive Guide</i> 2.0.9 <span class="alpha-version">(<a href="co01.html"><em>Alpha</em></a>)</span> </td></tr></table></div><div class="refentry" lang="en"><a name="xref.element"></a><div class="titlepage"><div><h1 class="title">xref</h1></div><div><p class="releaseinfo">$Revision: 1.4 $</p></div><div><p class="pubdate">$Date: 2002/12/28 21:33:24 $</p></div></div><div class="refnamediv"><p>xref &#8212; A cross reference to another part of the document</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><h3><span class="bold"><b>Content Model</b></span></h3><pre class="synopsis">xref ::=
+EMPTY</pre><h3><span class="bold"><b>Attributes</b></span></h3><p><a href="ref-elements.html#common.attributes" title="Common Attributes">Common attributes</a></p><table border="0" width="100%" cellpadding="2" style="border-collapse: collapse; border-left: 0.5pt solid black; border-right: 0.5pt solid black; border-bottom: 0.5pt solid black;" summary="Attributes"><thead><tr><td class="th" style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; "><p><span class="bold"><b>Name</b></span></p></td><td class="th" style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; "><p><span class="bold"><b>Type</b></span></p></td><td class="th" style="border-bottom: 0.5pt solid ; "><p><span class="bold"><b>Default</b></span></p></td></tr></thead><tbody><tr><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">xrefstyle</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">CDATA</td><td style="border-bottom: 0.5pt solid ; " align="left" valign="top"><span class="emphasis"><em>None</em></span></td></tr><tr><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">endterm</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">IDREF</td><td style="border-bottom: 0.5pt solid ; " align="left" valign="top"><span class="emphasis"><em>None</em></span></td></tr><tr><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">linkend</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">IDREF</td><td style="border-bottom: 0.5pt solid ; " align="left" valign="top"><span class="emphasis"><em>Required</em></span></td></tr></tbody></table><div class="docbookng-synopsis"><h3>DocBook NG &#8220;Bourbon&#8221; Content Model</h3><div class="define-first"><div class="element">xref ::=<ul><li><em>EMPTY</em></li></ul><h4>DocBook NG &#8220;Bourbon&#8221; Attributes</h4><p>Common attributes and common linking attributes.</p><p>Additional attributes: (Required attributes, if any, are <b>bold</b>)</p><ul><li>endterm (IDREF)</li><li>xrefstyle</li></ul></div></div></div></div><div class="refsect1" lang="en"><a name="d0e220423"></a><h2>Description</h2><p>
+The <a href="xref.html"><tt class="sgmltag-element">XRef</tt></a> element forms a cross-reference from the location
+of the <a href="xref.html"><tt class="sgmltag-element">XRef</tt></a> to the element to which it points.  Unlike
+<a href="link.html"><tt class="sgmltag-element">Link</tt></a> and the other cross-referencing elements, <a href="xref.html"><tt class="sgmltag-element">XRef</tt></a>
+is empty. The processing system has to generate appropriate cross-reference
+text for the reader.
+</p><div class="refsect2" lang="en"><a name="dbreproc.xref"></a><h3>Processing expectations</h3><p>Under ordinary circumstances, the <a href="xref.html"><tt class="sgmltag-element">xref</tt></a>
+points to the some element with its
+<tt class="sgmltag-attribute">linkend</tt> attribute and the processing system
+generates appropriate cross reference text. There are three
+ways for the author to influence the generated text:</p><div class="orderedlist"><ol type="1"><li><p>If the <tt class="sgmltag-attribute">endterm</tt> attribute is specified
+on <a href="xref.html"><tt class="sgmltag-element">xref</tt></a>, the
+content of the element pointed to by <tt class="sgmltag-attribute">endterm</tt>
+will be used as the text of the cross-reference.
+</p></li><li><p>Otherwise, if the object <span class="emphasis"><em>pointed to</em></span> has a
+specified <tt class="sgmltag-attribute">XRefLabel</tt>, the content of
+that attribute will be used as the cross-reference text.
+</p></li><li><p>Finally, the author may specify a keyword (or other information) in the
+<tt class="sgmltag-attribute">xrefstyle</tt> attribute. Unlike
+<tt class="sgmltag-attribute">endterm</tt> and
+<tt class="sgmltag-attribute">xreflabel</tt> which have rigid semantics,
+the content of the <tt class="sgmltag-attribute">xrefstyle</tt> attribute is simply
+additional information for the processing system. What effect it has, if any,
+is dependent on the processing system.</p></li></ol></div></div><div class="refsect2" lang="en"><a name="d0e220488"></a><h3>Parents</h3><p>These elements contain xref:
+<span class="simplelist"><a href="application.html"><tt class="sgmltag-element">application</tt></a>, <a href="attribution.html"><tt class="sgmltag-element">attribution</tt></a>, <a href="bibliomisc.html"><tt class="sgmltag-element">bibliomisc</tt></a>, <a href="bridgehead.html"><tt class="sgmltag-element">bridgehead</tt></a>, <a href="citation.html"><tt class="sgmltag-element">citation</tt></a>, <a href="citetitle.html"><tt class="sgmltag-element">citetitle</tt></a>, <a href="emphasis.html"><tt class="sgmltag-element">emphasis</tt></a>, <a href="entry.html"><tt class="sgmltag-element">entry</tt></a>, <a href="firstterm.html"><tt class="sgmltag-element">firstterm</tt></a>, <a href="foreignphrase.html"><tt class="sgmltag-element">foreignphrase</tt></a>, <a href="glosssee.html"><tt class="sgmltag-element">glosssee</tt></a>, <a href="glossseealso.html"><tt class="sgmltag-element">glossseealso</tt></a>, <a href="glossterm.html"><tt class="sgmltag-element">glossterm</tt></a>, <a href="lineannotation.html"><tt class="sgmltag-element">lineannotation</tt></a>, <a href="link.html"><tt class="sgmltag-element">link</tt></a>, <a href="literallayout.html"><tt class="sgmltag-element">literallayout</tt></a>, <a href="lotentry.html"><tt class="sgmltag-element">lotentry</tt></a>, <a href="member.html"><tt class="sgmltag-element">member</tt></a>, <a href="msgaud.html"><tt class="sgmltag-element">msgaud</tt></a>, <a href="olink.html"><tt class="sgmltag-element">olink</tt></a>, <a href="para.html"><tt class="sgmltag-element">para</tt></a>, <a href="phrase.html"><tt class="sgmltag-element">phrase</tt></a>, <a href="primary.html"><tt class="sgmltag-element">primary</tt></a>, <a href="primaryie.html"><tt class="sgmltag-element">primaryie</tt></a>, <a href="productname.html"><tt class="sgmltag-element">productname</tt></a>, <a href="programlisting.html"><tt class="sgmltag-element">programlisting</tt></a>, <a href="quote.html"><tt class="sgmltag-element">quote</tt></a>, <a href="refentrytitle.html"><tt class="sgmltag-element">refentrytitle</tt></a>, <a href="refpurpose.html"><tt class="sgmltag-element">refpurpose</tt></a>, <a href="remark.html"><tt class="sgmltag-element">remark</tt></a>, <a href="screen.html"><tt class="sgmltag-element">screen</tt></a>, <a href="screeninfo.html"><tt class="sgmltag-element">screeninfo</tt></a>, <a href="secondary.html"><tt class="sgmltag-element">secondary</tt></a>, <a href="secondaryie.html"><tt class="sgmltag-element">secondaryie</tt></a>, <a href="see.html"><tt class="sgmltag-element">see</tt></a>, <a href="seealso.html"><tt class="sgmltag-element">seealso</tt></a>, <a href="seealsoie.html"><tt class="sgmltag-element">seealsoie</tt></a>, <a href="seeie.html"><tt class="sgmltag-element">seeie</tt></a>, <a href="seg.html"><tt class="sgmltag-element">seg</tt></a>, <a href="segtitle.html"><tt class="sgmltag-element">segtitle</tt></a>, <a href="simpara.html"><tt class="sgmltag-element">simpara</tt></a>, <a href="subtitle.html"><tt class="sgmltag-element">subtitle</tt></a>, <a href="synopsis.html"><tt class="sgmltag-element">synopsis</tt></a>, <a href="td.html"><tt class="sgmltag-element">td</tt></a>, <a href="term.html"><tt class="sgmltag-element">term</tt></a>, <a href="tertiary.html"><tt class="sgmltag-element">tertiary</tt></a>, <a href="tertiaryie.html"><tt class="sgmltag-element">tertiaryie</tt></a>, <a href="th.html"><tt class="sgmltag-element">th</tt></a>, <a href="title.html"><tt class="sgmltag-element">title</tt></a>, <a href="titleabbrev.html"><tt class="sgmltag-element">titleabbrev</tt></a>, <a href="tocback.html"><tt class="sgmltag-element">tocback</tt></a>, <a href="tocentry.html"><tt class="sgmltag-element">tocentry</tt></a>, <a href="tocfront.html"><tt class="sgmltag-element">tocfront</tt></a>, <a href="ulink.html"><tt class="sgmltag-element">ulink</tt></a></span>.</p></div></div><div class="refsect1" lang="en"><a name="d0e220657"></a><h2>Attributes</h2><div class="variablelist"><dl><dt><span class="term">endterm</span></dt><dd><p>
+<tt class="sgmltag-attribute">Endterm</tt> points to the element whose content
+is to be used as the text of the link.
+</p></dd><dt><span class="term">linkend</span></dt><dd><p>
+<tt class="sgmltag-attribute">Linkend</tt> points to the target of the cross reference.
+</p></dd></dl></div></div><div class="refsect1" lang="en"><a name="d0e220679"></a><h2>See Also</h2><p><span class="simplelist"><a href="anchor.html"><tt class="sgmltag-element">anchor</tt></a>, <a href="link.html"><tt class="sgmltag-element">link</tt></a>, <a href="olink.html"><tt class="sgmltag-element">olink</tt></a>, <a href="ulink.html"><tt class="sgmltag-element">ulink</tt></a></span>.
+</p></div><div class="refsect1" lang="en"><a name="d0e220697"></a><h2>Examples</h2><p>
+Consider the following example:
+</p><div class="informalexample"><pre class="programlisting">&lt;!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+          "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"&gt;
+&lt;book&gt;&lt;title&gt;An Example Book&lt;/title&gt;
+&lt;chapter id="ch01"&gt;&lt;title&gt;XRef Samples&lt;/title&gt;
+&lt;para&gt;
+This paragraph demonstrates several features of
+&lt;sgmltag&gt;XRef&lt;/sgmltag&gt;.
+&lt;/para&gt;
+&lt;itemizedlist&gt;
+&lt;listitem&gt;&lt;para&gt;A straight link generates the
+cross-reference text: &lt;xref linkend="ch02"/&gt;.
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;listitem&gt;&lt;para&gt;A link to an element with an
+&lt;sgmltag class="attribute"&gt;XRefLabel&lt;/sgmltag&gt;:
+&lt;xref linkend="ch03"/&gt;.
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;listitem&gt;&lt;para&gt;A link with an
+&lt;sgmltag class="attribute"&gt;EndTerm&lt;/sgmltag&gt;:
+&lt;xref linkend="ch04" endterm="ch04short"/&gt;.
+&lt;/para&gt;&lt;/listitem&gt;
+&lt;/itemizedlist&gt;
+&lt;/chapter&gt;
+
+&lt;chapter id="ch02"&gt;
+  &lt;title&gt;The Second Chapter&lt;/title&gt;
+  &lt;para&gt;Some content here&lt;/para&gt;
+&lt;/chapter&gt;
+
+&lt;chapter id="ch03" xreflabel="Chapter the Third"&gt;
+  &lt;title&gt;The Third Chapter&lt;/title&gt;
+  &lt;para&gt;Some content here&lt;/para&gt;
+&lt;/chapter&gt;
+
+&lt;chapter id="ch04"&gt;
+  &lt;title&gt;The Fourth Chapter&lt;/title&gt;
+  &lt;titleabbrev id="ch04short"&gt;Chapter 4&lt;/titleabbrev&gt;
+  &lt;para&gt;Some content here&lt;/para&gt;
+&lt;/chapter&gt;
+&lt;/book&gt;</pre></div><p>
+One reasonable rendering for the content of the first chapter of
+this book is the following:
+</p><p>
+This paragraph demonstrates several features of
+<a href="xref.html"><tt class="sgmltag-element">XRef</tt></a>.
+</p><div class="itemizedlist"><ul type="disc"><li><p>A straight link generates the
+cross-reference text: Chapter 2, &#8220;<span class="quote">The Second Chapter</span>&#8221;
+</p></li><li><p>A link to an element with an
+<tt class="sgmltag-attribute">XRefLabel</tt>:
+Chapter the Third.
+</p></li><li><p>A link with an
+<tt class="sgmltag-attribute">EndTerm</tt>:
+Chapter 4.
+</p></li></ul></div><p>
+Of course, in an online system, these references would also
+be links to the appropriate chapters.
+</p><p>For additional examples, see also
+<span class="simplelist"><a href="part.html"><tt class="sgmltag-element">part</tt></a></span>.
+</p></div></div><div class="navfooter"><table width="100%" summary="Navigation table"><tr><td width="40%" align="left"><a title="wordasword" href="wordasword.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;</td><td width="20%" align="center"><a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a></td><td width="40%" align="right">&nbsp;<a title="year" href="year.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td></tr><tr><td width="40%" align="left">wordasword&nbsp;</td><td width="20%" align="center"><a title="DocBook Element Reference" href="ref-elements.html"><img src="figures/nav-up.png" alt="Up" border="0"></a></td><td width="40%" align="right">&nbsp;year</td></tr></table></div><div class="copyrightfooter"><p><a href="dbcpyright.html">Copyright</a> &copy; 1999, 2000, 2001, 2002, 2003 <a href="http://www.oreilly.com/">O'Reilly &amp; Associates, Inc.</a> All rights reserved.</p></div></body></html>

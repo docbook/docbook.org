@@ -1,0 +1,76 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='docs'>
+<info>
+<title>Documentation</title>
+</info>
+
+<section xml:id="ref">
+<title>Reference Documentation</title>
+
+<para><link xlink:href="http://www.oreilly.com/">O'Reilly &amp;
+Associates</link> published
+<citetitle xlink:href="http://www.oreilly.com/catalog/docbook">DocBook 5: The Definitive
+Guide</citetitle> in April, 2010. It documents the current, official DocBook 5.0
+release.</para>
+
+<para>The reference documentation is <link xlink:href="/tdg5/">also available online</link>
+for free.</para>
+
+<para>Documentation for the the previous release
+is <link xlink:href="/tdg/">also available</link>.</para>
+
+<para>Users migrating from DocBook V4.x to DocBook V5.0 should read
+<link xlink:href="/docs/howto/">DocBook V5.0: The Transition Guide</link>.
+</para>
+
+<para>In addition, many communities and users have written introductions
+and other “how to” guides for DocBook. See, for example,
+<link xlink:href="http://wiki.docbook.org/topic/DocBookDocumentation">DocBook
+Documentation</link> on the
+<link xlink:href="http://wiki.docbook.org/">DocBook Wiki</link>.
+</para>
+</section>
+
+<section xml:id="publishers">
+<title>Publishers Schema</title>
+
+<para>The Publishers Schema is a subset of DocBook.
+<citetitle xlink:href="/tdg5/publishers/">DocBook Publishers: The Definitive Guide</citetitle>
+is a special edition of The Definitive Guide tailored to exactly the elements (and content models)
+in that schema.</para>
+
+</section>
+
+<section xml:id="transclusion">
+<title>Transclusion</title>
+
+<para>The topic of transclusion (incorporating external documents into the current
+document by reference) is complex. There are a number of possible mechanisms each of
+which addresses some set of use cases.</para>
+
+<para>The DocBook Technical Committee is reviewing possible approaches to address more
+of the use cases or address them more easily and completely.</para>
+
+<para>It has published <citetitle
+xlink:href="http://docbook.org/docs/transclusion-requirements/">Requirements
+for transclusion in DocBook</citetitle> which attempts to categorize the use cases
+and requirements.</para>
+
+<para>It has also published
+<citetitle xlink:href="http://docbook.org/docs/transclusion/">DocBook Transclusion</citetitle>,
+which describes several possible solutions.</para>
+
+<para>User and implementor feedback is most especially solicited for these documents.</para>
+</section>
+<section>
+<title>Specifications</title>
+
+<para>Each release of DocBook includes a specification. The list
+of current (and historical) specifications is
+<link xlink:href="/specs">available online</link>.</para>
+</section>
+</article>
+
+

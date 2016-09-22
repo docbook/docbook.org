@@ -1,0 +1,165 @@
+DocBook Technical Committee Meeting Minutes: 31 August 2005
+=============================================================
+
+The DocBook Technical Committee met on Wednesday, 31 August 2005 at
+05:00p EDT (02:00p PDT, 21:00GMT, 22:00BST, 23:00CEST, 06:00JST+,
+02:30a India+) for 60 minutes.
+
+Agenda
+
+1. Roll call
+
+Present: Paul Grosso, Dick Hamilton, Scott Hudson,
+Jirka Kosek, Larry Rowland, Bob Stayton, Norman Walsh
+
+Regrets: Steve Cogorno, Mark Johnson
+
+Absent: Adam Di Carlo, Nancy Harrison
+
+2. Accepted the minutes[1] of the previous meeting.
+
+3. Next meeting: 12 October 2005
+
+NOTE: the September meeting has been cancelled, and the
+October meeting has been moved up a week.
+
+4. Review of the agenda.
+
+Two additions:
+  4b. Jane Harnad.
+  8b. DocBook 5 toolchain.
+
+4b.  Jane Harnad of OASIS presented information about the
+OASIS Adoption Forum taking place in London on 17 October 2005.
+She urged all members to attend.  Information is available here:
+
+http://www.oasis-open.org/events/adoption_forum_2005/
+
+
+5. Review of open action items
+
+   a. Norm to start the OASIS process to make this 
+      a Commitee Specification.
+      COMPLETED
+
+   b. Norm to publish the draft as "5.0 alpha spec"
+      on the OASIS website and docbook.org.
+      COMPLETED
+
+   c. Norm will add simplesect changes to a new test release of 5.0.
+      COMPLETED
+
+   d. Norm will add XInclude module to a new test release of 5.0.
+      COMPLETED
+
+   e. Bob to ask each of the requestors again about three of
+      the current RFEs.
+      CONTINUED
+
+   f. Norm will follow up with the requestor for
+      "1237762 Allow para+ in formalpara"
+      to get more use case information.
+      COMPLETED
+
+6.  New OASIS attendance rules.
+
+Bob described the new OASIS attendance rules.  Committee membership
+is no longer governed by attendance, but voting rights are.
+The rules are simpler:  miss two meetings and you lose your
+voting rights.  Attend two meetings in a row, and your
+voting rights are restored at the next meeting.
+
+Paul inquired about whether these affect quorum, and a later
+check of the rules showed that:
+
+  a. A quorum is defined as "the number of Voting Members
+     that must be present in a meeting so that Resolutions
+     and decisions may be made". A quorum is more than
+     half of the Voting Members.
+
+  b. Attendance at a meeting that does not achieve quorum
+     still counts toward maintaining or restoring a
+     member's voting rights.
+
+7.  DTD version 4.5 Public Review Draft.
+
+The public review of DocBook 4.5 DTD started 04 August 2005, and 
+ends 03 October 2005.  No comments have been received so far.
+
+8.  Next steps for DocBook 5.
+
+Norm added XIncludes and simplesect changes to the 'pto' release
+of DocBook 5.  He suggested the Committee prepare an
+alpha Working Draft.  We decided to put together a package
+by the Oct 12 meeting:
+
+ACTION: Norm to write a how-to on converting 
+documents from version 4 to 5.
+
+ACTION: Jirka to write a description of the current state of tools
+that work with 5.0 and RNG.
+
+ACTION: Dick to read the current DocBook 5
+spec to make sure it is all ok.
+
+ACTION: Dick to make sure the pending RFEs are in the current schema.
+
+ACTION: Norm to make sure the namespace URI works with RDDL so
+users get something back if they query the address.
+
+
+9. Review of Requests for Enhancement
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;;
+      group_id=21935&atid=384107&aid=XXXX
+
+      1190435 Add rule tag 
+      1190436 Add requirement tag 
+      1194196 <qandaset> and <qandadiv> 
+
+Bob did not complete his action item to query the above
+three RFEs for further information.
+
+      1237762 Allow para+ in formalpara 
+
+Norm queried for further information, but we need to
+wait to see if there is a response.
+
+      1245781  new <publication> element  
+
+Norm responded to this RFE.
+ACTION: Norm to follow up with the submittor of this RFE.
+
+      1264002  Add Security Classification tags  
+
+Norm responded that the security attribute should take care
+of this.  He suggested waiting until next meeting to close it.
+
+
+Meeting adjourned.
+-----------------------------------------------------------------
+     The following RFEs are awaiting action items
+
+      413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+      431411 RFE 70: add generic linking capability (Norm)
+      565637 Associate non-inline image with link (Norm, generic linking)
+      623524 (Re)Consider "choicelist" markup 
+
+     The following RFEs are identified as V5.0 or later
+
+      1097183 Allow Task as a sibling of sections 
+      1084491 Add address, orgname, orgdiv to corpauthor, corpcredit, etc. 
+      974285 Check floatstyle/float attributes
+      958393 remove default class value from productname 
+      531851 Remove inline person name elements
+      532088 Remove RevHistory from qandaentry
+- ---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200507/msg00010.html
+
+Bob Stayton
+Sagehill Enterprises
+DocBook Consulting
+bobs@sagehill.net

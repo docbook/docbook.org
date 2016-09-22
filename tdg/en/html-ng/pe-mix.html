@@ -1,0 +1,392 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>*.mix Parameter Entities</title><link rel="stylesheet" href="defguide.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.64.1"><link rel="home" href="docbook.html" title="DocBook"><link rel="up" href="ref-paraments.html" title="DocBook Parameter Entity Reference"><link rel="previous" href="pe-l-mix.html" title="local.*.mix Parameter Entities"><link rel="next" href="pe-module.html" title="*.module Parameter Entities"></head><body><div class="navheader"><table border="0" cellpadding="0" cellspacing="0" width="100%" summary="Navigation table"><tr><td align="left">&nbsp;<a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a>&nbsp;<a title="local.*.mix Parameter Entities" href="pe-l-mix.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;<a title="DocBook Parameter Entity Reference" href="ref-paraments.html"><img src="figures/nav-up.png" alt="Up" border="0"></a>&nbsp;<a title="*.module Parameter Entities" href="pe-module.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td><td align="right"><i>DocBook: The Definitive Guide</i> 2.0.9 <span class="alpha-version">(<a href="co01.html"><em>Alpha</em></a>)</span> </td></tr></table></div><div class="refentry" lang="en"><a name="pe-mix"></a><div class="titlepage"><div><h1 class="title"><tt class="sgmltag-paramentity">%*.mix;</tt> Parameter Entities</h1></div></div><div class="refnamediv"><p><tt class="sgmltag-paramentity">%*.mix;</tt> Parameter Entities &#8212; Parameter entities which define the DocBook mixtures
+</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><p>Mixtures are collections of classes that appear in content models. For
+example, the content model of <a href="example.html"><tt class="sgmltag-element">Example</tt></a> element includes
+the <a href="pe-mix.html#example.mix.parament"><tt class="sgmltag-paramentity">%example.mix;</tt></a>. Not every element's
+content model is a single mixture, but elements in the same class tend to
+have the same mixture in their content model.</p><p>If you want to change the content model of some class of elements (lists
+or admonitions, perhaps), you generally want to change the definition of the
+appropriate mixture.</p></div><div class="refsect1" lang="en"><a name="d0e253728"></a><h2>Description</h2><p>The following sections identify all of the mixture parameter entities
+in DocBook.
+</p><div class="refsect2" lang="en"><a name="admon.mix.parament"></a><h3>%admon.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">calloutlist|glosslist|itemizedlist|orderedlist|segmentedlist
+		|simplelist|variablelist 
+		|literallayout|programlisting|programlistingco|screen
+		|screenco|screenshot 	|synopsis|cmdsynopsis|funcsynopsis
+                 |classsynopsis|fieldsynopsis
+                 |constructorsynopsis
+                 |destructorsynopsis
+                 |methodsynopsis  
+		|formalpara|para|simpara 		|address|blockquote
+                |graphic|graphicco|mediaobject|mediaobjectco
+                |informalequation
+		|informalexample
+                |informalfigure
+                |informaltable 
+		|equation|example|figure|table 		|procedure|sidebar
+		|anchor|bridgehead|remark
+		|indexterm         |beginpage</pre><p><b><span class="bold"><b>%admon.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%admon.mix; appears in:</b></span></td></tr><tr><td style=""><a href="caution.html"><tt class="sgmltag-element">caution</tt></a></td><td style=""><a href="constraintdef.html"><tt class="sgmltag-element">constraintdef</tt></a></td><td style=""><a href="important.html"><tt class="sgmltag-element">important</tt></a></td></tr><tr><td style=""><a href="note.html"><tt class="sgmltag-element">note</tt></a></td><td style=""><a href="tip.html"><tt class="sgmltag-element">tip</tt></a></td><td style=""><a href="warning.html"><tt class="sgmltag-element">warning</tt></a></td></tr></table></div><div class="refsect2" lang="en"><a name="bibliocomponent.mix.parament"></a><h3>%bibliocomponent.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">abbrev|abstract|address|artpagenums|author
+		|authorgroup|authorinitials|bibliomisc|biblioset
+		|collab|confgroup|contractnum|contractsponsor
+		|copyright|corpauthor|corpname|corpcredit|date|edition
+		|editor|invpartnumber|isbn|issn|issuenum|orgname
+		|biblioid|citebiblioid|bibliosource|bibliorelation|bibliocoverage
+		|othercredit|pagenums|printhistory|productname
+		|productnumber|pubdate|publisher|publishername
+		|pubsnumber|releaseinfo|revhistory|seriesvolnums
+		|subtitle|title|titleabbrev|volumenum|citetitle
+		|personname|honorific|firstname|surname|lineage|othername|affiliation
+		|authorblurb|contrib 
+		|indexterm</pre><p><b><span class="bold"><b>%bibliocomponent.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%bibliocomponent.mix; appears in:</b></span></td></tr><tr><td style=""><a href="biblioentry.html"><tt class="sgmltag-element">biblioentry</tt></a></td><td style=""><a href="bibliomixed.html"><tt class="sgmltag-element">bibliomixed</tt></a></td><td style=""><a href="bibliomset.html"><tt class="sgmltag-element">bibliomset</tt></a></td></tr><tr><td style=""><a href="biblioset.html"><tt class="sgmltag-element">biblioset</tt></a></td><td style="">&nbsp;</td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="component.mix.parament"></a><h3>%component.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">calloutlist|glosslist|itemizedlist|orderedlist|segmentedlist
+		|simplelist|variablelist 		|caution|important|note|tip|warning 
+		|literallayout|programlisting|programlistingco|screen
+		|screenco|screenshot 	|synopsis|cmdsynopsis|funcsynopsis
+                 |classsynopsis|fieldsynopsis
+                 |constructorsynopsis
+                 |destructorsynopsis
+                 |methodsynopsis  
+		|formalpara|para|simpara 		|address|blockquote
+                |graphic|graphicco|mediaobject|mediaobjectco
+                |informalequation
+		|informalexample
+                |informalfigure
+                |informaltable 
+		|equation|example|figure|table 		|msgset|procedure|sidebar|qandaset|task
+                 |productionset|constraintdef
+                 
+		|anchor|bridgehead|remark|highlights
+				|abstract|authorblurb|epigraph
+		
+		|indexterm         |beginpage</pre><p><b><span class="bold"><b>%component.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%component.mix; appears in:</b></span></td></tr><tr><td style=""><a href="bibliodiv.html"><tt class="sgmltag-element">bibliodiv</tt></a></td><td style=""><a href="bibliography.html"><tt class="sgmltag-element">bibliography</tt></a></td><td style=""><a href="blockquote.html"><tt class="sgmltag-element">blockquote</tt></a></td></tr><tr><td style=""><a href="callout.html"><tt class="sgmltag-element">callout</tt></a></td><td style=""><a href="glossary.html"><tt class="sgmltag-element">glossary</tt></a></td><td style=""><a href="glossdiv.html"><tt class="sgmltag-element">glossdiv</tt></a></td></tr><tr><td style=""><a href="index.html"><tt class="sgmltag-element">index</tt></a></td><td style=""><a href="listitem.html"><tt class="sgmltag-element">listitem</tt></a></td><td style=""><a href="msgexplan.html"><tt class="sgmltag-element">msgexplan</tt></a></td></tr><tr><td style=""><a href="msgtext.html"><tt class="sgmltag-element">msgtext</tt></a></td><td style=""><a href="procedure.html"><tt class="sgmltag-element">procedure</tt></a></td><td style=""><a href="setindex.html"><tt class="sgmltag-element">setindex</tt></a></td></tr><tr><td style=""><a href="step.html"><tt class="sgmltag-element">step</tt></a></td><td style=""><a href="taskprerequisites.html"><tt class="sgmltag-element">taskprerequisites</tt></a></td><td style=""><a href="taskrelated.html"><tt class="sgmltag-element">taskrelated</tt></a></td></tr><tr><td style=""><a href="tasksummary.html"><tt class="sgmltag-element">tasksummary</tt></a></td><td style="">&nbsp;</td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="cptr.char.mix.parament"></a><h3>%cptr.char.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">#PCDATA
+		|link|olink|ulink 	|action|application
+                |classname|methodname|interfacename|exceptionname
+                |ooclass|oointerface|ooexception
+                |command|computeroutput
+		|database|email|envar|errorcode|errorname|errortype|errortext|filename
+		|function|guibutton|guiicon|guilabel|guimenu|guimenuitem
+		|guisubmenu|hardware|interface|keycap
+		|keycode|keycombo|keysym|literal|code|constant|markup|medialabel
+		|menuchoice|mousebutton|option|optional|parameter
+		|prompt|property|replaceable|returnvalue|sgmltag|structfield
+		|structname|symbol|systemitem|uri|token|type|userinput|varname
+                |nonterminal
+		
+		|anchor 
+		|remark|subscript|superscript 	|inlinegraphic|inlinemediaobject
+		|indexterm         |beginpage</pre><p><b><span class="bold"><b>%cptr.char.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%cptr.char.mix; appears in:</b></span></td></tr><tr><td style=""><a href="action.html"><tt class="sgmltag-element">action</tt></a></td><td style=""><a href="classsynopsisinfo.html"><tt class="sgmltag-element">classsynopsisinfo</tt></a></td><td style=""><a href="code.html"><tt class="sgmltag-element">code</tt></a></td></tr><tr><td style=""><a href="command.html"><tt class="sgmltag-element">command</tt></a></td><td style=""><a href="computeroutput.html"><tt class="sgmltag-element">computeroutput</tt></a></td><td style=""><a href="database.html"><tt class="sgmltag-element">database</tt></a></td></tr><tr><td style=""><a href="filename.html"><tt class="sgmltag-element">filename</tt></a></td><td style=""><a href="funcparams.html"><tt class="sgmltag-element">funcparams</tt></a></td><td style=""><a href="funcsynopsisinfo.html"><tt class="sgmltag-element">funcsynopsisinfo</tt></a></td></tr><tr><td style=""><a href="function.html"><tt class="sgmltag-element">function</tt></a></td><td style=""><a href="hardware.html"><tt class="sgmltag-element">hardware</tt></a></td><td style=""><a href="interfacename.html"><tt class="sgmltag-element">interfacename</tt></a></td></tr><tr><td style=""><a href="keycap.html"><tt class="sgmltag-element">keycap</tt></a></td><td style=""><a href="literal.html"><tt class="sgmltag-element">literal</tt></a></td><td style=""><a href="option.html"><tt class="sgmltag-element">option</tt></a></td></tr><tr><td style=""><a href="optional.html"><tt class="sgmltag-element">optional</tt></a></td><td style=""><a href="parameter.html"><tt class="sgmltag-element">parameter</tt></a></td><td style=""><a href="property.html"><tt class="sgmltag-element">property</tt></a></td></tr><tr><td style=""><a href="systemitem.html"><tt class="sgmltag-element">systemitem</tt></a></td><td style=""><a href="userinput.html"><tt class="sgmltag-element">userinput</tt></a></td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="divcomponent.mix.parament"></a><h3>%divcomponent.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">calloutlist|glosslist|itemizedlist|orderedlist|segmentedlist
+		|simplelist|variablelist 		|caution|important|note|tip|warning 
+		|literallayout|programlisting|programlistingco|screen
+		|screenco|screenshot 	|synopsis|cmdsynopsis|funcsynopsis
+                 |classsynopsis|fieldsynopsis
+                 |constructorsynopsis
+                 |destructorsynopsis
+                 |methodsynopsis  
+		|formalpara|para|simpara 		|address|blockquote
+                |graphic|graphicco|mediaobject|mediaobjectco
+                |informalequation
+		|informalexample
+                |informalfigure
+                |informaltable 
+		|equation|example|figure|table 		|msgset|procedure|sidebar|qandaset|task
+                 |productionset|constraintdef
+                 
+		|anchor|bridgehead|remark|highlights
+				|abstract|authorblurb|epigraph
+		
+		|indexterm         |beginpage</pre><p><b><span class="bold"><b>%divcomponent.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%divcomponent.mix; appears in:</b></span></td></tr><tr><td style=""><a href="sect1.html"><tt class="sgmltag-element">sect1</tt></a></td><td style=""><a href="sect2.html"><tt class="sgmltag-element">sect2</tt></a></td><td style=""><a href="sect3.html"><tt class="sgmltag-element">sect3</tt></a></td></tr><tr><td style=""><a href="sect4.html"><tt class="sgmltag-element">sect4</tt></a></td><td style=""><a href="sect5.html"><tt class="sgmltag-element">sect5</tt></a></td><td style=""><a href="section.html"><tt class="sgmltag-element">section</tt></a></td></tr><tr><td style=""><a href="simplesect.html"><tt class="sgmltag-element">simplesect</tt></a></td><td style="">&nbsp;</td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="docinfo.char.mix.parament"></a><h3>%docinfo.char.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">#PCDATA
+		|link|olink|ulink 
+					|emphasis|trademark
+					|replaceable
+		|remark|subscript|superscript 	|inlinegraphic|inlinemediaobject
+		|indexterm</pre><p><b><span class="bold"><b>%docinfo.char.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%docinfo.char.mix; appears in:</b></span></td></tr><tr><td style=""><a href="ackno.html"><tt class="sgmltag-element">ackno</tt></a></td><td style=""><a href="artpagenums.html"><tt class="sgmltag-element">artpagenums</tt></a></td><td style=""><a href="authorinitials.html"><tt class="sgmltag-element">authorinitials</tt></a></td></tr><tr><td style=""><a href="bibliocoverage.html"><tt class="sgmltag-element">bibliocoverage</tt></a></td><td style=""><a href="biblioid.html"><tt class="sgmltag-element">biblioid</tt></a></td><td style=""><a href="bibliorelation.html"><tt class="sgmltag-element">bibliorelation</tt></a></td></tr><tr><td style=""><a href="bibliosource.html"><tt class="sgmltag-element">bibliosource</tt></a></td><td style=""><a href="citebiblioid.html"><tt class="sgmltag-element">citebiblioid</tt></a></td><td style=""><a href="city.html"><tt class="sgmltag-element">city</tt></a></td></tr><tr><td style=""><a href="collabname.html"><tt class="sgmltag-element">collabname</tt></a></td><td style=""><a href="confdates.html"><tt class="sgmltag-element">confdates</tt></a></td><td style=""><a href="confnum.html"><tt class="sgmltag-element">confnum</tt></a></td></tr><tr><td style=""><a href="confsponsor.html"><tt class="sgmltag-element">confsponsor</tt></a></td><td style=""><a href="conftitle.html"><tt class="sgmltag-element">conftitle</tt></a></td><td style=""><a href="contractnum.html"><tt class="sgmltag-element">contractnum</tt></a></td></tr><tr><td style=""><a href="contractsponsor.html"><tt class="sgmltag-element">contractsponsor</tt></a></td><td style=""><a href="contrib.html"><tt class="sgmltag-element">contrib</tt></a></td><td style=""><a href="corpauthor.html"><tt class="sgmltag-element">corpauthor</tt></a></td></tr><tr><td style=""><a href="corpcredit.html"><tt class="sgmltag-element">corpcredit</tt></a></td><td style=""><a href="corpname.html"><tt class="sgmltag-element">corpname</tt></a></td><td style=""><a href="country.html"><tt class="sgmltag-element">country</tt></a></td></tr><tr><td style=""><a href="date.html"><tt class="sgmltag-element">date</tt></a></td><td style=""><a href="edition.html"><tt class="sgmltag-element">edition</tt></a></td><td style=""><a href="email.html"><tt class="sgmltag-element">email</tt></a></td></tr><tr><td style=""><a href="fax.html"><tt class="sgmltag-element">fax</tt></a></td><td style=""><a href="firstname.html"><tt class="sgmltag-element">firstname</tt></a></td><td style=""><a href="holder.html"><tt class="sgmltag-element">holder</tt></a></td></tr><tr><td style=""><a href="honorific.html"><tt class="sgmltag-element">honorific</tt></a></td><td style=""><a href="invpartnumber.html"><tt class="sgmltag-element">invpartnumber</tt></a></td><td style=""><a href="isbn.html"><tt class="sgmltag-element">isbn</tt></a></td></tr><tr><td style=""><a href="issn.html"><tt class="sgmltag-element">issn</tt></a></td><td style=""><a href="issuenum.html"><tt class="sgmltag-element">issuenum</tt></a></td><td style=""><a href="jobtitle.html"><tt class="sgmltag-element">jobtitle</tt></a></td></tr><tr><td style=""><a href="lineage.html"><tt class="sgmltag-element">lineage</tt></a></td><td style=""><a href="modespec.html"><tt class="sgmltag-element">modespec</tt></a></td><td style=""><a href="orgdiv.html"><tt class="sgmltag-element">orgdiv</tt></a></td></tr><tr><td style=""><a href="orgname.html"><tt class="sgmltag-element">orgname</tt></a></td><td style=""><a href="otheraddr.html"><tt class="sgmltag-element">otheraddr</tt></a></td><td style=""><a href="othername.html"><tt class="sgmltag-element">othername</tt></a></td></tr><tr><td style=""><a href="pagenums.html"><tt class="sgmltag-element">pagenums</tt></a></td><td style=""><a href="phone.html"><tt class="sgmltag-element">phone</tt></a></td><td style=""><a href="pob.html"><tt class="sgmltag-element">pob</tt></a></td></tr><tr><td style=""><a href="postcode.html"><tt class="sgmltag-element">postcode</tt></a></td><td style=""><a href="productnumber.html"><tt class="sgmltag-element">productnumber</tt></a></td><td style=""><a href="pubdate.html"><tt class="sgmltag-element">pubdate</tt></a></td></tr><tr><td style=""><a href="publishername.html"><tt class="sgmltag-element">publishername</tt></a></td><td style=""><a href="pubsnumber.html"><tt class="sgmltag-element">pubsnumber</tt></a></td><td style=""><a href="refmiscinfo.html"><tt class="sgmltag-element">refmiscinfo</tt></a></td></tr><tr><td style=""><a href="releaseinfo.html"><tt class="sgmltag-element">releaseinfo</tt></a></td><td style=""><a href="revnumber.html"><tt class="sgmltag-element">revnumber</tt></a></td><td style=""><a href="revremark.html"><tt class="sgmltag-element">revremark</tt></a></td></tr><tr><td style=""><a href="seriesvolnums.html"><tt class="sgmltag-element">seriesvolnums</tt></a></td><td style=""><a href="shortaffil.html"><tt class="sgmltag-element">shortaffil</tt></a></td><td style=""><a href="state.html"><tt class="sgmltag-element">state</tt></a></td></tr><tr><td style=""><a href="street.html"><tt class="sgmltag-element">street</tt></a></td><td style=""><a href="surname.html"><tt class="sgmltag-element">surname</tt></a></td><td style=""><a href="volumenum.html"><tt class="sgmltag-element">volumenum</tt></a></td></tr><tr><td style=""><a href="year.html"><tt class="sgmltag-element">year</tt></a></td><td style="">&nbsp;</td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="example.mix.parament"></a><h3>%example.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">calloutlist|glosslist|itemizedlist|orderedlist|segmentedlist
+		|simplelist|variablelist 
+		|literallayout|programlisting|programlistingco|screen
+		|screenco|screenshot 	|synopsis|cmdsynopsis|funcsynopsis
+                 |classsynopsis|fieldsynopsis
+                 |constructorsynopsis
+                 |destructorsynopsis
+                 |methodsynopsis  
+		|formalpara|para|simpara 		|address|blockquote
+                |graphic|graphicco|mediaobject|mediaobjectco
+                |informalequation
+		|informalexample
+                |informalfigure
+                |informaltable 
+		|indexterm         |beginpage</pre><p><b><span class="bold"><b>%example.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%example.mix; appears in:</b></span></td></tr><tr><td style=""><a href="example.html"><tt class="sgmltag-element">example</tt></a></td><td style=""><a href="informalexample.html"><tt class="sgmltag-element">informalexample</tt></a></td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="figure.mix.parament"></a><h3>%figure.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">literallayout|programlisting|programlistingco|screen
+		|screenco|screenshot 	|synopsis|cmdsynopsis|funcsynopsis
+                 |classsynopsis|fieldsynopsis
+                 |constructorsynopsis
+                 |destructorsynopsis
+                 |methodsynopsis  
+					|address|blockquote
+                |graphic|graphicco|mediaobject|mediaobjectco
+                |informalequation
+		|informalexample
+                |informalfigure
+                |informaltable 
+		|indexterm         |beginpage</pre><p><b><span class="bold"><b>%figure.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%figure.mix; appears in:</b></span></td></tr><tr><td style=""><a href="figure.html"><tt class="sgmltag-element">figure</tt></a></td><td style=""><a href="informalfigure.html"><tt class="sgmltag-element">informalfigure</tt></a></td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="footnote.mix.parament"></a><h3>%footnote.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">calloutlist|glosslist|itemizedlist|orderedlist|segmentedlist
+		|simplelist|variablelist 
+		|literallayout|programlisting|programlistingco|screen
+		|screenco|screenshot 	|synopsis|cmdsynopsis|funcsynopsis
+                 |classsynopsis|fieldsynopsis
+                 |constructorsynopsis
+                 |destructorsynopsis
+                 |methodsynopsis  
+		|formalpara|para|simpara 		|address|blockquote
+                |graphic|graphicco|mediaobject|mediaobjectco
+                |informalequation
+		|informalexample
+                |informalfigure
+                |informaltable</pre><p><b><span class="bold"><b>%footnote.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%footnote.mix; appears in:</b></span></td></tr><tr><td style=""><a href="footnote.html"><tt class="sgmltag-element">footnote</tt></a></td><td style="">&nbsp;</td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="glossdef.mix.parament"></a><h3>%glossdef.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">calloutlist|glosslist|itemizedlist|orderedlist|segmentedlist
+		|simplelist|variablelist 
+		|literallayout|programlisting|programlistingco|screen
+		|screenco|screenshot 	|synopsis|cmdsynopsis|funcsynopsis
+                 |classsynopsis|fieldsynopsis
+                 |constructorsynopsis
+                 |destructorsynopsis
+                 |methodsynopsis  
+		|formalpara|para|simpara 		|address|blockquote
+                |graphic|graphicco|mediaobject|mediaobjectco
+                |informalequation
+		|informalexample
+                |informalfigure
+                |informaltable 
+		|equation|example|figure|table 
+		|remark
+		|indexterm         |beginpage</pre><p><b><span class="bold"><b>%glossdef.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%glossdef.mix; appears in:</b></span></td></tr><tr><td style=""><a href="glossdef.html"><tt class="sgmltag-element">glossdef</tt></a></td><td style="">&nbsp;</td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="highlights.mix.parament"></a><h3>%highlights.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">calloutlist|glosslist|itemizedlist|orderedlist|segmentedlist
+		|simplelist|variablelist 		|caution|important|note|tip|warning 
+		|formalpara|para|simpara 
+		|indexterm</pre><p><b><span class="bold"><b>%highlights.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%highlights.mix; appears in:</b></span></td></tr><tr><td style=""><a href="highlights.html"><tt class="sgmltag-element">highlights</tt></a></td><td style="">&nbsp;</td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="indexdivcomponent.mix.parament"></a><h3>%indexdivcomponent.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">itemizedlist|orderedlist|variablelist|simplelist
+		|literallayout|programlisting|programlistingco|screen
+		|screenco|screenshot 	|synopsis|cmdsynopsis|funcsynopsis
+                 |classsynopsis|fieldsynopsis
+                 |constructorsynopsis
+                 |destructorsynopsis
+                 |methodsynopsis  
+		|formalpara|para|simpara 		|address|blockquote
+                |graphic|graphicco|mediaobject|mediaobjectco
+                |informalequation
+		|informalexample
+                |informalfigure
+                |informaltable 
+		|anchor|remark
+		|link|olink|ulink 
+ 		                        |beginpage</pre><p><b><span class="bold"><b>%indexdivcomponent.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%indexdivcomponent.mix; appears in:</b></span></td></tr><tr><td style=""><a href="indexdiv.html"><tt class="sgmltag-element">indexdiv</tt></a></td><td style="">&nbsp;</td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="legalnotice.mix.parament"></a><h3>%legalnotice.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">calloutlist|glosslist|itemizedlist|orderedlist|segmentedlist
+		|simplelist|variablelist 		|caution|important|note|tip|warning 
+		|literallayout|programlisting|programlistingco|screen
+		|screenco|screenshot 
+		|formalpara|para|simpara 		|blockquote
+		|indexterm         |beginpage</pre><p><b><span class="bold"><b>%legalnotice.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%legalnotice.mix; appears in:</b></span></td></tr><tr><td style=""><a href="dedication.html"><tt class="sgmltag-element">dedication</tt></a></td><td style=""><a href="legalnotice.html"><tt class="sgmltag-element">legalnotice</tt></a></td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="listpreamble.mix.parament"></a><h3>%listpreamble.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">                  	 caution|important|note|tip|warning 
+		|literallayout|programlisting|programlistingco|screen
+		|screenco|screenshot 	|synopsis|cmdsynopsis|funcsynopsis
+                 |classsynopsis|fieldsynopsis
+                 |constructorsynopsis
+                 |destructorsynopsis
+                 |methodsynopsis  
+		|formalpara|para|simpara 		|address|blockquote
+                |graphic|graphicco|mediaobject|mediaobjectco
+                |informalequation
+		|informalexample
+                |informalfigure
+                |informaltable 
+		|anchor|bridgehead|remark|highlights
+				|abstract|authorblurb|epigraph
+		
+		|indexterm         |beginpage</pre><p><b><span class="bold"><b>%listpreamble.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%listpreamble.mix; appears in:</b></span></td></tr><tr><td style=""><a href="itemizedlist.html"><tt class="sgmltag-element">itemizedlist</tt></a></td><td style=""><a href="orderedlist.html"><tt class="sgmltag-element">orderedlist</tt></a></td><td style=""><a href="variablelist.html"><tt class="sgmltag-element">variablelist</tt></a></td></tr></table></div><div class="refsect2" lang="en"><a name="mediaobject.mix.parament"></a><h3>%mediaobject.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">videoobject|audioobject|imageobject|textobject</pre><p><b><span class="bold"><b>%mediaobject.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%mediaobject.mix; appears in:</b></span></td></tr><tr><td style=""><a href="inlinemediaobject.html"><tt class="sgmltag-element">inlinemediaobject</tt></a></td><td style=""><a href="mediaobject.html"><tt class="sgmltag-element">mediaobject</tt></a></td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="ndxterm.char.mix.parament"></a><h3>%ndxterm.char.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">#PCDATA
+		|footnoteref|xref 	|abbrev|acronym|citation|citerefentry|citetitle|emphasis
+		|firstterm|foreignphrase|glossterm|footnote|phrase|orgname
+		|quote|trademark|wordasword|personname 
+		|link|olink|ulink 	|action|application
+                |classname|methodname|interfacename|exceptionname
+                |ooclass|oointerface|ooexception
+                |command|computeroutput
+		|database|email|envar|errorcode|errorname|errortype|errortext|filename
+		|function|guibutton|guiicon|guilabel|guimenu|guimenuitem
+		|guisubmenu|hardware|interface|keycap
+		|keycode|keycombo|keysym|literal|code|constant|markup|medialabel
+		|menuchoice|mousebutton|option|optional|parameter
+		|prompt|property|replaceable|returnvalue|sgmltag|structfield
+		|structname|symbol|systemitem|uri|token|type|userinput|varname
+                |nonterminal
+		
+		|anchor 	|author|authorinitials|corpauthor|corpcredit|modespec|othercredit
+		|productname|productnumber|revhistory
+		
+		|remark|subscript|superscript 	|inlinegraphic|inlinemediaobject</pre><p><b><span class="bold"><b>%ndxterm.char.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%ndxterm.char.mix; appears in:</b></span></td></tr><tr><td style=""><a href="primary.html"><tt class="sgmltag-element">primary</tt></a></td><td style=""><a href="primaryie.html"><tt class="sgmltag-element">primaryie</tt></a></td><td style=""><a href="secondary.html"><tt class="sgmltag-element">secondary</tt></a></td></tr><tr><td style=""><a href="secondaryie.html"><tt class="sgmltag-element">secondaryie</tt></a></td><td style=""><a href="see.html"><tt class="sgmltag-element">see</tt></a></td><td style=""><a href="seealso.html"><tt class="sgmltag-element">seealso</tt></a></td></tr><tr><td style=""><a href="seealsoie.html"><tt class="sgmltag-element">seealsoie</tt></a></td><td style=""><a href="seeie.html"><tt class="sgmltag-element">seeie</tt></a></td><td style=""><a href="tertiary.html"><tt class="sgmltag-element">tertiary</tt></a></td></tr><tr><td style=""><a href="tertiaryie.html"><tt class="sgmltag-element">tertiaryie</tt></a></td><td style="">&nbsp;</td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="para.char.mix.parament"></a><h3>%para.char.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">#PCDATA
+		|footnoteref|xref 	|abbrev|acronym|citation|citerefentry|citetitle|emphasis
+		|firstterm|foreignphrase|glossterm|footnote|phrase|orgname
+		|quote|trademark|wordasword|personname 
+		|link|olink|ulink 	|action|application
+                |classname|methodname|interfacename|exceptionname
+                |ooclass|oointerface|ooexception
+                |command|computeroutput
+		|database|email|envar|errorcode|errorname|errortype|errortext|filename
+		|function|guibutton|guiicon|guilabel|guimenu|guimenuitem
+		|guisubmenu|hardware|interface|keycap
+		|keycode|keycombo|keysym|literal|code|constant|markup|medialabel
+		|menuchoice|mousebutton|option|optional|parameter
+		|prompt|property|replaceable|returnvalue|sgmltag|structfield
+		|structname|symbol|systemitem|uri|token|type|userinput|varname
+                |nonterminal
+		
+		|anchor 	|author|authorinitials|corpauthor|corpcredit|modespec|othercredit
+		|productname|productnumber|revhistory
+		
+		|remark|subscript|superscript 	|inlinegraphic|inlinemediaobject|inlineequation 
+		|synopsis|cmdsynopsis|funcsynopsis
+                 |classsynopsis|fieldsynopsis
+                 |constructorsynopsis
+                 |destructorsynopsis
+                 |methodsynopsis  
+		|indexterm         |beginpage</pre><p><b><span class="bold"><b>%para.char.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%para.char.mix; appears in:</b></span></td></tr><tr><td style=""><a href="application.html"><tt class="sgmltag-element">application</tt></a></td><td style=""><a href="attribution.html"><tt class="sgmltag-element">attribution</tt></a></td><td style=""><a href="bibliomisc.html"><tt class="sgmltag-element">bibliomisc</tt></a></td></tr><tr><td style=""><a href="citation.html"><tt class="sgmltag-element">citation</tt></a></td><td style=""><a href="citetitle.html"><tt class="sgmltag-element">citetitle</tt></a></td><td style=""><a href="emphasis.html"><tt class="sgmltag-element">emphasis</tt></a></td></tr><tr><td style=""><a href="firstterm.html"><tt class="sgmltag-element">firstterm</tt></a></td><td style=""><a href="foreignphrase.html"><tt class="sgmltag-element">foreignphrase</tt></a></td><td style=""><a href="glosssee.html"><tt class="sgmltag-element">glosssee</tt></a></td></tr><tr><td style=""><a href="glossseealso.html"><tt class="sgmltag-element">glossseealso</tt></a></td><td style=""><a href="glossterm.html"><tt class="sgmltag-element">glossterm</tt></a></td><td style=""><a href="lineannotation.html"><tt class="sgmltag-element">lineannotation</tt></a></td></tr><tr><td style=""><a href="link.html"><tt class="sgmltag-element">link</tt></a></td><td style=""><a href="literallayout.html"><tt class="sgmltag-element">literallayout</tt></a></td><td style=""><a href="lotentry.html"><tt class="sgmltag-element">lotentry</tt></a></td></tr><tr><td style=""><a href="member.html"><tt class="sgmltag-element">member</tt></a></td><td style=""><a href="msgaud.html"><tt class="sgmltag-element">msgaud</tt></a></td><td style=""><a href="olink.html"><tt class="sgmltag-element">olink</tt></a></td></tr><tr><td style=""><a href="para.html"><tt class="sgmltag-element">para</tt></a></td><td style=""><a href="phrase.html"><tt class="sgmltag-element">phrase</tt></a></td><td style=""><a href="productname.html"><tt class="sgmltag-element">productname</tt></a></td></tr><tr><td style=""><a href="programlisting.html"><tt class="sgmltag-element">programlisting</tt></a></td><td style=""><a href="quote.html"><tt class="sgmltag-element">quote</tt></a></td><td style=""><a href="refentrytitle.html"><tt class="sgmltag-element">refentrytitle</tt></a></td></tr><tr><td style=""><a href="remark.html"><tt class="sgmltag-element">remark</tt></a></td><td style=""><a href="screen.html"><tt class="sgmltag-element">screen</tt></a></td><td style=""><a href="screeninfo.html"><tt class="sgmltag-element">screeninfo</tt></a></td></tr><tr><td style=""><a href="seg.html"><tt class="sgmltag-element">seg</tt></a></td><td style=""><a href="simpara.html"><tt class="sgmltag-element">simpara</tt></a></td><td style=""><a href="synopsis.html"><tt class="sgmltag-element">synopsis</tt></a></td></tr><tr><td style=""><a href="td.html"><tt class="sgmltag-element">td</tt></a></td><td style=""><a href="term.html"><tt class="sgmltag-element">term</tt></a></td><td style=""><a href="th.html"><tt class="sgmltag-element">th</tt></a></td></tr><tr><td style=""><a href="tocback.html"><tt class="sgmltag-element">tocback</tt></a></td><td style=""><a href="tocentry.html"><tt class="sgmltag-element">tocentry</tt></a></td><td style=""><a href="tocfront.html"><tt class="sgmltag-element">tocfront</tt></a></td></tr><tr><td style=""><a href="ulink.html"><tt class="sgmltag-element">ulink</tt></a></td><td style="">&nbsp;</td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="para.mix.parament"></a><h3>%para.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">calloutlist|glosslist|itemizedlist|orderedlist|segmentedlist
+		|simplelist|variablelist            |caution|important|note|tip|warning 
+		|literallayout|programlisting|programlistingco|screen
+		|screenco|screenshot 
+					|address|blockquote
+                |graphic|graphicco|mediaobject|mediaobjectco
+                |informalequation
+		|informalexample
+                |informalfigure
+                |informaltable 
+		|equation|example|figure|table</pre><p><b><span class="bold"><b>%para.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%para.mix; appears in:</b></span></td></tr><tr><td style=""><a href="para.html"><tt class="sgmltag-element">para</tt></a></td><td style="">&nbsp;</td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="partcontent.mix.parament"></a><h3>%partcontent.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">appendix |chapter |toc|lot|index|glossary|bibliography
+				|article 
+		|preface|refentry |reference</pre><p><b><span class="bold"><b>%partcontent.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%partcontent.mix; appears in:</b></span></td></tr><tr><td style=""><a href="part.html"><tt class="sgmltag-element">part</tt></a></td><td style="">&nbsp;</td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="person.ident.mix.parament"></a><h3>%person.ident.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">honorific|firstname|surname|lineage|othername|affiliation
+		|authorblurb|contrib</pre><p><b><span class="bold"><b>%person.ident.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%person.ident.mix; appears in:</b></span></td></tr><tr><td style=""><a href="address.html"><tt class="sgmltag-element">address</tt></a></td><td style=""><a href="author.html"><tt class="sgmltag-element">author</tt></a></td><td style=""><a href="editor.html"><tt class="sgmltag-element">editor</tt></a></td></tr><tr><td style=""><a href="othercredit.html"><tt class="sgmltag-element">othercredit</tt></a></td><td style="">&nbsp;</td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="qandaset.mix.parament"></a><h3>%qandaset.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">calloutlist|glosslist|itemizedlist|orderedlist|segmentedlist
+		|simplelist|variablelist            |caution|important|note|tip|warning 
+		|literallayout|programlisting|programlistingco|screen
+		|screenco|screenshot 	|synopsis|cmdsynopsis|funcsynopsis
+                 |classsynopsis|fieldsynopsis
+                 |constructorsynopsis
+                 |destructorsynopsis
+                 |methodsynopsis  
+		|formalpara|para|simpara 		|address|blockquote
+                |graphic|graphicco|mediaobject|mediaobjectco
+                |informalequation
+		|informalexample
+                |informalfigure
+                |informaltable 
+		|equation|example|figure|table 		|procedure
+		|anchor|bridgehead|remark|highlights
+		
+		|indexterm</pre><p><b><span class="bold"><b>%qandaset.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%qandaset.mix; appears in:</b></span></td></tr><tr><td style=""><a href="answer.html"><tt class="sgmltag-element">answer</tt></a></td><td style=""><a href="qandadiv.html"><tt class="sgmltag-element">qandadiv</tt></a></td><td style=""><a href="qandaset.html"><tt class="sgmltag-element">qandaset</tt></a></td></tr><tr><td style=""><a href="question.html"><tt class="sgmltag-element">question</tt></a></td><td style="">&nbsp;</td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="refclass.char.mix.parament"></a><h3>%refclass.char.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">#PCDATA
+		|application</pre><p><b><span class="bold"><b>%refclass.char.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%refclass.char.mix; appears in:</b></span></td></tr><tr><td style=""><a href="refclass.html"><tt class="sgmltag-element">refclass</tt></a></td><td style="">&nbsp;</td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="refcomponent.mix.parament"></a><h3>%refcomponent.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">calloutlist|glosslist|itemizedlist|orderedlist|segmentedlist
+		|simplelist|variablelist 		|caution|important|note|tip|warning 
+		|literallayout|programlisting|programlistingco|screen
+		|screenco|screenshot 	|synopsis|cmdsynopsis|funcsynopsis
+                 |classsynopsis|fieldsynopsis
+                 |constructorsynopsis
+                 |destructorsynopsis
+                 |methodsynopsis  
+		|formalpara|para|simpara 		|address|blockquote
+                |graphic|graphicco|mediaobject|mediaobjectco
+                |informalequation
+		|informalexample
+                |informalfigure
+                |informaltable 
+		|equation|example|figure|table 		|msgset|procedure|sidebar|qandaset|task
+                 |productionset|constraintdef
+                 
+		|anchor|bridgehead|remark|highlights
+				|abstract|authorblurb|epigraph
+		
+		|indexterm         |beginpage</pre><p><b><span class="bold"><b>%refcomponent.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%refcomponent.mix; appears in:</b></span></td></tr><tr><td style=""><a href="refsect1.html"><tt class="sgmltag-element">refsect1</tt></a></td><td style=""><a href="refsect2.html"><tt class="sgmltag-element">refsect2</tt></a></td><td style=""><a href="refsect3.html"><tt class="sgmltag-element">refsect3</tt></a></td></tr><tr><td style=""><a href="refsection.html"><tt class="sgmltag-element">refsection</tt></a></td><td style=""><a href="refsynopsisdiv.html"><tt class="sgmltag-element">refsynopsisdiv</tt></a></td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="refinline.char.mix.parament"></a><h3>%refinline.char.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">#PCDATA
+		|footnoteref|xref 	|abbrev|acronym|citation|citerefentry|citetitle|emphasis
+		|firstterm|foreignphrase|glossterm|footnote|phrase|orgname
+		|quote|trademark|wordasword|personname 
+		|link|olink|ulink 	|action|application
+                |classname|methodname|interfacename|exceptionname
+                |ooclass|oointerface|ooexception
+                |command|computeroutput
+		|database|email|envar|errorcode|errorname|errortype|errortext|filename
+		|function|guibutton|guiicon|guilabel|guimenu|guimenuitem
+		|guisubmenu|hardware|interface|keycap
+		|keycode|keycombo|keysym|literal|code|constant|markup|medialabel
+		|menuchoice|mousebutton|option|optional|parameter
+		|prompt|property|replaceable|returnvalue|sgmltag|structfield
+		|structname|symbol|systemitem|uri|token|type|userinput|varname
+                |nonterminal
+		
+		|anchor 	|author|authorinitials|corpauthor|corpcredit|modespec|othercredit
+		|productname|productnumber|revhistory
+		
+		|remark|subscript|superscript 
+		|indexterm         |beginpage</pre><p><b><span class="bold"><b>%refinline.char.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%refinline.char.mix; appears in:</b></span></td></tr><tr><td style=""><a href="refpurpose.html"><tt class="sgmltag-element">refpurpose</tt></a></td><td style="">&nbsp;</td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="refname.char.mix.parament"></a><h3>%refname.char.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">#PCDATA
+		|action|application
+                |classname|methodname|interfacename|exceptionname
+                |ooclass|oointerface|ooexception
+                |command|computeroutput
+		|database|email|envar|errorcode|errorname|errortype|errortext|filename
+		|function|guibutton|guiicon|guilabel|guimenu|guimenuitem
+		|guisubmenu|hardware|interface|keycap
+		|keycode|keycombo|keysym|literal|code|constant|markup|medialabel
+		|menuchoice|mousebutton|option|optional|parameter
+		|prompt|property|replaceable|returnvalue|sgmltag|structfield
+		|structname|symbol|systemitem|uri|token|type|userinput|varname
+                |nonterminal</pre><p><b><span class="bold"><b>%refname.char.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%refname.char.mix; appears in:</b></span></td></tr><tr><td style=""><a href="refdescriptor.html"><tt class="sgmltag-element">refdescriptor</tt></a></td><td style=""><a href="refname.html"><tt class="sgmltag-element">refname</tt></a></td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="revdescription.mix.parament"></a><h3>%revdescription.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">calloutlist|glosslist|itemizedlist|orderedlist|segmentedlist
+		|simplelist|variablelist 		|caution|important|note|tip|warning 
+		|literallayout|programlisting|programlistingco|screen
+		|screenco|screenshot 	|synopsis|cmdsynopsis|funcsynopsis
+                 |classsynopsis|fieldsynopsis
+                 |constructorsynopsis
+                 |destructorsynopsis
+                 |methodsynopsis  
+		|formalpara|para|simpara 		|address|blockquote
+                |graphic|graphicco|mediaobject|mediaobjectco
+                |informalequation
+		|informalexample
+                |informalfigure
+                |informaltable 
+		|equation|example|figure|table 		|procedure
+		|anchor|bridgehead|remark|highlights
+		
+		|indexterm</pre><p><b><span class="bold"><b>%revdescription.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%revdescription.mix; appears in:</b></span></td></tr><tr><td style=""><a href="revdescription.html"><tt class="sgmltag-element">revdescription</tt></a></td><td style="">&nbsp;</td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="sidebar.mix.parament"></a><h3>%sidebar.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">calloutlist|glosslist|itemizedlist|orderedlist|segmentedlist
+		|simplelist|variablelist 		|caution|important|note|tip|warning 
+		|literallayout|programlisting|programlistingco|screen
+		|screenco|screenshot 	|synopsis|cmdsynopsis|funcsynopsis
+                 |classsynopsis|fieldsynopsis
+                 |constructorsynopsis
+                 |destructorsynopsis
+                 |methodsynopsis  
+		|formalpara|para|simpara 		|address|blockquote
+                |graphic|graphicco|mediaobject|mediaobjectco
+                |informalequation
+		|informalexample
+                |informalfigure
+                |informaltable 
+		|equation|example|figure|table 		|procedure
+		|anchor|bridgehead|remark|highlights
+		
+		|indexterm         |beginpage</pre><p><b><span class="bold"><b>%sidebar.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%sidebar.mix; appears in:</b></span></td></tr><tr><td style=""><a href="sidebar.html"><tt class="sgmltag-element">sidebar</tt></a></td><td style="">&nbsp;</td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="smallcptr.char.mix.parament"></a><h3>%smallcptr.char.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">#PCDATA
+					|replaceable
+					|inlinegraphic|inlinemediaobject
+		|indexterm         |beginpage</pre><p><b><span class="bold"><b>%smallcptr.char.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%smallcptr.char.mix; appears in:</b></span></td></tr><tr><td style=""><a href="accel.html"><tt class="sgmltag-element">accel</tt></a></td><td style=""><a href="classname.html"><tt class="sgmltag-element">classname</tt></a></td><td style=""><a href="constant.html"><tt class="sgmltag-element">constant</tt></a></td></tr><tr><td style=""><a href="envar.html"><tt class="sgmltag-element">envar</tt></a></td><td style=""><a href="errorcode.html"><tt class="sgmltag-element">errorcode</tt></a></td><td style=""><a href="errorname.html"><tt class="sgmltag-element">errorname</tt></a></td></tr><tr><td style=""><a href="errortext.html"><tt class="sgmltag-element">errortext</tt></a></td><td style=""><a href="errortype.html"><tt class="sgmltag-element">errortype</tt></a></td><td style=""><a href="exceptionname.html"><tt class="sgmltag-element">exceptionname</tt></a></td></tr><tr><td style=""><a href="guibutton.html"><tt class="sgmltag-element">guibutton</tt></a></td><td style=""><a href="guiicon.html"><tt class="sgmltag-element">guiicon</tt></a></td><td style=""><a href="guilabel.html"><tt class="sgmltag-element">guilabel</tt></a></td></tr><tr><td style=""><a href="guimenu.html"><tt class="sgmltag-element">guimenu</tt></a></td><td style=""><a href="guimenuitem.html"><tt class="sgmltag-element">guimenuitem</tt></a></td><td style=""><a href="guisubmenu.html"><tt class="sgmltag-element">guisubmenu</tt></a></td></tr><tr><td style=""><a href="initializer.html"><tt class="sgmltag-element">initializer</tt></a></td><td style=""><a href="interface.html"><tt class="sgmltag-element">interface</tt></a></td><td style=""><a href="keycode.html"><tt class="sgmltag-element">keycode</tt></a></td></tr><tr><td style=""><a href="keysym.html"><tt class="sgmltag-element">keysym</tt></a></td><td style=""><a href="markup.html"><tt class="sgmltag-element">markup</tt></a></td><td style=""><a href="medialabel.html"><tt class="sgmltag-element">medialabel</tt></a></td></tr><tr><td style=""><a href="methodname.html"><tt class="sgmltag-element">methodname</tt></a></td><td style=""><a href="modifier.html"><tt class="sgmltag-element">modifier</tt></a></td><td style=""><a href="mousebutton.html"><tt class="sgmltag-element">mousebutton</tt></a></td></tr><tr><td style=""><a href="msglevel.html"><tt class="sgmltag-element">msglevel</tt></a></td><td style=""><a href="msgorig.html"><tt class="sgmltag-element">msgorig</tt></a></td><td style=""><a href="prompt.html"><tt class="sgmltag-element">prompt</tt></a></td></tr><tr><td style=""><a href="returnvalue.html"><tt class="sgmltag-element">returnvalue</tt></a></td><td style=""><a href="sgmltag.html"><tt class="sgmltag-element">sgmltag</tt></a></td><td style=""><a href="structfield.html"><tt class="sgmltag-element">structfield</tt></a></td></tr><tr><td style=""><a href="structname.html"><tt class="sgmltag-element">structname</tt></a></td><td style=""><a href="symbol.html"><tt class="sgmltag-element">symbol</tt></a></td><td style=""><a href="token.html"><tt class="sgmltag-element">token</tt></a></td></tr><tr><td style=""><a href="type.html"><tt class="sgmltag-element">type</tt></a></td><td style=""><a href="uri.html"><tt class="sgmltag-element">uri</tt></a></td><td style=""><a href="varname.html"><tt class="sgmltag-element">varname</tt></a></td></tr></table></div><div class="refsect2" lang="en"><a name="textobject.mix.parament"></a><h3>%textobject.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">calloutlist|glosslist|itemizedlist|orderedlist|segmentedlist
+		|simplelist|variablelist 		|caution|important|note|tip|warning 
+		|literallayout|programlisting|programlistingco|screen
+		|screenco|screenshot 
+		|formalpara|para|simpara 		|blockquote</pre><p><b><span class="bold"><b>%textobject.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%textobject.mix; appears in:</b></span></td></tr><tr><td style=""><a href="caption.html"><tt class="sgmltag-element">caption</tt></a></td><td style=""><a href="colophon.html"><tt class="sgmltag-element">colophon</tt></a></td><td style=""><a href="textobject.html"><tt class="sgmltag-element">textobject</tt></a></td></tr></table></div><div class="refsect2" lang="en"><a name="title.char.mix.parament"></a><h3>%title.char.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">#PCDATA
+		|footnoteref|xref 	|abbrev|acronym|citation|citerefentry|citetitle|emphasis
+		|firstterm|foreignphrase|glossterm|footnote|phrase|orgname
+		|quote|trademark|wordasword|personname 
+		|link|olink|ulink 	|action|application
+                |classname|methodname|interfacename|exceptionname
+                |ooclass|oointerface|ooexception
+                |command|computeroutput
+		|database|email|envar|errorcode|errorname|errortype|errortext|filename
+		|function|guibutton|guiicon|guilabel|guimenu|guimenuitem
+		|guisubmenu|hardware|interface|keycap
+		|keycode|keycombo|keysym|literal|code|constant|markup|medialabel
+		|menuchoice|mousebutton|option|optional|parameter
+		|prompt|property|replaceable|returnvalue|sgmltag|structfield
+		|structname|symbol|systemitem|uri|token|type|userinput|varname
+                |nonterminal
+		
+		|anchor 	|author|authorinitials|corpauthor|corpcredit|modespec|othercredit
+		|productname|productnumber|revhistory
+		
+		|remark|subscript|superscript 	|inlinegraphic|inlinemediaobject|inlineequation 
+		|indexterm</pre><p><b><span class="bold"><b>%title.char.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%title.char.mix; appears in:</b></span></td></tr><tr><td style=""><a href="bridgehead.html"><tt class="sgmltag-element">bridgehead</tt></a></td><td style=""><a href="segtitle.html"><tt class="sgmltag-element">segtitle</tt></a></td><td style=""><a href="subtitle.html"><tt class="sgmltag-element">subtitle</tt></a></td></tr><tr><td style=""><a href="title.html"><tt class="sgmltag-element">title</tt></a></td><td style=""><a href="titleabbrev.html"><tt class="sgmltag-element">titleabbrev</tt></a></td><td style="">&nbsp;</td></tr></table></div><div class="refsect2" lang="en"><a name="ubiq.mix.parament"></a><h3>%ubiq.mix;</h3><p><b>Parameter entity content:</b></p><p>The replacement text for this entity is empty.</p></div><div class="refsect2" lang="en"><a name="word.char.mix.parament"></a><h3>%word.char.mix;</h3><p><b>Parameter entity content:</b></p><pre class="synopsis">#PCDATA
+					|acronym|emphasis|trademark
+		|link|olink|ulink 
+		|anchor 
+		|remark|subscript|superscript 	|inlinegraphic|inlinemediaobject
+		|indexterm         |beginpage</pre><p><b><span class="bold"><b>%word.char.mix; appears in:</b></span></b></p><table border="0" width="100%" summary="Attributes"><tr><td style="" colspan="3" align="left"><span class="bold"><b>%word.char.mix; appears in:</b></span></td></tr><tr><td style=""><a href="abbrev.html"><tt class="sgmltag-element">abbrev</tt></a></td><td style=""><a href="acronym.html"><tt class="sgmltag-element">acronym</tt></a></td><td style=""><a href="label.html"><tt class="sgmltag-element">label</tt></a></td></tr><tr><td style=""><a href="manvolnum.html"><tt class="sgmltag-element">manvolnum</tt></a></td><td style=""><a href="wordasword.html"><tt class="sgmltag-element">wordasword</tt></a></td><td style="">&nbsp;</td></tr></table></div></div></div><div class="navfooter"><table width="100%" summary="Navigation table"><tr><td width="40%" align="left"><a title="local.*.mix Parameter Entities" href="pe-l-mix.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;</td><td width="20%" align="center"><a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a></td><td width="40%" align="right">&nbsp;<a title="*.module Parameter Entities" href="pe-module.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td></tr><tr><td width="40%" align="left">local.*.mix Parameter Entities&nbsp;</td><td width="20%" align="center"><a title="DocBook Parameter Entity Reference" href="ref-paraments.html"><img src="figures/nav-up.png" alt="Up" border="0"></a></td><td width="40%" align="right">&nbsp;*.module Parameter Entities</td></tr></table></div><div class="copyrightfooter"><p><a href="dbcpyright.html">Copyright</a> &copy; 1999, 2000, 2001, 2002 <a href="http://www.oreilly.com/">O'Reilly &amp; Associates, Inc.</a> All rights reserved.</p></div></body></html>

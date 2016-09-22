@@ -1,0 +1,16 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='tc'>
+<info>
+<title>OASIS DocBook Technical Committee</title>
+</info>
+
+<para>DocBook is
+maintained by the
+<link xlink:href="mailto:docbook-tc@oasis-open.org">DocBook Technical
+Committee</link>
+of <link xlink:href="http://www.oasis-open.org/">OASIS</link>.
+</para>
+
+</article>

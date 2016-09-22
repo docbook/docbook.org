@@ -1,0 +1,190 @@
+DocBook Technical Committee Meeting Minutes: 12 October 2005
+=============================================================
+
+The DocBook Technical Committee met on Wednesday, 12 October 2005 at
+05:00p EDT (02:00p PDT, 21:00GMT, 22:00BST, 23:00CEST, 06:00JST+,
+02:30a India+) for 60 minutes.
+
+Agenda
+
+1. Roll call
+
+Present: Steve Cogorno, Gary Cornelius, Paul Grosso, 
+Dick Hamilton, Nancy Harrison, Scott Hudson, Mark Johnson, Jirka Kosek, 
+Larry Rowland, Bob Stayton, Norman Walsh
+
+Absent: Adam Di Carlo
+
+2. Accepted the minutes[1] of the previous meeting (with Paul's
+   spelling correction).
+
+3. Next meeting: 16 November 2005
+     Time change next month.
+
+     Several members will be attending XML2005.
+
+ACTION: Norm to locate a conference room if possible.
+
+4. Review of the agenda.
+
+Add item 7b: namespaces for additional modules.
+
+5. Review of open action items
+
+   a. Bob to ask each of the requestors again about three of
+      the current RFEs (1190435, 1190436, 1194196).
+      COMPLETED.
+
+   b. Norm to write a how-to on converting 
+      documents from version 4 to 5.
+      COMPLETED.
+
+   c. Jirka to write a description of the current state of tools
+      that work with 5.0 and RNG.
+      COMPLETED.
+
+   d. Dick to read the current DocBook 5
+      spec to make sure it is all ok.
+      COMPLETED.
+
+   e. Dick to make sure the pending RFEs are in the current schema.
+      COMPLETED.
+
+   f. Norm to make sure the namespace URI works with RDDL so
+      users get something back if they query the address.
+      COMPLETED.
+
+   g.  Norm to follow up with the submittor of 1245781  
+       new <publication> element.
+       COMPLETED.
+
+
+6.  DTD version 4.5 Public Review Draft.
+
+The 60 day review period ended 3 October, with no
+comments submitted.  Resolved to pursue this
+as an OASIS standard.
+
+ACTION: Norm to pursue the process of making this
+an OASIS standard.
+
+7.  Next steps for DocBook 5.
+
+Now have a how-to from Jirka, and Dick reviewed the spec.
+There was some discussion about whether any DITA-like
+features should be considered.  We decided that such
+a discussion will take some time, and will be considered
+for 5.1.
+
+Norm proposed to publish the current draft as a committee
+working draft version 5.0 Beta 1.  Unanimously approved.
+
+ACTION: Norm to publish on OASIS and docbook.org.
+He will create a package and ask members via email
+about locations and such.
+
+Jirka will be updating the how-to on docbook.org, and
+will request that new version be put up on the OASIS site.
+
+7b.  DocBook modules in namespaces?
+
+Should we put DocBook modules in namespaces, now that
+we have a namespace for DocBook?
+There was general agreement that the existing elements
+in DocBook 5.0 should be in the DocBook namespace, and
+not separated into their own or no namespace.
+We will consider using namespaces for newly proposed
+modules.
+
+8. Review of Requests for Enhancement
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;;
+      group_id=21935&atid=384107&aid=XXXX
+
+      1190435 Add rule tag 
+      
+The Committee felt that this example was too specialized,
+that other people would want to handle rules in different
+ways, and there was no consensus on a specific
+content model.  One suggestion was to use variablelist
+with role, or section with role.  Or implement it
+as an extension.  Request declined.
+
+      1190436 Add requirement tag 
+
+The Committee also felt that this example was too
+specialized, and that requirements could be handled 
+in different ways in different contexts.  Larry pointed
+out that the role attribute permits the specialization
+of any element that might be needed for a given style
+of recording requirements, and that the role mechanism
+is more flexible than a fixed content model.
+Request declined.
+
+      1194196 <qandaset> and <qandadiv> 
+
+The Committee has not received a real use case
+yet.  We will close this request, and the submitter
+can reopen it if they can supply more information.
+
+      1237762 Allow para+ in formalpara 
+
+The Committee recognized that there might be a need
+for a block container with a title that is not a
+section.  But that would probably be a more general purpose
+element containing more than just para.  For now,
+one could use sidebar, admonition, or section.  It was felt
+that presentation of a formalpara with more than one
+para would have to be customized to indicate that any
+paras after the first were children of the formalpara and
+not just a following sibling.
+We will close this request, and the submitter
+can reopen it if they can supply a better use case.
+
+      1245781  new <publication> element  
+
+Norm communicated with the submitter and resolved
+that existing elements suffice for this need.
+Request declined.
+
+      1264002  Add Security Classification tags  
+
+We decided at the last meeting that the existing 
+security attributes cover this need.
+
+      1306027  Support for annotations in synopsis elements  
+
+The Java language has added java annotations, and Norm
+wondered how these would be marked up in a synopsis.
+The C# language also has annotations, Jirka pointed out.
+
+ACTION: Norm to investigate this issue some more.
+
+     The following RFEs are awaiting action items
+
+      413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+      431411 RFE 70: add generic linking capability (Norm)
+      565637 Associate non-inline image with link (Norm, generic linking)
+
+These are all covered by 5.0, so these can be closed.
+
+     The following RFEs are identified as V5.0 or later
+
+      1097183 Allow Task as a sibling of sections 
+      1084491 Add address, orgname, orgdiv to corpauthor, corpcredit, etc. 
+      974285 Check floatstyle/float attributes
+      958393 remove default class value from productname 
+      531851 Remove inline person name elements
+      532088 Remove RevHistory from qandaentry
+
+ACTION: Norm to review these for the next meeting to
+see if they are covered in 5.0.
+
+Meeting adjourned at 6:00 EST.
+
+Bob Stayton
+Sagehill Enterprises
+DocBook Consulting
+bobs@sagehill.net

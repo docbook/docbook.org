@@ -1,0 +1,59 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0" xml:id='meetups'>
+<info>
+<title>DocBook meetups</title>
+</info>
+
+<para>There are no meetups scheduled at the moment. The proposed meeting
+at XML Prague has been withdrawn.</para>
+
+<para>If you have suggestions for a meetup, please
+<link xlink:href="mailto:ndw@nwalsh.com">tell me</link>.</para>
+</article>
+
+<!--
+<para>The DocBook Technical Committee is considering holding a one day
+workshop/conference/meetup, call it what you like, on Friday, 10
+February in Prague, CZ colocated with the <link xlink:href="http://xmlprague.cz/">XML
+Prague</link> conference.</para>
+
+<para>We haven't really worked out any of the details yet, but there
+are lots of possibilities. In no particular order:</para>
+
+<itemizedlist>
+<listitem>
+<para>What's new in DocBook 5.1?</para>
+</listitem>
+<listitem>
+<para>DocBook for topic-oriented authoring (topics and assemblies in DocBook)</para>
+</listitem>
+<listitem>
+<para>Case studies</para>
+</listitem>
+<listitem>
+<para>Q&amp;A/Ask the experts</para>
+</listitem>
+<listitem>
+<para>What's new in the stylesheets</para>
+</listitem>
+<listitem>
+<para>DocBook for EPUB3</para>
+</listitem>
+<listitem>
+<para>Customizing and extending DocBook: markup and tools</para>
+</listitem>
+<listitem>
+<para><replaceable>Insert your favorite topic here</replaceable></para>
+</listitem>
+</itemizedlist>
+
+<para>We realize that Prague is kind of a hike for users outside of
+Europe, but in fairness, anywhere we pick is a hike for someone. And
+as I've burbled effusively about the XML Prague conference before, I
+assure you that it's worth the trip.</para>
+
+<para>So, if we do it, will you come? And if you will, what topics
+would you like on the agenda and would you like to present on
+something you've been working on?</para>
+-->

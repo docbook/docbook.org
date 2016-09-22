@@ -1,0 +1,268 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>The DocBook Document Type</title><link rel="stylesheet" href="http://www.oasis-open.org/spectools/css/oasis-wd.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.62.4"><meta name="description" content="Abstract DocBook is general purpose  and&#xA; document type&#xA;particularly well suited to books and papers about computer hardware&#xA;and software (though it is by no means limited to these applications).&#xA; The Version 4.3 release is a maintainance release. It introduces&#xA;no backwards-incompatible changes."><style type="text/css">
+    span.paranum { color: #7F7F7F;
+                   font-style: italic;
+                   font-family: monospace;
+                 }
+  </style></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article" lang="en"><div class="titlepage"><p class="logo"><a href="http://www.oasis-open.org/"><img src="http://www.oasis-open.org/spectools/images/oasis.png" alt="OASIS" border="0"></a></p><div><h1 class="title"><a name="d0e1"></a>The DocBook Document Type</h1></div><div><h2>Working Draft&nbsp;4.3CR1,&nbsp;02 Dec 2003</h2></div><div><dl><dt><span class="docid-heading">Document identifier:</span></dt><dd><p>wd-docbook-docbook-4.3CR1 (<a href="wd-docbook-docbook-4.3CR1.xml" target="_top">XML</a>, <a href="wd-docbook-docbook-4.3CR1.html" target="_top">HTML</a>, <a href="wd-docbook-docbook-4.3CR1.pdf" target="_top">PDF</a>)</p></dd></dl></div><div><!-- 
+$Id: docbook.xml,v 1.15 2003/12/02 16:34:28 nwalsh Exp $
+ --></div><div></div><div></div><div></div><div><dl><dt><span class="loc-heading">Location:</span></dt><dd><p><a href="http://docbook.org/specs">http://docbook.org/specs</a></p></dd></dl></div><div><dl><dt><span class="editor-heading">Editor:</span></dt><dd><p><span class="firstname">Norman</span> <span class="surname">Walsh</span>, Sun Microsystems, Inc.&nbsp;<tt class="email">&lt;<a href="mailto:Norman.Walsh@Sun.COM">Norman.Walsh@Sun.COM</a>&gt;</tt></p></dd></dl></div><div><dl><dt><a name="d0e59"></a><span class="abstract-heading">Abstract:</span></dt><dd><p>DocBook is general purpose [<a href="#xml-rec"><span class="abbrev">XML</span></a>] and
+[<a href="#iso8879"><span class="abbrev">SGML</span></a>] document type
+particularly well suited to books and papers about computer hardware
+and software (though it is by no means limited to these applications).
+</p><p>The Version 4.3 release is a maintainance release. It introduces
+no backwards-incompatible changes.</p></dd></dl></div><div><dl><dt><a name="d0e71"></a><span class="status-heading">Status:</span></dt><dd><p>This Working Draft was approved for publication by the
+OASIS DocBook Technical Committee. It represents the
+consensus of the committee.
+</p><p>Please send comments on this specification to the
+<tt class="email">&lt;<a href="mailto:docbook@lists.oasis-open.org">docbook@lists.oasis-open.org</a>&gt;</tt> list. To subscribe, send
+an email message to
+<tt class="email">&lt;<a href="mailto:docbook-request@lists.oasis-open.org">docbook-request@lists.oasis-open.org</a>&gt;</tt> with the word
+"<span class="quote"><tt class="literal">subscribe</tt></span>" as the body of the
+message.
+</p><p>The errata page for this specification is at
+<a href="http://docbook.org/specs/docbook-errata.html" target="_top">http://docbook.org/specs/docbook-errata.html</a>.
+</p></dd></dl></div><div><p class="copyright">Copyright &copy; 2001, 2002, 2003 
+The Organization for the Advancement of Structured Information
+Standards [OASIS]. All Rights Reserved.
+</p></div><hr></div><div class="toc"><h2>Table of Contents</h2><dl><dt><span class="section"><a href="#s.intro">1. Introduction</a></span></dt><dt><span class="section"><a href="#s.terminology">2. Terminology</a></span></dt><dt><span class="section"><a href="#docbook">3. The DocBook Document Type V4.3</a></span></dt><dd><dl><dt><span class="section"><a href="#s.cr1">3.1. Changes in DocBook V4.3CR1</a></span></dt><dt><span class="section"><a href="#s.b5">3.2. Changes in DocBook V4.3b5</a></span></dt><dt><span class="section"><a href="#s.b4">3.3. Changes in DocBook V4.3b4</a></span></dt><dt><span class="section"><a href="#s.b3">3.4. Changes in DocBook V4.3b3</a></span></dt><dt><span class="section"><a href="#s.b2">3.5. Changes in DocBook V4.3b2</a></span></dt></dl></dd><dt><span class="section"><a href="#d0e547">4. Release Notes</a></span></dt><dt><span class="section"><a href="#docbook.v5">5. Changes Proposed for DocBook V5.0</a></span></dt><dt><span class="section"><a href="#docbook.v6">6. Changes Proposed for DocBook V6.0</a></span></dt></dl><h3>Appendixes</h3><dl><dt><span class="appendix"><a href="#a.committee">A. OASIS DocBook Technical Committee (Non-Normative)</a></span></dt><dt><span class="appendix"><a href="#a.notices">B. Notices</a></span></dt><dt><span class="appendix"><a href="#a.ipr">C. Intellectual Property Rights</a></span></dt><dt><span class="appendix"><a href="#a.revhistory">D. Revision History</a></span></dt><dt><span class="bibliography"><a href="#bibl">References</a></span></dt></dl></div><hr><div class="section" lang="en"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="s.intro"></a>1.&nbsp;Introduction</h2></div></div><p>DocBook is general purpose XML and SGML document type
+particularly well suited to books and papers about computer hardware
+and software (though it is by no means limited to these applications).
+</p><p>The <a href="mailto:docbook-tc@oasis-open.org" target="_top">DocBook
+Technical Committee</a> maintains the DocBook schema. DocBook is
+officially available as a Document Type Definition (DTD) for
+both
+<a href="http://xml.coverpages.org/xmlIntro.html" target="_top">XML</a> and
+<a href="http://xml.coverpages.org/general.html#overview" target="_top">SGML</a>.
+It is unofficially available in other forms as well.</p><p>The Version 4.2 release is a maintainance release. It introduces
+no backwards-incompatible changes. All valid DocBook 4.1 documents are
+also valid DocBook 4.2 documents.</p><p>The DocBook Technical Committee welcomes bug reports and
+requests for enhancement (RFEs) from the user community. The current list
+of outstanding requests is available through the
+<a href="http://sourceforge.net/" target="_top">SourceForge</a>
+<a href="http://sourceforge.net/tracker//?atid=384107&amp;group_id=21935&amp;func=browse" target="_top">tracker</a>
+interface. This is also the preferred mechanism for submitting new requests.
+Old RFEs, from a previous legacy tracking system, are
+<a href="http://www.oasis-open.org/docbook/old-rfes.html" target="_top">archived</a>
+for reference.</p></div><div class="section" lang="en"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="s.terminology"></a>2.&nbsp;Terminology</h2></div></div><p>The key words <i class="glossterm">must</i>, <i class="glossterm">must
+not</i>, <i class="glossterm">required</i>,
+<i class="glossterm">shall</i>, <i class="glossterm">shall not</i>,
+<i class="glossterm">should</i>, <i class="glossterm">should not</i>,
+<i class="glossterm">recommended</i>, <i class="glossterm">may</i>, and
+<i class="glossterm">optional</i> in this Working Draft are to be
+interpreted as described in [<a href="#rfc2119"><span class="abbrev">RFC 2119</span></a>]. Note that for
+reasons of style, these words are not capitalized in this
+document.</p></div><div class="section" lang="en"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="docbook"></a>3.&nbsp;The DocBook Document Type V4.3</h2></div></div><p>The DocBook document type is distributed for
+<a href="http://docbook.org/xml/" target="_top">XML</a> and
+<a href="http://docbook.org/sgml/" target="_top">SGML</a>
+from the
+<a href="http://www.oasis-open.org/docbook/" target="_top">DocBook site</a> at
+<a href="http://www.oasis-open.org/" target="_top">OASIS</a>. DocBook is also available from
+the mirror on
+<a href="http://docbook.org/" target="_top">http://docbook.org/</a>.
+</p><div class="section" lang="en"><div class="titlepage"><div><h3 class="title"><a name="s.cr1"></a>3.1.&nbsp;Changes in DocBook V4.3CR1</h3></div></div><p>There are no backwards-incompatible changes in this release.
+</p><p>Per the decision at the
+<a href="http://lists.oasis-open.org/archives/docbook/200311/msg00016.html" target="_top">19 Nov 2003</a>
+Technical Committee meeting, DocBook V4.3b5 is republished as DocBook
+V4.3CR1 (Candidate Release 1). There have been no technical changes since V4.3b5.</p></div><div class="section" lang="en"><div class="titlepage"><div><h3 class="title"><a name="s.b5"></a>3.2.&nbsp;Changes in DocBook V4.3b5</h3></div></div><p>There are no backwards-incompatible changes in this release.
+</p><p>Each of the changes made between DocBook V4.2b4 and DocBook XML V4.3b5
+is summarized here. For complete details, consult the individual RFEs and
+the <a href="http://docbook.org/meetings" target="_top">meeting minutes</a>.</p><div class="section" lang="en"><div class="titlepage"><div><h4 class="title"><a name="sb5.bugs"></a>3.2.1.&nbsp;Bug Fixes</h4></div></div><div class="itemizedlist"><ul type="disc" compact><li><p>Made the content model of <tt class="sgmltag-element">firstterm</tt> identical
+to <tt class="sgmltag-element">glossterm</tt>.</p></li></ul></div></div></div><div class="section" lang="en"><div class="titlepage"><div><h3 class="title"><a name="s.b4"></a>3.3.&nbsp;Changes in DocBook V4.3b4</h3></div></div><p>There are no backwards-incompatible changes in this release.
+</p><p>Each of the changes made between DocBook V4.2b3 and DocBook XML V4.3b4
+is summarized here. For complete details, consult the individual RFEs and
+the <a href="http://docbook.org/meetings" target="_top">meeting
+minutes</a>.</p><div class="section" lang="en"><div class="titlepage"><div><h4 class="title"><a name="sb4.enhancements"></a>3.3.1.&nbsp;Enhancements</h4></div></div><div class="itemizedlist"><ul type="disc" compact><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=518074" target="_top">RFE 518074</a>:
+Added a number of new values to the
+<tt class="sgmltag-attribute">class</tt> attribute of
+<tt class="sgmltag-element">database</tt>.
+</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=517604" target="_top">RFE 517604</a>:
+Allow optional <tt class="sgmltag-element">title</tt> on <tt class="sgmltag-element">glosslist</tt>.
+</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=507975" target="_top">RFE 507975</a>:
+Revision should allow <tt class="sgmltag-element">author</tt> or <tt class="sgmltag-element">authorinitials</tt>.
+</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=533734" target="_top">RFE 533734</a>:
+Allow <tt class="sgmltag-element">void</tt> to be optional on
+<tt class="sgmltag-element">methodsynopsis</tt>,
+<tt class="sgmltag-element">consstructorsynopsis</tt>, and
+<tt class="sgmltag-element">destructorsynopsis</tt>.
+</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=570068" target="_top">RFE 570068</a>:
+Added <tt class="literal">emailmessage</tt>, <tt class="literal">webpage</tt>, and
+<tt class="literal">newsposting</tt> as
+<tt class="sgmltag-attribute">pubwork</tt> values for <tt class="sgmltag-element">citetitle</tt>.
+</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=564776" target="_top">RFE 564776</a>:
+Added <tt class="literal">process</tt>, <tt class="literal">service</tt>, <tt class="literal">server</tt>,
+and <tt class="literal">daemon</tt> to the <tt class="sgmltag-attribute">class</tt>
+values of <tt class="sgmltag-element">systemitem</tt>.
+</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=573812" target="_top">RFE 573812</a>:
+Allow <tt class="sgmltag-element">blockinfo</tt> on <tt class="sgmltag-element">blockquote</tt>.
+</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=571998" target="_top">RFE 571998</a>:
+Added <tt class="sgmltag-element">initializer</tt> to <tt class="sgmltag-element">paramdef</tt>.
+</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=571996" target="_top">RFE 571996</a>:
+Added <tt class="literal">prefix</tt>, <tt class="literal">namespace</tt>, and
+<tt class="literal">localname</tt> to <tt class="sgmltag-attribute">class</tt> for
+<tt class="sgmltag-element">sgmltag</tt>.
+</p></li><li><p>
+Added <tt class="sgmltag-element">StepAlternatives</tt>.
+</p></li></ul></div></div></div><div class="section" lang="en"><div class="titlepage"><div><h3 class="title"><a name="s.b3"></a>3.4.&nbsp;Changes in DocBook V4.3b3</h3></div></div><p>There are no backwards-incompatible changes in this release.
+</p><p>Each of the changes made between DocBook V4.2b2 and DocBook XML V4.3b3
+is summarized here. For complete details, consult the individual RFEs and
+the <a href="http://docbook.org/meetings" target="_top">meeting
+minutes</a>.</p><div class="section" lang="en"><div class="titlepage"><div><h4 class="title"><a name="sb3.enhancements"></a>3.4.1.&nbsp;Enhancements</h4></div></div><div class="itemizedlist"><ul type="disc" compact><li><p>Added <tt class="sgmltag-element">code</tt> inline with
+<tt class="sgmltag-attribute">language</tt> attribute.</p></li><li><p>Fixed oversights that removed <tt class="sgmltag-element">blockinfo</tt> and
+<tt class="sgmltag-element">textobject</tt> from CALS tables.</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=615587" target="_top">RFE 615587</a>:
+add <tt class="sgmltag-attribute">xml:base</tt> to common attributes (2002 Nov)
+</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=616216" target="_top">RFE 616216</a>:
+Allow <tt class="sgmltag-element">set</tt>s to be recursive. (2002 Nov)
+</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=615473" target="_top">RFE 615473</a>:
+Add <tt class="sgmltag-attribute">floatstyle</tt> to
+<span class="simplelist"><tt class="sgmltag-element">figure</tt>, <tt class="sgmltag-element">informalfigure</tt>, <tt class="sgmltag-element">example</tt>, <tt class="sgmltag-element">informalexample</tt>, <tt class="sgmltag-element">equation</tt>, <tt class="sgmltag-element">informalequation</tt></span>.
+</p></li><li><p>Fixed parameter entity declaration problems that resulted in
+duplicate attribute declarations for some table-related elements.
+</p></li><li><p>Added <tt class="sgmltag-attribute">type</tt> attribute to
+<tt class="sgmltag-element">indexterm</tt> and <tt class="sgmltag-element">index</tt>.
+</p></li></ul></div></div></div><div class="section" lang="en"><div class="titlepage"><div><h3 class="title"><a name="s.b2"></a>3.5.&nbsp;Changes in DocBook V4.3b2</h3></div></div><p>There are no backwards-incompatible changes in this release.
+</p><p>Each of the changes made between DocBook V4.2 and DocBook XML V4.3b2
+is summarized here. For complete details, consult the individual RFEs and
+the <a href="http://docbook.org/meetings" target="_top">meeting
+minutes</a>.</p><p>There was no public beta 1 release.</p><div class="section" lang="en"><div class="titlepage"><div><h4 class="title"><a name="sb2.enhancements"></a>3.5.1.&nbsp;Enhancements</h4></div></div><div class="itemizedlist"><ul type="disc" compact><li><p>Allow HTML table models in addition to CALS or SOEx
+table models (2003 Apr)</p><p>Note: the editor has changed the content model of <tt class="sgmltag-element">caption</tt>
+to support HTML tables with captions more directly.</p></li><li><p>Support <tt class="sgmltag-element">task</tt> markup (2003 Jun).</p></li><li><p>Related to RFE 679316: add orgname to inlines (2003 Jul)</p></li><li><p>Added function attribute to keycap for improved semantics (2003 Jul)
+</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=705885" target="_top">RFE 705885</a>:
+add namespace attribute to sgmltag (2003 May)</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=691762" target="_top">RFE 691762</a>:
+add language attribute to verbatim environments (2003 May)</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=573419" target="_top">RFE 573419</a>:
+add bidirectional text override (2003 Apr)</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=565716" target="_top">RFE 565716</a>:
+support for URI element (2003 Apr)</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=660044" target="_top">RFE 660044</a>:
+support continuation and startinglinenumber on verbatims (2003 Feb)</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=655526" target="_top">RFE 655526</a>:
+support modifier in funcprototype (2003 Feb)</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=638456" target="_top">RFE 638456</a>:
+support translators (2003 Feb)</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=582822" target="_top">RFE 582822</a>:
+paramdef and varargs on funcprototype (2003 Feb)</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=473365" target="_top">RFE 473365</a>:
+choice attribute for paramdef (2003 Feb)</p></li><li><p><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=570068" target="_top">RFE 570068</a>:
+new values for pubwork (2003 Jan)</p></li><li><p>Added xrefstyle (2002 Dec)</p></li></ul></div></div></div></div><div class="section" lang="en"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="d0e547"></a>4.&nbsp;Release Notes</h2></div></div><p>This is a beta release by the editor. It has no normative
+status and may contain bugs.</p></div><div class="section" lang="en"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="docbook.v5"></a>5.&nbsp;Changes Proposed for DocBook V5.0</h2></div></div><p>The following backwards-incompatible changes were announced in
+DocBook V4.0, the DocBook Technical Committee expects to incorporate
+them into DocBook V5.0.
+</p><p>Each of the changes proposed is summarized here. For complete
+details, consult the individual RFEs and the <a href="http://docbook.org/meetings" target="_top">meeting
+minutes</a>.</p><div class="itemizedlist"><ul type="disc" compact><li><p><a name="rfe.xml"></a>DocBook V5.0 will be primarily an XML
+DTD. This will require a wide range of changes. As a result, DocBook
+V5.0 will more closely resemble The XML version of DocBook V4.x than
+the SGML version.</p></li><li><p><a name="rfe.pereorg"></a>Planned parameter entity
+reorganization may reduce some content models.  The goal of this
+effort is to remove a large number of spurious elements that snuck
+into content models during the first parameter entity reorganization
+(circa DocBook 2.4). In practice the TC expects changes to have very
+little "real world" impact.</p></li><li><p><a name="rfe.coords"></a>The <tt class="sgmltag-element">coords</tt>
+attribute will be removed from <tt class="sgmltag-element">areaset</tt>.</p></li><li><p><a name="rfe.biblioentry"></a>The <tt class="sgmltag-element">articleinfo</tt> element will be removed from
+<tt class="sgmltag-element">biblioentry</tt>.</p></li><li><p><a name="rfe.contents"></a>The <tt class="sgmltag-attribute">contents</tt> attribute will
+be removed from <tt class="sgmltag-element">bookinfo</tt> and <tt class="sgmltag-element">setinfo</tt>.
+</p></li><li><p><a name="rfe.indexdivcm"></a>The <tt class="sgmltag-paramentity">%indexdivcomponent.mix;</tt>
+parameter entity will be restricted.  Numbered figures and other
+elements inappropriate for an <tt class="sgmltag-element">index</tt> or
+<tt class="sgmltag-element">setindex</tt> will be removed.</p></li><li><p><a name="rfe.glossterm"></a>The <tt class="sgmltag-element">revhistory</tt> element will be removed from
+<tt class="sgmltag-element">glossterm</tt>.</p></li><li><p><a name="rfe.416415"></a><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=416415" target="_top">RFE 416415</a>:
+The <tt class="literal">constant</tt> <tt class="sgmltag-attribute">class</tt>
+will be removed from <tt class="sgmltag-element">systemitem</tt>.</p></li><li><p><a name="rfe.graphics"></a>The <tt class="sgmltag-element">graphic</tt> and <tt class="sgmltag-element">inlinegraphic</tt> elements
+will be removed.</p></li><li><p><a name="rfe.tables"></a>Tables will be restricted from full CALS Table Model to the
+OASIS Exchange model.</p></li></ul></div></div><div class="section" lang="en"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="docbook.v6"></a>6.&nbsp;Changes Proposed for DocBook V6.0</h2></div></div><p>The DocBook Technical Committee expects to announce the following
+backwards-incompatible changes in DocBook V5.0, for eventual incorporation
+into DocBook V6.0.
+</p><p>Each of the changes proposed is summarized here. For complete
+details, consult the individual RFEs and the <a href="http://docbook.org/meetings" target="_top">meeting
+minutes</a>.</p><div class="itemizedlist"><ul type="disc" compact><li><p><a name="rfe.412476"></a><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=412476" target="_top">RFE 412476</a>:
+The <tt class="sgmltag-attribute">class</tt> attribute on
+<tt class="sgmltag-element">productname</tt> will be <tt class="literal">#IMPLIED</tt>.
+</p></li><li><p><a name="rfe.482810"></a><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=482810" target="_top">RFE 482810</a>:
+The content model of <tt class="sgmltag-element">msgtext</tt> is far too broad. It will
+be reduced to the same mixture as <tt class="sgmltag-paramentity">%example.mix;</tt>.
+</p></li><li><p><a name="rfe.482811"></a><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=482811" target="_top">RFE 482811</a>:
+The <tt class="sgmltag-element">title</tt> element will be removed from
+<tt class="sgmltag-paramentity">%bibliocomponent.mix;</tt> (use
+<tt class="sgmltag-element">citetitle</tt> instead).</p></li><li><p><a name="rfe.482812"></a><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=482812" target="_top">RFE 482812</a>:
+The content model of <tt class="sgmltag-element">citetitle</tt> will be reduced from
+<tt class="sgmltag-paramentity">%para.char.mix;</tt> to
+<tt class="sgmltag-paramentity">%title.char.mix;</tt>.</p></li><li><p><a name="rfe.482815"></a><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=482815" target="_top">RFE 482815</a>:
+The <tt class="sgmltag-element">synopsis</tt> element will be removed from
+<tt class="sgmltag-paramentity">%para.char.mix;</tt>.</p></li><li><p><a name="rfe.482818"></a><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=482818" target="_top">RFE 482818</a>:
+Simplify the content model of <tt class="sgmltag-element">toc</tt>.
+</p></li><li><p><a name="rfe.482819"></a><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=482819" target="_top">RFE 482819</a>:
+The content models of the bibliography elements will be adjusted so that
+it is not possible to mix <tt class="sgmltag-element">biblioset</tt> and
+<tt class="sgmltag-element">bibliomset</tt> elements.</p></li><li><p><a name="rfe.482922"></a><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=482922" target="_top">RFE 482922</a>:
+The <tt class="sgmltag-element">msgtext</tt> element will be constrained to occur only
+inside <tt class="sgmltag-element">msgset</tt>. See also
+<a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=482817" target="_top">RFE 482817</a>.
+</p></li><li><p><a name="rfe.531851"></a><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=531851" target="_top">RFE 531851</a>:
+Remove inline person name elements
+<a href="http://sourceforge.net/docman/display_doc.php?docid=9354&amp;group_id=21935" target="_top">as
+proposed</a>.
+</p></li><li><p><a name="rfe.531855"></a><a href="http://sourceforge.net/tracker//index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=531855" target="_top">RFE 531855</a>:
+Remove <tt class="sgmltag-element">corpname</tt>
+<a href="http://sourceforge.net/docman/display_doc.php?docid=9351&amp;group_id=21935" target="_top">as
+proposed</a>.
+</p></li></ul></div></div><div class="appendix" lang="en"><h2 class="title" style="clear: both"><a name="a.committee"></a>A.&nbsp;OASIS DocBook Technical Committee (Non-Normative)</h2><p>The following individuals were members of the committee during
+the formulation of this Working Draft:</p><div class="itemizedlist"><ul type="disc" compact><li><p>Jeff Beal</p></li><li><p>Steve Cogorno</p></li><li><p>Paul Grosso</p></li><li><p>Dick Hamilton</p></li><li><p>Nancy Harrison</p></li><li><p>Scott Hudson</p></li><li><p>Mark Johnson</p></li><li><p>Larry Rowland (prospective)</p></li><li><p>Michael Smith</p></li><li><p>Bob Stayton, Secretary</p></li><li><p>Norman Walsh, Chair, Editor</p></li></ul></div></div><div class="appendix" lang="en"><h2 class="title" style="clear: both"><a name="a.notices"></a>B.&nbsp;Notices</h2><p>Copyright &copy; The Organization for the Advancement of
+Structured Information Standards [OASIS] 2001, 2002, 2003. All Rights
+Reserved.</p><p>OASIS takes no position regarding the validity
+or scope of any intellectual property or other rights
+that might be claimed to pertain to the implementation
+or use of the technology described in this document
+or the extent to which any license under such rights
+might or might not be available; neither does it represent
+that it has made any effort to identify any such rights.
+Information on OASIS's procedures with respect to rights
+in OASIS specifications can be found at the OASIS website.
+Copies of claims of rights made available for publication
+and any assurances of licenses to be made available,
+or the result of an attempt made to obtain a general
+license or permission for the use of such proprietary
+rights by implementors or users of this specification,
+can be obtained from the OASIS Executive Director.</p><p>OASIS invites any interested party to bring to
+its attention any copyrights, patents or patent applications,
+or other proprietary rights which may cover technology
+that may be required to implement this specification.
+Please address the information to the OASIS Executive
+Director.</p><p>This document and translations of it may be copied
+and furnished to others, and derivative works that comment
+on or otherwise explain it or assist in its implementation
+may be prepared, copied, published and distributed,
+in whole or in part, without restriction of any kind,
+provided that the above copyright notice and this paragraph
+are included on all such copies and derivative works.
+However, this document itself may not be modified in
+any way, such as by removing the copyright notice or
+references to OASIS, except as needed for the purpose
+of developing OASIS specifications, in which case the
+procedures for copyrights defined in the OASIS Intellectual
+Property Rights document must be followed, or as required
+to translate it into languages other than English.</p><p>The limited permissions granted above are perpetual
+and will not be revoked by OASIS or its successors or
+assigns.</p><p>This document and the information contained herein
+is provided on an "<span class="quote">AS IS</span>" basis and OASIS DISCLAIMS
+ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION
+HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES
+OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</p><p>OASIS has been notified of intellectual property
+rights claimed in regard to some or all of the contents
+of this specification. For more information consult
+the online list of claimed rights.</p></div><div class="appendix" lang="en"><h2 class="title" style="clear: both"><a name="a.ipr"></a>C.&nbsp;Intellectual Property Rights</h2><p>For information on wether any patents have been disclosed that may be
+essential to implementing this specification, and any offers of patent
+licensing terms, please refer to the Intellectual Property Rights section
+of the DocBook web page
+(<a href="http://www.oasis-open.org/committees/docbook/" target="_top">http://www.oasis-open.org/committees/docbook/</a>)
+</p></div><div class="appendix" lang="en"><h2 class="title" style="clear: both"><a name="a.revhistory"></a>D.&nbsp;Revision History</h2><p>
+</p><div class="revhistory"><table border="1" width="100%" summary="Revision history"><tr><td align="left">Revision Working Draft &#8220;Candidate Release 1&#8221;</td><td align="left">02 Dec 2003</td></tr><tr><td align="left">Revision Working Draft &#8220;Beta 5&#8221;</td><td align="left">29 Oct 2003</td></tr><tr><td align="left">Revision Working Draft &#8220;Beta 4&#8221;</td><td align="left">30 Sep 2003</td></tr><tr><td align="left">Revision Working Draft &#8220;Beta 3&#8221;</td><td align="left">26 Sep 2003</td></tr><tr><td align="left">Revision Working Draft &#8220;Beta 2&#8221; (Beta 1 was never released.)</td><td align="left">15 Aug 2003</td></tr></table></div><p>
+</p></div><div class="bibliography"><div class="titlepage"><div><h2 class="title"><a name="bibl"></a>References</h2></div></div><div class="bibliodiv"><h3 class="title">Normative</h3><div class="bibliomixed"><a name="iso8879"></a><p class="bibliomixed">[<span class="abbrev">SGML</span>] JTC 1, SC 34.
+<span class="citetitle"><i class="citetitle">ISO 8879:1986
+Information processing -- Text and office systems --
+Standard Generalized Markup Language (SGML)</i></span>. 1986.
+</p></div><div class="bibliomixed"><a name="xml-rec"></a><p class="bibliomixed">[<span class="abbrev">XML</span>] Tim Bray,
+Jean Paoli, C. M. Sperberg-McQueen, and Eve Maler, editors.
+<span class="citetitle"><i class="citetitle"><a href="http://www.w3.org/TR/REC-xml" target="_top">Extensible Markup
+Language (XML) 1.0 Second Edition</a></i></span>.
+World Wide Web Consortium, 2000.
+</p></div><div class="bibliomixed"><a name="rfc2119"></a><p class="bibliomixed">[<span class="abbrev">RFC 2119</span>] IETF
+(Internet Engineering Task Force).
+<span class="citetitle"><i class="citetitle"><a href="http://www.ietf.org/rfc/rfc2119.txt" target="_top">RFC 2119:
+Key words for use in RFCs to Indicate Requirement Levels</a></i></span>.
+S. Bradner. 1997.</p></div></div></div></div></body></html>
