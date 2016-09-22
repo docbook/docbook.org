@@ -108,7 +108,11 @@ task menus_home(type: XMLCalabashTask) {
 
 /* Make the summary of the directory listings */
 task dirlistings(type: Exec) {
-  commandLine "bin/find-distrib"
+  if (System.getProperty('os.name').toLowerCase().contains('windows')) {
+    commandLine "cmd", "/c", "perl", "bin/find-distrib"
+  } else {
+    commandLine "bin/find-distrib"
+  }
   standardOutput = new FileOutputStream(new File("etc/dirlistings.xml"))
 }
 
