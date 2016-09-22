@@ -1,0 +1,256 @@
+<releases xmlns="http://nwalsh.com/ns/releases">
+
+<module name="DocBook XML">
+<dir path="rng/4.2"    date="2003-12-19T12:41:00Z" release='4.2' version="4.2"    type="rng" kind="std"/>
+<dir path="rng/4.3"    date="2004-03-31T11:59:00Z" release='4.3' version="4.3"    type="rng" kind="std"/>
+<dir path="rng/4.3b3"  date="2003-12-19T12:41:00Z" release='4.3' version="4.3b3"  type="rng" kind="beta"/>
+<dir path="rng/4.3b4"  date="2003-12-19T12:41:00Z" release='4.3' version="4.3b4"  type="rng" kind="beta"/>
+<dir path="rng/4.3b5"  date="2003-12-19T12:41:00Z" release='4.3' version="4.3b5"  type="rng" kind="beta"/>
+<dir path="rng/4.3CR1" date="2003-12-19T12:41:00Z" release='4.3' version="4.3CR1" type="rng" kind="cr"/>
+<dir path="rng/4.3CR2" date="2003-12-21T19:43:00Z" release='4.3' version="4.3CR2" type="rng" kind="cr"/>
+<dir path="rng/4.3CR3" date="2004-01-21T20:06:00Z" release='4.3' version="4.3CR3" type="rng" kind="cr"/>
+<dir path="rng/4.4"    date="2005-01-28T15:05:00Z" release='4.4' version="4.4"    type="rng" kind="std"/>
+<dir path="rng/4.4b1"  date="2004-06-09T10:44:00Z" release='4.4' version="4.4b1"  type="rng" kind="beta"/>
+<dir path="rng/4.4b2"  date="2004-08-26T15:00:00Z" release='4.4' version="4.4b2"  type="rng" kind="beta"/>
+<dir path="rng/4.4CR1" date="2004-09-16T16:23:00Z" release='4.4' version="4.4CR1" type="rng" kind="cr"/>
+<dir path="rng/4.4CR2" date="2004-10-21T11:46:00Z" release='4.4' version="4.4CR2" type="rng" kind="cr"/>
+<dir path="rng/4.4CR3" date="2004-12-17T14:00:00Z" release='4.4' version="4.4CR3" type="rng" kind="cr"/>
+<dir path="rng/4.4CR4" date="2005-01-28T15:05:00Z" release='4.4' version="4.4CR4" type="rng" kind="cr"/>
+<dir path="rng/4.5"    date="2006-10-03T13:40:00Z" release='4.5' version="4.5"    type="rng" kind="std"/>
+<dir path="rng/4.5b1"  date="2005-05-05T12:42:00Z" release='4.5' version="4.5b1"  type="rng" kind="beta"/>
+<dir path="rng/4.5CR1"                             release='4.5' version="4.5CR1" type="rng" kind="cr"/>
+<dir path="rng/4.5CR2"                             release='4.5' version="4.5CR2" type="rng" kind="cr"/>
+<dir path="rng/4.5CR3"                             release='4.5' version="4.5CR3" type="rng" kind="cr"/>
+</module>
+
+<module name="DocBook">
+<dir path="sgml/1.0"    date="2006-07-27T23:50:00Z" release='1.0' version="1.0"    type="sgml" kind="std"/>
+<dir path="sgml/1.1"    date="2006-07-27T23:50:00Z" release='1.1' version="1.1"    type="sgml" kind="std"/>
+<dir path="sgml/1.2"    date="2006-07-27T23:50:00Z" release='1.2' version="1.2"    type="sgml" kind="std"/>
+<dir path="sgml/1.2.1"  date="2006-07-27T23:50:00Z" release='1.2' version="1.2.1"  type="sgml" kind="std"/>
+<dir path="sgml/2.1"    date="2006-07-27T23:50:00Z" release='2.1' version="2.1"    type="sgml" kind="std"/>
+<dir path="sgml/2.2.1"  date="2006-07-27T23:50:00Z" release='2.2' version="2.2.1"  type="sgml" kind="std"/>
+<dir path="sgml/2.3"    date="2006-07-27T23:50:00Z" release='2.3' version="2.3"    type="sgml" kind="std"/>
+<dir path="sgml/2.4"    date="2006-07-27T23:50:00Z" release='2.4' version="2.4"    type="sgml" kind="std"/>
+<dir path="sgml/2.4.1"  date="2006-07-27T23:50:00Z" release='2.4' version="2.4.1"  type="sgml" kind="std"/>
+<dir path="sgml/3.0"    date="2006-07-27T23:50:00Z" release='3.0' version="3.0"    type="sgml" kind="std"/>
+<dir path="sgml/3.1"    date="2003-12-18T23:50:00Z" release='3.1' version="3.1"    type="sgml" kind="std"/>
+<dir path="sgml/4.1"    date="2003-12-18T23:50:00Z" release='4.1' version="4.1"    type="sgml" kind="std"/>
+<dir path="sgml/4.2"    date="2003-12-18T23:50:00Z" release='4.2' version="4.2"    type="sgml" kind="std"/>
+<dir path="sgml/4.3"    date="2004-03-31T11:46:00Z" release='4.3' version="4.3"    type="sgml" kind="std"/>
+<dir path="sgml/4.3b2"  date="2003-12-18T23:50:00Z" release='4.3' version="4.3b2"  type="sgml" kind="beta"/>
+<dir path="sgml/4.3b3"  date="2003-12-18T23:50:00Z" release='4.3' version="4.3b3"  type="sgml" kind="beta"/>
+<dir path="sgml/4.3b4"  date="2003-12-18T23:50:00Z" release='4.3' version="4.3b4"  type="sgml" kind="beta"/>
+<dir path="sgml/4.3b5"  date="2003-12-18T23:50:00Z" release='4.3' version="4.3b5"  type="sgml" kind="beta"/>
+<dir path="sgml/4.3CR1" date="2003-12-18T23:50:00Z" release='4.3' version="4.3CR1" type="sgml" kind="cr"/>
+<dir path="sgml/4.3CR2" date="2003-12-21T18:55:00Z" release='4.3' version="4.3CR2" type="sgml" kind="cr"/>
+<dir path="sgml/4.3CR3" date="2004-01-21T20:06:00Z" release='4.3' version="4.3CR3" type="sgml" kind="cr"/>
+<dir path="sgml/4.4"    date="2005-01-27T14:35:00Z" release='4.4' version="4.4"    type="sgml" kind="std"/>
+<dir path="sgml/4.4b1"  date="2004-06-09T10:44:00Z" release='4.4' version="4.4b1"  type="sgml" kind="beta"/>
+<dir path="sgml/4.4b2"  date="2004-08-26T14:59:00Z" release='4.4' version="4.4b2"  type="sgml" kind="beta"/>
+<dir path="sgml/4.4CR1" date="2004-09-16T16:23:00Z" release='4.4' version="4.4CR1" type="sgml" kind="cr"/>
+<dir path="sgml/4.4CR2" date="2004-10-21T11:46:00Z" release='4.4' version="4.4CR2" type="sgml" kind="cr"/>
+<dir path="sgml/4.4CR3" date="2004-12-17T13:50:00Z" release='4.4' version="4.4CR3" type="sgml" kind="cr"/>
+<dir path="sgml/4.4CR4" date="2004-12-22T22:44:00Z" release='4.4' version="4.4CR4" type="sgml" kind="cr"/>
+<dir path="sgml/4.5"    date="2006-10-03T13:40:00Z" release='4.5' version="4.5"    type="sgml" kind="std"/>
+<dir path="sgml/4.5b1"  date="2005-05-05T12:42:00Z" release='4.5' version="4.5b1"  type="sgml" kind="beta"/>
+<dir path="sgml/4.5CR1" date="2005-06-29T11:44:00Z" release='4.5' version="4.5CR1" type="sgml" kind="cr"/>
+<dir path="sgml/4.5CR2" date="2006-03-09T22:04:00Z" release='4.5' version="4.5CR2" type="sgml" kind="cr"/>
+<dir path="sgml/4.5CR3" date="2006-06-02T19:32:00Z" release='4.5' version="4.5CR3" type="sgml" kind="cr"/>
+</module>
+
+<module name="DocBook XML">
+<dir path="xml/4.1.2"   date="2003-12-18T23:50:00Z" release='4.1' version="4.1.2"  type="xml"  kind="std"/>
+<dir path="xml/4.2"     date="2003-12-18T23:50:00Z" release='4.2' version="4.2"    type="xml"  kind="std"/>
+<dir path="xml/4.3"     date="2004-03-31T11:25:00Z" release='4.3' version="4.3"    type="xml"  kind="std"/>
+<dir path="xml/4.3b2"   date="2003-12-18T23:50:00Z" release='4.3' version="4.3b2"  type="xml"  kind="beta"/>
+<dir path="xml/4.3b3"   date="2003-12-18T23:50:00Z" release='4.3' version="4.3b3"  type="xml"  kind="beta"/>
+<dir path="xml/4.3b4"   date="2003-12-18T23:50:00Z" release='4.3' version="4.3b4"  type="xml"  kind="beta"/>
+<dir path="xml/4.3b5"   date="2003-12-18T23:50:00Z" release='4.3' version="4.3b5"  type="xml"  kind="beta"/>
+<dir path="xml/4.3CR1"  date="2003-12-18T23:50:00Z" release='4.3' version="4.3CR1" type="xml"  kind="cr"/>
+<dir path="xml/4.3CR2"  date="2003-12-21T18:55:00Z" release='4.3' version="4.3CR2" type="xml"  kind="cr"/>
+<dir path="xml/4.3CR3"  date="2004-01-21T20:06:00Z" release='4.3' version="4.3CR3" type="xml"  kind="cr"/>
+<dir path="xml/4.4"     date="2005-01-27T14:35:00Z" release='4.4' version="4.4"    type="xml"  kind="std"/>
+<dir path="xml/4.4b1"   date="2004-06-09T10:44:00Z" release='4.4' version="4.4b1"  type="xml"  kind="beta"/>
+<dir path="xml/4.4b2"   date="2004-08-26T14:59:00Z" release='4.4' version="4.4b2"  type="xml"  kind="beta"/>
+<dir path="xml/4.4CR1"  date="2004-09-16T16:23:00Z" release='4.4' version="4.4CR1" type="xml"  kind="cr"/>
+<dir path="xml/4.4CR2"  date="2004-10-21T11:46:00Z" release='4.4' version="4.4CR2" type="xml"  kind="cr"/>
+<dir path="xml/4.4CR3"  date="2004-12-17T13:50:00Z" release='4.4' version="4.4CR3" type="xml"  kind="cr"/>
+<dir path="xml/4.4CR4"  date="2004-12-22T22:43:00Z" release='4.4' version="4.4CR4" type="xml"  kind="cr"/>
+<dir path="xml/4.5"     date="2006-10-03T13:40:00Z" release='4.5' version="4.5"    type="xml"  kind="std"/>
+<dir path="xml/4.5b1"   date="2005-05-05T12:42:00Z" release='4.5' version="4.5b1"  type="xml"  kind="beta"/>
+<dir path="xml/4.5CR1"  date="2005-06-29T11:44:00Z" release='4.5' version="4.5CR1" type="xml"  kind="cr"/>
+<dir path="xml/4.5CR2"  date="2006-03-09T22:04:00Z" release='4.5' version="4.5CR2" type="xml"  kind="cr"/>
+<dir path="xml/4.5CR3"  date="2006-06-02T19:32:00Z" release='4.5' version="4.5CR3" type="xml"  kind="cr"/>
+</module>
+
+<module name="DocBook">
+<dir path="xml/5.0"     date="2008-02-06T14:30:16Z" release='5.0' version="5.0"    type="xml"  kind="std"/>
+<dir path="xml/5.0b1"   date="2005-10-28T13:45:00Z" release='5.0' version="5.0b1"  type="xml"  kind="beta"/>
+<dir path="xml/5.0b2"   date="2006-01-13T14:43:00Z" release='5.0' version="5.0b2"  type="xml"  kind="beta"/>
+<dir path="xml/5.0b3"   date="2006-02-01T16:25:00Z" release='5.0' version="5.0b3"  type="xml"  kind="beta"/>
+<dir path="xml/5.0b4"   date="2006-03-03T13:58:00Z" release='5.0' version="5.0b4"  type="xml"  kind="beta"/>
+<dir path="xml/5.0b5"   date="2006-04-12T18:53:00Z" release='5.0' version="5.0b5"  type="xml"  kind="beta"/>
+<dir path="xml/5.0b6"   date="2006-06-02T19:32:00Z" release='5.0' version="5.0b6"  type="xml"  kind="beta"/>
+<dir path="xml/5.0b7"   date="2006-07-25T23:25:00Z" release='5.0' version="5.0b7"  type="xml"  kind="beta"/>
+<dir path="xml/5.0b8"   date="2006-09-27T10:24:00Z" release='5.0' version="5.0b8"  type="xml"  kind="beta"/>
+<dir path="xml/5.0b9"   date="2006-10-26T14:57:00Z" release='5.0' version="5.0b9"  type="xml"  kind="beta"/>
+<dir path="xml/5.0CR1"  date="2006-12-21T17:42:00Z" release='5.0' version="5.0CR1" type="xml"  kind="cr"/>
+<dir path="xml/5.0CR2"  date="2007-03-13T15:37:00Z" release='5.0' version="5.0CR2" type="xml"  kind="cr"/>
+<dir path="xml/5.0CR3"  date="2007-03-22T19:28:00Z" release='5.0' version="5.0CR3" type="xml"  kind="cr"/>
+<dir path="xml/5.0CR4"  date="2007-05-21T15:06:00Z" release='5.0' version="5.0CR4" type="xml"  kind="cr"/>
+<dir path="xml/5.0CR5"  date="2007-07-12T14:43:00Z" release='5.0' version="5.0CR5" type="xml"  kind="cr"/>
+<dir path="xml/5.0CR6"  date="2007-09-27T18:20:51Z" release='5.0' version="5.0CR6" type="xml"  kind="cr"/>
+<dir path="xml/5.0CR7"  date="2007-09-28T19:15:08Z" release='5.0' version="5.0CR7" type="xml"  kind="cr"/>
+<dir path="xml/5.1b1"   date="2010-07-02T12:30:00Z" release='5.1' version="5.1b1"  type="xml"  kind="beta"/>
+<dir path="xml/5.1b2"   date="2010-07-27T12:30:00Z" release='5.1' version="5.1b2"  type="xml"  kind="beta"/>
+<dir path="xml/5.1b3"   date="2011-06-17T12:30:00Z" release='5.1' version="5.1b3"  type="xml"  kind="beta"/>
+<dir path="xml/5.1b4"   date="2011-06-24T12:30:00Z" release='5.1' version="5.1b4"  type="xml"  kind="beta"/>
+<dir path="xml/5.1b5"   date="2011-10-26T12:30:00Z" release='5.1' version="5.1b5"  type="xml"  kind="beta"/>
+<dir path="xml/5.1b6"   date="2012-01-16T20:30:00Z" release='5.1' version="5.1b6"  type="xml"  kind="beta"/>
+<dir path="xml/5.1b7"   date="2012-04-24T12:30:00Z" release='5.1' version="5.1b7"  type="xml"  kind="beta"/>
+<dir path="xml/5.1b8"   date="2012-12-28T12:30:00Z" release='5.1' version="5.1b8"  type="xml"  kind="beta"/>
+<dir path="xml/5.1CR1"  date="2013-06-25T00:11:57Z" release='5.1' version="5.1CR1" type="xml"  kind="cr"/>
+<dir path="xml/5.1CR2"  date="2013-12-12T01:38:43Z" release='5.1' version="5.1CR2" type="xml"  kind="cr"/>
+<dir path="xml/5.1CR3"  date="2014-07-16T00:40:38Z" release='5.1' version="5.1CR3" type="xml"  kind="cr"/>
+</module>
+
+<module name="DocBook XSD">
+<dir path="xsd/5.0b1" release='5.0' version="5.0b1"  module="xsd" type="xsd" kind="beta"/>
+<dir path="xsd/5.0b2" release='5.0' version="5.0b2"  module="xsd" type="xsd" kind="beta"/>
+</module>
+
+<module name="DocBook EBNF">
+<dir path="xml/ebnf/1.0"     release='4.1' version="1.0"    type="xml" module="ebnf" custom="xml/4.1.2" kind="std"/>
+<dir path="xml/ebnf/1.1CR1"  release='4.2' version="1.1CR1" type="xml" module="ebnf" custom="xml/4.2"   kind="cr"/>
+<dir path="xml/ebnf/1.2b1"   release='4.3' version="1.2b1"  type="xml" module="ebnf" custom="xml/4.3"   kind="beta"/>
+<dir path="xml/ebnf/1.2CR1"  release='4.3' version="1.2CR1" type="xml" module="ebnf" custom="xml/4.3"   kind="cr"/>
+</module>
+
+<module name="DocBook HTML Forms">
+<dir path="xml/htmlforms/1.0"     release='4.1' version="1.0"     type="xml" module="htmlforms" custom="xml/4.1.2" kind="std"/>
+<dir path="xml/htmlforms/1.1"     release='4.1' version="1.1"     type="xml" module="htmlforms" custom="xml/4.1.2" kind="std"/>
+<dir path="xml/htmlforms/1.2b1"   release='4.3' version="1.2b1"   type="xml" module="htmlforms" custom="xml/4.3"   kind="beta"/>
+<dir path="xml/htmlforms/1.2CR1"  release='4.3' version="1.2CR1"  type="xml" module="htmlforms" custom="xml/4.3"   kind="cr"/>
+<dir path="xml/htmlforms/5.1b6-1" release='5.1' version="5.1b6-1" type="xml" module="htmlforms" custom="xml/5.1b6" kind="beta"/>
+<dir path="xml/htmlforms/5.1CR1"  date="2013-06-25T00:11:57Z" release='5.1' version="5.1CR1"  type="xml" module="htmlforms" custom="xml/5.1CR1" kind="cr"/>
+<dir path="xml/htmlforms/5.1CR2"  date="2013-12-12T01:40:34Z" release='5.1' version="5.1CR2"  type="xml" module="htmlforms" custom="xml/5.1CR2" kind="cr"/>
+<dir path="xml/htmlforms/5.1CR3"  date="2014-07-16T00:40:53Z" release='5.1' version="5.1CR3"  type="xml" module="htmlforms" custom="xml/5.1CR3" kind="cr"/>
+</module>
+
+<module name="DocBook MathML">
+<dir path="xml/mathml/1.0"    release='4.1' version="1.0"    type="xml" module="mathml" custom="xml/4.1.2" kind="std"/>
+<dir path="xml/mathml/1.1b1"  release='4.3' version="1.1b1"  type="xml" module="mathml" custom="xml/4.3"   kind="beta"/>
+<dir path="xml/mathml/1.1CR1" release='4.3' version="1.1CR1" type="xml" module="mathml" custom="xml/4.3"   kind="cr"/>
+</module>
+
+<module name="DocBook Publishers">
+<dir path="xml/publishers/1.0"   release='5.0' version="1.0"   type="xml" module="publishers" custom="xml/5.0" kind="std"/>
+<dir path="xml/publishers/1.1b1" release='5.1' version="1.1b1" type="xml" module="publishers" custom="xml/5.1b5" kind="beta"/>
+<dir path="xml/publishers/5.1CR1" date="2013-06-25T00:11:57Z" release='5.1' version="5.1CR1" type="xml" module="publishers" custom="xml/5.1CR1" kind="cr"/>
+<dir path="xml/publishers/5.1CR2" date="2013-12-12T01:41:01Z" release='5.1' version="5.1CR2" type="xml" module="publishers" custom="xml/5.1CR2" kind="cr"/>
+<dir path="xml/publishers/5.1CR3" date="2014-07-16T00:41:15Z" release='5.1' version="5.1CR3" type="xml" module="publishers" custom="xml/5.1CR3" kind="cr"/>
+</module>
+
+<module name="DocBook Publishers XSD">
+<dir path="xsd/publishers/5.0b1" release='5.0' version="5.0b1"  module="publishers" type="xsd" kind="beta"/>
+<dir path="xsd/publisehrs/5.0b2" release='5.0' version="5.0b2"  module="publishers" type="xsd" kind="beta"/>
+</module>
+
+<module name="Simplified DocBook">
+<dir path="xml/simple/1.0"     date="2003-12-18T23:50:00Z" release='4.2' version="1.0"     type="xml" module="simple" custom="xml/4.2"    kind="std"/>
+<dir path="xml/simple/1.1"     date="2005-04-02T14:08:00Z" release='4.3' version="1.1"     type="xml" module="simple" custom="xml/4.3"    kind="std"/>
+<dir path="xml/simple/1.1b1"   date="2003-12-21T21:18:00Z" release='4.3' version="1.1b1"   type="xml" module="simple" custom="xml/4.3CR2" kind="beta"/>
+<dir path="xml/simple/1.1b2"   date="2004-03-17T20:46:00Z" release='4.3' version="1.1b2"   type="xml" module="simple" custom="xml/4.3CR2" kind="beta"/>
+<dir path="xml/simple/1.1b3"   date="2004-03-31T14:07:00Z" release='4.3' version="1.1b3"   type="xml" module="simple" custom="xml/4.3"    kind="cr"/>
+<dir path="xml/simple/1.1CR1"  date="2004-07-27T16:43:00Z" release='4.3' version="1.1CR1"  type="xml" module="simple" custom="xml/4.3"    kind="cr"/>
+<dir path="xml/simple/1.1CR2"  date="2004-10-21T12:42:00Z" release='4.3' version="1.1CR2"  type="xml" module="simple" custom="xml/4.3"    kind="cr"/>
+<dir path="xml/simple/1.2CR1"  date="2006-03-09T22:03:00Z" release='4.5' version="1.2CR1"  type="xml" module="simple" custom="xml/4.5CR2" kind="cr"/>
+<dir path="xml/simple/5.1b6-1" date="2012-01-16T20:30:00Z" release='5.1' version="5.1b6-1" type="xml" module="simple" custom="xml/5.1b6"  kind="beta"/>
+<dir path="xml/simple/5.1CR1"  date="2013-06-25T00:11:57Z" release='5.1' version="5.1CR1"  type="xml" module="simple" custom="xml/5.1CR1" kind="cr"/>
+<dir path="xml/simple/5.1CR2"  date="2013-12-12T01:41:50Z" release='5.1' version="5.1CR2"  type="xml" module="simple" custom="xml/5.1CR2" kind="cr"/>
+<dir path="xml/simple/5.1CR3"  date="2014-07-16T00:41:26Z" release='5.1' version="5.1CR3"  type="xml" module="simple" custom="xml/5.1CR3" kind="cr"/>
+</module>
+
+<module name="DocBook Slides">
+<dir path="xml/slides/5.1b6-1" date="2012-01-16T20:30:00Z" release='5.1' version="5.1b6-1" type="xml" module="slides" custom="xml/5.1b6"  kind="beta"/>
+<dir path="xml/slides/5.1CR2"  date="2013-12-12T01:42:10Z" release='5.1' version="5.1CR2"  type="xml" module="slides" custom="xml/5.1CR2" kind="cr"/>
+<dir path="xml/slides/5.1CR3"  date="2014-07-16T00:41:40Z" release='5.1' version="5.1CR3"  type="xml" module="slides" custom="xml/5.1CR3" kind="cr"/>
+</module>
+
+<module name="DocBook SVG">
+<dir path="xml/svg/1.1b1"      release='4.3' version="1.1b1"  type="xml" module="svg" custom="xml/4.3" kind="beta"/>
+<dir path="xml/svg/1.1CR1"     release='4.3' version="1.1CR1" type="xml" module="svg" custom="xml/4.3" kind="beta"/>
+</module>
+
+<module name="DocBook Website">
+<dir path="xml/website/5.1b6-1" date="2012-01-16T20:30:00Z" release='5.1' version="5.1b6-1" type="xml" module="website" custom="xml/5.1b6"  kind="beta"/>
+<dir path="xml/website/5.1CR1"  date="2013-06-25T00:11:57Z" release='5.1' version="5.1CR1"  type="xml" module="website" custom="xml/5.1CR1" kind="cr"/>
+<dir path="xml/website/5.1CR2"  date="2013-12-12T01:44:06Z" release='5.1' version="5.1CR2"  type="xml" module="website" custom="xml/5.1CR2" kind="cr"/>
+<dir path="xml/website/5.1CR3"  date="2014-07-16T00:41:54Z" release='5.1' version="5.1CR3"  type="xml" module="website" custom="xml/5.1CR3" kind="cr"/>
+</module>
+
+<module name="DocBook RDFaLite">
+<dir path="xml/dbrdfalite/5.1CR1"  date="2013-06-25T00:11:57Z" release='5.1' version="5.1CR1" type="xml" module="rdfalite" custom="xml/5.1CR1" kind="cr"/>
+</module>
+
+<module name="DocBook XML">
+<dir path="xsd/4.2"    date="2003-12-18T23:42:00Z" release='4.2' version="4.2"    type="xsd" kind="std"/>
+<dir path="xsd/4.3"    date="2004-03-31T11:59:00Z" release='4.3' version="4.3"    type="xsd" kind="std"/>
+<dir path="xsd/4.3b3"  date="2003-12-18T23:42:00Z" release='4.3' version="4.3b3"  type="xsd" kind="beta"/>
+<dir path="xsd/4.3b4"  date="2003-12-18T23:42:00Z" release='4.3' version="4.3b4"  type="xsd" kind="beta"/>
+<dir path="xsd/4.3b5"  date="2003-12-18T23:42:00Z" release='4.3' version="4.3b5"  type="xsd" kind="beta"/>
+<dir path="xsd/4.3CR1" date="2003-12-18T23:42:00Z" release='4.3' version="4.3CR1" type="xsd" kind="cr"/>
+<dir path="xsd/4.3CR2" date="2003-12-21T19:43:00Z" release='4.3' version="4.3CR2" type="xsd" kind="cr"/>
+<dir path="xsd/4.3CR3" date="2004-01-21T20:06:00Z" release='4.3' version="4.3CR3" type="xsd" kind="cr"/>
+<dir path="xsd/4.4"    date="2005-01-28T15:05:00Z" release='4.4' version="4.4"    type="xsd" kind="std"/>
+<dir path="xsd/4.4b1"  date="2004-06-09T10:44:00Z" release='4.4' version="4.4b1"  type="xsd" kind="beta"/>
+<dir path="xsd/4.4b2"  date="2004-08-26T15:00:00Z" release='4.4' version="4.4b2"  type="xsd" kind="beta"/>
+<dir path="xsd/4.4CR1" date="2004-09-16T16:23:00Z" release='4.4' version="4.4CR1" type="xsd" kind="cr"/>
+<dir path="xsd/4.4CR2" date="2004-10-21T11:46:00Z" release='4.4' version="4.4CR2" type="xsd" kind="cr"/>
+<dir path="xsd/4.4CR3" date="2004-12-17T14:00:00Z" release='4.4' version="4.4CR3" type="xsd" kind="cr"/>
+<dir path="xsd/4.4CR4" date="2005-01-28T15:05:00Z" release='4.4' version="4.4CR4" type="xsd" kind="cr"/>
+<dir path="xsd/4.5"    date="2006-10-03T13:40:00Z" release='4.5' version="4.5"    type="xsd" kind="std"/>
+<dir path="xsd/4.5b1"  date="2005-05-05T12:42:00Z" release='4.5' version="4.5b1"  type="xsd" kind="beta"/>
+<dir path="xsd/4.5CR1"                             release='4.5' version="4.5CR1" type="xsd" kind="cr"/>
+<dir path="xsd/4.5CR2"                             release='4.5' version="4.5CR2" type="xsd" kind="cr"/>
+<dir path="xsd/4.5CR3"                             release='4.5' version="4.5CR3" type="xsd" kind="cr"/>
+</module>
+
+<module name="DocBook NG">
+<dir path="docbook-ng/absinthe"      release='ng' version="absinthe"     type="rng" kind="beta"/>
+<dir path="docbook-ng/bourbon"       release='ng' version="bourbon"      type="rng" kind="beta"/>
+<dir path="docbook-ng/cachaca"       release='ng' version="cachaca"      type="rng" kind="beta"/>
+<dir path="docbook-ng/drambuie"      release='ng' version="drambuie"     type="rng" kind="beta"/>
+<dir path="docbook-ng/eaux-de-vie"   release='ng' version="eaux-de-vie"  type="rng" kind="beta"/>
+<dir path="docbook-ng/frangelico"    release='ng' version="frangelico"   type="rng" kind="beta"/>
+<dir path="docbook-ng/gin"           release='ng' version="gin"          type="rng" kind="beta"/>
+<dir path="docbook-ng/hardcider"     release='ng' version="hardcider"    type="rng" kind="beta"/>
+<dir path="docbook-ng/ipa"           release='ng' version="ipa"          type="rng" kind="beta"/>
+<dir path="docbook-ng/jagermeister"  release='ng' version="jagermeister" type="rng" kind="beta"/>
+<dir path="docbook-ng/kahlua"        release='ng' version="kahlua"       type="rng" kind="beta"/>
+<dir path="docbook-ng/lillet"        release='ng' version="lillet"       type="rng" kind="beta"/>
+<dir path="docbook-ng/mezcal"        release='ng' version="mezcal"       type="rng" kind="beta"/>
+<dir path="docbook-ng/pto"           release='ng' version="pto"          type="rng" kind="beta"/>
+</module>
+
+<module name="Simplified DocBook">
+<dir path="docbook-ng/simple/bourbon" release='ng' version="bourbon"     type="rng" module="simple" kind="beta"/>
+<dir path="docbook-ng/simple/kahlua"  release='ng' version="kahlua"      type="rng" module="simple" kind="beta"/>
+<dir path="docbook-ng/simple/lillet"  release='ng' version="lillet"      type="rng" module="simple" kind="beta"/>
+<dir path="docbook-ng/simple/pto"     release='ng' version="pto"         type="rng" module="simple" kind="beta"/>
+</module>
+
+<module name="DocBook Slides">
+<dir path="docbook-ng/slides/bourbon" release='ng' version="bourbon"     type="rng" module="slides" kind="beta"/>
+<dir path="docbook-ng/slides/lillet"  release='ng' version="lillet"      type="rng" module="slides" kind="beta"/>
+<dir path="docbook-ng/slides/pto"     release='ng' version="pto"         type="rng" module="slides" kind="beta"/>
+</module>
+
+<module name="DocBook Website">
+<dir path="docbook-ng/website/bourbon" release='ng' version="bourbon"    type="rng" module="website" kind="beta"/>
+<dir path="docbook-ng/website/lillet"  release='ng' version="lillet"     type="rng" module="website" kind="beta"/>
+<dir path="docbook-ng/website/pto"     release='ng' version="pto"        type="rng" module="website" kind="beta"/>
+</module>
+
+</releases>

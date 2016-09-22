@@ -1,0 +1,254 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>DocBook Versions</title><link rel="stylesheet" href="defguide.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.64.1"><link rel="home" href="docbook.html" title="DocBook"><link rel="up" href="part3.html" title="Part&nbsp;III.&nbsp;Appendixes"><link rel="previous" href="appb.html" title="DocBook and XML"><link rel="next" href="appd.html" title="Resources"></head><body><div class="navheader"><table border="0" cellpadding="0" cellspacing="0" width="100%" summary="Navigation table"><tr><td align="left">&nbsp;<a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a>&nbsp;<a title="DocBook and XML" href="appb.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;<a title="Part&nbsp;III.&nbsp;Appendixes" href="part3.html"><img src="figures/nav-up.png" alt="Up" border="0"></a>&nbsp;<a title="Resources" href="appd.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td><td align="right"><i>DocBook: The Definitive Guide</i> 2.0.9 <span class="alpha-version">(<a href="co01.html"><em>Alpha</em></a>)</span> </td></tr></table></div><div class="appendix" lang="en"><div class="titlepage"><div><div><a name="app-versions"></a><div class="component-title"><h1 class="label">C</h1><h1 class="title">DocBook Versions</h1></div></div><div><p class="releaseinfo">$Revision: 1.2 $</p></div><div><p class="pubdate">$Date: 2002/03/23 20:58:33 $</p></div></div><div></div></div><p>
+<a class="indexterm" name="versionsDocBookappc"></a>
+<a class="indexterm" name="DocBookversionsappc"></a>
+<a class="indexterm" name="d0e281497"></a>
+<a class="indexterm" name="d0e281503"></a>
+<a class="indexterm" name="d0e281507"></a>
+
+The <span class="acronym">OASIS</span> DocBook Technical Committee (<span class="acronym">TC</span>) is committed to the continued
+evolution of DocBook.  As new needs are expressed by the DocBook-user
+community, the committee will adapt DocBook so it
+continues to meet the needs of its users.
+</p><p>
+<a class="indexterm" name="d0e281521"></a>
+The <span class="acronym">TC</span> observes a very cautious policy regarding changes to the <span class="acronym">DTD</span>.
+Backward-incompatible changes can only be introduced:
+<div class="itemizedlist"><ul type="disc"><li><p>
+<a class="indexterm" name="d0e281535"></a>
+
+In major releases (4.0, 5.0, 6.0, and so on)
+</p></li><li><p>
+<a class="indexterm" name="d0e281542"></a>
+
+Only if the change was described in comments in the <span class="acronym">DTD</span> in the
+previous major release
+</p></li></ul></div>
+<a class="indexterm" name="d0e281552"></a>
+
+Changes made at point-releases are always backward-compatible to the
+previous major release. This policy assures that DocBook users always
+have time to prepare for any coming changes.
+</p><p>This appendix describes the changes planned for
+DocBook.</p><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="v31"></a>DocBook V3.1</h2></div></div><div></div></div><p>DocBook <span class="acronym">V3.1</span>, released in February 1999,
+introduced a number of new elements:
+<a class="indexterm" name="d0e281566"></a>
+<a class="indexterm" name="d0e281572"></a>
+<a class="indexterm" name="d0e281576"></a>
+<a class="indexterm" name="d0e281580"></a>
+<a class="indexterm" name="d0e281584"></a>
+<a class="indexterm" name="d0e281588"></a>
+
+</p><div class="variablelist"><dl><dt><span class="term"><a href="mediaobject.html"><tt class="sgmltag-element">MediaObject</tt></a></span></dt><dd><p>
+<a href="mediaobject.html"><tt class="sgmltag-element">MediaObject</tt></a> is a wrapper around
+<a href="videoobject.html"><tt class="sgmltag-element">VideoObject</tt></a>, <a href="audioobject.html"><tt class="sgmltag-element">AudioObject</tt></a>,
+<a href="imageobject.html"><tt class="sgmltag-element">ImageObject</tt></a>, and <a href="textobject.html"><tt class="sgmltag-element">TextObject</tt></a>.  The
+purpose of <a href="mediaobject.html"><tt class="sgmltag-element">MediaObject</tt></a> is twofold: first, it introduces
+new element types to include video and audio content; second, it
+provides the option of alternative representations, including text, for
+objects in a document.  <a href="mediaobject.html"><tt class="sgmltag-element">MediaObject</tt></a>s also allow
+<a href="caption.html"><tt class="sgmltag-element">Caption</tt></a>s that may be longer than a simple title.
+</p><p>
+<a class="indexterm" name="d0e281626"></a>
+<a class="indexterm" name="d0e281630"></a>
+<a class="indexterm" name="d0e281634"></a>
+
+Parallel to <a href="mediaobject.html"><tt class="sgmltag-element">MediaObject</tt></a> are <a href="inlinemediaobject.html"><tt class="sgmltag-element">InlineMediaObject</tt></a>,
+an inline version, and <a href="mediaobjectco.html"><tt class="sgmltag-element">MediaObjectCO</tt></a>, a media object
+with <a href="callout.html"><tt class="sgmltag-element">Callout</tt></a>s.
+</p><p>
+<a class="indexterm" name="d0e281652"></a>
+<a class="indexterm" name="d0e281658"></a>
+For now, media objects and graphics exist together
+in version 5.0. <a href="graphic.html"><tt class="sgmltag-element">Graphic</tt></a> and <a href="inlinegraphic.html"><tt class="sgmltag-element">InlineGraphic</tt></a> will
+be removed from DocBook.
+</p></dd><dt><span class="term"><a href="informalfigure.html"><tt class="sgmltag-element">InformalFigure</tt></a></span></dt><dd><p>
+<a class="indexterm" name="d0e281677"></a>
+
+A figure wrapper without a title. This element was added
+largely for symmetry.
+</p></dd><dt><span class="term"><a href="colophon.html"><tt class="sgmltag-element">Colophon</tt></a></span></dt><dd><p>
+<a class="indexterm" name="d0e281688"></a>
+<a class="indexterm" name="d0e281692"></a>
+
+An end-of-the-book <a href="colophon.html"><tt class="sgmltag-element">Colophon</tt></a>.
+</p></dd><dt><span class="term"><a href="section.html"><tt class="sgmltag-element">Section</tt></a></span></dt><dd><p>
+<a class="indexterm" name="d0e281708"></a>
+<a href="section.html"><tt class="sgmltag-element">Section</tt></a> is a recursive section.  It exists
+parallel to, and must be used as an alternative to,
+<a href="sect1.html"><tt class="sgmltag-element">Sect1</tt></a>.
+</p></dd><dt><span class="term"><a href="qandaset.html"><tt class="sgmltag-element">QandASet</tt></a></span></dt><dd><p>
+<a class="indexterm" name="d0e281725"></a>
+
+A set of questions and answers.
+</p></dd><dt><span class="term"><a href="constant.html"><tt class="sgmltag-element">Constant</tt></a></span></dt><dd><p>
+<a class="indexterm" name="d0e281736"></a>
+<a class="indexterm" name="d0e281740"></a>
+<a class="indexterm" name="d0e281746"></a>
+
+The <a href="constant.html"><tt class="sgmltag-element">Constant</tt></a> inline is for identifying
+constants.  It has a <tt class="sgmltag-attribute">Class</tt> attribute for
+identifying &#8220;limits&#8221; as a specific kind of constant.
+</p></dd><dt><span class="term"><a href="varname.html"><tt class="sgmltag-element">VarName</tt></a></span></dt><dd><p>
+<a class="indexterm" name="d0e281765"></a>
+<a class="indexterm" name="d0e281769"></a>
+<a class="indexterm" name="d0e281775"></a>
+
+Many authors have requested a tag for identifying
+variable names.  Most often <a href="literal.html"><tt class="sgmltag-element">Literal</tt></a> (with or without a role)
+has been chosen as a compromise, but you can't question the utility of identifying variable
+names, so <a href="varname.html"><tt class="sgmltag-element">VarName</tt></a> was added.
+</p><p>A tag for identifying variable values does not seem as necessary.
+For immutable values, a specific tag other than <a href="literal.html"><tt class="sgmltag-element">Literal</tt></a>
+seems unnecessary, and <a href="replaceable.html"><tt class="sgmltag-element">Replaceable</tt></a> exists for values that
+are supposed to be filled in by the user.
+</p></dd></dl></div></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="v41"></a>DocBook V4.1 and DocBook <span class="acronym">XML</span> V4.1.2</h2></div></div><div></div></div><p>
+<a class="indexterm" name="d0e281803"></a>
+<a class="indexterm" name="d0e281811"></a>
+<a class="indexterm" name="d0e281819"></a>
+<a class="indexterm" name="d0e281827"></a>
+DocBook <span class="acronym">V4.1</span> and DocBook <span class="acronym">XML</span> <span class="acronym">V4.1.2</span>
+became an OASIS Standard in
+February 2001.</p><p>DocBook <span class="acronym">V4</span> introduced
+a number of backward-incompatible
+changes.</p><p>The policy of the DocBook <span class="acronym">TC</span> is that backward-incompatible changes
+can only be introduced in a full version release.  They must also be described
+in comments in the <span class="acronym">DTD</span> at least one full version earlier.  In other words,
+all the planned version 4.0 incompatibilities were announced with version 3.0.
+</p><p>
+Backward-incompatible changes to DocBook that are planned for version 4.0:
+</p><div class="itemizedlist"><ul type="disc"><li><p>
+<a class="indexterm" name="d0e281863"></a>
+<a class="indexterm" name="d0e281869"></a>
+<a class="indexterm" name="d0e281873"></a>
+<a class="indexterm" name="d0e281877"></a>
+<a class="indexterm" name="d0e281883"></a>
+<a class="indexterm" name="d0e281887"></a>
+<a class="indexterm" name="d0e281891"></a>
+<a class="indexterm" name="d0e281895"></a>
+<a class="indexterm" name="d0e281899"></a>
+
+The <tt class="sgmltag-element">DocInfo</tt> element will be split out into <a href="chapterinfo.html"><tt class="sgmltag-element">ChapterInfo</tt></a>, <a href="appendixinfo.html"><tt class="sgmltag-element">AppendixInfo</tt></a>,
+  and so on. <tt class="sgmltag-element">ArtHeader</tt> will be renamed to <a href="articleinfo.html"><tt class="sgmltag-element">ArticleInfo</tt></a>.  <tt class="sgmltag-element">SeriesInfo</tt> may be
+  discarded because it has become a special case of <a href="biblioset.html"><tt class="sgmltag-element">BiblioSet</tt></a>.
+  <tt class="sgmltag-element">BookBiblio</tt> will be discarded in favor of a new, more inclusive,
+  structure for <a href="bookinfo.html"><tt class="sgmltag-element">BookInfo</tt></a> (and for <a href="articleinfo.html"><tt class="sgmltag-element">ArticleInfo</tt></a>, whose earlier <tt class="sgmltag-element">ArtHeader</tt>
+  form contained <tt class="sgmltag-element">BookBiblio</tt>).
+</p></li><li><p>
+<a class="indexterm" name="d0e281944"></a>
+<a class="indexterm" name="d0e281948"></a>
+
+The <a href="pe-class.html#article.class.parament"><tt class="sgmltag-paramentity">%article.class;</tt></a> entity may be removed from the <a href="book.html"><tt class="sgmltag-element">Book</tt></a> content model,
+  and made part of a new top-level document hierarchy.
+</p></li><li><p>
+<a class="indexterm" name="d0e281963"></a>
+<a class="indexterm" name="d0e281967"></a>
+
+The <a href="pe-class.html#nav.class.parament"><tt class="sgmltag-paramentity">%nav.class;</tt></a> entity, which appears in several divisions, will allow
+  <a href="tocchap.html"><tt class="sgmltag-element">ToCchap</tt></a> instead of <a href="toc.html"><tt class="sgmltag-element">ToC</tt></a>.
+</p></li><li><p>
+<a class="indexterm" name="d0e281985"></a>
+<a class="indexterm" name="d0e281991"></a>
+<a href="msgtext.html"><tt class="sgmltag-element">MsgText</tt></a> will be moved from <a href="pe-class.html#tech.char.class.parament"><tt class="sgmltag-paramentity">%tech.char.class;</tt></a> to a more appropriate
+  parameter entity.
+</p></li><li><p>
+<a class="indexterm" name="d0e282006"></a>
+<a class="indexterm" name="d0e282010"></a>
+<a class="indexterm" name="d0e282016"></a>
+<a class="indexterm" name="d0e282022"></a>
+<a class="indexterm" name="d0e282028"></a>
+<a class="indexterm" name="d0e282034"></a>
+<a class="indexterm" name="d0e282040"></a>
+<a class="indexterm" name="d0e282046"></a>
+<a class="indexterm" name="d0e282052"></a>
+<a class="indexterm" name="d0e282058"></a>
+<a class="indexterm" name="d0e282064"></a>
+<a class="indexterm" name="d0e282070"></a>
+<a class="indexterm" name="d0e282076"></a>
+
+The following elements will have their content constrained to the
+  <a href="pe-mix.html#smallcptr.char.mix.parament"><tt class="sgmltag-paramentity">%smallcptr.char.mix;</tt></a> mixture: <a href="action.html"><tt class="sgmltag-element">Action</tt></a>, <a href="command.html"><tt class="sgmltag-element">Command</tt></a>, <a href="database.html"><tt class="sgmltag-element">Database</tt></a>, <a href="filename.html"><tt class="sgmltag-element">Filename</tt></a>,
+  <a href="hardware.html"><tt class="sgmltag-element">Hardware</tt></a>, <a href="interface.html"><tt class="sgmltag-element">Interface</tt></a>, <a href="keycap.html"><tt class="sgmltag-element">KeyCap</tt></a>, <a href="literal.html"><tt class="sgmltag-element">Literal</tt></a>, <a href="option.html"><tt class="sgmltag-element">Option</tt></a>, <a href="parameter.html"><tt class="sgmltag-element">Parameter</tt></a>, <a href="property.html"><tt class="sgmltag-element">Property</tt></a>, and
+  <a href="systemitem.html"><tt class="sgmltag-element">SystemItem</tt></a>.
+</p></li><li><p>
+<a class="indexterm" name="d0e282124"></a>
+<a class="indexterm" name="d0e282128"></a>
+<a class="indexterm" name="d0e282132"></a>
+<a class="indexterm" name="d0e282138"></a>
+
+<a href="authorblurb.html"><tt class="sgmltag-element">AuthorBlurb</tt></a> and <a href="affiliation.html"><tt class="sgmltag-element">Affiliation</tt></a> will be removed from <a href="pe-mix.html#person.ident.mix.parament"><tt class="sgmltag-paramentity">%person.ident.mix;</tt></a>
+  and a new wrapper element will be created to allow association of those two
+  elements with <a href="author.html"><tt class="sgmltag-element">Author</tt></a> name information.
+</p></li><li><p>
+<a class="indexterm" name="d0e282157"></a>
+<a class="indexterm" name="d0e282163"></a>
+
+<a href="epigraph.html"><tt class="sgmltag-element">Epigraph</tt></a> will not be appearing in <a href="blockquote.html"><tt class="sgmltag-element">BlockQuote</tt></a>.
+</p></li><li><p>
+<a class="indexterm" name="d0e282178"></a>
+<a class="indexterm" name="d0e282182"></a>
+
+<tt class="sgmltag-element">Comment</tt> will be renamed to <a href="remark.html"><tt class="sgmltag-element">Remark</tt></a> and will be excluded from itself.
+</p></li><li><p>
+<a class="indexterm" name="d0e282195"></a>
+<a class="indexterm" name="d0e282201"></a>
+
+<a href="glossterm.html"><tt class="sgmltag-element">GlossTerm</tt></a> will be excluded from itself, and may be split into an
+  element that appears in a <a href="glossary.html"><tt class="sgmltag-element">Glossary</tt></a> and an element that can appear in
+  the main text.
+</p></li><li><p>
+<a class="indexterm" name="d0e282216"></a>
+<a class="indexterm" name="d0e282220"></a>
+<a class="indexterm" name="d0e282224"></a>
+
+The <tt class="sgmltag-attribute">Subject</tt> attribute on <a href="glossdef.html"><tt class="sgmltag-element">GlossDef</tt></a> will be renamed <tt class="sgmltag-attribute">Keyword</tt>.
+</p></li><li><p>
+<a class="indexterm" name="d0e282240"></a>
+<a class="indexterm" name="d0e282244"></a>
+
+Two <a href="segtitle.html"><tt class="sgmltag-element">SegTitle</tt></a> elements will be required in <a href="segmentedlist.html"><tt class="sgmltag-element">SegmentedList</tt></a>.
+</p></li><li><p>
+<a class="indexterm" name="d0e282259"></a>
+<a class="indexterm" name="d0e282263"></a>
+<a class="indexterm" name="d0e282267"></a>
+<a class="indexterm" name="d0e282273"></a>
+<a class="indexterm" name="d0e282277"></a>
+
+<a href="graphic.html"><tt class="sgmltag-element">Graphic</tt></a> and <a href="inlinegraphic.html"><tt class="sgmltag-element">InlineGraphic</tt></a> will be declared EMPTY.  This change will
+  require that end tags be removed and that any embedded graphic content
+  be stored outside the <span class="acronym">SGML</span> source and pointed to from an <tt class="sgmltag-attribute">Entityref</tt> or
+  <tt class="sgmltag-attribute">Fileref</tt> attribute.
+</p></li><li><p>
+<a class="indexterm" name="d0e282301"></a>
+<a class="indexterm" name="d0e282305"></a>
+<a class="indexterm" name="d0e282309"></a>
+<a class="indexterm" name="d0e282313"></a>
+<a class="indexterm" name="d0e282317"></a>
+
+The <tt class="literal">OptMult</tt> and <tt class="literal">ReqMult</tt> values for the <tt class="sgmltag-attribute">Choice</tt> attribute on <a href="group.html"><tt class="sgmltag-element">Group</tt></a>
+  will be removed.  Use the <tt class="sgmltag-attribute">Rep</tt> attribute instead to indicate that the
+  choice is repeatable.
+</p></li><li><p>
+<a class="indexterm" name="d0e282339"></a>
+<a class="indexterm" name="d0e282345"></a>
+<a class="indexterm" name="d0e282349"></a>
+<a class="indexterm" name="d0e282353"></a>
+
+The content model group inside <a href="funcsynopsis.html"><tt class="sgmltag-element">FuncSynopsis</tt></a> starting with <a href="funcdef.html"><tt class="sgmltag-element">FuncDef</tt></a>
+  will not be available; you will have to use <a href="funcprototype.html"><tt class="sgmltag-element">FuncPrototype</tt></a>.  Also, you
+  will be able to have a mixture of <tt class="sgmltag-element">FuncPrototypes</tt> and <tt class="sgmltag-element">FuncSynopsisInfos</tt>
+  (this is not backward-incompatible all by itself).
+</p></li><li><p>
+<a class="indexterm" name="d0e282375"></a>
+<a class="indexterm" name="d0e282379"></a>
+<a class="indexterm" name="d0e282385"></a>
+<a class="indexterm" name="d0e282391"></a>
+<a class="indexterm" name="d0e282395"></a>
+
+The <tt class="literal">EnvironVar</tt> and <tt class="literal">Prompt</tt> values for the <tt class="sgmltag-attribute">Class</tt> attribute on <a href="systemitem.html"><tt class="sgmltag-element">SystemItem</tt></a>
+  will be eliminated; use the <a href="envar.html"><tt class="sgmltag-element">EnVar</tt></a> and <a href="prompt.html"><tt class="sgmltag-element">Prompt</tt></a> elements instead.
+</p></li></ul></div></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="v42"></a>DocBook V4.2</h2></div></div><div></div></div><p>DocBook V4.2 fixed a couple of small bugs and introduced a number of
+new features. Changes in DocBook V4.2 are explained in the
+<a href="http://www.oasis-open.org/docbook/docbook-4.2.html" target="_top">DocBook
+Document Type Version 4.2</a>.</p></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="ebnf.module"></a>EBNF Module</h2></div></div><div></div></div><p>FIXME: write this section</p></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="htmlforms.module"></a>HTML Forms Module</h2></div></div><div></div></div><p>FIXME: write this section</p></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="mathml.module"></a>MathML Module</h2></div></div><div></div></div><p>FIXME: write this section</p></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="svg.module"></a>SVG Module</h2></div></div><div></div></div><p>FIXME: write this section</p></div></div><div class="navfooter"><table width="100%" summary="Navigation table"><tr><td width="40%" align="left"><a title="DocBook and XML" href="appb.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;</td><td width="20%" align="center"><a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a></td><td width="40%" align="right">&nbsp;<a title="Resources" href="appd.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td></tr><tr><td width="40%" align="left">DocBook and XML&nbsp;</td><td width="20%" align="center"><a title="Part&nbsp;III.&nbsp;Appendixes" href="part3.html"><img src="figures/nav-up.png" alt="Up" border="0"></a></td><td width="40%" align="right">&nbsp;Resources</td></tr></table></div><div class="copyrightfooter"><p><a href="dbcpyright.html">Copyright</a> &copy; 1999, 2000, 2001, 2002 <a href="http://www.oreilly.com/">O'Reilly &amp; Associates, Inc.</a> All rights reserved.</p></div></body></html>

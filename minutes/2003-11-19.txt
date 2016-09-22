@@ -1,0 +1,240 @@
+| DocBook Technical Committee Meeting Minutes: 19 Nov 2003
+| =======================================================
+|
+| The DocBook Technical Committee met on Wednesday, 19 Nov 2003 at
+| 05:00p EST (02:00p PST, 22:00GMT, 22:00BST, 23:00CEST, 07:00JST+,
+| 02:30a India+) for 90 minutes.
+|
+| Agenda
+|
+| 1. Roll call
+
+Paul Grosso
+Dick Hamilton
+Larry Rowland (prospective)
+Nancy Harrison
+Michael Smith
+Robert Stayton, scribe
+Steven Cogorno
+Scott Hudson
+Norman Walsh, chair
+
+Regrets:
+
+Mark Johnson
+
+Absent:
+
+Jeff Beal
+Paul Boos
+
+Meeting called to order at 17:05 EST.
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Next meeting: 16 Dec 2003.
+
+Correction: next meeting is Wednesday 17 Dec 2003.
+We meet on Wednesdays now.
+
+Action: Bob to fix the OASIS calendar dates.
+
+| 4. Review of the agenda
+
+No changes.
+
+| 5. Review of open action items
+|
+|     a. Norm to follow-up on RFE 562343: <packagename> element
+Continued.
+|     b. Norm to write better documentation for option/optional
+Continued.
+|     c. Norm to describe how the prototype works and how it was
+constructed.
+Continued.
+|     d. Mike to provide a better proposal for choicelist markup.
+Continued.
+|     e. Mike to reconsider the annotation problem and post his thoughts.
+Continued.
+|     f  Norm to post his stylesheet that attempts to convert existing
+DocBook
+|        documents to the "V5" style markup.
+Continued.
+|     g. Norm to add bibliolist to next agenda.
+Completed.
+|     h. Norm and Bob to coordinate secretarial duties.
+Completed.
+|     i. Norm to make firstterm and glossterm isomorphic.
+Completed.
+|     j. Dick to propose more general solution for caption in mediaobject.
+Continued.
+|     k. Steve to propose generalizing programlisting to the list.
+Continued.
+
+
+| 6. Action reminders? (Bob)
+
+Action: Bob to send out action item reminders one week
+before each meeting.
+
+| 7. Improved citations proposal (RFE 810932).
+
+Much discussion of detailed proposal submitted by
+Markus Hoenicka, Bruce D'Arcus, and Peter Flynn.
+Markus attended the call and answered questions.
+
+Markus: improvements in citations are needed in academic
+uses of DocBook. Most info for a citation is in the
+biblioentry elements in the bibliography, but additional
+info for a specific citation needs to be captured there.
+They propose a new biblioref element, which is like xref
+but has addtional bibliographic attributes and processing
+expectations.
+
+Steve: what about xref or link?
+
+Markus: new attributes are specialized for bibliographic links.
+
+Norm: why new attributes on citation as well?
+
+Markus: a single citation can include multiple bibliorefs,
+or no biblioref.
+
+Nancy:  suggests not putting renderas on citation, but
+for those rare cases use role.
+
+Norm: putting human readable text in attributes like
+caption is bad practice for internationalization reasons.
+
+Mike: biblioref could contain a caption element.
+
+Markus: or PCDATA, which would be the caption.
+
+Paul: caption is to be deprecated in future DTDs.
+
+Steve: suggests using a preprocessor to convert
+raw citations to cooked citations.
+
+Markus: Peter Flynn is doing something like that with XSLT.
+
+Norm: suggests trying to meet 80% of the need.  Caption
+could be part of the citation text.
+
+Norm: proposes adding biblioref with no caption attribute.
+It would be allowed wherever xref and link are allowed.
+
+<!ELEMENT biblioref - - EMPTY>
+<!ATTLIST biblioref linkend IDREF #REQUIRED
+                        endterm IDREF #IMPLIED
+                        unit NMTOKEN #IMPLIED
+                        start NMTOKEN #IMPLIED
+                        stop NMTOKEN #IMPLIED
+                        renderas (full|author|year|title) #IMPLIED
+>
+
+Markus: will discuss this proposal with other list
+members before the next meeting.
+
+Action: Bob to add this item to the next meeting's agenda.
+
+The Committee wishes to thank Markus for attending
+the call and answering questions.
+
+| 8. DocBook V4.3 CR1
+
+Norm proposed designating the current DTD as 4.3CR1
+and starting the 30 day comment clock.
+Approved.
+
+Action: Norm to publish 4.3CR1.
+
+Action: Norm to produce a simplified 4.3CR1.
+
+| 9. DocBook V5.0 (RELAX NG)
+
+No news.
+
+| 10. Bibliolist (from bibliography in refentry RFEs 742624 and 686733).
+|     Considered by TC in 2001 [2].
+|     Norm's proposal from 2001 [3].
+|     Recent TC discussion in August 2003 [4].
+|     Norm proposed bibliolist [5], one positive response from list.
+|
+|     <!ELEMENT bibliolist (blockinfo?,
+|                       (%formalobject.title.content;)?,
+|                       (biblioentry|bibliomixed)+)>
+|
+|     With common attributes.
+|     To be allowed anywhere other sorts of lists are allowed.
+
+Norm: reluctant to add a new element.  Adapt bibliography
+instead?  It is already allowed in many places, including
+sections.
+
+Nancy: bibliography should remain as a hierarchical
+element like a chapter.
+
+Bob: if we had had bibliolist, it probably would have been
+used instead of bibliography in section and the like.
+
+Proposal: adopt Norm's bibliolist element, and permit in
+same locations as other lists.  Approved.
+Won't be added to version 4.3.
+
+The committee expressed a desire to
+remove bibliography from sections in V5,
+and to consider more broadly the usage of
+glossary, lot, and similar hierarchical elements.
+
+
+| 11. Review of Requests for Enhancement
+
+No time. Next meeting to set aside more time for RFEs.
+
+Action: Bob to add agenda item to reconsider the policy
+for backwards incompatible changes.
+
+Meeting adjourned at 6:30 EST.
+
+|
+|     To browse a specific RFE, enter the URL (on one line):
+|
+|       http://sourceforge.net/tracker/index.php?func=detail&;;
+|       group_id=21935&atid=384107&aid=XXXX
+|
+|       543064 JavaObject tag
+|       675024 form, script, applet support
+|       698026 cannot embed <superscript> within <guibutton>
+|       702185 add procedure as child of para
+|       711815 Tagging for subtler breaks or "pauses" within a chapter
+|       742373 Splitting Segmented List
+|       752632 Color control of CALS table element
+|       798616 syntax="" or notation="" needed for code listings
+|       828720 'spacing' attr. for 'variablelist'
+|
+|
+|      The following RFEs are awaiting action items
+|
+|       413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+|       431411 RFE 70: add generic linking capability (Norm)
+|       522552 Add title attribute to <ulink> element (Mike, annotations)
+|       541444 caption in mediaobjectco (Dick)
+|       562343 <packagename> element (Norm)
+|       565637 Associate non-inline image with link (Norm, generic linking)
+|       574880 Add annotation element (Mike)
+|       613293 Generalize programlisting (Steve)
+|       623524 (Re)Consider "choicelist" markup (Mike)
+|
+|      The following RFEs are identified as V6.0 or later
+|
+|       531851 Remove inline person name elements
+|       532088 Remove RevHistory from qandaentry
+| - ---
+|
+| [1] http://lists.oasis-open.org/archives/docbook/200310/msg00082.html
+| [2] http://lists.oasis-open.org/archives/docbook/200108/msg00067.html
+| [3] http://lists.oasis-open.org/archives/docbook/200108/msg00081.html
+| [4] http://lists.oasis-open.org/archives/docbook/200308/msg00037.html
+| [5] http://lists.oasis-open.org/archives/docbook/200309/msg00061.html

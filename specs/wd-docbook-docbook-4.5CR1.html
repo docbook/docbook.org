@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content="HTML Tidy for Linux/x86 (vers 12 April 2005), see www.w3.org" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>The DocBook Document Type</title>
+<link rel="stylesheet" href="http://www.oasis-open.org/spectools/css/oasis-wd.css" type="text/css" />
+<meta name="generator" content="DocBook XSL Stylesheets V1.68.1" />
+<meta name="description" content="Abstract DocBook is general purpose and  document type particularly well suited to books and papers about computer hardware and software (though it is by no means limited to these applications).  The Version 4.5 release is a maintenance release. It introduces no backwards-incompatible changes." />
+<style type="text/css">
+/*<![CDATA[*/
+    span.paranum { color: #7F7F7F;
+                   font-style: italic;
+                   font-family: monospace;
+                 }
+    span.filename { font-weight: bold; }                 
+/*]]>*/
+</style>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="article" lang="en" xml:lang="en">
+<div class="titlepage">
+<p class="logo"><a href="http://www.oasis-open.org/"><img src="http://www.oasis-open.org/spectools/images/oasis.gif" alt="OASIS" border="0" /></a></p>
+<div>
+<h1 class="title"><a name="d0e1" id="d0e1"></a>The DocBook Document Type</h1>
+</div>
+<div>
+<h2>Working Draft&#160;4.5CR1,&#160;29 June 2005</h2>
+</div>
+<div>
+<dl>
+<dt><span class="docid-heading">Document identifier:</span></dt>
+<dd>
+<p>wd-docbook-docbook-4.5CR1 (<a href="wd-docbook-docbook-4.5CR1.xml" target="_top">XML</a>, <a href="wd-docbook-docbook-4.5CR1.html" target="_top">HTML</a>, <a href="wd-docbook-docbook-4.5CR1.pdf" target="_top">PDF</a>)</p>
+</dd>
+</dl>
+</div>
+<div><!-- 
+$Id: docbook.xml,v 1.29 2005/06/29 11:35:04 nwalsh Exp $
+ --></div>
+<div>
+<dl>
+<dt><span class="loc-heading">Location:</span></dt>
+<dd>
+<p><a href="http://www.oasis-open.org/docbook/specs">http://www.oasis-open.org/docbook/specs</a></p>
+</dd>
+</dl>
+</div>
+<div>
+<dl>
+<dt><span class="editor-heading">Editor:</span></dt>
+<dd>
+<p><span class="firstname">Norman</span> <span class="surname">Walsh</span>, Sun Microsystems, Inc.&#160;<code class="email">&lt;<a href="mailto:Norman.Walsh@Sun.COM">Norman.Walsh@Sun.COM</a>&gt;</code></p>
+</dd>
+</dl>
+</div>
+<div>
+<dl>
+<dt><a name="d0e63" id="d0e63"></a><span class="abstract-heading">Abstract:</span></dt>
+<dd>
+<p>DocBook is general purpose [<a href="#xml-rec"><span class="abbrev">XML</span></a>] and [<a href="#iso8879"><span class="abbrev">SGML</span></a>] document type particularly well suited to books and papers about computer hardware and software (though it is by no means limited to these applications).</p>
+<p>The Version 4.5 release is a maintenance release. It introduces no backwards-incompatible changes.</p>
+</dd>
+</dl>
+</div>
+<div>
+<dl>
+<dt><a name="d0e75" id="d0e75"></a><span class="status-heading">Status:</span></dt>
+<dd>
+<p>This Working Draft is an editor's draft. It does not necessarily represent the consensus of the committee.</p>
+<p>Please send comments on this specification to the <code class="email">&lt;<a href="mailto:docbook@lists.oasis-open.org">docbook@lists.oasis-open.org</a>&gt;</code> list. To subscribe, please use the <a href="http://lists.oasis-open.org/ob/adm.pl" target="_top">OASIS Subscription Manager</a>.</p>
+<p>The errata page for this specification is at <a href="http://www.oasis-open.org/docbook/specs/docbook-errata.html" target="_top">http://www.oasis-open.org/docbook/specs/docbook-errata.html</a>.</p>
+</dd>
+</dl>
+</div>
+<div>
+<p class="copyright">Copyright © 2001, 2002, 2003, 2004, 2005 The Organization for the Advancement of Structured Information Standards [OASIS]. All Rights Reserved.</p>
+</div>
+<hr /></div>
+<div class="toc">
+<h2>Table of Contents</h2>
+<dl>
+<dt><span class="section"><a href="#s.intro">1. Introduction</a></span></dt>
+<dt><span class="section"><a href="#s.terminology">2. Terminology</a></span></dt>
+<dt><span class="section"><a href="#docbook">3. The DocBook Document Type V4.5</a></span></dt>
+<dd>
+<dl>
+<dt><span class="section"><a href="#s.cr1">3.1. Changes in DocBook V4.5CR1</a></span></dt>
+<dt><span class="section"><a href="#s.b1">3.2. Changes in DocBook V4.5b1</a></span></dt>
+</dl>
+</dd>
+<dt><span class="section"><a href="#d0e321">4. Release Notes</a></span></dt>
+</dl>
+<h3>Appendixes</h3>
+<dl>
+<dt><span class="appendix"><a href="#a.mimetype">A. The DocBook Media Type</a></span></dt>
+<dd>
+<dl>
+<dt><span class="section"><a href="#media-type-registration">1. Registration of MIME media type application/docbook+xml</a></span></dt>
+<dt><span class="section"><a href="#fragid">2. Fragment Identifiers</a></span></dt>
+</dl>
+</dd>
+<dt><span class="appendix"><a href="#a.committee">B. OASIS DocBook Technical Committee (Non-Normative)</a></span></dt>
+<dt><span class="appendix"><a href="#a.notices">C. Notices</a></span></dt>
+<dt><span class="appendix"><a href="#a.ipr">D. Intellectual Property Rights</a></span></dt>
+<dt><span class="appendix"><a href="#a.revhistory">E. Revision History</a></span></dt>
+<dt><span class="bibliography"><a href="#references">References</a></span></dt>
+</dl>
+</div>
+<hr />
+<div class="section" lang="en" xml:lang="en">
+<div class="titlepage">
+<div>
+<h2 class="title" style="clear: both"><a name="s.intro" id="s.intro"></a>1.&#160;Introduction</h2>
+</div>
+</div>
+<p>DocBook is general purpose XML and SGML document type particularly well suited to books and papers about computer hardware and software (though it is by no means limited to these applications).</p>
+<p>The <a href="mailto:docbook-tc@oasis-open.org" target="_top">DocBook Technical Committee</a> maintains the DocBook schema. DocBook is officially available as a Document Type Definition (DTD) for both <a href="http://xml.coverpages.org/xmlIntro.html" target="_top">XML</a> and <a href="http://xml.coverpages.org/general.html#overview" target="_top">SGML</a>. It is unofficially available in other forms as well.</p>
+<p>The Version 4.5 release is a maintainance release. It introduces no backwards-incompatible changes. All valid DocBook 4.4 documents are also valid DocBook 4.5 documents.</p>
+<p>The Committee decided to produce a DocBook V4.5, incorporating a few recent backwards-compatible changes, in order to publish DocBook as a Committee Draft and eventually as an OASIS Standard through <a href="http://www.oasis-open.org/committees/process_2005.03.23.php" target="_top">the new process</a>.</p>
+<p>The DocBook Technical Committee welcomes bug reports and requests for enhancement (RFEs) from the user community. The current list of outstanding requests is available through the <a href="http://sourceforge.net/" target="_top">SourceForge</a> <a href="http://sourceforge.net/tracker/?atid=384107&amp;group_id=21935&amp;func=browse" target="_top">tracker</a> interface. This is also the preferred mechanism for submitting new requests. Old RFEs, from a previous legacy tracking system, are <a href=
+"http://www.oasis-open.org/docbook/old-rfes.html" target="_top">archived</a> for reference.</p>
+</div>
+<div class="section" lang="en" xml:lang="en">
+<div class="titlepage">
+<div>
+<h2 class="title" style="clear: both"><a name="s.terminology" id="s.terminology"></a>2.&#160;Terminology</h2>
+</div>
+</div>
+<p>The key words <em class="glossterm">must</em>, <em class="glossterm">must not</em>, <em class="glossterm">required</em>, <em class="glossterm">shall</em>, <em class="glossterm">shall not</em>, <em class="glossterm">should</em>, <em class="glossterm">should not</em>, <em class="glossterm">recommended</em>, <em class="glossterm">may</em>, and <em class="glossterm">optional</em> in this Working Draft are to be interpreted as described in [<a href="#rfc2119"><span class="abbrev">RFC 2119</span></a>]. Note
+that for reasons of style, these words are not capitalized in this document.</p>
+</div>
+<div class="section" lang="en" xml:lang="en">
+<div class="titlepage">
+<div>
+<h2 class="title" style="clear: both"><a name="docbook" id="docbook"></a>3.&#160;The DocBook Document Type V4.5</h2>
+</div>
+</div>
+<p>The DocBook document type is distributed for <a href="http://www.oasis-open.org/docbook/xml/" target="_top">XML</a> and <a href="http://www.oasis-open.org/docbook/sgml/" target="_top">SGML</a> from the <a href="http://www.oasis-open.org/docbook/" target="_top">DocBook site</a> at <a href="http://www.oasis-open.org/" target="_top">OASIS</a>. It is also available in <a href="http://www.oasis-open.org/docbook/rng/" target="_top">RELAX NG</a> and <a href="http://www.oasis-open.org/docbook/xsd/" target=
+"_top">W3C XML Schema</a> formats. The DocBook site is mirrored on <a href="http://docbook.org/" target="_top">http://docbook.org/</a>.</p>
+<div class="section" lang="en" xml:lang="en">
+<div class="titlepage">
+<div>
+<h3 class="title"><a name="s.cr1" id="s.cr1"></a>3.1.&#160;Changes in DocBook V4.5CR1</h3>
+</div>
+</div>
+<p>There are no backwards-incompatible changes in this release.</p>
+<p>Each of the changes made between DocBook V4.5b1 and DocBook V4.5CR1 is summarized here. For complete details, consult the individual RFEs and the <a href="http://www.oasis-open.org/docbook/minutes" target="_top">meeting minutes</a>.</p>
+<p>There are no technical changes in DocBook V4.5CR1.</p>
+</div>
+<div class="section" lang="en" xml:lang="en">
+<div class="titlepage">
+<div>
+<h3 class="title"><a name="s.b1" id="s.b1"></a>3.2.&#160;Changes in DocBook V4.5b1</h3>
+</div>
+</div>
+<p>There are no backwards-incompatible changes in this release.</p>
+<p>Each of the changes made between DocBook V4.4 and DocBook V4.5b1 is summarized here. For complete details, consult the individual RFEs and the <a href="http://www.oasis-open.org/docbook/minutes" target="_top">meeting minutes</a>.</p>
+<div class="section" lang="en" xml:lang="en">
+<div class="titlepage">
+<div>
+<h4 class="title"><a name="sb1.bugs" id="sb1.bugs"></a>3.2.1.&#160;Bug Fixes</h4>
+</div>
+</div>
+<div class="itemizedlist">
+<ul type="disc" compact="compact">
+<li>
+<p>None.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" lang="en" xml:lang="en">
+<div class="titlepage">
+<div>
+<h4 class="title"><a name="sb1.enhancements" id="sb1.enhancements"></a>3.2.2.&#160;Enhancements</h4>
+</div>
+</div>
+<div class="itemizedlist">
+<ul type="disc" compact="compact">
+<li>
+<p><a name="rfe.1055480" id="rfe.1055480"></a><a href="http://sourceforge.net/tracker/index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=1055480" target="_top">RFE 1055480</a>: Allow <code class="sgmltag-element">revnumber</code> to be optional in <code class="sgmltag-element">revision</code> per the <a href="http://docbook.org/minutes/2004-11-22.txt" target="_top">November, 2004</a> meeting.</p>
+</li>
+<li>
+<p><a name="rfe.1070458" id="rfe.1070458"></a><a href="http://sourceforge.net/tracker/index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=1070458" target="_top">RFE 1070458</a>: Allow <code class="sgmltag-element">colophon</code> in <code class="sgmltag-element">article</code> per the <a href="http://docbook.org/minutes/2004-11-22.txt" target="_top">November, 2004</a> meeting.</p>
+</li>
+<li>
+<p><a name="rfe.1070770" id="rfe.1070770"></a><a href="http://sourceforge.net/tracker/index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=1070770" target="_top">RFE 1070770</a>: Allow <code class="sgmltag-element">procedure</code> in <code class="sgmltag-element">example</code> per the <a href="http://docbook.org/minutes/2004-11-22.txt" target="_top">November, 2004</a> meeting.</p>
+</li>
+<li>
+<p><a name="rfe.1071686" id="rfe.1071686"></a><a href="http://sourceforge.net/tracker/index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;aid=1071686" target="_top">RFE 1071686</a>: Add <code class="sgmltag-attvalue">isrn</code> as a value of <code class="sgmltag-attribute">class</code> attribute on <code class="sgmltag-element">biblioid</code>, <code class="sgmltag-element">citebiblioid</code>, <code class="sgmltag-element">bibliosource</code>, and <code class=
+"sgmltag-element">bibliorelation</code> per the <a href="http://docbook.org/minutes/2004-12-15.txt" target="_top">December, 2004</a> meeting.</p>
+</li>
+<li>
+<p>Added <code class="sgmltag-element">mathphrase</code> per the <a href="http://docbook.org/minutes/2005-02-16.txt" target="_top">February, 2005</a> meeting.</p>
+</li>
+<li>
+<p>Added <code class="sgmltag-element">termdef</code> per the <a href="http://docbook.org/minutes/2005-03-16.txt" target="_top">March, 2005</a> meeting.</p>
+</li>
+<li>
+<p>Allow common attributes on HTML table elements (<code class="sgmltag-element">tr</code>, <code class="sgmltag-element">td</code>, etc.) per the <a href="http://docbook.org/minutes/2005-04-20.txt" target="_top">April, 2005</a> meeting.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="section" lang="en" xml:lang="en">
+<div class="titlepage">
+<div>
+<h2 class="title" style="clear: both"><a name="d0e321" id="d0e321"></a>4.&#160;Release Notes</h2>
+</div>
+</div>
+<p>XML validation technologies have evolved rapidly in the last few years. The Technical Committee is exploring the possibility of using RELAX NG as the principal validation technology for DocBook V5.0. The move to RELAX NG will also cause some one time backward-incompatible changes which are not listed in this specifcation.</p>
+</div>
+<div class="appendix" lang="en" xml:lang="en">
+<h2 class="title" style="clear: both"><a name="a.mimetype" id="a.mimetype"></a>A.&#160;The DocBook Media Type</h2>
+<p>This appendix registers a new MIME media type, "<span class="quote"><code class="code">application/docbook+xml</code></span>".</p>
+<div class="section" lang="en" xml:lang="en">
+<div class="titlepage">
+<div>
+<h3 class="title"><a name="media-type-registration" id="media-type-registration"></a>1.&#160;Registration of MIME media type application/docbook+xml</h3>
+</div>
+</div>
+<div class="variablelist">
+<dl>
+<dt><span class="term">MIME media type name:</span></dt>
+<dd>
+<p><code class="code">application</code></p>
+</dd>
+<dt><span class="term">MIME subtype name:</span></dt>
+<dd>
+<p><code class="code">docbook+xml</code></p>
+</dd>
+<dt><span class="term">Required parameters:</span></dt>
+<dd>
+<p>None.</p>
+</dd>
+<dt><span class="term">Optional parameters:</span></dt>
+<dd>
+<div class="variablelist">
+<dl>
+<dt><span class="term"><code class="code">charset</code></span></dt>
+<dd>
+<p>This parameter has identical semantics to the <code class="code">charset</code> parameter of the <code class="code">application/xml</code> media type as specified in [<a href="#rfc3023"><span class="abbrev">RFC 3023</span></a>] or its successors.</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt><span class="term">Encoding considerations:</span></dt>
+<dd>
+<p>By virtue of DocBook XML content being XML, it has the same considerations when sent as "<span class="quote"><code class="code">application/docbook+xml</code></span>" as does XML. See [<a href="#rfc3023"><span class="abbrev">RFC 3023</span></a>], Section 3.2.</p>
+</dd>
+<dt><span class="term">Security considerations:</span></dt>
+<dd>
+<p>Several DocBook elements may refer to arbitrary URIs. In this case, the security issues of RFC 2396, section 7, should be considered.</p>
+</dd>
+<dt><span class="term">Interoperability considerations:</span></dt>
+<dd>
+<p>None.</p>
+</dd>
+<dt><span class="term">Published specification:</span></dt>
+<dd>
+<p>This media type registration is for DocBook documents as described by [<a href="#bib.docbooktdg"><span class="abbrev">DocBook: TDG</span></a>].</p>
+</dd>
+<dt><span class="term">Applications which use this media type:</span></dt>
+<dd>
+<p>There is no experimental, vendor specific, or personal tree predecessor to "<span class="quote"><code class="code">application/docbook+xml</code></span>", reflecting the fact that no applications currently recognize it. This new type is being registered in order to allow for the deployment of DocBook on the World Wide Web, as a first class XML application.</p>
+</dd>
+<dt><span class="term">Additional information:</span></dt>
+<dd>
+<div class="variablelist">
+<dl>
+<dt><span class="term">Magic number(s):</span></dt>
+<dd>
+<p>There is no single initial octet sequence that is always present in DocBook documents.</p>
+</dd>
+<dt><span class="term">File extension(s):</span></dt>
+<dd>
+<p>DocBook documents are most often identified with the extension "<span class="quote"><span class="filename">.xml</span></span>".</p>
+</dd>
+<dt><span class="term">Macintosh File Type Code(s):</span></dt>
+<dd>
+<p>TEXT</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt><span class="term">Person &amp; email address to contact for further information:</span></dt>
+<dd>
+<p>Norman Walsh, <code class="email">&lt;<a href="mailto:ndw@nwalsh.com">ndw@nwalsh.com</a>&gt;</code>.</p>
+</dd>
+<dt><span class="term">Intended usage:</span></dt>
+<dd>
+<p>COMMON</p>
+</dd>
+<dt><span class="term">Author/Change controller:</span></dt>
+<dd>
+<p>The DocBook specification is a work product of the DocBook Technical Committee at OASIS.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" lang="en" xml:lang="en">
+<div class="titlepage">
+<div>
+<h3 class="title"><a name="fragid" id="fragid"></a>2.&#160;Fragment Identifiers</h3>
+</div>
+</div>
+<p>For documents labeled as "<span class="quote"><code class="code">application/docbook+xml</code></span>", the fragment identifier notation is exactly that for "<span class="quote"><code class="code">application/xml</code></span>", as specified in [<a href="#rfc3023"><span class="abbrev">RFC 3023</span></a>] or its successors.</p>
+</div>
+</div>
+<div class="appendix" lang="en" xml:lang="en">
+<h2 class="title" style="clear: both"><a name="a.committee" id="a.committee"></a>B.&#160;OASIS DocBook Technical Committee (Non-Normative)</h2>
+<p>The following individuals were members of the committee during the formulation of this Working Draft:</p>
+<div class="itemizedlist">
+<ul type="disc" compact="compact">
+<li>
+<p>Adam Di Carlo</p>
+</li>
+<li>
+<p>Steve Cogorno</p>
+</li>
+<li>
+<p>Gary Cornelius</p>
+</li>
+<li>
+<p>Dick Hamilton</p>
+</li>
+<li>
+<p>Nancy Harrison</p>
+</li>
+<li>
+<p>Scott Hudson</p>
+</li>
+<li>
+<p>Paul Grosso</p>
+</li>
+<li>
+<p>Mark Johnson</p>
+</li>
+<li>
+<p>Jirka Kosek</p>
+</li>
+<li>
+<p>Larry Rowland</p>
+</li>
+<li>
+<p>Michael Smith</p>
+</li>
+<li>
+<p>Robert Stayton, Secretary</p>
+</li>
+<li>
+<p>Norman Walsh, Chair, Editor</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="appendix" lang="en" xml:lang="en">
+<h2 class="title" style="clear: both"><a name="a.notices" id="a.notices"></a>C.&#160;Notices</h2>
+<p>Copyright © The Organization for the Advancement of Structured Information Standards [OASIS] 2001, 2002, 2003, 2004, 2005. All Rights Reserved.</p>
+<p>OASIS takes no position regarding the validity or scope of any intellectual property or other rights that might be claimed to pertain to the implementation or use of the technology described in this document or the extent to which any license under such rights might or might not be available; neither does it represent that it has made any effort to identify any such rights. Information on OASIS's procedures with respect to rights in OASIS specifications can be found at the OASIS website. Copies of
+claims of rights made available for publication and any assurances of licenses to be made available, or the result of an attempt made to obtain a general license or permission for the use of such proprietary rights by implementors or users of this specification, can be obtained from the OASIS Executive Director.</p>
+<p>OASIS invites any interested party to bring to its attention any copyrights, patents or patent applications, or other proprietary rights which may cover technology that may be required to implement this specification. Please address the information to the OASIS Executive Director.</p>
+<p>This document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to
+OASIS, except as needed for the purpose of developing OASIS specifications, in which case the procedures for copyrights defined in the OASIS Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.</p>
+<p>The limited permissions granted above are perpetual and will not be revoked by OASIS or its successors or assigns.</p>
+<p>This document and the information contained herein is provided on an "<span class="quote">AS IS</span>" basis and OASIS DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</p>
+<p>OASIS has been notified of intellectual property rights claimed in regard to some or all of the contents of this specification. For more information consult the online list of claimed rights.</p>
+</div>
+<div class="appendix" lang="en" xml:lang="en">
+<h2 class="title" style="clear: both"><a name="a.ipr" id="a.ipr"></a>D.&#160;Intellectual Property Rights</h2>
+<p>For information on whether any patents have been disclosed that may be essential to implementing this specification, and any offers of patent licensing terms, please refer to the Intellectual Property Rights section of the DocBook web page (<a href="http://www.oasis-open.org/committees/docbook/" target="_top">http://www.oasis-open.org/committees/docbook/</a>)</p>
+</div>
+<div class="appendix" lang="en" xml:lang="en">
+<h2 class="title" style="clear: both"><a name="a.revhistory" id="a.revhistory"></a>E.&#160;Revision History</h2>
+<div class="revhistory">
+<table border="1" width="100%" summary="Revision history">
+<tr>
+<td align="left">Revision Working Draft CR1</td>
+<td align="left">29 June 2005</td>
+</tr>
+<tr>
+<td align="left">Revision Working Draft b1</td>
+<td align="left">05 May 2005</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="bibliography">
+<div class="titlepage">
+<div>
+<h2 class="title"><a name="references" id="references"></a>References</h2>
+</div>
+</div>
+<div class="bibliodiv">
+<h3 class="title">Normative</h3>
+<div class="bibliomixed"><a name="iso8879" id="iso8879"></a>
+<p class="bibliomixed">[<span class="abbrev">SGML</span>] JTC 1, SC 34. <span class="citetitle"><em class="citetitle">ISO 8879:1986 Information processing -- Text and office systems -- Standard Generalized Markup Language (SGML)</em></span>. 1986.</p>
+</div>
+<div class="bibliomixed"><a name="xml-rec" id="xml-rec"></a>
+<p class="bibliomixed">[<span class="abbrev">XML</span>] Tim Bray, Jean Paoli, C. M. Sperberg-McQueen, <span class="foreignphrase"><em class="foreignphrase">et. al.</em></span>, editors. <span class="citetitle"><em class="citetitle"><a href="http://www.w3.org/TR/REC-xml" target="_top">Extensible Markup Language (XML) 1.0 (Third Edition)</a></em></span>. World Wide Web Consortium, 04 Feb 2004.</p>
+</div>
+<div class="bibliomixed"><a name="rfc2119" id="rfc2119"></a>
+<p class="bibliomixed">[<span class="abbrev">RFC 2119</span>] IETF (Internet Engineering Task Force). <span class="citetitle"><em class="citetitle"><a href="http://www.ietf.org/rfc/rfc2119.txt" target="_top">RFC 2119: Key words for use in RFCs to Indicate Requirement Levels</a></em></span>. S. Bradner. 1997.</p>
+</div>
+<div class="bibliomixed"><a name="rfc3023" id="rfc3023"></a>
+<p class="bibliomixed">[<span class="abbrev">RFC 3023</span>] IETF (Internet Engineering Task Force). <span class="citetitle"><em class="citetitle"><a href="http://www.ietf.org/rfc/rfc3023.txt" target="_top">RFC 3023: XML Media Types</a></em></span>. M. Murata, S. St. Laurent, D. Kohn. 2001.</p>
+</div>
+<div class="bibliomixed"><a name="bib.docbooktdg" id="bib.docbooktdg"></a>
+<p class="bibliomixed">[<span class="abbrev">DocBook: TDG</span>] Norman Walsh and Leonard Meullner. <span class="citetitle"><em class="citetitle"><a href="http://docbook.org/tdg/en/" target="_top">DocBook: The Definitive Guide</a>. O’Reilly &amp; Associates, 1999.</em></span></p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

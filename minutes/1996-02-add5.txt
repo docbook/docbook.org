@@ -1,0 +1,49 @@
+From server@amber.ora.com Wed Mar  6 12:27:09 1996
+Received: from ruby.ora.com (ruby.ora.com [198.112.208.25]) by jasper.ora.com (8.6.13/8.6.11) with ESMTP id MAA15577 for <norm@jasper.ora.com>; Wed, 6 Mar 1996 12:27:07 -0500
+Received: from amber.ora.com (amber.ora.com [198.112.208.11]) by ruby.ora.com (8.6.13/8.6.11) with ESMTP id MAA28163; Wed, 6 Mar 1996 12:29:45 -0500
+Received: (from server@localhost) by amber.ora.com (8.6.13/8.6.11) id LAA21241; Wed, 6 Mar 1996 11:30:58 -0500
+Date: Wed, 6 Mar 1996 11:30:58 -0500
+Message-Id: <199603061621.LAA21980@village.doctools.com>
+Errors-To: listown@online.ora.com
+Reply-To: eve@doctools.com
+Originator: davenport@online.ora.com
+Sender: davenport@online.ora.com
+Precedence: bulk
+From: Eve Maler <eve@doctools.com>
+To: Multiple recipients of list <davenport@online.ora.com>
+Subject: Davenport Feb/Mar '96 addendum
+X-Listprocessor-Version: 6.0c -- ListProcessor by Anastasios Kotsikonas
+X-Comment: Davenport Group General Distribution List
+X-Comment: To unsubscribe send message to listproc@online.ora.com "unsubscribe davenport"
+
+At the tail end of the meeting, we decided on a few V4.0
+backwards-incompatible changes that I didn't mention in my 
+original DocBook notes.  Here they are; please comment as
+for the original message:
+
+o (As Terry mentioned and Con replied) Remove Comment/link.char.class
+  from appearing directly in RefEntry and RefName Div; possibly
+  allow Comment but not link.char.class?  Allow Comment as an
+  inclusion on RefEntry?
+
+o Remove AuthorBlurb and Abstract from the descobj.class, while
+  ensuring they are in the new DocMeta element.
+
+o Reduce the content of docinfo.char.class for use in text: Remove
+  all but ProductName, ProductNumber, and ModeSpec.  Ensure that the
+  other contexts that use docinfo.char.class have the full complement.
+
+  Note that the only other use for the class is in SetInfo.  Should
+  SetInfo just be turned into DocMeta at V4.0, similarly to the other
+  meta situations?
+
+o Consider simplifying the MsgSet content model, or at least offering
+  a "simple model for simple cases" alternative to the current model;
+  Jon will propose the change in mail.
+
+
+Thanks,
+
+	Eve
+
+

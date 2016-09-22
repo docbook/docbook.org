@@ -1,0 +1,200 @@
+DocBook Technical Committee Meeting Minutes: 16 February 2005
+=============================================================
+
+The DocBook Technical Committee met on Wednesday, 16 February 2005 at
+05:00p EST (02:00p PST, 22:00GMT, 22:00BST, 23:00CEST, 07:00JST+,
+03:30a India+).
+
+1. Roll call
+
+   Present: Steve Cogorno, Paul Grosso,
+   Nancy Harrison, Scott Hudson, Dick Hamilton,
+   Jirka Kosek, Larry Rowland, Bob Stayton, Norman Walsh 
+   
+   Absent: Adam Di Carlo, Gary Cornelius, Mark Johnson, Mike Smith
+   
+2. Accepted the minutes[1] of the previous meeting.
+
+3. Next meeting: 16 March 2005
+
+4. Review of the agenda.
+    Added 9a.  DITA.
+    Added 9b.  Mathphrase.
+
+5. Review of open action items
+
+   a. Mike to move the test suite process so that it's a target
+      in the tests/Makefile.
+      CONTINUE.
+
+   b. Norm to write a concrete summary of the annotation proposal.
+      COMPLETED.
+
+   c. Norm to post a summary of pointers to changes and the stuff
+      I've written about DocBook V5.0.
+      COMPLETED.
+
+   d. Norm to write a spec of V5 changes.
+      CONTINUE.
+
+   e. Nancy to rewrite the proposal and send it to the docbook
+      mailing list for discussion.
+      COMPLETED.
+
+   f. Norm to get OASIS namespace naming rules.
+      CONTINUE.
+
+   g. Norm to publish DTD 4.4 and make the announcement.
+      COMPLETED.
+
+   h. Norm to update the OASIS webpages.
+      COMPLETED.
+
+   i. Larry to write a proposal for text math in equation elements.
+      COMPLETED.
+
+6.  DTD V5 development status.
+
+Norm circulated to committee members a draft spec for
+DocBook V5.0 to initiate discussion.  He noted these features:
+  - It isn't all that different from 4.4.
+  - The use of xml:id may be controversial.
+  - Linking is ubiquitous, and may replace existing linking elements.
+  - title elements will be either a child or sibling of info, but not both.
+  - some elements are slated for removal.
+
+ACTION: Norm to publish a version of the 5.0 spec before
+the next meeting.
+
+7. Task markup as sibling to sections [2] [3]
+
+This item has been tabled indefinitely.
+
+8. Annotation proposal (Mike).  [4] [5]
+    Continued from previous meeting.
+
+Norm published a proposal to the mailing list, which stimulated
+much discussion.  One suggestion to make an annotation a sibling
+of the element being annotated was not accepted, because it
+complicated database chunking and stylesheet architecture.
+Also, we currently have metadata as a child of the
+element it is annotating (such as bookinfo in book).
+
+Another suggestion was putting annotations inside info
+or other locations and using ID IDREFS to associate them
+with the content.  If not centralized, may need to add an
+annotationref element (like footnoteref) to allow multiple
+links to an annotation.
+
+The group decided to follow the email discussion and bring
+this up again at the next meeting.
+
+9. Discuss guidelines for accepting or rejecting requests. [6] [7]
+
+Nancy's suggestions were approved.  The guidelines will be
+included in the email posting guidelines and on the
+SourceForge RFE submission page.
+
+ACTION: Norm to add to email guidelines and SourceForge page.
+
+9a.  DITA
+The OASIS committee has released a draft spec for DITA 
+(Darwin Information Typing Architecture).  The documents
+can be downloaded:
+
+http://www.oasis-open.org/committees/download.php/11428/cd1.zip
+
+All committee members should read the spec to see what
+connections there are with DocBook.
+
+9b. mathphrase
+
+Larry described his proposal for a mathphrase element
+for simple math. The group decided to remove varname 
+and other elements that would require redefining to fit
+into a math equation.  These content models were approved:
+
+equation ::=
+(blockinfo?,
+ (title,titleabbrev?)?,
+ (informalequation|
+  (alt?,
+   (graphic+|mediaobject+|
+    (mathphrase)+))))
+
+informalequation ::=
+(blockinfo?,
+ (alt?,
+  (graphic+|mediaobject+|
+   (mathphrase)+)))
+
+mathphrase ::=
+(#PCDATA|superscript|subscript|emphasis)*
+
+This will be added to V5.0.  It may be added to V4
+if there is another release before 5.0.
+
+
+10. Review of Requests for Enhancement
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;;
+      group_id=21935&atid=384107&aid=XXXX
+
+      1095721 Allow text in inlineequation 
+
+Covered in item 9b.
+
+      1116144 Support inline term definitions 
+
+Norm described his proposal for inline term definitions
+(see the RFE).  It would permit an author to mark
+up a term definition in place, which would be output
+with formatting applied.  He pointed to W3C specs as an
+example. It is a useful style of writing definitions that
+differs from back-of-book glossary.  If properly written,
+the definitions could also be collected into a back-of-book
+glossary.  The current glossentry could not be used 
+for inline usage because its glossdef element contains
+block elements.  The group was inclined to adopt the
+proposal as described in Norm's updated proposal. [8]
+
+ACTION: Bob to add to next month's agenda for approval.
+     
+Meeting adjourned.
+--------------------------------------------------------------
+
+     The following RFEs are awaiting action items
+
+      973446 Replace Footnote with Annotation 
+      413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+      431411 RFE 70: add generic linking capability (Norm)
+      522552 Add title attribute to <ulink> element (Mike, annotations)
+      565637 Associate non-inline image with link (Norm, generic linking)
+      574880 Add annotation element (Mike)
+      623524 (Re)Consider "choicelist" markup (Mike)
+
+     The following RFEs are identified as V5.0 or later
+
+      1097183 Allow Task as a sibling of sections 
+      1084491 Add address, orgname, orgdiv to corpauthor, corpcredit, etc. 
+      974285 Check floatstyle/float attributes
+      958393 remove default class value from productname 
+      531851 Remove inline person name elements
+      532088 Remove RevHistory from qandaentry
+- ---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200501/msg00007.html
+[2] http://lists.oasis-open.org/archives/docbook-tc/200501/msg00000.html
+[3] http://lists.oasis-open.org/archives/docbook-tc/200501/msg00002.html
+[4] http://lists.oasis-open.org/archives/docbook-tc/200406/msg00003.html
+[5] http://lists.oasis-open.org/archives/docbook-tc/200406/msg00005.html
+[6] http://lists.oasis-open.org/archives/docbook/200411/msg00043.html
+[7] http://lists.oasis-open.org/archives/docbook/200411/msg00046.html
+[8] http://lists.oasis-open.org/archives/docbook/200502/msg00042.html
+
+Bob Stayton
+Sagehill Enterprises
+DocBook Consulting
+bobs@sagehill.net

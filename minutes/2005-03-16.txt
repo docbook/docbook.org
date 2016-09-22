@@ -1,0 +1,193 @@
+DocBook Technical Committee Meeting Minutes: 16 March 2005
+=============================================================
+
+The DocBook Technical Committee met on Wednesday, 16 March 2005 at
+05:00p EST (02:00p PST, 22:00GMT, 22:00BST, 23:00CEST, 07:00JST+,
+03:30a India+) for 90 minutes.
+
+1. Roll call
+   Present: Steve Cogorno, Gary Cornelius, Paul Grosso,
+   Nancy Harrison, Scott Hudson, Dick Hamilton, Mark Johnson,
+   Jirka Kosek, Larry Rowland, Bob Stayton, Norman Walsh 
+   
+   Absent: Adam Di Carlo
+   
+2. Accepted the minutes[1] of the previous meeting.
+
+3. Next meeting: 20 April 2005
+   Daylight Savings Time starts.
+
+4. Review of the agenda.
+   Added item 12b.
+
+5. Review of open action items
+
+   a. Mike to move the test suite process so that it's a target
+      in the tests/Makefile.
+      REMOVE THIS ITEM.
+
+   b. Norm to obtain OASIS namespace naming rules.
+      CONTINUED.
+
+   c. Norm to publish a version of the 5.0 spec before
+      the next meeting.
+      CONTINUED.
+
+   d. Norm to add guidelines for accepting requests
+      to email guidelines and SourceForge page.
+      COMPLETED.
+
+   e. Bob to add inline term definitions to agenda.
+      COMPLETED.
+      
+6.  DTD V5 development status.
+
+No news.
+
+7. Annotation proposal (Mike).  [2] [3]
+    Continued from previous meeting.
+
+Discussion centered on how to associate an annotation
+with its target.  The two alternatives are as a child
+of the parent target element, and using ID/IDREF from
+a different location.  Jirka suggested that both methods
+could work, using the presence of an id attribute to
+determine the type.  Others didn't want to use id for
+that purpose.  If use an IDREFS attribute type on the
+annotation, it could point to multiple target IDs.
+What about putting an annotation as a child of one element,
+and associate with other elements?  Some didn't like the
+asymmetry, since all targets logically share the annotation.
+Another question: when processing takes place, how does a target know
+it has an annotation?  We could use an annotationref element to
+point to an annotation located elsewhere.  
+
+ACTION: Bob to write up a new proposal for the annotations.
+
+8. Inline term definitions (Norm).
+    Continued from previous meeting.
+
+In [4] Norm proposed a new element <termdef> for DocBook 5
+as follows:
+
+element termdef {
+        common.idreq.attributes,
+        (db.all.inlines* & glossterm)
+        }
+
+This element would support defining terms within
+paragraphs in a manner similar to W3C recommendations.
+It would be permitted in the technical.inlines
+group, and excluded from itself.
+
+The committee unanimously accepted this proposal.
+If another version of DocBook 4 is released, it would
+be added using DTD syntax.
+
+9. OASIS intellectual property rights policies (Norm).
+
+Norm reported on the proposed OASIS IPR policies, suggested
+reading the available tutorial, and reported on some controversy
+about the policies.  DocBook has been royalty free, and
+the Committee expressed support for keeping it royalty free.
+
+10.  DocBook namespaces.
+
+An email thread initiated by Jirka [5] started a discussion
+of how to declare DocBook namespaces for version 5.  We are
+leaning towards URIs rather than URNs, and using docbook.org or
+OASIS in the names. Gary suggested a "ns." prefix, which would
+require obtaining an ns.docbook.org domain name if we want
+something to be available at the URI.
+
+This item is continued until we get
+the OASIS naming guidelines.
+
+11.  DocBook and Darwin Information Typing Archtecture (DITA).
+
+Paul and Nancy described DITA and how it relates to DocBook.
+Paul saw DITA as a separate schema that would not directly
+influence Docbook.  Nancy suggested some transformations
+between DocBook and DITA are being done.  The committee 
+decided to wait for requests from users before taking any
+action.
+
+12.  Table model purity (Bob).
+
+Bob proposed adding four CALS table attributes to the
+HTML table model in DocBook 5.   The attributes are:
+
+orient
+pgwide
+tabstyle
+floatstyle
+
+These attributes would allow HTML tables to be formatted for
+print output the same as CALS tables.  The original HTML
+table model does not have these attributes because it was
+not page oriented.  The DocBook 4 DTD cannot completely
+separate the table models because they share the same top
+level table element.  In DocBook5, the table models are
+separate and currently don't share these attributes.
+
+Norm wants to keep the table models separate to ensure
+interoperability with other applications.  He wants to
+avoid creating non-standard hybrid tables.  Bob pointed
+out that HTML table markup in DocBook is likely to contain
+DOcBook elements, so it cannot be cut and pasted into HTML.
+
+A straw poll of committee members indicated an even split,
+with many undecided members.  
+
+ACTION: Bob to add to next month's agenda for further discussion.
+
+12b.  Status of Simplified DocBook 1.1.
+
+It has been in Candidate Release for several months
+with no complaints.  The committee accepted the proposal
+to make it an official release.
+
+ACTION: Norm to release official 1.1 version of sdocbook.
+
+Meeting adjourned at 6:30pm EST.
+------------------------------------------------------------
+
+13. Review of Requests for Enhancement
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;;
+      group_id=21935&atid=384107&aid=XXXX
+
+     [No new RFEs since the last meeting]
+
+     The following RFEs are awaiting action items
+
+      973446 Replace Footnote with Annotation 
+      413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+      431411 RFE 70: add generic linking capability (Norm)
+      522552 Add title attribute to <ulink> element (Mike, annotations)
+      565637 Associate non-inline image with link (Norm, generic linking)
+      574880 Add annotation element (Mike)
+      623524 (Re)Consider "choicelist" markup (Mike)
+
+     The following RFEs are identified as V5.0 or later
+
+      1097183 Allow Task as a sibling of sections 
+      1084491 Add address, orgname, orgdiv to corpauthor, corpcredit, etc. 
+      974285 Check floatstyle/float attributes
+      958393 remove default class value from productname 
+      531851 Remove inline person name elements
+      532088 Remove RevHistory from qandaentry
+- ---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200502/msg00008.html
+[2] http://lists.oasis-open.org/archives/docbook-tc/200406/msg00003.html
+[3] http://lists.oasis-open.org/archives/docbook-tc/200406/msg00005.html
+[4] http://lists.oasis-open.org/archives/docbook/200502/msg00042.html
+[5] http://lists.oasis-open.org/archives/docbook-tc/200503/msg00000.html
+
+Bob Stayton
+Sagehill Enterprises
+DocBook Consulting
+bobs@sagehill.net

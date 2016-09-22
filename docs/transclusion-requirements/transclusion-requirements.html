@@ -1,0 +1,333 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Requirements for transclusion in DocBook</title><meta name="generator" content="DocBook XSL Stylesheets V1.77.0-pre"><link rel="stylesheet" type="text/css" href="http://docbook.org/docs/howto/howto.css"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article" title="Requirements for transclusion in DocBook"><div class="titlepage"><h1>Requirements for transclusion in DocBook</h1><h3>09&nbsp;December&nbsp;2010</h3><div class="metadata"><h4>This version:</h4><dl class="urilist"><dt><span>http://docbook.org/docs/transclusion-requirements/2010-12-09/</span> (<a href="http://docbook.org/docs/transclusion-requirements/2010-12-09/">HTML</a>, <a href="http://docbook.org/docs/transclusion-requirements/2010-12-09/transclusion-requirements.xml">XML</a>, <a href="http://docbook.org/docs/transclusion-requirements/2010-12-09/transclusion-requirements.pdf">PDF</a>)</dt></dl><h4>Latest version:</h4><dl class="urilist"><dt><span>http://docbook.org/docs/transclusion-requirements/</span> (<a href="http://docbook.org/docs/transclusion-requirements/">HTML</a>, <a href="http://docbook.org/docs/transclusion-requirements/transclusion-requirements.xml">XML</a>, <a href="http://docbook.org/docs/transclusion-requirements/transclusion-requirements.pdf">PDF</a>)</dt></dl><h4>Author:</h4><dl class="authorlist"><dt><span class="personname"><span class="firstname">Jirka</span> <span class="surname">Kosek</span></span>, <code class="email">&lt;<a class="email" href="mailto:jirka@kosek.cz">jirka@kosek.cz</a>&gt;</code></dt></dl></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#uc-1">UC-1: Shared strings</a></span></dt><dt><span class="section"><a href="#uc-2">UC-2: Shared strings in attribute values</a></span></dt><dt><span class="section"><a href="#uc-3">UC-3: Conditional shared text</a></span></dt><dt><span class="section"><a href="#uc-4">UC-4: Modularized documents</a></span></dt><dt><span class="section"><a href="#uc-5">UC-5: Repeated transclusion in one <span class="quote">&#8220;<span class="quote">master</span>&#8221;</span> document</a></span></dt><dt><span class="section"><a href="#uc-6">UC-6: Transclusion of foreign content</a></span></dt><dt><span class="section"><a href="#evaluation">Evaluation of current technologies</a></span></dt></dl></div>
+  
+
+<p>This document summarizes uses-cases for transclusion of content
+in DocBook documents. This document should help DocBook TC in deciding
+whether existing standards like XInclude are sufficient for the task
+or whether DocBook specific mechanism should be designed.</p>
+
+<div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
+<p>DocBook TC has not yet decided whether DocBook specific
+mechanism is really required or not. But draft proposal of such transclusion
+mechanism is available at <a class="ulink" href="http://docbook.org/docs/transclusion/" target="_top">http://docbook.org/docs/transclusion/</a>.</p>
+</div>
+
+<div class="section" title="UC-1: Shared strings"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="uc-1"></a>UC-1: Shared strings</h2></div></div></div>
+
+
+<p>Many technical publication use repeating boilerplate text for
+things like product names or product versions. It is useful if such
+text is defined only once per document (or set of documents) and then
+just referenced. This approach prevents typos and makes updates and
+rebranding of content very easy.</p>
+
+<div class="section" title="Current solutions"><div class="titlepage"><div><div><h3 class="title"><a name="d6e18"></a>Current solutions</h3></div></div></div>
+
+
+<div class="section" title="Entities"><div class="titlepage"><div><div><h4 class="title"><a name="d6e20"></a>Entities</h4></div></div></div>
+
+
+<p>This use-case can be solved by using <a class="ulink" href="http://www.w3.org/TR/REC-xml/#sec-internal-ent" target="_top">internal
+entities</a>. This is well supported in processing tools and to
+some extent in authoring tools. However entities are somewhat hard to
+maintain when you use modular documents at the same time. Also
+entities and their references are not part of XDM so they do not
+survive XSLT processing which makes various <span class="quote">&#8220;<span class="quote">document
+massaging</span>&#8221;</span> tasks challenging.</p>
+
+<div class="example"><a name="d6e25"></a><p class="title"><b>Example&nbsp;1.&nbsp;Using entities for shared strings</b></p><div class="example-contents">
+<pre class="programlisting"><span class="rolelabel"></span>&lt;!ENTITY product-version "3.14"&gt;
+&lt;!ENTITY product-name "FooWiz"&gt;
+&lt;!ENTITY corp-name "ACME Inc."&gt;
+
+&#8230;
+&lt;para&gt;The latest version of &lt;application&gt;&amp;product-name;&lt;/application&gt;
+from &amp;corp-name; is &amp;product-version;.&lt;/para&gt;</pre>
+</div></div><br class="example-break">
+
+</div>
+
+<div class="section" title="XInclude"><div class="titlepage"><div><div><h4 class="title"><a name="d6e28"></a>XInclude</h4></div></div></div>
+
+
+<p><a class="ulink" href="http://www.w3.org/TR/xinclude/" target="_top">XInclude</a>
+when combined with proper XPointer schema can be used for transclusion
+of single element or even only its text content. In this setup there
+can be separate file with definition of shared texts which are then
+reused in other documents.</p>
+
+<div class="example"><a name="d6e32"></a><p class="title"><b>Example&nbsp;2.&nbsp;Definition file for further XInclude referencing</b></p><div class="example-contents">
+<pre class="programlisting"><strong class="hl-tag" style="color: #000096">&lt;article</strong> <span class="hl-attribute" style="color: #F5844C">xmlns</span>=<span class="hl-value" style="color: #993300">"http://docbook.org/ns/docbook"</span> <span class="hl-attribute" style="color: #F5844C">version</span>=<span class="hl-value" style="color: #993300">"5.0"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+  <b style="color: navy">&lt;title&gt;</b>Shared texts<b style="color: navy">&lt;/title&gt;</b>
+  <strong class="hl-tag" style="color: #000096">&lt;para&gt;</strong><strong class="hl-tag" style="color: #000096">&lt;phrase</strong> <span class="hl-attribute" style="color: #F5844C">xml:id</span>=<span class="hl-value" style="color: #993300">"product-version"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>3.14<strong class="hl-tag" style="color: #000096">&lt;/phrase&gt;</strong><strong class="hl-tag" style="color: #000096">&lt;/para&gt;</strong>
+  <strong class="hl-tag" style="color: #000096">&lt;para&gt;</strong><strong class="hl-tag" style="color: #000096">&lt;phrase</strong> <span class="hl-attribute" style="color: #F5844C">xml:id</span>=<span class="hl-value" style="color: #993300">"product-name"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>FooWiz<strong class="hl-tag" style="color: #000096">&lt;/phrase&gt;</strong><strong class="hl-tag" style="color: #000096">&lt;/para&gt;</strong>
+  <strong class="hl-tag" style="color: #000096">&lt;para&gt;</strong><strong class="hl-tag" style="color: #000096">&lt;phrase</strong> <span class="hl-attribute" style="color: #F5844C">xml:id</span>=<span class="hl-value" style="color: #993300">"corp-name"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>ACME Inc.<strong class="hl-tag" style="color: #000096">&lt;/phrase&gt;</strong><strong class="hl-tag" style="color: #000096">&lt;/para&gt;</strong>
+<strong class="hl-tag" style="color: #000096">&lt;/article&gt;</strong></pre>
+</div></div><br class="example-break">
+
+<p>The problem is that support for different XPointer schemes
+varies between implementations. Almost all implementations support
+referencing to element specified by its ID as shown in the following
+example.</p>
+
+<div class="example"><a name="d6e36"></a><p class="title"><b>Example&nbsp;3.&nbsp;Using XIncludes for shared texts</b></p><div class="example-contents">
+<pre class="programlisting"><strong class="hl-tag" style="color: #000096">&lt;&#8230;</strong> <span class="hl-attribute" style="color: #F5844C">xmlns:xi</span>=<span class="hl-value" style="color: #993300">"http://www.w3.org/2001/XInclude"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+&#8230;
+  <strong class="hl-tag" style="color: #000096">&lt;para&gt;</strong>The latest version of <strong class="hl-tag" style="color: #000096">&lt;application&gt;</strong><strong class="hl-tag" style="color: #000096">&lt;xi:include</strong> <span class="hl-attribute" style="color: #F5844C">href</span>=<span class="hl-value" style="color: #993300">"shared-texts.xml"</span> <span class="hl-attribute" style="color: #F5844C">xpointer</span>=<span class="hl-value" style="color: #993300">"product-name"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong><strong class="hl-tag" style="color: #000096">&lt;/application&gt;</strong>
+    from <strong class="hl-tag" style="color: #000096">&lt;xi:include</strong> <span class="hl-attribute" style="color: #F5844C">href</span>=<span class="hl-value" style="color: #993300">"shared-texts.xml"</span> <span class="hl-attribute" style="color: #F5844C">xpointer</span>=<span class="hl-value" style="color: #993300">"corp-name"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+    is <strong class="hl-tag" style="color: #000096">&lt;xi:include</strong> <span class="hl-attribute" style="color: #F5844C">href</span>=<span class="hl-value" style="color: #993300">"shared-texts.xml"</span> <span class="hl-attribute" style="color: #F5844C">xpointer</span>=<span class="hl-value" style="color: #993300">"product-version"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>.<strong class="hl-tag" style="color: #000096">&lt;/para&gt;</strong>
+&#8230;</pre>
+</div></div><br class="example-break">
+
+<p>This solution has two problems. The actual reference to shared
+texts is very verbose because each <code class="sgmltag-element">xi:include</code>
+element contains reference to the file with shared text
+definitions. Second problem is that such reference doesn't include
+only text of referenced element but whole element including <code class="sgmltag-attribute">xml:id</code> attribute. This leads to excessive
+markup and duplicated IDs in the composed document.</p>
+
+<p>Solution is to use more advanced XPointer scheme. This leads to
+the more arcane markup, support in tools is very bad, but there are no
+duplicated IDs and excessive markup.</p>
+
+<div class="example"><a name="d6e43"></a><p class="title"><b>Example&nbsp;4.&nbsp;Using XIncludes for shared texts without duplicating
+source elements</b></p><div class="example-contents">
+<pre class="programlisting"><strong class="hl-tag" style="color: #000096">&lt;&#8230;</strong> <span class="hl-attribute" style="color: #F5844C">xmlns:xi</span>=<span class="hl-value" style="color: #993300">"http://www.w3.org/2001/XInclude"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+&#8230;
+  <strong class="hl-tag" style="color: #000096">&lt;para&gt;</strong>The latest version of <strong class="hl-tag" style="color: #000096">&lt;application&gt;</strong><strong class="hl-tag" style="color: #000096">&lt;xi:include</strong> <span class="hl-attribute" style="color: #F5844C">href</span>=<span class="hl-value" style="color: #993300">"shared-texts.xml"</span> <span class="hl-attribute" style="color: #F5844C">xpointer</span>=<span class="hl-value" style="color: #993300">"xpath(id('product-name')/text())"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong><strong class="hl-tag" style="color: #000096">&lt;/application&gt;</strong>
+    from <strong class="hl-tag" style="color: #000096">&lt;xi:include</strong> <span class="hl-attribute" style="color: #F5844C">href</span>=<span class="hl-value" style="color: #993300">"shared-texts.xml"</span> <span class="hl-attribute" style="color: #F5844C">xpointer</span>=<span class="hl-value" style="color: #993300">"xpath(id('corp-name')/text())"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+    is <strong class="hl-tag" style="color: #000096">&lt;xi:include</strong> <span class="hl-attribute" style="color: #F5844C">href</span>=<span class="hl-value" style="color: #993300">"shared-texts.xml"</span> <span class="hl-attribute" style="color: #F5844C">xpointer</span>=<span class="hl-value" style="color: #993300">"xpath(id('product-version')/text())"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>.<strong class="hl-tag" style="color: #000096">&lt;/para&gt;</strong>
+&#8230;</pre>
+</div></div><br class="example-break">
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section" title="UC-2: Shared strings in attribute values"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="uc-2"></a>UC-2: Shared strings in attribute values</h2></div></div></div>
+
+
+<p>This use-cases is similar to <a class="xref" href="#uc-1" title="UC-1: Shared strings">UC-1</a>. The only
+difference now is that shared text can appear in an attribute
+value. This is not very common requirement for DocBook document, but
+because of differences between element and attribute values in XML
+separate use-cases is created.</p>
+
+<div class="section" title="Current solutions"><div class="titlepage"><div><div><h3 class="title"><a name="d6e50"></a>Current solutions</h3></div></div></div>
+
+
+<div class="section" title="Entities"><div class="titlepage"><div><div><h4 class="title"><a name="d6e52"></a>Entities</h4></div></div></div>
+
+
+<p>This use-case can be solved only by using <a class="ulink" href="http://www.w3.org/TR/REC-xml/#sec-internal-ent" target="_top">internal
+entities</a>. This is well supported in processing tools and to
+some extent in authoring tools.</p>
+
+<div class="example"><a name="d6e56"></a><p class="title"><b>Example&nbsp;5.&nbsp;Using entities for shared strings in attribute values</b></p><div class="example-contents">
+<pre class="programlisting"><span class="rolelabel"></span>&lt;!ENTITY product-version "3.14"&gt;
+&lt;!ENTITY product-name "FooWiz"&gt;
+&#8230;
+&lt;section xreflabel="Installation of &amp;product-name; &amp;product-version;"&gt;
+&#8230;</pre>
+</div></div><br class="example-break">
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section" title="UC-3: Conditional shared text"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="uc-3"></a>UC-3: Conditional shared text</h2></div></div></div>
+
+
+<p>Some documents use conditional content. Shared text then can be
+also subject to conditional processing.</p>
+
+<div class="section" title="Current solutions"><div class="titlepage"><div><div><h3 class="title"><a name="d6e62"></a>Current solutions</h3></div></div></div>
+
+
+<div class="section" title="Conditional sections"><div class="titlepage"><div><div><h4 class="title"><a name="d6e64"></a>Conditional sections</h4></div></div></div>
+
+
+<p>This use-case can be solved by using <a class="ulink" href="http://www.w3.org/TR/REC-xml/#sec-condition-sect" target="_top">conditional
+sections</a> which can enclose entity definitions.</p>
+
+<p class="remark"><em><span class="remark">Do we need example here? It is rarely used feature.</span></em></p>
+
+</div>
+
+<div class="section" title="XInclude and profiling"><div class="titlepage"><div><div><h4 class="title"><a name="d6e69"></a>XInclude and profiling</h4></div></div></div>
+
+
+<p>As typical XInclude scenarios include complete elements not just
+their content, it is possible to define several parallel elements
+with different profiling attributes set, enclose them with another
+element and then do inclusion.</p>
+
+<div class="example"><a name="d6e72"></a><p class="title"><b>Example&nbsp;6.&nbsp;Definition file for further XInclude referencing with
+conditional text</b></p><div class="example-contents">
+<pre class="programlisting"><strong class="hl-tag" style="color: #000096">&lt;article</strong> <span class="hl-attribute" style="color: #F5844C">xmlns</span>=<span class="hl-value" style="color: #993300">"http://docbook.org/ns/docbook"</span> <span class="hl-attribute" style="color: #F5844C">version</span>=<span class="hl-value" style="color: #993300">"5.0"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+  <b style="color: navy">&lt;title&gt;</b>Shared texts<b style="color: navy">&lt;/title&gt;</b>
+  &#8230;
+  <strong class="hl-tag" style="color: #000096">&lt;para&gt;</strong><strong class="hl-tag" style="color: #000096">&lt;phrase</strong> <span class="hl-attribute" style="color: #F5844C">xml:id</span>=<span class="hl-value" style="color: #993300">"product-name"</span><strong class="hl-tag" style="color: #000096">&gt;</strong><strong class="hl-tag" style="color: #000096">&lt;phrase</strong> <span class="hl-attribute" style="color: #F5844C">os</span>=<span class="hl-value" style="color: #993300">"win"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>Windows
+        Protector<strong class="hl-tag" style="color: #000096">&lt;/phrase&gt;</strong><strong class="hl-tag" style="color: #000096">&lt;phrase</strong> <span class="hl-attribute" style="color: #F5844C">os</span>=<span class="hl-value" style="color: #993300">"linux"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>Linux
+        Protector<strong class="hl-tag" style="color: #000096">&lt;/phrase&gt;</strong><strong class="hl-tag" style="color: #000096">&lt;/phrase&gt;</strong><strong class="hl-tag" style="color: #000096">&lt;/para&gt;</strong>
+  &#8230;
+<strong class="hl-tag" style="color: #000096">&lt;/article&gt;</strong></pre>
+</div></div><br class="example-break">
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section" title="UC-4: Modularized documents"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="uc-4"></a>UC-4: Modularized documents</h2></div></div></div>
+
+
+<p>For large documents it is often impractical to edit them as
+a single large XML file. It is practical to split large document
+(e.g. book) into few smaller ones (e.g. chapters) and just include
+them into <span class="quote">&#8220;<span class="quote">master</span>&#8221;</span> document. This approach is also useful
+for reusing of boilerplate texts like legalnotices.</p>
+
+<div class="section" title="Current solutions"><div class="titlepage"><div><div><h3 class="title"><a name="d6e79"></a>Current solutions</h3></div></div></div>
+
+
+<div class="section" title="Entities"><div class="titlepage"><div><div><h4 class="title"><a name="d6e81"></a>Entities</h4></div></div></div>
+
+
+<p>This use-case can be solved by using <a class="ulink" href="http://www.w3.org/TR/REC-xml/#sec-external-ent" target="_top">external
+entities</a>. This is well supported in processing tools and to
+some extent in authoring tools. Also
+entities and their references are not part of XDM so they do not
+survive XSLT processing which makes various <span class="quote">&#8220;<span class="quote">document
+massaging</span>&#8221;</span> task challenging. External entities doesn't work
+very well if there are multiple levels of inclusions as entities can
+be declared only in the <span class="quote">&#8220;<span class="quote">main</span>&#8221;</span> document.</p>
+
+<div class="example"><a name="d6e87"></a><p class="title"><b>Example&nbsp;7.&nbsp;Using entities for modularized documents</b></p><div class="example-contents">
+<pre class="programlisting"><span class="rolelabel"></span>&#8230;
+&lt;!ENTITY chapter1 SYSTEM "chapter1.xml"&gt;
+&lt;!ENTITY chapter2 SYSTEM "chapter2.xml"&gt;
+&#8230;
+&lt;book &#8230;&gt;
+  &lt;info&gt;
+    &lt;title&gt;A Book&lt;/title&gt;
+  &lt;/info&gt;
+  
+  &amp;chapter1;
+  &amp;chapter2;
+
+  &lt;index/&gt;
+&lt;/book&gt;</pre>
+</div></div><br class="example-break">
+
+</div>
+
+<div class="section" title="XInclude"><div class="titlepage"><div><div><h4 class="title"><a name="d6e90"></a>XInclude</h4></div></div></div>
+
+
+<p><a class="ulink" href="http://www.w3.org/TR/xinclude/" target="_top">XInclude</a>
+works very well for this use-case.</p>
+
+<div class="example"><a name="d6e94"></a><p class="title"><b>Example&nbsp;8.&nbsp;Using XIncludes for modularized documents</b></p><div class="example-contents">
+<pre class="programlisting"><strong class="hl-tag" style="color: #000096">&lt;book</strong> <span class="hl-attribute" style="color: #F5844C">&#8230;</span> <span class="hl-attribute" style="color: #F5844C">xmlns:xi</span>=<span class="hl-value" style="color: #993300">"http://www.w3.org/2001/XInclude"</span><strong class="hl-tag" style="color: #000096">&gt;</strong>
+  <strong class="hl-tag" style="color: #000096">&lt;info&gt;</strong>
+    <b style="color: navy">&lt;title&gt;</b>A Book<b style="color: navy">&lt;/title&gt;</b>
+  <strong class="hl-tag" style="color: #000096">&lt;/info&gt;</strong>
+  
+  <strong class="hl-tag" style="color: #000096">&lt;xi:include</strong> <span class="hl-attribute" style="color: #F5844C">href</span>=<span class="hl-value" style="color: #993300">"chapter1.xml"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+  <strong class="hl-tag" style="color: #000096">&lt;xi:include</strong> <span class="hl-attribute" style="color: #F5844C">href</span>=<span class="hl-value" style="color: #993300">"chapter2.xml"</span><strong class="hl-tag" style="color: #000096">/&gt;</strong>
+
+  <strong class="hl-tag" style="color: #000096">&lt;index/&gt;</strong>
+<strong class="hl-tag" style="color: #000096">&lt;/book&gt;</strong></pre>
+</div></div><br class="example-break">
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section" title="UC-5: Repeated transclusion in one &#8220;master&#8221; document"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="uc-5"></a>UC-5: Repeated transclusion in one <span class="quote">&#8220;<span class="quote">master</span>&#8221;</span> document</h2></div></div></div>
+
+
+<p>Some types of documentation are highly modular and composed from large
+number of small units. These units can be whole chapters, smaller
+self-standing units like section or topic, or it can be quite small
+chunk of content like admonition. If each such unit is used only once
+in document then there is no problem and we are working only with highly
+modular document (see <a class="xref" href="#uc-4" title="UC-4: Modularized documents">UC-4</a>). But if one unit is
+included more then once then we can face several problems.</p>
+
+<p>If elements in units have assigned unique IDs (by using <code class="sgmltag-attribute">xml:id</code> attribute) then resulting document
+after transclusion contains duplicate IDs. This makes file technically
+invalid and processing tools have difficulties in interpreting
+cross-references found in document.</p>
+
+<p>There are different strategies which can be used to managed
+units and IDs which are transcluded more then once:</p>
+
+<div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Do nothing. This of course doesn't solve problem and
+result of processing is unpredictable.</p></li><li class="listitem"><p>Preserve duplicated IDs only on their first occurrence
+(in document order). Other then first occurrences of ID are
+deleted. All links will then point to the first location in final
+composed document.</p></li><li class="listitem"><p>Make each ID unique within transcluded unit (for
+example by prepending unit specific prefix to each ID). In this cases
+targets of all cross-references have to be adjusted. Several
+adjustment strategies are possible &#8211; link to the first occurrence,
+link to the <span class="quote">&#8220;<span class="quote">closest occurrence</span>&#8221;</span> (e.g. find minimum
+subtree rooted at ancestors that contains link
+target).</p></li></ul></div>
+
+<div class="section" title="Current solution"><div class="titlepage"><div><div><h3 class="title"><a name="d6e113"></a>Current solution</h3></div></div></div>
+
+
+<p>Unfortunately there is no satisfying solution to this
+use-case. DocBook XSL stylesheet can be customized to link only to the
+first occurrence of ID (see <a class="ulink" href="http://www.sagehill.net/docbookxsl/DuplicateIDs.html" target="_top">http://www.sagehill.net/docbookxsl/DuplicateIDs.html</a>).</p>
+
+</div>
+
+</div>
+
+<div class="section" title="UC-6: Transclusion of foreign content"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="uc-6"></a>UC-6: Transclusion of foreign content</h2></div></div></div>
+
+
+<p>Sometimes it is necessary to include foreign content into
+DocBook document. Examples of such foreign content are:</p>
+
+<div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>listing of program source;</p></li><li class="listitem"><p>content in different vocabulary like DITA or TEI which has
+to be transformed into DocBook prior transclusion.</p></li></ul></div>
+
+<div class="section" title="Current solution"><div class="titlepage"><div><div><h3 class="title"><a name="d6e125"></a>Current solution</h3></div></div></div>
+
+
+<p>Text files with programlistings can be transcluded by DocBook
+<code class="sgmltag-element">textdata</code> element or using <code class="code">parse="text"</code>
+functionality of XInclude. There is no standardized way of
+transclusion of different vocabularies. Currently this has to be solved on
+application level.</p>
+
+</div>
+
+</div>
+
+<div class="section" title="Evaluation of current technologies"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="evaluation"></a>Evaluation of current technologies</h2></div></div></div>
+
+
+<p>It is evident that the existing technologies are not able to
+handle use-cases <a class="xref" href="#uc-5" title="UC-5: Repeated transclusion in one &#8220;master&#8221; document">UC-5</a> and <a class="xref" href="#uc-6" title="UC-6: Transclusion of foreign content">UC-6</a>. All other use-cases except <a class="xref" href="#uc-2" title="UC-2: Shared strings in attribute values">UC-2</a>
+can be technically solved using XInclude. However XInclude usage is
+quite cumbersome. It seems that DocBook specific transclusion
+mechanism is needed. Proposal of such mechanism is now discussed by
+DocBook TC and it is available for wider review and comments at <a class="ulink" href="http://docbook.org/docs/transclusion/" target="_top">http://docbook.org/docs/transclusion/</a>.</p>
+
+</div>
+
+</div></body></html>

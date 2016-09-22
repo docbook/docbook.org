@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.3.6), see www.w3.org" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>glossentry</title>
+<link rel="stylesheet" type="text/css" href="css/defguide.css" />
+<link rel="icon" href="figs/web/publishers-icon.png" type="image/png" />
+<script type="text/javascript" src="js/refentry.js">
+</script>
+</head>
+<body onload="hideAll();">
+<div class="navheader">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" summary="Navigation table">
+<tr>
+<td align="left">&#160;<a title="DocBook Publishers: The Definitive Guide" href="docbook.html"><img src="figs/web/nav/home-publishers.png" alt="Home" border="0" /></a>&#160;<a href="glossdiv.html" title="glossdiv"><img src="figs/web/nav/prev.png" alt="Prev" border="0" /></a>&#160;<a title="DocBook Element Reference" href="ref-elements.html"><img src="figs/web/nav/up.png" alt="Up" border="0" /></a>&#160;<a title="glosslist" href="glosslist.html"><img src="figs/web/nav/next.png" alt="Next" border=
+"0" /></a></td>
+<td align="right"><i>DocBook Publishers: The Definitive Guide</i> (Version <a href="ch00-online.html">1.0.0 for DocBook Publishers V1.0</a>)</td>
+</tr>
+</table>
+</div>
+<div class="refentry" id="element.db.glossentry"><a class="indexterm" name="element.db.glossentry.1" id="element.db.glossentry.1"></a>
+<div class="refnamediv">
+<h2>glossentry</h2>
+<p><span class="refname">glossentry</span>&#160;—&#160;An entry in a glossary or glosslist.</p>
+</div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<div class="element-synopsis">
+<ul>
+<li>Sequence of:
+<div class="element-synopsis">
+<ul>
+<li><a href="glossterm.html"><tt class="tag-element">glossterm</tt></a>&#160;<span class="pattern">(db.glossterm)</span></li>
+<li><a href="acronym.html"><tt class="tag-element">acronym</tt></a>?</li>
+<li><a href="abbrev.html"><tt class="tag-element">abbrev</tt></a>?</li>
+<li>Zero or more of:
+<div class="element-synopsis">
+<ul>
+<li id="d5e166051-db.indexing.inlines"><em title="indexterm, indexterm, and indexterm" class="patnlink">Indexing&#160;inlines</em><span id="pls.d5e166051-db.indexing.inlines" style="display: none;">&#160;<a href="javascript:show('d5e166051-db.indexing.inlines')"><img src="figs/web/nav/right.gif" border="0" alt="[+]" /></a></span><span id="plh.d5e166051-db.indexing.inlines">&#160;<a href="javascript:hide('d5e166051-db.indexing.inlines')"><img src="figs/web/nav/down.gif" border="0" alt="[-]" /></a></span>
+<div class="patnlist" id="l.d5e166051-db.indexing.inlines">
+<div class="patnlist db.indexing.inlines">
+<ul type="disc">
+<li><a href="indexterm.endofrange.html"><tt class="tag-element">indexterm</tt></a>&#160;<span class="pattern">(db.indexterm.endofrange)</span></li>
+<li><a href="indexterm.singular.html"><tt class="tag-element">indexterm</tt></a>&#160;<span class="pattern">(db.indexterm.singular)</span></li>
+<li><a href="indexterm.startofrange.html"><tt class="tag-element">indexterm</tt></a>&#160;<span class="pattern">(db.indexterm.startofrange)</span></li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>One of:
+<div class="element-synopsis">
+<ul>
+<li>One or more of:
+<div class="element-synopsis">
+<ul>
+<li><a href="glossdef.html"><tt class="tag-element">glossdef</tt></a></li>
+</ul>
+</div>
+</li>
+<li><a href="glosssee.html"><tt class="tag-element">glosssee</tt></a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>Attributes</h3>
+</div>
+<p><a class="brokenlink" href="#common.attributes">Common attributes</a> and <a class="brokenlink" href="#common.linking.attributes">common linking attributes</a>.</p>
+<p>Additional attributes:</p>
+<div class="element-synopsis">
+<ul>
+<li>sortas</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>Description</h3>
+</div>
+<p>A <a href="glossentry.html"><tt class="tag-element">glossentry</tt></a> is a wrapper around a glossary term and its definition.</p>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Processing expectations</h4>
+</div>
+<p>Formatted as a displayed block. Glossary entries are usually formatted to highlight the terms and definitions, frequently in a style similar to <a href="varlistentry.html"><tt class="tag-element">varlistentry</tt></a>s.</p>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Attributes</h4>
+</div>
+<p><a class="brokenlink" href="#common.attributes">Common attributes</a> and <a class="brokenlink" href="#common.linking.attributes">common linking attributes</a>.</p>
+<div class="variablelist">
+<dl>
+<dt id="element.db.glossentry.6.4.3.1.1" class="attname">sortas</dt>
+<dd>
+<p>Specifies the string by which the element's content is to be sorted; if unspecified, the content is used</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Parents</h4>
+</div>
+<p>These elements contain <a href="glossentry.html"><tt class="tag-element">glossentry</tt></a>: <span class="simplelist"><span class="member"><a href="glossary.html"><tt class="tag-element">glossary</tt></a></span>, <span class="member"><a href="glossdiv.html"><tt class="tag-element">glossdiv</tt></a></span>, <span class="member"><a href="glosslist.html"><tt class="tag-element">glosslist</tt></a></span></span>.</p>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Children</h4>
+</div>
+<p>The following elements occur in glossentry: <span class="simplelist"><span class="member"><a href="abbrev.html"><tt class="tag-element">abbrev</tt></a></span>, <span class="member"><a href="acronym.html"><tt class="tag-element">acronym</tt></a></span>, <span class="member"><a href="glossdef.html"><tt class="tag-element">glossdef</tt></a></span>, <span class="member"><a href="glosssee.html"><tt class="tag-element">glosssee</tt></a></span>, <span class="member"><a href="glossterm.html"><tt class=
+"tag-element">glossterm</tt></a>&#160;<span class="pattern">(db.glossterm)</span></span>, <span class="member"><a href="indexterm.endofrange.html"><tt class="tag-element">indexterm</tt></a>&#160;<span class="pattern">(db.indexterm.endofrange)</span></span>, <span class="member"><a href="indexterm.singular.html"><tt class="tag-element">indexterm</tt></a>&#160;<span class="pattern">(db.indexterm.singular)</span></span>, <span class="member"><a href="indexterm.startofrange.html"><tt class=
+"tag-element">indexterm</tt></a>&#160;<span class="pattern">(db.indexterm.startofrange)</span></span></span>.</p>
+</div>
+</div>
+</div>
+<div class="navfooter">
+<table width="100%" summary="Navigation table">
+<tr>
+<td width="40%" align="left"><a title="glossdiv" href="glossdiv.html"><img src="figs/web/nav/prev.png" alt="Prev" border="0" /></a>&#160;</td>
+<td width="20%" align="center"><a title="DocBook Publishers: The Definitive Guide" href="docbook.html"><img src="figs/web/nav/home-publishers.png" alt="Home" border="0" /></a></td>
+<td width="40%" align="right">&#160;<a title="glosslist" href="glosslist.html"><img src="figs/web/nav/next.png" alt="Next" border="0" /></a></td>
+</tr>
+<tr>
+<td width="40%" align="left">glossdiv&#160;</td>
+<td width="20%" align="center"><a title="DocBook Element Reference" href="ref-elements.html"><img src="figs/web/nav/up.png" alt="Up" border="0" /></a></td>
+<td width="40%" align="right">&#160;glosslist</td>
+</tr>
+</table>
+</div>
+<div class="infofooter">Last revised by Norman Walsh on 6 Jun 2011 <span class="githash">(git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)</span></div>
+<div class="copyrightfooter">
+<p><a href="dbcpyright.html">Copyright</a> © 2011 Norman Walsh.</p>
+</div>
+</body>
+</html>

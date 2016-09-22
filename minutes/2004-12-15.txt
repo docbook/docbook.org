@@ -1,0 +1,203 @@
+/ "Bob Stayton" <bobs@sagehill.net> was heard to say:
+| DocBook Technical Committee Meeting Agenda: 15 December 2004
+| =============================================================
+|
+| The DocBook Technical Committee will meet on Wednesday, 15 December 2004 at
+| 05:00p EST (02:00p PST, 22:00GMT, 22:00BST, 23:00CEST, 07:00JST+,
+| 03:30a India+) for 90 minutes.
+|
+| The teleconference phone number is +1.865.524.6352. The participant
+| code is 7386368. Attendance at teleconferences is restricted to members
+| (and prospective members) of the committee.
+|
+| Agenda
+|
+| 1. Roll call
+
+Dick
+Larry
+Paul
+Jirka
+Norm
+Adam
+Michael
+Steve
+Mark [xx:30-]
+
+| 2. Accepting the minutes[1] of the previous meeting.
+
+Accepted.
+
+| 3. Next meeting: 19 January 2004
+
+26 January 2005. (NOT 19 January)
+
+| 4. Review of the agenda.
+
+Accepted.
+
+| 5. Review of open action items
+|
+|    a. Norm to write second draft charter.
+
+Proposal: Accept the charter I posted today, amended per Michael
+Smith's message, and submit to OASIS.
+
+Accepted.
+
+|    b. Mike to write up the DTD test suite process.
+
+Completed.
+
+|    c. Bob to review minutes to ensure new features are tested.
+
+Continued.
+
+| 6. Meeting dates for 2005:
+|     19 January
+
+      26 January!
+
+|     16 February
+|     16 March
+|     20 April
+|     18 May
+|     15 June
+|     20 July
+|     17 August
+|     21 September
+|     19 October
+|     16 November
+|     21 December
+
+Accepted.
+
+| 7. Status of DTD version 4.4.  [2]
+
+ACTION: Norm to make a new CR release with Jirka's xml/docbook.cat patch.
+
+ACTION: Michael Smith to move the module tests into separate subdirectories,
+        one for each module.
+
+ACTION: Michael Smith to move the template.xml file out of 'tests'
+
+ACTION: Michael Smith to move the test suite process so that it's a target
+        in the tests/Makefile.
+
+| 8. OASIS webpages status. [3]
+
+Norm can send them a tar file to put online.
+
+Mary said they may be able to improve the process. I'll keep the TC posted.
+
+| 9. Annotation proposal (Mike).  [4] [5]
+|     Continued from previous meeting.
+
+Norm summarizes the situation: we agreed to an <annotation> element
+for longer annotations an an <alt> element for shorter, accessibility
+annotations.
+
+ACTION: Norm to write a concrete summary of the annotation proposal.
+
+| 10. Accessibility.  [6] [7]
+|     Table rowhead attribute.
+|     Continued from previous meeting.
+
+We want to align with DITA. Which is good because DITA wants to align
+with us :-)
+
+Proposal:
+
+  Add rowheader attribute to the table element. This attribute can indicate
+  either that first column of table contains row headers (value "firstcol"), or
+  that there are no row headers in a table (value "norowheader").
+
+  <!ATTLIST table
+             rowheader (firstcol | norowheader) #IMPLIED>
+
+  Processing tools can use this information to create more accessible output
+  (e.g. decorate table cells with scope and/or header attributes in the case of
+  HTML output).
+
+This is aligned with DITA. We would put this attribute on table and
+informaltable.
+
+Accepted.
+
+Should we do this for 4.4?
+
+Yes. Accepted.
+
+| 11. Discuss guidelines for accepting or rejecting requests. [8] [9]
+|     Continued from previous meeting. 
+
+Previously, we said that it might make sense to base some of this
+discussion on our charter. This item is continued until after our
+charter is approved.
+
+| 11b. Status of 5.0
+
+Customers are asking about RELAX NG and W3C XML Schema versions of 4.4
+and what is the future for 5.0?
+
+For 4.4, you can get RELAX NG and W3C XML Schemas already.
+
+ACTION: Norm to post a summary of pointers to changes and the stuff
+I've written about DocBook V5.0.
+
+Pointer to a version of The Definitive Guide that shows the content
+models in "expanded RELAX NG":
+
+  http://docbook.org/tdg/en/html-ng/docbook.html
+
+Norm's plan: release a 5.0 alpha in January, try to move to 5.0 by end
+of 2005.
+
+ACTION: Norm to post to the list that 5.0 will probably not have SGML
+support.
+
+| 12. Review of Requests for Enhancement
+|
+|     To browse a specific RFE, enter the URL (on one line):
+|
+|       http://sourceforge.net/tracker/index.php?func=detail&;;
+|       group_id=21935&atid=384107&aid=XXXX
+|
+|       1071686 Add an isrn element 
+
+Proposal: add an isrn class to biblioid and not a new element.
+
+Accepted.
+
+|       1084491 Add address, orgname, orgdiv to corpauthor, corpcredit, etc. 
+
+The problem is that corpauthor is mixed content and I wouldn't want to add
+address and friends to corpauthor directly.
+
+ACTION: Norm to think about how to extend corpauthor
+
+[...]
+
+Any other business
+
+None
+
+ADJOURNED
+
+| [1] http://lists.oasis-open.org/archives/docbook-tc/200411/msg00008.html
+| [2] http://lists.oasis-open.org/archives/docbook-tc/200412/msg00000.html
+| [3] http://lists.oasis-open.org/archives/docbook-tc/200411/msg00003.html
+| [4] http://lists.oasis-open.org/archives/docbook-tc/200406/msg00003.html
+| [5] http://lists.oasis-open.org/archives/docbook-tc/200406/msg00005.html
+| [6] http://lists.oasis-open.org/archives/docbook-tc/200408/msg00002.html
+| [7] http://lists.oasis-open.org/archives/docbook-tc/200408/msg00003.html
+| [8] http://lists.oasis-open.org/archives/docbook/200411/msg00043.html
+| [9] http://lists.oasis-open.org/archives/docbook/200411/msg00046.html
+
+                                        Be seeing you,
+                                          norm
+
+-- 
+Norman Walsh <ndw@nwalsh.com>      | Ego's not important. Cool art is
+http://www.oasis-open.org/docbook/ | important.--Neil Gaiman
+Chair, DocBook Technical Committee |

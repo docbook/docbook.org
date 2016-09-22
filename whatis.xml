@@ -1,0 +1,122 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='intro'>
+<info>
+<title>What is DocBook?</title>
+</info>
+
+<para>DocBook is a schema (available in several languages including
+RELAX NG, SGML and XML DTDs, and W3C XML Schema)
+maintained by the
+<link xlink:href="mailto:docbook-tc@oasis-open.org">DocBook Technical
+Committee</link>
+of <link xlink:href="http://www.oasis-open.org/">OASIS</link>.
+It is particularly well suited to books and papers about computer
+hardware and software (though it is by no means limited to these applications).
+</para>
+<para>
+Because it is a large and robust schema, and because its main
+structures correspond to the general notion of what constitutes
+a “book,” DocBook has been adopted by a large and
+growing community of authors writing books of all kinds. DocBook
+is supported “out of the box” by a number of
+commercial tools, and there is rapidly expanding support for it
+in a number of free software environments. These features have
+combined to make DocBook a generally easy to understand, widely
+useful, and very popular schema. Dozens of organizations are using
+DocBook for millions of pages of documentation, in various print
+and online formats, worldwide.</para>
+
+<section xml:id="sgmlvsxml"><title>SGML vs. XML</title>
+<para>
+The DocBook Technical Committee maintains both SGML and XML
+versions
+of the DocBook DTD and XML versions in several other languages.
+To the extent that it is practical, these DTDs
+are identical. There is no intentional difference between the DTDs, they
+are supposed to accept the same set of documents.
+</para>
+</section>
+
+<section xml:id="history"><title>A Short DocBook History</title>
+<para>
+DocBook has been under development since 1991.
+</para>
+
+<section xml:id="haloreilly"><title>The HaL and O'Reilly Era</title>
+<para>The DocBook DTD was originally designed and implemented by HaL Computer
+Systems and O'Reilly &amp; Associates around 1991. It was developed primarily
+for the purpose of holding the results of <literal>troff</literal> conversion
+of UNIX documentation, so that the files could be interchanged. Its design
+appears to have been based partly on input from SGML interchange projects
+being conducted by the UNIX International and Open Software Foundation consortia.</para>
+<para>When DocBook V1.1 was published, its revision and maintenance began
+being discussed in earnest in the Davenport Group, a forum created by O'Reilly
+for computer documentation producers. V1.2 was influenced strongly by Novell
+and Digital.</para>
+<para>In 1994, the Davenport Group became an officially chartered entity responsible
+for DocBook's maintenance; DocBook V1.2.2 was published simultaneously. The
+founding sponsors of this incarnation of Davenport included the following:
+</para>
+
+<itemizedlist>
+<listitem><para>Jon Bosak, Novell</para></listitem>
+<listitem><para>Dale Dougherty, O'Reilly &amp; Associates</para></listitem>
+<listitem><para>Ralph Ferris, Fujitsu OSSI</para></listitem>
+<listitem><para>Dave Hollander, Hewlett-Packard</para></listitem>
+<listitem><para>Eve Maler, Digital Equipment Corporation</para></listitem>
+<listitem><para>Murray Maloney, SCO</para></listitem>
+<listitem><para>Conleth O'Connell, HaL Computer Systems</para></listitem>
+<listitem><para>Nancy Paisner, Hitachi Computer Products</para></listitem>
+<listitem><para>Mike Rogers, SunSoft</para></listitem>
+<listitem><para>Jean Tappan, Unisys</para></listitem>
+</itemizedlist>
+
+</section>
+
+<section xml:id="davenport"><title>The Davenport Era</title>
+<para>Under the auspices of the Davenport Group, the DocBook DTD began to
+take on a larger scope: It was now being used by a much wider audience, and
+for new purposes, such as direct authoring with SGML-aware tools and publishing
+directly to paper. As the largest users of DocBook, Novell and Sun tended
+to have heavy influence on the design.</para>
+<para>In order to help users manage change, the new Davenport charter established
+the following rules for DocBook releases:</para>
+
+<itemizedlist>
+<listitem><para>Minor versions (<quote>point releases,</quote> such as V2.2)
+could add to the markup model, but could not change it in a backwards-incompatible
+way. For example, a new kind of list element could be added, but it would
+not be acceptable for the existing itemized-list model to start requiring
+two list items inside it instead of only one. Thus, any document conforming
+to version <replaceable>n</replaceable>.0 would also conform to <replaceable>n</replaceable>.<replaceable>m</replaceable>.</para>
+</listitem>
+<listitem><para>Major versions (such as V3.0) could both add to the markup
+model and make backwards-incompatible changes. However, the changes had to
+have been announced in the <emphasis>previous</emphasis> major release.</para>
+</listitem>
+<listitem><para>Major-version introductions must be separated by at least
+a year.</para></listitem>
+</itemizedlist>
+
+<para>V3.0 was released in January 1997. After that time, although DocBook's
+audience continued to grow, many of the stalwarts of the Davenport Group became
+involved in the XML effort, and development slowed dramatically. The idea
+of creating an official XML-compliant version of DocBook was discussed, but
+not implemented.</para>
+<para>The sponsors wanted to close out Davenport in an orderly way, but ensure
+that DocBook users would be supported somehow. It was suggested that OASIS
+become DocBook's new home. An OASIS DocBook Technical Committee was formed
+in July, 1998, with Eduardo Gutentag of Sun as chair.</para>
+</section>
+
+<section xml:id="oasis">
+<title>The OASIS Era</title>
+<para>The DocBook Technical Committee of OASIS is undertaking
+new DocBook development, has published an XML-compliant
+version of DocBook and plans to develop an XML Schema for DocBook.</para>
+</section>
+</section>
+</article>
+

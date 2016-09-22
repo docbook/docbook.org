@@ -1,0 +1,241 @@
+DocBook Technical Committee Meeting Minutes: 18 Feb 2003
+========================================================
+
+The DocBook Technical Committee met on Tuesday, 18 February 2003
+at 01:00p EST (10:00a PST, 18:00GMT, 19:00CET, 03:00JST+) 
+for 90 minutes.
+
+| Agenda
+|
+| 1. Roll call
+
+Present:
+
+Steve Cogorno, Sun Microsystems [1:20]
+Dick Hamilton, HP
+Scott Hudson, Sun Microsystems
+Bob Stayton, Individual Member
+Mike Smith, Individual Member
+Norman Walsh, Sun Microsystems, Chair
+
+Regrets:
+
+Paul Grosso, Arbortext
+Mark Johnson, Debian
+
+Absent:
+
+Nancy Harrison, Rational Software
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+Accepted.
+
+| 4. Review of open action items {5 min}
+|
+|    a. Norm to follow-up on RFE 562343: &lt;packagename&gt; element
+
+Continued.
+
+|    b. Norm to write better documentation for option/optional
+
+Continued.
+
+|    c. Mike to consider possible attribute values on literallayout for
+|       addressing RFE 613293 (generalize programlisting)
+
+Completed[7]
+
+|    d. Norm to post simplified ToC proposal to the list again
+
+Continued.
+
+|    e. Steve to provide a first draft of a requirements document for task/topic.
+
+Continued.
+
+|    f. Norm to post to list for other suggestions for credits.
+|       Completed[2]
+|    g. Norm to post proposal for othercredit/corpcredit to list
+|       Completed[3]
+|    h. Norm to post proposal to funcprototype enhancement to list
+|       Completed[3] (g/h completed by the same message)
+|    i. Norm to propose verbatim startinglinenumber/continuation to list
+|       Completed[4]
+|    j. Norm to put pointers to the annotation proposals back on the agenda
+|       Completed[5][6]
+|
+| 5. Task/Topic
+
+Postpone until next month for Steve.
+
+| 6. Annotations
+
+ACTION: Mike to post summary. We'll plan to vote next month.
+
+ACTION: Dick to ask local expert about annotations.
+
+| 7. Review of Requests for Enhancement
+|
+|    To browse a specific RFE, enter the URL (on one line):
+|
+|      http://sourceforge.net/tracker/index.php?func=detail&amp;
+|      group_id=21935&amp;atid=384107&amp;aid=XXXX
+|
+|    where XXXX is the RFE number.
+|
+      436067 splitting tech.char.class 
+
+Waiting for Norm to complete action about PE reorg.
+
+|      473365 Allow optional in funcprototype 
+
+No followup from original poster. Norm notes that allowing them to be
+optional would be useful for modern programming languages like Perl
+and Python that allow optional parameters.
+
+Accept proposal outlined in 473365.
+
+Accepted.
+
+|      482818 Simplify ToC content model 
+
+Waiting for Norm to complete action.
+
+|      514435 Allow reference within refentry 
+
+The real issue here seems to be the ability to associate purposes with
+components in refentrys.
+
+ACTION: Bob to post a concrete example.
+
+Bob: Purpose is used in man apropos search; the ability to put
+distinct keywords in there would be very useful.
+
+|      541444 caption in mediaobjectco 
+
+Norm: It looks like mediaobjectco has gotten out of sync with mediaobject.
+
+ACTION: Norm to propose a new content model for mediaobjectco to bring
+them back in sync.
+
+|      558443 include storage info in metadata 
+
+Bob demonstrated that this is possible. This issue should be closed.
+
+ACTION: Bob to amend the RFE and then close it.
+
+|      562343 &lt;packagename&gt; element 
+
+Waiting for Norm to complete action.
+
+|      565637 Associate non-inline image with link 
+
+Waiting for resolution of generalized linking.
+
+|      565716 URL and URN markup 
+
+ACTION: Mike to summarize the issue and propose a new URI element with
+appropriate attribute names and values.
+
+|      573419 Add bidirectional text overrides 
+
+ACTION: Norm to ask Tony/Paul for a summary of what is missing from
+DocBook to support proper mixed bidi text.
+
+|      582822 VARARG and FUNCDEF together 
+
+Proposed: Adopt the proposal[8]
+
+Accepted.
+
+|      623524 (Re)Consider &quot;choicelist&quot; markup 
+
+ACTION: Norm to put on the agenda for next month.
+
+|      638456 RFE add a &lt;translator&gt; tag
+
+We discussed this last month and suggested a solution[2]. There's been
+some positive feedback and no negative feedback.
+
+Proposed: Adopt this proposal.
+
+Accepted.
+
+|      655526 funcprototype enhancement
+
+Proposed: Adopt this proposal.
+
+Accepted.
+
+|      660044 Controlling line numbering in verbatims
+
+Proposed: Adopt this proposal.
+
+NW: Use startinglinenumber=nnn, continuation=continues|restarts
+If both are specified, startinglinenumber wins.
+
+Accepted.
+
+ADJOURNED by Dick's departure (no longer have quorum). Continuing informally.
+
+|      679316 Allow orgname tag within paragraphs
+
+ACTION: Bob to review the list of bibliography elements and see which
+ones make sense in paragraph. Orgname is requested here, we already
+allow author and corpauthor. What about others?
+
+|      686733 allow bibliography under &lt;refentry&gt;
+
+ACTION: Norm to ask Denis Evans for his opinions as he was our man
+page expert.
+
+|      685511 shading/color support for tables
+
+For Scott's purposes, the PIs are probably a workable solution.
+
+BS: People could use roles for this and then customize the stylesheets.
+
+SC: We use processing instructions as well.
+
+BS: It's not really part of the semantic model of the element. There's
+no indication in the actual element that there's a semantic reason for
+it to be shaded. I can easily see role used as an alternative for
+this.
+
+NW: For the DocBook stylesheets, you'd have to use two PIs so it might
+make sense to have a common PI for both HTML and FO.
+
+SC: Maybe it makes sense to define some common processing
+instructions.
+
+NW: Maybe this would be a chance for us to say, &quot;here use this one&quot;.
+
+ACTION: Norm to put releasein 4.3 or 5.0 or whatever's next on the agenda.
+
+|     The following RFEs are awaiting action items
+|
+|      413389 Enhance METHODNAME and VARNAME 
+|      431411 RFE 70: add generic linking capability
+|      522552 Add title attribute to &lt;ulink&gt; element
+|      574880 Add annotation element 
+|      613293 Generalize programlisting 
+|      621564 New element Task and children
+|
+|     The following RFEs are identified as V6.0 or later
+|
+|      531851 Remove inline person name elements
+|      532088 Remove RevHistory from qandaentry
+|
+| [1] http://lists.oasis-open.org/archives/docbook-tc/200301/msg00015.html
+| [2] http://lists.oasis-open.org/archives/docbook/200301/msg00131.html
+| [3] http://lists.oasis-open.org/archives/docbook/200301/msg00132.html
+| [4] http://lists.oasis-open.org/archives/docbook/200301/msg00133.html
+| [5] http://lists.oasis-open.org/archives/docbook-tc/200205/msg00004.html
+| [6] http://lists.oasis-open.org/archives/docbook-tc/200205/msg00005.html
+[7] http://sourceforge.net/tracker/index.php?func=detail&amp;aid=613293&amp;group_id=21935&amp;atid=384107
+[8] http://lists.oasis-open.org/archives/docbook/200209/msg00169.html

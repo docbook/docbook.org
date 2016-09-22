@@ -1,0 +1,251 @@
+| DocBook Technical Committee Meeting Minutes: 17 Jun 2003
+| ========================================================
+|
+| The DocBook Technical Committee met on Tuesday, 17 Jun 2003 at
+| 01:00p EDT (10:00a PDT, 17:00GMT, 18:00BST, 19:00CEST, 02:00JST+,
+| 10:30p India) for 90 minutes.
+|
+| Agenda
+|
+| 1. Roll call
+
+Steve Cogorno
+Paul Grosso
+Dick Hamilton
+Scott Hudson
+Mark Johnson
+Bob Stayton
+Norman Walsh
+
+Regrets:
+
+Nancy Harrison
+
+Absent:
+
+Mike Smith
+
+| 2. Accepting the minutes[1] of the previous meeting (as amended[1b] by Paul)
+
+Accepted.
+
+| 3. Review of the agenda
+
+Accepted.
+
+| 4. Review of open action items
+|
+|     a. Norm to follow-up on RFE 562343: &lt;packagename&gt; element
+Continued.
+|     b. Norm to write better documentation for option/optional
+Continued.
+|     c. Norm to ask Denis Evans for his opinions on REF #686733, allow
+|             bibliography under &lt;refentry&gt;
+Continued.
+|     d. Bob to write a concrete proposal for marking up keycaps
+Continued.
+|     e. Mike to post a summary of URI/URN to the list
+Continued.
+|     f. Norm to post a summary of the Task content models as described.
+Completed.
+|     g. Norm to write some stylesheets to demonstrate annotations
+Continued.
+|     h. Norm to respond to Bob's message on bibliographic inlines to
+|        see if we can get some email discussion going.
+Continued.
+|     i. Norm to describe how topical indexes might be created with
+|        a custom stylesheet.
+Continued.
+|
+| 5. Refactoring DocBook?
+
+Norm explains what he means by refactoring.
+
+Bob points out that we can add new XML features.
+
+Steve observes that one of DocBook's goals is interchange and if we
+make things incompatible then we'll lose that goal.
+
+Bob: We're talking about bifurcating DocBook and maintaining the old
+version for quite some time. It's similar to when DocBook a major
+version roll anyway. But if there are tools that can help them make
+the transition, if they need to, then it won't be that different.
+
+Steve: We need to be very clear about why we're changing and what are
+the goals of the project. One goal is interchange and another is a
+documentation system. I used to think those went well together, but
+now I'm not so sure.
+
+Norm talks about the content model ambiguity problems.
+
+Steve says we've already removed parameter entities from our DTD. The
+models are supposed to be compliant, but the structure is very
+different.
+
+Steve: it sounds like the PEs are hard to maintain. Changing that may
+be required.
+
+Bob: it may be necessary to maintain two versions in parallel.
+
+Mark: I agree, it seems like we'll need to keep the folks that are
+committed to 4.x happy.
+
+Steve: The relatively small changes that we're making from X to Y is
+having a much larger impact than we ever imagined: on vendors, etc.
+
+Mark: Debian is considering going to DocBook, but maybe we should wait
+until 5.x.
+
+Norm: We could say we're done. We could say that DocBook is finished
+and close our committee.
+
+Paul: That gets my vote.
+
+Steve: I think it's an interesting idea and something that should be
+given some thought. We've got our own DTD and we say we're compatible
+with a certain version of DocBook.
+
+Bob: I don't think that we should do this just because it's easier for
+us to maintain. It must have significant benefits.
+
+Bob: It sounds like we need to do some studying. If the DocBook TC
+wants to go this route, then we all need to understand RELAX NG
+better.
+
+ACTION: Norm to post information about RELAX NG tools.
+
+ACTION: Norm to describe how the prototype works and how it was
+constructed.
+
+We'll discuss this some more next month.
+
+| 6. Multiple refnamedivs per refentry[2] (related to RFE #514435)
+
+ACTION: Bob to post links to pages showing multiple refdescriptions.
+
+We'll continue this next month after we've seen those.
+
+| 7. Task/Topic[3]
+
+Having discussed this on the list, consensus seems to be in favor. The actual
+names chosen reflect what appears to be the best compromise possible.
+
+The proposal is to add a task element as follows:
+
+&lt;task&gt; would contain:
+
+ title
+ tasksummary?
+ taskprerequisites?
+ procedure
+ example*
+ taskrelated*
+
+Where tasksummary, taskprerequisites, and taskrelated contain optional
+titles and component.mix.
+
+Accepted.
+
+| 8. Choicelist markup
+
+Continued.
+
+| 9. Annotations [4]
+
+Continued.
+
+| 10. Inline bibliography elements (related to RFE #679316) [5]
+
+Paul: the question is, does isbn or contractnum (or whatever) identify
+the isbn or contract number of *this* document, or does it identify a
+number inline. Those are very different semantics.
+
+Steve: but the context tells you which it is.
+
+Steve: we have a lot of inlines, but I don't think there's anything we
+can do about that. Different groups will ignore different sets.
+
+Bob: if you have the list open, many of them could occur inline.
+Bibliocoverage, for example, is usually bibliographic metadata but it
+could be discussed.
+
+Norm: argues that bibliocoverage is not really appropriate
+
+Bob: we could allow biblimixed in a paragraph.
+
+Steve: that would separate the bibligraphic inlines from the others.
+
+Bob: some of these may make sense as inlines, but we could include the
+rest in bibliomixed.
+
+More discussion
+
+Norm: I propose
+
+  corpname
+  date
+  orgname
+  publisher
+
+  I could be convinced to add
+
+  isbn
+  issn
+  biblioid
+
+ACTION: Bob to post this small list to the DocBook list for review.
+
+ADJOURNED
+
+| 11. Review of Requests for Enhancement
+|
+|     To browse a specific RFE, enter the URL (on one line):
+|
+|       http://sourceforge.net/tracker/index.php?func=detail&amp;
+|       group_id=21935&amp;atid=384107&amp;aid=XXXX
+|
+|       697374 marking up keycaps according to their semantics
+|       740647 List or Table of Procedures.
+|       742373 Splitting Segmented List
+|       742624 refentry and bibliography
+|       752632 Color control of CALS table ELEMENT
+|
+|       436067 splitting tech.char.class 
+|       473365 Allow optional in funcprototype 
+|       482818 Simplify ToC content model 
+|       514435 Allow reference within refentry 
+|       541444 caption in mediaobjectco 
+|       558443 include storage info in metadata 
+|       562343 &lt;packagename&gt; element 
+|       565637 Associate non-inline image with link 
+|       565716 URL and URN markup 
+|       573419 Add bidirectional text overrides 
+|       582822 VARARG and FUNCDEF together 
+|       623524 (Re)Consider "choicelist" markup 
+|       638456 RFE add a &lt;translator&gt; tag
+|       655526 funcprototype enhancement
+|       660044 Controlling line numbering in verbatims
+|       679316 Allow orgname tag within paragraphs
+|       686733 allow bibliography under &lt;refentry&gt;
+|
+|      The following RFEs are awaiting action items
+|
+|       413389 Enhance METHODNAME and VARNAME 
+|       431411 RFE 70: add generic linking capability
+|       522552 Add title attribute to &lt;ulink&gt; element
+|       574880 Add annotation element 
+|       613293 Generalize programlisting 
+|       621564 New element Task and children
+|
+|      The following RFEs are identified as V6.0 or later
+|
+|       531851 Remove inline person name elements
+|       532088 Remove RevHistory from qandaentry
+|
+|  ----
+|  [1] http://lists.oasis-open.org/archives/docbook/200305/msg00136.html
+|  [1b] http://lists.oasis-open.org/archives/docbook/200305/msg00137.html
+|  [2] http://lists.oasis-open.org/archives/docbook-tc/200303/msg00005.html
+|  [3] http://lists.oasis-open.org/archives/docbook/200302/msg00050.html
+|  [4] http://lists.oasis-open.org/archives/docbook-tc/200303/msg00001.html
+|  [5] http://lists.oasis-open.org/archives/docbook-tc/200303/msg00006.html

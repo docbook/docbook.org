@@ -1,0 +1,3200 @@
+<releases xmlns='http://nwalsh.com/ns/releases'>
+<dir dir='rng' path='rng'>
+  <dir dir='4.2' path='rng/4.2' release='4.2' type='rng'>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook-rng-4.2.zip</file>
+    <file>docbook.rng</file>
+  </dir>
+  <dir dir='4.3' path='rng/4.3' release='4.3' type='rng'>
+    <file>calstblx.rnc</file>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rnc</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rnc</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rnc</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook-rng-4.3.zip</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rnc</file>
+    <file>htmltblx.rng</file>
+  </dir>
+  <dir dir='4.3CR1' path='rng/4.3CR1' release='4.3CR1' type='rng'>
+    <file>calstblx.rnc</file>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rnc</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rnc</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rnc</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook-rng-4.3CR1.zip</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rnc</file>
+    <file>htmltblx.rng</file>
+  </dir>
+  <dir dir='4.3CR2' path='rng/4.3CR2' release='4.3CR2' type='rng'>
+    <file>calstblx.rnc</file>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rnc</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rnc</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rnc</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook-rng-4.3CR2.zip</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rnc</file>
+    <file>htmltblx.rng</file>
+  </dir>
+  <dir dir='4.3CR3' path='rng/4.3CR3' release='4.3CR3' type='rng'>
+    <file>calstblx.rnc</file>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rnc</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rnc</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rnc</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook-rng-4.3CR3.zip</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rnc</file>
+    <file>htmltblx.rng</file>
+  </dir>
+  <dir dir='4.3b3' path='rng/4.3b3' release='4.3b3' type='rng'>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook-rng-4.3b3.zip</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rng</file>
+  </dir>
+  <dir dir='4.3b4' path='rng/4.3b4' release='4.3b4' type='rng'>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook-rng-4.3b4.zip</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rng</file>
+  </dir>
+  <dir dir='4.3b5' path='rng/4.3b5' release='4.3b5' type='rng'>
+    <file>calstblx.rnc</file>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rnc</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rnc</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rnc</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook-rng-4.3b5.zip</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rnc</file>
+    <file>htmltblx.rng</file>
+  </dir>
+  <dir dir='4.4' path='rng/4.4' release='4.4' type='rng'>
+    <file>calstblx.rnc</file>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rnc</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rnc</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rnc</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook-rng-4.4.zip</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rnc</file>
+    <file>htmltblx.rng</file>
+  </dir>
+  <dir dir='4.4CR1' path='rng/4.4CR1' release='4.4CR1' type='rng'>
+    <file>calstblx.rnc</file>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rnc</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rnc</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rnc</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook-rng-4.4CR1.zip</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rnc</file>
+    <file>htmltblx.rng</file>
+  </dir>
+  <dir dir='4.4CR2' path='rng/4.4CR2' release='4.4CR2' type='rng'>
+    <file>calstblx.rnc</file>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rnc</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rnc</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rnc</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook-rng-4.4CR2.zip</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rnc</file>
+    <file>htmltblx.rng</file>
+  </dir>
+  <dir dir='4.4CR3' path='rng/4.4CR3' release='4.4CR3' type='rng'>
+    <file>calstblx.rnc</file>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rnc</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rnc</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rnc</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook-rng-4.4CR3.zip</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rnc</file>
+    <file>htmltblx.rng</file>
+  </dir>
+  <dir dir='4.4CR4' path='rng/4.4CR4' release='4.4CR4' type='rng'>
+    <file>calstblx.rnc</file>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rnc</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rnc</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rnc</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook-rng-4.4CR4.zip</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rnc</file>
+    <file>htmltblx.rng</file>
+  </dir>
+  <dir dir='4.4b1' path='rng/4.4b1' release='4.4b1' type='rng'>
+    <file>calstblx.rnc</file>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rnc</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rnc</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rnc</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook-rng-4.4b1.zip</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rnc</file>
+    <file>htmltblx.rng</file>
+  </dir>
+  <dir dir='4.4b2' path='rng/4.4b2' release='4.4b2' type='rng'>
+    <file>calstblx.rnc</file>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rnc</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rnc</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rnc</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook-rng-4.4b2.zip</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rnc</file>
+    <file>htmltblx.rng</file>
+  </dir>
+  <dir dir='4.5' path='rng/4.5' release='4.5' type='rng'>
+    <file>calstblx.rnc</file>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rnc</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rnc</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rnc</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rnc</file>
+    <file>htmltblx.rng</file>
+  </dir>
+  <dir dir='4.5CR1' path='rng/4.5CR1' release='4.5CR1' type='rng'>
+    <file>calstblx.rnc</file>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rnc</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rnc</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rnc</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rnc</file>
+    <file>htmltblx.rng</file>
+  </dir>
+  <dir dir='4.5CR2' path='rng/4.5CR2' release='4.5CR2' type='rng'>
+    <file>calstblx.rnc</file>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rnc</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rnc</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rnc</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rnc</file>
+    <file>htmltblx.rng</file>
+  </dir>
+  <dir dir='4.5CR3' path='rng/4.5CR3' release='4.5CR3' type='rng'>
+    <file>calstblx.rnc</file>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rnc</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rnc</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rnc</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rnc</file>
+    <file>htmltblx.rng</file>
+  </dir>
+  <dir dir='4.5b1' path='rng/4.5b1' release='4.5b1' type='rng'>
+    <file>calstblx.rnc</file>
+    <file>calstblx.rng</file>
+    <file>dbhierx.rnc</file>
+    <file>dbhierx.rng</file>
+    <file>dbnotnx.rnc</file>
+    <file>dbnotnx.rng</file>
+    <file>dbpoolx.rnc</file>
+    <file>dbpoolx.rng</file>
+    <file>docbook-rng-4.5b1.zip</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+    <file>htmltblx.rnc</file>
+    <file>htmltblx.rng</file>
+  </dir>
+</dir>
+<dir dir='sgml' path='sgml'>
+  <dir dir='1.0' path='sgml/1.0' release='1.0' type='sgml'>
+    <file>docbk10.zip</file>
+    <file>docbook.dtd</file>
+  </dir>
+  <dir dir='1.1' path='sgml/1.1' release='1.1' type='sgml'>
+    <file>docbk11.zip</file>
+    <file>docbook.dtd</file>
+  </dir>
+  <dir dir='1.2.1' path='sgml/1.2.1' release='1.2.1' type='sgml'>
+    <file>ORAents.v3m</file>
+    <file>README</file>
+    <file>docbk121.zip</file>
+    <file>docbook1.2.1.doc.sgml</file>
+    <file>docbook1.2.1.dtd</file>
+    <file>sgml.declaration</file>
+    <file>xlsc.sgm</file>
+  </dir>
+  <dir dir='1.2' path='sgml/1.2' release='1.2' type='sgml'>
+    <file>README</file>
+    <file>ch03.sgm</file>
+    <file>docbk12.zip</file>
+    <file>docbook1.0.dtd</file>
+    <file>docbook1.2.doc.sgml</file>
+    <file>docbook1.2.dtd</file>
+    <file>sgml.declaration</file>
+    <file>xlsc.sgm</file>
+  </dir>
+  <dir dir='2.1' path='sgml/2.1' release='2.1' type='sgml'>
+    <file>almfullguide.sgm</file>
+    <file>alph.guide.sgm</file>
+    <file>docbk21.zip</file>
+    <file>docbook.2.1.dtd</file>
+    <file>sgml.declaration</file>
+  </dir>
+  <dir dir='2.2.1' path='sgml/2.2.1' release='2.2.1' type='sgml'>
+    <file>README</file>
+    <file>docbk221.zip</file>
+    <file>docbook.2.2.1.dtd</file>
+    <file>docbook.dcl</file>
+    <file>iso-amsa.gml</file>
+    <file>iso-amsb.gml</file>
+    <file>iso-amsc.gml</file>
+    <file>iso-amsn.gml</file>
+    <file>iso-amso.gml</file>
+    <file>iso-amsr.gml</file>
+    <file>iso-box.gml</file>
+    <file>iso-cyr1.gml</file>
+    <file>iso-cyr2.gml</file>
+    <file>iso-dia.gml</file>
+    <file>iso-grk1.gml</file>
+    <file>iso-grk2.gml</file>
+    <file>iso-grk3.gml</file>
+    <file>iso-grk4.gml</file>
+    <file>iso-lat1.gml</file>
+    <file>iso-lat2.gml</file>
+    <file>iso-num.gml</file>
+    <file>iso-pub.gml</file>
+    <file>iso-tech.gml</file>
+    <file>isodia.ent</file>
+    <file>isomfrk.ent</file>
+    <file>isomopf.ent</file>
+    <file>isomscr.ent</file>
+    <file>msg.exm.sgm</file>
+  </dir>
+  <dir dir='2.3' path='sgml/2.3' release='2.3' type='sgml'>
+    <file>README</file>
+    <file>calstbl.mod</file>
+    <file>dbent23.zip</file>
+    <file>dbgenent.mod</file>
+    <file>dbhier.mod</file>
+    <file>dbpool.mod</file>
+    <file>docbk23.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>iso-amsa.gml</file>
+    <file>iso-amsb.gml</file>
+    <file>iso-amsc.gml</file>
+    <file>iso-amsn.gml</file>
+    <file>iso-amso.gml</file>
+    <file>iso-amsr.gml</file>
+    <file>iso-box.gml</file>
+    <file>iso-cyr1.gml</file>
+    <file>iso-cyr2.gml</file>
+    <file>iso-dia.gml</file>
+    <file>iso-grk1.gml</file>
+    <file>iso-grk2.gml</file>
+    <file>iso-grk3.gml</file>
+    <file>iso-grk4.gml</file>
+    <file>iso-lat1.gml</file>
+    <file>iso-lat2.gml</file>
+    <file>iso-num.gml</file>
+    <file>iso-pub.gml</file>
+    <file>iso-tech.gml</file>
+    <file>isodia.ent</file>
+    <file>isomfrk.ent</file>
+    <file>isomopf.ent</file>
+    <file>isomscr.ent</file>
+    <file>knownbugs23.html</file>
+  </dir>
+  <dir dir='2.4.1' path='sgml/2.4.1' release='2.4.1' type='sgml'>
+    <file>241chg.txt</file>
+    <file>announce.txt</file>
+    <file>calstbl.mod</file>
+    <file>dbent241.zip</file>
+    <file>dbgenent.mod</file>
+    <file>dbhier.mod</file>
+    <file>dbpool.mod</file>
+    <file>docbk241.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>iso-amsa.gml</file>
+    <file>iso-amsb.gml</file>
+    <file>iso-amsc.gml</file>
+    <file>iso-amsn.gml</file>
+    <file>iso-amso.gml</file>
+    <file>iso-amsr.gml</file>
+    <file>iso-box.gml</file>
+    <file>iso-cyr1.gml</file>
+    <file>iso-cyr2.gml</file>
+    <file>iso-dia.gml</file>
+    <file>iso-grk1.gml</file>
+    <file>iso-grk2.gml</file>
+    <file>iso-grk3.gml</file>
+    <file>iso-grk4.gml</file>
+    <file>iso-lat1.gml</file>
+    <file>iso-lat2.gml</file>
+    <file>iso-num.gml</file>
+    <file>iso-pub.gml</file>
+    <file>iso-tech.gml</file>
+  </dir>
+  <dir dir='2.4' path='sgml/2.4' release='2.4' type='sgml'>
+    <file>24change.txt</file>
+    <file>README</file>
+    <file>announce.txt</file>
+    <file>calstbl.mod</file>
+    <file>dbent24.zip</file>
+    <file>dbgenent.mod</file>
+    <file>dbhier.mod</file>
+    <file>dbpool.mod</file>
+    <file>docbk24.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>iso-amsa.gml</file>
+    <file>iso-amsb.gml</file>
+    <file>iso-amsc.gml</file>
+    <file>iso-amsn.gml</file>
+    <file>iso-amso.gml</file>
+    <file>iso-amsr.gml</file>
+    <file>iso-box.gml</file>
+    <file>iso-cyr1.gml</file>
+    <file>iso-cyr2.gml</file>
+    <file>iso-dia.gml</file>
+    <file>iso-grk1.gml</file>
+    <file>iso-grk2.gml</file>
+    <file>iso-grk3.gml</file>
+    <file>iso-grk4.gml</file>
+    <file>iso-lat1.gml</file>
+    <file>iso-lat2.gml</file>
+    <file>iso-num.gml</file>
+    <file>iso-pub.gml</file>
+    <file>iso-tech.gml</file>
+    <file>isodia.ent</file>
+    <file>isomfrk.ent</file>
+    <file>isomopf.ent</file>
+    <file>isomscr.ent</file>
+  </dir>
+  <dir dir='3.0' path='sgml/3.0' release='3.0' type='sgml'>
+    <file>30chg.txt</file>
+    <file>40issues.txt</file>
+    <file>announce.txt</file>
+    <file>cals-tbl.dtd</file>
+    <file>dbgenent.mod</file>
+    <file>dbhier.mod</file>
+    <file>dbpool.mod</file>
+    <file>docbk30.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+  </dir>
+  <dir dir='3.1' path='sgml/3.1' release='3.1' type='sgml'>
+    <file>31chg.txt</file>
+    <file>40issues.txt</file>
+    <file>50issues.txt</file>
+    <file>ChangeLog</file>
+    <file>cals-tbl.dtd</file>
+    <file>dbcent.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhier.mod</file>
+    <file>dbnotn.mod</file>
+    <file>dbpool.mod</file>
+    <file>docbk31.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>readme.txt</file>
+  </dir>
+  <dir dir='4.1' path='sgml/4.1' release='4.1' type='sgml'>
+    <file>40chg.txt</file>
+    <file>41chg.txt</file>
+    <file>50issues.txt</file>
+    <file>ChangeLog</file>
+    <file>cals-tbl.dtd</file>
+    <file>dbcent.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhier.mod</file>
+    <file>dbnotn.mod</file>
+    <file>dbpool.mod</file>
+    <file>docbk41.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>readme.txt</file>
+  </dir>
+  <dir dir='4.2' path='sgml/4.2' release='4.2' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.2.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.3' path='sgml/4.3' release='4.3' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.3.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.3CR1' path='sgml/4.3CR1' release='4.3CR1' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.3CR1.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.3CR2' path='sgml/4.3CR2' release='4.3CR2' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.3CR2.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.3CR3' path='sgml/4.3CR3' release='4.3CR3' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.3CR3.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.3b2' path='sgml/4.3b2' release='4.3b2' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.3b2.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.3b3' path='sgml/4.3b3' release='4.3b3' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.3b3.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.3b4' path='sgml/4.3b4' release='4.3b4' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.3b4.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.3b5' path='sgml/4.3b5' release='4.3b5' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.3b5.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.4' path='sgml/4.4' release='4.4' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.4.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.4CR1' path='sgml/4.4CR1' release='4.4CR1' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.4CR1.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.4CR2' path='sgml/4.4CR2' release='4.4CR2' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.4CR2.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.4CR3' path='sgml/4.4CR3' release='4.4CR3' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.4CR3.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.4CR4' path='sgml/4.4CR4' release='4.4CR4' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.4CR4.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.4b1' path='sgml/4.4b1' release='4.4b1' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.4b1.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.4b2' path='sgml/4.4b2' release='4.4b2' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.4b2.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.5' path='sgml/4.5' release='4.5' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.5.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.5CR1' path='sgml/4.5CR1' release='4.5CR1' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.5CR1.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.5CR2' path='sgml/4.5CR2' release='4.5CR2' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.5CR2.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.5CR3' path='sgml/4.5CR3' release='4.5CR3' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.5CR3.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.5b1' path='sgml/4.5b1' release='4.5b1' type='sgml'>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-4.5b1.zip</file>
+    <file>docbook.cat</file>
+    <file>docbook.dcl</file>
+    <file>docbook.dtd</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+</dir>
+<dir dir='xml' path='xml'>
+  <dir dir='4.1.2' path='xml/4.1.2' release='4.1.2' type='xml'>
+    <dir dir='ent' path='xml/4.1.2/ent'>
+      <file>ChangeLog</file>
+      <file>iso-amsa.ent</file>
+      <file>iso-amsb.ent</file>
+      <file>iso-amsc.ent</file>
+      <file>iso-amsn.ent</file>
+      <file>iso-amso.ent</file>
+      <file>iso-amsr.ent</file>
+      <file>iso-box.ent</file>
+      <file>iso-cyr1.ent</file>
+      <file>iso-cyr2.ent</file>
+      <file>iso-dia.ent</file>
+      <file>iso-grk1.ent</file>
+      <file>iso-grk2.ent</file>
+      <file>iso-grk3.ent</file>
+      <file>iso-grk4.ent</file>
+      <file>iso-lat1.ent</file>
+      <file>iso-lat2.ent</file>
+      <file>iso-num.ent</file>
+      <file>iso-pub.ent</file>
+      <file>iso-tech.ent</file>
+    </dir>
+    <file>40chg.txt</file>
+    <file>41chg.txt</file>
+    <file>ChangeLog</file>
+    <file>calstblx.dtd</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbkx412.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>readme.txt</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.2' path='xml/4.2' release='4.2' type='xml'>
+    <dir dir='ent' path='xml/4.2/ent'>
+      <file>iso-amsa.ent</file>
+      <file>iso-amsb.ent</file>
+      <file>iso-amsc.ent</file>
+      <file>iso-amsn.ent</file>
+      <file>iso-amso.ent</file>
+      <file>iso-amsr.ent</file>
+      <file>iso-box.ent</file>
+      <file>iso-cyr1.ent</file>
+      <file>iso-cyr2.ent</file>
+      <file>iso-dia.ent</file>
+      <file>iso-grk1.ent</file>
+      <file>iso-grk2.ent</file>
+      <file>iso-grk3.ent</file>
+      <file>iso-grk4.ent</file>
+      <file>iso-lat1.ent</file>
+      <file>iso-lat2.ent</file>
+      <file>iso-num.ent</file>
+      <file>iso-pub.ent</file>
+      <file>iso-tech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.2.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.3' path='xml/4.3' release='4.3' type='xml'>
+    <dir dir='ent' path='xml/4.3/ent'>
+      <file>iso-amsa.ent</file>
+      <file>iso-amsb.ent</file>
+      <file>iso-amsc.ent</file>
+      <file>iso-amsn.ent</file>
+      <file>iso-amso.ent</file>
+      <file>iso-amsr.ent</file>
+      <file>iso-box.ent</file>
+      <file>iso-cyr1.ent</file>
+      <file>iso-cyr2.ent</file>
+      <file>iso-dia.ent</file>
+      <file>iso-grk1.ent</file>
+      <file>iso-grk2.ent</file>
+      <file>iso-grk3.ent</file>
+      <file>iso-grk4.ent</file>
+      <file>iso-lat1.ent</file>
+      <file>iso-lat2.ent</file>
+      <file>iso-num.ent</file>
+      <file>iso-pub.ent</file>
+      <file>iso-tech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.3.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.3CR1' path='xml/4.3CR1' release='4.3CR1' type='xml'>
+    <dir dir='ent' path='xml/4.3CR1/ent'>
+      <file>iso-amsa.ent</file>
+      <file>iso-amsb.ent</file>
+      <file>iso-amsc.ent</file>
+      <file>iso-amsn.ent</file>
+      <file>iso-amso.ent</file>
+      <file>iso-amsr.ent</file>
+      <file>iso-box.ent</file>
+      <file>iso-cyr1.ent</file>
+      <file>iso-cyr2.ent</file>
+      <file>iso-dia.ent</file>
+      <file>iso-grk1.ent</file>
+      <file>iso-grk2.ent</file>
+      <file>iso-grk3.ent</file>
+      <file>iso-grk4.ent</file>
+      <file>iso-lat1.ent</file>
+      <file>iso-lat2.ent</file>
+      <file>iso-num.ent</file>
+      <file>iso-pub.ent</file>
+      <file>iso-tech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.3CR1.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.3CR2' path='xml/4.3CR2' release='4.3CR2' type='xml'>
+    <dir dir='ent' path='xml/4.3CR2/ent'>
+      <file>iso-amsa.ent</file>
+      <file>iso-amsb.ent</file>
+      <file>iso-amsc.ent</file>
+      <file>iso-amsn.ent</file>
+      <file>iso-amso.ent</file>
+      <file>iso-amsr.ent</file>
+      <file>iso-box.ent</file>
+      <file>iso-cyr1.ent</file>
+      <file>iso-cyr2.ent</file>
+      <file>iso-dia.ent</file>
+      <file>iso-grk1.ent</file>
+      <file>iso-grk2.ent</file>
+      <file>iso-grk3.ent</file>
+      <file>iso-grk4.ent</file>
+      <file>iso-lat1.ent</file>
+      <file>iso-lat2.ent</file>
+      <file>iso-num.ent</file>
+      <file>iso-pub.ent</file>
+      <file>iso-tech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.3CR2.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.3CR3' path='xml/4.3CR3' release='4.3CR3' type='xml'>
+    <dir dir='ent' path='xml/4.3CR3/ent'>
+      <file>iso-amsa.ent</file>
+      <file>iso-amsb.ent</file>
+      <file>iso-amsc.ent</file>
+      <file>iso-amsn.ent</file>
+      <file>iso-amso.ent</file>
+      <file>iso-amsr.ent</file>
+      <file>iso-box.ent</file>
+      <file>iso-cyr1.ent</file>
+      <file>iso-cyr2.ent</file>
+      <file>iso-dia.ent</file>
+      <file>iso-grk1.ent</file>
+      <file>iso-grk2.ent</file>
+      <file>iso-grk3.ent</file>
+      <file>iso-grk4.ent</file>
+      <file>iso-lat1.ent</file>
+      <file>iso-lat2.ent</file>
+      <file>iso-num.ent</file>
+      <file>iso-pub.ent</file>
+      <file>iso-tech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.3CR3.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.3b2' path='xml/4.3b2' release='4.3b2' type='xml'>
+    <dir dir='ent' path='xml/4.3b2/ent'>
+      <file>iso-amsa.ent</file>
+      <file>iso-amsb.ent</file>
+      <file>iso-amsc.ent</file>
+      <file>iso-amsn.ent</file>
+      <file>iso-amso.ent</file>
+      <file>iso-amsr.ent</file>
+      <file>iso-box.ent</file>
+      <file>iso-cyr1.ent</file>
+      <file>iso-cyr2.ent</file>
+      <file>iso-dia.ent</file>
+      <file>iso-grk1.ent</file>
+      <file>iso-grk2.ent</file>
+      <file>iso-grk3.ent</file>
+      <file>iso-grk4.ent</file>
+      <file>iso-lat1.ent</file>
+      <file>iso-lat2.ent</file>
+      <file>iso-num.ent</file>
+      <file>iso-pub.ent</file>
+      <file>iso-tech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.3b2.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.3b3' path='xml/4.3b3' release='4.3b3' type='xml'>
+    <dir dir='ent' path='xml/4.3b3/ent'>
+      <file>iso-amsa.ent</file>
+      <file>iso-amsb.ent</file>
+      <file>iso-amsc.ent</file>
+      <file>iso-amsn.ent</file>
+      <file>iso-amso.ent</file>
+      <file>iso-amsr.ent</file>
+      <file>iso-box.ent</file>
+      <file>iso-cyr1.ent</file>
+      <file>iso-cyr2.ent</file>
+      <file>iso-dia.ent</file>
+      <file>iso-grk1.ent</file>
+      <file>iso-grk2.ent</file>
+      <file>iso-grk3.ent</file>
+      <file>iso-grk4.ent</file>
+      <file>iso-lat1.ent</file>
+      <file>iso-lat2.ent</file>
+      <file>iso-num.ent</file>
+      <file>iso-pub.ent</file>
+      <file>iso-tech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.3b3.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+    <file>test.xml</file>
+  </dir>
+  <dir dir='4.3b4' path='xml/4.3b4' release='4.3b4' type='xml'>
+    <dir dir='ent' path='xml/4.3b4/ent'>
+      <file>iso-amsa.ent</file>
+      <file>iso-amsb.ent</file>
+      <file>iso-amsc.ent</file>
+      <file>iso-amsn.ent</file>
+      <file>iso-amso.ent</file>
+      <file>iso-amsr.ent</file>
+      <file>iso-box.ent</file>
+      <file>iso-cyr1.ent</file>
+      <file>iso-cyr2.ent</file>
+      <file>iso-dia.ent</file>
+      <file>iso-grk1.ent</file>
+      <file>iso-grk2.ent</file>
+      <file>iso-grk3.ent</file>
+      <file>iso-grk4.ent</file>
+      <file>iso-lat1.ent</file>
+      <file>iso-lat2.ent</file>
+      <file>iso-num.ent</file>
+      <file>iso-pub.ent</file>
+      <file>iso-tech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.3b4.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.3b5' path='xml/4.3b5' release='4.3b5' type='xml'>
+    <dir dir='ent' path='xml/4.3b5/ent'>
+      <file>iso-amsa.ent</file>
+      <file>iso-amsb.ent</file>
+      <file>iso-amsc.ent</file>
+      <file>iso-amsn.ent</file>
+      <file>iso-amso.ent</file>
+      <file>iso-amsr.ent</file>
+      <file>iso-box.ent</file>
+      <file>iso-cyr1.ent</file>
+      <file>iso-cyr2.ent</file>
+      <file>iso-dia.ent</file>
+      <file>iso-grk1.ent</file>
+      <file>iso-grk2.ent</file>
+      <file>iso-grk3.ent</file>
+      <file>iso-grk4.ent</file>
+      <file>iso-lat1.ent</file>
+      <file>iso-lat2.ent</file>
+      <file>iso-num.ent</file>
+      <file>iso-pub.ent</file>
+      <file>iso-tech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.3b5.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.4' path='xml/4.4' release='4.4' type='xml'>
+    <dir dir='ent' path='xml/4.4/ent'>
+      <file>README</file>
+      <file>isoamsa.ent</file>
+      <file>isoamsb.ent</file>
+      <file>isoamsc.ent</file>
+      <file>isoamsn.ent</file>
+      <file>isoamso.ent</file>
+      <file>isoamsr.ent</file>
+      <file>isobox.ent</file>
+      <file>isocyr1.ent</file>
+      <file>isocyr2.ent</file>
+      <file>isodia.ent</file>
+      <file>isogrk1.ent</file>
+      <file>isogrk2.ent</file>
+      <file>isogrk3.ent</file>
+      <file>isogrk4.ent</file>
+      <file>isolat1.ent</file>
+      <file>isolat2.ent</file>
+      <file>isonum.ent</file>
+      <file>isopub.ent</file>
+      <file>isotech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.4.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.4CR1' path='xml/4.4CR1' release='4.4CR1' type='xml'>
+    <dir dir='ent' path='xml/4.4CR1/ent'>
+      <file>README</file>
+      <file>isoamsa.ent</file>
+      <file>isoamsb.ent</file>
+      <file>isoamsc.ent</file>
+      <file>isoamsn.ent</file>
+      <file>isoamso.ent</file>
+      <file>isoamsr.ent</file>
+      <file>isobox.ent</file>
+      <file>isocyr1.ent</file>
+      <file>isocyr2.ent</file>
+      <file>isodia.ent</file>
+      <file>isogrk1.ent</file>
+      <file>isogrk2.ent</file>
+      <file>isogrk3.ent</file>
+      <file>isogrk4.ent</file>
+      <file>isolat1.ent</file>
+      <file>isolat2.ent</file>
+      <file>isonum.ent</file>
+      <file>isopub.ent</file>
+      <file>isotech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.4CR1.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.4CR2' path='xml/4.4CR2' release='4.4CR2' type='xml'>
+    <dir dir='ent' path='xml/4.4CR2/ent'>
+      <file>README</file>
+      <file>isoamsa.ent</file>
+      <file>isoamsb.ent</file>
+      <file>isoamsc.ent</file>
+      <file>isoamsn.ent</file>
+      <file>isoamso.ent</file>
+      <file>isoamsr.ent</file>
+      <file>isobox.ent</file>
+      <file>isocyr1.ent</file>
+      <file>isocyr2.ent</file>
+      <file>isodia.ent</file>
+      <file>isogrk1.ent</file>
+      <file>isogrk2.ent</file>
+      <file>isogrk3.ent</file>
+      <file>isogrk4.ent</file>
+      <file>isolat1.ent</file>
+      <file>isolat2.ent</file>
+      <file>isonum.ent</file>
+      <file>isopub.ent</file>
+      <file>isotech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.4CR2.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.4CR3' path='xml/4.4CR3' release='4.4CR3' type='xml'>
+    <dir dir='ent' path='xml/4.4CR3/ent'>
+      <file>README</file>
+      <file>isoamsa.ent</file>
+      <file>isoamsb.ent</file>
+      <file>isoamsc.ent</file>
+      <file>isoamsn.ent</file>
+      <file>isoamso.ent</file>
+      <file>isoamsr.ent</file>
+      <file>isobox.ent</file>
+      <file>isocyr1.ent</file>
+      <file>isocyr2.ent</file>
+      <file>isodia.ent</file>
+      <file>isogrk1.ent</file>
+      <file>isogrk2.ent</file>
+      <file>isogrk3.ent</file>
+      <file>isogrk4.ent</file>
+      <file>isolat1.ent</file>
+      <file>isolat2.ent</file>
+      <file>isonum.ent</file>
+      <file>isopub.ent</file>
+      <file>isotech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.4CR3.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.4CR4' path='xml/4.4CR4' release='4.4CR4' type='xml'>
+    <dir dir='ent' path='xml/4.4CR4/ent'>
+      <file>README</file>
+      <file>isoamsa.ent</file>
+      <file>isoamsb.ent</file>
+      <file>isoamsc.ent</file>
+      <file>isoamsn.ent</file>
+      <file>isoamso.ent</file>
+      <file>isoamsr.ent</file>
+      <file>isobox.ent</file>
+      <file>isocyr1.ent</file>
+      <file>isocyr2.ent</file>
+      <file>isodia.ent</file>
+      <file>isogrk1.ent</file>
+      <file>isogrk2.ent</file>
+      <file>isogrk3.ent</file>
+      <file>isogrk4.ent</file>
+      <file>isolat1.ent</file>
+      <file>isolat2.ent</file>
+      <file>isonum.ent</file>
+      <file>isopub.ent</file>
+      <file>isotech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.4CR4.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.4b1' path='xml/4.4b1' release='4.4b1' type='xml'>
+    <dir dir='ent' path='xml/4.4b1/ent'>
+      <file>iso-amsa.ent</file>
+      <file>iso-amsb.ent</file>
+      <file>iso-amsc.ent</file>
+      <file>iso-amsn.ent</file>
+      <file>iso-amso.ent</file>
+      <file>iso-amsr.ent</file>
+      <file>iso-box.ent</file>
+      <file>iso-cyr1.ent</file>
+      <file>iso-cyr2.ent</file>
+      <file>iso-dia.ent</file>
+      <file>iso-grk1.ent</file>
+      <file>iso-grk2.ent</file>
+      <file>iso-grk3.ent</file>
+      <file>iso-grk4.ent</file>
+      <file>iso-lat1.ent</file>
+      <file>iso-lat2.ent</file>
+      <file>iso-num.ent</file>
+      <file>iso-pub.ent</file>
+      <file>iso-tech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.4b1.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.4b2' path='xml/4.4b2' release='4.4b2' type='xml'>
+    <dir dir='ent' path='xml/4.4b2/ent'>
+      <file>README</file>
+      <file>isoamsa.ent</file>
+      <file>isoamsb.ent</file>
+      <file>isoamsc.ent</file>
+      <file>isoamsn.ent</file>
+      <file>isoamso.ent</file>
+      <file>isoamsr.ent</file>
+      <file>isobox.ent</file>
+      <file>isocyr1.ent</file>
+      <file>isocyr2.ent</file>
+      <file>isodia.ent</file>
+      <file>isogrk1.ent</file>
+      <file>isogrk2.ent</file>
+      <file>isogrk3.ent</file>
+      <file>isogrk4.ent</file>
+      <file>isolat1.ent</file>
+      <file>isolat2.ent</file>
+      <file>isonum.ent</file>
+      <file>isopub.ent</file>
+      <file>isotech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.4b2.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.5' path='xml/4.5' release='4.5' type='xml'>
+    <dir dir='ent' path='xml/4.5/ent'>
+      <file>README</file>
+      <file>isoamsa.ent</file>
+      <file>isoamsb.ent</file>
+      <file>isoamsc.ent</file>
+      <file>isoamsn.ent</file>
+      <file>isoamso.ent</file>
+      <file>isoamsr.ent</file>
+      <file>isobox.ent</file>
+      <file>isocyr1.ent</file>
+      <file>isocyr2.ent</file>
+      <file>isodia.ent</file>
+      <file>isogrk1.ent</file>
+      <file>isogrk2.ent</file>
+      <file>isogrk3.ent</file>
+      <file>isogrk4.ent</file>
+      <file>isolat1.ent</file>
+      <file>isolat2.ent</file>
+      <file>isonum.ent</file>
+      <file>isopub.ent</file>
+      <file>isotech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.5.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.5CR1' path='xml/4.5CR1' release='4.5CR1' type='xml'>
+    <dir dir='ent' path='xml/4.5CR1/ent'>
+      <file>ChangeLog</file>
+      <file>README</file>
+      <file>isoamsa.ent</file>
+      <file>isoamsb.ent</file>
+      <file>isoamsc.ent</file>
+      <file>isoamsn.ent</file>
+      <file>isoamso.ent</file>
+      <file>isoamsr.ent</file>
+      <file>isobox.ent</file>
+      <file>isocyr1.ent</file>
+      <file>isocyr2.ent</file>
+      <file>isodia.ent</file>
+      <file>isogrk1.ent</file>
+      <file>isogrk2.ent</file>
+      <file>isogrk3.ent</file>
+      <file>isogrk4.ent</file>
+      <file>isolat1.ent</file>
+      <file>isolat2.ent</file>
+      <file>isonum.ent</file>
+      <file>isopub.ent</file>
+      <file>isotech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.5CR1.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.5CR2' path='xml/4.5CR2' release='4.5CR2' type='xml'>
+    <dir dir='ent' path='xml/4.5CR2/ent'>
+      <file>ChangeLog</file>
+      <file>README</file>
+      <file>isoamsa.ent</file>
+      <file>isoamsb.ent</file>
+      <file>isoamsc.ent</file>
+      <file>isoamsn.ent</file>
+      <file>isoamso.ent</file>
+      <file>isoamsr.ent</file>
+      <file>isobox.ent</file>
+      <file>isocyr1.ent</file>
+      <file>isocyr2.ent</file>
+      <file>isodia.ent</file>
+      <file>isogrk1.ent</file>
+      <file>isogrk2.ent</file>
+      <file>isogrk3.ent</file>
+      <file>isogrk4.ent</file>
+      <file>isolat1.ent</file>
+      <file>isolat2.ent</file>
+      <file>isonum.ent</file>
+      <file>isopub.ent</file>
+      <file>isotech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.5CR2.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.5CR3' path='xml/4.5CR3' release='4.5CR3' type='xml'>
+    <dir dir='ent' path='xml/4.5CR3/ent'>
+      <file>README</file>
+      <file>isoamsa.ent</file>
+      <file>isoamsb.ent</file>
+      <file>isoamsc.ent</file>
+      <file>isoamsn.ent</file>
+      <file>isoamso.ent</file>
+      <file>isoamsr.ent</file>
+      <file>isobox.ent</file>
+      <file>isocyr1.ent</file>
+      <file>isocyr2.ent</file>
+      <file>isodia.ent</file>
+      <file>isogrk1.ent</file>
+      <file>isogrk2.ent</file>
+      <file>isogrk3.ent</file>
+      <file>isogrk4.ent</file>
+      <file>isolat1.ent</file>
+      <file>isolat2.ent</file>
+      <file>isonum.ent</file>
+      <file>isopub.ent</file>
+      <file>isotech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.5CR3.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='4.5b1' path='xml/4.5b1' release='4.5b1' type='xml'>
+    <dir dir='ent' path='xml/4.5b1/ent'>
+      <file>README</file>
+      <file>isoamsa.ent</file>
+      <file>isoamsb.ent</file>
+      <file>isoamsc.ent</file>
+      <file>isoamsn.ent</file>
+      <file>isoamso.ent</file>
+      <file>isoamsr.ent</file>
+      <file>isobox.ent</file>
+      <file>isocyr1.ent</file>
+      <file>isocyr2.ent</file>
+      <file>isodia.ent</file>
+      <file>isogrk1.ent</file>
+      <file>isogrk2.ent</file>
+      <file>isogrk3.ent</file>
+      <file>isogrk4.ent</file>
+      <file>isolat1.ent</file>
+      <file>isolat2.ent</file>
+      <file>isonum.ent</file>
+      <file>isopub.ent</file>
+      <file>isotech.ent</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>calstblx.dtd</file>
+    <file>catalog.xml</file>
+    <file>dbcentx.mod</file>
+    <file>dbgenent.mod</file>
+    <file>dbhierx.mod</file>
+    <file>dbnotnx.mod</file>
+    <file>dbpoolx.mod</file>
+    <file>docbook-xml-4.5b1.zip</file>
+    <file>docbook.cat</file>
+    <file>docbookx.dtd</file>
+    <file>htmltblx.mod</file>
+    <file>soextblx.dtd</file>
+  </dir>
+  <dir dir='5.0' path='xml/5.0' release='5.0' type='xml'>
+    <dir dir='dtd' path='xml/5.0/dtd' release='5.0' type='dtd'>
+      <file>dbits.dtd</file>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.0/rng' release='5.0' type='rng'>
+      <file>dbits.rnc</file>
+      <file>dbits.rng</file>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.0/sch' release='5.0' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.0/tools' release='5.0' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.0/xsd' release='5.0' type='xsd'>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>catalog.xml</file>
+    <file>docbook-5.0.zip</file>
+    <file>docbook.nvdl</file>
+  </dir>
+  <dir dir='5.0CR1' path='xml/5.0CR1' release='5.0CR1' type='xml'>
+    <dir dir='dtd' path='xml/5.0CR1/dtd' release='5.0CR1' type='dtd'>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.0CR1/rng' release='5.0CR1' type='rng'>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.0CR1/sch' release='5.0CR1' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.0CR1/tools' release='5.0CR1' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.0CR1/xsd' release='5.0CR1' type='xsd'>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>catalog.xml</file>
+    <file>docbook-5.0CR1.tar.gz</file>
+    <file>docbook-5.0CR1.zip</file>
+  </dir>
+  <dir dir='5.0CR2' path='xml/5.0CR2' release='5.0CR2' type='xml'>
+    <dir dir='dtd' path='xml/5.0CR2/dtd' release='5.0CR2' type='dtd'>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.0CR2/rng' release='5.0CR2' type='rng'>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.0CR2/sch' release='5.0CR2' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.0CR2/tools' release='5.0CR2' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.0CR2/xsd' release='5.0CR2' type='xsd'>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>catalog.xml</file>
+    <file>docbook-5.0CR2.zip</file>
+  </dir>
+  <dir dir='5.0CR3' path='xml/5.0CR3' release='5.0CR3' type='xml'>
+    <dir dir='dtd' path='xml/5.0CR3/dtd' release='5.0CR3' type='dtd'>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.0CR3/rng' release='5.0CR3' type='rng'>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.0CR3/sch' release='5.0CR3' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.0CR3/tools' release='5.0CR3' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.0CR3/xsd' release='5.0CR3' type='xsd'>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>catalog.xml</file>
+    <file>docbook-5.0CR3.zip</file>
+  </dir>
+  <dir dir='5.0CR4' path='xml/5.0CR4' release='5.0CR4' type='xml'>
+    <dir dir='dtd' path='xml/5.0CR4/dtd' release='5.0CR4' type='dtd'>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.0CR4/rng' release='5.0CR4' type='rng'>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.0CR4/sch' release='5.0CR4' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.0CR4/tools' release='5.0CR4' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.0CR4/xsd' release='5.0CR4' type='xsd'>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>catalog.xml</file>
+    <file>docbook-5.0CR4.zip</file>
+    <file>docbook.nvdl</file>
+  </dir>
+  <dir dir='5.0CR5' path='xml/5.0CR5' release='5.0CR5' type='xml'>
+    <dir dir='dtd' path='xml/5.0CR5/dtd' release='5.0CR5' type='dtd'>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.0CR5/rng' release='5.0CR5' type='rng'>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.0CR5/sch' release='5.0CR5' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.0CR5/tools' release='5.0CR5' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.0CR5/xsd' release='5.0CR5' type='xsd'>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>catalog.xml</file>
+    <file>docbook-5.0CR5.zip</file>
+    <file>docbook.nvdl</file>
+  </dir>
+  <dir dir='5.0CR6' path='xml/5.0CR6' release='5.0CR6' type='xml'>
+    <dir dir='dtd' path='xml/5.0CR6/dtd' release='5.0CR6' type='dtd'>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.0CR6/rng' release='5.0CR6' type='rng'>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.0CR6/sch' release='5.0CR6' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.0CR6/tools' release='5.0CR6' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.0CR6/xsd' release='5.0CR6' type='xsd'>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>catalog.xml</file>
+    <file>docbook-5.0CR6.zip</file>
+    <file>docbook.nvdl</file>
+  </dir>
+  <dir dir='5.0CR7' path='xml/5.0CR7' release='5.0CR7' type='xml'>
+    <dir dir='dtd' path='xml/5.0CR7/dtd' release='5.0CR7' type='dtd'>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.0CR7/rng' release='5.0CR7' type='rng'>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.0CR7/sch' release='5.0CR7' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.0CR7/tools' release='5.0CR7' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.0CR7/xsd' release='5.0CR7' type='xsd'>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>catalog.xml</file>
+    <file>docbook-5.0CR7.zip</file>
+    <file>docbook.nvdl</file>
+  </dir>
+  <dir dir='5.0b1' path='xml/5.0b1' release='5.0b1' type='xml'>
+    <dir dir='dtd' path='xml/5.0b1/dtd' release='5.0b1' type='dtd'>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.0b1/rng' release='5.0b1' type='rng'>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.0b1/sch' release='5.0b1' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.0b1/tools' release='5.0b1' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.0b1/xsd' release='5.0b1' type='xsd'>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>README</file>
+    <file>docbook-5.0b1.tar.gz</file>
+    <file>docbook-5.0b1.zip</file>
+  </dir>
+  <dir dir='5.0b2' path='xml/5.0b2' release='5.0b2' type='xml'>
+    <dir dir='dtd' path='xml/5.0b2/dtd' release='5.0b2' type='dtd'>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.0b2/rng' release='5.0b2' type='rng'>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.0b2/sch' release='5.0b2' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.0b2/tools' release='5.0b2' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.0b2/xsd' release='5.0b2' type='xsd'>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>catalog.xml</file>
+    <file>docbook-5.0b2.tar.gz</file>
+    <file>docbook-5.0b2.zip</file>
+  </dir>
+  <dir dir='5.0b3' path='xml/5.0b3' release='5.0b3' type='xml'>
+    <dir dir='dtd' path='xml/5.0b3/dtd' release='5.0b3' type='dtd'>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.0b3/rng' release='5.0b3' type='rng'>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.0b3/sch' release='5.0b3' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.0b3/tools' release='5.0b3' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.0b3/xsd' release='5.0b3' type='xsd'>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>docbook-5.0b3.tar.gz</file>
+    <file>docbook-5.0b3.zip</file>
+  </dir>
+  <dir dir='5.0b4' path='xml/5.0b4' release='5.0b4' type='xml'>
+    <dir dir='dtd' path='xml/5.0b4/dtd' release='5.0b4' type='dtd'>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.0b4/rng' release='5.0b4' type='rng'>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.0b4/sch' release='5.0b4' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.0b4/tools' release='5.0b4' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.0b4/xsd' release='5.0b4' type='xsd'>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>catalog.xml</file>
+    <file>docbook-5.0b4.tar.gz</file>
+    <file>docbook-5.0b4.zip</file>
+  </dir>
+  <dir dir='5.0b5' path='xml/5.0b5' release='5.0b5' type='xml'>
+    <dir dir='dtd' path='xml/5.0b5/dtd' release='5.0b5' type='dtd'>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.0b5/rng' release='5.0b5' type='rng'>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.0b5/sch' release='5.0b5' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.0b5/tools' release='5.0b5' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.0b5/xsd' release='5.0b5' type='xsd'>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>catalog.xml</file>
+    <file>docbook-5.0b5.tar.gz</file>
+    <file>docbook-5.0b5.zip</file>
+  </dir>
+  <dir dir='5.0b6' path='xml/5.0b6' release='5.0b6' type='xml'>
+    <dir dir='dtd' path='xml/5.0b6/dtd' release='5.0b6' type='dtd'>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.0b6/rng' release='5.0b6' type='rng'>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.0b6/sch' release='5.0b6' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.0b6/tools' release='5.0b6' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.0b6/xsd' release='5.0b6' type='xsd'>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>catalog.xml</file>
+    <file>docbook-5.0b6.tar.gz</file>
+    <file>docbook-5.0b6.zip</file>
+  </dir>
+  <dir dir='5.0b7' path='xml/5.0b7' release='5.0b7' type='xml'>
+    <dir dir='dtd' path='xml/5.0b7/dtd' release='5.0b7' type='dtd'>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.0b7/rng' release='5.0b7' type='rng'>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.0b7/sch' release='5.0b7' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.0b7/tools' release='5.0b7' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.0b7/xsd' release='5.0b7' type='xsd'>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>catalog.xml</file>
+    <file>docbook-5.0b7.tar.gz</file>
+    <file>docbook-5.0b7.zip</file>
+  </dir>
+  <dir dir='5.0b8' path='xml/5.0b8' release='5.0b8' type='xml'>
+    <dir dir='dtd' path='xml/5.0b8/dtd' release='5.0b8' type='dtd'>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.0b8/rng' release='5.0b8' type='rng'>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.0b8/sch' release='5.0b8' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.0b8/tools' release='5.0b8' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.0b8/xsd' release='5.0b8' type='xsd'>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>catalog.xml</file>
+    <file>docbook-5.0b8.tar.gz</file>
+    <file>docbook-5.0b8.zip</file>
+  </dir>
+  <dir dir='5.0b9' path='xml/5.0b9' release='5.0b9' type='xml'>
+    <dir dir='dtd' path='xml/5.0b9/dtd' release='5.0b9' type='dtd'>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.0b9/rng' release='5.0b9' type='rng'>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.0b9/sch' release='5.0b9' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.0b9/tools' release='5.0b9' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.0b9/xsd' release='5.0b9' type='xsd'>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>catalog.xml</file>
+    <file>docbook-5.0b9.tar.gz</file>
+    <file>docbook-5.0b9.zip</file>
+  </dir>
+  <dir dir='5.1CR1' path='xml/5.1CR1' release='5.1CR1' type='xml'>
+    <dir dir='rng' path='xml/5.1CR1/rng' release='5.1CR1' type='rng'>
+      <file>assembly.rnc</file>
+      <file>assembly.rng</file>
+      <file>dbits.rnc</file>
+      <file>dbits.rng</file>
+      <file>docbook.nvdl</file>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.1CR1/sch' release='5.1CR1' type='sch'>
+      <file>assembly.sch</file>
+      <file>dbits.sch</file>
+      <file>docbook.sch</file>
+      <file>docbookxi.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.1CR1/tools' release='5.1CR1' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+  </dir>
+  <dir dir='5.1CR2' path='xml/5.1CR2' release='5.1CR2' type='xml'>
+    <dir dir='rng' path='xml/5.1CR2/rng' release='5.1CR2' type='rng'>
+      <file>assembly.rnc</file>
+      <file>assembly.rng</file>
+      <file>dbits.rnc</file>
+      <file>dbits.rng</file>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.1CR2/sch' release='5.1CR2' type='sch'>
+      <file>assembly.sch</file>
+      <file>dbits.sch</file>
+      <file>docbook.sch</file>
+      <file>docbookxi.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.1CR2/tools' release='5.1CR2' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <file>catalog.xml</file>
+    <file>docbook.nvdl</file>
+  </dir>
+  <dir dir='5.1CR3' path='xml/5.1CR3' release='5.1CR3' type='xml'>
+    <dir dir='rng' path='xml/5.1CR3/rng' release='5.1CR3' type='rng'>
+      <file>assembly.rnc</file>
+      <file>assembly.rng</file>
+      <file>dbits.rnc</file>
+      <file>dbits.rng</file>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.1CR3/sch' release='5.1CR3' type='sch'>
+      <file>assembly.sch</file>
+      <file>dbits.sch</file>
+      <file>docbook.sch</file>
+      <file>docbookxi.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.1CR3/tools' release='5.1CR3' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <file>catalog.xml</file>
+    <file>docbook.nvdl</file>
+  </dir>
+  <dir dir='5.1CR4' path='xml/5.1CR4' release='5.1CR4' type='xml'>
+    <dir dir='rng' path='xml/5.1CR4/rng' release='5.1CR4' type='rng'>
+      <file>assembly.rnc</file>
+      <file>assembly.rng</file>
+      <file>dbits.rnc</file>
+      <file>dbits.rng</file>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.1CR4/sch' release='5.1CR4' type='sch'>
+      <file>assembly.sch</file>
+      <file>dbits.sch</file>
+      <file>docbook.sch</file>
+      <file>docbookxi.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.1CR4/tools' release='5.1CR4' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <file>catalog.xml</file>
+    <file>docbook.nvdl</file>
+  </dir>
+  <dir dir='5.1b1' path='xml/5.1b1' release='5.1b1' type='xml'>
+    <dir dir='dtd' path='xml/5.1b1/dtd' release='5.1b1' type='dtd'>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.1b1/rng' release='5.1b1' type='rng'>
+      <file>assembly.rnc</file>
+      <file>assembly.rng</file>
+      <file>dbits.rnc</file>
+      <file>dbits.rng</file>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.1b1/sch' release='5.1b1' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.1b1/tools' release='5.1b1' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.1b1/xsd' release='5.1b1' type='xsd'>
+      <file>assembly.xsd</file>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>docbook.nvdl</file>
+  </dir>
+  <dir dir='5.1b2' path='xml/5.1b2' release='5.1b2' type='xml'>
+    <dir dir='dtd' path='xml/5.1b2/dtd' release='5.1b2' type='dtd'>
+      <file>assembly.dtd</file>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.1b2/rng' release='5.1b2' type='rng'>
+      <file>assembly.rnc</file>
+      <file>assembly.rng</file>
+      <file>dbits.rnc</file>
+      <file>dbits.rng</file>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.1b2/sch' release='5.1b2' type='sch'>
+      <file>assembly.sch</file>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.1b2/tools' release='5.1b2' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.1b2/xsd' release='5.1b2' type='xsd'>
+      <file>assembly.xsd</file>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>docbook.nvdl</file>
+  </dir>
+  <dir dir='5.1b3' path='xml/5.1b3' release='5.1b3' type='xml'>
+    <dir dir='dtd' path='xml/5.1b3/dtd' release='5.1b3' type='dtd'>
+      <file>assembly.dtd</file>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.1b3/rng' release='5.1b3' type='rng'>
+      <file>assembly.rnc</file>
+      <file>assembly.rng</file>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.1b3/sch' release='5.1b3' type='sch'>
+      <file>assembly.sch</file>
+      <file>docbook.sch</file>
+      <file>docbookxi.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.1b3/tools' release='5.1b3' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.1b3/xsd' release='5.1b3' type='xsd'>
+      <file>assembly.xsd</file>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>docbook.nvdl</file>
+  </dir>
+  <dir dir='5.1b4' path='xml/5.1b4' release='5.1b4' type='xml'>
+    <dir dir='dtd' path='xml/5.1b4/dtd' release='5.1b4' type='dtd'>
+      <file>assembly.dtd</file>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.1b4/rng' release='5.1b4' type='rng'>
+      <file>assembly.rnc</file>
+      <file>assembly.rng</file>
+      <file>dbits.rnc</file>
+      <file>dbits.rng</file>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.1b4/sch' release='5.1b4' type='sch'>
+      <file>assembly.sch</file>
+      <file>dbits.sch</file>
+      <file>docbook.sch</file>
+      <file>docbookxi.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.1b4/tools' release='5.1b4' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.1b4/xsd' release='5.1b4' type='xsd'>
+      <file>assembly.xsd</file>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>README</file>
+    <file>VERSION</file>
+  </dir>
+  <dir dir='5.1b5' path='xml/5.1b5' release='5.1b5' type='xml'>
+    <dir dir='rng' path='xml/5.1b5/rng' release='5.1b5' type='rng'>
+      <file>assembly.rnc</file>
+      <file>assembly.rng</file>
+      <file>dbits.rnc</file>
+      <file>dbits.rng</file>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.1b5/sch' release='5.1b5' type='sch'>
+      <file>assembly.sch</file>
+      <file>dbits.sch</file>
+      <file>docbook.sch</file>
+      <file>docbookxi.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.1b5/tools' release='5.1b5' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <file>VERSION</file>
+  </dir>
+  <dir dir='5.1b6' path='xml/5.1b6' release='5.1b6' type='xml'>
+    <dir dir='rng' path='xml/5.1b6/rng' release='5.1b6' type='rng'>
+      <file>assembly.rnc</file>
+      <file>assembly.rng</file>
+      <file>dbits.rnc</file>
+      <file>dbits.rng</file>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.1b6/sch' release='5.1b6' type='sch'>
+      <file>assembly.sch</file>
+      <file>dbits.sch</file>
+      <file>docbook.sch</file>
+      <file>docbookxi.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.1b6/tools' release='5.1b6' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <file>VERSION</file>
+  </dir>
+  <dir dir='5.1b7' path='xml/5.1b7' release='5.1b7' type='xml'>
+    <dir dir='rng' path='xml/5.1b7/rng' release='5.1b7' type='rng'>
+      <file>assembly.rnc</file>
+      <file>assembly.rng</file>
+      <file>dbits.rnc</file>
+      <file>dbits.rng</file>
+      <file>docbook.nvdl</file>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.1b7/sch' release='5.1b7' type='sch'>
+      <file>assembly.sch</file>
+      <file>dbits.sch</file>
+      <file>docbook.sch</file>
+      <file>docbookxi.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.1b7/tools' release='5.1b7' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <file>VERSION</file>
+  </dir>
+  <dir dir='5.1b8' path='xml/5.1b8' release='5.1b8' type='xml'>
+    <dir dir='rng' path='xml/5.1b8/rng' release='5.1b8' type='rng'>
+      <file>assembly.rnc</file>
+      <file>assembly.rng</file>
+      <file>dbits.rnc</file>
+      <file>dbits.rng</file>
+      <file>docbook.nvdl</file>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.1b8/sch' release='5.1b8' type='sch'>
+      <file>assembly.sch</file>
+      <file>dbits.sch</file>
+      <file>docbook.sch</file>
+      <file>docbookxi.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.1b8/tools' release='5.1b8' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <file>VERSION</file>
+  </dir>
+  <dir dir='dbrdfalite' path='xml/dbrdfalite'>
+    <dir dir='5.1CR1' path='xml/dbrdfalite/5.1CR1' release='5.1CR1' type='xml' module='dbrdfalite'>
+      <file>dbrdfalite.rnc</file>
+      <file>dbrdfalite.rng</file>
+    </dir>
+  </dir>
+  <dir dir='ebnf' path='xml/ebnf'>
+    <dir dir='1.0' path='xml/ebnf/1.0' release='1.0' type='xml' module='ebnf' custom='DocBook XML V4.1.2'>
+      <file>dbebnf.dtd</file>
+      <file>testebnf.xml</file>
+    </dir>
+    <dir dir='1.1CR1' path='xml/ebnf/1.1CR1' release='1.1CR1' type='xml' module='ebnf' custom='DocBook XML V4.2'>
+      <file>dbebnf.dtd</file>
+      <file>testebnf.xml</file>
+    </dir>
+    <dir dir='1.2CR1' path='xml/ebnf/1.2CR1' release='1.2CR1' type='xml' module='ebnf' custom='DocBook XML V4.3'>
+      <file>dbebnf.dtd</file>
+      <file>testebnf.xml</file>
+    </dir>
+    <dir dir='1.2b1' path='xml/ebnf/1.2b1' release='1.2b1' type='xml' module='ebnf' custom='DocBook XML V4.3'>
+      <file>dbebnf.dtd</file>
+      <file>testebnf.xml</file>
+    </dir>
+  </dir>
+  <dir dir='htmlforms' path='xml/htmlforms'>
+    <dir dir='1.0' path='xml/htmlforms/1.0' release='1.0' type='xml' module='htmlforms' custom='DocBook XML V4.1.2'>
+      <file>dbforms.dtd</file>
+      <file>testform.xml</file>
+    </dir>
+    <dir dir='1.1' path='xml/htmlforms/1.1' release='1.1' type='xml' module='htmlforms' custom='DocBook XML V4.1.2'>
+      <file>dbforms.dtd</file>
+      <file>testform.xml</file>
+    </dir>
+    <dir dir='1.2CR1' path='xml/htmlforms/1.2CR1' release='1.2CR1' type='xml' module='htmlforms' custom='DocBook XML V4.3'>
+      <file>dbforms.dtd</file>
+      <file>testform.xml</file>
+    </dir>
+    <dir dir='1.2b1' path='xml/htmlforms/1.2b1' release='1.2b1' type='xml' module='htmlforms' custom='DocBook XML V4.3'>
+      <file>dbforms.dtd</file>
+      <file>testform.xml</file>
+    </dir>
+    <dir dir='5.1CR1' path='xml/htmlforms/5.1CR1' release='5.1CR1' type='xml' module='htmlforms'>
+      <file>dbforms.rnc</file>
+      <file>dbforms.rng</file>
+    </dir>
+    <dir dir='5.1CR2' path='xml/htmlforms/5.1CR2' release='5.1CR2' type='xml' module='htmlforms'>
+      <file>dbforms.rnc</file>
+      <file>dbforms.rng</file>
+    </dir>
+    <dir dir='5.1CR3' path='xml/htmlforms/5.1CR3' release='5.1CR3' type='xml' module='htmlforms'>
+      <file>dbforms.rnc</file>
+      <file>dbforms.rng</file>
+    </dir>
+    <dir dir='5.1b6-1' path='xml/htmlforms/5.1b6-1'>
+      <file>dbforms.rnc</file>
+      <file>dbforms.rng</file>
+    </dir>
+  </dir>
+  <dir dir='mathml' path='xml/mathml'>
+    <dir dir='1.0' path='xml/mathml/1.0' release='1.0' type='xml' module='mathml' custom='DocBook XML V4.1.2'>
+      <file>dbmathml.dtd</file>
+      <file>testmath.xml</file>
+    </dir>
+    <dir dir='1.1CR1' path='xml/mathml/1.1CR1' release='1.1CR1' type='xml' module='mathml' custom='DocBook XML V4.3'>
+      <file>dbmathml.dtd</file>
+      <file>testmath.xml</file>
+    </dir>
+    <dir dir='1.1b1' path='xml/mathml/1.1b1' release='1.1b1' type='xml' module='mathml' custom='DocBook XML V4.3'>
+      <file>dbmathml.dtd</file>
+      <file>testmath.xml</file>
+    </dir>
+  </dir>
+  <dir dir='publishers' path='xml/publishers'>
+    <dir dir='1.0' path='xml/publishers/1.0' release='1.0' module='publishers'>
+      <dir dir='dtd' path='xml/publishers/1.0/dtd' release='1.0' type='dtd' module='publishers'>
+        <file>publishers.dtd</file>
+      </dir>
+      <dir dir='rng' path='xml/publishers/1.0/rng' release='1.0' type='rng' module='publishers'>
+        <file>publishers.rnc</file>
+        <file>publishers.rng</file>
+      </dir>
+      <dir dir='sch' path='xml/publishers/1.0/sch' release='1.0' type='sch' module='publishers'>
+        <file>publishers.sch</file>
+      </dir>
+      <dir dir='xsd' path='xml/publishers/1.0/xsd' release='1.0' type='xsd' module='publishers'>
+        <file>dcterms.xsd</file>
+        <file>publishers.xsd</file>
+        <file>xlink.xsd</file>
+        <file>xml.xsd</file>
+      </dir>
+    </dir>
+    <dir dir='1.1b1' path='xml/publishers/1.1b1' release='1.1b1' module='publishers'>
+      <dir dir='dtd' path='xml/publishers/1.1b1/dtd' release='1.1b1' type='dtd' module='publishers'>
+        <file>publishers.dtd</file>
+      </dir>
+      <dir dir='rng' path='xml/publishers/1.1b1/rng' release='1.1b1' type='rng' module='publishers'>
+        <file>publishers.rng</file>
+      </dir>
+      <dir dir='sch' path='xml/publishers/1.1b1/sch' release='1.1b1' type='sch' module='publishers'>
+        <file>publishers.sch</file>
+      </dir>
+      <dir dir='xsd' path='xml/publishers/1.1b1/xsd' release='1.1b1' type='xsd' module='publishers'>
+        <file>dcterms.xsd</file>
+        <file>publishers.xsd</file>
+        <file>xlink.xsd</file>
+        <file>xml.xsd</file>
+      </dir>
+    </dir>
+    <dir dir='5.1CR1' path='xml/publishers/5.1CR1' release='5.1CR1' type='xml' module='publishers'>
+      <file>publishers.rnc</file>
+      <file>publishers.rnd</file>
+      <file>publishers.rng</file>
+      <file>publishers.sch</file>
+    </dir>
+    <dir dir='5.1CR2' path='xml/publishers/5.1CR2' release='5.1CR2' type='xml' module='publishers'>
+      <file>publishers.rnc</file>
+      <file>publishers.rng</file>
+      <file>publishers.sch</file>
+    </dir>
+    <dir dir='5.1CR3' path='xml/publishers/5.1CR3' release='5.1CR3' type='xml' module='publishers'>
+      <file>publishers.rnc</file>
+      <file>publishers.rng</file>
+      <file>publishers.sch</file>
+    </dir>
+  </dir>
+  <dir dir='simple' path='xml/simple'>
+    <dir dir='1.0' path='xml/simple/1.0' release='1.0' type='xml' module='simple' custom='DocBook XML V4.2'>
+      <file>docbook-simple-1.0.zip</file>
+      <file>sdbcent.mod</file>
+      <file>sdbhier.mod</file>
+      <file>sdbpool.mod</file>
+      <file>sdocbook-custom.dtd</file>
+      <file>sdocbook.css</file>
+      <file>sdocbook.dtd</file>
+      <file>sdocbookref-custom.dtd</file>
+      <file>sdocbookref.dtd</file>
+      <file>sinclist.mod</file>
+    </dir>
+    <dir dir='1.1' path='xml/simple/1.1' release='1.1' type='xml' module='simple' custom='DocBook XML V4.3'>
+      <file>docbook-simple-1.1.zip</file>
+      <file>sdbcent.mod</file>
+      <file>sdbhier.mod</file>
+      <file>sdbpool.mod</file>
+      <file>sdocbook-custom.dtd</file>
+      <file>sdocbook.css</file>
+      <file>sdocbook.dtd</file>
+      <file>sdocbookref-custom.dtd</file>
+      <file>sdocbookref.dtd</file>
+      <file>sinclist.mod</file>
+    </dir>
+    <dir dir='1.1CR1' path='xml/simple/1.1CR1' release='1.1CR1' type='xml' module='simple' custom='DocBook XML V4.3'>
+      <file>docbook-simple-1.1CR1.zip</file>
+      <file>sdbcent.mod</file>
+      <file>sdbhier.mod</file>
+      <file>sdbpool.mod</file>
+      <file>sdocbook-custom.dtd</file>
+      <file>sdocbook.css</file>
+      <file>sdocbook.dtd</file>
+      <file>sdocbookref-custom.dtd</file>
+      <file>sdocbookref.dtd</file>
+      <file>sinclist.mod</file>
+    </dir>
+    <dir dir='1.1CR2' path='xml/simple/1.1CR2' release='1.1CR2' type='xml' module='simple' custom='DocBook XML V4.3'>
+      <file>docbook-simple-1.1CR2.zip</file>
+      <file>sdbcent.mod</file>
+      <file>sdbhier.mod</file>
+      <file>sdbpool.mod</file>
+      <file>sdocbook-custom.dtd</file>
+      <file>sdocbook.css</file>
+      <file>sdocbook.dtd</file>
+      <file>sdocbookref-custom.dtd</file>
+      <file>sdocbookref.dtd</file>
+      <file>sinclist.mod</file>
+    </dir>
+    <dir dir='1.1b1' path='xml/simple/1.1b1' release='1.1b1' type='xml' module='simple' custom='DocBook XML V4.3CR2'>
+      <file>docbook-simple-1.1b1.zip</file>
+      <file>sdbcent.mod</file>
+      <file>sdbhier.mod</file>
+      <file>sdbpool.mod</file>
+      <file>sdocbook-custom.dtd</file>
+      <file>sdocbook.css</file>
+      <file>sdocbook.dtd</file>
+      <file>sdocbookref-custom.dtd</file>
+      <file>sdocbookref.dtd</file>
+      <file>sinclist.mod</file>
+    </dir>
+    <dir dir='1.1b2' path='xml/simple/1.1b2' release='1.1b2' type='xml' module='simple' custom='DocBook XML V4.3CR2'>
+      <file>docbook-simple-1.1b2.zip</file>
+      <file>sdbcent.mod</file>
+      <file>sdbhier.mod</file>
+      <file>sdbpool.mod</file>
+      <file>sdocbook-custom.dtd</file>
+      <file>sdocbook.css</file>
+      <file>sdocbook.dtd</file>
+      <file>sdocbookref-custom.dtd</file>
+      <file>sdocbookref.dtd</file>
+      <file>sinclist.mod</file>
+    </dir>
+    <dir dir='1.1b3' path='xml/simple/1.1b3' release='1.1b3' type='xml' module='simple' custom='DocBook XML V4.3'>
+      <file>docbook-simple-1.1b3.zip</file>
+      <file>sdbcent.mod</file>
+      <file>sdbhier.mod</file>
+      <file>sdbpool.mod</file>
+      <file>sdocbook-custom.dtd</file>
+      <file>sdocbook.css</file>
+      <file>sdocbook.dtd</file>
+      <file>sdocbookref-custom.dtd</file>
+      <file>sdocbookref.dtd</file>
+      <file>sinclist.mod</file>
+    </dir>
+    <dir dir='1.2CR1' path='xml/simple/1.2CR1' release='1.2CR1' type='xml' module='simple' custom='DocBook XML V4.5CR2'>
+      <file>docbook-simple-1.2CR1.zip</file>
+      <file>sdbcent.mod</file>
+      <file>sdbhier.mod</file>
+      <file>sdbpool.mod</file>
+      <file>sdocbook-custom.dtd</file>
+      <file>sdocbook.css</file>
+      <file>sdocbook.dtd</file>
+      <file>sdocbookref-custom.dtd</file>
+      <file>sdocbookref.dtd</file>
+      <file>sinclist.mod</file>
+    </dir>
+    <dir dir='5.1CR1' path='xml/simple/5.1CR1' release='5.1CR1' type='xml' module='simple'>
+      <file>sdocbook.rnc</file>
+      <file>sdocbook.rng</file>
+    </dir>
+    <dir dir='5.1CR2' path='xml/simple/5.1CR2' release='5.1CR2' type='xml' module='simple'>
+      <file>sdocbook.rnc</file>
+      <file>sdocbook.rng</file>
+    </dir>
+    <dir dir='5.1CR3' path='xml/simple/5.1CR3' release='5.1CR3' type='xml' module='simple'>
+      <file>sdocbook.rnc</file>
+      <file>sdocbook.rng</file>
+    </dir>
+    <dir dir='5.1b6-1' path='xml/simple/5.1b6-1'>
+      <file>sdocbook.rnc</file>
+      <file>sdocbook.rng</file>
+    </dir>
+  </dir>
+  <dir dir='slides' path='xml/slides'>
+    <dir dir='5.1CR2' path='xml/slides/5.1CR2' release='5.1CR2' type='xml' module='slides'>
+      <file>slides-full.rnc</file>
+      <file>slides-full.rng</file>
+      <file>slides.rnc</file>
+      <file>slides.rng</file>
+    </dir>
+    <dir dir='5.1CR3' path='xml/slides/5.1CR3' release='5.1CR3' type='xml' module='slides'>
+      <file>slides-full.rnc</file>
+      <file>slides-full.rng</file>
+      <file>slides.rnc</file>
+      <file>slides.rng</file>
+    </dir>
+    <dir dir='5.1b6-1' path='xml/slides/5.1b6-1'>
+      <file>slides-full.rnc</file>
+      <file>slides-full.rng</file>
+      <file>slides.rnc</file>
+      <file>slides.rng</file>
+    </dir>
+  </dir>
+  <dir dir='svg' path='xml/svg'>
+    <dir dir='1.1CR1' path='xml/svg/1.1CR1' release='1.1CR1' type='xml' module='svg'>
+      <file>dbsvg.dtd</file>
+      <file>testsvg.xml</file>
+    </dir>
+    <dir dir='1.1b1' path='xml/svg/1.1b1' release='1.1b1' type='xml' module='svg'>
+      <file>dbsvg.dtd</file>
+      <file>testsvg.xml</file>
+    </dir>
+  </dir>
+  <dir dir='website' path='xml/website'>
+    <dir dir='5.1CR1' path='xml/website/5.1CR1' release='5.1CR1' type='xml' module='website'>
+      <file>website-full.rnc</file>
+      <file>website-full.rng</file>
+      <file>website.rnc</file>
+      <file>website.rng</file>
+    </dir>
+    <dir dir='5.1CR2' path='xml/website/5.1CR2' release='5.1CR2' type='xml' module='website'>
+      <file>website-full.rnc</file>
+      <file>website-full.rng</file>
+      <file>website.rnc</file>
+      <file>website.rng</file>
+    </dir>
+    <dir dir='5.1CR3' path='xml/website/5.1CR3' release='5.1CR3' type='xml' module='website'>
+      <file>website-full.rnc</file>
+      <file>website-full.rng</file>
+      <file>website.rnc</file>
+      <file>website.rng</file>
+    </dir>
+    <dir dir='5.1b6-1' path='xml/website/5.1b6-1'>
+      <file>website-full.rnc</file>
+      <file>website-full.rng</file>
+      <file>website.rnc</file>
+      <file>website.rng</file>
+    </dir>
+  </dir>
+</dir>
+<dir dir='xsd' path='xsd'>
+  <dir dir='4.2' path='xsd/4.2' release='4.2' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook-xsd-4.2.zip</file>
+    <file>docbook.xsd</file>
+  </dir>
+  <dir dir='4.3' path='xsd/4.3' release='4.3' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook-xsd-4.3.zip</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='4.3CR1' path='xsd/4.3CR1' release='4.3CR1' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook-xsd-4.3CR1.zip</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='4.3CR2' path='xsd/4.3CR2' release='4.3CR2' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook-xsd-4.3CR2.zip</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='4.3CR3' path='xsd/4.3CR3' release='4.3CR3' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook-xsd-4.3CR3.zip</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='4.3b3' path='xsd/4.3b3' release='4.3b3' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook-xsd-4.3b3.zip</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='4.3b4' path='xsd/4.3b4' release='4.3b4' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook-xsd-4.3b4.zip</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='4.3b5' path='xsd/4.3b5' release='4.3b5' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook-xsd-4.3b5.zip</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='4.4' path='xsd/4.4' release='4.4' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook-xsd-4.4.zip</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='4.4CR1' path='xsd/4.4CR1' release='4.4CR1' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook-xsd-4.4CR1.zip</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='4.4CR2' path='xsd/4.4CR2' release='4.4CR2' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook-xsd-4.4CR2.zip</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='4.4CR3' path='xsd/4.4CR3' release='4.4CR3' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook-xsd-4.4CR3.zip</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='4.4CR4' path='xsd/4.4CR4' release='4.4CR4' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook-xsd-4.4CR4.zip</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='4.4b1' path='xsd/4.4b1' release='4.4b1' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook-xsd-4.4b1.zip</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='4.4b2' path='xsd/4.4b2' release='4.4b2' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook-xsd-4.4b2.zip</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='4.5' path='xsd/4.5' release='4.5' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='4.5CR1' path='xsd/4.5CR1' release='4.5CR1' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='4.5CR2' path='xsd/4.5CR2' release='4.5CR2' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='4.5CR3' path='xsd/4.5CR3' release='4.5CR3' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='4.5b1' path='xsd/4.5b1' release='4.5b1' type='xsd'>
+    <file>calstblx.xsd</file>
+    <file>dbhierx.xsd</file>
+    <file>dbnotnx.xsd</file>
+    <file>dbpoolx.xsd</file>
+    <file>docbook-xsd-4.5b1.zip</file>
+    <file>docbook.xsd</file>
+    <file>htmltblx.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='5.0b1' path='xsd/5.0b1' release='5.0b1' type='xsd'>
+    <file>docbook-xsd.sch</file>
+    <file>docbook-xsd10.xsd</file>
+    <file>docbook.xsd</file>
+    <file>xlink.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='5.0b2' path='xsd/5.0b2' release='5.0b2' type='xsd'>
+    <file>docbook-xsd.sch</file>
+    <file>docbook-xsd10.xsd</file>
+    <file>docbook.xsd</file>
+    <file>xlink.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='5.1CR3' path='xsd/5.1CR3' release='5.1CR3' type='xsd'>
+    <file>docbook-xsd.sch</file>
+    <file>docbook-xsd10.xsd</file>
+    <file>docbook.xsd</file>
+    <file>xlink.xsd</file>
+    <file>xml.xsd</file>
+  </dir>
+  <dir dir='publishers' path='xsd/publishers'>
+    <dir dir='5.0b1' path='xsd/publishers/5.0b1' release='5.0b1' module='publishers'>
+      <file>dc.xsd</file>
+      <file>dcmitype.xsd</file>
+      <file>dcterms.xsd</file>
+      <file>publishers-xsd.sch</file>
+      <file>publishers-xsd10.xsd</file>
+      <file>publishers.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <dir dir='5.0b2' path='xsd/publishers/5.0b2' release='5.0b2' module='publishers'>
+      <file>dc.xsd</file>
+      <file>dcmitype.xsd</file>
+      <file>dcterms.xsd</file>
+      <file>publishers-xsd.sch</file>
+      <file>publishers-xsd10.xsd</file>
+      <file>publishers.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+  </dir>
+</dir>
+<dir dir='docbook-ng' path='docbook-ng'>
+  <dir dir='absinthe' path='docbook-ng/absinthe'>
+    <file>db4-upgrade.xsl</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+  </dir>
+  <dir dir='bourbon' path='docbook-ng/bourbon'>
+    <file>db4-upgrade.xsl</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+  </dir>
+  <dir dir='cachaca' path='docbook-ng/cachaca'>
+    <file>db4-upgrade.xsl</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+  </dir>
+  <dir dir='drambuie' path='docbook-ng/drambuie'>
+    <file>db4-upgrade.xsl</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+  </dir>
+  <dir dir='eaux-de-vie' path='docbook-ng/eaux-de-vie'>
+    <file>db4-upgrade.xsl</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+  </dir>
+  <dir dir='frangelico' path='docbook-ng/frangelico'>
+    <file>db4-upgrade.xsl</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+  </dir>
+  <dir dir='gin' path='docbook-ng/gin'>
+    <file>db4-upgrade.xsl</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+  </dir>
+  <dir dir='hardcider' path='docbook-ng/hardcider'>
+    <file>db4-upgrade.xsl</file>
+    <file>docbook.dtd</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+  </dir>
+  <dir dir='ipa' path='docbook-ng/ipa'>
+    <file>db4-upgrade.xsl</file>
+    <file>docbook.dtd</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+  </dir>
+  <dir dir='jagermeister' path='docbook-ng/jagermeister'>
+    <file>db4-upgrade.xsl</file>
+    <file>docbook.dtd</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+  </dir>
+  <dir dir='kahlua' path='docbook-ng/kahlua'>
+    <file>db4-upgrade.xsl</file>
+    <file>docbook.dtd</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+  </dir>
+  <dir dir='lillet' path='docbook-ng/lillet'>
+    <file>db4-upgrade.xsl</file>
+    <file>dbforms.dtd</file>
+    <file>dbforms.rnc</file>
+    <file>dbforms.rng</file>
+    <file>docbook.dtd</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+  </dir>
+  <dir dir='mezcal' path='docbook-ng/mezcal'>
+    <file>db4-upgrade.xsl</file>
+    <file>dbforms.dtd</file>
+    <file>dbforms.rnc</file>
+    <file>dbforms.rng</file>
+    <file>docbook.dtd</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+  </dir>
+  <dir dir='pto' path='docbook-ng/pto'>
+    <file>db4-upgrade.xsl</file>
+    <file>dbforms.dtd</file>
+    <file>dbforms.rnc</file>
+    <file>dbforms.rng</file>
+    <file>docbook.dtd</file>
+    <file>docbook.rnc</file>
+    <file>docbook.rng</file>
+    <file>docbookxi.dtd</file>
+    <file>docbookxi.rnc</file>
+    <file>docbookxi.rng</file>
+  </dir>
+  <dir dir='simple' path='docbook-ng/simple'>
+    <dir dir='bourbon' path='docbook-ng/simple/bourbon'>
+      <file>sdocbook.rng</file>
+    </dir>
+    <dir dir='kahlua' path='docbook-ng/simple/kahlua'>
+      <file>sdocbook.dtd</file>
+      <file>sdocbook.rnc</file>
+      <file>sdocbook.rng</file>
+    </dir>
+    <dir dir='lillet' path='docbook-ng/simple/lillet'>
+      <file>sdocbook.dtd</file>
+      <file>sdocbook.rnc</file>
+      <file>sdocbook.rng</file>
+    </dir>
+    <dir dir='pto' path='docbook-ng/simple/pto'>
+      <file>sdocbook.dtd</file>
+      <file>sdocbook.rnc</file>
+      <file>sdocbook.rng</file>
+    </dir>
+  </dir>
+  <dir dir='slides' path='docbook-ng/slides'>
+    <dir dir='bourbon' path='docbook-ng/slides/bourbon'>
+      <file>slides-ng.rng</file>
+    </dir>
+    <dir dir='lillet' path='docbook-ng/slides/lillet'>
+      <file>slides-full.dtd</file>
+      <file>slides-full.rnc</file>
+      <file>slides-full.rng</file>
+      <file>slides.dtd</file>
+      <file>slides.rnc</file>
+      <file>slides.rng</file>
+    </dir>
+    <dir dir='pto' path='docbook-ng/slides/pto'>
+      <file>slides-full.dtd</file>
+      <file>slides-full.rnc</file>
+      <file>slides-full.rng</file>
+      <file>slides.dtd</file>
+      <file>slides.rnc</file>
+      <file>slides.rng</file>
+    </dir>
+  </dir>
+  <dir dir='website' path='docbook-ng/website'>
+    <dir dir='bourbon' path='docbook-ng/website/bourbon'>
+      <file>website-ng.rng</file>
+    </dir>
+    <dir dir='lillet' path='docbook-ng/website/lillet'>
+      <file>website-full.dtd</file>
+      <file>website-full.rnc</file>
+      <file>website-full.rng</file>
+      <file>website.dtd</file>
+      <file>website.rnc</file>
+      <file>website.rng</file>
+    </dir>
+    <dir dir='pto' path='docbook-ng/website/pto'>
+      <file>website-full.dtd</file>
+      <file>website-full.rnc</file>
+      <file>website-full.rng</file>
+      <file>website.dtd</file>
+      <file>website.rnc</file>
+      <file>website.rng</file>
+    </dir>
+  </dir>
+</dir>
+<dir dir='release' path='release'>
+</dir>
+</releases>

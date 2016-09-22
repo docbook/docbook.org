@@ -1,0 +1,217 @@
+DocBook Technical Committee Meeting Minutes: 15 September 2004
+=============================================================
+
+The DocBook Technical Committee met on Wednesday, 15 September 2004 at
+05:00p EDT (02:00p PDT, 21:00GMT, 22:00BST, 23:00CEST, 06:00JST+,
+02:30a India+).
+
+Agenda
+
+1. Roll call
+
+Present: Steven Cogorno, Gary Cornelius, Paul Grosso,
+Dick Hamilton, Scott Hudson, Mark Johnson,
+Jirka Kosek, Larry Rowland, Mike Smith, Bob Stayton, Norman Walsh
+
+Regrets: none
+
+Absent: Adam Di Carlo, Nancy Harrison
+
+2. Accepted the minutes[1] of the previous meeting
+
+3. Next meeting: 20 October 2004.
+
+No regrets.
+
+4. Review of the agenda.
+
+Added committee charter as item 5g.
+Added review of 4.4 as item 13a.
+
+
+5. Review of open action items
+
+  a. Mike to provide a better proposal for choicelist markup.
+     CONTINUE
+
+  b. Bob to identify elements in DocBook that correspond to
+     valid locations of HTML forms in HTML output.
+     DONE
+
+  d. Norm to generate web pages for 4.2, 4.3, and 4.4x.
+     CONTINUE
+
+  e. Norm to write a draft Committee charter.
+     DONE
+
+  f. Gary to investigate ISO 9000 regarding guidelines for
+     accepting or rejecting requests.
+     DONE
+
+5g. Committee charter
+
+Norm circulated a draft [2], and it was commented on by
+Karl Best of OASIS [3].   Some of the comments may
+not apply to a committee that mostly does maintenance
+of an existing standard.  Norm will ask Karl for
+clarification.  We also need to set specific goals, and Norm
+suggested that DocBook 4.4 be done this year, and
+DocBook 5.0 be done next year.
+
+Based on Karl's comments, Norm
+will create a second draft for the next meeting.
+
+ACTION: Norm to write second draft charter.
+
+6. Status of DTD version 4.4 beta
+
+Norm released DocBook 4.4b2 on 26 August. [4]
+He suggested everyone test drive it so that we
+can designate it a CR1 release at the next meeting.
+
+7. Bug in Simplified DocBook 1.1 CR1 (Mark)
+
+Norm identified two bugs: one in subscript and superscript,
+and one in system ids pointing to Norm's hard drive.
+Suggestions for fixes were accepted.
+
+ACTION: Norm to release CR2.
+
+
+8. "Committee Draft" vs. "OASIS Standard".
+
+Bob related the story of one vendor who was holding off
+on implementing DocBook 4.3 because it was labeled as
+a "Committee Draft", which implies that it is not finished.
+Norm reported that OASIS removed the designation "Committee Specification"
+and so only "OASIS Standard" is available.  The latter requires
+more work to receive because the full OASIS membership must vote.
+Norm thinks the Committee Specification designation may come
+back.
+
+ACTION: Norm to write to OASIS requesting restoration of Committee
+Specification
+or equivalent.  He should cite Bob's vendor example.
+
+
+9. Annotation proposal (Mike).  [5] [6]
+
+Norm implemented an annotation scheme based on Mike's proposal. [7]
+Discussion of two content models for annotation: simple and
+complex. simple is basically text and would be used in
+output attribute values and tool tips).  Complex could include
+paras, lists, tables, etc. and would be presented in a separate
+area.  Both are needed for different circumstances
+Larry suggested two elements with different content models:
+annotation and shortannotation or simpleannotation.
+Steve suggested a single annotation element
+with child elements determining simple or complex.
+No final decision yet.  Decided to post Norm's page and
+start a discussion on the list.
+
+ACTION: Norm to post his annotations page to the mailing list.
+
+10. Accessibility.
+
+Discussed Larry's list [8] of potential improvements
+for accessibility.  Many can be done with an annotation
+mechanism, so they will be considered together.  Current
+use of attributes has limitations: some browsers only
+show first 100 characters of the title attribute text.
+One additional area is making tables more accessible.
+Norm will forward info from Larry about tables.
+
+ACTION: Norm to forward Larry's mail about table accessibility.
+
+ACTION: Norm to contact Mark Pilgrim, author of
+Dive Into Accessibility [9], about accessibility issues.
+
+
+11. Discuss guidelines for accepting or rejecting requests.
+
+Gary reported on his review of ISO9000, which recommended
+that we fully document our process and results.  He suggested
+creating a flow diagram would help.  We currently use the
+SourceForge RFE mechanism to track and document the requests.
+We could be more careful in adding comments as issues are
+resolved.  We will consider this item again at the
+next meeting.
+
+
+12. html:form should be available in more places
+   than in %divcomponent.mix;  [10] [11]
+
+Bob sent a proposal to the list [12]
+suggesting additional places where the html:form element
+could be added.  Norm proposed we adopt the proposal.
+The proposal was accepted.
+
+
+13. Review of Requests for Enhancement
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;;
+      group_id=21935&atid=384107&aid=XXXX
+
+      1014806 Add protocol to systemitem class list
+
+Norm proposed that we accept this.
+The committee approved this request.
+
+      1025286 Support xml:space
+
+Norm proposed that we accept this.
+The committee approved this request.
+
+
+13a.  Review DocBook 4.4 content.
+
+Based on the actions at this meeting, the committee decided
+to add the following to 4.4:
+
+- Add 'protocol' to systemitem class list.
+- Add optional xml:space="preserved" attribute to verbatim elements.
+- Add html:forms hook to 9 more parameter entities.
+
+ACTION: Norm to produce DocBook 4.4CR1 this week.
+
+
+Meeting adjourned at 6:25pm EDT.
+***********************************************************
+
+     The following RFEs are awaiting action items
+
+      973446 Replace Footnote with Annotation
+      413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+      431411 RFE 70: add generic linking capability (Norm)
+      522552 Add title attribute to <ulink> element (Mike, annotations)
+      565637 Associate non-inline image with link (Norm, generic linking)
+      574880 Add annotation element (Mike)
+      623524 (Re)Consider "choicelist" markup (Mike)
+
+     The following RFEs are identified as V5.0 or later
+
+      974285 Check floatstyle/float attributes
+      958393 remove default class value from productname
+      531851 Remove inline person name elements
+      532088 Remove RevHistory from qandaentry
+- ---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200408/msg00012.html
+[2] http://lists.oasis-open.org/archives/docbook-tc/200409/msg00009.html
+[3] http://lists.oasis-open.org/archives/docbook-tc/200409/msg00010.html
+[4] http://lists.oasis-open.org/archives/docbook/200408/msg00029.html
+[5] http://lists.oasis-open.org/archives/docbook-tc/200406/msg00003.html
+[6] http://lists.oasis-open.org/archives/docbook-tc/200406/msg00005.html
+[7] http://norman.walsh.name/2004/09/10/annotations
+[8] http://lists.oasis-open.org/archives/docbook-tc/200408/msg00002.html
+[9] http://diveintoaccessibility.org/
+[10] http://lists.oasis-open.org/archives/docbook-apps/200406/msg00081.html
+[11] http://lists.oasis-open.org/archives/docbook/200404/msg00032.html
+[12]  http://lists.oasis-open.org/archives/docbook-tc/200409/msg00011.html
+
+Bob Stayton
+Sagehill Enterprises
+DocBook Consulting
+bobs@sagehill.net

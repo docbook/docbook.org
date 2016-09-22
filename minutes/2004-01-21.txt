@@ -1,0 +1,195 @@
+| Agenda
+|
+| 1. Roll call
+
+Gary Cornelius
+Paul Grosso
+Dick Hamilton
+Scott Hudson
+Mark Johnson
+Mike Smith
+Norman Walsh, chair and scribe
+
+Regrets:
+
+None
+
+Absent:
+
+Jeff Beal
+Steve Cogorno
+Nancy Harrison
+Larry Rowland
+Bob Stayton
+
+| 2. Accepting the minutes[1] of the previous (November) meeting
+|      Note: there was no quorum for the December meeting.
+
+Accepted.
+
+| 3. Next meeting: 18 Feb 2004.
+
+No regrets.
+
+| 4. Review of the agenda (set aside more time for RFEs?)
+
+See 5a and 7b.
+
+| 5. Review of open action items
+|
+|     a. Norm to follow-up on RFE 562343: <packagename> element
+
+ACTION: Transferred to Mark.
+
+|     b. Norm to write better documentation for option/optional
+Continued.
+|     c. Norm to describe how the prototype works and how it was constructed.
+
+Norm described the system. It's much simpler now.
+
+In CVS under sourceforge.net/projects/docbook/ it's in docbook/docbook/relax-ng
+
+I've described some of the choices I've made on http://norman.walsh.name/
+
+Completed.
+
+|     d. Mike to provide a better proposal for choicelist markup.
+Continued.
+|     e. Mike to reconsider the annotation problem and post his thoughts.
+Continued.
+|     f  Norm to post his stylesheet that attempts to convert existing DocBook
+|        documents to the "V5" style markup.
+
+It's in the CVS repository. Also in CVS is the set of tests (from the DocBook
+tests collection). The tests in tests/skip are the ones that I don't believe
+can be converted automatically.
+
+|     g. Dick to propose more general solution for caption in mediaobject.
+Continued.
+|     h. Steve to propose generalizing programlisting to the list.
+Continued.
+|     i. Bob to send out action item reminder mail.
+|         COMPLETED.
+|     j. Norm to produce simplified 4.3CR1 DTD.
+|         COMPLETED.
+
+5a. Complain about Kavi
+
+By unanimous consent, we do wish to lodge some sort of complaint.
+
+- The documents in the system, as exposed to non-members is really useless
+- The fact you cant link between documents is really bad
+  - It's impossible to publish schemas that need such
+- System identifiers for documents as they are updated; the URLs are not
+  practical for publication as normative references to material
+- It's impossible to predict what the URIs are going to be
+- MIME email issues
+- No internal navigation for TCs that want to maintain more sophisticated pages
+- This makes the OASIS site less useful. 
+- It's hard to find things
+- People are moving documents off the TC site in order to address these issues.
+
+ACTION: Norm to draft a message for TC approval
+
+The TC will decide by email vote to send the message officially.
+
+Accepted.
+
+| 6. biblioref proposal [1]
+|    (formerly Improved citation support, RFE 810932).
+
+The replies to our previous message never made it to the docbook-tc list.
+
+ACTION: Mike to forward the responses to our previous message to our list.
+
+ACTION: Norm to make sure this is on our agenda for next month.
+
+Apologies to the biblioref proposers for this delay.
+
+| 7. DocBook V4.3 CR1
+
+Norm: I published DocBook V4.3CR3 today.
+
+Scott: Did you include the changes to the attributes on caption?
+
+Norm: Drat. No.
+
+ACTION: Norm will publish CR4 with the required changes to caption.
+
+ACTION: Norm to republish Simplified 4.3CR4.
+
+7b. Additions to Simplified
+
+Norm: I have reservations about making Simplified bigger.
+
+Mark: I agree.
+
+Scott: Anchor seems like the critical one, the others I can add in a
+       customization layer.
+
+Norm: I think I could see adding anchor, if that was enough.
+
+Scott: I think that would be acceptable.
+
+Proposal: Add anchor to Simplified DocBook.
+
+Accepted.
+
+ACTION: Norm to make it so.
+
+| 8. DocBook V5.0 (RELAX NG)
+
+Norm gave a report on his design experiments. The summary: it feels
+like we're going in the right direction.
+
+ADJOURNED
+
+| 9. Reconsider the policy for backwards incompatible changes.
+|
+| 10.  Revisit addition of 'language' attribute
+| to programlisting and synopsis (use MIME?).
+| See [2] for the original RFE 798616.
+| See [3] for the minutes of the decision.
+| See [4] and [5] for further discussion about it.
+|
+| 11. Review of Requests for Enhancement
+|
+|     To browse a specific RFE, enter the URL (on one line):
+|
+|       http://sourceforge.net/tracker/index.php?func=detail&;;
+|       group_id=21935&atid=384107&aid=XXXX
+|
+|       543064 JavaObject tag
+|       675024 form, script, applet support
+|       698026 cannot embed <superscript> within <guibutton>
+|       702185 add procedure as child of para
+|       711815 Tagging for subtler breaks or "pauses" within a chapter
+|       742373 Splitting Segmented List
+|       752632 Color control of CALS table element
+|       798616 syntax="" or notation="" needed for code listings
+|       828720 'spacing' attr. for 'variablelist'
+|
+|      The following RFEs are awaiting action items
+|
+|       413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+|       431411 RFE 70: add generic linking capability (Norm)
+|       522552 Add title attribute to <ulink> element (Mike, annotations)
+|       541444 caption in mediaobjectco (Dick)
+|       562343 <packagename> element (Norm)
+|       565637 Associate non-inline image with link (Norm, generic linking)
+|       574880 Add annotation element (Mike)
+|       613293 Generalize programlisting (Steve)
+|       623524 (Re)Consider "choicelist" markup (Mike)
+|
+|      The following RFEs are identified as V6.0 or later
+|
+|       531851 Remove inline person name elements
+|       532088 Remove RevHistory from qandaentry
+| - ---
+|
+| [1] http://lists.oasis-open.org/archives/docbook-tc/200311/msg00014.html
+| [2]
+| http://sourceforge.net/tracker/index.php?func=detail&aid=798616&group_id=21935&atid=384107
+| [3] http://lists.oasis-open.org/archives/docbook/200309/msg00037.html
+| [4] http://lists.oasis-open.org/archives/docbook/200401/msg00011.html
+| [5] http://lists.oasis-open.org/archives/docbook/200401/msg00019.html

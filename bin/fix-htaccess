@@ -1,0 +1,140 @@
+#!/usr/bin/perl -- # -*- Perl -*-
+
+my $root = "/home/ndw/docbook.org/htdocs";
+
+htaccessUpdate(".");
+
+open (FIND, "find . -type d -print |");
+while (<FIND>) {
+    chop;
+
+    next if /^\.$/;
+    next if /\/\.svn/;
+    $_ = substr($_, 2);
+
+    htaccessUpdate($_);
+}
+close (FIND);
+
+exit 0;
+
+sub htaccessUpdate {
+    my $dir = shift;
+    my $prefix = "$dir/";
+    $prefix = "" if $dir eq '.';
+
+    my $file = "${prefix}.htaccess";
+    my @htaccess = ();
+    my $ok = undef;
+
+    my %map = ();
+    $ok = open (F, $file);
+    if (ok) {
+	while (<F>) {
+	    chop;
+	    next if /^RewriteEngine/;
+	    next if /^RewriteRule/;
+	    next if /^\s*$/;
+	    push (@htaccess, $_);
+	}
+	close (F);
+    }
+
+    my %files = ();
+    opendir (DIR, $dir);
+    while (my $name = readdir(DIR)) {
+	next if ! -f "$dir/$name";
+	next if $name !~ /(\S+)\.([^\.]+)$/;
+	my $basename = $1;
+	my $ext = $2;
+
+	# if the bare name exists, it's always ok to serve that
+	next if -f "$dir/$basename";
+
+	if ($ext eq 'html') {
+	    $files{$basename} = $name;
+	}
+    }
+    closedir (DIR);
+
+    my @rewrite = ();
+
+    # All mapped basenames count...
+    foreach my $basename (keys %map) {
+	$files{$basename} = "" if !exists($files{$basename});
+    }
+
+    foreach my $basename ( sort { &baseSort } keys % files ) {
+	my $rule1 = sprintf("%s\$ %s/%s%s [L]",
+			    $basename, $root, $prefix, $files{$basename});
+	my $rule2 = "";
+	my $rule3 = "";
+	if (exists($map{$basename})) {
+	    $rule1 = sprintf("%s %s [L]", $basename, $map{$basename});
+	    $rule3 = sprintf("%s.html %s [L]", $basename, $map{$basename});
+	}
+
+	push(@rewrite, "RewriteRule ^$rule1");
+	push(@rewrite, "RewriteRule ^$rule2") if $rule2 ne '';
+	push(@rewrite, "RewriteRule ^$rule3") if $rule3 ne '';
+    }
+
+    if (@rewrite) {
+	#print STDERR "rewrite for $dir\n";
+
+	push (@htaccess, "RewriteEngine on");
+	push (@htaccess, @rewrite);
+
+	# don't rewrite the file if it hasn't changed (otherwise
+	# we have to try rsyncing them all)
+	my $changed = 0;
+	my @oldhtaccess = ();
+	open (F, "${prefix}.htaccess");
+	while (<F>) {
+	    chop;
+	    push (@oldhtaccess, $_);
+	}
+	close (F);
+
+	#print STDERR "X: ", $#htaccess, ", ", $#oldhtaccess, "\n";
+
+	if ($#htaccess == $#oldhtaccess) {
+	    for (my $line = 0; !$changed && $line <= $#oldhtaccess; $line++) {
+		$changed = 1 if $htaccess[$line] ne $oldhtaccess[$line];
+	    }
+	} else {
+	    $changed = 1;
+	}
+
+	#print STDERR "changed? ", $changed, "\n";
+
+	#if ($changed) {
+	#    for (my $line = 0; $line <= $#oldhtaccess; $line++) {
+	#	print "o: $line: ", $oldhtaccess[$line], "\n";
+	#    }
+	#    print "\n";
+	#    for (my $line = 0; $line <= $#htaccess; $line++) {
+	#	print "n: $line: ", $htaccess[$line], "\n";
+	#    }
+	#}
+
+	#exit if $changed;
+
+	if ($changed) {
+	    open (F, ">${prefix}.htaccess");
+	    foreach $_ (@htaccess) {
+		print F "$_\n";
+	    }
+	    close (F);
+	}
+    }
+}
+
+sub baseSort {
+    if (length($b) == length($a)) {
+	return $a cmp $b;
+    } else {
+	return length($b) <=> length($a);
+    }
+}
+

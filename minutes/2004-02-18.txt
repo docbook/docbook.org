@@ -1,0 +1,206 @@
+DocBook Technical Committee Meeting Minutes: 18 February 2004
+=============================================================
+
+The DocBook Technical Committee met Wednesday, 18 Feb 2004 at
+05:00p EST (02:00p PST, 22:00GMT, 22:00BST, 23:00CEST, 07:00JST+,
+03:30a India+) for 90 minutes.
+
+Agenda
+
+1. Roll call
+
+Paul Grosso, Mark Johnson, Dick Hamilton, Larry Rowland,
+Michael Smith, Robert Stayton, Steve Cogorno, Scott Hudson,
+Norman Walsh.
+
+2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+3. Next meeting: 17 March 2004.
+
+No regrets.
+
+4. Review of the agenda.
+
+Added items 6b, 6c, and 6d.
+
+5. Review of open action items
+
+    a. Mark to follow-up on RFE 562343: <packagename> element
+       COMPLETED.
+    b. Norm to write better documentation for option/optional
+       WITHDRAWN.
+    c. Mike to provide a better proposal for choicelist markup.
+       CONTINUED.
+    d. Mike to reconsider the annotation problem and post his thoughts.
+       CONTINUED.
+    e. Dick to propose more general solution for caption in mediaobject.
+       COMPLETED.
+    f. Steve to propose generalizing programlisting to the list.
+       COMPLETED. Add to next month's agenda.
+    g. Norm to draft a letter to OASIS about Kavi.
+       COMPLETED.
+    h. Norm to add <anchor> to simplified DocBook.
+       CONTINUED.
+
+6. Norm's letter about Kavi. [2]
+
+Norm distributed a draft letter about the Kavi
+setup used on the OASIS website.  We discussed
+several comments that were received and made
+some changes to the draft.  By a unanimous
+roll call vote, the committee decided to send the letter
+with the changes to the OASIS chairs mailing list and
+Karl Best (VP of OASIS), with cc to Patrick Gannon (CEO
+of OASIS) and the docbook-tc mailing list.
+
+ACTION: Norm to send the letter.
+
+Note: Karl Best recently posted a request for
+comments on a draft functional requirements
+for a document management system for OASIS
+committees. [10]
+
+6b.  Proposal for a new packagename element
+
+Mark summarized the original proposal RFE 562343 [11]
+and email discussion.  Discussion centered around
+a possible need to distinguish between object-oriented
+packages and software distribution packages.
+One suggestion was packagename for the oo usage
+and package for software distribution.
+Norm expressed concern that both would need to
+be inlines, and that two such similar names would
+be confusing.
+Larry suggested semantics as a bundle of functionality
+that is accessed through a name, which could cover
+both uses.  Bob suggested using package
+instead of packagename.
+
+Proposal:  add a new package element to
+%tech.char.class; as an inline, and as an optional
+child of ooclass, ooexception, and oointerface.
+Its content model would be %small.cptr.char.mix;,
+and it would have the common attributes.
+
+Accepted.
+
+6c.  Proposal to add caption to mediaobjectco.
+
+Dick summarized the original proposal RFE 541444 [12]
+to add caption to mediaobjectco since it was available
+in mediaobject.  Dick questioned the need for
+having a separate mediaobjectco element.  Norm thought
+it was a progression from graphic and graphicco.
+The committee determined that it was not needed
+if imageobjectco were added to mediaobject.  Then
+one could use caption with imageobjectco.
+
+Proposal:  add imageobjectco to mediaobject.
+
+Approved.
+
+Proposal:  remove mediaobjectco in some future release.
+
+Approved.
+
+ACTION: Dick to examine the use of alt, possibly as
+part of the annotation discussion.
+
+6d.  Add remap to Simplified DocBook.
+
+Proposal:  add a remap attribute to the set
+of common attributes in Simplified DocBook.
+
+Approved.
+
+ACTION MODIFICATION: Norm to add remap as well as
+anchor to Simplified DocBook.
+
+
+7. biblioref proposal [3]
+   (formerly Improved citation support, RFE 810932).
+   Additional replies for consideration [4] [5]
+
+No time for this item, will place it early in the
+agenda next month.
+
+8. DocBook V4.3 CR3
+
+No negative feedback for a month.
+Bob was uncertain if HTML tables had been
+sufficiently tested.  Postponed making
+it a committee standard until next meeting.
+
+ACTION:  Bob to test HTML tables in 4.3.
+
+9. DocBook V5.0 (RELAX NG)
+
+Norm reported progress.  He also said that the
+DTD for version 5 derived from the Relax NG
+Schema would probably not use parameter entities,
+which means it would not be as easily customized.
+
+Meeting adjourned.
+**********************************
+
+10. Reconsider the policy for backwards incompatible changes.
+
+11.  Revisit addition of 'language' attribute
+to programlisting and synopsis (use MIME?).
+See [6] for the original RFE 798616.
+See [7] for the minutes of the decision.
+See [8] and [9] for further discussion about it.
+
+12. Review of Requests for Enhancement
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;;
+      group_id=21935&atid=384107&aid=XXXX
+
+      543064 JavaObject tag
+      675024 form, script, applet support
+      698026 cannot embed <superscript> within <guibutton>
+      702185 add procedure as child of para
+      711815 Tagging for subtler breaks or "pauses" within a chapter
+      742373 Splitting Segmented List
+      752632 Color control of CALS table element
+      798616 syntax="" or notation="" needed for code listings
+      828720 'spacing' attr. for 'variablelist'
+      882791 Allow 'procedure' within 'para'
+
+
+     The following RFEs are awaiting action items
+
+      413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+      431411 RFE 70: add generic linking capability (Norm)
+      522552 Add title attribute to <ulink> element (Mike, annotations)
+      541444 caption in mediaobjectco (Dick)
+      562343 <packagename> element (Mark)
+      565637 Associate non-inline image with link (Norm, generic linking)
+      574880 Add annotation element (Mike)
+      613293 Generalize programlisting (Steve)
+      623524 (Re)Consider "choicelist" markup (Mike)
+
+     The following RFEs are identified as V6.0 or later
+
+      531851 Remove inline person name elements
+      532088 Remove RevHistory from qandaentry
+
+---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200401/msg00010.html
+[2] http://lists.oasis-open.org/archives/docbook-tc/200402/msg00000.html
+[3] http://lists.oasis-open.org/archives/docbook-tc/200311/msg00014.html
+[4] http://lists.oasis-open.org/archives/docbook-tc/200401/msg00007.html
+[5] http://lists.oasis-open.org/archives/docbook-tc/200401/msg00008.html
+[6]
+http://sourceforge.net/tracker/index.php?func=detail&aid=798616&group_id=21935&atid=384107
+[7] http://lists.oasis-open.org/archives/docbook/200309/msg00037.html
+[8] http://lists.oasis-open.org/archives/docbook/200401/msg00011.html
+[9] http://lists.oasis-open.org/archives/docbook/200401/msg00019.html
+[10] http://lists.oasis-open.org/archives/chairs/200402/msg00007.html
+[11] http://sourceforge.net/tracker/index.php?func=detail&aid=562343&group_id=21935&atid=384107
+[12] http://sourceforge.net/tracker/index.php?func=detail&aid=541444&group_id=21935&atid=384107

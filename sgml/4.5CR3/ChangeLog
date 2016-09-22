@@ -1,0 +1,270 @@
+2006-06-02  nwalsh
+
+	* catalog.xml, docbook.cat, docbook.dcl, docbook.dtd: Changed
+	  copyright dates and version numbers
+
+2006-03-07  nwalsh
+
+	* catalog.xml, docbook.cat, docbook.dcl, docbook.dtd,
+	  trunk/docbook/xml/calstblx.dtd, trunk/docbook/xml/catalog.xml,
+	  trunk/docbook/xml/dbcentx.mod, trunk/docbook/xml/dbgenent.mod,
+	  trunk/docbook/xml/dbhierx.mod, trunk/docbook/xml/dbnotnx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbook.cat,
+	  trunk/docbook/xml/docbookx.dtd, trunk/docbook/xml/freshmeat.xsl,
+	  trunk/docbook/xml/htmltblx.mod: Change version numbers to 4.5CR2
+
+2005-06-29  nwalsh
+
+	* docbook.dtd, trunk/docbook/xml/docbookx.dtd: DocBook V4.5CR1
+	  Released
+	* catalog.xml, docbook.cat, docbook.dcl,
+	  trunk/docbook/xml/calstblx.dtd, trunk/docbook/xml/catalog.xml,
+	  trunk/docbook/xml/dbcentx.mod, trunk/docbook/xml/dbgenent.mod,
+	  trunk/docbook/xml/dbhierx.mod, trunk/docbook/xml/dbnotnx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbook.cat,
+	  trunk/docbook/xml/htmltblx.mod: Updated version number
+
+2005-05-05  nwalsh
+
+	* docbook.dtd, trunk/docbook/xml/docbookx.dtd: DocBook V4.5b1
+	  Released
+	* catalog.xml, docbook.cat, docbook.dcl,
+	  trunk/docbook/xml/calstblx.dtd, trunk/docbook/xml/catalog.xml,
+	  trunk/docbook/xml/dbcentx.mod, trunk/docbook/xml/dbgenent.mod,
+	  trunk/docbook/xml/dbhierx.mod, trunk/docbook/xml/dbnotnx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbook.cat,
+	  trunk/docbook/xml/htmltblx.mod: Updated version number
+
+2005-01-27  nwalsh
+
+	* docbook.dtd, trunk/docbook/xml/docbookx.dtd: DocBook V4.4
+	  Released
+	* catalog.xml, docbook.cat, docbook.dcl,
+	  trunk/docbook/xml/calstblx.dtd, trunk/docbook/xml/catalog.xml,
+	  trunk/docbook/xml/dbcentx.mod, trunk/docbook/xml/dbgenent.mod,
+	  trunk/docbook/xml/dbhierx.mod, trunk/docbook/xml/dbnotnx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbook.cat,
+	  trunk/docbook/xml/htmltblx.mod: Fix version information
+
+2004-12-22  nwalsh
+
+	* docbook.dtd: DocBook V4.4CR4 released
+	* catalog.xml, docbook.cat, docbook.dcl,
+	  trunk/docbook/xml/calstblx.dtd, trunk/docbook/xml/catalog.xml,
+	  trunk/docbook/xml/dbcentx.mod, trunk/docbook/xml/dbgenent.mod,
+	  trunk/docbook/xml/dbhierx.mod, trunk/docbook/xml/dbnotnx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbook.cat,
+	  trunk/docbook/xml/htmltblx.mod: Updated version number
+
+2004-12-17  nwalsh
+
+	* docbook.dtd: DocBook V4.4CR3 released
+	* catalog.xml, docbook.cat, docbook.dcl,
+	  trunk/docbook/xml/calstblx.dtd, trunk/docbook/xml/catalog.xml,
+	  trunk/docbook/xml/dbcentx.mod, trunk/docbook/xml/dbgenent.mod,
+	  trunk/docbook/xml/dbhierx.mod, trunk/docbook/xml/dbnotnx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbook.cat,
+	  trunk/docbook/xml/htmltblx.mod: Updated to 4.4CR3
+
+2004-10-21  nwalsh
+
+	* docbook.dtd, trunk/docbook/xml/docbookx.dtd: DocBook V4.4CR2
+	  Released
+	* catalog.xml, docbook.cat, docbook.dcl,
+	  trunk/docbook/xml/calstblx.dtd, trunk/docbook/xml/catalog.xml,
+	  trunk/docbook/xml/dbcentx.mod, trunk/docbook/xml/dbgenent.mod,
+	  trunk/docbook/xml/dbhierx.mod, trunk/docbook/xml/dbnotnx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbook.cat,
+	  trunk/docbook/xml/htmltblx.mod: Updated version number to 4.4CR2
+
+2004-09-16  nwalsh
+
+	* docbook.dtd, trunk/docbook/xml/docbookx.dtd: DocBook V4.4CR1
+	  released
+	* catalog.xml, docbook.cat, docbook.dcl,
+	  trunk/docbook/xml/calstblx.dtd, trunk/docbook/xml/catalog.xml,
+	  trunk/docbook/xml/dbcentx.mod, trunk/docbook/xml/dbgenent.mod,
+	  trunk/docbook/xml/dbhierx.mod, trunk/docbook/xml/dbnotnx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbook.cat,
+	  trunk/docbook/xml/htmltblx.mod: Updated version number
+
+2004-08-26  nwalsh
+
+	* catalog.xml, docbook.cat, docbook.dcl, docbook.dtd: Updated
+	  version number
+	* catalog.xml: Added docbookx to the catalog
+
+2004-06-09  nwalsh
+
+	* docbook.dtd: DocBook V4.4b1 released.
+	* catalog.xml, docbook.cat, docbook.dcl: Updated version number
+	* docbook.dtd, trunk/docbook/xml/dbcentx.mod,
+	  trunk/docbook/xml/dbgenent.mod, trunk/docbook/xml/dbhierx.mod,
+	  trunk/docbook/xml/dbnotnx.mod, trunk/docbook/xml/dbpoolx.mod,
+	  trunk/docbook/xml/htmltblx.mod: Updated copyright years
+
+2004-03-31  nwalsh
+
+	* docbook.dtd, trunk/docbook/spec/docbook.xml: DocBook V4.3
+	  released
+	* catalog.xml, docbook.cat, docbook.dcl: Updated version number
+
+2004-01-21  nwalsh
+
+	* catalog.xml, docbook.cat, docbook.dcl, docbook.dtd: Changed
+	  version number to V4.3CR3
+
+2003-12-21  nwalsh
+
+	* docbook.dtd, trunk/docbook/xml/docbookx.dtd: DocBook V4.3CR2
+	  released
+	* catalog.xml, docbook.cat, docbook.dcl,
+	  trunk/docbook/xml/calstblx.dtd, trunk/docbook/xml/catalog.xml,
+	  trunk/docbook/xml/dbcentx.mod, trunk/docbook/xml/dbgenent.mod,
+	  trunk/docbook/xml/dbhierx.mod, trunk/docbook/xml/dbnotnx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbook.cat,
+	  trunk/docbook/xml/htmltblx.mod: Updated version numbers
+
+2003-12-02  nwalsh
+
+	* docbook.dtd, trunk/docbook/xml/docbookx.dtd: Released 4.3CR1
+	* catalog.xml, docbook.cat, docbook.dcl,
+	  trunk/docbook/xml/calstblx.dtd, trunk/docbook/xml/catalog.xml,
+	  trunk/docbook/xml/dbcentx.mod, trunk/docbook/xml/dbgenent.mod,
+	  trunk/docbook/xml/dbhierx.mod, trunk/docbook/xml/dbnotnx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbook.cat,
+	  trunk/docbook/xml/htmltblx.mod: Updated version number
+
+2003-10-28  nwalsh
+
+	* catalog.xml, docbook.cat, docbook.dcl, docbook.dtd,
+	  trunk/docbook/xml/calstblx.dtd, trunk/docbook/xml/catalog.xml,
+	  trunk/docbook/xml/dbcentx.mod, trunk/docbook/xml/dbgenent.mod,
+	  trunk/docbook/xml/dbhierx.mod, trunk/docbook/xml/dbnotnx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbook.cat,
+	  trunk/docbook/xml/docbookx.dtd, trunk/docbook/xml/htmltblx.mod:
+	  Released 4.3b5
+
+2003-09-25  nwalsh
+
+	* catalog.xml, docbook.cat, docbook.dcl, docbook.dtd,
+	  trunk/docbook/xml/calstblx.dtd, trunk/docbook/xml/catalog.xml,
+	  trunk/docbook/xml/dbcentx.mod, trunk/docbook/xml/dbgenent.mod,
+	  trunk/docbook/xml/dbhierx.mod, trunk/docbook/xml/dbnotnx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbook.cat,
+	  trunk/docbook/xml/docbookx.dtd, trunk/docbook/xml/htmltblx.mod:
+	  Changed V4.2b2 to V4.2b3
+
+2003-08-15  nwalsh
+
+	* catalog.xml, docbook.cat, docbook.dcl, docbook.dtd,
+	  trunk/docbook/xml/calstblx.dtd, trunk/docbook/xml/catalog.xml,
+	  trunk/docbook/xml/dbcentx.mod, trunk/docbook/xml/dbgenent.mod,
+	  trunk/docbook/xml/dbhierx.mod, trunk/docbook/xml/dbnotnx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbook.cat,
+	  trunk/docbook/xml/docbookx.dtd, trunk/docbook/xml/htmltblx.mod:
+	  Changed 4.2 to 4.3b2
+
+2002-07-17  nwalsh
+
+	* catalog.xml, docbook.cat, docbook.dcl, docbook.dtd: DocBook V4.2
+	  released
+
+2002-05-28  nwalsh
+
+	* catalog.xml, docbook.cat, docbook.dcl, docbook.dtd: Updated
+	  comments to reflect CR3
+
+2002-03-19  nwalsh
+
+	* docbook.dtd, trunk/docbook/xml/docbookx.dtd: DocBook V4.2
+	  Candidate Release 1 released
+	* catalog.xml, docbook.cat, docbook.dcl,
+	  trunk/docbook/xml/calstblx.dtd, trunk/docbook/xml/dbcentx.mod,
+	  trunk/docbook/xml/dbgenent.mod, trunk/docbook/xml/dbhierx.mod,
+	  trunk/docbook/xml/dbnotnx.mod, trunk/docbook/xml/dbpoolx.mod:
+	  Prepare for CR1
+
+2001-11-20  nwalsh
+
+	* catalog.xml, docbook.cat, docbook.dcl, docbook.dtd,
+	  trunk/docbook/xml/calstblx.dtd, trunk/docbook/xml/catalog.xml,
+	  trunk/docbook/xml/dbcentx.mod, trunk/docbook/xml/dbgenent.mod,
+	  trunk/docbook/xml/dbhierx.mod, trunk/docbook/xml/dbnotnx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbook.cat,
+	  trunk/docbook/xml/docbookx.dtd: DocBook V4.2b1 released
+
+2001-11-13  nwalsh
+
+	* Makefile, trunk/docbook/xml/Makefile: Fixed typo
+	* Makefile, trunk/docbook/xml/Makefile: Makefile
+	* catalog.xml: XML Catalog for DocBook
+	* docbook.cat, docbook.dcl, docbook.dtd: Updated version numbers
+	  and public identifiers
+	* 40chg.txt, 41chg.txt, 50issues.txt, LostLog: Removed old files
+	* README, readme.txt: Renamed
+
+2001-11-07  nwalsh
+
+	* docbook.dcl, docbook.dtd, trunk/docbook/xml/calstblx.dtd,
+	  trunk/docbook/xml/dbhierx.mod, trunk/docbook/xml/dbnotnx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbookx.dtd:
+	  Whitespace fixes
+	* cals-tbl.dtd, dbcent.mod, dbgenent.mod, dbhier.mod, dbnotn.mod,
+	  dbpool.mod, docbook.dtd, trunk/docbook/xml/calstblx.dtd,
+	  trunk/docbook/xml/dbcentx.mod, trunk/docbook/xml/dbhierx.mod,
+	  trunk/docbook/xml/dbpoolx.mod, trunk/docbook/xml/docbookx.dtd:
+	  Towards a 4.2 release: reparameterize so that the SGML DTD is
+	  just a customization of the XML DTD
+
+2000-09-19  ndw
+
+	* 40chg.txt, 41chg.txt, 50issues.txt, LostLog, cals-tbl.dtd,
+	  dbcent.mod, dbgenent.mod, dbhier.mod, dbnotn.mod, dbpool.mod,
+	  docbook.cat, docbook.dcl, docbook.dtd, readme.txt: DocBook V4.1
+	* 31chg.txt, 40issues.txt: Cleanup
+	* 40chg.txt, 50issues.txt, LostLog, cals-tbl.dtd, dbcent.mod,
+	  dbgenent.mod, dbhier.mod, dbnotn.mod, dbpool.mod, docbook.cat,
+	  docbook.dcl, docbook.dtd, readme.txt: DocBook V4.0
+	* 241chg.txt, 24CHANGE.TXT, 30chg.txt, ANNOUNCE.TXT, CALSTBL.MOD,
+	  DBGENENT.MOD, DBHIER.MOD, DBPOOL.MOD, DOCBOOK.CAT, DOCBOOK.DTD,
+	  README, announce.txt, calstbl.mod, docbook.2.2.1.dtd,
+	  iso-amsa.gml, iso-amsb.gml, iso-amsc.gml, iso-amsn.gml,
+	  iso-amso.gml, iso-amsr.gml, iso-box.gml, iso-cyr1.gml,
+	  iso-cyr2.gml, iso-dia.gml, iso-grk1.gml, iso-grk2.gml,
+	  iso-grk3.gml, iso-grk4.gml, iso-lat1.gml, iso-lat2.gml,
+	  iso-num.gml, iso-pub.gml, iso-tech.gml, isodia.ent, isomfrk.ent,
+	  isomopf.ent, isomscr.ent, knownbugs23.html, msg.exm.sgm: Cleanup
+	* 31chg.txt, 40issues.txt, 50issues.txt, cals-tbl.dtd, dbcent.mod,
+	  dbgenent.mod, dbhier.mod, dbnotn.mod, dbpool.mod, docbook.cat,
+	  docbook.dcl, docbook.dtd, readme.txt: DocBook V3.1
+	* 30chg.txt, 40issues.txt, announce.txt, cals-tbl.dtd,
+	  dbgenent.mod, dbhier.mod, dbpool.mod, docbook.cat, docbook.dcl,
+	  docbook.dtd: DocBook V3.0
+	* 241chg.txt, announce.txt, calstbl.mod, dbhier.mod, dbpool.mod,
+	  docbook.cat, docbook.dcl, docbook.dtd: DocBook V2.4.1
+	* 24CHANGE.TXT, ANNOUNCE.TXT, CALSTBL.MOD, DBGENENT.MOD,
+	  DBHIER.MOD, DBPOOL.MOD, DOCBOOK.CAT, DOCBOOK.DTD: DocBook V2.4
+	* README, calstbl.mod, dbgenent.mod, dbhier.mod, dbpool.mod,
+	  docbook.cat, docbook.dcl, docbook.dtd, knownbugs23.html: DocBook
+	  V2.3
+	* README, docbook.2.2.1.dtd, docbook.dcl, iso-amsa.gml,
+	  iso-amsb.gml, iso-amsc.gml, iso-amsn.gml, iso-amso.gml,
+	  iso-amsr.gml, iso-box.gml, iso-cyr1.gml, iso-cyr2.gml,
+	  iso-dia.gml, iso-grk1.gml, iso-grk2.gml, iso-grk3.gml,
+	  iso-grk4.gml, iso-lat1.gml, iso-lat2.gml, iso-num.gml,
+	  iso-pub.gml, iso-tech.gml, isodia.ent, isomfrk.ent, isomopf.ent,
+	  isomscr.ent, msg.exm.sgm: DocBook V2.2.1
+	* ORAents.v3m, almfullguide.sgm.Z, alph.guide.sgm, ch03.sgm,
+	  docbook.2.1.dtd, docbook1.0.dtd, docbook1.2.1.doc.sgml,
+	  docbook1.2.1.dtd, docbook1.2.doc.sgml, docbook1.2.dtd,
+	  sgml.declaration, xlsc.sgm: Cleanup
+	* almfullguide.sgm.Z, alph.guide.sgm, docbook.2.1.dtd,
+	  sgml.declaration: DocBook V2.1
+	* ORAents.v3m, README, docbook1.2.1.doc.sgml, docbook1.2.1.dtd,
+	  sgml.declaration, xlsc.sgm: DocBook V1.2.1
+	* README, ch03.sgm, docbook1.0.dtd, docbook1.2.doc.sgml,
+	  docbook1.2.dtd, sgml.declaration, xlsc.sgm: DocBook V1.2
+	* docbook.dtd: DocBook V1.1
+	* trunk/docbook, ., docbook.dtd: DocBook V1.0
+

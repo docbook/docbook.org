@@ -1,0 +1,281 @@
+DocBook Technical Committee Meeting Minutes: 30 Jul 2003
+========================================================
+
+The DocBook Technical Committee met on Wednesday, 30 Jul 2003 at
+05:00p EDT (02:00p PDT, 21:00GMT, 22:00BST, 23:00CEST, 06:00JST+,
+02:30a India+) for 90 minutes.
+
+| Agenda
+|
+| 1. Roll call
+
+Jeff Beal
+Steve Cogorno
+Paul Grosso
+Dick Hamilton
+Nancy Harrison [:10-]
+Michael Smith
+Bob Stayton
+Norman Walsh
+
+Regrets:
+
+Scott Hudson
+
+Absent:
+
+Mark Johnson
+
+1b. Welcome to Jeff Beal our newest TC member. Jeff will be a full
+voting member at the September meeting.
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+Accepted.
+
+| 4. Review of open action items
+|
+|    a. Norm to follow-up on RFE 562343: &lt;packagename&gt; element
+Continued.
+|    b. Norm to write better documentation for option/optional
+Continued.
+|    c. Norm to ask Denis Evans for his opinions on REF #686733, allow
+|       bibliography under &lt;refentry&gt;
+Continued.
+|    d. Bob to write a concrete proposal for marking up keycaps
+Completed.
+|    e. Mike to post a summary of URI/URN to the list
+Completed.
+|    f. Norm to post a summary of the Task content models as described.
+Continued.
+|    g. Norm to write some stylesheets to demonstrate annotations
+Continued.
+|    h. Norm to respond to Bob's message on bibliographic inlines to
+|       see if we can get some email discussion going.
+Continued.
+|    i. Norm to describe how topical indexes might be created with
+|       a custom stylesheet.
+Continued.
+|    j. Norm to post information about RELAX NG tools.
+Continued.
+|    k. Norm to describe how the prototype works and how it was constructed.
+Continued.
+|    l. Bob to post links to pages showing multiple refdescriptions.
+Completed.
+|    m. Bob to post this small list of inline biblio items to the DocBook list
+Completed.
+|
+| 5. ISO Entities at W3C
+
+[[[ NORM INCLUDE POINTER ]]]
+
+Norm provides a summary of the history.
+
+Proposed: we will abandon all work along these lines and adopt whatever the
+          ISO/W3C standards are when they are published as specifications.
+
+Accepted.
+
+5b. Next DTD Release
+
+Bob: we have lots of discussion about general direction. But we also
+have a lot of small changes since 4.2 that could fit into a 4.3
+release. Do we want to do that?
+
+Dick: from our perspective, we probably wouldn't use 4.3. But it might
+not be a bad idea.
+
+Jeff: I do think a 4.3 release makes sense. The URI element seems to
+be a reasonable thing to do.
+
+Proposed: should we do a 4.3 SGML/XML DTD (only) release in the
+          immediate future?
+
+Accepted.
+
+ACTION: Norm to begin putting it together.
+
+| 6. RELAX NG discussions
+
+How far should we go in using RELAX NG features (co-constraints, for example).
+
+What do we do about normativity? What do we do about the fact that
+documents will validate with some languages but not others? (e.g.,
+valid against the DTD but not the RELAX NG grammar.)
+
+Norm expresses the personal opinion that we should make the RELAX NG
+schema normative and arrange for the other languages to be only more
+relaxed (no pun intended). In other words, it will never be possible for
+a version that validates against RELAX NG to fail against another schema
+but the converse isn't true.
+
+Some discussion of schema location hints.
+
+What about namespaces? Then you'll be able to use RELAX NG but you
+might not be able to use DTDs.
+
+So, in fact, you could have documents that validate against RELAX NG
+but not against DTDs.
+
+Most people are going to continue to use the DTD for a while. 
+
+Nancy: We might want to introduce the RELAX NG schema but leave the
+DTD normative. We could plan to transfer the normativity to the schema
+in the future.
+
+Norm describes the general goodness of customizing RELAX NG grammars.
+
+| 7. Multiple refnamedivs per refentry[2] (related to RFE #514435)
+
+Bob: they are encoded, but we aren't showing them.
+
+Bob: the point was that there are refentrys that have multiple
+commands and you need to have different refpurposes.
+
+Norm: we have historically had a very strict view of refentry as
+mapping to UNIX manpages.
+
+Steve: updating the SGML manpages turns out to be problematic because DTD
+changes need to be reflected across the network. We may begin distributing
+them in nroff again.
+
+Proposal: change refentry to allow "refnamediv+" instead of "refnamediv"
+
+Accepted.
+
+| 8. Choicelist markup
+
+ACTION: Mike to provide a better proposal for choicelist markup.
+
+| 9. Annotations [3]
+
+Continued until next month.
+
+9b. Keycaps.
+
+Proposed: Add the following attributes to keycap. The DTD will be structured
+so that the primary list can be extended easily and the otherfunction can
+be set to a list or removed entirely.
+
+  function     (alt
+               |control
+               |shift
+               |meta
+               |escape
+               |enter
+               |tab
+               |backspace
+               |command
+               |option
+               |space
+               |delete
+               |insert
+               |up
+               |down
+               |left
+               |right
+               |home
+               |end
+               |pageup
+               |pagedown
+               |other)        #IMPLIED
+    
+  otherfunction  CDATA        #IMPLIED
+
+Accepted.
+
+9c. URI/URN
+
+- From http://lists.oasis-open.org/archives/docbook/200306/msg00051.html
+
+Proposal: add a uri element with an optional type attribute (CDATA) for identifying
+   URIs that are not ulinks. This element is part of tech.char.class. The processing
+   expectation is that these are not active links.
+
+Accepted.
+
+| 10. Inline bibliography elements (related to RFE #679316) [4]
+
+- From http://lists.oasis-open.org/archives/docbook/200306/msg00071.html
+
+Norm argues against date, publisher, isbn, issn, and biblioid.
+
+Nancy asks if ISBN is already inline. It isn't.
+
+Initially proposed: add (only) orgname and corpname.
+
+Bob proposes that since we plan to remove corpname in the future,
+let's not add it to the inlines now.
+
+Proposed: add only orgname to the inlines.
+
+Accepted.
+
+Chair notes that time is running out.
+
+Any other business?
+
+Next meeting: Wed 20 Aug 2003 at at 05:00p EDT (02:00p PDT, 21:00GMT,
+22:00BST, 23:00CEST, 06:00JST+, 02:30a India+) for 90 minutes.
+
+New meeting schedule is the third wednesday of every month.
+
+We'll make RFEs a priority next month,
+
+ADJOURNED
+
+| 11. Review of Requests for Enhancement
+|
+|     To browse a specific RFE, enter the URL (on one line):
+|
+|       http://sourceforge.net/tracker/index.php?func=detail&amp;
+|       group_id=21935&amp;atid=384107&amp;aid=XXXX
+|
+|       697374 marking up keycaps according to their semantics
+|       740647 List or Table of Procedures.
+|       742373 Splitting Segmented List
+|       742624 refentry and bibliography
+|       752632 Color control of CALS table ELEMENT
+|       755966 Add interpolate element
+|
+|       436067 splitting tech.char.class 
+|       473365 Allow optional in funcprototype 
+|       482818 Simplify ToC content model 
+|       514435 Allow reference within refentry 
+|       541444 caption in mediaobjectco 
+|       558443 include storage info in metadata 
+|       562343 &lt;packagename&gt; element 
+|       565637 Associate non-inline image with link 
+|       565716 URL and URN markup 
+|       573419 Add bidirectional text overrides 
+|       582822 VARARG and FUNCDEF together 
+|       623524 (Re)Consider "choicelist" markup 
+|       638456 RFE add a &lt;translator&gt; tag
+|       655526 funcprototype enhancement
+|       660044 Controlling line numbering in verbatims
+|       679316 Allow orgname tag within paragraphs
+|       686733 allow bibliography under &lt;refentry&gt;
+|
+|      The following RFEs are awaiting action items
+|
+|       413389 Enhance METHODNAME and VARNAME 
+|       431411 RFE 70: add generic linking capability
+|       522552 Add title attribute to &lt;ulink&gt; element
+|       574880 Add annotation element 
+|       613293 Generalize programlisting 
+|       621564 New element Task and children
+|
+|      The following RFEs are identified as V6.0 or later
+|
+|       531851 Remove inline person name elements
+|       532088 Remove RevHistory from qandaentry
+|
+|  ----
+|  [1] http://lists.oasis-open.org/archives/docbook/200306/msg00056.html
+|  [2] http://lists.oasis-open.org/archives/docbook-tc/200303/msg00005.html
+|  [3] http://lists.oasis-open.org/archives/docbook-tc/200303/msg00001.html
+|  [4] http://lists.oasis-open.org/archives/docbook-tc/200303/msg00006.html

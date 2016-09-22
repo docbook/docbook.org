@@ -1,0 +1,5243 @@
+namespace ns1 = "http://www.w3.org/1998/Math/MathML"
+namespace ns2 = "http://www.w3.org/2000/svg"
+namespace s = "http://www.ascc.net/xml/schematron"
+
+# DocBook NG: The "Absinthe" Release
+
+# See http://docbook.org/docbook-ng/
+start =
+  db.set
+  | db.setindex
+  | db.book
+  | divisions
+  | components
+  | navigation.components
+  | db.refentry
+  | db.section
+  | db.para
+status.attribute = attribute status { text }
+label.attribute = attribute label { text }
+divisions = db.part | db.reference
+components =
+  db.dedication
+  | db.preface
+  | db.chapter
+  | db.appendix
+  | db.article
+  | db.colophon
+navigation.components =
+  db.toc | db.index | db.glossary | db.bibliography
+component.contentmodel =
+  navigation.components*, blocks.or.sections, navigation.components*
+set.status.attrib = status.attribute?
+set.label.attrib = label.attribute?
+set.info = docbook.info.titlereq
+set.role.attrib = role.attribute?
+local.set.attrib = empty
+set.attlist =
+  common.attributes,
+  common.linking.attributes,
+  set.role.attrib,
+  set.status.attrib,
+  set.label.attrib,
+  local.set.attrib
+db.set =
+  element set {
+    set.attlist, set.info, db.toc?, (db.set | db.book)+, db.setindex?
+  }
+book.status.attrib = status.attribute?
+book.label.attrib = label.attribute?
+book.info = docbook.info.titlereq
+book.role.attrib = role.attribute?
+local.book.attrib = empty
+book.attlist =
+  common.attributes,
+  common.linking.attributes,
+  book.role.attrib,
+  book.status.attrib,
+  book.label.attrib,
+  local.book.attrib
+db.book =
+  element book {
+    book.attlist,
+    book.info,
+    (navigation.components | components | divisions)+
+  }
+dedication.status.attrib = status.attribute?
+dedication.label.attrib = label.attribute?
+dedication.info = docbook.info
+dedication.role.attrib = role.attribute?
+local.dedication.attrib = empty
+dedication.attlist =
+  common.attributes,
+  common.linking.attributes,
+  dedication.role.attrib,
+  dedication.status.attrib,
+  dedication.label.attrib,
+  local.dedication.attrib
+db.dedication =
+  element dedication { dedication.attlist, dedication.info, blocks+ }
+colophon.status.attrib = status.attribute?
+colophon.label.attrib = label.attribute?
+colophon.info = docbook.info
+colophon.role.attrib = role.attribute?
+local.colophon.attrib = empty
+colophon.attlist =
+  common.attributes,
+  common.linking.attributes,
+  colophon.role.attrib,
+  colophon.status.attrib,
+  colophon.label.attrib,
+  local.colophon.attrib
+db.colophon =
+  element colophon { colophon.attlist, colophon.info, blocks+ }
+toc.info = docbook.info.titleonly
+toc.role.attrib = role.attribute?
+local.toc.attrib = empty
+toc.attlist =
+  common.attributes,
+  common.linking.attributes,
+  toc.role.attrib,
+  local.toc.attrib
+db.toc =
+  element toc {
+    toc.attlist, toc.info, blocks*, (db.tocdiv | db.tocentry)*
+  }
+tocdiv.pagenum.attrib = pagenum.attribute?
+tocdiv.linkend.attrib = linkend.attribute?
+tocdiv.info = docbook.info
+tocdiv.role.attrib = role.attribute?
+local.tocdiv.attrib = empty
+tocdiv.attlist =
+  common.attributes,
+  tocdiv.role.attrib,
+  tocdiv.pagenum.attrib,
+  tocdiv.linkend.attrib,
+  local.tocdiv.attrib
+db.tocdiv =
+  element tocdiv {
+    tocdiv.attlist, tocdiv.info, blocks*, (db.tocdiv | db.tocentry)+
+  }
+tocentry.pagenum.attrib = pagenum.attribute?
+tocentry.linkend.attrib = linkend.attribute?
+tocentry.role.attrib = role.attribute?
+local.tocentry.attrib = empty
+tocentry.attlist =
+  common.attributes,
+  tocentry.role.attrib,
+  tocentry.pagenum.attrib,
+  tocentry.linkend.attrib,
+  local.tocentry.attrib
+db.tocentry = element tocentry { tocentry.attlist, inlines* }
+appendix.status.attrib = status.attribute?
+appendix.label.attrib = label.attribute?
+appendix.info = docbook.info.titlereq
+appendix.role.attrib = role.attribute?
+local.appendix.attrib = empty
+appendix.attlist =
+  common.attributes,
+  common.linking.attributes,
+  appendix.role.attrib,
+  appendix.status.attrib,
+  appendix.label.attrib,
+  local.appendix.attrib
+db.appendix =
+  element appendix {
+    appendix.attlist, appendix.info, component.contentmodel
+  }
+chapter.status.attrib = status.attribute?
+chapter.label.attrib = label.attribute?
+chapter.info = docbook.info.titlereq
+chapter.role.attrib = role.attribute?
+local.chapter.attrib = empty
+chapter.attlist =
+  common.attributes,
+  common.linking.attributes,
+  chapter.role.attrib,
+  chapter.status.attrib,
+  chapter.label.attrib,
+  local.chapter.attrib
+db.chapter =
+  element chapter {
+    chapter.attlist, chapter.info, component.contentmodel
+  }
+part.components =
+  (navigation.components | components) | (db.refentry | db.reference)
+part.status.attrib = status.attribute?
+part.label.attrib = label.attribute?
+part.info = docbook.info.titlereq
+part.role.attrib = role.attribute?
+local.part.attrib = empty
+part.attlist =
+  common.attributes,
+  common.linking.attributes,
+  part.role.attrib,
+  part.status.attrib,
+  part.label.attrib,
+  local.part.attrib
+db.part =
+  element part {
+    part.attlist, part.info, db.partintro?, part.components+
+  }
+preface.status.attrib = status.attribute?
+preface.label.attrib = label.attribute?
+preface.info = docbook.info
+preface.role.attrib = role.attribute?
+local.preface.attrib = empty
+preface.attlist =
+  common.attributes,
+  common.linking.attributes,
+  preface.role.attrib,
+  preface.status.attrib,
+  preface.label.attrib,
+  local.preface.attrib
+db.preface =
+  element preface {
+    preface.attlist, preface.info, component.contentmodel
+  }
+partintro.status.attrib = status.attribute?
+partintro.label.attrib = label.attribute?
+partintro.info = docbook.info
+partintro.role.attrib = role.attribute?
+local.partintro.attrib = empty
+partintro.attlist =
+  common.attributes,
+  common.linking.attributes,
+  partintro.role.attrib,
+  partintro.status.attrib,
+  partintro.label.attrib,
+  local.partintro.attrib
+db.partintro =
+  element partintro {
+    partintro.attlist, partintro.info, blocks.or.sections
+  }
+sections.optional = db.section* | db.simplesect*
+sections.required = db.section+ | db.simplesect+
+blocks.or.sections = (blocks+, sections.optional) | sections.required
+section.status.attrib = status.attribute?
+section.label.attrib = label.attribute?
+section.info = docbook.info.titlereq
+section.role.attrib = role.attribute?
+local.section.attrib = empty
+section.attlist =
+  common.attributes,
+  common.linking.attributes,
+  section.role.attrib,
+  section.status.attrib,
+  section.label.attrib,
+  local.section.attrib
+db.section =
+  element section { section.attlist, section.info, blocks.or.sections }
+simplesect.status.attrib = status.attribute?
+simplesect.label.attrib = label.attribute?
+simplesect.info = docbook.info.titlereq
+simplesect.role.attrib = role.attribute?
+local.simplesect.attrib = empty
+simplesect.attlist =
+  common.attributes,
+  common.linking.attributes,
+  simplesect.role.attrib,
+  simplesect.status.attrib,
+  simplesect.label.attrib,
+  local.simplesect.attrib
+db.simplesect =
+  element simplesect { simplesect.attlist, simplesect.info, blocks+ }
+bibliography.status.attrib = status.attribute?
+bibliography.label.attrib = label.attribute?
+bibliography.info = docbook.info
+bibliography.role.attrib = role.attribute?
+local.bibliography.attrib = empty
+bibliography.attlist =
+  common.attributes,
+  common.linking.attributes,
+  bibliography.role.attrib,
+  bibliography.status.attrib,
+  bibliography.label.attrib,
+  local.bibliography.attrib
+db.bibliography =
+  element bibliography {
+    bibliography.attlist,
+    bibliography.info,
+    blocks*,
+    (db.bibliodiv+ | (db.biblioentry | db.bibliomixed)+)
+  }
+bibliodiv.status.attrib = status.attribute?
+bibliodiv.label.attrib = label.attribute?
+bibliodiv.info = docbook.info.titlereq
+bibliodiv.role.attrib = role.attribute?
+local.bibliodiv.attrib = empty
+bibliodiv.attlist =
+  common.attributes,
+  common.linking.attributes,
+  bibliodiv.role.attrib,
+  bibliodiv.status.attrib,
+  bibliodiv.label.attrib,
+  local.bibliodiv.attrib
+db.bibliodiv =
+  element bibliodiv {
+    bibliodiv.attlist,
+    bibliodiv.info,
+    blocks*,
+    (db.biblioentry | db.bibliomixed)+
+  }
+glossary.status.attrib = status.attribute?
+glossary.label.attrib = label.attribute?
+glossary.info = docbook.info
+glossary.role.attrib = role.attribute?
+local.glossary.attrib = empty
+glossary.attlist =
+  common.attributes,
+  common.linking.attributes,
+  glossary.role.attrib,
+  glossary.status.attrib,
+  glossary.label.attrib,
+  local.glossary.attrib
+db.glossary =
+  element glossary {
+    glossary.attlist,
+    glossary.info,
+    blocks*,
+    (db.glossdiv+ | db.glossentry+),
+    db.bibliography?
+  }
+glossdiv.status.attrib = status.attribute?
+glossdiv.label.attrib = label.attribute?
+glossdiv.info = docbook.info.titlereq
+glossdiv.role.attrib = role.attribute?
+local.glossdiv.attrib = empty
+glossdiv.attlist =
+  common.attributes,
+  common.linking.attributes,
+  glossdiv.role.attrib,
+  glossdiv.status.attrib,
+  glossdiv.label.attrib,
+  local.glossdiv.attrib
+db.glossdiv =
+  element glossdiv {
+    glossdiv.attlist, glossdiv.info, blocks*, db.glossentry+
+  }
+index.info = docbook.info
+index.role.attrib = role.attribute?
+local.index.attrib = empty
+index.attlist =
+  common.attributes,
+  common.linking.attributes,
+  index.role.attrib,
+  local.index.attrib
+db.index =
+  element index {
+    index.attlist,
+    index.info,
+    blocks*,
+    (db.indexdiv* | db.indexentry* | db.segmentedlist)
+  }
+setindex.info = docbook.info
+setindex.role.attrib = role.attribute?
+local.setindex.attrib = empty
+setindex.attlist =
+  common.attributes,
+  common.linking.attributes,
+  setindex.role.attrib,
+  local.setindex.attrib
+db.setindex =
+  element setindex {
+    setindex.attlist,
+    setindex.info,
+    blocks*,
+    (db.indexdiv* | db.indexentry*)
+  }
+indexdiv.info = docbook.info.titlereq
+indexdiv.role.attrib = role.attribute?
+local.indexdiv.attrib = empty
+indexdiv.attlist =
+  common.attributes,
+  common.linking.attributes,
+  indexdiv.role.attrib,
+  local.indexdiv.attrib
+db.indexdiv =
+  element indexdiv {
+    indexdiv.attlist,
+    indexdiv.info,
+    blocks*,
+    (db.indexentry+ | db.segmentedlist)
+  }
+indexentry.role.attrib = role.attribute?
+local.indexentry.attrib = empty
+indexentry.attlist =
+  common.attributes,
+  common.linking.attributes,
+  indexentry.role.attrib,
+  local.indexentry.attrib
+db.indexentry =
+  element indexentry {
+    indexentry.attlist,
+    db.primaryie,
+    (db.seeie | db.seealsoie)*,
+    (db.secondaryie, (db.seeie | db.seealsoie | db.tertiaryie)*)*
+  }
+primaryie.linkends.attrib = linkends.attribute?
+primaryie.role.attrib = role.attribute?
+local.primaryie.attrib = empty
+primaryie.attlist =
+  common.attributes,
+  primaryie.role.attrib,
+  primaryie.linkends.attrib,
+  local.primaryie.attrib
+db.primaryie = element primaryie { primaryie.attlist, inlines* }
+secondaryie.linkends.attrib = linkends.attribute?
+secondaryie.role.attrib = role.attribute?
+local.secondaryie.attrib = empty
+secondaryie.attlist =
+  common.attributes,
+  secondaryie.role.attrib,
+  secondaryie.linkends.attrib,
+  local.secondaryie.attrib
+db.secondaryie = element secondaryie { secondaryie.attlist, inlines* }
+tertiaryie.linkends.attrib = linkends.attribute?
+tertiaryie.role.attrib = role.attribute?
+local.tertiaryie.attrib = empty
+tertiaryie.attlist =
+  common.attributes,
+  tertiaryie.role.attrib,
+  tertiaryie.linkends.attrib,
+  local.tertiaryie.attrib
+db.tertiaryie = element tertiaryie { tertiaryie.attlist, inlines* }
+seeie.linkend.attrib = linkend.attribute?
+seeie.role.attrib = role.attribute?
+local.seeie.attrib = empty
+seeie.attlist =
+  common.attributes,
+  seeie.role.attrib,
+  seeie.linkend.attrib,
+  local.seeie.attrib
+db.seeie = element seeie { seeie.attlist, inlines* }
+seealsoie.linkends.attrib = linkends.attribute?
+seealsoie.role.attrib = role.attribute?
+local.seealsoie.attrib = empty
+seealsoie.attlist =
+  common.attributes,
+  seealsoie.role.attrib,
+  seealsoie.linkends.attrib,
+  local.seealsoie.attrib
+db.seealsoie = element seealsoie { seealsoie.attlist, inlines* }
+ackno.role.attrib = role.attribute?
+local.ackno.attrib = empty
+ackno.attlist =
+  common.attributes,
+  common.linking.attributes,
+  ackno.role.attrib,
+  local.ackno.attrib
+db.ackno = element ackno { ackno.attlist, para.blocks+ }
+article.components.optional =
+  (db.section* | db.simplesect*) | db.refentry*
+article.components.required =
+  (db.section+ | db.simplesect+) | db.refentry+
+article.status.attrib = status.attribute?
+article.label.attrib = label.attribute?
+article.class.attrib =
+  attribute class {
+    "faq"
+    | "journalarticle"
+    | "productsheet"
+    | "specification"
+    | "techreport"
+    | "whitepaper"
+  }?
+article.info = docbook.info.titlereq
+article.role.attrib = role.attribute?
+local.article.attrib = empty
+article.attlist =
+  common.attributes,
+  common.linking.attributes,
+  article.role.attrib,
+  article.status.attrib,
+  article.label.attrib,
+  article.class.attrib,
+  local.article.attrib
+db.article =
+  element article {
+    article.attlist,
+    article.info,
+    navigation.components*,
+    ((blocks+, article.components.optional)
+     | article.components.required),
+    (db.appendix | navigation.components | db.ackno)*
+  }
+reference.status.attrib = status.attribute?
+reference.label.attrib = label.attribute?
+reference.info = docbook.info.titlereq
+reference.role.attrib = role.attribute?
+local.reference.attrib = empty
+reference.attlist =
+  common.attributes,
+  common.linking.attributes,
+  reference.role.attrib,
+  reference.status.attrib,
+  reference.label.attrib,
+  local.reference.attrib
+db.reference =
+  element reference {
+    reference.attlist, reference.info, db.partintro?, db.refentry+
+  }
+refsections.optional = db.refsection* | db.simplesect*
+refsections.required = db.refsection+ | db.simplesect*
+blocks.or.refsections =
+  (blocks+, refsections.optional) | refsections.required
+refentry.status.attrib = status.attribute?
+refentry.label.attrib = label.attribute?
+refentry.info = docbook.info.titleforbidden
+refentry.role.attrib = role.attribute?
+local.refentry.attrib = empty
+refentry.attlist =
+  common.attributes,
+  common.linking.attributes,
+  refentry.role.attrib,
+  refentry.status.attrib,
+  refentry.label.attrib,
+  local.refentry.attrib
+db.refentry =
+  element refentry {
+    refentry.attlist,
+    db.indexterm*,
+    refentry.info,
+    db.refmeta?,
+    db.refnamediv+,
+    db.refsynopsisdiv?,
+    db.refsection+
+  }
+refmeta.role.attrib = role.attribute?
+local.refmeta.attrib = empty
+refmeta.attlist =
+  common.attributes,
+  common.linking.attributes,
+  refmeta.role.attrib,
+  local.refmeta.attrib
+db.refmeta =
+  element refmeta {
+    refmeta.attlist,
+    db.indexterm*,
+    db.refentrytitle,
+    db.manvolnum?,
+    db.refmiscinfo*,
+    db.indexterm*
+  }
+refmiscinfo.class.attrib = attribute class { text }
+refmiscinfo.role.attrib = role.attribute?
+local.refmiscinfo.attrib = empty
+refmiscinfo.attlist =
+  common.attributes,
+  common.linking.attributes,
+  refmiscinfo.role.attrib,
+  refmiscinfo.class.attrib,
+  local.refmiscinfo.attrib
+db.refmiscinfo =
+  element refmiscinfo { refmiscinfo.attlist, docbook.text }
+refnamediv.role.attrib = role.attribute?
+local.refnamediv.attrib = empty
+refnamediv.attlist =
+  common.attributes,
+  common.linking.attributes,
+  refnamediv.role.attrib,
+  local.refnamediv.attrib
+db.refnamediv =
+  element refnamediv {
+    refnamediv.attlist,
+    db.refdescriptor?,
+    db.refname+,
+    db.refpurpose,
+    db.refclass*
+  }
+refdescriptor.role.attrib = role.attribute?
+local.refdescriptor.attrib = empty
+refdescriptor.attlist =
+  common.attributes,
+  common.linking.attributes,
+  refdescriptor.role.attrib,
+  local.refdescriptor.attrib
+db.refdescriptor =
+  element refdescriptor { refdescriptor.attlist, inlines* }
+refname.role.attrib = role.attribute?
+local.refname.attrib = empty
+refname.attlist =
+  common.attributes,
+  common.linking.attributes,
+  refname.role.attrib,
+  local.refname.attrib
+db.refname = element refname { refname.attlist, inlines* }
+refpurpose.role.attrib = role.attribute?
+local.refpurpose.attrib = empty
+refpurpose.attlist =
+  common.attributes,
+  common.linking.attributes,
+  refpurpose.role.attrib,
+  local.refpurpose.attrib
+db.refpurpose = element refpurpose { refpurpose.attlist, inlines* }
+refclass.role.attrib = role.attribute?
+local.refclass.attrib = empty
+refclass.attlist =
+  common.attributes,
+  common.linking.attributes,
+  refclass.role.attrib,
+  local.refclass.attrib
+db.refclass =
+  element refclass { refclass.attlist, (text | db.application*) }
+refsynopsisdiv.info = docbook.info
+refsynopsisdiv.role.attrib = role.attribute?
+local.refsynopsisdiv.attrib = empty
+refsynopsisdiv.attlist =
+  common.attributes,
+  common.linking.attributes,
+  refsynopsisdiv.role.attrib,
+  local.refsynopsisdiv.attrib
+db.refsynopsisdiv =
+  element refsynopsisdiv {
+    refsynopsisdiv.attlist, refsynopsisdiv.info, blocks.or.refsections
+  }
+refsection.status.attrib = status.attribute?
+refsection.label.attrib = label.attribute?
+refsection.info = docbook.info.titlereq
+refsection.role.attrib = role.attribute?
+local.refsection.attrib = empty
+refsection.attlist =
+  common.attributes,
+  common.linking.attributes,
+  refsection.role.attrib,
+  refsection.status.attrib,
+  refsection.label.attrib,
+  local.refsection.attrib
+db.refsection =
+  element refsection {
+    refsection.attlist, refsection.info, blocks.or.refsections
+  }
+id.attribute = attribute id { xsd:ID }
+xml.lang.attribute = attribute xml:lang { text }
+xml.base.attribute = attribute xml:base { text }
+remap.attribute = attribute remap { text }
+xreflabel.attribute = attribute xreflabel { text }
+role.attribute = attribute role { text }
+revisionflag.attribute =
+  attribute revisionflag { "changed" | "added" | "deleted" | "off" }
+effectivity.attributes =
+  arch.attribute?,
+  condition.attribute?,
+  conformance.attribute?,
+  os.attribute?,
+  revision.attribute?,
+  security.attribute?,
+  userlevel.attribute?,
+  vendor.attribute?
+arch.attribute = attribute arch { text }
+condition.attribute = attribute condition { text }
+conformance.attribute = attribute conformance { text }
+os.attribute = attribute os { text }
+revision.attribute = attribute revision { text }
+security.attribute = attribute security { text }
+userlevel.attribute = attribute userlevel { text }
+vendor.attribute = attribute vendor { text }
+linkend.attribute = attribute linkend { xsd:IDREF }
+linkends.attribute = attribute linkends { xsd:IDREFS }
+href.attribute = attribute href { text }
+common.attributes =
+  id.attribute?,
+  xml.lang.attribute?,
+  xml.base.attribute?,
+  remap.attribute?,
+  xreflabel.attribute?,
+  revisionflag.attribute?,
+  effectivity.attributes
+common.attrib.idreq =
+  id.attribute,
+  xml.lang.attribute?,
+  xml.base.attribute?,
+  remap.attribute?,
+  xreflabel.attribute?,
+  revisionflag.attribute?,
+  effectivity.attributes
+common.linking.attributes.req = linkend.attribute | href.attribute
+common.linking.attributes = (linkend.attribute | href.attribute)?
+relation.attribute = attribute relation { text }?
+linenumbering.attribute =
+  attribute linenumbering { "numbered" | "unnumbered" }
+startinglinenumber.attribute =
+  attribute startinglinenumber { xsd:integer }
+verb-language.attribute = attribute language { text }
+continuation.attribute =
+  attribute continuation { "continues" | "restarts" }
+verbatim.attributes &=
+  continuation.attribute?,
+  linenumbering.attribute?,
+  startinglinenumber.attribute?,
+  verb-language.attribute?
+float.attribute = attribute float { text }
+pgwide.attribute = attribute pgwide { "0" | "1" }
+data.format.attribute = attribute format { text }
+data.fileref.attribute = attribute fileref { text }
+data.entityref.attribute = attribute entityref { xsd:ENTITY }
+data.common.attribute &=
+  data.format.attribute?,
+  (data.fileref.attribute | data.entityref.attribute)
+oo-language.attribute = attribute language { text }?
+biblio.class-enum.attribute =
+  attribute class {
+    "doi" | "isbn" | "issn" | "libraryofcongress" | "pubnumber" | "uri"
+  }?
+biblio.class-other.attributes =
+  attribute class { "other" },
+  attribute otherclass { xsd:NMTOKEN }
+biblio.class.attrib =
+  biblio.class-enum.attribute | biblio.class-other.attributes
+significance.attribute =
+  attribute significance { "normal" | "preferred" }
+zone.attribute = attribute zone { xsd:IDREFS }
+pagenum.attribute = attribute pagenum { text }
+scope.attribute = attribute scope { "all" | "global" | "local" }
+ubiq.inlines =
+  db.inlinemediaobject | db.anchor | db.indexterm | db.remark
+text.phrase.role.attrib = role.attribute?
+local.text.phrase.attrib = empty
+text.phrase.attlist =
+  common.attributes,
+  common.linking.attributes,
+  text.phrase.role.attrib,
+  local.text.phrase.attrib
+text.phrase = element phrase { text.phrase.attlist, docbook.text }
+docbook.text = (text | ubiq.inlines | text.phrase | db.replaceable)*
+inlines =
+  text
+  | ubiq.inlines
+  | general.inlines
+  | domain.inlines
+  | extension.inlines
+general.inlines =
+  publishing.inlines
+  | product.inlines
+  | bibliography.inlines
+  | glossary.inlines
+  | graphic.inlines
+  | indexing.inlines
+  | link.inlines
+domain.inlines =
+  technical.inlines
+  | error.inlines
+  | os.inlines
+  | programming.inlines
+  | markup.inlines
+  | math.inlines
+  | gui.inlines
+  | keyboard.inlines
+technical.inlines =
+  (db.replaceable | db.systemitem | db.option | db.optional)
+  | db.nonterminal
+error.inlines =
+  db.errorcode | db.errortext | db.errorname | db.errortype
+oo.inlines = db.ooclass | db.ooexception | db.oointerface
+programming.inlines =
+  db.function
+  | db.parameter
+  | db.varname
+  | db.returnvalue
+  | db.type
+  | db.classname
+  | db.exceptionname
+  | db.interfacename
+  | db.methodname
+  | db.modifier
+  | db.initializer
+  | oo.inlines
+product.inlines =
+  db.productnumber
+  | db.productname
+  | db.database
+  | db.application
+  | db.hardware
+  | db.trademark
+os.inlines =
+  db.prompt
+  | db.envar
+  | db.filename
+  | db.command
+  | db.computeroutput
+  | db.userinput
+markup.inlines =
+  db.xmltag
+  | db.markup
+  | db.token
+  | db.symbol
+  | db.literal
+  | db.code
+  | db.constant
+bibliography.inlines =
+  db.citation
+  | db.citerefentry
+  | db.citetitle
+  | db.citebiblioid
+  | db.author
+  | db.personname
+  | db.orgname
+  | db.editor
+glossary.inlines = db.firstterm | db.glossterm
+publishing.inlines =
+  (db.abbrev
+   | db.acronym
+   | db.emphasis
+   | db.footnote
+   | db.footnoteref
+   | db.foreignphrase
+   | db.phrase
+   | db.quote
+   | db.subscript
+   | db.superscript
+   | db.wordasword)
+  | db.coref
+math.inlines = db.inlineequation
+graphic.inlines = db.inlinemediaobject
+indexing.inlines = db.indexterm
+gui.inlines =
+  db.guiicon
+  | db.guibutton
+  | db.guimenuitem
+  | db.guimenu
+  | db.guisubmenu
+  | db.guilabel
+  | db.menuchoice
+  | db.mousebutton
+keyboard.inlines =
+  db.keycombo
+  | db.keycap
+  | db.keycode
+  | db.keysym
+  | db.shortcut
+  | db.accel
+link.inlines = db.xref | db.uri | db.anchor
+extension.inlines = notAllowed
+blocks.nopara =
+  list.blocks
+  | admonition.blocks
+  | formal.blocks
+  | informal.blocks
+  | publishing.blocks
+  | graphic.blocks
+  | technical.blocks
+  | verbatim.blocks
+  | synopsis.blocks
+  | db.indexterm
+  | db.bridgehead
+  | db.remark
+  | db.revhistory
+blocks = blocks.nopara | para.blocks | extension.blocks
+formal.blocks = db.equation | db.example | db.figure | db.table
+informal.blocks =
+  db.informalequation
+  | db.informalexample
+  | db.informalfigure
+  | db.informaltable
+publishing.blocks =
+  db.sidebar | db.blockquote | db.address | db.epigraph
+graphic.blocks = (db.mediaobject | db.screenshot) | db.mediaobjectco
+technical.blocks =
+  db.procedure
+  | db.task
+  | (db.productionset | db.constraintdef)
+  | db.msgset
+admonition.blocks =
+  db.caution | db.important | db.note | db.tip | db.warning
+list.blocks =
+  (db.itemizedlist
+   | db.orderedlist
+   | db.procedure
+   | db.simplelist
+   | db.variablelist
+   | db.qandaset
+   | db.glosslist
+   | db.segmentedlist)
+  | db.calloutlist
+verbatim.blocks =
+  (db.programlisting | db.screen | db.literallayout | db.synopsis)
+  | db.programlistingco
+  | db.screenco
+synopsis.blocks =
+  db.cmdsynopsis
+  | db.funcsynopsis
+  | db.classsynopsis
+  | db.methodsynopsis
+  | db.constructorsynopsis
+  | db.destructorsynopsis
+  | db.fieldsynopsis
+extension.blocks = notAllowed
+title.role.attrib = role.attribute?
+local.title.attrib = empty
+title.attlist =
+  common.attributes,
+  common.linking.attributes,
+  title.role.attrib,
+  local.title.attrib
+db.title = element title { title.attlist, inlines* }
+titleabbrev.role.attrib = role.attribute?
+local.titleabbrev.attrib = empty
+titleabbrev.attlist =
+  common.attributes,
+  common.linking.attributes,
+  titleabbrev.role.attrib,
+  local.titleabbrev.attrib
+db.titleabbrev = element titleabbrev { titleabbrev.attlist, inlines* }
+subtitle.role.attrib = role.attribute?
+local.subtitle.attrib = empty
+subtitle.attlist =
+  common.attributes,
+  common.linking.attributes,
+  subtitle.role.attrib,
+  local.subtitle.attrib
+db.subtitle = element subtitle { subtitle.attlist, inlines* }
+docbook.title = db.title? & db.titleabbrev? & db.subtitle?
+docbook.titlereq = db.title & db.titleabbrev? & db.subtitle?
+docbook.titleonly = db.title? & db.titleabbrev?
+docbook.titleonlyreq = db.title & db.titleabbrev?
+info.elements =
+  db.biblioid
+  | db.artpagenums
+  | db.copyright
+  | db.subjectset
+  | db.keywordset
+  | db.subjectset
+  | db.keywordset
+  | db.itermset
+  | db.abstract
+  | db.authorgroup
+  | db.author
+  | db.editor
+  | db.othercredit
+  | db.bibliocoverage
+  | db.bibliomisc
+  | db.bibliomset
+  | db.bibliorelation
+  | db.biblioset
+  | db.collab
+  | db.confgroup
+  | db.date
+  | db.pubdate
+  | db.edition
+  | db.volumenum
+  | db.issuenum
+  | db.seriesvolnums
+  | db.pagenums
+  | db.legalnotice
+  | db.publisher
+  | db.releaseinfo
+  | db.revhistory
+  | db.printhistory
+bibliographic.elements =
+  info.elements
+  | db.abbrev
+  | db.title
+  | db.titleabbrev
+  | db.subtitle
+  | db.citetitle
+  | db.address
+  | db.affiliation
+  | db.personblurb
+  | db.authorinitials
+  | db.personname
+  | db.orgname
+  | db.productname
+  | db.productnumber
+  | db.publishername
+biblioentry.role.attrib = role.attribute?
+local.biblioentry.attrib = empty
+biblioentry.attlist =
+  common.attributes,
+  common.linking.attributes,
+  biblioentry.role.attrib,
+  local.biblioentry.attrib
+db.biblioentry =
+  element biblioentry { biblioentry.attlist, bibliographic.elements+ }
+bibliomixed.role.attrib = role.attribute?
+local.bibliomixed.attrib = empty
+bibliomixed.attlist =
+  common.attributes,
+  common.linking.attributes,
+  bibliomixed.role.attrib,
+  local.bibliomixed.attrib
+db.bibliomixed =
+  element bibliomixed {
+    bibliomixed.attlist, (text | bibliographic.elements)*
+  }
+info.role.attrib = role.attribute?
+local.info.attrib = empty
+info.attlist =
+  common.attributes,
+  common.linking.attributes,
+  info.role.attrib,
+  local.info.attrib
+db.info = element info { info.attlist, docbook.title, info.elements* }
+info.titlereq.role.attrib = role.attribute?
+local.info.titlereq.attrib = empty
+info.titlereq.attlist =
+  common.attributes,
+  common.linking.attributes,
+  info.titlereq.role.attrib,
+  local.info.titlereq.attrib
+db.info.titlereq =
+  element info {
+    info.titlereq.attlist, docbook.titlereq, info.elements*
+  }
+info.titleonly.role.attrib = role.attribute?
+local.info.titleonly.attrib = empty
+info.titleonly.attlist =
+  common.attributes,
+  common.linking.attributes,
+  info.titleonly.role.attrib,
+  local.info.titleonly.attrib
+db.info.titleonly =
+  element info {
+    info.titleonly.attlist, docbook.titleonly, info.elements*
+  }
+info.titleonlyreq.role.attrib = role.attribute?
+local.info.titleonlyreq.attrib = empty
+info.titleonlyreq.attlist =
+  common.attributes,
+  common.linking.attributes,
+  info.titleonlyreq.role.attrib,
+  local.info.titleonlyreq.attrib
+db.info.titleonlyreq =
+  element info {
+    info.titleonlyreq.attlist, docbook.titleonlyreq, info.elements*
+  }
+info.titleforbidden.role.attrib = role.attribute?
+local.info.titleforbidden.attrib = empty
+info.titleforbidden.attlist =
+  common.attributes,
+  common.linking.attributes,
+  info.titleforbidden.role.attrib,
+  local.info.titleforbidden.attrib
+db.info.titleforbidden =
+  element info { info.titleforbidden.attlist, info.elements* }
+docbook.info = (docbook.titlereq?, db.info.titleforbidden?) | db.info?
+docbook.info.titlereq =
+  (docbook.titlereq, db.info.titleforbidden?) | db.info.titlereq
+docbook.info.titleonly =
+  (docbook.titleonly, db.info.titleforbidden?) | db.info.titleonly
+docbook.info.titleonlyreq =
+  (docbook.titleonlyreq, db.info.titleforbidden?) | db.info.titleonlyreq
+docbook.info.titleforbidden = db.info.titleforbidden?
+biblioset.relation.attrib = relation.attribute
+biblioset.role.attrib = role.attribute?
+local.biblioset.attrib = empty
+biblioset.attlist =
+  common.attributes,
+  common.linking.attributes,
+  biblioset.role.attrib,
+  biblioset.relation.attrib,
+  local.biblioset.attrib
+db.biblioset =
+  element biblioset { biblioset.attlist, bibliographic.elements+ }
+bibliomset.relation.attrib = relation.attribute
+bibliomset.role.attrib = role.attribute?
+local.bibliomset.attrib = empty
+bibliomset.attlist =
+  common.attributes,
+  common.linking.attributes,
+  bibliomset.role.attrib,
+  bibliomset.relation.attrib,
+  local.bibliomset.attrib
+db.bibliomset =
+  element bibliomset {
+    bibliomset.attlist, (docbook.text | bibliographic.elements)*
+  }
+bibliomisc.role.attrib = role.attribute?
+local.bibliomisc.attrib = empty
+bibliomisc.attlist =
+  common.attributes,
+  common.linking.attributes,
+  bibliomisc.role.attrib,
+  local.bibliomisc.attrib
+db.bibliomisc = element bibliomisc { bibliomisc.attlist, docbook.text }
+subjectset.scheme.attrib = attribute scheme { xsd:NMTOKEN }?
+subjectset.role.attrib = role.attribute?
+local.subjectset.attrib = empty
+subjectset.attlist =
+  common.attributes,
+  common.linking.attributes,
+  subjectset.role.attrib,
+  subjectset.scheme.attrib,
+  local.subjectset.attrib
+db.subjectset = element subjectset { subjectset.attlist, db.subject+ }
+subject.weight.attrib = attribute weight { text }?
+subject.role.attrib = role.attribute?
+local.subject.attrib = empty
+subject.attlist =
+  common.attributes,
+  common.linking.attributes,
+  subject.role.attrib,
+  subject.weight.attrib,
+  local.subject.attrib
+db.subject = element subject { subject.attlist, db.subjectterm+ }
+subjectterm.role.attrib = role.attribute?
+local.subjectterm.attrib = empty
+subjectterm.attlist =
+  common.attributes,
+  common.linking.attributes,
+  subjectterm.role.attrib,
+  local.subjectterm.attrib
+db.subjectterm = element subjectterm { subjectterm.attlist, text }
+keywordset.role.attrib = role.attribute?
+local.keywordset.attrib = empty
+keywordset.attlist =
+  common.attributes,
+  common.linking.attributes,
+  keywordset.role.attrib,
+  local.keywordset.attrib
+db.keywordset = element keywordset { keywordset.attlist, db.keyword+ }
+keyword.role.attrib = role.attribute?
+local.keyword.attrib = empty
+keyword.attlist =
+  common.attributes,
+  common.linking.attributes,
+  keyword.role.attrib,
+  local.keyword.attrib
+db.keyword = element keyword { keyword.attlist, text }
+itermset.role.attrib = role.attribute?
+local.itermset.attrib = empty
+itermset.attlist =
+  common.attributes,
+  common.linking.attributes,
+  itermset.role.attrib,
+  local.itermset.attrib
+db.itermset = element itermset { itermset.attlist, indexterm.singular+ }
+qandaset.defaultlabel.attrib =
+  attribute defaultlabel { "none" | "number" | "qanda" }?
+qandaset.info = docbook.info.titleonly
+qandaset.role.attrib = role.attribute?
+local.qandaset.attrib = empty
+qandaset.attlist =
+  common.attributes,
+  common.linking.attributes,
+  qandaset.role.attrib,
+  qandaset.defaultlabel.attrib,
+  local.qandaset.attrib
+db.qandaset =
+  element qandaset {
+    qandaset.attlist,
+    qandaset.info,
+    blocks*,
+    (db.qandadiv+ | db.qandaentry+)
+  }
+qandadiv.info = docbook.info.titleonly
+qandadiv.role.attrib = role.attribute?
+local.qandadiv.attrib = empty
+qandadiv.attlist =
+  common.attributes,
+  common.linking.attributes,
+  qandadiv.role.attrib,
+  local.qandadiv.attrib
+db.qandadiv =
+  element qandadiv {
+    qandadiv.attlist,
+    qandadiv.info,
+    blocks*,
+    (db.qandadiv+ | db.qandaentry+)
+  }
+qandaentry.info = docbook.info.titleforbidden
+qandaentry.role.attrib = role.attribute?
+local.qandaentry.attrib = empty
+qandaentry.attlist =
+  common.attributes,
+  common.linking.attributes,
+  qandaentry.role.attrib,
+  local.qandaentry.attrib
+db.qandaentry =
+  element qandaentry {
+    qandaentry.attlist, qandaentry.info, db.question, db.answer*
+  }
+question.role.attrib = role.attribute?
+local.question.attrib = empty
+question.attlist =
+  common.attributes,
+  common.linking.attributes,
+  question.role.attrib,
+  local.question.attrib
+db.question = element question { question.attlist, db.label?, blocks+ }
+answer.role.attrib = role.attribute?
+local.answer.attrib = empty
+answer.attlist =
+  common.attributes,
+  common.linking.attributes,
+  answer.role.attrib,
+  local.answer.attrib
+db.answer = element answer { answer.attlist, db.label?, blocks+ }
+label.role.attrib = role.attribute?
+local.label.attrib = empty
+label.attlist =
+  common.attributes,
+  common.linking.attributes,
+  label.role.attrib,
+  local.label.attrib
+db.label = element label { label.attlist, docbook.text }
+table.choice = notAllowed | cals.table | html.table
+informaltable.choice =
+  notAllowed | cals.informaltable | html.informaltable
+db.table = table.choice
+db.informaltable = informaltable.choice
+procedure.info = docbook.info.titleonly
+procedure.role.attrib = role.attribute?
+local.procedure.attrib = empty
+procedure.attlist =
+  common.attributes,
+  common.linking.attributes,
+  procedure.role.attrib,
+  local.procedure.attrib
+db.procedure =
+  element procedure {
+    procedure.attlist, procedure.info, blocks*, db.step+
+  }
+step.performance.attrib =
+  attribute performance { "optional" | "required" }?
+step.info = docbook.info.titleonly
+step.role.attrib = role.attribute?
+local.step.attrib = empty
+step.attlist =
+  common.attributes,
+  common.linking.attributes,
+  step.role.attrib,
+  step.performance.attrib,
+  local.step.attrib
+db.step =
+  element step {
+    step.attlist,
+    step.info,
+    blocks*,
+    (db.substeps | db.stepalternatives)?,
+    blocks*
+  }
+stepalternatives.performance.attrib =
+  attribute performance { "optional" | "required" }?
+stepalternatives.info = docbook.info.titleforbidden
+stepalternatives.role.attrib = role.attribute?
+local.stepalternatives.attrib = empty
+stepalternatives.attlist =
+  common.attributes,
+  common.linking.attributes,
+  stepalternatives.role.attrib,
+  stepalternatives.performance.attrib,
+  local.stepalternatives.attrib
+db.stepalternatives =
+  element stepalternatives {
+    stepalternatives.attlist, stepalternatives.info, db.step+
+  }
+substeps.performance.attrib =
+  attribute performance { "optional" | "required" }?
+substeps.role.attrib = role.attribute?
+local.substeps.attrib = empty
+substeps.attlist =
+  common.attributes,
+  common.linking.attributes,
+  substeps.role.attrib,
+  substeps.performance.attrib,
+  local.substeps.attrib
+db.substeps = element substeps { substeps.attlist, db.step+ }
+sidebar.info = docbook.info.titleonly
+sidebar.role.attrib = role.attribute?
+local.sidebar.attrib = empty
+sidebar.attlist =
+  common.attributes,
+  common.linking.attributes,
+  sidebar.role.attrib,
+  local.sidebar.attrib
+db.sidebar =
+  [
+    s:rule [
+      context = "sidebar"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//sidebar)"
+        "sidebar must not occur in the descendants of sidebar"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+  ]
+  element sidebar { sidebar.attlist, sidebar.info, blocks+ }
+abstract.info = docbook.info.titleonly
+abstract.role.attrib = role.attribute?
+local.abstract.attrib = empty
+abstract.attlist =
+  common.attributes,
+  common.linking.attributes,
+  abstract.role.attrib,
+  local.abstract.attrib
+db.abstract =
+  element abstract { abstract.attlist, abstract.info, para.blocks+ }
+personblurb.info = docbook.info.titleonly
+personblurb.role.attrib = role.attribute?
+local.personblurb.attrib = empty
+personblurb.attlist =
+  common.attributes,
+  common.linking.attributes,
+  personblurb.role.attrib,
+  local.personblurb.attrib
+db.personblurb =
+  element personblurb {
+    personblurb.attlist, personblurb.info, para.blocks+
+  }
+blockquote.info = docbook.info.titleonly
+blockquote.role.attrib = role.attribute?
+local.blockquote.attrib = empty
+blockquote.attlist =
+  common.attributes,
+  common.linking.attributes,
+  blockquote.role.attrib,
+  local.blockquote.attrib
+db.blockquote =
+  element blockquote {
+    blockquote.attlist, blockquote.info, db.attribution?, blocks+
+  }
+attribution.role.attrib = role.attribute?
+local.attribution.attrib = empty
+attribution.attlist =
+  common.attributes,
+  common.linking.attributes,
+  attribution.role.attrib,
+  local.attribution.attrib
+db.attribution =
+  element attribution {
+    attribution.attlist, (docbook.text | db.personname)
+  }
+bridgehead.renderas.attrib =
+  attribute renderas {
+    "other" | "sect1" | "sect2" | "sect3" | "sect4" | "sect5"
+  }?
+bridgehead.role.attrib = role.attribute?
+local.bridgehead.attrib = empty
+bridgehead.attlist =
+  common.attributes,
+  common.linking.attributes,
+  bridgehead.role.attrib,
+  bridgehead.renderas.attrib,
+  local.bridgehead.attrib
+db.bridgehead = element bridgehead { bridgehead.attlist, inlines* }
+remark.role.attrib = role.attribute?
+local.remark.attrib = empty
+remark.attlist =
+  common.attributes,
+  common.linking.attributes,
+  remark.role.attrib,
+  local.remark.attrib
+db.remark = element remark { remark.attlist, docbook.text }
+epigraph.info = docbook.info.titleforbidden
+epigraph.role.attrib = role.attribute?
+local.epigraph.attrib = empty
+epigraph.attlist =
+  common.attributes,
+  common.linking.attributes,
+  epigraph.role.attrib,
+  local.epigraph.attrib
+db.epigraph =
+  element epigraph {
+    epigraph.attlist,
+    epigraph.info,
+    db.attribution?,
+    (para.blocks | db.literallayout)+
+  }
+footnote.role.attrib = role.attribute?
+local.footnote.attrib = empty
+footnote.attlist =
+  common.attributes,
+  common.linking.attributes,
+  footnote.role.attrib,
+  local.footnote.attrib
+db.footnote =
+  [
+    s:rule [
+      context = "footnote"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//footnote)"
+        "footnote must not occur in the descendants of footnote"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+  ]
+  element footnote { footnote.attlist, blocks+ }
+highlights.role.attrib = role.attribute?
+local.highlights.attrib = empty
+highlights.attlist =
+  common.attributes,
+  common.linking.attributes,
+  highlights.role.attrib,
+  local.highlights.attrib
+db.highlights =
+  element highlights {
+    highlights.attlist,
+    (list.blocks | admonition.blocks | para.blocks | db.indexterm)+
+  }
+para.blocks = db.anchor | db.para | db.formalpara | db.simpara
+formalpara.info = docbook.info.titleonlyreq
+formalpara.role.attrib = role.attribute?
+local.formalpara.attrib = empty
+formalpara.attlist =
+  common.attributes,
+  common.linking.attributes,
+  formalpara.role.attrib,
+  local.formalpara.attrib
+db.formalpara =
+  element formalpara {
+    formalpara.attlist, formalpara.info, db.indexterm*, db.para
+  }
+para.info = docbook.info.titleforbidden
+para.role.attrib = role.attribute?
+local.para.attrib = empty
+para.attlist =
+  common.attributes,
+  common.linking.attributes,
+  para.role.attrib,
+  local.para.attrib
+db.para =
+  element para { para.attlist, para.info, (inlines | blocks.nopara)* }
+simpara.info = docbook.info.titleforbidden
+simpara.role.attrib = role.attribute?
+local.simpara.attrib = empty
+simpara.attlist =
+  common.attributes,
+  common.linking.attributes,
+  simpara.role.attrib,
+  local.simpara.attrib
+db.simpara = element simpara { simpara.attlist, simpara.info, inlines* }
+admonition.contentmodel = docbook.info.titleonly, blocks+
+caution.role.attrib = role.attribute?
+local.caution.attrib = empty
+caution.attlist =
+  common.attributes,
+  common.linking.attributes,
+  caution.role.attrib,
+  local.caution.attrib
+db.caution =
+  [
+    s:rule [
+      context = "caution"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//caution)"
+        "caution must not occur in the descendants of caution"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "caution"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//important)"
+        "important must not occur in the descendants of caution"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "caution"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//note)"
+        "note must not occur in the descendants of caution"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "caution"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//tip)"
+        "tip must not occur in the descendants of caution"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "caution"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//warning)"
+        "warning must not occur in the descendants of caution"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+  ]
+  element caution { caution.attlist, admonition.contentmodel }
+important.role.attrib = role.attribute?
+local.important.attrib = empty
+important.attlist =
+  common.attributes,
+  common.linking.attributes,
+  important.role.attrib,
+  local.important.attrib
+db.important =
+  [
+    s:rule [
+      context = "important"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//caution)"
+        "caution must not occur in the descendants of important"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "important"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//important)"
+        "important must not occur in the descendants of important"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "important"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//note)"
+        "note must not occur in the descendants of important"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "important"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//tip)"
+        "tip must not occur in the descendants of important"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "important"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//warning)"
+        "warning must not occur in the descendants of important"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+  ]
+  element important { important.attlist, admonition.contentmodel }
+note.role.attrib = role.attribute?
+local.note.attrib = empty
+note.attlist =
+  common.attributes,
+  common.linking.attributes,
+  note.role.attrib,
+  local.note.attrib
+db.note =
+  [
+    s:rule [
+      context = "note"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//caution)"
+        "caution must not occur in the descendants of note"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "note"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//important)"
+        "important must not occur in the descendants of note"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "note"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//note)"
+        "note must not occur in the descendants of note"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "note"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//tip)"
+        "tip must not occur in the descendants of note"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "note"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//warning)"
+        "warning must not occur in the descendants of note"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+  ]
+  element note { note.attlist, admonition.contentmodel }
+tip.role.attrib = role.attribute?
+local.tip.attrib = empty
+tip.attlist =
+  common.attributes,
+  common.linking.attributes,
+  tip.role.attrib,
+  local.tip.attrib
+db.tip =
+  [
+    s:rule [
+      context = "tip"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//caution)"
+        "caution must not occur in the descendants of tip"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "tip"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//important)"
+        "important must not occur in the descendants of tip"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "tip"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//note)"
+        "note must not occur in the descendants of tip"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "tip"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//tip)"
+        "tip must not occur in the descendants of tip"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "tip"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//warning)"
+        "warning must not occur in the descendants of tip"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+  ]
+  element tip { tip.attlist, admonition.contentmodel }
+warning.role.attrib = role.attribute?
+local.warning.attrib = empty
+warning.attlist =
+  common.attributes,
+  common.linking.attributes,
+  warning.role.attrib,
+  local.warning.attrib
+db.warning =
+  [
+    s:rule [
+      context = "warning"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//caution)"
+        "caution must not occur in the descendants of warning"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "warning"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//important)"
+        "important must not occur in the descendants of warning"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "warning"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//note)"
+        "note must not occur in the descendants of warning"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "warning"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//tip)"
+        "tip must not occur in the descendants of warning"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+    s:rule [
+      context = "warning"
+      "\x{a}" ~
+      "            "
+      s:assert [
+        test = "not(.//warning)"
+        "warning must not occur in the descendants of warning"
+      ]
+      "\x{a}" ~
+      "         "
+    ]
+  ]
+  element warning { warning.attlist, admonition.contentmodel }
+glosslist.info = docbook.info.titleonly
+glosslist.role.attrib = role.attribute?
+local.glosslist.attrib = empty
+glosslist.attlist =
+  common.attributes,
+  common.linking.attributes,
+  glosslist.role.attrib,
+  local.glosslist.attrib
+db.glosslist =
+  element glosslist {
+    glosslist.attlist, glosslist.info?, blocks*, db.glossentry+
+  }
+glossentry.sortas.attrib = sortas.attribute?
+glossentry.role.attrib = role.attribute?
+local.glossentry.attrib = empty
+glossentry.attlist =
+  common.attributes,
+  common.linking.attributes,
+  glossentry.role.attrib,
+  glossentry.sortas.attrib,
+  local.glossentry.attrib
+db.glossentry =
+  element glossentry {
+    glossentry.attlist,
+    db.glossterm,
+    db.acronym?,
+    db.abbrev?,
+    db.indexterm*,
+    (db.glosssee | db.glossdef+)
+  }
+glossdef.subject.attrib = attribute subject { text }?
+glossdef.role.attrib = role.attribute?
+local.glossdef.attrib = empty
+glossdef.attlist =
+  common.attributes,
+  common.linking.attributes,
+  glossdef.role.attrib,
+  glossdef.subject.attrib,
+  local.glossdef.attrib
+db.glossdef =
+  element glossdef { glossdef.attlist, blocks+, db.glossseealso* }
+glosssee.otherterm.attrib = attribute otherterm { xsd:IDREF }?
+glosssee.role.attrib = role.attribute?
+local.glosssee.attrib = empty
+glosssee.attlist =
+  common.attributes,
+  common.linking.attributes,
+  glosssee.role.attrib,
+  glosssee.otherterm.attrib,
+  local.glosssee.attrib
+db.glosssee =
+  element glosssee {
+    glosssee.attlist
+    >> s:rule [
+         context = "glosssee[@linkend]"
+         "\x{a}" ~
+         "            "
+         s:assert [
+           test = "name(//*[@id=current()/@linkend]) = 'glossentry'"
+           "@linkend on glosssee must point to a glossentry."
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    inlines*
+  }
+glossseealso.otherterm.attrib = attribute otherterm { xsd:IDREF }?
+glossseealso.role.attrib = role.attribute?
+local.glossseealso.attrib = empty
+glossseealso.attlist =
+  common.attributes,
+  common.linking.attributes,
+  glossseealso.role.attrib,
+  glossseealso.otherterm.attrib,
+  local.glossseealso.attrib
+db.glossseealso =
+  element glossseealso {
+    glossseealso.attlist
+    >> s:rule [
+         context = "glossseealso[@linkend]"
+         "\x{a}" ~
+         "            "
+         s:assert [
+           test = "name(//*[@id=current()/@linkend]) = 'glossentry'"
+           "@linkend on glossseealso must point to a glossentry."
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    inlines*
+  }
+itemizedlist.mark.attrib = attribute mark { text }?
+itemizedlist.spacing.attrib =
+  attribute spacing { "compact" | "normal" }?
+itemizedlist.info = docbook.info.titleonly
+itemizedlist.role.attrib = role.attribute?
+local.itemizedlist.attrib = empty
+itemizedlist.attlist =
+  common.attributes,
+  common.linking.attributes,
+  itemizedlist.role.attrib,
+  itemizedlist.mark.attrib,
+  itemizedlist.spacing.attrib,
+  local.itemizedlist.attrib
+db.itemizedlist =
+  element itemizedlist {
+    itemizedlist.attlist, itemizedlist.info, blocks*, db.listitem+
+  }
+orderedlist.inheritnum.attrib =
+  attribute inheritnum { "ignore" | "inherit" }?
+orderedlist.spacing.attrib = attribute spacing { "compact" | "normal" }?
+orderedlist.continuation.attrib = continuation.attribute?
+orderedlist.numeration.attrib = attribute numeration { text }?
+orderedlist.info = docbook.info.titleonly
+orderedlist.role.attrib = role.attribute?
+local.orderedlist.attrib = empty
+orderedlist.attlist =
+  common.attributes,
+  common.linking.attributes,
+  orderedlist.role.attrib,
+  orderedlist.inheritnum.attrib,
+  orderedlist.spacing.attrib,
+  orderedlist.continuation.attrib,
+  orderedlist.numeration.attrib,
+  local.orderedlist.attrib
+db.orderedlist =
+  element orderedlist {
+    orderedlist.attlist, orderedlist.info, blocks*, db.listitem+
+  }
+listitem.override.attrib = attribute override { text }?
+listitem.role.attrib = role.attribute?
+local.listitem.attrib = empty
+listitem.attlist =
+  common.attributes,
+  common.linking.attributes,
+  listitem.role.attrib,
+  listitem.override.attrib,
+  local.listitem.attrib
+db.listitem = element listitem { listitem.attlist, blocks+ }
+segmentedlist.info = docbook.info.titleonly
+segmentedlist.role.attrib = role.attribute?
+local.segmentedlist.attrib = empty
+segmentedlist.attlist =
+  common.attributes,
+  common.linking.attributes,
+  segmentedlist.role.attrib,
+  local.segmentedlist.attrib
+db.segmentedlist =
+  element segmentedlist {
+    segmentedlist.attlist,
+    segmentedlist.info,
+    db.segtitle+,
+    db.seglistitem+
+  }
+segtitle.role.attrib = role.attribute?
+local.segtitle.attrib = empty
+segtitle.attlist =
+  common.attributes,
+  common.linking.attributes,
+  segtitle.role.attrib,
+  local.segtitle.attrib
+db.segtitle = element segtitle { segtitle.attlist, inlines* }
+seglistitem.role.attrib = role.attribute?
+local.seglistitem.attrib = empty
+seglistitem.attlist =
+  common.attributes,
+  common.linking.attributes,
+  seglistitem.role.attrib,
+  local.seglistitem.attrib
+db.seglistitem =
+  element seglistitem {
+    seglistitem.attlist
+    >> s:rule [
+         context = "seglistitem"
+         "\x{a}" ~
+         "            "
+         s:assert [
+           test = "count(seg) = count(../segtitle)"
+           "The number of seg elements must be the same as the number of segtitle elements in the parent segmentedlist"
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    db.seg+
+  }
+seg.role.attrib = role.attribute?
+local.seg.attrib = empty
+seg.attlist =
+  common.attributes,
+  common.linking.attributes,
+  seg.role.attrib,
+  local.seg.attrib
+db.seg = element seg { seg.attlist, inlines* }
+simplelist.type.attrib = attribute type { "horiz" | "vert" | "inline" }?
+simplelist.columns.attrib = attribute columns { xsd:integer }?
+simplelist.role.attrib = role.attribute?
+local.simplelist.attrib = empty
+simplelist.attlist =
+  common.attributes,
+  common.linking.attributes,
+  simplelist.role.attrib,
+  simplelist.type.attrib,
+  simplelist.columns.attrib,
+  local.simplelist.attrib
+db.simplelist = element simplelist { simplelist.attlist, db.member+ }
+member.role.attrib = role.attribute?
+local.member.attrib = empty
+member.attlist =
+  common.attributes,
+  common.linking.attributes,
+  member.role.attrib,
+  local.member.attrib
+db.member = element member { member.attlist, inlines* }
+variablelist.termlength.attrib = attribute termlength { text }?
+variablelist.info = docbook.info.titleonly
+variablelist.role.attrib = role.attribute?
+local.variablelist.attrib = empty
+variablelist.attlist =
+  common.attributes,
+  common.linking.attributes,
+  variablelist.role.attrib,
+  variablelist.termlength.attrib,
+  local.variablelist.attrib
+db.variablelist =
+  element variablelist {
+    variablelist.attlist, variablelist.info, blocks*, db.varlistentry+
+  }
+varlistentry.role.attrib = role.attribute?
+local.varlistentry.attrib = empty
+varlistentry.attlist =
+  common.attributes,
+  common.linking.attributes,
+  varlistentry.role.attrib,
+  local.varlistentry.attrib
+db.varlistentry =
+  element varlistentry { varlistentry.attlist, db.term+, db.listitem }
+term.role.attrib = role.attribute?
+local.term.attrib = empty
+term.attlist =
+  common.attributes,
+  common.linking.attributes,
+  term.role.attrib,
+  local.term.attrib
+db.term = element term { term.attlist, inlines* }
+floatstyle.attribute = attribute floatstyle { text }
+example.floatstyle.attrib = floatstyle.attribute?
+example.width.attrib = attribute width { text }?
+example.label.attrib = attribute label { text }?
+example.info = docbook.info.titleonlyreq
+example.role.attrib = role.attribute?
+local.example.attrib = empty
+example.attlist =
+  common.attributes,
+  common.linking.attributes,
+  example.role.attrib,
+  example.floatstyle.attrib,
+  example.width.attrib,
+  example.label.attrib,
+  local.example.attrib
+db.example = element example { example.attlist, example.info, blocks+ }
+informalexample.info = docbook.info.titleforbidden
+informalexample.width.attrib = attribute width { text }?
+informalexample.floatstyle.attrib = floatstyle.attribute?
+informalexample.role.attrib = role.attribute?
+local.informalexample.attrib = empty
+informalexample.attlist =
+  common.attributes,
+  common.linking.attributes,
+  informalexample.role.attrib,
+  informalexample.width.attrib,
+  informalexample.floatstyle.attrib,
+  local.informalexample.attrib
+db.informalexample =
+  element informalexample {
+    informalexample.attlist, informalexample.info, blocks+
+  }
+verbatim.inlines = (inlines | db.lineannotation) | db.co
+verbatim.contentmodel =
+  docbook.info.titleforbidden, (db.textobject | verbatim.inlines*)
+programlisting.verbatim.attribs = verbatim.attributes
+programlisting.width.attrib = attribute width { text }?
+programlisting.role.attrib = role.attribute?
+local.programlisting.attrib = empty
+programlisting.attlist =
+  common.attributes,
+  common.linking.attributes,
+  programlisting.role.attrib,
+  programlisting.verbatim.attribs,
+  programlisting.width.attrib,
+  local.programlisting.attrib
+db.programlisting =
+  element programlisting {
+    programlisting.attlist, verbatim.contentmodel
+  }
+literallayout.verbatim.attribs = verbatim.attributes
+literallayout.class.attrib =
+  attribute class { "monospaced" | "normal" }?
+literallayout.role.attrib = role.attribute?
+local.literallayout.attrib = empty
+literallayout.attlist =
+  common.attributes,
+  common.linking.attributes,
+  literallayout.role.attrib,
+  literallayout.verbatim.attribs,
+  literallayout.class.attrib,
+  local.literallayout.attrib
+db.literallayout =
+  element literallayout { literallayout.attlist, verbatim.contentmodel }
+screen.verbatim.attribs = verbatim.attributes
+screen.width.attrib = attribute width { text }?
+screen.role.attrib = role.attribute?
+local.screen.attrib = empty
+screen.attlist =
+  common.attributes,
+  common.linking.attributes,
+  screen.role.attrib,
+  screen.verbatim.attribs,
+  screen.width.attrib,
+  local.screen.attrib
+db.screen = element screen { screen.attlist, verbatim.contentmodel }
+screenshot.block = db.mediaobject | db.mediaobjectco
+screenshot.info = docbook.info
+screenshot.role.attrib = role.attribute?
+local.screenshot.attrib = empty
+screenshot.attlist =
+  common.attributes,
+  common.linking.attributes,
+  screenshot.role.attrib,
+  local.screenshot.attrib
+db.screenshot =
+  element screenshot {
+    screenshot.attlist, screenshot.info, screenshot.block
+  }
+figure.floatstyle.attrib = floatstyle.attribute?
+figure.float.attrib = attribute float { text }?
+figure.pgwide.attrib = pgwide.attribute?
+figure.label.attrib = attribute label { text }?
+figure.info = docbook.info.titleonlyreq
+figure.role.attrib = role.attribute?
+local.figure.attrib = empty
+figure.attlist =
+  common.attributes,
+  common.linking.attributes,
+  figure.role.attrib,
+  figure.floatstyle.attrib,
+  figure.float.attrib,
+  figure.pgwide.attrib,
+  figure.label.attrib,
+  local.figure.attrib
+db.figure = element figure { figure.attlist, figure.info, blocks+ }
+informalfigure.floatstyle.attrib = floatstyle.attribute?
+informalfigure.float.attrib = float.attribute?
+informalfigure.pgwide.attrib = pgwide.attribute?
+informalfigure.label.attrib = attribute label { text }?
+informalfigure.info = docbook.info.titleforbidden
+informalfigure.role.attrib = role.attribute?
+local.informalfigure.attrib = empty
+informalfigure.attlist =
+  common.attributes,
+  common.linking.attributes,
+  informalfigure.role.attrib,
+  informalfigure.floatstyle.attrib,
+  informalfigure.float.attrib,
+  informalfigure.pgwide.attrib,
+  informalfigure.label.attrib,
+  local.informalfigure.attrib
+db.informalfigure =
+  element informalfigure {
+    informalfigure.attlist, informalfigure.info, blocks+
+  }
+mediaobject.content =
+  db.videoobject | db.audioobject | db.imageobject | db.textobject
+mediaobject.info = docbook.info.titleforbidden
+mediaobject.role.attrib = role.attribute?
+local.mediaobject.attrib = empty
+mediaobject.attlist =
+  common.attributes,
+  common.linking.attributes,
+  mediaobject.role.attrib,
+  local.mediaobject.attrib
+db.mediaobject =
+  element mediaobject {
+    mediaobject.attlist, mediaobject.info, mediaobject.content+
+  }
+inlinemediaobject.content =
+  db.videoobject | db.audioobject | db.imageobject | db.textobject
+inlinemediaobject.info = docbook.info.titleforbidden
+inlinemediaobject.role.attrib = role.attribute?
+local.inlinemediaobject.attrib = empty
+inlinemediaobject.attlist =
+  common.attributes,
+  common.linking.attributes,
+  inlinemediaobject.role.attrib,
+  local.inlinemediaobject.attrib
+db.inlinemediaobject =
+  element inlinemediaobject {
+    inlinemediaobject.attlist,
+    inlinemediaobject.info,
+    inlinemediaobject.content+
+  }
+videoobject.info = docbook.info.titleforbidden
+videoobject.role.attrib = role.attribute?
+local.videoobject.attrib = empty
+videoobject.attlist =
+  common.attributes,
+  common.linking.attributes,
+  videoobject.role.attrib,
+  local.videoobject.attrib
+db.videoobject =
+  element videoobject {
+    videoobject.attlist, videoobject.info, db.videodata
+  }
+audioobject.info = docbook.info.titleforbidden
+audioobject.role.attrib = role.attribute?
+local.audioobject.attrib = empty
+audioobject.attlist =
+  common.attributes,
+  common.linking.attributes,
+  audioobject.role.attrib,
+  local.audioobject.attrib
+db.audioobject =
+  element audioobject {
+    audioobject.attlist, audioobject.info, db.audiodata
+  }
+imageobject.content = db.imagedata | any.svg
+imageobject.info = docbook.info.titleforbidden
+imageobject.role.attrib = role.attribute?
+local.imageobject.attrib = empty
+imageobject.attlist =
+  common.attributes,
+  common.linking.attributes,
+  imageobject.role.attrib,
+  local.imageobject.attrib
+db.imageobject =
+  element imageobject {
+    imageobject.attlist, imageobject.info, imageobject.content
+  }
+textobject.info = docbook.info.titleforbidden
+textobject.role.attrib = role.attribute?
+local.textobject.attrib = empty
+textobject.attlist =
+  common.attributes,
+  common.linking.attributes,
+  textobject.role.attrib,
+  local.textobject.attrib
+db.textobject =
+  element textobject {
+    textobject.attlist,
+    textobject.info,
+    (db.phrase | db.textdata | blocks+)
+  }
+videodata.data.attrib = data.common.attribute
+videodata.align.attrib =
+  attribute align { "center" | "char" | "justify" | "left" | "right" }?
+videodata.valign.attrib =
+  attribute valign { "bottom" | "middle" | "top" }?
+videodata.width.attrib = attribute width { text }?
+videodata.contentwidth.attrib = attribute contentwidth { text }?
+videodata.scalefit.attrib = attribute scalefit { "0" | "1" }?
+vidoedata.scale.attrib = attribute scale { text }?
+videodata.depth.attrib = attribute depth { text }?
+videodata.contentdepth.attrib = attribute contentdepth { text }?
+videodata.info = docbook.info.titleforbidden
+videodata.role.attrib = role.attribute?
+local.videodata.attrib = empty
+videodata.attlist =
+  common.attributes,
+  common.linking.attributes,
+  videodata.role.attrib,
+  videodata.data.attrib,
+  videodata.align.attrib,
+  videodata.valign.attrib,
+  videodata.width.attrib,
+  videodata.contentwidth.attrib,
+  videodata.scalefit.attrib,
+  videodata.depth.attrib,
+  videodata.contentdepth.attrib,
+  local.videodata.attrib
+db.videodata = element videodata { videodata.attlist, videodata.info }
+audiodata.data.attrib = data.common.attribute
+audiodata.info = docbook.info.titleforbidden
+audiodata.role.attrib = role.attribute?
+local.audiodata.attrib = empty
+audiodata.attlist =
+  common.attributes,
+  common.linking.attributes,
+  audiodata.role.attrib,
+  audiodata.data.attrib,
+  local.audiodata.attrib
+db.audiodata = element audiodata { audiodata.attlist, audiodata.info }
+imagedata.data.attrib = data.common.attribute
+imagedata.align.attrib =
+  attribute align { "center" | "char" | "justify" | "left" | "right" }?
+imagedata.valign.attrib =
+  attribute valign { "bottom" | "middle" | "top" }?
+imagedata.width.attrib = attribute width { text }?
+imagedata.contentwidth.attrib = attribute contentwidth { text }?
+imagedata.scalefit.attrib = attribute scalefit { "0" | "1" }?
+imagedata.scale.attrib = attribute scale { text }?
+imagedata.depth.attrib = attribute depth { text }?
+imagedata.contentdepth.attrib = attribute contentdepth { text }?
+imagedata.info = docbook.info.titleforbidden
+imagedata.role.attrib = role.attribute?
+local.imagedata.attrib = empty
+imagedata.attlist =
+  common.attributes,
+  common.linking.attributes,
+  imagedata.role.attrib,
+  imagedata.data.attrib,
+  imagedata.align.attrib,
+  imagedata.valign.attrib,
+  imagedata.width.attrib,
+  imagedata.contentwidth.attrib,
+  imagedata.scalefit.attrib,
+  imagedata.scale.attrib,
+  imagedata.depth.attrib,
+  imagedata.contentdepth.attrib,
+  local.imagedata.attrib
+db.imagedata = element imagedata { imagedata.attlist, imagedata.info }
+textdata.data.attrib = data.common.attribute
+textdata.encoding.attrib = attribute encoding { text }?
+textdata.info = docbook.info.titleforbidden
+textdata.role.attrib = role.attribute?
+local.textdata.attrib = empty
+textdata.attlist =
+  common.attributes,
+  common.linking.attributes,
+  textdata.role.attrib,
+  textdata.data.attrib,
+  textdata.encoding.attrib,
+  local.textdata.attrib
+db.textdata = element textdata { textdata.attlist, textdata.info }
+caption.role.attrib = role.attribute?
+local.caption.attrib = empty
+caption.attlist =
+  common.attributes,
+  common.linking.attributes,
+  caption.role.attrib,
+  local.caption.attrib
+db.caption = element caption { caption.attlist, blocks+ }
+equation.content = db.mediaobject | any.mml
+equation.info = docbook.info.titleonlyreq
+equation.role.attrib = role.attribute?
+local.equation.attrib = empty
+equation.attlist =
+  common.attributes,
+  common.linking.attributes,
+  equation.role.attrib,
+  local.equation.attrib
+db.equation =
+  element equation {
+    equation.attlist, equation.info, equation.content+
+  }
+informalequation.info = docbook.info.titleforbidden
+informalequation.role.attrib = role.attribute?
+local.informalequation.attrib = empty
+informalequation.attlist =
+  common.attributes,
+  common.linking.attributes,
+  informalequation.role.attrib,
+  local.informalequation.attrib
+db.informalequation =
+  element informalequation {
+    informalequation.attlist, informalequation.info, equation.content+
+  }
+inlineequation.content = db.inlinemediaobject | any.mml
+inlineequation.role.attrib = role.attribute?
+local.inlineequation.attrib = empty
+inlineequation.attlist =
+  common.attributes,
+  common.linking.attributes,
+  inlineequation.role.attrib,
+  local.inlineequation.attrib
+db.inlineequation =
+  element inlineequation {
+    inlineequation.attlist, inlineequation.content+
+  }
+synopsis.verbatim.attribs = verbatim.attributes
+synopsis.label.attrib = attribute label { text }
+synopsis.role.attrib = role.attribute?
+local.synopsis.attrib = empty
+synopsis.attlist =
+  common.attributes,
+  common.linking.attributes,
+  synopsis.role.attrib,
+  synopsis.verbatim.attribs,
+  synopsis.label.attrib,
+  local.synopsis.attrib
+db.synopsis =
+  element synopsis { synopsis.attlist, verbatim.contentmodel }
+cmdsynopsis.sepchar.attrib = attribute sepchar { text }?
+cmdsynopsis.cmdlength.attrib = attribute cmdlength { text }?
+cmdsynopsis.label.attrib = attribute label { text }?
+cmdsynopsis.info = docbook.info.titleforbidden
+cmdsynopsis.role.attrib = role.attribute?
+local.cmdsynopsis.attrib = empty
+cmdsynopsis.attlist =
+  common.attributes,
+  common.linking.attributes,
+  cmdsynopsis.role.attrib,
+  cmdsynopsis.sepchar.attrib,
+  cmdsynopsis.cmdlength.attrib,
+  cmdsynopsis.label.attrib,
+  local.cmdsynopsis.attrib
+db.cmdsynopsis =
+  element cmdsynopsis {
+    cmdsynopsis.attlist,
+    cmdsynopsis.info?,
+    (db.command | db.arg | db.group | db.sbr)+,
+    db.synopfragment*
+  }
+rep.attribute = attribute rep { "norepeat" | "repeat" }
+choice.attribute = attribute choice { "opt" | "plain" | "req" }
+arg.rep.attrib = rep.attribute?
+arg.choice.attrib = choice.attribute?
+arg.role.attrib = role.attribute?
+local.arg.attrib = empty
+arg.attlist =
+  common.attributes,
+  common.linking.attributes,
+  arg.role.attrib,
+  arg.rep.attrib,
+  arg.choice.attrib,
+  local.arg.attrib
+db.arg =
+  element arg {
+    arg.attlist,
+    (docbook.text
+     | db.arg
+     | db.group
+     | db.option
+     | db.synopfragmentref
+     | db.sbr)*
+  }
+group.rep.attrib = rep.attribute?
+group.choice.attrib = choice.attribute?
+group.role.attrib = role.attribute?
+local.group.attrib = empty
+group.attlist =
+  common.attributes,
+  common.linking.attributes,
+  group.role.attrib,
+  group.rep.attrib,
+  group.choice.attrib,
+  local.group.attrib
+db.group =
+  element group {
+    group.attlist,
+    (db.arg
+     | db.group
+     | db.option
+     | db.synopfragmentref
+     | db.replaceable
+     | db.sbr)+
+  }
+sbr.role.attrib = role.attribute?
+local.sbr.attrib = empty
+sbr.attlist = common.attributes, sbr.role.attrib, local.sbr.attrib
+db.sbr = element sbr { sbr.attlist, empty }
+synopfragment.role.attrib = role.attribute?
+local.synopfragment.attrib = empty
+synopfragment.attlist =
+  common.attributes,
+  common.linking.attributes,
+  synopfragment.role.attrib,
+  local.synopfragment.attrib
+db.synopfragment =
+  element synopfragment { synopfragment.attlist, (db.arg | db.group)+ }
+synopfragmentref.linkend.attrib = linkend.attribute
+synopfragmentref.role.attrib = role.attribute?
+local.synopfragmentref.attrib = empty
+synopfragmentref.attlist =
+  common.attributes,
+  synopfragmentref.role.attrib,
+  synopfragmentref.linkend.attrib,
+  local.synopfragmentref.attrib
+db.synopfragmentref =
+  element synopfragmentref {
+    synopfragmentref.attlist
+    >> s:rule [
+         context = "synopfragmentref"
+         "\x{a}" ~
+         "            "
+         s:assert [
+           test = "name(//*[@id=current()/@linkend]) = 'synopfragment'"
+           "@linkend on synopfragmentref must point to a synopfragment."
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    text
+  }
+funcsynopsis.info = docbook.info.titleforbidden
+funcsynopsis.role.attrib = role.attribute?
+local.funcsynopsis.attrib = empty
+funcsynopsis.attlist =
+  common.attributes,
+  common.linking.attributes,
+  funcsynopsis.role.attrib,
+  local.funcsynopsis.attrib
+db.funcsynopsis =
+  element funcsynopsis {
+    funcsynopsis.attlist,
+    funcsynopsis.info?,
+    (db.funcsynopsisinfo | db.funcprototype)+
+  }
+funcsynopsisinfo.verbatim.attribs = verbatim.attributes
+funcsynopsisinfo.role.attrib = role.attribute?
+local.funcsynopsisinfo.attrib = empty
+funcsynopsisinfo.attlist =
+  common.attributes,
+  common.linking.attributes,
+  funcsynopsisinfo.role.attrib,
+  funcsynopsisinfo.verbatim.attribs,
+  local.funcsynopsisinfo.attrib
+db.funcsynopsisinfo =
+  element funcsynopsisinfo {
+    funcsynopsisinfo.attlist, verbatim.contentmodel
+  }
+funcprototype.role.attrib = role.attribute?
+local.funcprototype.attrib = empty
+funcprototype.attlist =
+  common.attributes,
+  common.linking.attributes,
+  funcprototype.role.attrib,
+  local.funcprototype.attrib
+db.funcprototype =
+  element funcprototype {
+    funcprototype.attlist,
+    db.modifier*,
+    db.funcdef,
+    (db.void | db.varargs | (db.paramdef+, db.varargs?)),
+    db.modifier*
+  }
+funcdef.role.attrib = role.attribute?
+local.funcdef.attrib = empty
+funcdef.attlist =
+  common.attributes,
+  common.linking.attributes,
+  funcdef.role.attrib,
+  local.funcdef.attrib
+db.funcdef =
+  element funcdef {
+    funcdef.attlist, (docbook.text | db.type | db.function)*
+  }
+void.role.attrib = role.attribute?
+local.void.attrib = empty
+void.attlist =
+  common.attributes,
+  common.linking.attributes,
+  void.role.attrib,
+  local.void.attrib
+db.void = element void { void.attlist, empty }
+varargs.role.attrib = role.attribute?
+local.varargs.attrib = empty
+varargs.attlist =
+  common.attributes,
+  common.linking.attributes,
+  varargs.role.attrib,
+  local.varargs.attrib
+db.varargs = element varargs { varargs.attlist, empty }
+paramdef.choice.attrib = attribute choice { "opt" | "req" }?
+paramdef.role.attrib = role.attribute?
+local.paramdef.attrib = empty
+paramdef.attlist =
+  common.attributes,
+  common.linking.attributes,
+  paramdef.role.attrib,
+  paramdef.choice.attrib,
+  local.paramdef.attrib
+db.paramdef =
+  element paramdef {
+    paramdef.attlist,
+    (docbook.text | db.type | db.parameter | db.funcparams)*
+  }
+funcparams.role.attrib = role.attribute?
+local.funcparams.attrib = empty
+funcparams.attlist =
+  common.attributes,
+  common.linking.attributes,
+  funcparams.role.attrib,
+  local.funcparams.attrib
+db.funcparams = element funcparams { funcparams.attlist, inlines* }
+oo-method.synopsis.blocks =
+  db.methodsynopsis | db.constructorsynopsis | db.destructorsynopsis
+oo-field.synopsis.blocks = db.fieldsynopsis
+classsynopsis.language.attrib = oo-language.attribute
+classsynopsis.class.attrib = attribute class { "class" | "interface" }?
+classsynopsis.role.attrib = role.attribute?
+local.classsynopsis.attrib = empty
+classsynopsis.attlist =
+  common.attributes,
+  common.linking.attributes,
+  classsynopsis.role.attrib,
+  classsynopsis.language.attrib,
+  classsynopsis.class.attrib,
+  local.classsynopsis.attrib
+db.classsynopsis =
+  element classsynopsis {
+    classsynopsis.attlist,
+    oo.inlines+,
+    (db.classsynopsisinfo
+     | oo-method.synopsis.blocks
+     | oo-field.synopsis.blocks)*
+  }
+classsynopsisinfo.verbatim.attribs = verbatim.attributes
+classsynopsisinfo.role.attrib = role.attribute?
+local.classsynopsisinfo.attrib = empty
+classsynopsisinfo.attlist =
+  common.attributes,
+  common.linking.attributes,
+  classsynopsisinfo.role.attrib,
+  classsynopsisinfo.verbatim.attribs,
+  local.classsynopsisinfo.attrib
+db.classsynopsisinfo =
+  element classsynopsisinfo {
+    classsynopsisinfo.attlist, verbatim.contentmodel
+  }
+ooclass.role.attrib = role.attribute?
+local.ooclass.attrib = empty
+ooclass.attlist =
+  common.attributes,
+  common.linking.attributes,
+  ooclass.role.attrib,
+  local.ooclass.attrib
+db.ooclass =
+  element ooclass { ooclass.attlist, db.modifier*, db.classname }
+oointerface.role.attrib = role.attribute?
+local.oointerface.attrib = empty
+oointerface.attlist =
+  common.attributes,
+  common.linking.attributes,
+  oointerface.role.attrib,
+  local.oointerface.attrib
+db.oointerface =
+  element oointerface {
+    oointerface.attlist, db.modifier*, db.interfacename
+  }
+ooexception.role.attrib = role.attribute?
+local.ooexception.attrib = empty
+ooexception.attlist =
+  common.attributes,
+  common.linking.attributes,
+  ooexception.role.attrib,
+  local.ooexception.attrib
+db.ooexception =
+  element ooexception {
+    ooexception.attlist, db.modifier*, db.exceptionname
+  }
+modifier.role.attrib = role.attribute?
+local.modifier.attrib = empty
+modifier.attlist =
+  common.attributes,
+  common.linking.attributes,
+  modifier.role.attrib,
+  local.modifier.attrib
+db.modifier = element modifier { modifier.attlist, docbook.text }
+interfacename.role.attrib = role.attribute?
+local.interfacename.attrib = empty
+interfacename.attlist =
+  common.attributes,
+  common.linking.attributes,
+  interfacename.role.attrib,
+  local.interfacename.attrib
+db.interfacename =
+  element interfacename { interfacename.attlist, docbook.text }
+exceptionname.role.attrib = role.attribute?
+local.exceptionname.attrib = empty
+exceptionname.attlist =
+  common.attributes,
+  common.linking.attributes,
+  exceptionname.role.attrib,
+  local.exceptionname.attrib
+db.exceptionname =
+  element exceptionname { exceptionname.attlist, docbook.text }
+fieldsynopsis.language.attrib = oo-language.attribute
+fieldsynopsis.role.attrib = role.attribute?
+local.fieldsynopsis.attrib = empty
+fieldsynopsis.attlist =
+  common.attributes,
+  common.linking.attributes,
+  fieldsynopsis.role.attrib,
+  fieldsynopsis.language.attrib,
+  local.fieldsynopsis.attrib
+db.fieldsynopsis =
+  element fieldsynopsis {
+    fieldsynopsis.attlist,
+    db.modifier*,
+    db.type?,
+    db.varname,
+    db.initializer?
+  }
+initializer.role.attrib = role.attribute?
+local.initializer.attrib = empty
+initializer.attlist =
+  common.attributes,
+  common.linking.attributes,
+  initializer.role.attrib,
+  local.initializer.attrib
+db.initializer =
+  element initializer { initializer.attlist, docbook.text }
+constructorsynopsis.language.attrib = oo-language.attribute
+constructorsynopsis.role.attrib = role.attribute?
+local.constructorsynopsis.attrib = empty
+constructorsynopsis.attlist =
+  common.attributes,
+  common.linking.attributes,
+  constructorsynopsis.role.attrib,
+  constructorsynopsis.language.attrib,
+  local.constructorsynopsis.attrib
+db.constructorsynopsis =
+  element constructorsynopsis {
+    constructorsynopsis.attlist,
+    db.modifier*,
+    db.methodname?,
+    (db.methodparam+ | db.void?),
+    db.exceptionname*
+  }
+destructorsynopsis.language.attrib = oo-language.attribute
+destructorsynopsis.role.attrib = role.attribute?
+local.destructorsynopsis.attrib = empty
+destructorsynopsis.attlist =
+  common.attributes,
+  common.linking.attributes,
+  destructorsynopsis.role.attrib,
+  destructorsynopsis.language.attrib,
+  local.destructorsynopsis.attrib
+db.destructorsynopsis =
+  element destructorsynopsis {
+    destructorsynopsis.attlist,
+    db.modifier*,
+    db.methodname?,
+    (db.methodparam+ | db.void?),
+    db.exceptionname*
+  }
+methodsynopsis.language.attrib = oo-language.attribute
+methodsynopsis.role.attrib = role.attribute?
+local.methodsynopsis.attrib = empty
+methodsynopsis.attlist =
+  common.attributes,
+  common.linking.attributes,
+  methodsynopsis.role.attrib,
+  methodsynopsis.language.attrib,
+  local.methodsynopsis.attrib
+db.methodsynopsis =
+  element methodsynopsis {
+    methodsynopsis.attlist,
+    db.modifier*,
+    (db.type | db.void)?,
+    db.methodname,
+    (db.methodparam+ | db.void),
+    db.exceptionname*,
+    db.modifier*
+  }
+methodname.role.attrib = role.attribute?
+local.methodname.attrib = empty
+methodname.attlist =
+  common.attributes,
+  common.linking.attributes,
+  methodname.role.attrib,
+  local.methodname.attrib
+db.methodname = element methodname { methodname.attlist, docbook.text }
+methodparam.rep.attrib = rep.attribute?
+methodparam.choice.attrib = choice.attribute?
+methodparam.role.attrib = role.attribute?
+local.methodparam.attrib = empty
+methodparam.attlist =
+  common.attributes,
+  common.linking.attributes,
+  methodparam.role.attrib,
+  methodparam.rep.attrib,
+  methodparam.choice.attrib,
+  local.methodparam.attrib
+db.methodparam =
+  element methodparam {
+    methodparam.attlist,
+    db.modifier*,
+    db.type?,
+    ((db.parameter, db.initializer?) | db.funcparams),
+    db.modifier*
+  }
+address.verbatim.attribs = verbatim.attributes
+address.role.attrib = role.attribute?
+local.address.attrib = empty
+address.attlist =
+  common.attributes,
+  common.linking.attributes,
+  address.role.attrib,
+  address.verbatim.attribs,
+  local.address.attrib
+db.address =
+  element address {
+    address.attlist,
+    (docbook.text
+     | db.personname
+     | db.pob
+     | db.street
+     | db.city
+     | db.state
+     | db.postcode
+     | db.country
+     | db.phone
+     | db.fax
+     | db.email
+     | db.otheraddr)*
+  }
+street.role.attrib = role.attribute?
+local.street.attrib = empty
+street.attlist =
+  common.attributes,
+  common.linking.attributes,
+  street.role.attrib,
+  local.street.attrib
+db.street = element street { street.attlist, docbook.text }
+pob.role.attrib = role.attribute?
+local.pob.attrib = empty
+pob.attlist =
+  common.attributes,
+  common.linking.attributes,
+  pob.role.attrib,
+  local.pob.attrib
+db.pob = element pob { pob.attlist, docbook.text }
+postcode.role.attrib = role.attribute?
+local.postcode.attrib = empty
+postcode.attlist =
+  common.attributes,
+  common.linking.attributes,
+  postcode.role.attrib,
+  local.postcode.attrib
+db.postcode = element postcode { postcode.attlist, docbook.text }
+city.role.attrib = role.attribute?
+local.city.attrib = empty
+city.attlist =
+  common.attributes,
+  common.linking.attributes,
+  city.role.attrib,
+  local.city.attrib
+db.city = element city { city.attlist, docbook.text }
+state.role.attrib = role.attribute?
+local.state.attrib = empty
+state.attlist =
+  common.attributes,
+  common.linking.attributes,
+  state.role.attrib,
+  local.state.attrib
+db.state = element state { state.attlist, docbook.text }
+country.role.attrib = role.attribute?
+local.country.attrib = empty
+country.attlist =
+  common.attributes,
+  common.linking.attributes,
+  country.role.attrib,
+  local.country.attrib
+db.country = element country { country.attlist, docbook.text }
+phone.role.attrib = role.attribute?
+local.phone.attrib = empty
+phone.attlist =
+  common.attributes,
+  common.linking.attributes,
+  phone.role.attrib,
+  local.phone.attrib
+db.phone = element phone { phone.attlist, docbook.text }
+fax.role.attrib = role.attribute?
+local.fax.attrib = empty
+fax.attlist =
+  common.attributes,
+  common.linking.attributes,
+  fax.role.attrib,
+  local.fax.attrib
+db.fax = element fax { fax.attlist, docbook.text }
+otheraddr.role.attrib = role.attribute?
+local.otheraddr.attrib = empty
+otheraddr.attlist =
+  common.attributes,
+  common.linking.attributes,
+  otheraddr.role.attrib,
+  local.otheraddr.attrib
+db.otheraddr = element otheraddr { otheraddr.attlist, docbook.text }
+affiliation.role.attrib = role.attribute?
+local.affiliation.attrib = empty
+affiliation.attlist =
+  common.attributes,
+  common.linking.attributes,
+  affiliation.role.attrib,
+  local.affiliation.attrib
+db.affiliation =
+  element affiliation {
+    affiliation.attlist,
+    db.shortaffil?,
+    db.jobtitle*,
+    db.orgname?,
+    db.orgdiv*,
+    db.address*
+  }
+shortaffil.role.attrib = role.attribute?
+local.shortaffil.attrib = empty
+shortaffil.attlist =
+  common.attributes,
+  common.linking.attributes,
+  shortaffil.role.attrib,
+  local.shortaffil.attrib
+db.shortaffil = element shortaffil { shortaffil.attlist, docbook.text }
+jobtitle.role.attrib = role.attribute?
+local.jobtitle.attrib = empty
+jobtitle.attlist =
+  common.attributes,
+  common.linking.attributes,
+  jobtitle.role.attrib,
+  local.jobtitle.attrib
+db.jobtitle = element jobtitle { jobtitle.attlist, docbook.text }
+orgname.class-enum.attribute =
+  attribute class {
+    "consortium" | "corporation" | "informal" | "nonprofit"
+  }?
+orgname.class-other.attributes =
+  attribute class { "other" },
+  attribute otherclass { text }
+orgname.class.attrib =
+  orgname.class-enum.attribute | orgname.class-other.attributes
+orgname.role.attrib = role.attribute?
+local.orgname.attrib = empty
+orgname.attlist =
+  common.attributes,
+  common.linking.attributes,
+  orgname.role.attrib,
+  orgname.class.attrib,
+  local.orgname.attrib
+db.orgname = element orgname { orgname.attlist, docbook.text }
+orgdiv.role.attrib = role.attribute?
+local.orgdiv.attrib = empty
+orgdiv.attlist =
+  common.attributes,
+  common.linking.attributes,
+  orgdiv.role.attrib,
+  local.orgdiv.attrib
+db.orgdiv = element orgdiv { orgdiv.attlist, inlines* }
+artpagenums.role.attrib = role.attribute?
+local.artpagenums.attrib = empty
+artpagenums.attlist =
+  common.attributes,
+  common.linking.attributes,
+  artpagenums.role.attrib,
+  local.artpagenums.attrib
+db.artpagenums =
+  element artpagenums { artpagenums.attlist, docbook.text }
+personname.role.attrib = role.attribute?
+local.personname.attrib = empty
+personname.attlist =
+  common.attributes,
+  common.linking.attributes,
+  personname.role.attrib,
+  local.personname.attrib
+db.personname =
+  element personname {
+    personname.attlist,
+    (docbook.text
+     | (db.honorific
+        | db.firstname
+        | db.surname
+        | db.lineage
+        | db.othername)+)
+  }
+person.author =
+  db.personname,
+  (db.personblurb
+   | db.affiliation
+   | db.email
+   | db.address
+   | db.contrib)*
+org.author =
+  db.orgname,
+  (db.orgdiv | db.affiliation | db.email | db.address | db.contrib)*
+credit.contentmodel = person.author | org.author
+author.role.attrib = role.attribute?
+local.author.attrib = empty
+author.attlist =
+  common.attributes,
+  common.linking.attributes,
+  author.role.attrib,
+  local.author.attrib
+db.author = element author { author.attlist, credit.contentmodel }
+authorgroup.role.attrib = role.attribute?
+local.authorgroup.attrib = empty
+authorgroup.attlist =
+  common.attributes,
+  common.linking.attributes,
+  authorgroup.role.attrib,
+  local.authorgroup.attrib
+db.authorgroup =
+  element authorgroup {
+    authorgroup.attlist, (db.author | db.editor | db.othercredit)+
+  }
+collab.role.attrib = role.attribute?
+local.collab.attrib = empty
+collab.attlist =
+  common.attributes,
+  common.linking.attributes,
+  collab.role.attrib,
+  local.collab.attrib
+db.collab =
+  element collab {
+    collab.attlist, (db.personname | db.orgname)+, db.affiliation*
+  }
+authorinitials.role.attrib = role.attribute?
+local.authorinitials.attrib = empty
+authorinitials.attlist =
+  common.attributes,
+  common.linking.attributes,
+  authorinitials.role.attrib,
+  local.authorinitials.attrib
+db.authorinitials =
+  element authorinitials { authorinitials.attlist, docbook.text }
+confgroup.role.attrib = role.attribute?
+local.confgroup.attrib = empty
+confgroup.attlist =
+  common.attributes,
+  common.linking.attributes,
+  confgroup.role.attrib,
+  local.confgroup.attrib
+db.confgroup =
+  element confgroup {
+    confgroup.attlist,
+    (db.confdates
+     | db.conftitle
+     | db.confnum
+     | db.confsponsor
+     | db.address)*
+  }
+confdates.role.attrib = role.attribute?
+local.confdates.attrib = empty
+confdates.attlist =
+  common.attributes,
+  common.linking.attributes,
+  confdates.role.attrib,
+  local.confdates.attrib
+db.confdates = element confdates { confdates.attlist, docbook.text }
+conftitle.role.attrib = role.attribute?
+local.conftitle.attrib = empty
+conftitle.attlist =
+  common.attributes,
+  common.linking.attributes,
+  conftitle.role.attrib,
+  local.conftitle.attrib
+db.conftitle = element conftitle { conftitle.attlist, docbook.text }
+confnum.role.attrib = role.attribute?
+local.confnum.attrib = empty
+confnum.attlist =
+  common.attributes,
+  common.linking.attributes,
+  confnum.role.attrib,
+  local.confnum.attrib
+db.confnum = element confnum { confnum.attlist, docbook.text }
+confsponsor.role.attrib = role.attribute?
+local.confsponsor.attrib = empty
+confsponsor.attlist =
+  common.attributes,
+  common.linking.attributes,
+  confsponsor.role.attrib,
+  local.confsponsor.attrib
+db.confsponsor =
+  element confsponsor { confsponsor.attlist, docbook.text }
+contractnum.role.attrib = role.attribute?
+local.contractnum.attrib = empty
+contractnum.attlist =
+  common.attributes,
+  common.linking.attributes,
+  contractnum.role.attrib,
+  local.contractnum.attrib
+db.contractnum =
+  element contractnum { contractnum.attlist, docbook.text }
+contractsponsor.role.attrib = role.attribute?
+local.contractsponsor.attrib = empty
+contractsponsor.attlist =
+  common.attributes,
+  common.linking.attributes,
+  contractsponsor.role.attrib,
+  local.contractsponsor.attrib
+db.contractsponsor =
+  element contractsponsor { contractsponsor.attlist, docbook.text }
+copyright.role.attrib = role.attribute?
+local.copyright.attrib = empty
+copyright.attlist =
+  common.attributes,
+  common.linking.attributes,
+  copyright.role.attrib,
+  local.copyright.attrib
+db.copyright =
+  element copyright { copyright.attlist, db.year+, db.holder* }
+year.role.attrib = role.attribute?
+local.year.attrib = empty
+year.attlist =
+  common.attributes,
+  common.linking.attributes,
+  year.role.attrib,
+  local.year.attrib
+db.year = element year { year.attlist, docbook.text }
+holder.role.attrib = role.attribute?
+local.holder.attrib = empty
+holder.attlist =
+  common.attributes,
+  common.linking.attributes,
+  holder.role.attrib,
+  local.holder.attrib
+db.holder = element holder { holder.attlist, docbook.text }
+date.role.attrib = role.attribute?
+local.date.attrib = empty
+date.attlist =
+  common.attributes,
+  common.linking.attributes,
+  date.role.attrib,
+  local.date.attrib
+db.date = element date { date.attlist, docbook.text }
+edition.role.attrib = role.attribute?
+local.edition.attrib = empty
+edition.attlist =
+  common.attributes,
+  common.linking.attributes,
+  edition.role.attrib,
+  local.edition.attrib
+db.edition = element edition { edition.attlist, docbook.text }
+editor.role.attrib = role.attribute?
+local.editor.attrib = empty
+editor.attlist =
+  common.attributes,
+  common.linking.attributes,
+  editor.role.attrib,
+  local.editor.attrib
+db.editor = element editor { editor.attlist, credit.contentmodel }
+biblioid.class.attrib = biblio.class.attrib
+biblioid.role.attrib = role.attribute?
+local.biblioid.attrib = empty
+biblioid.attlist =
+  common.attributes,
+  common.linking.attributes,
+  biblioid.role.attrib,
+  biblioid.class.attrib,
+  local.biblioid.attrib
+db.biblioid = element biblioid { biblioid.attlist, docbook.text }
+citebiblioid.class.attrib = biblio.class.attrib
+citebiblioid.role.attrib = role.attribute?
+local.citebiblioid.attrib = empty
+citebiblioid.attlist =
+  common.attributes,
+  common.linking.attributes,
+  citebiblioid.role.attrib,
+  citebiblioid.class.attrib,
+  local.citebiblioid.attrib
+db.citebiblioid =
+  element citebiblioid { citebiblioid.attlist, docbook.text }
+bibliosource.class.attrib = biblio.class.attrib
+bibliosource.role.attrib = role.attribute?
+local.bibliosource.attrib = empty
+bibliosource.attlist =
+  common.attributes,
+  common.linking.attributes,
+  bibliosource.role.attrib,
+  bibliosource.class.attrib,
+  local.bibliosource.attrib
+db.bibliosource =
+  element bibliosource { bibliosource.attlist, docbook.text }
+bibliorelation.class.attrib = biblio.class.attrib
+bibliorelation.type-enum.attribute =
+  attribute type {
+    "hasformat"
+    | "haspart"
+    | "hasversion"
+    | "isformatof"
+    | "ispartof"
+    | "isreferencedby"
+    | "isreplacedby"
+    | "isrequiredby"
+    | "isversionof"
+    | "othertype"
+    | "references"
+    | "replaces"
+    | "requires"
+  }?
+bibliorelation.type-other.attributes =
+  attribute type { "othertype" },
+  attribute othertype { xsd:NMTOKEN }
+bibliorelation.type.attrib =
+  bibliorelation.type-enum.attribute
+  | bibliorelation.type-other.attributes
+bibliorelation.role.attrib = role.attribute?
+local.bibliorelation.attrib = empty
+bibliorelation.attlist =
+  common.attributes,
+  common.linking.attributes,
+  bibliorelation.role.attrib,
+  bibliorelation.class.attrib,
+  bibliorelation.type.attrib,
+  local.bibliorelation.attrib
+db.bibliorelation =
+  element bibliorelation { bibliorelation.attlist, docbook.text }
+bibliocoverage.spatial-enum.attribute =
+  attribute spatial { "dcmipoint" | "iso3166" | "dcmibox" | "tgn" }
+bibliocoverage.spatial-other.attributes =
+  attribute spatial { "otherspatial" },
+  attribute otherspatial { xsd:NMTOKEN }
+bibliocoverage.spatial.attrs =
+  bibliocoverage.spatial-enum.attribute
+  | bibliocoverage.spatial-other.attributes
+bibliocoverage.temporal-enum.attribute =
+  attribute temporal { "dcmiperiod" | "w3c-dtf" }
+bibliocoverage.temporal-other.attributes =
+  attribute temporal { "othertemporal" },
+  attribute othertemporal { xsd:NMTOKEN }
+bibliocoverage.temporal.attrs =
+  bibliocoverage.temporal-enum.attribute
+  | bibliocoverage.temporal-other.attributes
+bibliocoverage.coverage.attrib =
+  (bibliocoverage.spatial.attrs | bibliocoverage.temporal.attrs)
+  | (bibliocoverage.spatial.attrs & bibliocoverage.temporal.attrs)
+bibliocoverage.role.attrib = role.attribute?
+local.bibliocoverage.attrib = empty
+bibliocoverage.attlist =
+  common.attributes,
+  common.linking.attributes,
+  bibliocoverage.role.attrib,
+  bibliocoverage.coverage.attrib,
+  local.bibliocoverage.attrib
+db.bibliocoverage =
+  element bibliocoverage { bibliocoverage.attlist, docbook.text }
+legalnotice.info = docbook.info.titleonly
+legalnotice.role.attrib = role.attribute?
+local.legalnotice.attrib = empty
+legalnotice.attlist =
+  common.attributes,
+  common.linking.attributes,
+  legalnotice.role.attrib,
+  local.legalnotice.attrib
+db.legalnotice =
+  element legalnotice { legalnotice.attlist, legalnotice.info, blocks+ }
+othercredit.class.attrib =
+  attribute class {
+    "copyeditor"
+    | "graphicdesigner"
+    | "other"
+    | "productioneditor"
+    | "technicaleditor"
+    | "translator"
+  }?
+othercredit.role.attrib = role.attribute?
+local.othercredit.attrib = empty
+othercredit.attlist =
+  common.attributes,
+  common.linking.attributes,
+  othercredit.role.attrib,
+  othercredit.class.attrib,
+  local.othercredit.attrib
+db.othercredit =
+  element othercredit { othercredit.attlist, credit.contentmodel }
+pagenums.role.attrib = role.attribute?
+local.pagenums.attrib = empty
+pagenums.attlist =
+  common.attributes,
+  common.linking.attributes,
+  pagenums.role.attrib,
+  local.pagenums.attrib
+db.pagenums = element pagenums { pagenums.attlist, docbook.text }
+contrib.role.attrib = role.attribute?
+local.contrib.attrib = empty
+contrib.attlist =
+  common.attributes,
+  common.linking.attributes,
+  contrib.role.attrib,
+  local.contrib.attrib
+db.contrib = element contrib { contrib.attlist, docbook.text }
+honorific.role.attrib = role.attribute?
+local.honorific.attrib = empty
+honorific.attlist =
+  common.attributes,
+  common.linking.attributes,
+  honorific.role.attrib,
+  local.honorific.attrib
+db.honorific = element honorific { honorific.attlist, docbook.text }
+firstname.role.attrib = role.attribute?
+local.firstname.attrib = empty
+firstname.attlist =
+  common.attributes,
+  common.linking.attributes,
+  firstname.role.attrib,
+  local.firstname.attrib
+db.firstname = element firstname { firstname.attlist, docbook.text }
+surname.role.attrib = role.attribute?
+local.surname.attrib = empty
+surname.attlist =
+  common.attributes,
+  common.linking.attributes,
+  surname.role.attrib,
+  local.surname.attrib
+db.surname = element surname { surname.attlist, docbook.text }
+lineage.role.attrib = role.attribute?
+local.lineage.attrib = empty
+lineage.attlist =
+  common.attributes,
+  common.linking.attributes,
+  lineage.role.attrib,
+  local.lineage.attrib
+db.lineage = element lineage { lineage.attlist, docbook.text }
+othername.role.attrib = role.attribute?
+local.othername.attrib = empty
+othername.attlist =
+  common.attributes,
+  common.linking.attributes,
+  othername.role.attrib,
+  local.othername.attrib
+db.othername = element othername { othername.attlist, docbook.text }
+printhistory.role.attrib = role.attribute?
+local.printhistory.attrib = empty
+printhistory.attlist =
+  common.attributes,
+  common.linking.attributes,
+  printhistory.role.attrib,
+  local.printhistory.attrib
+db.printhistory =
+  element printhistory { printhistory.attlist, para.blocks+ }
+productname.class.attrib =
+  attribute class { "copyright" | "registered" | "service" | "trade" }?
+productname.role.attrib = role.attribute?
+local.productname.attrib = empty
+productname.attlist =
+  common.attributes,
+  common.linking.attributes,
+  productname.role.attrib,
+  productname.class.attrib,
+  local.productname.attrib
+db.productname =
+  element productname { productname.attlist, docbook.text }
+productnumber.role.attrib = role.attribute?
+local.productnumber.attrib = empty
+productnumber.attlist =
+  common.attributes,
+  common.linking.attributes,
+  productnumber.role.attrib,
+  local.productnumber.attrib
+db.productnumber =
+  element productnumber { productnumber.attlist, docbook.text }
+pubdate.role.attrib = role.attribute?
+local.pubdate.attrib = empty
+pubdate.attlist =
+  common.attributes,
+  common.linking.attributes,
+  pubdate.role.attrib,
+  local.pubdate.attrib
+db.pubdate = element pubdate { pubdate.attlist, docbook.text }
+publisher.role.attrib = role.attribute?
+local.publisher.attrib = empty
+publisher.attlist =
+  common.attributes,
+  common.linking.attributes,
+  publisher.role.attrib,
+  local.publisher.attrib
+db.publisher =
+  element publisher { publisher.attlist, db.publishername, db.address* }
+publishername.role.attrib = role.attribute?
+local.publishername.attrib = empty
+publishername.attlist =
+  common.attributes,
+  common.linking.attributes,
+  publishername.role.attrib,
+  local.publishername.attrib
+db.publishername =
+  element publishername { publishername.attlist, docbook.text }
+releaseinfo.role.attrib = role.attribute?
+local.releaseinfo.attrib = empty
+releaseinfo.attlist =
+  common.attributes,
+  common.linking.attributes,
+  releaseinfo.role.attrib,
+  local.releaseinfo.attrib
+db.releaseinfo =
+  element releaseinfo { releaseinfo.attlist, docbook.text }
+revhistory.info = docbook.info.titleonly
+revhistory.role.attrib = role.attribute?
+local.revhistory.attrib = empty
+revhistory.attlist =
+  common.attributes,
+  common.linking.attributes,
+  revhistory.role.attrib,
+  local.revhistory.attrib
+db.revhistory =
+  element revhistory {
+    revhistory.attlist, revhistory.info, db.revision+
+  }
+revision.role.attrib = role.attribute?
+local.revision.attrib = empty
+revision.attlist =
+  common.attributes,
+  common.linking.attributes,
+  revision.role.attrib,
+  local.revision.attrib
+db.revision =
+  element revision {
+    revision.attlist,
+    db.revnumber,
+    db.date,
+    (db.authorinitials | db.author)*,
+    (db.revremark | db.revdescription)?
+  }
+revnumber.role.attrib = role.attribute?
+local.revnumber.attrib = empty
+revnumber.attlist =
+  common.attributes,
+  common.linking.attributes,
+  revnumber.role.attrib,
+  local.revnumber.attrib
+db.revnumber = element revnumber { revnumber.attlist, docbook.text }
+revremark.role.attrib = role.attribute?
+local.revremark.attrib = empty
+revremark.attlist =
+  common.attributes,
+  common.linking.attributes,
+  revremark.role.attrib,
+  local.revremark.attrib
+db.revremark = element revremark { revremark.attlist, docbook.text }
+revdescription.role.attrib = role.attribute?
+local.revdescription.attrib = empty
+revdescription.attlist =
+  common.attributes,
+  common.linking.attributes,
+  revdescription.role.attrib,
+  local.revdescription.attrib
+db.revdescription =
+  element revdescription { revdescription.attlist, blocks* }
+seriesvolnums.role.attrib = role.attribute?
+local.seriesvolnums.attrib = empty
+seriesvolnums.attlist =
+  common.attributes,
+  common.linking.attributes,
+  seriesvolnums.role.attrib,
+  local.seriesvolnums.attrib
+db.seriesvolnums =
+  element seriesvolnums { seriesvolnums.attlist, docbook.text }
+volumenum.role.attrib = role.attribute?
+local.volumenum.attrib = empty
+volumenum.attlist =
+  common.attributes,
+  common.linking.attributes,
+  volumenum.role.attrib,
+  local.volumenum.attrib
+db.volumenum = element volumenum { volumenum.attlist, docbook.text }
+issuenum.role.attrib = role.attribute?
+local.issuenum.attrib = empty
+issuenum.attlist =
+  common.attributes,
+  common.linking.attributes,
+  issuenum.role.attrib,
+  local.issuenum.attrib
+db.issuenum = element issuenum { issuenum.attlist, docbook.text }
+accel.role.attrib = role.attribute?
+local.accel.attrib = empty
+accel.attlist =
+  common.attributes,
+  common.linking.attributes,
+  accel.role.attrib,
+  local.accel.attrib
+db.accel = element accel { accel.attlist, docbook.text }
+application.class.attrib = attribute class { "hardware" | "software" }?
+application.role.attrib = role.attribute?
+local.application.attrib = empty
+application.attlist =
+  common.attributes,
+  common.linking.attributes,
+  application.role.attrib,
+  application.class.attrib,
+  local.application.attrib
+db.application =
+  element application { application.attlist, docbook.text }
+classname.role.attrib = role.attribute?
+local.classname.attrib = empty
+classname.attlist =
+  common.attributes,
+  common.linking.attributes,
+  classname.role.attrib,
+  local.classname.attrib
+db.classname = element classname { classname.attlist, docbook.text }
+command.role.attrib = role.attribute?
+local.command.attrib = empty
+command.attlist =
+  common.attributes,
+  common.linking.attributes,
+  command.role.attrib,
+  local.command.attrib
+db.command = element command { command.attlist, inlines* }
+computeroutput.inlines = (inlines | db.co) | db.co
+computeroutput.role.attrib = role.attribute?
+local.computeroutput.attrib = empty
+computeroutput.attlist =
+  common.attributes,
+  common.linking.attributes,
+  computeroutput.role.attrib,
+  local.computeroutput.attrib
+db.computeroutput =
+  element computeroutput {
+    computeroutput.attlist, computeroutput.inlines*
+  }
+database.class.attrib =
+  attribute class {
+    "altkey"
+    | "constraint"
+    | "datatype"
+    | "field"
+    | "foreignkey"
+    | "group"
+    | "index"
+    | "key1"
+    | "key2"
+    | "name"
+    | "primarykey"
+    | "procedure"
+    | "record"
+    | "rule"
+    | "secondarykey"
+    | "table"
+    | "user"
+    | "view"
+  }?
+database.role.attrib = role.attribute?
+local.database.attrib = empty
+database.attlist =
+  common.attributes,
+  common.linking.attributes,
+  database.role.attrib,
+  database.class.attrib,
+  local.database.attrib
+db.database = element database { database.attlist, docbook.text }
+email.role.attrib = role.attribute?
+local.email.attrib = empty
+email.attlist =
+  common.attributes,
+  common.linking.attributes,
+  email.role.attrib,
+  local.email.attrib
+db.email = element email { email.attlist, docbook.text }
+envar.role.attrib = role.attribute?
+local.envar.attrib = empty
+envar.attlist =
+  common.attributes,
+  common.linking.attributes,
+  envar.role.attrib,
+  local.envar.attrib
+db.envar = element envar { envar.attlist, docbook.text }
+errorcode.role.attrib = role.attribute?
+local.errorcode.attrib = empty
+errorcode.attlist =
+  common.attributes,
+  common.linking.attributes,
+  errorcode.role.attrib,
+  local.errorcode.attrib
+db.errorcode = element errorcode { errorcode.attlist, docbook.text }
+errorname.role.attrib = role.attribute?
+local.errorname.attrib = empty
+errorname.attlist =
+  common.attributes,
+  common.linking.attributes,
+  errorname.role.attrib,
+  local.errorname.attrib
+db.errorname = element errorname { errorname.attlist, docbook.text }
+errortext.role.attrib = role.attribute?
+local.errortext.attrib = empty
+errortext.attlist =
+  common.attributes,
+  common.linking.attributes,
+  errortext.role.attrib,
+  local.errortext.attrib
+db.errortext = element errortext { errortext.attlist, docbook.text }
+errortype.role.attrib = role.attribute?
+local.errortype.attrib = empty
+errortype.attlist =
+  common.attributes,
+  common.linking.attributes,
+  errortype.role.attrib,
+  local.errortype.attrib
+db.errortype = element errortype { errortype.attlist, docbook.text }
+filename.path.attrib = attribute path { text }?
+filename.class.attrib =
+  attribute class {
+    "devicefile"
+    | "directory"
+    | "extension"
+    | "headerfile"
+    | "libraryfile"
+    | "partition"
+    | "symlink"
+  }?
+filename.role.attrib = role.attribute?
+local.filename.attrib = empty
+filename.attlist =
+  common.attributes,
+  common.linking.attributes,
+  filename.role.attrib,
+  filename.path.attrib,
+  filename.class.attrib,
+  local.filename.attrib
+db.filename = element filename { filename.attlist, docbook.text }
+function.role.attrib = role.attribute?
+local.function.attrib = empty
+function.attlist =
+  common.attributes,
+  common.linking.attributes,
+  function.role.attrib,
+  local.function.attrib
+db.function = element function { function.attlist, docbook.text }
+guibutton.role.attrib = role.attribute?
+local.guibutton.attrib = empty
+guibutton.attlist =
+  common.attributes,
+  common.linking.attributes,
+  guibutton.role.attrib,
+  local.guibutton.attrib
+db.guibutton =
+  element guibutton { guibutton.attlist, (docbook.text | db.accel)* }
+guiicon.role.attrib = role.attribute?
+local.guiicon.attrib = empty
+guiicon.attlist =
+  common.attributes,
+  common.linking.attributes,
+  guiicon.role.attrib,
+  local.guiicon.attrib
+db.guiicon =
+  element guiicon { guiicon.attlist, (docbook.text | db.accel)* }
+guilabel.role.attrib = role.attribute?
+local.guilabel.attrib = empty
+guilabel.attlist =
+  common.attributes,
+  common.linking.attributes,
+  guilabel.role.attrib,
+  local.guilabel.attrib
+db.guilabel =
+  element guilabel { guilabel.attlist, (docbook.text | db.accel)* }
+guimenu.role.attrib = role.attribute?
+local.guimenu.attrib = empty
+guimenu.attlist =
+  common.attributes,
+  common.linking.attributes,
+  guimenu.role.attrib,
+  local.guimenu.attrib
+db.guimenu =
+  element guimenu { guimenu.attlist, (docbook.text | db.accel)* }
+guimenuitem.role.attrib = role.attribute?
+local.guimenuitem.attrib = empty
+guimenuitem.attlist =
+  common.attributes,
+  common.linking.attributes,
+  guimenuitem.role.attrib,
+  local.guimenuitem.attrib
+db.guimenuitem =
+  element guimenuitem {
+    guimenuitem.attlist, (docbook.text | db.accel)*
+  }
+guisubmenu.role.attrib = role.attribute?
+local.guisubmenu.attrib = empty
+guisubmenu.attlist =
+  common.attributes,
+  common.linking.attributes,
+  guisubmenu.role.attrib,
+  local.guisubmenu.attrib
+db.guisubmenu =
+  element guisubmenu { guisubmenu.attlist, (docbook.text | db.accel)* }
+hardware.role.attrib = role.attribute?
+local.hardware.attrib = empty
+hardware.attlist =
+  common.attributes,
+  common.linking.attributes,
+  hardware.role.attrib,
+  local.hardware.attrib
+db.hardware = element hardware { hardware.attlist, docbook.text }
+keycap.function-enum.attribute =
+  attribute function {
+    "alt"
+    | "backspace"
+    | "command"
+    | "control"
+    | "delete"
+    | "down"
+    | "end"
+    | "enter"
+    | "escape"
+    | "home"
+    | "insert"
+    | "left"
+    | "meta"
+    | "option"
+    | "pagedown"
+    | "pageup"
+    | "right"
+    | "shift"
+    | "space"
+    | "tab"
+    | "up"
+  }?
+keycap.function-other.attributes =
+  attribute function { "other" },
+  attribute otherfunction { text }
+keycap.function.attrib =
+  keycap.function-enum.attribute | keycap.function-other.attributes
+keycap.role.attrib = role.attribute?
+local.keycap.attrib = empty
+keycap.attlist =
+  common.attributes,
+  common.linking.attributes,
+  keycap.role.attrib,
+  keycap.function.attrib,
+  local.keycap.attrib
+db.keycap = element keycap { keycap.attlist, docbook.text }
+keycode.role.attrib = role.attribute?
+local.keycode.attrib = empty
+keycode.attlist =
+  common.attributes,
+  common.linking.attributes,
+  keycode.role.attrib,
+  local.keycode.attrib
+db.keycode = element keycode { keycode.attlist, docbook.text }
+keycombo.action-enum.attribute =
+  attribute action {
+    "click" | "double-click" | "press" | "seq" | "simul"
+  }?
+keycombo.action-other.attributes =
+  attribute action { "other" },
+  attribute otheraction { text }
+keycombo.action.attrib =
+  keycombo.action-enum.attribute | keycombo.action-other.attributes
+keycombo.role.attrib = role.attribute?
+local.keycombo.attrib = empty
+keycombo.attlist =
+  common.attributes,
+  common.linking.attributes,
+  keycombo.role.attrib,
+  keycombo.action.attrib,
+  local.keycombo.attrib
+db.keycombo =
+  element keycombo {
+    keycombo.attlist,
+    (db.keycap | db.keycombo | db.keysym | db.mousebutton)+
+  }
+keysym.role.attrib = role.attribute?
+local.keysym.attrib = empty
+keysym.attlist =
+  common.attributes,
+  common.linking.attributes,
+  keysym.role.attrib,
+  local.keysym.attrib
+db.keysym = element keysym { keysym.attlist, docbook.text }
+lineannotation.role.attrib = role.attribute?
+local.lineannotation.attrib = empty
+lineannotation.attlist =
+  common.attributes,
+  common.linking.attributes,
+  lineannotation.role.attrib,
+  local.lineannotation.attrib
+db.lineannotation =
+  element lineannotation { lineannotation.attlist, inlines* }
+literal.role.attrib = role.attribute?
+local.literal.attrib = empty
+literal.attlist =
+  common.attributes,
+  common.linking.attributes,
+  literal.role.attrib,
+  local.literal.attrib
+db.literal = element literal { literal.attlist, inlines* }
+code.language.attrib = attribute language { text }?
+code.role.attrib = role.attribute?
+local.code.attrib = empty
+code.attlist =
+  common.attributes,
+  common.linking.attributes,
+  code.role.attrib,
+  code.language.attrib,
+  local.code.attrib
+db.code = element code { code.attlist, inlines* }
+constant.class.attrib = attribute class { "limit" }?
+constant.role.attrib = role.attribute?
+local.constant.attrib = empty
+constant.attlist =
+  common.attributes,
+  common.linking.attributes,
+  constant.role.attrib,
+  constant.class.attrib,
+  local.constant.attrib
+db.constant = element constant { constant.attlist, docbook.text }
+varname.role.attrib = role.attribute?
+local.varname.attrib = empty
+varname.attlist =
+  common.attributes,
+  common.linking.attributes,
+  varname.role.attrib,
+  local.varname.attrib
+db.varname = element varname { varname.attlist, docbook.text }
+markup.role.attrib = role.attribute?
+local.markup.attrib = empty
+markup.attlist =
+  common.attributes,
+  common.linking.attributes,
+  markup.role.attrib,
+  local.markup.attrib
+db.markup = element markup { markup.attlist, docbook.text }
+menuchoice.role.attrib = role.attribute?
+local.menuchoice.attrib = empty
+menuchoice.attlist =
+  common.attributes,
+  common.linking.attributes,
+  menuchoice.role.attrib,
+  local.menuchoice.attrib
+db.menuchoice =
+  element menuchoice {
+    menuchoice.attlist,
+    db.shortcut?,
+    (db.guibutton
+     | db.guiicon
+     | db.guilabel
+     | db.guimenu
+     | db.guimenuitem
+     | db.guisubmenu)+
+  }
+shortcut.action.attrib = keycombo.action.attrib
+shortcut.role.attrib = role.attribute?
+local.shortcut.attrib = empty
+shortcut.attlist =
+  common.attributes,
+  common.linking.attributes,
+  shortcut.role.attrib,
+  shortcut.action.attrib,
+  local.shortcut.attrib
+db.shortcut =
+  element shortcut {
+    shortcut.attlist,
+    (db.keycap | db.keycombo | db.keysym | db.mousebutton)+
+  }
+mousebutton.role.attrib = role.attribute?
+local.mousebutton.attrib = empty
+mousebutton.attlist =
+  common.attributes,
+  common.linking.attributes,
+  mousebutton.role.attrib,
+  local.mousebutton.attrib
+db.mousebutton =
+  element mousebutton { mousebutton.attlist, docbook.text }
+option.role.attrib = role.attribute?
+local.option.attrib = empty
+option.attlist =
+  common.attributes,
+  common.linking.attributes,
+  option.role.attrib,
+  local.option.attrib
+db.option = element option { option.attlist, docbook.text }
+optional.role.attrib = role.attribute?
+local.optional.attrib = empty
+optional.attlist =
+  common.attributes,
+  common.linking.attributes,
+  optional.role.attrib,
+  local.optional.attrib
+db.optional = element optional { optional.attlist, inlines* }
+parameter.class.attrib =
+  attribute class { "command" | "function" | "option" }?
+parameter.role.attrib = role.attribute?
+local.parameter.attrib = empty
+parameter.attlist =
+  common.attributes,
+  common.linking.attributes,
+  parameter.role.attrib,
+  parameter.class.attrib,
+  local.parameter.attrib
+db.parameter = element parameter { parameter.attlist, docbook.text }
+prompt.inlines = (docbook.text | db.co) | db.co
+prompt.role.attrib = role.attribute?
+local.prompt.attrib = empty
+prompt.attlist =
+  common.attributes,
+  common.linking.attributes,
+  prompt.role.attrib,
+  local.prompt.attrib
+db.prompt = element prompt { prompt.attlist, prompt.inlines* }
+replaceable.class.attrib =
+  attribute class { "command" | "function" | "option" | "parameter" }?
+replaceable.role.attrib = role.attribute?
+local.replaceable.attrib = empty
+replaceable.attlist =
+  common.attributes,
+  common.linking.attributes,
+  replaceable.role.attrib,
+  replaceable.class.attrib,
+  local.replaceable.attrib
+db.replaceable =
+  element replaceable { replaceable.attlist, (docbook.text | db.co)* }
+returnvalue.role.attrib = role.attribute?
+local.returnvalue.attrib = empty
+returnvalue.attlist =
+  common.attributes,
+  common.linking.attributes,
+  returnvalue.role.attrib,
+  local.returnvalue.attrib
+db.returnvalue =
+  element returnvalue { returnvalue.attlist, docbook.text }
+xmltag.class.attrib =
+  attribute class {
+    "attribute"
+    | "attvalue"
+    | "element"
+    | "emptytag"
+    | "endtag"
+    | "genentity"
+    | "numcharref"
+    | "paramentity"
+    | "pi"
+    | "sgmlcomment"
+    | "starttag"
+    | "xmlpi"
+  }?
+xmltag.role.attrib = role.attribute?
+local.xmltag.attrib = empty
+xmltag.attlist =
+  common.attributes,
+  common.linking.attributes,
+  xmltag.role.attrib,
+  xmltag.class.attrib,
+  local.xmltag.attrib
+db.xmltag = element xmltag { xmltag.attlist, docbook.text }
+symbol.class.attrib = attribute class { "limit" }?
+symbol.role.attrib = role.attribute?
+local.symbol.attrib = empty
+symbol.attlist =
+  common.attributes,
+  common.linking.attributes,
+  symbol.role.attrib,
+  symbol.class.attrib,
+  local.symbol.attrib
+db.symbol = element symbol { symbol.attlist, docbook.text }
+systemitem.class.attrib =
+  attribute class {
+    "daemon"
+    | "domainname"
+    | "etheraddress"
+    | "event"
+    | "eventhandler"
+    | "filesystem"
+    | "fqdomainname"
+    | "groupname"
+    | "ipaddress"
+    | "library"
+    | "macro"
+    | "netmask"
+    | "newsgroup"
+    | "osname"
+    | "process"
+    | "resource"
+    | "server"
+    | "service"
+    | "systemname"
+    | "username"
+  }?
+systemitem.inlines = (docbook.text | db.co) | db.co
+systemitem.role.attrib = role.attribute?
+local.systemitem.attrib = empty
+systemitem.attlist =
+  common.attributes,
+  common.linking.attributes,
+  systemitem.role.attrib,
+  systemitem.class.attrib,
+  local.systemitem.attrib
+db.systemitem =
+  element systemitem { systemitem.attlist, systemitem.inlines* }
+uri.type.attrib = attribute type { text }?
+uri.role.attrib = role.attribute?
+local.uri.attrib = empty
+uri.attlist =
+  common.attributes,
+  common.linking.attributes,
+  uri.role.attrib,
+  uri.type.attrib,
+  local.uri.attrib
+db.uri = element uri { uri.attlist, docbook.text }
+token.role.attrib = role.attribute?
+local.token.attrib = empty
+token.attlist =
+  common.attributes,
+  common.linking.attributes,
+  token.role.attrib,
+  local.token.attrib
+db.token = element token { token.attlist, docbook.text }
+type.role.attrib = role.attribute?
+local.type.attrib = empty
+type.attlist =
+  common.attributes,
+  common.linking.attributes,
+  type.role.attrib,
+  local.type.attrib
+db.type = element type { type.attlist, docbook.text }
+userinput.role.attrib = role.attribute?
+local.userinput.attrib = empty
+userinput.attlist =
+  common.attributes,
+  common.linking.attributes,
+  userinput.role.attrib,
+  local.userinput.attrib
+db.userinput =
+  element userinput { userinput.attlist, (inlines | db.co)* }
+abbrev.role.attrib = role.attribute?
+local.abbrev.attrib = empty
+abbrev.attlist =
+  common.attributes,
+  common.linking.attributes,
+  abbrev.role.attrib,
+  local.abbrev.attrib
+db.abbrev =
+  element abbrev {
+    abbrev.attlist,
+    (docbook.text | db.superscript | db.subscript | db.trademark)*
+  }
+acronym.role.attrib = role.attribute?
+local.acronym.attrib = empty
+acronym.attlist =
+  common.attributes,
+  common.linking.attributes,
+  acronym.role.attrib,
+  local.acronym.attrib
+db.acronym =
+  element acronym {
+    acronym.attlist,
+    (docbook.text | db.superscript | db.subscript | db.trademark)*
+  }
+citation.role.attrib = role.attribute?
+local.citation.attrib = empty
+citation.attlist =
+  common.attributes,
+  common.linking.attributes,
+  citation.role.attrib,
+  local.citation.attrib
+db.citation = element citation { citation.attlist, docbook.text }
+citerefentry.role.attrib = role.attribute?
+local.citerefentry.attrib = empty
+citerefentry.attlist =
+  common.attributes,
+  common.linking.attributes,
+  citerefentry.role.attrib,
+  local.citerefentry.attrib
+db.citerefentry =
+  element citerefentry {
+    citerefentry.attlist, db.refentrytitle, db.manvolnum?
+  }
+refentrytitle.role.attrib = role.attribute?
+local.refentrytitle.attrib = empty
+refentrytitle.attlist =
+  common.attributes,
+  common.linking.attributes,
+  refentrytitle.role.attrib,
+  local.refentrytitle.attrib
+db.refentrytitle =
+  element refentrytitle { refentrytitle.attlist, inlines* }
+manvolnum.role.attrib = role.attribute?
+local.manvolnum.attrib = empty
+manvolnum.attlist =
+  common.attributes,
+  common.linking.attributes,
+  manvolnum.role.attrib,
+  local.manvolnum.attrib
+db.manvolnum = element manvolnum { manvolnum.attlist, docbook.text }
+citetitle.pubwork.attrib =
+  attribute pubwork {
+    "article"
+    | "bbs"
+    | "book"
+    | "cdrom"
+    | "chapter"
+    | "dvd"
+    | "emailmessage"
+    | "gopher"
+    | "journal"
+    | "manuscript"
+    | "newsposting"
+    | "part"
+    | "refentry"
+    | "section"
+    | "series"
+    | "set"
+    | "webpage"
+    | "wiki"
+  }?
+citetitle.role.attrib = role.attribute?
+local.citetitle.attrib = empty
+citetitle.attlist =
+  common.attributes,
+  common.linking.attributes,
+  citetitle.role.attrib,
+  citetitle.pubwork.attrib,
+  local.citetitle.attrib
+db.citetitle = element citetitle { citetitle.attlist, inlines* }
+emphasis.role.attrib = role.attribute?
+local.emphasis.attrib = empty
+emphasis.attlist =
+  common.attributes,
+  common.linking.attributes,
+  emphasis.role.attrib,
+  local.emphasis.attrib
+db.emphasis = element emphasis { emphasis.attlist, inlines* }
+firstterm.baseform.attrib = glossterm.baseform.attrib
+firstterm.role.attrib = role.attribute?
+local.firstterm.attrib = empty
+firstterm.attlist =
+  common.attributes,
+  common.linking.attributes,
+  firstterm.role.attrib,
+  firstterm.baseform.attrib,
+  local.firstterm.attrib
+db.firstterm =
+  element firstterm {
+    firstterm.attlist
+    >> s:rule [
+         context = "firstterm[@linkend]"
+         "\x{a}" ~
+         "            "
+         s:assert [
+           test = "name(//*[@id=current()/@linkend]) = 'glossentry'"
+           "@linkend on firstterm must point to a glossentry."
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    inlines*
+  }
+foreignphrase.role.attrib = role.attribute?
+local.foreignphrase.attrib = empty
+foreignphrase.attlist =
+  common.attributes,
+  common.linking.attributes,
+  foreignphrase.role.attrib,
+  local.foreignphrase.attrib
+db.foreignphrase =
+  element foreignphrase { foreignphrase.attlist, inlines* }
+glossterm.baseform.attrib = attribute baseform { text }?
+glossterm.role.attrib = role.attribute?
+local.glossterm.attrib = empty
+glossterm.attlist =
+  common.attributes,
+  common.linking.attributes,
+  glossterm.role.attrib,
+  glossterm.baseform.attrib,
+  local.glossterm.attrib
+db.glossterm =
+  element glossterm {
+    glossterm.attlist
+    >> s:rule [
+         context = "glossterm[@linkend]"
+         "\x{a}" ~
+         "            "
+         s:assert [
+           test = "name(//*[@id=current()/@linkend]) = 'glossentry'"
+           "@linkend on glossterm must point to a glossentry."
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    inlines*
+  }
+phrase.role.attrib = role.attribute?
+local.phrase.attrib = empty
+phrase.attlist =
+  common.attributes,
+  common.linking.attributes,
+  phrase.role.attrib,
+  local.phrase.attrib
+db.phrase = element phrase { phrase.attlist, inlines* }
+quote.role.attrib = role.attribute?
+local.quote.attrib = empty
+quote.attlist =
+  common.attributes,
+  common.linking.attributes,
+  quote.role.attrib,
+  local.quote.attrib
+db.quote = element quote { quote.attlist, inlines* }
+subscript.role.attrib = role.attribute?
+local.subscript.attrib = empty
+subscript.attlist =
+  common.attributes,
+  common.linking.attributes,
+  subscript.role.attrib,
+  local.subscript.attrib
+db.subscript = element subscript { subscript.attlist, docbook.text }
+superscript.role.attrib = role.attribute?
+local.superscript.attrib = empty
+superscript.attlist =
+  common.attributes,
+  common.linking.attributes,
+  superscript.role.attrib,
+  local.superscript.attrib
+db.superscript =
+  element superscript { superscript.attlist, docbook.text }
+trademark.class.attrib =
+  attribute class { "copyright" | "registered" | "service" | "trade" }?
+trademark.role.attrib = role.attribute?
+local.trademark.attrib = empty
+trademark.attlist =
+  common.attributes,
+  common.linking.attributes,
+  trademark.role.attrib,
+  trademark.class.attrib,
+  local.trademark.attrib
+db.trademark = element trademark { trademark.attlist, docbook.text }
+wordasword.role.attrib = role.attribute?
+local.wordasword.attrib = empty
+wordasword.attlist =
+  common.attributes,
+  common.linking.attributes,
+  wordasword.role.attrib,
+  local.wordasword.attrib
+db.wordasword = element wordasword { wordasword.attlist, docbook.text }
+footnoteref.linkend.attrib = linkend.attribute
+footnoteref.label.attrib = attribute label { text }?
+footnoteref.role.attrib = role.attribute?
+local.footnoteref.attrib = empty
+footnoteref.attlist =
+  common.attributes,
+  footnoteref.role.attrib,
+  footnoteref.linkend.attrib,
+  footnoteref.label.attrib,
+  local.footnoteref.attrib
+db.footnoteref =
+  element footnoteref {
+    footnoteref.attlist
+    >> s:rule [
+         context = "footnoteref"
+         "\x{a}" ~
+         "            "
+         s:assert [
+           test = "name(//*[@id=current()/@linkend]) = 'footnote'"
+           "@linkend on footnoteref must point to a footnote."
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    empty
+  }
+xref.xrefstyle.attrib = attribute xrefstyle { text }?
+xref.endterm.attrib = attribute endterm { xsd:IDREF }?
+xref.role.attrib = role.attribute?
+local.xref.attrib = empty
+xref.attlist =
+  common.attributes,
+  common.linking.attributes.req,
+  xref.role.attrib,
+  xref.xrefstyle.attrib,
+  xref.endterm.attrib,
+  local.xref.attrib
+db.xref = element xref { xref.attlist, empty }
+anchor.role.attrib = role.attribute?
+local.anchor.attrib = empty
+anchor.attlist =
+  common.attrib.idreq, anchor.role.attrib, local.anchor.attrib
+db.anchor = element anchor { anchor.attlist, empty }
+indexterm.singular.significance.attrib = significance.attribute?
+indexterm.startofrange.significance.attrib = significance.attribute?
+indexterm.endofrange.significance.attrib = significance.attribute?
+indexterm.singular.zone.attrib = zone.attribute?
+indexterm.startofrange.zone.attrib = zone.attribute?
+indexterm.endofrange.zone.attrib = zone.attribute?
+indexterm.singular.pagenum.attrib = pagenum.attribute?
+indexterm.startofrange.pagenum.attrib = pagenum.attribute?
+indexterm.endofrange.pagenum.attrib = pagenum.attribute?
+indexterm.singular.scope.attrib = scope.attribute?
+indexterm.startofrange.scope.attrib = scope.attribute?
+indexterm.endofrange.scope.attrib = scope.attribute?
+indexterm.singular.class.attrib = attribute class { "singular" }?
+indexterm.startofrange.class.attrib = attribute class { "startofrange" }
+indexterm.endofrange.class.attrib = attribute class { "endofrange" }
+indexterm.endofrange.startref.attrib = attribute startref { xsd:IDREF }
+indexterm.contentmodel =
+  db.primary?,
+  ((db.secondary,
+    ((db.tertiary, (db.see | db.seealso+)?)
+     | db.see
+     | db.seealso+)?)
+   | db.see
+   | db.seealso+)?
+indexterm.singular.role.attrib = role.attribute?
+local.indexterm.singular.attrib = empty
+indexterm.singular.attlist =
+  common.attributes,
+  common.linking.attributes,
+  indexterm.singular.role.attrib,
+  indexterm.singular.significance.attrib,
+  indexterm.singular.zone.attrib,
+  indexterm.singular.pagenum.attrib,
+  indexterm.singular.scope.attrib,
+  indexterm.singular.class.attrib,
+  local.indexterm.singular.attrib
+indexterm.singular =
+  element indexterm {
+    indexterm.singular.attlist, indexterm.contentmodel
+  }
+indexterm.startofrange.role.attrib = role.attribute?
+local.indexterm.startofrange.attrib = empty
+indexterm.startofrange.attlist =
+  common.attributes,
+  common.linking.attributes,
+  indexterm.startofrange.role.attrib,
+  indexterm.startofrange.significance.attrib,
+  indexterm.startofrange.zone.attrib,
+  indexterm.startofrange.pagenum.attrib,
+  indexterm.startofrange.scope.attrib,
+  indexterm.startofrange.class.attrib,
+  local.indexterm.startofrange.attrib
+indexterm.startofrange =
+  element indexterm {
+    indexterm.startofrange.attlist, indexterm.contentmodel
+  }
+indexterm.endofrange.role.attrib = role.attribute?
+local.indexterm.endofrange.attrib = empty
+indexterm.endofrange.attlist =
+  common.attributes,
+  common.linking.attributes,
+  indexterm.endofrange.role.attrib,
+  indexterm.endofrange.significance.attrib,
+  indexterm.endofrange.zone.attrib,
+  indexterm.endofrange.pagenum.attrib,
+  indexterm.endofrange.scope.attrib,
+  indexterm.endofrange.class.attrib,
+  indexterm.endofrange.startref.attrib,
+  local.indexterm.endofrange.attrib
+indexterm.endofrange =
+  element indexterm {
+    indexterm.endofrange.attlist, indexterm.contentmodel
+  }
+db.indexterm =
+  indexterm.singular | indexterm.startofrange | indexterm.endofrange
+sortas.attribute = attribute sortas { text }?
+primary.sortas.attrib = sortas.attribute?
+primary.role.attrib = role.attribute?
+local.primary.attrib = empty
+primary.attlist =
+  common.attributes,
+  common.linking.attributes,
+  primary.role.attrib,
+  primary.sortas.attrib,
+  local.primary.attrib
+db.primary = element primary { primary.attlist, inlines* }
+secondary.sortas.attrib = sortas.attribute?
+secondary.role.attrib = role.attribute?
+local.secondary.attrib = empty
+secondary.attlist =
+  common.attributes,
+  common.linking.attributes,
+  secondary.role.attrib,
+  secondary.sortas.attrib,
+  local.secondary.attrib
+db.secondary = element secondary { secondary.attlist, inlines* }
+tertiary.sortas.attrib = sortas.attribute?
+tertiary.role.attrib = role.attribute?
+local.tertiary.attrib = empty
+tertiary.attlist =
+  common.attributes,
+  common.linking.attributes,
+  tertiary.role.attrib,
+  tertiary.sortas.attrib,
+  local.tertiary.attrib
+db.tertiary = element tertiary { tertiary.attlist, inlines* }
+see.role.attrib = role.attribute?
+local.see.attrib = empty
+see.attlist =
+  common.attributes,
+  common.linking.attributes,
+  see.role.attrib,
+  local.see.attrib
+db.see = element see { see.attlist, inlines* }
+seealso.role.attrib = role.attribute?
+local.seealso.attrib = empty
+seealso.attlist =
+  common.attributes,
+  common.linking.attributes,
+  seealso.role.attrib,
+  local.seealso.attrib
+db.seealso = element seealso { seealso.attlist, inlines* }
+task.info = docbook.info.titleonly
+task.role.attrib = role.attribute?
+local.task.attrib = empty
+task.attlist =
+  common.attributes,
+  common.linking.attributes,
+  task.role.attrib,
+  local.task.attrib
+db.task =
+  element task {
+    task.attlist,
+    task.info,
+    db.tasksummary?,
+    db.taskprerequisites?,
+    db.procedure,
+    db.example*,
+    db.taskrelated?
+  }
+tasksummary.info = docbook.info.titleonly
+tasksummary.role.attrib = role.attribute?
+local.tasksummary.attrib = empty
+tasksummary.attlist =
+  common.attributes,
+  common.linking.attributes,
+  tasksummary.role.attrib,
+  local.tasksummary.attrib
+db.tasksummary =
+  element tasksummary { tasksummary.attlist, tasksummary.info, blocks+ }
+taskprerequisites.info = docbook.info.titleonly
+taskprerequisites.role.attrib = role.attribute?
+local.taskprerequisites.attrib = empty
+taskprerequisites.attlist =
+  common.attributes,
+  common.linking.attributes,
+  taskprerequisites.role.attrib,
+  local.taskprerequisites.attrib
+db.taskprerequisites =
+  element taskprerequisites {
+    taskprerequisites.attlist, taskprerequisites.info, blocks+
+  }
+taskrelated.info = docbook.info.titleonly
+taskrelated.role.attrib = role.attribute?
+local.taskrelated.attrib = empty
+taskrelated.attlist =
+  common.attributes,
+  common.linking.attributes,
+  taskrelated.role.attrib,
+  local.taskrelated.attrib
+db.taskrelated =
+  element taskrelated { taskrelated.attlist, taskrelated.info, blocks+ }
+area.units.enumtype.attribute =
+  attribute units {
+    "calspair" | "linecolumn" | "linecolumnpair" | "linerange"
+  }?
+area.units.othertype.attributes =
+  attribute units { "other" },
+  attribute otherunits { xsd:NMTOKEN }
+area.units.attribute =
+  area.units.enumtype.attribute | area.units.othertype.attributes
+calloutlist.info = docbook.info.titleonly
+calloutlist.role.attrib = role.attribute?
+local.calloutlist.attrib = empty
+calloutlist.attlist =
+  common.attributes,
+  common.linking.attributes,
+  calloutlist.role.attrib,
+  local.calloutlist.attrib
+db.calloutlist =
+  element calloutlist {
+    calloutlist.attlist, calloutlist.info, blocks*, db.callout+
+  }
+callout.arearefs.attrib = attribute arearefs { xsd:IDREFS }
+callout.role.attrib = role.attribute?
+local.callout.attrib = empty
+callout.attlist =
+  common.attributes,
+  common.linking.attributes,
+  callout.role.attrib,
+  callout.arearefs.attrib,
+  local.callout.attrib
+db.callout = element callout { callout.attlist, blocks+ }
+programlistingco.info = docbook.info.titleforbidden
+programlistingco.role.attrib = role.attribute?
+local.programlistingco.attrib = empty
+programlistingco.attlist =
+  common.attributes,
+  common.linking.attributes,
+  programlistingco.role.attrib,
+  local.programlistingco.attrib
+db.programlistingco =
+  element programlistingco {
+    programlistingco.attlist,
+    programlistingco.info,
+    db.areaspec,
+    db.programlisting,
+    db.calloutlist*
+  }
+areaspec.units.attrib = area.units.attribute
+areaspec.role.attrib = role.attribute?
+local.areaspec.attrib = empty
+areaspec.attlist =
+  common.attributes,
+  common.linking.attributes,
+  areaspec.role.attrib,
+  areaspec.units.attrib,
+  local.areaspec.attrib
+db.areaspec =
+  element areaspec { areaspec.attlist, (db.area | db.areaset)+ }
+area.units.attrib = area.units.attribute
+area.linkends.attrib = linkends.attribute?
+area.label.attrib = attribute label { text }?
+area.coords.attrib = attribute coords { text }
+area.role.attrib = role.attribute?
+local.area.attrib = empty
+area.attlist =
+  common.attrib.idreq,
+  area.role.attrib,
+  area.units.attrib,
+  area.linkends.attrib,
+  area.label.attrib,
+  area.coords.attrib,
+  local.area.attrib
+db.area = element area { area.attlist, empty }
+areaset.units.attrib = area.units.attribute
+areaset.label.attrib = attribute label { text }?
+areaset.role.attrib = role.attribute?
+local.areaset.attrib = empty
+areaset.attlist =
+  common.attrib.idreq,
+  common.linking.attributes,
+  areaset.role.attrib,
+  areaset.units.attrib,
+  areaset.label.attrib,
+  local.areaset.attrib
+db.areaset = element areaset { areaset.attlist, db.area+ }
+screenco.info = docbook.info.titleforbidden
+screenco.role.attrib = role.attribute?
+local.screenco.attrib = empty
+screenco.attlist =
+  common.attributes,
+  common.linking.attributes,
+  screenco.role.attrib,
+  local.screenco.attrib
+db.screenco =
+  element screenco {
+    screenco.attlist,
+    screenco.info,
+    db.areaspec,
+    db.screen,
+    db.calloutlist*
+  }
+mediaobjectco.info = docbook.info.titleforbidden
+mediaobjectco.role.attrib = role.attribute?
+local.mediaobjectco.attrib = empty
+mediaobjectco.attlist =
+  common.attributes,
+  common.linking.attributes,
+  mediaobjectco.role.attrib,
+  local.mediaobjectco.attrib
+db.mediaobjectco =
+  element mediaobjectco {
+    mediaobjectco.attlist,
+    mediaobjectco.info,
+    db.imageobjectco,
+    (db.imageobjectco | db.textobject)*
+  }
+imageobjectco.info = docbook.info.titleforbidden
+imageobjectco.role.attrib = role.attribute?
+local.imageobjectco.attrib = empty
+imageobjectco.attlist =
+  common.attributes,
+  common.linking.attributes,
+  imageobjectco.role.attrib,
+  local.imageobjectco.attrib
+db.imageobjectco =
+  element imageobjectco {
+    imageobjectco.attlist,
+    imageobjectco.info?,
+    db.areaspec,
+    db.imageobject,
+    db.calloutlist*
+  }
+co.linkends.attrib = linkends.attribute?
+co.label.attrib = attribute label { text }?
+co.role.attrib = role.attribute?
+local.co.attrib = empty
+co.attlist =
+  common.attrib.idreq,
+  co.role.attrib,
+  co.linkends.attrib,
+  co.label.attrib,
+  local.co.attrib
+db.co = element co { co.attlist, empty }
+coref.label.attrib = attribute label { text }?
+coref.linkend.attrib = linkend.attribute
+coref.role.attrib = role.attribute?
+local.coref.attrib = empty
+coref.attlist =
+  common.attributes,
+  coref.role.attrib,
+  coref.label.attrib,
+  coref.linkend.attrib,
+  local.coref.attrib
+db.coref = element coref { coref.attlist, empty }
+productionset.info = docbook.info.titleonly
+productionset.role.attrib = role.attribute?
+local.productionset.attrib = empty
+productionset.attlist =
+  common.attributes,
+  common.linking.attributes,
+  productionset.role.attrib,
+  local.productionset.attrib
+db.productionset =
+  element productionset {
+    productionset.attlist,
+    productionset.info,
+    (db.production | db.productionrecap)+
+  }
+production.role.attrib = role.attribute?
+local.production.attrib = empty
+production.attlist =
+  common.attrib.idreq,
+  common.linking.attributes,
+  production.role.attrib,
+  local.production.attrib
+db.production =
+  element production {
+    production.attlist, db.lhs, db.rhs, db.constraint*
+  }
+lhs.role.attrib = role.attribute?
+local.lhs.attrib = empty
+lhs.attlist =
+  common.attributes,
+  common.linking.attributes,
+  lhs.role.attrib,
+  local.lhs.attrib
+db.lhs = element lhs { lhs.attlist, text }
+rhs.role.attrib = role.attribute?
+local.rhs.attrib = empty
+rhs.attlist =
+  common.attributes,
+  common.linking.attributes,
+  rhs.role.attrib,
+  local.rhs.attrib
+db.rhs =
+  element rhs {
+    rhs.attlist, (text | db.nonterminal | db.lineannotation | db.sbr)*
+  }
+nonterminal.def.attrib = attribute def { text }
+nonterminal.role.attrib = role.attribute?
+local.nonterminal.attrib = empty
+nonterminal.attlist =
+  common.attributes,
+  common.linking.attributes,
+  nonterminal.role.attrib,
+  nonterminal.def.attrib,
+  local.nonterminal.attrib
+db.nonterminal = element nonterminal { nonterminal.attlist, text }
+constraint.role.attrib = role.attribute?
+local.constraint.attrib = empty
+constraint.attlist =
+  common.attributes,
+  common.linking.attributes,
+  constraint.role.attrib,
+  local.constraint.attrib
+db.constraint = element constraint { constraint.attlist, empty }
+productionrecap.linkend.attrib = attribute linkend { xsd:IDREF }
+productionrecap.role.attrib = role.attribute?
+local.productionrecap.attrib = empty
+productionrecap.attlist =
+  common.attributes,
+  productionrecap.role.attrib,
+  productionrecap.linkend.attrib,
+  local.productionrecap.attrib
+db.productionrecap =
+  element productionrecap { productionrecap.attlist, empty }
+constraintdef.info = docbook.info.titleonly
+constraintdef.role.attrib = role.attribute?
+local.constraintdef.attrib = empty
+constraintdef.attlist =
+  common.attributes,
+  common.linking.attributes,
+  constraintdef.role.attrib,
+  local.constraintdef.attrib
+db.constraintdef =
+  element constraintdef {
+    constraintdef.attlist, constraintdef.info, blocks+
+  }
+char.attribute = attribute char { text }
+charoff.attribute = attribute charoff { text }
+colsep.attribute = attribute colsep { text }
+rowsep.attribute = attribute rowsep { text }
+align.attribute =
+  attribute align { "center" | "char" | "justify" | "left" | "right" }
+valign.attribute = attribute valign { "bottom" | "middle" | "top" }
+spanname.attribute = attribute spanname { text }
+colname.attribute = attribute colname { text }
+tgroup.char.attrib = char.attribute?
+tgroup.charoff.attrib = charoff.attribute?
+tgroup.tgroupstyle.attrib = attribute tgroupstyle { text }?
+tgroup.cols.attrib = attribute cols { xsd:integer }
+tgroup.colsep.attrib = colsep.attribute?
+tgroup.rowsep.attrib = rowsep.attribute?
+tgroup.align.attrib = align.attribute?
+tgroup.role.attrib = role.attribute?
+local.tgroup.attrib = empty
+tgroup.attlist =
+  common.attributes,
+  common.linking.attributes,
+  tgroup.role.attrib,
+  tgroup.char.attrib,
+  tgroup.charoff.attrib,
+  tgroup.tgroupstyle.attrib,
+  tgroup.cols.attrib,
+  tgroup.colsep.attrib,
+  tgroup.rowsep.attrib,
+  tgroup.align.attrib,
+  local.tgroup.attrib
+db.tgroup =
+  element tgroup {
+    tgroup.attlist,
+    db.colspec*,
+    db.spanspec*,
+    cals.thead?,
+    cals.tfoot?,
+    cals.tbody
+  }
+colspec.colnum.attrib = attribute colnum { xsd:integer }?
+colspec.char.attrib = char.attribute?
+colspec.colsep.attrib = colsep.attribute?
+colspec.colwidth.attrib = attribute colwidth { text }?
+colspec.charoff.attrib = charoff.attribute?
+colspec.colname.attrib = colname.attribute?
+colspec.rowsep.attrib = rowsep.attribute?
+colspec.align.attrib = align.attribute?
+colspec.role.attrib = role.attribute?
+local.colspec.attrib = empty
+colspec.attlist =
+  common.attributes,
+  common.linking.attributes,
+  colspec.role.attrib,
+  colspec.colnum.attrib,
+  colspec.char.attrib,
+  colspec.colsep.attrib,
+  colspec.colwidth.attrib,
+  colspec.charoff.attrib,
+  colspec.colname.attrib,
+  colspec.rowsep.attrib,
+  colspec.align.attrib,
+  local.colspec.attrib
+db.colspec = element colspec { colspec.attlist, empty }
+spanspec.namest.attrib = attribute namest { text }
+spanspec.nameend.attrib = attribute nameend { text }
+spanspec.spanname.attrib = spanname.attribute
+spanspec.char.attrib = char.attribute?
+spanspec.colsep.attrib = colsep.attribute?
+spanspec.charoff.attrib = charoff.attribute?
+spanspec.rowsep.attrib = rowsep.attribute?
+spanspec.align.attrib = align.attribute?
+spanspec.role.attrib = role.attribute?
+local.spanspec.attrib = empty
+spanspec.attlist =
+  common.attributes,
+  common.linking.attributes,
+  spanspec.role.attrib,
+  spanspec.namest.attrib,
+  spanspec.nameend.attrib,
+  spanspec.spanname.attrib,
+  spanspec.char.attrib,
+  spanspec.colsep.attrib,
+  spanspec.charoff.attrib,
+  spanspec.rowsep.attrib,
+  spanspec.align.attrib,
+  local.spanspec.attrib
+db.spanspec = element spanspec { spanspec.attlist, empty }
+cals.thead.valign.attrib = valign.attribute?
+cals.thead.role.attrib = role.attribute?
+local.cals.thead.attrib = empty
+cals.thead.attlist =
+  common.attributes,
+  common.linking.attributes,
+  cals.thead.role.attrib,
+  cals.thead.valign.attrib,
+  local.cals.thead.attrib
+cals.thead = element thead { cals.thead.attlist, db.colspec*, db.row+ }
+cals.tfoot.valign.attrib = valign.attribute?
+cals.tfoot.role.attrib = role.attribute?
+local.cals.tfoot.attrib = empty
+cals.tfoot.attlist =
+  common.attributes,
+  common.linking.attributes,
+  cals.tfoot.role.attrib,
+  cals.tfoot.valign.attrib,
+  local.cals.tfoot.attrib
+cals.tfoot = element tfoot { cals.tfoot.attlist, db.colspec*, db.row+ }
+cals.tbody.valign.attrib = valign.attribute?
+cals.tbody.role.attrib = role.attribute?
+local.cals.tbody.attrib = empty
+cals.tbody.attlist =
+  common.attributes,
+  common.linking.attributes,
+  cals.tbody.role.attrib,
+  cals.tbody.valign.attrib,
+  local.cals.tbody.attrib
+cals.tbody = element tbody { cals.tbody.attlist, db.row+ }
+row.rowsep.attrib = rowsep.attribute?
+row.valign.attrib = valign.attribute?
+row.role.attrib = role.attribute?
+local.row.attrib = empty
+row.attlist =
+  common.attributes,
+  common.linking.attributes,
+  row.role.attrib,
+  row.rowsep.attrib,
+  row.valign.attrib,
+  local.row.attrib
+db.row = element row { row.attlist, (db.entry | db.entrytbl)+ }
+entry.nameend.attrib = attribute nameend { text }?
+entry.valign.attrib = valign.attribute?
+entry.char.attrib = char.attribute?
+entry.colsep.attrib = colsep.attribute?
+entry.charoff.attrib = charoff.attribute?
+entry.morerows.attrib = attribute morerows { xsd:integer }?
+entry.spanname.attrib = attribute spanname { text }?
+entry.namest.attrib = attribute namest { text }?
+entry.colname.attrib = colname.attribute?
+entry.rowsep.attrib = rowsep.attribute?
+entry.rotate.attrib = attribute rotate { text }?
+entry.align.attrib = align.attribute?
+entry.role.attrib = role.attribute?
+local.entry.attrib = empty
+entry.attlist =
+  common.attributes,
+  common.linking.attributes,
+  entry.role.attrib,
+  entry.nameend.attrib,
+  entry.valign.attrib,
+  entry.char.attrib,
+  entry.colsep.attrib,
+  entry.charoff.attrib,
+  entry.morerows.attrib,
+  entry.spanname.attrib,
+  entry.namest.attrib,
+  entry.colname.attrib,
+  entry.rowsep.attrib,
+  entry.rotate.attrib,
+  entry.align.attrib,
+  local.entry.attrib
+db.entry = element entry { entry.attlist, (inlines* | blocks*) }
+entrytbl.nameend.attrib = attribute nameend { text }?
+entrytbl.char.attrib = char.attribute?
+entrytbl.charoff.attrib = charoff.attribute?
+entrytbl.spanname.attrib = attribute spanname { text }?
+entrytbl.namest.attrib = attribute namest { text }?
+entrytbl.tgroupstyle.attrib = attribute tgroupstyle { text }?
+entrytbl.cols.attrib = attribute cols { xsd:integer }?
+entrytbl.colsep.attrib = colsep.attribute?
+entrytbl.rowsep.attrib = rowsep.attribute?
+entrytbl.colname.attrib = colname.attribute?
+entrytbl.align.attrib = align.attribute?
+entrytbl.role.attrib = role.attribute?
+local.entrytbl.attrib = empty
+entrytbl.attlist =
+  common.attributes,
+  common.linking.attributes,
+  entrytbl.role.attrib,
+  entrytbl.nameend.attrib,
+  entrytbl.char.attrib,
+  entrytbl.charoff.attrib,
+  entrytbl.spanname.attrib,
+  entrytbl.namest.attrib,
+  entrytbl.tgroupstyle.attrib,
+  entrytbl.cols.attrib,
+  entrytbl.colsep.attrib,
+  entrytbl.rowsep.attrib,
+  entrytbl.colname.attrib,
+  entrytbl.align.attrib,
+  local.entrytbl.attrib
+db.entrytbl =
+  element entrytbl {
+    entrytbl.attlist, db.colspec*, db.spanspec*, cals.thead?, cals.tbody
+  }
+cals.table.tabstyle.attrib = attribute tabstyle { text }?
+cals.table.orient.attrib = attribute orient { "land" | "port" }?
+cals.table.colsep.attrib = colsep.attribute?
+cals.table.rowsep.attrib = rowsep.attribute?
+cals.table.frame.attrib =
+  attribute frame {
+    "all" | "bottom" | "none" | "sides" | "top" | "topbot"
+  }?
+cals.table.pgwide.attrib = attribute pgwide { "0" | "1" }?
+cals.table.info = docbook.info.titleonlyreq
+cals.table.role.attrib = role.attribute?
+local.cals.table.attrib = empty
+cals.table.attlist =
+  common.attributes,
+  common.linking.attributes,
+  cals.table.role.attrib,
+  cals.table.tabstyle.attrib,
+  cals.table.orient.attrib,
+  cals.table.colsep.attrib,
+  cals.table.rowsep.attrib,
+  cals.table.frame.attrib,
+  cals.table.pgwide.attrib,
+  local.cals.table.attrib
+cals.table =
+  element table {
+    cals.table.attlist,
+    cals.table.info,
+    db.indexterm*,
+    db.textobject*,
+    (db.mediaobject+ | db.tgroup+)
+  }
+cals.informaltable.info = docbook.info.titleforbidden
+cals.informaltable.role.attrib = role.attribute?
+local.cals.informaltable.attrib = empty
+cals.informaltable.attlist =
+  common.attributes,
+  common.linking.attributes,
+  cals.informaltable.role.attrib,
+  cals.informaltable.tabstyle.attrib,
+  cals.informaltable.orient.attrib,
+  cals.informaltable.colsep.attrib,
+  cals.informaltable.rowsep.attrib,
+  cals.informaltable.frame.attrib,
+  cals.informaltable.pgwide.attrib,
+  local.cals.informaltable.attrib
+cals.informaltable =
+  element informaltable {
+    cals.informaltable.attlist,
+    cals.informaltable.info,
+    db.indexterm*,
+    db.textobject*,
+    (db.mediaobject+ | db.tgroup+)
+  }
+cals.informaltable.tabstyle.attrib = cals.table.tabstyle.attrib
+cals.informaltable.orient.attrib = cals.table.orient.attrib
+cals.informaltable.colsep.attrib = cals.table.colsep.attrib
+cals.informaltable.rowsep.attrib = cals.table.rowsep.attrib
+cals.informaltable.frame.attrib = cals.table.frame.attrib
+cals.informaltable.pgwide.attrib = cals.table.pgwide.attrib
+html.table.model =
+  html.caption,
+  (html.col* | html.colgroup*),
+  html.thead?,
+  html.tfoot?,
+  (html.tbody+ | html.tr+)
+html.table.html.attrib = html.attrs
+html.table.summary.attrib = attribute summary { text }?
+html.table.width.attrib = attribute width { text }?
+html.table.border.attrib = attribute border { text }?
+html.table.frame.attrib =
+  attribute frame {
+    "void"
+    | "above"
+    | "below"
+    | "hsides"
+    | "lhs"
+    | "rhs"
+    | "vsides"
+    | "box"
+    | "border"
+  }?
+html.table.rules.attrib =
+  attribute rules { "none" | "groups" | "rows" | "cols" | "all" }?
+html.table.cellspacing.attrib = attribute cellspacing { text }?
+html.table.cellpadding.attrib = attribute cellpadding { text }?
+html.table.role.attrib = role.attribute?
+local.html.table.attrib = empty
+html.table.attlist =
+  common.attributes,
+  common.linking.attributes,
+  html.table.role.attrib,
+  html.table.html.attrib,
+  html.table.summary.attrib,
+  html.table.width.attrib,
+  html.table.border.attrib,
+  html.table.frame.attrib,
+  html.table.rules.attrib,
+  html.table.cellspacing.attrib,
+  html.table.cellpadding.attrib,
+  local.html.table.attrib
+html.table = element table { html.table.attlist, html.table.model }
+html.coreattrs &=
+  attribute class { text }?,
+  attribute style { text }?,
+  attribute title { text }?
+html.i18n &=
+  attribute lang { text }?,
+  attribute dir { "ltr" | "rtl" }?
+html.events &=
+  attribute onclick { text }?,
+  attribute ondblclick { text }?,
+  attribute onmousedown { text }?,
+  attribute onmouseup { text }?,
+  attribute onmouseover { text }?,
+  attribute onmousemove { text }?,
+  attribute onmouseout { text }?,
+  attribute onkeypress { text }?,
+  attribute onkeydown { text }?,
+  attribute onkeyup { text }?
+html.attrs &= html.coreattrs, html.i18n, html.events
+html.cellhalign &=
+  attribute align { "left" | "center" | "right" | "justify" | "char" }?,
+  attribute char { text }?,
+  attribute charoff { text }?
+html.cellvalign &=
+  attribute valign { "top" | "middle" | "bottom" | "baseline" }?
+html.caption.html.attrib = html.attrs
+local.html.caption.attrib = empty
+html.caption.attlist =
+  html.caption.html.attrib, local.html.caption.attrib
+html.caption = element caption { html.caption.attlist, text }
+html.col.html.attrib = html.attrs
+html.col.span.attrib = attribute span { text }?
+html.col.width.attrib = attribute width { text }?
+html.col.cellhalign.attrib = html.cellhalign
+html.col.cellvalign.attrib = html.cellvalign
+html.col.role.attrib = role.attribute?
+local.html.col.attrib = empty
+html.col.attlist =
+  common.attributes,
+  common.linking.attributes,
+  html.col.role.attrib,
+  html.col.html.attrib,
+  html.col.span.attrib,
+  html.col.width.attrib,
+  html.col.cellhalign.attrib,
+  html.col.cellvalign.attrib,
+  local.html.col.attrib
+html.col = element col { html.col.attlist, empty }
+html.colgroup.html.attrib = html.attrs
+html.colgroup.span.attrib = attribute span { text }?
+html.colgroup.width.attrib = attribute width { text }?
+html.colgroup.cellhalign.attrib = html.cellhalign
+html.colgroup.cellvalign.attrib = html.cellvalign
+html.colgroup.role.attrib = role.attribute?
+local.html.colgroup.attrib = empty
+html.colgroup.attlist =
+  common.attributes,
+  common.linking.attributes,
+  html.colgroup.role.attrib,
+  html.colgroup.html.attrib,
+  html.colgroup.span.attrib,
+  html.colgroup.width.attrib,
+  html.colgroup.cellhalign.attrib,
+  html.colgroup.cellvalign.attrib,
+  local.html.colgroup.attrib
+html.colgroup = element colgroup { html.colgroup.attlist, html.col* }
+html.thead.html.attrib = html.attrs
+html.thead.cellhalign.attrib = html.cellhalign
+html.thead.cellvalign.attrib = html.cellvalign
+html.thead.role.attrib = role.attribute?
+local.html.thead.attrib = empty
+html.thead.attlist =
+  common.attributes,
+  common.linking.attributes,
+  html.thead.role.attrib,
+  html.thead.html.attrib,
+  html.thead.cellhalign.attrib,
+  html.thead.cellvalign.attrib,
+  local.html.thead.attrib
+html.thead = element thead { html.thead.attlist, html.tr+ }
+html.tfoot.html.attrib = html.attrs
+html.tfoot.cellhalign.attrib = html.cellhalign
+html.tfoot.cellvalign.attrib = html.cellvalign
+html.tfoot.role.attrib = role.attribute?
+local.html.tfoot.attrib = empty
+html.tfoot.attlist =
+  common.attributes,
+  common.linking.attributes,
+  html.tfoot.role.attrib,
+  html.tfoot.html.attrib,
+  html.tfoot.cellhalign.attrib,
+  html.tfoot.cellvalign.attrib,
+  local.html.tfoot.attrib
+html.tfoot = element tfoot { html.tfoot.attlist, html.tr+ }
+html.tbody.html.attrib = html.attrs
+html.tbody.cellhalign.attrib = html.cellhalign
+html.tbody.cellvalign.attrib = html.cellvalign
+html.tbody.role.attrib = role.attribute?
+local.html.tbody.attrib = empty
+html.tbody.attlist =
+  common.attributes,
+  common.linking.attributes,
+  html.tbody.role.attrib,
+  html.tbody.html.attrib,
+  html.tbody.cellhalign.attrib,
+  html.tbody.cellvalign.attrib,
+  local.html.tbody.attrib
+html.tbody = element tbody { html.tbody.attlist, html.tr+ }
+html.tr.html.attrib = html.attrs
+html.tr.cellhalign.attrib = html.cellhalign
+html.tr.cellvalign.attrib = html.cellvalign
+html.tr.role.attrib = role.attribute?
+local.html.tr.attrib = empty
+html.tr.attlist =
+  common.attributes,
+  common.linking.attributes,
+  html.tr.role.attrib,
+  html.tr.html.attrib,
+  html.tr.cellhalign.attrib,
+  html.tr.cellvalign.attrib,
+  local.html.tr.attrib
+html.tr = element tr { html.tr.attlist, (html.th | html.td)+ }
+html.th.html.attrib = html.attrs
+html.th.abbr.attrib = attribute abbr { text }?
+html.th.axis.attrib = attribute axis { text }?
+html.th.headers.attrib = attribute headers { text }?
+html.th.scope.attrib = attribute scope { text }?
+html.th.rowspan.attrib = attribute rowspan { text }?
+html.th.colspan.attrib = attribute colspan { text }?
+html.th.cellhalign.attrib = html.cellhalign
+html.th.cellvalign.attrib = html.cellvalign
+html.th.role.attrib = role.attribute?
+local.html.th.attrib = empty
+html.th.attlist =
+  common.attributes,
+  common.linking.attributes,
+  html.th.role.attrib,
+  html.th.html.attrib,
+  html.th.abbr.attrib,
+  html.th.axis.attrib,
+  html.th.headers.attrib,
+  html.th.scope.attrib,
+  html.th.rowspan.attrib,
+  html.th.colspan.attrib,
+  html.th.cellhalign.attrib,
+  html.th.cellvalign.attrib,
+  local.html.th.attrib
+html.th = element th { html.th.attlist, (inlines* | blocks*) }
+html.td.html.attrib = html.attrs
+html.td.abbr.attrib = attribute abbr { text }?
+html.td.axis.attrib = attribute axis { text }?
+html.td.headers.attrib = attribute headers { text }?
+html.td.scope.attrib = attribute scope { text }?
+html.td.rowspan.attrib = attribute rowspan { text }?
+html.td.colspan.attrib = attribute colspan { text }?
+html.td.cellhalign.attrib = html.cellhalign
+html.td.cellvalign.attrib = html.cellvalign
+html.td.role.attrib = role.attribute?
+local.html.td.attrib = empty
+html.td.attlist =
+  common.attributes,
+  common.linking.attributes,
+  html.td.role.attrib,
+  html.td.html.attrib,
+  html.td.abbr.attrib,
+  html.td.axis.attrib,
+  html.td.headers.attrib,
+  html.td.scope.attrib,
+  html.td.rowspan.attrib,
+  html.td.colspan.attrib,
+  html.td.cellhalign.attrib,
+  html.td.cellvalign.attrib,
+  local.html.td.attrib
+html.td = element td { html.td.attlist, (inlines* | blocks*) }
+html.informaltable.model =
+  (html.col* | html.colgroup*),
+  html.thead?,
+  html.tfoot?,
+  (html.tbody+ | html.tr+)
+html.informaltable.html.attrib = html.table.html.attrib
+html.informaltable.summary.attrib = html.table.summary.attrib
+html.informaltable.width.attrib = html.table.width.attrib
+html.informaltable.border.attrib = html.table.border.attrib
+html.informaltable.frame.attrib = html.table.frame.attrib
+html.informaltable.rules.attrib = html.table.rules.attrib
+html.informaltable.cellspacing.attrib = html.table.cellspacing.attrib
+html.informaltable.cellpadding.attrib = html.table.cellpadding.attrib
+html.informaltable.role.attrib = role.attribute?
+local.html.informaltable.attrib = empty
+html.informaltable.attlist =
+  common.attributes,
+  common.linking.attributes,
+  html.informaltable.role.attrib,
+  html.informaltable.html.attrib,
+  html.informaltable.summary.attrib,
+  html.informaltable.width.attrib,
+  html.informaltable.border.attrib,
+  html.informaltable.frame.attrib,
+  html.informaltable.rules.attrib,
+  html.informaltable.cellspacing.attrib,
+  html.informaltable.cellpadding.attrib,
+  local.html.informaltable.attrib
+html.informaltable =
+  element informaltable {
+    html.informaltable.attlist, html.informaltable.model
+  }
+msgset.info = docbook.info.titleonly
+msgset.role.attrib = role.attribute?
+local.msgset.attrib = empty
+msgset.attlist =
+  common.attributes,
+  common.linking.attributes,
+  msgset.role.attrib,
+  local.msgset.attrib
+db.msgset =
+  element msgset {
+    msgset.attlist, msgset.info, (db.msgentry+ | db.simplemsgentry+)
+  }
+msgentry.role.attrib = role.attribute?
+local.msgentry.attrib = empty
+msgentry.attlist =
+  common.attributes,
+  common.linking.attributes,
+  msgentry.role.attrib,
+  local.msgentry.attrib
+db.msgentry =
+  element msgentry {
+    msgentry.attlist, db.msg+, db.msginfo?, db.msgexplan*
+  }
+simplemsgentry.audience.attrib = attribute audience { text }
+simplemsgentry.origin.attrib = attribute origin { text }
+simplemsgentry.level.attrib = attribute level { text }
+simplemsgentry.role.attrib = role.attribute?
+local.simplemsgentry.attrib = empty
+simplemsgentry.attlist =
+  common.attributes,
+  common.linking.attributes,
+  simplemsgentry.role.attrib,
+  simplemsgentry.audience.attrib,
+  simplemsgentry.origin.attrib,
+  simplemsgentry.level.attrib,
+  local.simplemsgentry.attrib
+db.simplemsgentry =
+  element simplemsgentry {
+    simplemsgentry.attlist, db.msgtext, db.msgexplan+
+  }
+msg.info = docbook.info.titleonly
+msg.role.attrib = role.attribute?
+local.msg.attrib = empty
+msg.attlist =
+  common.attributes,
+  common.linking.attributes,
+  msg.role.attrib,
+  local.msg.attrib
+db.msg =
+  element msg {
+    msg.attlist, msg.info, db.msgmain, (db.msgsub | db.msgrel)*
+  }
+msgmain.info = docbook.info.titleonly
+msgmain.role.attrib = role.attribute?
+local.msgmain.attrib = empty
+msgmain.attlist =
+  common.attributes,
+  common.linking.attributes,
+  msgmain.role.attrib,
+  local.msgmain.attrib
+db.msgmain =
+  element msgmain { msgmain.attlist, msgmain.info, db.msgtext }
+msgsub.info = docbook.info.titleonly
+msgsub.role.attrib = role.attribute?
+local.msgsub.attrib = empty
+msgsub.attlist =
+  common.attributes,
+  common.linking.attributes,
+  msgsub.role.attrib,
+  local.msgsub.attrib
+db.msgsub = element msgsub { msgsub.attlist, msgsub.info, db.msgtext }
+msgrel.info = docbook.info.titleonly
+msgrel.role.attrib = role.attribute?
+local.msgrel.attrib = empty
+msgrel.attlist =
+  common.attributes,
+  common.linking.attributes,
+  msgrel.role.attrib,
+  local.msgrel.attrib
+db.msgrel = element msgrel { msgrel.attlist, msgrel.info, db.msgtext }
+msgtext.role.attrib = role.attribute?
+local.msgtext.attrib = empty
+msgtext.attlist =
+  common.attributes,
+  common.linking.attributes,
+  msgtext.role.attrib,
+  local.msgtext.attrib
+db.msgtext = element msgtext { msgtext.attlist, blocks+ }
+msginfo.role.attrib = role.attribute?
+local.msginfo.attrib = empty
+msginfo.attlist =
+  common.attributes,
+  common.linking.attributes,
+  msginfo.role.attrib,
+  local.msginfo.attrib
+db.msginfo =
+  element msginfo {
+    msginfo.attlist, (db.msglevel | db.msgorig | db.msgaud)*
+  }
+msglevel.role.attrib = role.attribute?
+local.msglevel.attrib = empty
+msglevel.attlist =
+  common.attributes,
+  common.linking.attributes,
+  msglevel.role.attrib,
+  local.msglevel.attrib
+db.msglevel = element msglevel { msglevel.attlist, docbook.text }
+msgorig.role.attrib = role.attribute?
+local.msgorig.attrib = empty
+msgorig.attlist =
+  common.attributes,
+  common.linking.attributes,
+  msgorig.role.attrib,
+  local.msgorig.attrib
+db.msgorig = element msgorig { msgorig.attlist, docbook.text }
+msgaud.role.attrib = role.attribute?
+local.msgaud.attrib = empty
+msgaud.attlist =
+  common.attributes,
+  common.linking.attributes,
+  msgaud.role.attrib,
+  local.msgaud.attrib
+db.msgaud = element msgaud { msgaud.attlist, docbook.text }
+msgexplan.info = docbook.info.titleonly
+msgexplan.role.attrib = role.attribute?
+local.msgexplan.attrib = empty
+msgexplan.attlist =
+  common.attributes,
+  common.linking.attributes,
+  msgexplan.role.attrib,
+  local.msgexplan.attrib
+db.msgexplan =
+  element msgexplan { msgexplan.attlist, msgexplan.info, blocks+ }
+any.mml =
+  element ns1:* {
+    (attribute * { text }
+     | text
+     | any.mml)*
+  }
+any.svg =
+  element ns2:* {
+    (attribute * { text }
+     | text
+     | any.svg*)*
+  }

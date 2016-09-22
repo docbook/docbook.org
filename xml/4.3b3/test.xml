@@ -1,0 +1,30 @@
+<!DOCTYPE article SYSTEM "docbookx.dtd">
+<article>
+<title>foo</title>
+<para>...</para>
+
+<table>
+<title>Some CALS Table</title>
+<tgroup cols="3">
+<tbody>
+<row>
+<entry>one</entry>
+<entry>two</entry>
+<entry>three</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+
+<table>
+<caption>Some HTML Table</caption>
+<tbody>
+<tr>
+<td>one</td>
+<td>two</td>
+<td>three</td>
+</tr>
+</tbody>
+</table>
+
+</article>

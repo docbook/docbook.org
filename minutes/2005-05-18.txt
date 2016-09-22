@@ -1,0 +1,153 @@
+DocBook Technical Committee Meeting Minutes: 18 May 2005
+=============================================================
+
+The DocBook Technical Committee met on Wednesday,
+18 May 2005, achieving quorum at 05:30p EDT (02:30p PDT,
+21:30GMT, 22:30BST, 23:30CEST, 06:30JST+, 03:00a India+).
+
+1. Roll call
+
+Present: Gary Cornelius, Dick Hamilton, Nancy Harrison,
+Scott Hudson, Jirka Kosek, Larry Rowland, Bob Stayton,
+Norman Walsh
+
+Regrets: Steve Cogorno, Paul Grosso,
+
+Absent: Adam Di Carlo, Mark Johnson, 
+
+2. Accepting the amended minutes[1] of the previous meeting.
+
+Minutes were unanimously accepted.
+   
+3. Next meeting: 15 June 2005
+
+The committee decided to change the next meeting to 22 June 2005,
+at the same time.
+
+4. Review of the agenda.
+
+No additions.
+
+5. Review of open action items
+
+   a. Norm to obtain OASIS namespace naming rules.
+      CONTINUE.
+
+   b. Norm to publish a version of the 5.0 spec before the next meeting.
+      CONTINUE.
+
+   c. Norm to produce a DocBook 4.5 DTD Working Draft.
+      COMPLETED.
+
+6.  New OASIS attendance rules.
+
+Bob reported on the recent email discussion about the new OASIS
+attendance rules.  Most TC members did not grasp the
+significance of the "lose your voting rights if you
+miss 2 out of the last 3" rule.
+They expressed support for those who feel the  rule needs
+to be changed to be more flexible.  The TC will monitor the
+progress of this issue.
+
+7.  DTD 4.5 status.
+
+Norm published a draft 4.5 DTD, but no discussion yet.
+He urged TC participants to try it out.
+
+8.  Schema V5 development status.
+
+Norm reports continued progress.
+
+9.  Annotation related RFEs:
+
+      973446 Replace Footnote with Annotation 
+
+This item was closed with no action because during the
+discussion of the recently adopted annotation and alt
+elements to DocBook v5, the TC decided to leave footnotes
+as they are.
+
+       
+      522552 Add title attribute to <ulink> element 
+
+The TC is closing this item because the new alt element
+in v5 provides this feature.
+
+10. Review of Requests for Enhancement
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;;
+      group_id=21935&atid=384107&aid=XXXX
+
+      1190435 Add rule tag 
+
+The TC was not clear on the context or use case. 
+ACTION:  Bob to request more information from the proposer.
+
+      1190436 Add requirement tag 
+
+The TC was not clear on the context or use case. 
+ACTION:  Bob to request more information from the proposer.
+
+      1194196 <qandaset> and <qandadiv> 
+
+There was much discussion about mixing qandaentry and
+qandadiv.  Some felt it would create a confusing structure,
+and others felt the confusion could be resolved with
+stylesheet formatting.  Alternatives such as subentries
+and recursive entries were discussed.   Larry suggested that
+a real example would help with understanding the use case.
+The TC decided to expand the discussion to the docbook
+mailing list.
+
+ACTION: Norm to raise this RFE on the docbook mailing list
+and ask the proposer to participate.
+
+      1202963 ARTICLE should allow glossary|bibliography in the beginning 
+
+Norm reports that this will be allowed in v5.
+The TC decided to take no action for v4.
+
+     The following RFEs are awaiting action items
+
+      413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+
+Norm reports that this will be a feature in v5.
+
+      431411 RFE 70: add generic linking capability (Norm)
+
+Norm reports that this will be a feature in v5.
+
+      565637 Associate non-inline image with link (Norm, generic linking)
+
+Norm suggests that the linking features of v5 would
+satisfy part of this need, as would the implementation
+of clickable image areas in XSLT 2.0.  No action
+was taken for DocBook 4.
+
+      623524 (Re)Consider "choicelist" markup 
+
+The TC decided to close this request since no new proposal
+had been submitted.
+
+     The following RFEs are identified as V5.0 or later
+
+      1097183 Allow Task as a sibling of sections 
+      1084491 Add address, orgname, orgdiv to corpauthor, corpcredit, etc. 
+      974285 Check floatstyle/float attributes
+      958393 remove default class value from productname 
+      531851 Remove inline person name elements
+      532088 Remove RevHistory from qandaentry
+
+The TC will consider these when a more complete v5 is available.
+
+The committee adjourned at 6:20pm EDT.
+---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200504/msg00047.html
+
+Bob Stayton
+Sagehill Enterprises
+DocBook Consulting
+bobs@sagehill.net

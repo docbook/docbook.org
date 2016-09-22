@@ -1,0 +1,198 @@
+| DocBook Technical Committee Meeting Minutes: 15 Oct 2002
+| =======================================================
+|
+| The DocBook Technical Committee met on Tuesday, 15 October 2002
+| at 01:00p EDT (10:00a PDT, 17:00GMT, 18:00BST, 19:00CEST, 02:00JST+)
+| for 90 minutes.
+|
+| Agenda
+|
+| 1. Roll call
+
+Attendees
+
+  Paul Grosso
+  Dick Hamilton
+  Michael Smith
+  Bob Stayton
+  Norman Walsh
+  Sabine Ocker [:05]
+  Nancy Harrison [:10]
+
+Absent:
+
+  Dennis Evans
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+None.
+
+PG: Where do tables stand?
+NW: The action is on me to put together the proposal.
+
+| 4. Review of open action items {5 min}
+|
+|     a. Norm to put instanced-based cross-reference text on the agenda
+      Completed
+|     b. Norm to construct an example of RFE #558443 using existing metadata
+      Continued
+|     c. Norm to put the charter on the agenda
+      Completed
+|     d. Dick to experiment with SiberSafe for help authoring background
+      Continued
+|     e. Norm to follow-up on RFE 562343: <packagename> element
+      Continued
+|     f. Norm to post combined table markup for CALS+HTML
+      Continued
+|     g. Dick to experiment with SiberSafe for help authoring background
+      Duplicate
+|     h. Norm to follow-up on RFE 562343: <packagename> element
+      Duplicate
+|     i. Norm to post combined table markup for CALS+HTML
+      Continued.
+|     j. Richard to provide some concrete examples of what might need to be added
+|        for HTML Help
+|        [Abandoned: MS resigned.]
+|     k. Sabine to provide some concrete examples for HTML Help
+      Continued.
+|     l. Norm to investigate namespace convention in MathML Module (RFE #582705)
+      Continued.
+|     m. Norm to republish simplified ToC proposal
+      Continued.
+|     n. Norm to put schema discussion on the agenda
+|        [Abandoned: MS resigned.]
+|     o. Norm to post more detail about the PE reorganization with some documentation
+      Continued.
+|     p. Norm to write better documentation for option/optional
+      Continued.
+|     q. Dennis to find out if he can post the internal style guide documentation
+|        on option/optional
+      Continued.
+|     r. Norm to find previous discussion of process/server/daemon markup
+|        (Dind't we fall back on systemitem?)
+      Continued.
+|
+| 5. Next meetings
+
+Different number next month.
+
+ACTION: Norm. Third Tuesday of each month normally. Next meeting is
+an exception, 12 Nov 2002. Following meetings on 17 Dec, etc.
+
+| 6. Charter Revision
+|
+|    Plan to vote on revised charter[3].
+
+BS: Are there any "new directions" that we wish to exclude? There's
+not a clear description of exactly what DocBook is.
+
+NW: Charter will link to TC website, which provides a clear
+description of what DocBook is.
+
+Proposed: Accept charter with minor editorial revision to the teleconference
+schedule and membership.
+
+Accepted unanimously.
+
+| 7. Instance-based cross-reference text
+
+Bob briefly described his proposal. Norm suggested that we've done
+without this for nigh 10 years, so we should go with named styles for
+now (CDATA attribute), and hold off on the algorithmic approach for
+now, unless/until a demand for it appears.
+
+Consensus is that we should add a style attribute of some kind.
+
+PG: I'm still interested in making sure that all of the obvious use
+cases are covered.
+
+Let's leave it open.
+
+ACTION: Norm to put on the agenda for next month.
+
+| 8. Review of Requests for Enhancement {40 min}
+|
+|    To browse a specific RFE, enter the URL (on one line):
+|
+|           http://sourceforge.net/tracker/index.php?func=detail&amp;
+|           group_id=21935&amp;atid=384107&amp;aid=XXXX
+|
+|    where XXXX is the RFE number.
+|
+|     606071 allow glossary in place of glossdiv
+|     609061 Add new Step sibling element Alternative
+
+Postpone until November in light of new information from Mike Smith.[2]
+Please take this to email.
+
+Perhaps we want to reconsider the whole notion of procedure.
+
+This seems to tie in with the thread on exercises on the docbook-lists[3].
+
+[lost Norm at this point (32 minutes into the meeting) due to battery
+failure, so meeting adjurned for this month]
+
+Adjourned.
+
+PG: I want to mention that next month will be DocBook's 10th
+anniversary.
+
+Mike Smith did the archeology to discover that 10 Nov 1992 is
+apparently DocBook's birthday.
+
+|     613293 Generalize programlisting
+|     615473 Extend float values on figure?
+|     615587 Support xml:base
+|     615588 Support XInclude
+|     616216 recursive Subset tag
+|     616220 frontmatter body backmatter tags
+|     621564 New element Task and children
+|
+|    The following RFEs have been moved to the bottom of this agenda in order
+|    to make sure that all RFEs get fairly discussed.
+|
+|     413389 Enhance METHODNAME and VARNAME
+|     436067 splitting tech.char.class
+|     473365 Allow optional in funcprototype
+|     482818 Simplify ToC content model
+|     514435 Allow reference within refentry
+|
+|     Mike: can you summarize where this issue stands?
+|
+|     558443 include storage info in metadata
+|
+|     Bob: can you summarize where this issue stands?
+|
+|     562343 <packagename> element
+|     564776 process/service/daemon/server markup
+|     565637 Associate non-inline image with link
+|     565716 URL and URN markup
+|     565905 Add xrefstyle attribute
+|     570068 Online values for pubwork
+|     571996 Add 'namespace' inline element
+|     571998 Add 'default' inline element
+|     573419 Add bidirectional text overrides
+|     573812 Allow blockinfo on blockquote
+|     574880 Add annotation element
+|     582705 Namespace convention for MathML Module
+|     582822 VARARG and FUNCDEF together
+|
+|    The following RFEs are awaiting action items
+|
+|     431411 RFE 70: add generic linking capability
+|     472229 Allow HTML tables
+|     522552 Add title attribute to <ulink> element
+|     598994 arg vs option
+|
+|    The following RFEs are identified as V6.0 or later
+|
+|     531851 Remove inline person name elements
+|     532088 Remove RevHistory from qandaentry
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200209/msg00011.html
+[2]http://lists.oasis-open.org/archives/docbook/200210/msg00081.html
+[3]http://lists.oasis-open.org/archives/docbook/200210/msg00045.html

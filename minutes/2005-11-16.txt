@@ -1,0 +1,155 @@
+DocBook Technical Committee Meeting Minutes: 16 November 2005
+=============================================================
+
+The DocBook Technical Committee met on Wednesday, 16 November 2005 at
+05:30p EST for 60 minutes.
+
+Agenda
+
+1. Roll call
+
+Present: Steve Cogorno, Gary Cornelius
+Dick Hamilton, Nancy Harrison, Scott Hudson, Jirka Kosek, 
+Larry Rowland, Bob Stayton, Norman Walsh
+
+Absent: Adam Di Carlo, Paul Grosso, Mark Johnson
+
+2. Accepted the minutes[1] of the previous meeting.
+
+3. Next meeting: 21 December 2005
+
+4. Review of the agenda.
+
+5. Review of open action items
+
+  a.  Norm to locate a meeting room at XML 2005.
+      COMPLETED.
+  
+  b.  Norm to pursue the process of making DTD 4.5
+      an OASIS standard.
+      CONTINUED.
+  
+  c.  The Java language has added java annotations, and Norm
+      wondered how these would be marked up in a synopsis.
+      The C# language also has annotations, Jirka pointed out.
+  
+      ACTION: Norm to investigate this issue some more.
+      CONTINUED.
+  
+  
+  d.  The following RFEs are identified as V5.0 or later
+  
+        1097183 Allow Task as a sibling of sections 
+          CONTINUED.
+
+        1084491 Add address, orgname, orgdiv to corpauthor,
+         corpcredit, etc. 
+   ACTION: Nancy to email info on XML address standard xNAL.
+
+        974285 Check floatstyle/float attributes
+          CLOSED.
+        958393 remove default class value from productname 
+          CLOSED.
+        531851 Remove inline person name elements
+          CLOSED.
+        532088 Remove RevHistory from qandaentry
+          CLOSED.
+  
+      ACTION: Norm to review these for the next meeting to
+      see if they are covered in 5.0.
+      COMPLETED.
+  
+
+6.  MathML and SVG support in 5.0 (Jirka)
+
+The Committee debated two choices for adding MathML and
+SVG support to Docbook 5.0:
+  a.  Add the elements to the schema.
+  b.  Document how to incorporate them as a customization
+      in their own namespaces.
+
+The Committee decided on (b).
+ACTION: Jirka to write up the customization process.
+
+Note: NVDL will permit validating content in multiple
+name spaces, and it is still under development.
+
+7.  Testing progress for DocBook 5.
+
+      RFE 1356238  olink xrefstyle attribute type       
+
+ACTION: Norm to fix this bug.
+
+      RFE 1351109  Put structfield and structname back to V5.0 
+
+The Committee felt that these two elements were of a
+class of programming language components.  It is not feasible
+to include elements for all components in all languages,
+so these two were seen as exceptions that should be removed,
+because 5.0 permits breaking backwards compatibility.
+However, the Committee felt a responsibility to document
+how authors should write about such components.
+
+ACTION: Norm to write up a description of how authors
+should handle elements that have been dropped.
+
+Equation content model is broken, currently specifies
+alt or other content, not both.
+
+ACTION: Norm to fix equation content model in 5.0.
+
+Norm asked for the ability to add alt text to a
+callout area in mediaobjectco.  The seems in keeping
+with the purpose of the ubiquitous alt element,
+so it was approved for 5.0.
+
+Bob raised the issue of default attributes in 4.x,
+and how the RNC syntax permits specifying such defaults
+using annotations.  No decision yet.
+
+ACTION: Bob to post a list of default attributes
+in 4.x.
+
+
+8. Review of Requests for Enhancement
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;;
+      group_id=21935&atid=384107&aid=XXXX
+
+      1306027  Support for annotations in synopsis elements  
+
+Continue.
+
+      1328809  Add tag for easier i18n process  
+
+The Committee suggested that this request could be
+handled without adding a new element.  A list of
+elements that should not be translated should
+be given to the translators, for example.  Otherwise
+do an XSLT transform to add such an attribute
+to the copy given to the translators.  Or use
+xml:lang="" to indicate no language for an element,
+which would indicate that it is not to be translated.
+
+ACTION: Bob to post a response to the submittor.
+
+     The following RFEs are identified as V5.0 or later
+
+(see the actions recorded above).
+
+      1097183 Allow Task as a sibling of sections 
+      1084491 Add address, orgname, orgdiv to corpauthor, corpcredit, etc. 
+      974285 Check floatstyle/float attributes
+      958393 remove default class value from productname 
+      531851 Remove inline person name elements
+      532088 Remove RevHistory from qandaentry
+- ---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200510/msg00022.html
+
+Bob Stayton
+Sagehill Enterprises
+DocBook Consulting
+bobs@sagehill.net

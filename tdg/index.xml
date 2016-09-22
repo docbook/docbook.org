@@ -1,0 +1,133 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='tdg'>
+<info>
+<title>DocBook: The Definitive Guide</title>
+<titleabbrev>TDG</titleabbrev>
+</info>
+
+<para><link xlink:href="http://www.oreilly.com/catalog/docbook"><citetitle>DocBook:
+The Definitive Guide</citetitle></link> is copyright © 2004-2006 Norman Walsh.
+Portions copyright © 1999-2003
+<link xlink:href="http://www.oreilly.com/">O'Reilly &amp; Associates, Inc.</link>
+</para>
+
+<para>Permission is granted to copy, distribute and/or modify this
+document under the terms of the GNU Free Documentation License, as
+spelled out in the book's <link xlink:href="en/html/dbcpyright.html">legal
+notice</link>.</para>
+
+<para>Versions available:</para>
+
+<itemizedlist>
+<listitem>
+<para><link xlink:href="en/html/docbook.html">Version 2.0.17</link> is a
+<quote>work in progress</quote>. It purports to document OASIS Standard
+DocBook V4.5 with the additional EBNF, HTML Forms, MathML, and SVG modules.
+As it is being updated periodically; it may be inconsistent in some areas.</para>
+
+<para>An <link xlink:href="en/html/docbook-x.html">unexpanded</link> edition
+of version 2.0.17 is also available. In this version, content models
+are shown with parameter entities rather than fully expanded.
+</para>
+</listitem>
+
+<listitem>
+<para><link xlink:href="http://www.oasis-open.org/docbook/documentation/reference/">Version 1.0.3</link> is an online version of the first edition of the book.
+It documents DocBook V3.1.</para>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem>
+<para>A <link xlink:href="en/tdg-en-html-2.0.17.zip">ZIP archive of HTML pages</link>
+(<link xlink:href="en/tdg-en-html-2.0.17-x.zip">unexpanded</link>).
+This is the same as the online version. Note that the root page is
+docbook.html (docbook-x.html), not index.html.</para>
+</listitem>
+
+<listitem>
+<para>The <link xlink:href="http://docbook.svn.sourceforge.net/viewvc/docbook/trunk/defguide/en/">XML sources</link>
+are available from the
+<link xlink:href="http://sourceforge.net/projects/docbook">DocBook
+Open Repository</link> on
+<link xlink:href="http://sourceforge.net/">SourceForge</link>.</para>
+</listitem>
+
+<listitem>
+<para>Ji&#x0159;&#x00ED; Kosek built a Microsoft
+HTML Help version of <link xlink:href="en/tdg-en-2.0.17.chm">V2.0.17</link>
+and <link xlink:href="en/tdg-en-2.0.17-x.chm">V2.0.17 unexpanded.</link></para>
+</listitem>
+
+<listitem>
+<para>Fairly crude PDF renderings of V2.0.6:
+<link xlink:href="en/tdg-partI-en-2.0.6.pdf">Part I</link>,
+<link xlink:href="en/tdg-partII-en-2.0.6.pdf">Part II</link>, and
+<link xlink:href="en/tdg-partIII-en-2.0.6.pdf">Part III</link> are also available.</para>
+</listitem>
+
+<listitem>
+<para>A <link xlink:href="en/docbook-tdg.pdb">Palm database</link> suitable for
+use with the <link xlink:href="http://www.isilo.org/">iSilo</link> document reader.</para>
+</listitem>
+
+</itemizedlist>
+
+<para><emphasis>Please</emphasis> do not download copies of the
+website with some recursive web slurping tool.</para>
+
+<section>
+<title>Errata</title>
+
+<para>The <link xlink:href="errata.html">list of errata</link> in the
+first edition is available.</para>
+</section>
+
+<section>
+<title>Other Versions</title>
+
+<para>Some other versions of <citetitle>The Definitive Guide</citetitle>
+are available.</para>
+
+<!--
+<section>
+<title>Simplified</title>
+
+<para>A <quote>customized</quote> version of TDG for
+<link xlink:href="/schemas/simple/">Simplified DocBook</link> is
+available.</para>
+
+<itemizedlist>
+<listitem>
+<para><link xlink:href="simple/en/html/sdocbook.html">Version 0.0.1</link> is a
+<quote>work in progress</quote>.
+It purports to document Simplified DocBook V1.0CR2.</para>
+
+<para><emphasis>It is very likely that the prose of this version sometimes makes
+reference to elements not present in Simplified DocBook.</emphasis></para>
+</listitem>
+</itemizedlist>
+
+<itemizedlist>
+<listitem>
+<para>A <link xlink:href="tdg-simple-en-html-0.0.1.zip">ZIP archive of HTML pages</link>.
+This is the same as the online version. Note that the root page is
+sdocbook.html, not index.html.</para>
+</listitem>
+</itemizedlist>
+
+<para><emphasis>Please</emphasis> do not download copies of the
+website with some recursive web slurping tool.</para>
+</section>
+-->
+
+<section>
+<title>French</title>
+
+<para>A French edition is available from O'Reilly &amp; Associates.
+</para>
+</section>
+</section>
+</article>

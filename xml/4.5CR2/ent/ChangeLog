@@ -1,0 +1,14 @@
+2004-08-26  Norman Walsh <nwalsh@users.sourceforge.net>
+
+	* README: Fixed spelling error
+
+	* README: New file.
+
+2001-11-13  Norman Walsh <nwalsh@users.sourceforge.net>
+
+	* .cvsignore, Makefile: Removed; now distributed separately
+
+2001-05-11  Norman Walsh <nwalsh@users.sourceforge.net>
+
+	* .cvsignore, Makefile: New file.
+

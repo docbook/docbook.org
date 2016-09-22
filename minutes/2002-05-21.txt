@@ -1,0 +1,250 @@
+| DocBook Technical Committee Meeting Agenda: 21 May 2002
+| =======================================================
+
+The DocBook Technical Committee met on Tuesday, 21 May 2002 at
+01:00p EDT (10:00a PDT, 17:00GMT, 18:00BST, 19:00CEST, 02:00JST+)
+for 90 minutes.
+
+| Agenda
+|
+| 1. Roll call
+
+  Dennis Evans [-2:10]
+  Dick Hamilton
+  Nancy Harrison [:30]
+  Mike Smith
+  Bob Stayton
+  Tim Teebken (Provisional)
+  Norman Walsh
+
+Regrets:
+
+  Paul Grosso
+  Sabine Ocker
+
+Called to order at 13:06 EDT.
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+Added 9b.
+
+| 4. Review of open action items {5 min}
+|
+|    a. Norm to write a concrete proposal for linking in DocBook 5.0
+|       Continued.
+|    b. Dick to compare his internal customizations to the last HelpSet proposal[2]
+        Completed.
+|    c. Nancy to review DITA for help authoring and summarize.
+        Continued.
+|    d. Norm to consider scheduling for 4.3, 5.0, 6.0 etc.
+|       Continued.
+|    e. Norm and Paul to take up offline the particular issues of how
+|       to do the HTML/Table customization.
+|       Continued.
+|    f. Mike to provide a list of use cases to motivate discussion of annotations
+|       Completed[3][4]
+|    g. Norm to float 'optionalparamdef'/'optionalmethodparam' on the list and
+|       see if other people are having similar problems.
+|       Completed[5]
+|    h. Norm to ask the submitter of RFE #495853 if they really want introductory
+|       text? If not, how do they imagine this would be rendered?
+|       Completed[6]
+|    i. Paul to report what the XHTML and XSL FO specs actually say
+|       about nested links.
+|       Completed[7]
+|
+|    ACTION: Norm to follow-up on g. for the June meeting
+|    ACTION: Norm to follow-up on h. for the June meeting
+|
+| 5. Release DocBook V4.2CR2? {5 min}
+
+Fix two PEs. Fix the error condition for xml.features and sgml.features.
+
+Proposed: Release CR2 and restart the 30 day counter. Accepted.
+
+| 7. Discuss options to control per-instance generated text on xref {15 min}
+
+Bob: Right now there's one redering for each xref (per element). For a
+reference to a chapter, for example, should it say "Chapter 5, Chapter
+Title". Sometimes it will have the page number, etc. There are some
+cases where always using the same style doesn't work very well from a
+writing perspective.
+
+PIs could be used, but will the PIs surive?
+
+See e.g., Feature Req #451011[8]
+
+There seems to be general agreement that this is a problem that would
+benefit from a common solution.
+
+ACTION: Bob to write an RFE.
+
+| 9. Discuss Annotations {15 min}
+
+Paul had strong opinions on this issue, it would be a shame to discuss
+it at length in his absence.
+
+Proposed: postpone for June. Accepted.
+
+9b. XML Character entities
+
+Mike: Looking at some Linux distributions and a distribution for the
+CygWin system, I noticed that they are distributing another version of
+the character entity files. Nobody should be tampering with those
+files, they should just be using the standard versions distributed at
+the OASIS DocBook site.
+
+We should come up with some mechanism for clearly identifying the
+files (internally) and indicate that they should not be changed.
+
+ACTION: Mike to file an bug report against the character entities.
+
+ACTION: Norm to review the status of the XML Character Entities document.
+
+ACTION: Norm to identify the questionable mappings and fix outstanding bugs.
+
+| 8. Discuss Help Authoring {10 min}
+
+Dick: comparing HP's internal work to the HelpSet proposal, they're
+very similar in the core. The things that are different may not be
+appropriate for DocBook:
+
+  - Markup optimizations to simplify the stylesheets
+    (An element that says where a pointer to the glossary goes, for example)
+
+  - We provide an explicit hierarchy; rather than a single HelpSet with an
+    automatically generated TOC; we have independent items and an explicit,
+    hand-generated TOC.
+
+ACTION: Tim to contact a representative from Microsoft to discuss help authoring
+
+Nancy: Still working on understanding DITA, in particular
+"specialization". Specialization is the way that they point data at a
+particular domain. So a command reference page or programming or
+business applications could all be specializations.
+
+There's a lot that does correspond. I can't think of any particular structure
+that I couldn't find some place in DITA. The very strong difference is the way
+that they modularize things.
+
+DocBook has a few modules (hierarchy, pool, notations); DITA creates a
+few different hierarchies and breaks up the pool of data considerably.
+Rather than have a single pool, they have one set of elements that's
+more for an API Ref and another that's for books. They also have one
+set that's all about formatting. They have about a dozen DTDs.
+
+They have topics, but then they have more specialized things (like books) in
+other places.
+
+Somewhat orthogonally, they have the concept of "information types":
+tasks, concepts, references, and general topic.
+
+It doesn't appear to me that having one of those dictates any internal
+structure.
+
+Mike: except perhaps for the procedure (task?) topic that's much more
+complex than the DocBook procedure model.
+
+Nancy: my first derivation is that the biggest difference is in how
+they break out the parts. This makes it possible to subset whole
+groups more easily.
+
+Naming is very clearly HTML derived.
+
+I'm still in process with the investigation and it isn't done yet.
+
+We don't have a task- or topic-oriented markup style. They're
+elevating things like "procedures" to a stand-alone thing at the level
+of a "refentry" in DocBook. This is a perspective that we probably
+really want to look at in terms of how we would like to modularize
+DocBook. What things are likely to be standalone?
+
+We want to be aware of the parts of DocBook that are likely to be used
+standalone.
+
+| 10. Review of Requests for Enhancement {40 min}
+|
+|    To browse a specific RFE, enter the URL (on one line):
+|
+|         http://sourceforge.net/tracker/index.php?func=detail&amp;;
+|         group_id=21935&amp;atid=384107&amp;aid=XXXX
+|
+|    where XXXX is the RFE number.
+|
+|    488368 Simplify single index entries
+
+Norm: I'm not moved by the verbosity problems. And entities are a
+perfectly good solution.
+
+Mike: I feel the same way.
+
+Dick: I'd feel more comfortable if you got some more benefit beyond fewer keystrokes.
+
+Proposed: Reject request. Accepted.
+
+|    507975 revision should allow author
+
+Proposed: Accept. Accepted.
+
+|    514244 Allowing xref inside link
+
+Postponed: pending further refinement of the generalized linking proposal.
+
+|    514425 Simplify info elements
+
+ACTION: Norm to ask for opinions on the list. Particularly to see if
+anyone has ever used the subsetting facility that we provide.
+
+ACTION: Norm to ask if the relative ordering of info elements and
+titles is an issue. In particular, is fixing it worth the
+backwards-incompatibility hit.
+
+|    514435 Allow reference within refentry
+
+Nancy: we allow deeply nested refsects for this purpose. So that
+subsidiary reference information could be placed in a single refentry.
+
+Mike: perhaps he could provide a more complete example of the problem,
+or how a new reflist element would work.
+
+ACTION: Mike to follow-up with the submitter for more detail.
+
+|    517604 Optional Title for GlossList
+
+Proposed: Accept this. Accepted.
+
+|    518074 More database classes
+
+Proposed: Accept this proposal with the addition of "secondarykey".
+Accepted.
+
+Out of time. Meeting adjourned at 14:32 EDT.
+
+|    531851 Remove inline person name elements
+|    532088 Remove RevHistory from qandaentry
+|    533734 Allow methodsynopsis not to have paramet
+|    558443 include storage info in metadata
+|
+|    The following RFEs have been moved to the bottom of this agenda in order
+|    to make sure that all RFEs get fairly discussed.
+|
+|    413389 Enhance METHODNAME and VARNAME
+|    425730 Create an SVG module
+|    431411 RFE 70: add generic linking capability
+|    436067 splitting tech.char.class
+|    482818 Simplify ToC content model
+|    522552 Add title attribute to <ulink> element
+|
+| [1] http://lists.oasis-open.org/archives/docbook-tc/200204/msg00010.html
+| [2] http://sourceforge.net/docman/display_doc.php?docid=9352&group_id=21935
+| [3] http://lists.oasis-open.org/archives/docbook-tc/200205/msg00004.html
+| [4] http://lists.oasis-open.org/archives/docbook-tc/200205/msg00005.html
+| [5] http://lists.oasis-open.org/archives/docbook/200205/msg00078.html
+| [6] http://sourceforge.net/tracker/index.php?func=detail&group_id=21935&atid=384107&aid=473365
+| [7] http://lists.oasis-open.org/archives/docbook-tc/200204/msg00011.html
+
+[8] http://sourceforge.net/tracker/index.php?func=detail&aid=451011&group_id=21935&atid=373750

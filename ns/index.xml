@@ -1,0 +1,22 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='ns'>
+<info>
+<title>DocBook Namespaces</title>
+</info>
+
+<para>Historically, DocBook was in no namespace. Starting with DocBook
+V5.0, DocBook is in a namespace:</para>
+
+<itemizedlist>
+<listitem>
+<para><link xlink:href="docbook">http://docbook.org/ns/docbook</link>,
+the namespace name for DocBook.</para>
+</listitem>
+</itemizedlist>
+
+<para>In time, other modules may also have their own namespace.</para>
+
+</article>
+

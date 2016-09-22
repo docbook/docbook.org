@@ -1,0 +1,163 @@
+DocBook Technical Committee Meeting Minutes: 22 November 2004
+=============================================================
+
+The DocBook Technical Committee met on Monday, 22 Nov 2004 at
+05:00p EST (02:00p PST, 22:00GMT, 22:00BST, 23:00CEST, 07:00JST+,
+03:30a India+) for 80 minutes.
+
+
+1. Roll call
+
+   Present: Gary Cornelius, Paul Grosso,
+   Nancy Harrison, Scott Hudson, Mark Johnson,
+   Jirka Kosek, Larry Rowland, Bob Stayton, Norman Walsh 
+   
+   Regrets: Steven Cogorno, Dick Hamilton
+   
+   Absent: Adam Di Carlo
+   
+2. Accepting the corrected minutes[1] of the previous meeting.
+
+   Accepted.
+
+3. Next meeting: 15 December 2004.
+
+   OK.
+
+4. Review of the agenda.
+
+   Mike added two new RFE's to item 11.
+
+5. Review of open action items
+
+   a. Mike to provide a better proposal for choicelist markup.
+
+      Remove from action item list for now.
+
+   b. Norm to write second draft charter.
+   
+      Continue.
+
+   c. Norm to recast his example annotation implementation using the
+      two element names (alt and annotation), and will
+      restart a discussion on the list.
+
+      Continue.
+
+   d. Nancy will write up some text for accepting or
+      rejecting requests, to be discussed
+      at the next meeting.
+
+      Completed.
+ 
+6. Status of DTD version 4.4.  [2]
+
+   No feedback from the list since the CR2 release.
+   The TC decided to test it with the DocBook test suite.
+
+ACTION: Norm to update the test suite with 4.4 features.
+
+ACTION: Mike to write up the test suite process.
+
+ACTION: Bob to review minutes to ensure new features are tested.
+
+   OASIS has not yet reinstated Committee Specifications as
+   an option for OASIS work.  Still pending.
+
+7. Consider removing sections 5 and 6 from the DTD specs.
+   
+   For version 4.4, Norm had already edited section 5 (which
+   discussed 5.0) and removed section 6 (which discussed 6.0).
+
+8. Annotation proposal (Mike).  [1] [3] [4]
+    Continued from previous meeting.
+
+   Norm will complete his action item to update his sample site
+   with the proposed elements.  Will discuss at the December meeting.
+
+9. Accessibility.  [5] [6]
+    Includes table accessibility. [7]
+    Continued from previous meeting.
+
+   Nancy asked if  table accessibility can be improved with
+   new DocBook elements or attributes?  Most features can
+   be provided by stylesheets. One feature that could
+   not was row headers.  The CALS table spec does not provide
+   markup for row headers.  Paul pointed out that DITA has
+   proposed a rowhead attribute on a table element to indicate
+   "firstcolumn" or "none".  
+
+ACTION: Jirka will post this suggestion to the docbook list 
+for discussion.
+
+10. Discuss guidelines for accepting or rejecting requests.
+    Continued from previous meeting.
+
+    Nancy's email had not yet reached everyone, so this was
+    postponed until the December meeting.
+
+11. Review of Requests for Enhancement
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;;
+      group_id=21935&atid=384107&aid=XXXX
+
+      1055480 RFE: Make revnumber optional 
+
+         The Committee acknowledged that not all revisions are made
+         under a system of revision numbering.  ACCEPTED.  Too late
+         for 4.4, however.
+
+     
+      1070770 Procedure in example 
+
+         The Committee accepted the premise, but expressed concern
+  about putting an element that can have a title inside
+  a formal element that has a title.  Since the
+  inner title is optional, it is the author's call.
+  ACCEPTED.  Too late for 4.4, however.
+
+      1070458 Allow colophon in article 
+
+         Much discussion about the role of a colophon, and why
+  it might be needed for an article, and whether any
+  other markup would suffice.  The proposal was made to
+  add colophon to the collection of elements that can
+  appear at the end of an article.  ACCEPTED, with
+  Norm abstaining.   Too late for 4.4, however.
+
+
+Meeting adjourned at 6:20pm
+**************************************************************
+
+     The following RFEs are awaiting action items
+
+      973446 Replace Footnote with Annotation 
+      413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+      431411 RFE 70: add generic linking capability (Norm)
+      522552 Add title attribute to <ulink> element (Mike, annotations)
+      565637 Associate non-inline image with link (Norm, generic linking)
+      574880 Add annotation element (Mike)
+      623524 (Re)Consider "choicelist" markup (Mike)
+
+     The following RFEs are identified as V5.0 or later
+
+      974285 Check floatstyle/float attributes
+      958393 remove default class value from productname 
+      531851 Remove inline person name elements
+      532088 Remove RevHistory from qandaentry
+- ---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200410/msg00025.html
+[2] http://www.oasis-open.org/docbook/xml/4.4CR2/
+[3] http://lists.oasis-open.org/archives/docbook-tc/200406/msg00003.html
+[4] http://lists.oasis-open.org/archives/docbook-tc/200406/msg00005.html
+[5] http://lists.oasis-open.org/archives/docbook-tc/200408/msg00002.html
+[6] http://lists.oasis-open.org/archives/docbook-tc/200408/msg00003.html
+[7] http://lists.oasis-open.org/archives/docbook-tc/200410/msg00021.html
+
+Bob Stayton
+Sagehill Enterprises
+DocBook Consulting
+bobs@sagehill.net

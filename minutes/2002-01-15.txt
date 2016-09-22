@@ -1,0 +1,244 @@
+| DocBook Technical Committee Meeting Minutes: 15 Jan 2002
+| ========================================================
+|
+| Agenda
+|
+| 1. Roll call
+
+Dick Hamilton
+Nancy (Paisner) Harrison
+Sabine Ocker
+Michael Smith
+Bob Stayton
+Norman Walsh
+
+Absent:
+
+Dennis Evans
+
+Resigned:
+
+Patricia Gee-Best
+
+Meeting called to order.
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+No changes.
+
+In the interest of expediency, this month's agenda already includes
+the disposition of open action items.
+
+Proposed: we'll discuss only those for which the disposition is
+unknown or for which there are questions.
+
+Accepted.
+
+| 4. Review of open action items [5 min]
+|
+|     a. Norm to write a concrete proposal for linking in DocBook 5.0
+|
+|     Action: continued.
+|
+|     b. Norm to propose new "name and address" markup
+|
+|     Completed.[3] No action necessary.
+|
+|     c. Norm to post message to DocBook list about Bibliographys in Refentrys.
+|
+|     Completed.[4] Changed RFE #4355518 to pending; there's been no reply
+|
+|     d. Norm to post HTML Forms Module V1.1
+|
+|     Action: continued.
+|
+|     e. RFE 440667 Affiliation lacks CorpName: Norm to write concrete proposal
+|
+|     Action: continued.
+|
+|     f. Bob to clarify the refentry for link (RFE 441883).
+
+      Completed.
+
+|     g. Mike to propose explicit wording for the DocBook community web page
+|        and the information to be collected.
+
+      Continued.
+
+|     h. Bob to write a concrete proposal for the missing elements to
+|        map to Dublin Core.
+|
+|     Completed.[5]
+|
+|     i. Nancy to provide a list of places where we should allow more metadata.
+|
+|     Completed.[6]
+|
+| 5. OLink extension [10 min]
+|
+|    Related info:
+|       RFE 492099 two new olink attributes[7]
+|       Proposal for implementing olink[8]
+|       Mike's messages on OLink[9]
+
+Norm notes that the name 'targetid' may be too limiting. It would be nice,
+in some contexts at least, to use other methods of location (XPointer child
+sequences[11], for example).
+
+Norm suggests reusing 'localinfo'
+
+Bob notes that localinfo is really for local stuff, and this is a
+"remote" info.
+
+Proposed: we'll add two attributes, as proposed in RFE 492099, but the
+exact name of the 'targetid' attribute will be decided in email.
+
+Accepted.
+
+Norm proposes the name 'targetptr' instead of 'targetid'.
+
+| 6. Dublin Core metadata [10 min]
+
+Proposed: we accept the proposal to provide full Dublin Core coverage in
+DocBook. We'll add new elements for source, relation, and coverage.
+The technical details of the content model will be discussed in email.
+
+Action: Bob to propose explicit content models.
+
+Accepted.
+
+| 7. Metadata location [10 min]
+|
+|    Related info:
+|       Nancy's summary[6]
+|       RFE 487482 Add legalnoticeinfo[10]
+
+Nancy's analysis (plus discussion during this telcon) resulted in the
+following list of additional places for metadata:
+
+  equation, example, figure, informalequation, informalexample,
+  informalfigure, informaltable, itemizedlist, legalnoticeinfo, msgset,
+  orderedlist, procedure, qandadiv, qandaentry, qandaset, table,
+  variablelist
+
+Action: Norm to post this list on the DocBook list for additional
+review.
+
+What about the name of the new metadata wrapper?
+
+Three choices
+  1. EquationInfo, ExampleInfo, etc.
+  2. A single new element for all of these places
+  3. Reuse ObjectInfo
+
+Question: Does anyone feel one is absolutely right? No.
+
+Question: Does anyone feel we should add EquationInfo, etc.? No.
+
+In the discussion which followed, the general sentiment was that we
+should choose 2.
+
+Nancy proposes BlockInfo.
+
+Proposed: We'll provide a single new wrapper, the name of which to be
+decided by email.
+
+Accepted.
+
+| 8. DocBook V4.2 release schedule [5 min]
+
+Feature complete freeze at next meeting.
+
+Best possible schedule: Feature freeze 18 Feb, Beta on 19 Feb, vote to
+make a Committee Specification on 19 Mar.
+
+| 9. Review of open RFEs[2] [20 min]
+|
+|      To browse a specific RFE, enter the URL (on one line):
+|
+|         http://sourceforge.net/tracker/index.php?func=detail&;
+|         group_id=21935&atid=384107&aid=XXXX
+|
+|      where XXXX is the RFE number.
+
+
+The following items were discussed in a somewhat haphazard order.
+
+|    440667 Affiliation lacks CorpName
+
+     Action: Norm to write concrete proposal
+
+|    470599 Need an imagedata to fit to max size
+
+     Doesn't width="100%" scalefit="1" do this?
+     Action: Norm to follow-up
+
+|    473365 Allow optional in funcprototype
+
+     Follow-up on list? (Find msg in November)
+     Action: Norm to follow-up again
+
+|    486260 address in /article/articleinfo/author
+
+     Dup of 480957.
+
+|    487482 Add legalnoticeinfo
+
+     Added to meta info discussion
+
+|    488378 Support xml:lang
+
+     We could do this in 4.2 because the prefix is fixed.
+     Action: further discussion next time.
+
+|    488740 Book allows SetIndex
+
+     Rejected. No, it was intentional.
+
+|    482818 Simplify ToC content model
+
+     Action: make agenda item at next meeting
+
+|    472229 Allow HTML tables
+
+     Action: make agenda item at next meeting
+
+|    480957 New name and address markup
+
+     Action: make agenda item at next meeting
+
+|    491629 Add <personname> to %gen.char.class
+
+     Action: make agenda item at next meeting
+
+|    493564 Email should not allow e.g Inlinegraphic
+
+     Pending. Consider for parameter entity reorganization
+
+|    498848 seglistitem should only require one seg
+
+     Accepted.
+
+|    501363 Need section.class param entity
+
+     Accepted previously.
+
+|    488368 Simplify single index entries
+
+     Action: continued.
+
+| [1] http://lists.oasis-open.org/archives/docbook-tc/200112/msg00010.html
+| [2] http://sourceforge.net/tracker/index.php?group_id=21935&atid=384107
+| [3] http://lists.oasis-open.org/archives/docbook-tc/200112/msg00012.html
+| [4] http://lists.oasis-open.org/archives/docbook/200108/msg00081.html
+| [5] http://lists.oasis-open.org/archives/docbook-tc/200201/msg00001.html
+| [6] http://lists.oasis-open.org/archives/docbook-tc/200112/msg00011.html
+| [7] http://sourceforge.net/tracker/index.php?func=detail&group_id=21935&atid=384107&aid=492099
+| [8] http://www.sagehill.net/OlinkExtended.html
+| [9] http://lists.oasis-open.org/archives/docbook-tc/200111/msg00001.html
+| [10] http://sourceforge.net/tracker/index.php?func=detail&group_id=21935&atid=384107&aid=487482
+[11] http://www.w3.org/TR/xptr/#child-seqs

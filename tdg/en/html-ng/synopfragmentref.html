@@ -1,0 +1,53 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>synopfragmentref</title><link rel="stylesheet" href="defguide.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.64.1"><link rel="home" href="docbook.html" title="DocBook"><link rel="up" href="ref-elements.html" title="DocBook Element Reference"><link rel="previous" href="synopfragment.html" title="synopfragment"><link rel="next" href="synopsis.html" title="synopsis"></head><body><div class="navheader"><table border="0" cellpadding="0" cellspacing="0" width="100%" summary="Navigation table"><tr><td align="left">&nbsp;<a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a>&nbsp;<a title="synopfragment" href="synopfragment.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;<a title="DocBook Element Reference" href="ref-elements.html"><img src="figures/nav-up.png" alt="Up" border="0"></a>&nbsp;<a title="synopsis" href="synopsis.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td><td align="right"><i>DocBook: The Definitive Guide</i> 2.0.9 <span class="alpha-version">(<a href="co01.html"><em>Alpha</em></a>)</span> </td></tr></table></div><div class="refentry" lang="en"><a name="synopfragmentref.element"></a><div class="titlepage"><div><h1 class="title">synopfragmentref</h1></div><div><p class="releaseinfo">$Revision: 1.3 $</p></div><div><p class="pubdate">$Date: 2002/06/12 11:18:39 $</p></div></div><div class="refnamediv"><p>synopfragmentref &#8212; A reference to a fragment of a command synopsis</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><h3><span class="bold"><b>Mixed Content Model</b></span></h3><pre class="synopsis">synopfragmentref ::=
+(#PCDATA)</pre><h3><span class="bold"><b>Attributes</b></span></h3><p><a href="ref-elements.html#common.attributes" title="Common Attributes">Common attributes</a></p><table border="0" width="100%" cellpadding="2" style="border-collapse: collapse; border-left: 0.5pt solid black; border-right: 0.5pt solid black; border-bottom: 0.5pt solid black;" summary="Attributes"><thead><tr><td class="th" style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; "><p><span class="bold"><b>Name</b></span></p></td><td class="th" style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; "><p><span class="bold"><b>Type</b></span></p></td><td class="th" style="border-bottom: 0.5pt solid ; "><p><span class="bold"><b>Default</b></span></p></td></tr></thead><tbody><tr><td style="border-right: 0.5pt solid ; " align="left" valign="top">linkend</td><td style="border-right: 0.5pt solid ; " align="left" valign="top">IDREF</td><td style="" align="left" valign="top"><span class="emphasis"><em>Required</em></span></td></tr></tbody></table><div class="docbookng-synopsis"><h3>DocBook NG &#8220;Bourbon&#8221; Content Model</h3><div class="define-first"><div class="element">synopfragmentref ::=<ul><li><em>text</em></li></ul><h4>DocBook NG &#8220;Bourbon&#8221; Attributes</h4><p>Common attributes.</p><p>Additional attributes: (Required attributes, if any, are <b>bold</b>)</p><ul><li><b>linkend</b> (IDREF)</li></ul><h4>DocBook NG &#8220;Bourbon&#8221; Additional Constraints</h4><ul><li>@linkend on synopfragmentref must point to a synopfragment.</li></ul></div></div></div></div><div class="refsect1" lang="en"><a name="d0e194005"></a><h2>Description</h2><p>
+A complex <a href="cmdsynopsis.html"><tt class="sgmltag-element">CmdSynopsis</tt></a> can be made more manageable
+with <a href="synopfragment.html"><tt class="sgmltag-element">SynopFragment</tt></a>s.  Rather than attempting to
+present the entire synopsis in one large
+piece, parts of the synopsis can be extracted out and presented
+elsewhere. 
+</p><p>
+At the point where each piece was extracted, insert a
+<a href="synopfragmentref.html"><tt class="sgmltag-element">SynopFragmentRef</tt></a> that points to the fragment. The
+content of the <a href="synopfragmentref.html"><tt class="sgmltag-element">SynopFragmentRef</tt></a> will be presented inline.
+</p><p>
+The extracted pieces are placed in <a href="synopfragment.html"><tt class="sgmltag-element">SynopFragment</tt></a>s
+at the end of the <a href="cmdsynopsis.html"><tt class="sgmltag-element">CmdSynopsis</tt></a>.
+</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>
+The content model of <a href="synopfragmentref.html"><tt class="sgmltag-element">SynopFragmentRef</tt></a> is unique in
+the <span class="acronym">SGML</span> version of DocBook because it contains <tt class="literal">RCDATA</tt>
+declared content. What this means is that all markup inside a
+<a href="synopfragmentref.html"><tt class="sgmltag-element">SynopFragmentRef</tt></a> is ignored, except for entity references.
+</p><p>
+How, you might ask, is this different from a content model that
+includes only <tt class="literal">#PCDATA</tt>?  The difference is only
+apparent when you consider inclusions.  Recall that an inclusion
+provides a list of elements that can occur <span class="emphasis"><em>anywhere</em></span>
+inside an element.  So, for example, the fact that
+<a href="chapter.html"><tt class="sgmltag-element">Chapter</tt></a> lists <a href="indexterm.html"><tt class="sgmltag-element">IndexTerm</tt></a> as an inclusion
+means that <a href="indexterm.html"><tt class="sgmltag-element">IndexTerm</tt></a> can legally occur inside of a
+<a href="synopfragmentref.html"><tt class="sgmltag-element">SynopFragmentRef</tt></a> that's nested inside a chapter,
+even if the content model of <a href="synopfragmentref.html"><tt class="sgmltag-element">SynopFragmentRef</tt></a> does
+not explicitly allow <a href="indexterm.html"><tt class="sgmltag-element">IndexTerm</tt></a>s. Making the content
+<tt class="literal">RCDATA</tt> ensures that the markup will not be recognized,
+even if it's allowed by inclusion. A neat trick.
+</p><p>
+<span class="acronym">XML</span> does not support <tt class="literal">RCDATA</tt>.
+</p></div><div class="refsect2" lang="en"><a name="d0e194084"></a><h3>Processing expectations</h3><p>
+Formatted as a displayed block. 
+</p><p>
+The presentation system is responsible for generating text that
+makes the reader aware of the link. This can be done with
+numbered bullets, or any other appropriate mechanism.
+</p><p>
+Online systems have additional flexibility. They may generate
+hot links between the references and the fragments, for example,
+or place the fragments in pop-up windows.
+</p></div><div class="refsect2" lang="en"><a name="d0e194093"></a><h3>Parents</h3><p>These elements contain synopfragmentref:
+<span class="simplelist"><a href="arg.html"><tt class="sgmltag-element">arg</tt></a>, <a href="group.html"><tt class="sgmltag-element">group</tt></a></span>.</p></div></div><div class="refsect1" lang="en"><a name="d0e194106"></a><h2>Attributes</h2><div class="variablelist"><dl><dt><span class="term">linkend</span></dt><dd><p>
+<tt class="sgmltag-attribute">Linkend</tt> points to the <a href="synopfragment.html"><tt class="sgmltag-element">SynopFragment</tt></a> referenced.
+</p></dd></dl></div></div><div class="refsect1" lang="en"><a name="d0e194122"></a><h2>See Also</h2><p><span class="simplelist"><a href="arg.html"><tt class="sgmltag-element">arg</tt></a>, <a href="cmdsynopsis.html"><tt class="sgmltag-element">cmdsynopsis</tt></a>, <a href="group.html"><tt class="sgmltag-element">group</tt></a>, <a href="refsynopsisdiv.html"><tt class="sgmltag-element">refsynopsisdiv</tt></a>, <a href="sbr.html"><tt class="sgmltag-element">sbr</tt></a>, <a href="synopfragment.html"><tt class="sgmltag-element">synopfragment</tt></a></span>.
+</p></div><div class="refsect1" lang="en"><a name="d0e194146"></a><h2>Examples</h2><p>For examples, see
+<span class="simplelist"><a href="synopfragment.html"><tt class="sgmltag-element">synopfragment</tt></a></span>.
+</p></div></div><div class="navfooter"><table width="100%" summary="Navigation table"><tr><td width="40%" align="left"><a title="synopfragment" href="synopfragment.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;</td><td width="20%" align="center"><a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a></td><td width="40%" align="right">&nbsp;<a title="synopsis" href="synopsis.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td></tr><tr><td width="40%" align="left">synopfragment&nbsp;</td><td width="20%" align="center"><a title="DocBook Element Reference" href="ref-elements.html"><img src="figures/nav-up.png" alt="Up" border="0"></a></td><td width="40%" align="right">&nbsp;synopsis</td></tr></table></div><div class="copyrightfooter"><p><a href="dbcpyright.html">Copyright</a> &copy; 1999, 2000, 2001, 2002, 2003 <a href="http://www.oreilly.com/">O'Reilly &amp; Associates, Inc.</a> All rights reserved.</p></div></body></html>

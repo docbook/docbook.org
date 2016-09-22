@@ -1,0 +1,209 @@
+DocBook Technical Committee Meeting Minutes: 24 Sep 2003
+========================================================
+ 
+The DocBook Technical Committee met on Wednesday, 24 Sep 2003 at
+05:00p EDT (02:00p PDT, 21:00GMT, 22:00BST, 23:00CEST, 06:00JST+,
+02:30a India+) for 90 minutes.
+ 
+| Agenda
+| 
+| 1. Roll call
+
+Jeff Beal
+Paul Grosso
+Dick Hamilton
+Scott Hudson
+Mike Smith
+Bob Stayton
+
+Regrets:
+
+Steve Cogorno
+
+Absent:
+
+Mark Johnson
+Nancy Harrison
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+(Norm to make sure they are posted to both DocBook and DocBook-tc.)
+
+| 3. Next meeting: 15 Oct 2003 (conflict for Norm)
+
+Proposed: 22 Oct.
+
+Accepted.
+
+| 4. Review of the agenda
+
+Accepted.
+
+| 5. Review of open action items
+| 
+|     a. Norm to follow-up on RFE 562343: &lt;packagename&gt; element
+Continued.
+|     b. Norm to write better documentation for option/optional
+Continued.
+|     c. Norm to ask Denis Evans for his opinions on REF #686733, allow
+|        bibliography under &lt;refentry&gt;
+Completed last week.
+|     d. Norm to describe how topical indexes might be created with
+|        a custom stylesheet.
+Continued.
+|     e. Norm to describe how the prototype works and how it was constructed.
+Continued.
+|     f. Mike to provide a better proposal for choicelist markup.
+Continued.
+|     g. Mike to reconsider the annotation problem and post his thoughts.
+Continued.
+|     h. Norm to propose bibliolist.
+Continued.
+|     i. Norm to add a code element.
+Continued
+
+The 'language' attribute is what we have for the synopsis elements.
+It's what HTML uses. It seems like you can overload language with
+alternates if you really need to.
+
+Perhaps 'syntax' is better, but we already have 'language'.
+
+If we didn't have language, we might perfer syntax, but do we want to
+move to syntax?
+
+No.
+
+Add a language attribute, parallel to language on the synopsis
+elements?
+
+Yes.
+
+Add it on programlisting and synopsis (but not literallayout, screen,
+and address)?
+
+Yes.
+
+Should all these changes go in 4.3?
+
+Yes.
+
+| 6. DocBook V4.3
+
+Bugs from Bob Stayton:
+
+  The %tbl.table.mdl entity is
+  missing the textobject* element in the CALS
+  half of the declaration.  It was in 4.2, so
+  removing it would not be backwards compatible.
+
+Typo.
+
+  615587  Support xml:base
+        To be added to %common.attrib; and %idreq.common.attrib;
+
+  616216  recursive Subset tag.
+        Allowing (set|book)+ where (book)+ is
+	currently allowed in set.
+
+  615473 Extend float values on figure?
+       We added 'floatstyle' attribute on four formal object.
+
+Oversight.
+
+  I wasn't able to validate an HTML table in the
+  new DocBook 4.3b2.  There seems to be some duplicate
+  attributes declared.
+
+  In &lt;table&gt;'s attlist, the %tbl.table.att; entity
+  includes 'align', but so does %cellalign; used
+  inside %secur; further down.
+
+  Also, 'lang' and 'dir' attributes exist in both
+  %common.attrib; and %i18n;, both of which are
+  used inside %secur;
+
+  Also, 'char' and 'charoff' are both used in entry twice.
+  Once in the entry ATTLIST,
+  and once in %cellalign; used in the same ATTLIST.
+
+Check and fix.
+
+Action: Norm to update and republish DocBook 4.3.
+
+| 7. DocBook V5.0 (RELAX NG)
+
+I'm working on it.
+
+Big open issues:
+
+  - How to present RNG content models to the user (for documentation)?
+  - How to transform the RNG grammar down to something that's deterministic
+    enough for Trang to turn into a DTD.
+
+Action: Norm to post his stylesheet that attempts to convert existing DocBook
+        documents to the &quot;V5&quot; style markup.
+
+| 8. Annotations
+
+Continued, pending Mike's action item.
+
+8b. Topic Index
+
+NW: Explains the problem after more discussion with the submitter: the
+need is really for general index terms of different types.
+
+MS: TEI has this feature. And if you generate an index just from other
+markup, then you don't get the richness of secondary, tertiary, etc.
+If you really wanted to make a sophisticated index with different
+types, you'd need to have this kind of markup.
+
+NW: What are the semantics of this attribute?
+
+Proposal: add a 'type' attribute to 'indexterm' and 'index' to support
+this markup.
+
+Accepted.
+
+BS: How tightly we need to define the processing expectations?
+
+Proposed semantics:
+
+Indexterms of type 'x' go in index of type 'x'. An index with no type
+gets all of the index terms regardless of their type.
+
+In 4.3?
+
+Yes.
+
+| 9. Review of Requests for Enhancement
+| 
+|    [ Consult SourceForge, I haven't had a chance to review these ]
+| 
+|     To browse a specific RFE, enter the URL (on one line):
+| 
+|       http://sourceforge.net/tracker/index.php?func=detail&amp;
+|       group_id=21935&amp;atid=384107&amp;aid=XXXX
+| 
+|       697374 marking up keycaps according to their semantics
+
+Old.
+
+|       740647 List or Table of Procedures.
+
+Processing expectation.
+
+|       742373 Splitting Segmented List
+
+Use entities.
+
+|       810932 Improved citation support
+
+Needs more consideration.
+
+Adjourn early, Norm promises to cleanup the SourceForge tracker for next month.
+
+- ---
+
+| [1] http://lists.oasis-open.org/archives/docbook/200308/msg00037.html

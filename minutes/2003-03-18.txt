@@ -1,0 +1,291 @@
+| DocBook Technical Committee Meeting Minutes: 18 Mar 2003
+| ========================================================
+|
+| The DocBook Technical Committee will met on Tuesday, 18 Mar 2003
+| at 01:00p EST (10:00a PST, 18:00GMT, 19:00CET, 03:00JST+) 
+| for 90 minutes.
+[...]
+| Agenda
+|
+| 1. Roll call
+
+Steve Cogorno
+Paul Grosso
+Dick Hamilton
+Nancy Harrison
+Scott Hudson
+Mark Johnson
+Bob Stayton
+Norman Walsh
+
+Absent:
+
+Michael Smith
+
+Norm explains ongoing problems with OASIS mail/web servers.
+
+| 2. Accepting the minutes of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+Accepted.
+
+| 4. Review of open action items {5 min}
+|
+|     a. Norm to follow-up on RFE 562343: &lt;packagename&gt; element
+Continued.
+|     b. Norm to write better documentation for option/optional
+Continued.
+|     c. Norm to post simplified ToC proposal to the list again
+Continued.
+|     d. Steve to provide a first draft of a requirements document for task/topic.
+Completed.
+|     e. Mike to post summary of annotations.
+Completed.
+|     f. Dick to ask local expert about annotations.
+Completed.
+|     g. Bob to post concrete example of associate purposes with components in
+|            refentries (Allow reference within refentry)
+Completed.
+
+ACTION: Norm to make an agenda item for next month.
+
+|     h. Norm to propose a new content model for mediaobjectco to bring
+|            it back in sync with mediaobject
+Continued.
+|     i. Bob to amend the RFE 558443 (storage info in metadata) and then close it
+Completed.
+|     j. Mike to summarize the URL/URN markup issue and propose a new URI element with
+|            appropriate attribute names and values
+Completed.
+|     k. Norm to ask Tony/Paul for a summary of what is missing from
+|            DocBook to support proper mixed bidi text.
+Completed.
+
+ACTION: Norm to post concrete proposal for this.
+
+|     l. Norm to put RFE 623524 ((re)consider choicelist markup) on the agenda
+Completed.
+|     m. Bob to review the list of bibliography elements and see which
+|            ones make sense in paragraph. Orgname is requested here, we already
+|            allow author and corpauthor. What about others?
+|            (Related to REF #679316 Allow orgname tag within paragraphs)
+Completed.
+
+ACTION: Norm to make an agenda item for next month.
+
+|     n. Norm to ask Denis Evans for his opinions on REF #686733, allow
+|             bibliography under &lt;refentry&gt;
+Continued.
+|     o. Norm to put releaseing 4.3 or 5.0 or whatever's next on the agenda
+Completed.
+
+4b. HTML tables in DocBook
+
+Paul: My understanding was that I'd made my case and it was rejected.
+I still believe what I believe, but I'm happy to go with whatever the
+TC wants to decide. The more important question is how the TC wants to
+respond to other public comment.
+
+Bob: I was thinking about the idea of cutting and pasting because of
+the content models inside the table cells. That doesn't work because
+of markup in the cells. In my corpus, most tables have markup. You'd
+have to do a conversion anyway. Subsequent discussion has indicated
+that it's just the element names that need to be allowed, they just
+want a familiar set of tags.
+
+Nancy: If people want to use HTML tag names, they still have a
+different structure. The structure they're used to using those tag
+names in won't work anyway.
+
+Bob: You can form a table and use the HTML tag names until you get
+into the cell content.
+
+Norm: It is true that the tables could be identical if there was no
+entry-level markup. And there would be more presentational attributes
+in the HTML case.
+
+Steve: I think if we put an implementation in, we're still going to
+get complaints because users are used to being able to do a wide
+variety of things that wouldn't be valid.
+
+Steve/Paul debate the merits of supporting users or tools.
+
+Nancy: Cut and paste isn't going to work in either direction.
+
+Paul: What are we trying to do here? 
+
+Steve: We already get a lot of questions about what to do with markup,
+if we look at it as a recommendation of good tagging structure, we can
+give good advice.
+
+Norm argues that the mental transition from XHTML to CALS is
+significant and a body of users would find DocBook easier to learn if
+they didn't have to make that transition.
+
+Nancy: My recollection is that the way that we propose it's
+implemented you would choose one or another model.
+
+Bob: But the DTD couldn't enforce it.
+
+Norm: The DTD can't enforce every model, but it isn't that bad.
+
+Bob: What about htable?
+
+Norm: htable would still have to contain tbody.
+
+Steve: Is the 5.0 DTD going to be XML only? Couldn't we use namespaces?
+
+Norm: Most people are using DTDs and I don't think we can abandon that
+for a while.
+
+Norm: I'm concerned that people will make a non-interoperable DTD to
+support XHTML tables.
+
+Some discussion of what interoperable and subsets mean.
+
+Nancy: Can we take a straw poll on whether people are willing to
+include HTML tables or not?
+
+Dick: That would depend on how it's implemented.
+
+Discussion of Paul's proposal.
+
+Norm: If we used the Strict HTML, then you wouldn't get the
+presentational attributes.
+
+Straw Poll: Are you willing to include XHTML tables in DocBook along
+the lines of Paul's earlier proposed DTD changes?
+
+Steve Cogorno   N
+Paul Grosso     Y
+Dick Hamilton   Y
+Nancy Harrison  Y
+Scott Hudson    Y
+Mark Johnson    Y (with reservations)
+Bob Stayton     Y
+Norman Walsh    abstain
+
+Nancy: I think we've had a new data point, the users have asked us and
+so I think the users have demonstrated that it's important.
+
+ACTION: Paul to review how his proposal would change if we went with Strict
+instead of Transitional.
+
+| 5. Releasing V4.3 or V5.0
+
+Bob: I'd like to see a list of all the things we've approved and see
+if any of them require 5.0.
+
+ACTION: Norm to produce that summary.
+
+Bob: This also has implications for announcing 6.0.
+
+Steve: Can we do both? Release 4.3 and 5.0.
+
+Bob: The distinction is that we'd do the approved changes that aren't
+backwards compatible in 4.3.
+
+Proposal: Release 4.3 sooner rather than later.
+
+(General agreement)
+
+Dick: I have mixed feelings, 4.3 is easier to sell here, but at the
+same time I understand your concerns about getting to a 5.0.
+
+Proposed: Move discussion until next month.
+
+| 6. Choicelist markup
+
+ACTION: Norm to put on the agenda for next month.
+
+| 7. Annotations
+
+Dick: The presentational questions were some of our thoughts. The
+biggest reason we would use would be to provide an HTML title-like
+format. This introduces some co-constraint issues: you might want to
+have the content model only contain #PCDATA if the class attribute was
+title.
+
+Bob: What other uses does it have? It seems like structure could be useful.
+
+Norm: Yes, I think you'd need to allow structure even if it could make
+for problematic display in some circumstances.
+
+Paul: We need to make sure that we know what we're doing. I'm
+particularly concerned about some of the presentational expectations.
+
+Post to docbook list (not docbook-tc) for email discussion.
+
+ACTION: Norm to put on the agenda for next month.
+
+| 8. Review of Requests for Enhancement
+|
+|    To browse a specific RFE, enter the URL (on one line):
+|
+|      http://sourceforge.net/tracker/index.php?func=detail&amp;
+|      group_id=21935&amp;atid=384107&amp;aid=XXXX
+|
+|    where XXXX is the RFE number.
+|
+|      691762 syntax=""
+
+Mailing list archive is inaccessible. Return to this item next week.
+
+|      697374 marking up keycaps according to their semantics
+
+Norm summarizes the RFE.
+
+Bob: It seems like there's a semantic meaning associated with certain
+keys that isn't captured by the sequence of characters on the
+keyboard.
+
+Steve: There are a lot of keys. It's going to be a really long list.
+
+Dick: We could start with the intersection and leave an escape hatch.
+
+ACTION: Bob to write concrete proposal.
+
+|      698844 Add PDF to notation.class
+
+Accepted.
+
+|      705246 html/docbook.xsl should generate &lt;!DOCTYPE&gt;
+
+Misfiled.
+
+ADJOURNED.
+
+|      436067 splitting tech.char.class 
+|      473365 Allow optional in funcprototype 
+|      482818 Simplify ToC content model 
+|      514435 Allow reference within refentry 
+|      541444 caption in mediaobjectco 
+|      558443 include storage info in metadata 
+|      562343 &lt;packagename&gt; element 
+|      565637 Associate non-inline image with link 
+|      565716 URL and URN markup 
+|      573419 Add bidirectional text overrides 
+|      582822 VARARG and FUNCDEF together 
+|      623524 (Re)Consider "choicelist" markup 
+|      638456 RFE add a &lt;translator&gt; tag
+|      655526 funcprototype enhancement
+|      660044 Controlling line numbering in verbatims
+|      679316 Allow orgname tag within paragraphs
+|      686733 allow bibliography under &lt;refentry&gt;
+|
+|     The following RFEs are awaiting action items
+|
+|      413389 Enhance METHODNAME and VARNAME 
+|      431411 RFE 70: add generic linking capability
+|      522552 Add title attribute to &lt;ulink&gt; element
+|      574880 Add annotation element 
+|      613293 Generalize programlisting 
+|      621564 New element Task and children
+|
+|     The following RFEs are identified as V6.0 or later
+|
+|      531851 Remove inline person name elements
+|      532088 Remove RevHistory from qandaentry

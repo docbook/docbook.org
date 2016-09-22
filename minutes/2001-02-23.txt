@@ -1,0 +1,122 @@
+DocBook TC Minutes, 23 Feb 2001                              
+
+These are the minutes of the 23 Feb 2001 meeting of the OASIS 
+DocBook Technical Committee. This meeting occured by          
+teleconference.                                               
+                                                              
+Call to order                                                 
+                                                              
+Called to order by the chair, 13:05 EST.                      
+                                                              
+Roll Call                                                     
+                                                              
+  o Karl Best (Observing)                                     
+                                                              
+  o Dennis Evans                                              
+                                                              
+  o Sabine Ocker                                              
+                                                              
+  o Michael Sabrio                                            
+                                                              
+  o Norman Walsh (Chair)                                      
+                                                              
+Absent                                                        
+                                                              
+  o Tony Graham                                               
+                                                              
+  o Micheal Smith                                             
+                                                              
+  o Sunthar Visuvalingam                                      
+                                                              
+Accept minutes of the previous meeting                        
+                                                              
+Accepted.                                                     
+                                                              
+Suggestions for changes to the agenda                         
+                                                              
+No changes.                                                   
+                                                              
+Review of Action Items                                        
+                                                              
+ 1. Norm to fix RFE database                                  
+                                                              
+    Continued.                                                
+                                                              
+ 2. Discuss on list: EBNF                                     
+                                                              
+    Continued, assigned to Norm.                              
+                                                              
+ 3. Discuss on list: allow date to occur inline               
+                                                              
+    Discussed. Action: Rejected.                              
+                                                              
+ 4. Discuss on list: newsgroup element or class on systemitem 
+                                                              
+    Continued, assigned to Norm                               
+                                                              
+ 5. Norm to ask author what was meant by RFE 135 (po tag)     
+                                                              
+    No reply. Action: Rejected.                               
+                                                              
+ 6. Norm to ask for more detail on RFE 136 (co in userinput)  
+                                                              
+    Continued.                                                
+                                                              
+ 7. Dennis to investigate problems caused by removing OLink   
+                                                              
+    Continued.                                                
+                                                              
+    Action: Micheal S. investigate problems caused by         
+    removing OLink                                            
+                                                              
+ 8. Norm to develope a concrete proposal for linking in 5.0   
+                                                              
+    Continued pending reports from Dennis and Micheal. Also   
+    because XLink is not yet a W3C Recommendation.            
+                                                              
+Discussion of technical issues                                
+                                                              
+ 1. RFE 142: Add inline markup for CPU registers              
+                                                              
+    Accepted. Add class 'Register' to SystemItem. This fits   
+    with our design principle of providing support and we can 
+    explode it out later.                                     
+                                                              
+ 2. RFE 143: Add xml:space attribute to linespecific          
+    environments                                              
+                                                              
+    Accepted, in the XML version only, add it as a #FIXED     
+    attribute.                                                
+                                                              
+ 3. RFE 144: Add introductory material to lists               
+                                                              
+    Already accepted. Failed to record in the previous        
+    minutes.                                                  
+                                                              
+ 4. RFE 145: Allow additional material after the last step in 
+    a Procedure                                               
+                                                              
+    Sabine will start discussion on the list and conduct an   
+    email vote. Voting to commence no later than 12 March and 
+    conclude COB EST no sooner than 16 Mar.                   
+                                                              
+ 5. RFE 146: Extend textobject to insert external files       
+                                                              
+    Pending. Action to norm: make a concrete proposal.        
+                                                              
+ 6. RFE 147: Add coref                                        
+                                                              
+    Pending. Action to norm: make a concrete proposal.        
+                                                              
+ 7. RFE 133: Newsgroup element                                
+                                                              
+    Pending. Action to norm: ask the list.                    
+                                                              
+Discuss next meeting (at XML Europe)                          
+                                                              
+May have to cancel because quorum will not be achievable.     
+Will report further in advance of the meeting.                
+                                                              
+Adjournment                                                   
+                                                              
+Adjouned by chair, 14:08 EST.                                 

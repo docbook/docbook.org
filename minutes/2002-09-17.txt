@@ -1,0 +1,345 @@
+DocBook Technical Committee Meeting Minutes: 17 Sep 2002
+=======================================================
+
+| The DocBook Technical Committee met on Tuesday, 17 September 2002
+| at 01:00p EDT (10:00a PDT, 17:00GMT, 18:00BST, 19:00CEST, 02:00JST+)
+| for 90 minutes.
+|
+| Agenda
+|
+| 1. Roll call
+
+Present:
+
+    Paul Grosso
+    Dennis Evans (:15-)
+    Dick Hamilton
+    Nancy (Paisner) Harrison (:10-)
+    Richard Lander
+    Sabine Ocker
+    Michael Smith (-:30?)
+    Tim Teebken
+    Norman Walsh
+
+Regrets:
+
+    Bob Stayton
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+None.
+
+| 4. Review of open action items {5 min}
+|
+|     a. Bob to write a more detailed proposal for instance-based generated xref text
+         Completed[2]
+
+ACTION: Norm to put on the agenda for the next meeting
+
+|     b. Bob to investigage RFE #558443 include storage info in metadata
+         Completed[3]
+
+ACTION: Norm to post a solution that uses existing metadata
+
+|     c. Norm to construct some sort of IPR template
+         Completed[4].
+
+ACTION: Norm to put on the agenda for the next meeting
+
+|     d. Dick to experiment with SiberSafe for help authoring background
+         Continued.
+|     e. Norm to follow-up on RFE 473365: Allow optional in funcprototype
+         Completed[5].
+|     f. Norm to follow-up on RFE 562343: <packagename> element
+         Continued.
+|     g. Norm to post combined table markup for CALS+HTML
+         Continued.
+|     h. Nancy to summarize what DITA and TEI have to say about general principles
+|        for adding new markup
+
+NP:
+
+TEI does it like we do: define things in PEs and classes, recommend
+that people modify things by redefining existing things or suppressing
+elements. Like DocBook, they say if you do anything outside this we
+can't promise that tools will work.
+
+Darwin is different, they expect people to create domains and topics.
+Domains are the hierarchical models. Topics are their basic element
+category. So you can modify and customize either by adding a domain
+specialization and putting the constituents together differently or
+you can extend a topic definition. They restrict you to using the
+existing building blocks. You can extend a topic, but it has to be
+stuff that's already there. They don't let you create new elements
+that don't already have content that's there. There's more flexibility
+in creating new domains. They have an API domain, but you could create
+a specific object-oriented API domain. That would be fine because a
+method would use existing topics.
+
+TEI and Darwin differ in that they've already modularized the gross
+structural level so that instead of having a single basic DTD they
+have a set of them. For example, TEI has base and a few different
+hierarchies and they expect people to come up with some more. This
+does make it easier for people to think about modification, becauase
+you're starting with something that isn't so large.
+
+|     i. Norm to put principles for new markup the agenda for next month.
+         Completed.
+|     j. Richard to provide some concrete examples of what might need to be added
+|        for HTML Help
+         Continued.
+|     k. Sabine to provide some concrete examples for HTML Help
+         Continued.
+|     l. Norm to check with submitter on RFE #571998
+         Completed[6].
+|     m. Paul to investigate what the content model for a bidi element needs to be
+|        and why simply using a nested phrase is insufficient (or is it?).
+         Completed[7].
+
+ACTION: Norm to put on the agenda for a decision next month
+
+|     n. Norm to investigate namespace convention in MathML Module (RFE #582705)
+         Continued.
+|     o. Norm to post solution for RFE #582822 for discussion
+         Completed.
+|     p. Norm to publish SVG Module
+         Completed[8].
+|     q. Norm to republish simplified ToC proposal
+         Continued.
+|     r. Norm to propose solution to submitter of RFE #473365
+         Completed[9].
+
+| 5. Next meetings
+|
+| Our next telcon is 15 Oct 2002. Need to update the reservation beyond October.
+
+ACTION: Sabine follow-up in email when Sun's hosting is resolved.
+
+| Is anyone going to be at XML 2002?
+
+Apparently just Norm.
+
+| 6. What about "this version" markup
+
+Obsoleted by Bob's action item "b."
+
+| 7. Simplified 1.0
+
+We're now in a one-month countdown. If no bug reports are received in
+a month, we'll make it 1.0 officially.
+
+| 8. Priciples for new markup
+
+NW: In addition to new markup principles, I've been working on a tool
+that may let us generate the various schema versions from a single
+master "meta" source. More updates as I have them.
+
+RL: Microsoft is only interested in W3C XML Schema implementation. We
+took a look at the existing implementation and decided to reimplement
+it using our own methodology.
+
+RL: There's a lot of interest in making this information public, but
+we haven't pursued that yet. I'll probably have news before the next
+meeting.
+
+NW: I'm not surprised that a different methodology was chosen.
+
+ACTION: Norm to put schema discussion on the agenda for next month. RL
+will attempt to get the Microsoft Schema published before the next
+meeting.
+
+NP: I'm impressed with TEI and Darwin. It would be really nice to
+divide up hierarchies so that at we have, for example, and Article
+module that includes the stuff articles need and then other modules
+wouldn't include that stuff.
+
+DE: I would like to have different content models in different contexts.
+
+NP: If we provided guidelines for getting into DocBook for the five or
+ten most common things that people need to do with it or the five or
+ten most common critical tasks, I think that would be very helpful.
+
+TT: This sounds a lot like the pagetype discussions that we were
+having before.
+
+NP: What I'm thinking of is supplying the outer shells. So instead of
+just DocBook, we'd have the article, api, command line, and html help
+DTDs.
+
+NW: I've never seen this work very well in practice. I'd love to see
+some examples.
+
+DE: I'd like to have RefEntry be a subset all the way down to the
+individual elements.
+
+NW: I'd like to see some examples of that too.
+
+RL: As part of my work, I've been exploring this issue. When I get
+around to publishing this work and some of the related documentation,
+I think it'll be some of the stuff we're looking for. One thing that
+came to mind was the work [Norm] has done on Website.
+
+NP: One possibility is for us to try purging them. Not actually
+purging them, but add another module that is the simplified inlines.
+Just 10 or 11 inlines and say when you do something simple, you can
+just pick that group.
+
+ACTION: NW to post more detail about the PE reorganization with some
+documentation.
+
+NP: I think many people would find simplicity more compelling than
+completeness.
+
+DH: Another thing we might think about is the fact that having subsets
+is important and we could work with vendors and tools suppliers to
+make subsets that work for tools and environments. You wouldn't need
+to change the DTD at all, just configure the tool.
+
+SO: I think it's the ramp-up that's intimidating. Access to all of
+DocBook is overwhelming. To make it easier to figure out what sorts of
+subsets of elements are required to achieve the functionality that you
+need.
+
+| 9. Discuss Help Authoring
+
+Continued pending action items.
+
+| 10. Review of Requests for Enhancement {40 min}
+|
+|    To browse a specific RFE, enter the URL (on one line):
+|
+|           http://sourceforge.net/tracker/index.php?func=detail&amp;
+|           group_id=21935&amp;atid=384107&amp;aid=XXXX
+|
+|    where XXXX is the RFE number.
+|
+|     598994 arg vs option
+
+DE: There is room for confusion. Doing cmdsynopsis is hard for an
+author. I don't think this is something we could easily rewrite to
+make it easier.
+
+DE: Option and optional are only similar in spelling, they have
+completely different meanings.
+
+ACTION: Norm to write better documentation. Post for discussion.
+
+ACTION: DE to find out if he can post the internal style guide
+        documentation on this issue.
+
+|     606071 allow glossary in place of glossdiv
+
+Explain that it would complicate processing. You really only want to
+go down one level and that's not possible if you make it recursive.
+
+Rejected.
+
+|     609061 Add new Step sibling element Alternative
+
+SO: Steps have the semantic of being sequential, so the thought was that branch
+    would be less semantically confusing.
+
+NP: I assume the content module would be like itemizedlist.
+
+SO: No, the content model of branch is the same as step.
+
+RL: If you think about W3C XML Schema, you have sequences and choices and it
+    seems like this is more-or-less what we're talking about.
+
+NW: I think that's what we get here: procedures contain a sequence of steps,
+    altenatives allows one to choose among several branches.
+
+NP: Alternatives to first step?
+
+SO: Yes.
+
+PG: If procedures are sequences, and alternatives are choices, why call the
+    thing inside branch?
+
+SO: I think it could be inferred from the content model, but the group that
+    made this request thinks its ambiguous and confusing to writers.
+
+RL: That's like saying people get confused if they have multiple folders with
+    the same name.
+
+PG: And we already have 'title' reused all over the place.
+
+NP: But these are the same thing, and using a different name confuses the issue.
+
+DE/SO: They aren't the same.
+
+NW: Maybe a couple of straw polls will help us settle the issues.
+
+Poll 1: The proposal as written attempts to prevent alternatives from occurring
+recursively (that is, a step with alternatives occurring as a descendent of some
+other alternative step). Are you in favor of allowing or excluding alternatives:
+
+  Allow: 4, Exclude: 2, Abstain: 3
+
+Poll 2: Are you in favor of using 'branch' or 'step' inside 'alternatives':
+
+  Branch: 2, Step: 3, Abstain: 3
+
+NW: Not very useful.
+
+We seem to have general approval of the idea; we need to work out the
+details. Take it to email.
+
+|    The following RFEs have been moved to the bottom of this agenda in order
+|    to make sure that all RFEs get fairly discussed.
+|
+|     514435 Allow reference within refentry
+
+      Mike: can you summarize where this issue stands?
+
+|     558443 include storage info in metadata
+
+      Closed. Use existing elements.
+
+|     564776 process/service/daemon/server markup
+
+ACTION: Norm to find record of previous discussion. Didn't we fall back on systemitem?
+
+Adjourned.
+
+|     565716 URL and URN markup
+|     565905 Add xrefstyle attribute
+|     570068 Online values for pubwork
+|     571996 Add 'namespace' inline element
+|     571998 Add 'default' inline element
+|     573419 Add bidirectional text overrides
+|     573812 Allow blockinfo on blockquote
+|     574880 Add annotation element
+|     582705 Namespace convention for MathML Module
+|     582822 VARARG and FUNCDEF together
+|
+|    The following RFEs are awaiting action items
+|
+|     431411 RFE 70: add generic linking capability
+|     472229 Allow HTML tables
+|     522552 Add title attribute to <ulink> element
+|     413389 Enhance METHODNAME and VARNAME
+|     436067 splitting tech.char.class
+|     473365 Allow optional in funcprototype
+|     482818 Simplify ToC content model
+|     562343 <packagename> element
+|     565637 Associate non-inline image with link
+|
+|    The following RFEs are identified as V6.0 or later
+|
+|     531851 Remove inline person name elements
+|     532088 Remove RevHistory from qandaentry
+|
+| [1] http://lists.oasis-open.org/archives/docbook-tc/200208/msg00002.html
+[2] http://lists.oasis-open.org/archives/docbook-tc/200209/msg00000.html
+[3] http://lists.oasis-open.org/archives/docbook-tc/200207/msg00010.html
+[4] http://lists.oasis-open.org/archives/docbook-tc/200209/msg00005.html
+[5] http://lists.oasis-open.org/archives/docbook/200209/msg00152.html
+[6] http://sourceforge.net/tracker/index.php?func=detail&aid=571998&group_id=21935&atid=384107
+[7] http://lists.oasis-open.org/archives/docbook/200208/msg00172.html
+[8] http://lists.oasis-open.org/archives/docbook/200209/msg00145.html
+[9] http://lists.oasis-open.org/archives/docbook/200209/msg00152.html

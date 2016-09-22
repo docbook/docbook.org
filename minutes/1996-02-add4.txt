@@ -1,0 +1,45 @@
+From server@amber.ora.com Sat Mar  9 17:23:21 1996
+Received: from ruby.ora.com (ruby.ora.com [198.112.208.25]) by jasper.ora.com (8.6.13/8.6.11) with ESMTP id RAA29157 for <norm@jasper.ora.com>; Sat, 9 Mar 1996 17:23:20 -0500
+Received: from amber.ora.com (amber.ora.com [198.112.208.11]) by ruby.ora.com (8.6.13/8.6.11) with ESMTP id RAA09808; Sat, 9 Mar 1996 17:26:01 -0500
+Received: (from server@localhost) by amber.ora.com (8.6.13/8.6.11) id QAA04095; Sat, 9 Mar 1996 16:54:06 -0500
+Date: Sat, 9 Mar 1996 16:54:06 -0500
+Message-Id: <2.2.16.19960309214151.3767d3a0@village.doctools.com>
+Errors-To: listown@online.ora.com
+Reply-To: elm@arbortext.com
+Originator: davenport@online.ora.com
+Sender: davenport@online.ora.com
+Precedence: bulk
+From: "Eve L. Maler" <elm@arbortext.com>
+To: Multiple recipients of list <davenport@online.ora.com>
+Subject: Re: Davenport Feb/Mar '96 meeting notes
+X-Listprocessor-Version: 6.0c -- ListProcessor by Anastasios Kotsikonas
+X-Comment: Davenport Group General Distribution List
+X-Comment: To unsubscribe send message to listproc@online.ora.com "unsubscribe davenport"
+Content-Type: text/plain; charset="us-ascii"
+Mime-Version: 1.0
+
+Martin,
+
+Thanks very much for your extensive information on notations.
+Rather than add substantially to the DocBook notation declaration
+list, I think it makes sense to update the ones we have incrementally,
+and simply make your list available at the Davenport archive for
+people to peruse till the TR is available.  Would that be okay
+to do?  (Terry, what do you think?)
+
+        Eve
+
+At 12:19 PM 3/8/96 -0500, Martin Bryan wrote:
+> Eve 
+>>  o Add SGML notation, have two GIF notations, and add DeRose book's 
+>>      graphic notations
+>
+>DeRose & Durand's set of notations are somewhat out of date and are
+>referenced in terms of their book rather than the standards being referenced.
+>ISO SC18/WG8, the developers of SGML, etc, are preparing a Part 9 to ISO
+>9573, Techniques for Using SGML that will provide notation identifiers for
+>all ISO coding schemes. I attach a file containing these ISO 9070
+>identifiers and SGML notation declarations contained in this Technical Report.
+
+
+

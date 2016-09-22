@@ -1,0 +1,75 @@
+/* this block of CSS controls the tabs */
+
+/**<![CDATA[
+ * Base styles for Tab Navigation standard
+ * 
+ * navset: container for tabs and optional subtabs
+ * pri: primary tab navigation 
+ * sec: secondary tab navigation
+ * on: selected tab
+ * orphan: optional non-tab link at end of list
+ * first: Hook for first subtab link
+ *
+ * Usage:
+ *    <div class="navset">
+ *        <ul class="pri">
+ *           <li><a><em>Home</em></a></li> (EM implies that these are more than just linked list items)
+ *           <li class="on"><strong><em>News</em></strong></li> (STRONG emphasizes selected state)
+ *           ...
+ *        </ul> 
+ *        <ul class="sec">
+ *           <li><a>lorem</a></li>
+ *           <li class="on"><strong>lorem</strong></li>
+ *           ...    
+ *        </ul> 
+ *     </div>
+ *
+ ]]>*/
+ 
+/* base styles for extending/overriding */
+
+/* primary tabs */
+.navset {border-bottom:1px solid #999; background-color: #00A5A5;}
+.navset h3, .navset h4 {position:absolute;left:-1000em;margin:0;}
+.navset .hd li em {font-weight:bold;}
+.navset .hd li a {color:#666;}
+.navset .hd li.on strong, .navset .hd li.on strong a {color:#999;} /* selected tab */
+.navset .hd li.on strong {background-color:#F2F3F5;border-bottom:1px solid #F2F3F5;} /* border-color should match selected color */
+.navset .hd li.orphan, .navset .hd li.orphan a {color:#999;}
+
+/* bg images, defaults to #999 border-color on white bg */
+.navset .hd li a, .navset .hd li strong {background:#ccc url(/graphics/tr_999.gif) no-repeat top right;}
+.navset .hd li em {background:transparent url(/graphics/tl_999.gif) no-repeat;}
+
+/* secondary tabs */
+.navset .bd ul {background-color:#F2F3F5;border-color:#999;}
+.navset .bd li, .navset .bd li a {color:#06c;}
+.navset li.on, .navset li.on strong {font-weight:bold;}
+.navset .bd li {border-color:#ccc;} /* pipe divider */
+
+/* end base styles */
+
+/* Network tab standards, shouldn't change */
+
+/* shared pri and sec */
+.navset {width:100%;} /* IE: width */
+.navset a {text-decoration:none;}
+.navset ul, .navset li {margin:0;padding:0;list-style:none;}
+.navset li {float:left;display:inline;}
+.navset li a:hover {text-decoration:underline;}
+.navset ul:after {clear:both;content:'.';display:block;height:0;visibility:hidden;} /* clear non-IE */
+.navset ul {zoom:1;} /* clear IE */
+
+/* primary tabs */
+.navset .hd ul {font:bold 78%/1.2em verdana;margin-bottom:-1px;padding-left:.3em;position:relative;} /* IE quirks mode: relative */
+.navset .hd li {margin-right:.33em;padding:0;}
+.navset .hd li.on strong a {cursor:default;}
+.navset .hd li a, .navset .hd li strong, .navset .hd li em {display:block;}
+.navset .hd li a, .navset .hd li strong {*display:inline-block;}  /* IE: 100% clickable */
+.navset .hd li em {font-style:normal;padding:.5em .6em;}
+.navset .hd li.orphan, .navset .hd li.orphan a, .navset .hd li.orphan em {background:transparent none;border-width:0;margin:0;}
+
+/* secondary tabs */
+.navset .bd ul {border-top-width:1px;border-top-style:solid;font:78%/1.2em verdana;margin:0;padding:.6em 0 .6em .4em;}
+.navset .bd li {border-left-style:solid;border-left-width:1px;display:inline;padding:0 1em;}
+.navset .bd li.first {padding-left:0;border:0;}

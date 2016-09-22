@@ -1,0 +1,1532 @@
+<!ENTITY % db.common.linking.attributes "
+	linkend	IDREF	#IMPLIED
+	xlink:href	CDATA	#IMPLIED
+	xlink:type	CDATA	#IMPLIED
+	xlink:role	CDATA	#IMPLIED
+	xlink:arcrole	CDATA	#IMPLIED
+	xlink:title	CDATA	#IMPLIED
+	xlink:show	(new|replace|embed|other)	#IMPLIED
+	xlink:actuate	(onLoad|onRequest|other|none)	#IMPLIED
+
+">
+
+<!ENTITY % db.common.attributes "
+	id	ID	#IMPLIED
+	version	CDATA	#IMPLIED
+	xml:lang	CDATA	#IMPLIED
+	xml:base	CDATA	#IMPLIED
+	revisionflag	(changed|added|deleted|off)	#IMPLIED
+
+">
+
+<!ELEMENT appendix (((title|titleabbrev|subtitle)*, info?), (bibliography)*, (((itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)+, (section)*)|(section)+), (bibliography)*)>
+
+<!ATTLIST appendix
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	label	CDATA	#IMPLIED
+	status	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT section (((title|titleabbrev|subtitle)*, info?), (((itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)+, (section)*)|(section)+), (bibliography)*)>
+
+<!ATTLIST section
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	label	CDATA	#IMPLIED
+	status	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT article (((title|titleabbrev|subtitle)*, info?), (((itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)+, (section)*)|(section)+), (appendix|bibliography)*)>
+
+<!ATTLIST article
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	label	CDATA	#IMPLIED
+	status	CDATA	#IMPLIED
+	class	(faq|journalarticle|productsheet|specification|techreport|whitepaper)	#IMPLIED
+
+>
+
+<!ELEMENT bibliomixed (#PCDATA|abstract|author|authorgroup|copyright|date|edition|editor|issuenum|keywordset|legalnotice|othercredit|pubdate|publishername|releaseinfo|revhistory|subjectset|volumenum|bibliomisc|bibliomset|abbrev|affiliation|citetitle|orgname|personblurb|personname|subtitle|title|titleabbrev)*>
+
+<!ATTLIST bibliomixed
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT bibliomset (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable|abstract|author|authorgroup|copyright|date|edition|editor|issuenum|keywordset|legalnotice|othercredit|pubdate|publishername|releaseinfo|revhistory|subjectset|volumenum|bibliomisc|bibliomset|abbrev|affiliation|citetitle|orgname|personblurb|personname|subtitle|title|titleabbrev)*>
+
+<!ATTLIST bibliomset
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	relation	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT bibliomisc (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST bibliomisc
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT bibliography (((title|titleabbrev|subtitle)*, info?), (itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)*, ((bibliodiv)+|(bibliomixed)+))>
+
+<!ATTLIST bibliography
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	label	CDATA	#IMPLIED
+	status	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT bibliodiv (((title|titleabbrev|subtitle)*, info?), (itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)*, (bibliomixed)+)>
+
+<!ATTLIST bibliodiv
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	label	CDATA	#IMPLIED
+	status	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT tgroup ((colspec)*, (spanspec)*, thead?, tfoot?, tbody)>
+
+<!ATTLIST tgroup
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	char	CDATA	#IMPLIED
+	charoff	CDATA	#IMPLIED
+	tgroupstyle	CDATA	#IMPLIED
+	cols	NMTOKEN	#REQUIRED
+	colsep	CDATA	#IMPLIED
+	rowsep	CDATA	#IMPLIED
+	align	(center|char|justify|left|right)	#IMPLIED
+
+>
+
+<!ELEMENT colspec (EMPTY)>
+
+<!ATTLIST colspec
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	colnum	NMTOKEN	#IMPLIED
+	char	CDATA	#IMPLIED
+	colsep	CDATA	#IMPLIED
+	colwidth	CDATA	#IMPLIED
+	charoff	CDATA	#IMPLIED
+	colname	CDATA	#IMPLIED
+	rowsep	CDATA	#IMPLIED
+	align	(center|char|justify|left|right)	#IMPLIED
+
+>
+
+<!ELEMENT spanspec (EMPTY)>
+
+<!ATTLIST spanspec
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	spanname	CDATA	#REQUIRED
+	namest	CDATA	#REQUIRED
+	nameend	CDATA	#REQUIRED
+	char	CDATA	#IMPLIED
+	colsep	CDATA	#IMPLIED
+	charoff	CDATA	#IMPLIED
+	rowsep	CDATA	#IMPLIED
+	align	(center|char|justify|left|right)	#IMPLIED
+
+>
+
+<!ELEMENT thead ((colspec)*, (row+|tr+))>
+
+<!ATTLIST thead
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	valign	(bottom|middle|top|baseline)	#IMPLIED
+	class	CDATA	#IMPLIED
+	style	CDATA	#IMPLIED
+	title	CDATA	#IMPLIED
+	lang	CDATA	#IMPLIED
+	dir	(ltr|rtl)	#IMPLIED
+	onclick	CDATA	#IMPLIED
+	ondblclick	CDATA	#IMPLIED
+	onmousedown	CDATA	#IMPLIED
+	onmouseup	CDATA	#IMPLIED
+	onmouseover	CDATA	#IMPLIED
+	onmousemove	CDATA	#IMPLIED
+	onmouseout	CDATA	#IMPLIED
+	onkeypress	CDATA	#IMPLIED
+	onkeydown	CDATA	#IMPLIED
+	onkeyup	CDATA	#IMPLIED
+	align	(left|center|right|justify|char)	#IMPLIED
+	char	CDATA	#IMPLIED
+	charoff	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT tfoot ((colspec)*, (row+|tr+))>
+
+<!ATTLIST tfoot
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	valign	(bottom|middle|top|baseline)	#IMPLIED
+	class	CDATA	#IMPLIED
+	style	CDATA	#IMPLIED
+	title	CDATA	#IMPLIED
+	lang	CDATA	#IMPLIED
+	dir	(ltr|rtl)	#IMPLIED
+	onclick	CDATA	#IMPLIED
+	ondblclick	CDATA	#IMPLIED
+	onmousedown	CDATA	#IMPLIED
+	onmouseup	CDATA	#IMPLIED
+	onmouseover	CDATA	#IMPLIED
+	onmousemove	CDATA	#IMPLIED
+	onmouseout	CDATA	#IMPLIED
+	onkeypress	CDATA	#IMPLIED
+	onkeydown	CDATA	#IMPLIED
+	onkeyup	CDATA	#IMPLIED
+	align	(left|center|right|justify|char)	#IMPLIED
+	char	CDATA	#IMPLIED
+	charoff	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT tbody ((row+|tr+))>
+
+<!ATTLIST tbody
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	valign	(bottom|middle|top|baseline)	#IMPLIED
+	class	CDATA	#IMPLIED
+	style	CDATA	#IMPLIED
+	title	CDATA	#IMPLIED
+	lang	CDATA	#IMPLIED
+	dir	(ltr|rtl)	#IMPLIED
+	onclick	CDATA	#IMPLIED
+	ondblclick	CDATA	#IMPLIED
+	onmousedown	CDATA	#IMPLIED
+	onmouseup	CDATA	#IMPLIED
+	onmouseover	CDATA	#IMPLIED
+	onmousemove	CDATA	#IMPLIED
+	onmouseout	CDATA	#IMPLIED
+	onkeypress	CDATA	#IMPLIED
+	onkeydown	CDATA	#IMPLIED
+	onkeyup	CDATA	#IMPLIED
+	align	(left|center|right|justify|char)	#IMPLIED
+	char	CDATA	#IMPLIED
+	charoff	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT row ((entry|entrytbl)+)>
+
+<!ATTLIST row
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	rowsep	CDATA	#IMPLIED
+	valign	(bottom|middle|top)	#IMPLIED
+
+>
+
+<!ELEMENT entry (#PCDATA|inlinemediaobject|superscript|subscript|abbrev|acronym|emphasis|footnote|footnoteref|phrase|quote|trademark|citetitle|author|personname|orgname|editor|xref|link|anchor|replaceable|option|systemitem|filename|command|computeroutput|userinput|literal|email|itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)*>
+
+<!ATTLIST entry
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	valign	(bottom|middle|top)	#IMPLIED
+	char	CDATA	#IMPLIED
+	colsep	CDATA	#IMPLIED
+	charoff	CDATA	#IMPLIED
+	morerows	NMTOKEN	#IMPLIED
+	colname	CDATA	#IMPLIED
+	namest	CDATA	#IMPLIED
+	spanname	CDATA	#IMPLIED
+	nameend	CDATA	#IMPLIED
+	rowsep	CDATA	#IMPLIED
+	rotate	CDATA	#IMPLIED
+	align	(center|char|justify|left|right)	#IMPLIED
+
+>
+
+<!ELEMENT entrytbl ((colspec)*, (spanspec)*, thead?, tbody)>
+
+<!ATTLIST entrytbl
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	char	CDATA	#IMPLIED
+	charoff	CDATA	#IMPLIED
+	colname	CDATA	#IMPLIED
+	namest	CDATA	#IMPLIED
+	spanname	CDATA	#IMPLIED
+	nameend	CDATA	#IMPLIED
+	tgroupstyle	CDATA	#IMPLIED
+	cols	NMTOKEN	#IMPLIED
+	colsep	CDATA	#IMPLIED
+	rowsep	CDATA	#IMPLIED
+	align	(center|char|justify|left|right)	#IMPLIED
+
+>
+
+<!ELEMENT table ((info, (title, titleabbrev), indexterm, textobject, (mediaobject+|tgroup+))|(caption, (col*|colgroup*), thead, tfoot, (tbody+|tr+)))>
+
+<!ATTLIST table
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	tabstyle	CDATA	#IMPLIED
+	orient	(land|port)	#IMPLIED
+	colsep	CDATA	#IMPLIED
+	rowsep	CDATA	#IMPLIED
+	frame	(all|bottom|none|sides|top|topbot|void|above|below|hsides|lhs|rhs|vsides|box|border)	#IMPLIED
+	pgwide	(0|1)	#IMPLIED
+	shortentry	(0|1)	#IMPLIED
+	tocentry	(0|1)	#IMPLIED
+	rowheader	(firstcol|norowheader)	#IMPLIED
+	class	CDATA	#IMPLIED
+	style	CDATA	#IMPLIED
+	title	CDATA	#IMPLIED
+	lang	CDATA	#IMPLIED
+	dir	(ltr|rtl)	#IMPLIED
+	onclick	CDATA	#IMPLIED
+	ondblclick	CDATA	#IMPLIED
+	onmousedown	CDATA	#IMPLIED
+	onmouseup	CDATA	#IMPLIED
+	onmouseover	CDATA	#IMPLIED
+	onmousemove	CDATA	#IMPLIED
+	onmouseout	CDATA	#IMPLIED
+	onkeypress	CDATA	#IMPLIED
+	onkeydown	CDATA	#IMPLIED
+	onkeyup	CDATA	#IMPLIED
+	summary	CDATA	#IMPLIED
+	width	CDATA	#IMPLIED
+	border	CDATA	#IMPLIED
+	rules	(none|groups|rows|cols|all)	#IMPLIED
+	cellspacing	CDATA	#IMPLIED
+	cellpadding	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT informaltable (info, ((textobject*, (mediaobject+|tgroup+))|((col*|colgroup*), thead, tfoot, (tbody+|tr+))))>
+
+<!ATTLIST informaltable
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	tabstyle	CDATA	#IMPLIED
+	orient	(land|port)	#IMPLIED
+	colsep	CDATA	#IMPLIED
+	rowsep	CDATA	#IMPLIED
+	frame	(all|bottom|none|sides|top|topbot|void|above|below|hsides|lhs|rhs|vsides|box|border)	#IMPLIED
+	pgwide	(0|1)	#IMPLIED
+	rowheader	(firstcol|norowheader)	#IMPLIED
+	class	CDATA	#IMPLIED
+	style	CDATA	#IMPLIED
+	title	CDATA	#IMPLIED
+	lang	CDATA	#IMPLIED
+	dir	(ltr|rtl)	#IMPLIED
+	onclick	CDATA	#IMPLIED
+	ondblclick	CDATA	#IMPLIED
+	onmousedown	CDATA	#IMPLIED
+	onmouseup	CDATA	#IMPLIED
+	onmouseover	CDATA	#IMPLIED
+	onmousemove	CDATA	#IMPLIED
+	onmouseout	CDATA	#IMPLIED
+	onkeypress	CDATA	#IMPLIED
+	onkeydown	CDATA	#IMPLIED
+	onkeyup	CDATA	#IMPLIED
+	summary	CDATA	#IMPLIED
+	width	CDATA	#IMPLIED
+	border	CDATA	#IMPLIED
+	rules	(none|groups|rows|cols|all)	#IMPLIED
+	cellspacing	CDATA	#IMPLIED
+	cellpadding	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT caption (#PCDATA)*>
+
+<!ATTLIST caption
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	class	CDATA	#IMPLIED
+	style	CDATA	#IMPLIED
+	title	CDATA	#IMPLIED
+	lang	CDATA	#IMPLIED
+	dir	(ltr|rtl)	#IMPLIED
+	onclick	CDATA	#IMPLIED
+	ondblclick	CDATA	#IMPLIED
+	onmousedown	CDATA	#IMPLIED
+	onmouseup	CDATA	#IMPLIED
+	onmouseover	CDATA	#IMPLIED
+	onmousemove	CDATA	#IMPLIED
+	onmouseout	CDATA	#IMPLIED
+	onkeypress	CDATA	#IMPLIED
+	onkeydown	CDATA	#IMPLIED
+	onkeyup	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT col (EMPTY)>
+
+<!ATTLIST col
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	class	CDATA	#IMPLIED
+	style	CDATA	#IMPLIED
+	title	CDATA	#IMPLIED
+	lang	CDATA	#IMPLIED
+	dir	(ltr|rtl)	#IMPLIED
+	onclick	CDATA	#IMPLIED
+	ondblclick	CDATA	#IMPLIED
+	onmousedown	CDATA	#IMPLIED
+	onmouseup	CDATA	#IMPLIED
+	onmouseover	CDATA	#IMPLIED
+	onmousemove	CDATA	#IMPLIED
+	onmouseout	CDATA	#IMPLIED
+	onkeypress	CDATA	#IMPLIED
+	onkeydown	CDATA	#IMPLIED
+	onkeyup	CDATA	#IMPLIED
+	span	CDATA	#IMPLIED
+	width	CDATA	#IMPLIED
+	align	(left|center|right|justify|char)	#IMPLIED
+	char	CDATA	#IMPLIED
+	charoff	CDATA	#IMPLIED
+	valign	(top|middle|bottom|baseline)	#IMPLIED
+
+>
+
+<!ELEMENT colgroup ((col)*)>
+
+<!ATTLIST colgroup
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	class	CDATA	#IMPLIED
+	style	CDATA	#IMPLIED
+	title	CDATA	#IMPLIED
+	lang	CDATA	#IMPLIED
+	dir	(ltr|rtl)	#IMPLIED
+	onclick	CDATA	#IMPLIED
+	ondblclick	CDATA	#IMPLIED
+	onmousedown	CDATA	#IMPLIED
+	onmouseup	CDATA	#IMPLIED
+	onmouseover	CDATA	#IMPLIED
+	onmousemove	CDATA	#IMPLIED
+	onmouseout	CDATA	#IMPLIED
+	onkeypress	CDATA	#IMPLIED
+	onkeydown	CDATA	#IMPLIED
+	onkeyup	CDATA	#IMPLIED
+	span	CDATA	#IMPLIED
+	width	CDATA	#IMPLIED
+	align	(left|center|right|justify|char)	#IMPLIED
+	char	CDATA	#IMPLIED
+	charoff	CDATA	#IMPLIED
+	valign	(top|middle|bottom|baseline)	#IMPLIED
+
+>
+
+<!ELEMENT tr ((th|td)+)>
+
+<!ATTLIST tr
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	class	CDATA	#IMPLIED
+	style	CDATA	#IMPLIED
+	title	CDATA	#IMPLIED
+	lang	CDATA	#IMPLIED
+	dir	(ltr|rtl)	#IMPLIED
+	onclick	CDATA	#IMPLIED
+	ondblclick	CDATA	#IMPLIED
+	onmousedown	CDATA	#IMPLIED
+	onmouseup	CDATA	#IMPLIED
+	onmouseover	CDATA	#IMPLIED
+	onmousemove	CDATA	#IMPLIED
+	onmouseout	CDATA	#IMPLIED
+	onkeypress	CDATA	#IMPLIED
+	onkeydown	CDATA	#IMPLIED
+	onkeyup	CDATA	#IMPLIED
+	align	(left|center|right|justify|char)	#IMPLIED
+	char	CDATA	#IMPLIED
+	charoff	CDATA	#IMPLIED
+	valign	(top|middle|bottom|baseline)	#IMPLIED
+
+>
+
+<!ELEMENT th (#PCDATA|inlinemediaobject|superscript|subscript|abbrev|acronym|emphasis|footnote|footnoteref|phrase|quote|trademark|citetitle|author|personname|orgname|editor|xref|link|anchor|replaceable|option|systemitem|filename|command|computeroutput|userinput|literal|email|itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)*>
+
+<!ATTLIST th
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	class	CDATA	#IMPLIED
+	style	CDATA	#IMPLIED
+	title	CDATA	#IMPLIED
+	lang	CDATA	#IMPLIED
+	dir	(ltr|rtl)	#IMPLIED
+	onclick	CDATA	#IMPLIED
+	ondblclick	CDATA	#IMPLIED
+	onmousedown	CDATA	#IMPLIED
+	onmouseup	CDATA	#IMPLIED
+	onmouseover	CDATA	#IMPLIED
+	onmousemove	CDATA	#IMPLIED
+	onmouseout	CDATA	#IMPLIED
+	onkeypress	CDATA	#IMPLIED
+	onkeydown	CDATA	#IMPLIED
+	onkeyup	CDATA	#IMPLIED
+	abbr	CDATA	#IMPLIED
+	axis	CDATA	#IMPLIED
+	headers	CDATA	#IMPLIED
+	scope	CDATA	#IMPLIED
+	rowspan	CDATA	#IMPLIED
+	colspan	CDATA	#IMPLIED
+	align	(left|center|right|justify|char)	#IMPLIED
+	char	CDATA	#IMPLIED
+	charoff	CDATA	#IMPLIED
+	valign	(top|middle|bottom|baseline)	#IMPLIED
+
+>
+
+<!ELEMENT td (#PCDATA|inlinemediaobject|superscript|subscript|abbrev|acronym|emphasis|footnote|footnoteref|phrase|quote|trademark|citetitle|author|personname|orgname|editor|xref|link|anchor|replaceable|option|systemitem|filename|command|computeroutput|userinput|literal|email|itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)*>
+
+<!ATTLIST td
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	class	CDATA	#IMPLIED
+	style	CDATA	#IMPLIED
+	title	CDATA	#IMPLIED
+	lang	CDATA	#IMPLIED
+	dir	(ltr|rtl)	#IMPLIED
+	onclick	CDATA	#IMPLIED
+	ondblclick	CDATA	#IMPLIED
+	onmousedown	CDATA	#IMPLIED
+	onmouseup	CDATA	#IMPLIED
+	onmouseover	CDATA	#IMPLIED
+	onmousemove	CDATA	#IMPLIED
+	onmouseout	CDATA	#IMPLIED
+	onkeypress	CDATA	#IMPLIED
+	onkeydown	CDATA	#IMPLIED
+	onkeyup	CDATA	#IMPLIED
+	abbr	CDATA	#IMPLIED
+	axis	CDATA	#IMPLIED
+	headers	CDATA	#IMPLIED
+	scope	CDATA	#IMPLIED
+	rowspan	CDATA	#IMPLIED
+	colspan	CDATA	#IMPLIED
+	align	(left|center|right|justify|char)	#IMPLIED
+	char	CDATA	#IMPLIED
+	charoff	CDATA	#IMPLIED
+	valign	(top|middle|bottom|baseline)	#IMPLIED
+
+>
+
+<!ELEMENT title (#PCDATA|inlinemediaobject|superscript|subscript|abbrev|acronym|emphasis|footnote|footnoteref|phrase|quote|trademark|citetitle|author|personname|orgname|editor|xref|link|anchor|replaceable|option|systemitem|filename|command|computeroutput|userinput|literal|email)*>
+
+<!ATTLIST title
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT titleabbrev (#PCDATA|inlinemediaobject|superscript|subscript|abbrev|acronym|emphasis|footnote|footnoteref|phrase|quote|trademark|citetitle|author|personname|orgname|editor|xref|link|anchor|replaceable|option|systemitem|filename|command|computeroutput|userinput|literal|email)*>
+
+<!ATTLIST titleabbrev
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT subtitle (#PCDATA|inlinemediaobject|superscript|subscript|abbrev|acronym|emphasis|footnote|footnoteref|phrase|quote|trademark|citetitle|author|personname|orgname|editor|xref|link|anchor|replaceable|option|systemitem|filename|command|computeroutput|userinput|literal|email)*>
+
+<!ATTLIST subtitle
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT info ((title|titleabbrev|subtitle)*, (abstract|author|authorgroup|copyright|date|edition|editor|issuenum|keywordset|legalnotice|othercredit|pubdate|publishername|releaseinfo|revhistory|subjectset|volumenum|bibliomisc|bibliomset)*)>
+
+<!ATTLIST info
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+
+>
+
+<!ELEMENT subjectset ((subject)+)>
+
+<!ATTLIST subjectset
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	scheme	NMTOKEN	#IMPLIED
+
+>
+
+<!ELEMENT subject ((subjectterm)+)>
+
+<!ATTLIST subject
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	weight	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT subjectterm (#PCDATA)*>
+
+<!ATTLIST subjectterm
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT keywordset ((keyword)+)>
+
+<!ATTLIST keywordset
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT keyword (#PCDATA)*>
+
+<!ATTLIST keyword
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT sidebar ((((title|titleabbrev)*, info?)|info), (itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)+)>
+
+<!ATTLIST sidebar
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT abstract ((((title|titleabbrev)*, info?)|info), (para)+)>
+
+<!ATTLIST abstract
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT personblurb ((((title|titleabbrev)*, info?)|info), (para)+)>
+
+<!ATTLIST personblurb
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT blockquote ((((title|titleabbrev)*, info?)|info), attribution?, (itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)+)>
+
+<!ATTLIST blockquote
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT epigraph (info?, attribution?, (para|literallayout)+)>
+
+<!ATTLIST epigraph
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT footnote ((itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)+)>
+
+<!ATTLIST footnote
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	label	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT note ((((title|titleabbrev)*, info?)|info), (itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)+)>
+
+<!ATTLIST note
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT itemizedlist ((((title|titleabbrev)*, info?)|info), (itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)*, (listitem)+)>
+
+<!ATTLIST itemizedlist
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	spacing	(compact|normal)	#IMPLIED
+	mark	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT orderedlist ((((title|titleabbrev)*, info?)|info), (itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)*, (listitem)+)>
+
+<!ATTLIST orderedlist
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	spacing	(compact|normal)	#IMPLIED
+	continuation	(continues|restarts)	#IMPLIED
+	inheritnum	(ignore|inherit)	#IMPLIED
+	numeration	(arabic|upperalpha|loweralpha|upperroman|lowerroman)	#IMPLIED
+
+>
+
+<!ELEMENT listitem ((itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)+)>
+
+<!ATTLIST listitem
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	override	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT variablelist ((((title|titleabbrev)*, info?)|info), (itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)*, (varlistentry)+)>
+
+<!ATTLIST variablelist
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	spacing	(compact|normal)	#IMPLIED
+	termlength	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT varlistentry ((term)+, listitem)>
+
+<!ATTLIST varlistentry
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT term (#PCDATA|inlinemediaobject|superscript|subscript|abbrev|acronym|emphasis|footnote|footnoteref|phrase|quote|trademark|citetitle|author|personname|orgname|editor|xref|link|anchor|replaceable|option|systemitem|filename|command|computeroutput|userinput|literal|email)*>
+
+<!ATTLIST term
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT example ((((title|titleabbrev)*, info?)|info), (itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)+)>
+
+<!ATTLIST example
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	label	CDATA	#IMPLIED
+	floatstyle	CDATA	#IMPLIED
+	float	CDATA	#IMPLIED
+	width	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT programlisting (#PCDATA|info|textobject|inlinemediaobject|superscript|subscript|abbrev|acronym|emphasis|footnote|footnoteref|phrase|quote|trademark|citetitle|author|personname|orgname|editor|xref|link|anchor|replaceable|option|systemitem|filename|command|computeroutput|userinput|literal|email|lineannotation)*>
+
+<!ATTLIST programlisting
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	continuation	(continues|restarts)	#IMPLIED
+	linenumbering	(numbered|unnumbered)	#IMPLIED
+	startinglinenumber	NMTOKEN	#IMPLIED
+	language	CDATA	#IMPLIED
+	xml:space	(preserve)	#IMPLIED
+	width	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT literallayout (#PCDATA|info|textobject|inlinemediaobject|superscript|subscript|abbrev|acronym|emphasis|footnote|footnoteref|phrase|quote|trademark|citetitle|author|personname|orgname|editor|xref|link|anchor|replaceable|option|systemitem|filename|command|computeroutput|userinput|literal|email|lineannotation)*>
+
+<!ATTLIST literallayout
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	continuation	(continues|restarts)	#IMPLIED
+	linenumbering	(numbered|unnumbered)	#IMPLIED
+	startinglinenumber	NMTOKEN	#IMPLIED
+	language	CDATA	#IMPLIED
+	xml:space	(preserve)	#IMPLIED
+	class	(monospaced|normal)	#IMPLIED
+
+>
+
+<!ELEMENT figure ((((title|titleabbrev)*, info?)|info), (itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)+)>
+
+<!ATTLIST figure
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	label	CDATA	#IMPLIED
+	pgwide	(0|1)	#IMPLIED
+	floatstyle	CDATA	#IMPLIED
+	float	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT mediaobject (info?, (videoobject|audioobject|imageobject|textobject)+)>
+
+<!ATTLIST mediaobject
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT inlinemediaobject (info?, (videoobject|audioobject|imageobject|textobject)+)>
+
+<!ATTLIST inlinemediaobject
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT videoobject (info?, videodata)>
+
+<!ATTLIST videoobject
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT audioobject (info?, audiodata)>
+
+<!ATTLIST audioobject
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT imageobject (info?, imagedata)>
+
+<!ATTLIST imageobject
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT textobject (info?, (phrase|textdata|(itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)+))>
+
+<!ATTLIST textobject
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT videodata (info?)>
+
+<!ATTLIST videodata
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	format	CDATA	#IMPLIED
+	fileref	CDATA	#IMPLIED
+	entityref	ENTITY	#IMPLIED
+	align	(center|char|justify|left|right)	#IMPLIED
+	valign	(bottom|middle|top)	#IMPLIED
+	width	CDATA	#IMPLIED
+	contentwidth	CDATA	#IMPLIED
+	scalefit	(0|1)	#IMPLIED
+	scale	CDATA	#IMPLIED
+	depth	CDATA	#IMPLIED
+	contentdepth	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT audiodata (info?)>
+
+<!ATTLIST audiodata
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	format	CDATA	#IMPLIED
+	fileref	CDATA	#IMPLIED
+	entityref	ENTITY	#IMPLIED
+
+>
+
+<!ELEMENT imagedata (info?)>
+
+<!ATTLIST imagedata
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	format	CDATA	#IMPLIED
+	fileref	CDATA	#IMPLIED
+	entityref	ENTITY	#IMPLIED
+	align	(center|char|justify|left|right)	#IMPLIED
+	valign	(bottom|middle|top)	#IMPLIED
+	width	CDATA	#IMPLIED
+	contentwidth	CDATA	#IMPLIED
+	scalefit	(0|1)	#IMPLIED
+	scale	CDATA	#IMPLIED
+	depth	CDATA	#IMPLIED
+	contentdepth	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT textdata (info?)>
+
+<!ATTLIST textdata
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	format	CDATA	#IMPLIED
+	fileref	CDATA	#IMPLIED
+	entityref	ENTITY	#IMPLIED
+	encoding	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT jobtitle (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST jobtitle
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT orgname (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST orgname
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	class	(consortium|corporation|informal|nonprofit|other)	#IMPLIED
+	otherclass	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT personname (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable|honorific|firstname|surname|lineage|othername)*>
+
+<!ATTLIST personname
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT author ((personname, (personblurb|affiliation|email)*)|(orgname, (affiliation|email)*))>
+
+<!ATTLIST author
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT authorgroup ((author|editor|othercredit)+)>
+
+<!ATTLIST authorgroup
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT authorinitials (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST authorinitials
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT copyright ((year)+, (holder)*)>
+
+<!ATTLIST copyright
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT year (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST year
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT holder (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST holder
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT date (#PCDATA)*>
+
+<!ATTLIST date
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT edition (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST edition
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT editor ((personname, (personblurb|affiliation|email)*)|(orgname, (affiliation|email)*))>
+
+<!ATTLIST editor
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT legalnotice ((((title|titleabbrev)*, info?)|info), (itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)+)>
+
+<!ATTLIST legalnotice
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT othercredit ((personname, (personblurb|affiliation|email)*)|(orgname, (affiliation|email)*))>
+
+<!ATTLIST othercredit
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	class	(copyeditor|graphicdesigner|other|productioneditor|technicaleditor|translator)	#IMPLIED
+
+>
+
+<!ELEMENT honorific (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST honorific
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT firstname (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST firstname
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT surname (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST surname
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT lineage (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST lineage
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT othername (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST othername
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT pubdate (#PCDATA)*>
+
+<!ATTLIST pubdate
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT publishername (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST publishername
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT releaseinfo (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST releaseinfo
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT revhistory ((((title|titleabbrev)*, info?)|info), (revision)+)>
+
+<!ATTLIST revhistory
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT revision (revnumber?, date, (authorinitials|author)*, (revremark|revdescription)?)>
+
+<!ATTLIST revision
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT revnumber (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST revnumber
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT revremark (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST revremark
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT revdescription ((itemizedlist|orderedlist|variablelist|note|example|figure|table|informaltable|blockquote|sidebar|epigraph|mediaobject|literallayout|programlisting|revhistory|para)*)>
+
+<!ATTLIST revdescription
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT volumenum (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST volumenum
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT issuenum (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST issuenum
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT command (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST command
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT computeroutput (#PCDATA|inlinemediaobject|superscript|subscript|filename|command|computeroutput|userinput|replaceable|option|systemitem|literal|email)*>
+
+<!ATTLIST computeroutput
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT email (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST email
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT filename (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST filename
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	path	CDATA	#IMPLIED
+	class	(devicefile|directory|extension|headerfile|libraryfile|partition|symlink)	#IMPLIED
+
+>
+
+<!ELEMENT lineannotation (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST lineannotation
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT literal (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST literal
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT option (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST option
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT replaceable (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST replaceable
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	class	(command|function|option|parameter)	#IMPLIED
+
+>
+
+<!ELEMENT systemitem (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST systemitem
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	class	(daemon|domainname|etheraddress|event|eventhandler|filesystem|fqdomainname|groupname|ipaddress|library|macro|netmask|newsgroup|osname|process|protocol|resource|server|service|systemname|username)	#IMPLIED
+
+>
+
+<!ELEMENT userinput (#PCDATA|inlinemediaobject|superscript|subscript|filename|command|computeroutput|userinput|replaceable|option|systemitem|literal|email)*>
+
+<!ATTLIST userinput
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT citetitle (#PCDATA|inlinemediaobject|superscript|subscript|abbrev|acronym|emphasis|footnote|footnoteref|phrase|quote|trademark|citetitle|author|personname|orgname|editor|xref|link|anchor|replaceable|option|systemitem|filename|command|computeroutput|userinput|literal|email)*>
+
+<!ATTLIST citetitle
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	pubwork	(article|bbs|book|cdrom|chapter|dvd|emailmessage|gopher|journal|manuscript|newsposting|part|refentry|section|series|set|webpage|wiki)	#IMPLIED
+
+>
+
+<!ELEMENT emphasis (#PCDATA|inlinemediaobject|superscript|subscript|abbrev|acronym|emphasis|footnote|footnoteref|phrase|quote|trademark|citetitle|author|personname|orgname|editor|xref|link|anchor|replaceable|option|systemitem|filename|command|computeroutput|userinput|literal|email)*>
+
+<!ATTLIST emphasis
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT phrase (#PCDATA|inlinemediaobject|superscript|subscript|abbrev|acronym|emphasis|footnote|footnoteref|phrase|quote|trademark|citetitle|author|personname|orgname|editor|xref|link|anchor|replaceable|option|systemitem|filename|command|computeroutput|userinput|literal|email)*>
+
+<!ATTLIST phrase
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT quote (#PCDATA|inlinemediaobject|superscript|subscript|abbrev|acronym|emphasis|footnote|footnoteref|phrase|quote|trademark|citetitle|author|personname|orgname|editor|xref|link|anchor|replaceable|option|systemitem|filename|command|computeroutput|userinput|literal|email)*>
+
+<!ATTLIST quote
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT subscript (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST subscript
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT superscript (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST superscript
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT trademark (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable)*>
+
+<!ATTLIST trademark
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	class	(copyright|registered|service|trade)	#IMPLIED
+
+>
+
+<!ELEMENT footnoteref (EMPTY)>
+
+<!ATTLIST footnoteref
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	label	CDATA	#IMPLIED
+
+>
+
+<!ELEMENT xref (EMPTY)>
+
+<!ATTLIST xref
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	xrefstyle	CDATA	#IMPLIED
+	endterm	IDREF	#IMPLIED
+
+>
+
+<!ELEMENT link (#PCDATA|inlinemediaobject|superscript|subscript|abbrev|acronym|emphasis|footnote|footnoteref|phrase|quote|trademark|citetitle|author|personname|orgname|editor|xref|link|anchor|replaceable|option|systemitem|filename|command|computeroutput|userinput|literal|email)*>
+
+<!ATTLIST link
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+	endterm	IDREF	#IMPLIED
+
+>
+
+<!ELEMENT anchor (EMPTY)>
+
+<!ATTLIST anchor
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#REQUIRED
+
+>
+
+<!ELEMENT abbrev (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable|trademark)*>
+
+<!ATTLIST abbrev
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT acronym (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable|trademark)*>
+
+<!ATTLIST acronym
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT attribution (#PCDATA|inlinemediaobject|superscript|subscript|phrase|replaceable|personname|citetitle)*>
+
+<!ATTLIST attribution
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT affiliation ((jobtitle)*, orgname?)>
+
+<!ATTLIST affiliation
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+
+<!ELEMENT para (#PCDATA|info|inlinemediaobject|superscript|subscript|abbrev|acronym|emphasis|footnote|footnoteref|phrase|quote|trademark|citetitle|author|personname|orgname|editor|xref|link|anchor|replaceable|option|systemitem|filename|command|computeroutput|userinput|literal|email)*>
+
+<!ATTLIST para
+	xmlns	CDATA	#FIXED	"http://docbook.org/docbook-ng"
+	role	CDATA	#IMPLIED
+	id	ID	#IMPLIED
+	%db.common.linking.attributes;
+
+>
+

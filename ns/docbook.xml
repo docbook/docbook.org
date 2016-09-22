@@ -1,0 +1,62 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='docbookns'>
+<info>
+<title>The DocBook Namespace</title>
+</info>
+
+<para>The page describes the DocBook namespace,
+<literal>http://docbook.org/ns/docbook</literal>.
+This namespace identifies a family of documents that may be valid
+according one or more schemas.</para>
+
+<section xml:id="relaxng">
+<title>RELAX NG Schemas</title>
+
+<para>There is no normative schema for any language in this namespace at
+this time. The DocBook Technical Committee expects to publish the
+following schemas soon:</para>
+
+<itemizedlist>
+<listitem>
+<para>DocBook V5.0, a normative RELAX NG Grammar for DocBook V5.0.
+</para>
+</listitem>
+</itemizedlist>
+
+</section>
+
+<section xml:id="w3cxmlschema">
+<title>W3C XML Schemas</title>
+
+<para>There is no XML Schema for any language in this namespace at
+this time. The DocBook Technical Committee expects to publish the
+following schemas soon:</para>
+
+<itemizedlist>
+<listitem>
+<para>DocBook V5.0, an informative W3C XML Schema for DocBook V5.0.
+</para>
+</listitem>
+</itemizedlist>
+
+</section>
+
+<section xml:id="dtd">
+<title>XML DTDs</title>
+
+<para>There is no DTD for any language in this namespace at this time.
+The DocBook Technical Committee expects to publish the following
+DTDs soon:</para>
+
+<itemizedlist>
+<listitem>
+<para>DocBook V5.0, an informative XML DTD for DocBook V5.0.
+</para>
+</listitem>
+</itemizedlist>
+
+</section>
+</article>
+

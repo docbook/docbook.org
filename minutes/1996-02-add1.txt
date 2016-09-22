@@ -1,0 +1,103 @@
+From server@amber.ora.com Tue Mar  5 23:50:20 1996
+Received: from ruby.ora.com (ruby.ora.com [198.112.208.25]) by jasper.ora.com (8.6.13/8.6.11) with ESMTP id XAA03500 for <norm@jasper.ora.com>; Tue, 5 Mar 1996 23:50:19 -0500
+Received: from amber.ora.com (amber.ora.com [198.112.208.11]) by ruby.ora.com (8.6.13/8.6.11) with ESMTP id XAA15325; Tue, 5 Mar 1996 23:52:59 -0500
+Received: (from server@localhost) by amber.ora.com (8.6.13/8.6.11) id RAA02692; Tue, 5 Mar 1996 17:45:48 -0500
+Date: Tue, 5 Mar 1996 17:45:48 -0500
+Message-Id: <9603052208.AA25172@atiaus.arbortext.com>
+Errors-To: listown@online.ora.com
+Reply-To: paul@arbortext.com
+Originator: davenport@online.ora.com
+Sender: davenport@online.ora.com
+Precedence: bulk
+From: paul@arbortext.com (Paul Grosso)
+To: Multiple recipients of list <davenport@online.ora.com>
+Subject: Re: Davenport Feb/Mar '96 meeting notes
+X-Listprocessor-Version: 6.0c -- ListProcessor by Anastasios Kotsikonas
+X-Comment: Davenport Group General Distribution List
+X-Comment: To unsubscribe send message to listproc@online.ora.com "unsubscribe davenport"
+
+> Date: Tue, 5 Mar 1996 10:18:36 -0500
+> From: Eve Maler <eve@doctools.com>
+> 
+
+> 
+> Table and Chart
+> .................................
+>   We should make sure to subset out Chart when we use the CALS table
+>   fragment.  No one seems to know what it's for that Table doesn't do.
+>   (It's currently already subsetted out.)
+
+Chart is something from CALS 38784 that I've never seen used in practice
+and which is really just a table with some possibly different formatting
+(e.g., Charts numbered independently of Tables, which is really a style
+sheet issue).  Forgetting charts is probably a good idea.
+
+> 
+> Notations
+> .................................
+>   It's a bug fix to change the three AT&T SYSTEM keywords to PUBLIC. We
+>   also need two GIF notations for the newer and older GIF versions (as
+>   Netscape accepts the former but not the latter).  Terry will ask what
+>   the appropriate FPIs should be for these notations.  We'll add any
+>   from the DeRose book that we're missing.
+> 
+>   We should also add the SGML notation from IBMIDDOC:
+> 
+>     "+//ISO/IEC 8879:1986//NOTATION SGML Document//EN"
+
+Please double check this.  My reading of 8879 indicates that the above
+is not a valid Formal Public Idendifier.  According to productions 79-81,
+if an FPI is to have an ISO owner identifier, it does *not* have the
+initial "+//".  In fact, my understanding is that "+//" is for registered
+owner identifiers only, and at the present time, there is no official
+registration body, so there can be no registered owners and therefore
+no "+//" FPIs except those that use ISBNs (which are registered).  
+
+Furthermore, 8879 is officially "ISO 8879:1986" not "ISO/IEC 8879:1986"
+(see, for example, all the FPIs for the character sets in annex D of 8879).
+
+I think having an official FPI for SGML notation is a great idea, but
+since the owner of 8879 is SC18/WG8, I think you should ask them to
+determine and bless an official FPI.  (The convenor of WG8 is James
+Mason [MASONJD@oax.a1.ornl.gov] and the editor of the WG8 SGML
+Rapporteur Group is Charles Goldfarb [charles@sgmlsource.com].)  My
+apologies if I'm off base on this, but the FPI above doesn't seem right
+to me, and I do think it's important we don't proliferate
+invalid/inappropriate FPIs.
+
+> 
+> Handling of "verbatim" text
+> .................................
+>   Paul Grosso had suggested we add a Verbatim element (if we need one)
+>   that has RCDATA declared content, and that has a CONREF ENTITY
+>   attribute that points to a CDATA entity.  The only problem is that
+>   behavior of systems is undefined with regard to pulling in that entity
+>   content.
+> 
+>   We decided there's no burning need for such an element.
+
+If/when you decide to revisit this, one other piece of background might
+be the conloc concept of HyTime.  This is basically just a semantic that
+says that, for an element with a CONREF attribute, the conref'ed entity
+shall be treated for processing purposes as if it were the content of the 
+element with the CONREF attribute.  I've only recently reviewed this again;
+Eliot can elaborate.
+ 
+> 
+> Table and Example Width attributes
+> .................................
+>   Lee Fogal brought this up.  Eve took an action to ask Harvey Bingham:
+>   pgwide in CALS tables is yesorno.  Is there any room for it to express
+>   additional settings?  (DECbook has normal, wide, and maximum.)
+>   Example needs the NUMBER-based Width attribute so that the parent can
+>   be formatted with knowledge of the width of the contents.
+>   ProgramListing's and Screen's processing expectations are to inherit
+>   the Width value from Example, if present.
+
+I sent private email to Eve/Terry on this making some comments and requesting
+some clarification.  Eve/Terry, we can continue this offline or you can
+choose to bring it to the list.
+
+paul
+
+

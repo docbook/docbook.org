@@ -1,0 +1,159 @@
+DocBook Technical Committee Meeting Minutes: 18 August 2004
+=============================================================
+
+The DocBook Technical Committee met on Wednesday, 18 August 2004 at
+05:00p EDT (02:00p PDT, 21:00GMT, 22:00BST, 23:00CEST, 06:00JST+,
+02:30a India+) for 50 minutes.
+
+1. Roll call
+
+Present: Steven Cogorno, Gary Cornelius, Paul Grosso,
+Dick Hamilton, Nancy Harrison, Scott Hudson, Mark Johnson,
+Jirka Kosek, Larry Rowland, Bob Stayton, Norman Walsh
+
+Regrets: none
+
+Absent: Adam Di Carlo, Mike Smith
+
+2. Accepting the minutes[1] of the previous meeting
+   as amended by [2] and [3].
+
+3. Next meeting: 15 September 2004.
+
+   No regrets.
+
+4. Review of the agenda.
+
+   Added Karl Best's mail as item 5i.
+
+5. Review of open action items
+
+  a. Mike to provide a better proposal for choicelist markup.
+     CONTINUED.
+
+  b. Bob to identify elements in DocBook that correspond to
+     valid locations of HTML forms in HTML output.
+     CONTINUED.
+
+  c. Scott will investigate places where
+     anchor should be permitted.
+     COMPLETED.
+
+  d. Norm to generate web pages for 4.2, 4.3, and 4.4x.
+     CONTINUED.
+
+  e. Norm to produce 4.4b2 with W3C entity sets.
+     CONTINUED.
+
+  f. Norm to fix nested HTML tables for 4.4b2.
+     CONTINUED.
+
+  g. Mark to summarize the processes that Debian uses for guidelines
+     for accepting or rejecting requests.
+     CONTINUED.
+
+  h. Larry to write up a summary of accessibility and send it in email,
+     including links to the sites that offer tools and tests for
+accessibility.
+     COMPLETED.
+
+5i. Karl Best's email on committee status.
+
+    Karl's mail to the TC indicates we need some changes to our
+    charter, as well as a list of deliverables.
+
+    ACTION: Norm to write a draft charter.
+
+6. Status of DTD version 4.4 beta
+
+   No new status.
+
+7. Annotation proposal (Mike).  [4] [5]
+
+   Postponed.
+
+8. Discuss guidelines for accepting or rejecting requests.
+
+Mark: No formal guidelines found at Debian.
+
+Bob: We have our guidelines about backwards-incompatible changes
+requiring sufficient notice before release.  We also
+require use cases.  Are we still focused on technical
+documentation, despite people using DocBook in other
+contexts?
+
+Norm: Our charter defines our scope, so perhaps that would help.
+Want to avoid "scope creep".
+
+Nancy: DITA and other extensions could be possible without
+extending the scope.
+
+Norm: a paper by Len Bullard and Sebestian Rahtz at Extreme
+Markup 2004 showed how to combine TEI and DocBook elements.
+This will be easier in 5.0 using RelaxNG.
+
+Nancy: we have an informal guideline that we require
+stronger justification when the request is coming from
+a single source rather than multiple sources.
+
+Norm: Suggests we do the charter first, and that will
+help to develop guidelines.
+
+Gary: Would ISO 9000 or something like it help?
+
+ACTION: Gary to investigate ISO 9000.
+
+9. html:form should be available in more places
+   than in %divcomponent.mix;  [6] [7]
+
+   Postponed.
+
+10. Accessibility.  [8] [9]
+
+Larry's mail described various options for markup
+and processing.  Many seemed acceptable to the group.
+Norm suggested we finish the annotations proposal,
+because some of the accessibility options might
+work with annotations.  Larry agreed.
+
+Norm invites all participants to contribute to
+the annotations proposal to be discussed at
+the next meeting.
+
+Meeting adjourned at 5:50 EDT
+############################
+
+11. Review of Requests for Enhancement
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;
+      group_id=21935&atid=384107&aid=XXXX
+
+     The following RFEs are awaiting action items
+
+      973446 Replace Footnote with Annotation
+      413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+      431411 RFE 70: add generic linking capability (Norm)
+      522552 Add title attribute to <ulink> element (Mike, annotations)
+      565637 Associate non-inline image with link (Norm, generic linking)
+      574880 Add annotation element (Mike)
+      623524 (Re)Consider "choicelist" markup (Mike)
+
+     The following RFEs are identified as V5.0 or later
+
+      974285 Check floatstyle/float attributes
+      958393 remove default class value from productname
+      531851 Remove inline person name elements
+      532088 Remove RevHistory from qandaentry
+- ---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200407/msg00020.html
+[2] http://lists.oasis-open.org/archives/docbook-tc/200407/msg00021.html
+[3] http://lists.oasis-open.org/archives/docbook-tc/200408/msg00000.html
+[4] http://lists.oasis-open.org/archives/docbook-tc/200406/msg00003.html
+[5] http://lists.oasis-open.org/archives/docbook-tc/200406/msg00005.html
+[6] http://lists.oasis-open.org/archives/docbook-apps/200406/msg00081.html
+[7] http://lists.oasis-open.org/archives/docbook/200404/msg00032.html
+[8] http://lists.oasis-open.org/archives/docbook-tc/200408/msg00002.html
+[9] http://lists.oasis-open.org/archives/docbook-tc/200408/msg00003.html

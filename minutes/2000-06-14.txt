@@ -1,0 +1,208 @@
+DocBook TC Minutes, 14/15 June 2000                          
+                                           Summary            
+                                           14 June            
+                                           15 June            
+                                           Action Items       
+Summary                                                       
+                                                              
+These notes summarize the DocBook Technical Committee (TC)    
+meeting that took place in Paris on 14 and 15 June 2000 as    
+part of the OASIS meetings colocated with XML Europe 2000.    
+                                                              
+  ---------------------------------------------------------   
+                                                              
+14 June                                                       
+                                                              
+Present                                                       
+                                                              
+  o Terry Allen                                               
+                                                              
+  o Dennis Evans                                              
+                                                              
+  o Eduardo Gutentag                                          
+                                                              
+  o Norman Walsh (Chair)                                      
+                                                              
+Agenda                                                        
+                                                              
+  o Review and approve DocBook 4.1 changes                    
+                                                              
+  o Review RFEs                                               
+                                                              
+  o Discuss parameter entity reorganization                   
+                                                              
+  o Discuss XML Schema                                        
+                                                              
+Review and approve DocBook V4.1                               
+                                                              
+Moved: we approve V4.1 with the minor changes previously      
+outlined: fixing FPIs, comments, and the version number in    
+the catalog.                                                  
+                                                              
+The motion was adopted without objection.                     
+                                                              
+If 4.1 contains errors, let's make it possible to fix them    
+without a teleconference or face-to-face meeting:             
+                                                              
+Moved: we agree that future versions of 4.x can be released   
+by the editor without formal vote, provided that members of   
+the docbook-tc mailing list are given 5 business days to      
+raise objections and no such objections are raised.           
+                                                              
+The motion was adopted without objection.                     
+                                                              
+New RFEs                                                      
+                                                              
+Add introductory material to lists                            
+                                                              
+   Authors sometimes need to provide a paragraph or two of    
+   description before the items of a list. These paragraphs   
+   are considered to be part of the list, so it's perhaps not 
+   appropriate to put them before the list. Procedure already 
+   allows this structure. Consider adding <listintro> before  
+   listitem* in the list content models.                      
+                                                              
+Add floating non-hierarchical structure                       
+                                                              
+   Authors would like the ability to add non-hierarchical     
+   sections (like Bridgehead) that are proper containers      
+   (like Sidebar). Consider adding <division>.                
+                                                              
+Issue 117: Add support for DOI in meta                        
+                                                              
+   We see that DOI will not be the only object identifier. We 
+   will add biblioid and citebiblioid with a class attribute. 
+   The legal values of this attribute will be: urn, doi,      
+   isbn, issn, pubnumber. The elements isbn, issn, and        
+   pubnumber are deprecated. FU that we will remove them in   
+   6.0.                                                       
+                                                              
+Issue 120: Add macro element for marking up macros in         
+programming languages                                         
+                                                              
+   Macro already exists as a class of systemitem. See action  
+   items; we need a design principal for when to add new      
+   inlines or new class attributes.                           
+                                                              
+Issue 121: Add markup for signals                             
+                                                              
+   Need more info. What other sorts of things are like this.  
+   Rather than adding new inlines for signal specifically,    
+   we'd like to come up with an element that was more general 
+   and add class values. Perhaps "Event" and "EventHandler"?  
+                                                              
+Issue 122: Add markup for troubleshooting                     
+                                                              
+   Rejected: this seems to be too application specific.       
+   Suggest Procedure with role and possibly other inline      
+   markup or a local extension.                               
+                                                              
+Issue 123: Add markup to support specifications               
+                                                              
+   Rejected: we consider this is out-of-scope for DocBook,    
+   but he should consider RosettaNet which is doing product   
+   spec sheets and similar sorts of things.                   
+                                                              
+Issue 124: Add markup for hostnames and other host            
+identifiers                                                   
+                                                              
+   We already have a class on systemitem for systemname. We   
+   suggest that these are further useful class values for     
+   systemitem but do not warrant a unique element name. We'll 
+   add the following class attributes to systemitem:          
+   domainname, fqdomainname, ipaddress, netmask,              
+   etheraddress. We consider hostname already covered by      
+   systemname.                                                
+                                                              
+Issue 125: Add markup for usernames                           
+                                                              
+   Username already exists as a class of systemitem.          
+                                                              
+Issue 126: Allow SimpleSect in Section                        
+                                                              
+   We will add SimpleSect to the end of Section.              
+                                                              
+Issue 127: Add 'dissertation' to list of article classes      
+                                                              
+   Yes.                                                       
+                                                              
+Issue 128: Better support for typing and linking in funcdef   
+                                                              
+   We'll add type to the content model of funcdef and         
+   paramdef to allow authors to specify that types are in     
+   fact types. Linking will be handled by XLink in some       
+   future version.                                            
+                                                              
+Issue 129: Support easier installation                        
+                                                              
+   The committee welcomes such efforts, but is unwilling to   
+   undertake the issue directly. There's too much variability 
+   across platforms.                                          
+                                                              
+Issue 130: Add inline markup for protocols, FS types, and     
+partitions                                                    
+                                                              
+   Protocol is another example of a case where we need to     
+   consider the design more carefully (what other things are  
+   like protocols); in the meantime use literal, phrase, or   
+   some other markup with a role attribute.                   
+                                                              
+   We'll add 'filesystem' to the class attribute of           
+   systemitem.                                                
+                                                              
+   We'll add 'partition' to the class attribute of filename.  
+                                                              
+Issue 131: Simplify citerefentry markup                       
+                                                              
+   Considered and rejected.                                   
+                                                              
+Discuss parameter entity reorganization                       
+                                                              
+Discussion continues.                                         
+                                                              
+Discuss XML Schema                                            
+                                                              
+Discussion continues.                                         
+                                                              
+  ---------------------------------------------------------   
+                                                              
+15 June                                                       
+                                                              
+Present                                                       
+                                                              
+  o Terry Allen                                               
+                                                              
+  o Dennis Evans                                              
+                                                              
+  o Norman Walsh (Chair)                                      
+                                                              
+Agenda                                                        
+                                                              
+  o Review and approve DocBook 4.1 changes                    
+                                                              
+  o Review RFEs                                               
+                                                              
+  o Discuss parameter entity reorganization                   
+                                                              
+  o Discuss XML Schema                                        
+                                                              
+Discuss parameter entity reorganization                       
+                                                              
+Discussion continues.                                         
+                                                              
+Discuss XML Schema                                            
+                                                              
+Discussion continues.                                         
+                                                              
+  ---------------------------------------------------------   
+                                                              
+Action Items                                                  
+                                                              
+  o norm: Remind list about EBNF. If there's no comment in 1  
+    month, we'll just close the issue.                        
+                                                              
+  o norm: Remind list about coregion. If no one expresses     
+    need, we'll just close the issue.                         
+                                                              
+  o Dennis: survey the landscape of technical inlines and     
+    propose a design principal.                               

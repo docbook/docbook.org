@@ -1,0 +1,469 @@
+From server@amber.ora.com Mon Aug 28 11:46:03 1995
+Return-Path: <server@amber.ora.com>
+Received: from ruby.ora.com by jasper.ora.com.noname (4.1/SMI-4.1)
+	id AA28742; Mon, 28 Aug 95 11:45:58 EDT
+Errors-To: listown@online.ora.com
+Received: from amber.ora.com (amber.ora.com [198.112.208.13]) by ruby.ora.com (8.6.12/8.6.11) with ESMTP id LAA12072; Mon, 28 Aug 1995 11:46:56 -0400
+Received: (from server@localhost) by amber.ora.com (8.6.11/8.6.11) id JAA00980; Mon, 28 Aug 1995 09:05:36 -0400
+Date: Mon, 28 Aug 1995 09:05:36 -0400
+Message-Id: <199508261749.NAA14042@village.doctools.com>
+Errors-To: listown@online.ora.com
+Reply-To: eve@village.doctools.com
+Originator: davenport@online.ora.com
+Sender: davenport@online.ora.com
+Precedence: bulk
+From: Eve Maler <eve@village.doctools.com> (by way of elm@arbortext.com (Eve L. Maler))
+To: Multiple recipients of list <davenport@online.ora.com>
+Subject: August Davenport meeting: decisions on DTD issues
+X-Listprocessor-Version: 6.0c -- ListProcessor by Anastasios Kotsikonas
+X-Comment: to unsubscribe send message to listproc@online.ora.com "unsubscribe davenport"
+
+Folks-- I took these notes 17-18 August 1995 at the Davenport
+meeting in Santa Cruz, and confirmed with the attendees that the
+written results correspond to the discussions and decisions.  You
+can expect that the backwards-compatible changes will be made at
+V2.4 or V3.0.  The few backwards-*in*compatible changes decided on
+at this meeting would happen at V4.0 (released in '96).  Please
+post a message to the Davenport list (davenport@online.ora.com) or
+send me mail directly if you have questions or comments.
+
+Thanks,
+
+	Eve Maler
+	DocBook DTD design team
+	elm@arbortext.com
+	+1 617 270 5750
+
+		*		*		*
+
+X/Open suggested changes (keyed to Fred Dalrymple's list posted earlier)
+========================================================================
+
+I.
+A1. Add a termlength attribute to VariableList.  Copy whatever units
+    and declared value are allowed in tables.  In the case of specifying
+    a percentage proportion, you're only specifying one column of the
+    total, so the assumed column/page flow width is whatever is
+    "current" (for whatever current means for you).
+
+    What: This is to describe the approximate length of the content of
+    terms that should fit onto a single line, possibly in opposition to
+    the longest actual term content.  This is a clearly procedural
+    attribute, though it is cast in as abstract terms as possible.
+
+    Why: To work around limitations in current rendering engines in
+    finding a pleasing proportion of term to description.  Someday we
+    anticipate that this won't be needed.  The problem of finding a
+    "suitable" unit of measure that isn't distasteful is impossible, so
+    we're punting and leaving it up to users.
+
+A2. Add this attribute to ItemizedList and OrderedList:
+
+	spacing		(compact
+			|normal)	normal
+
+    What: This is to record author's estimate of the proper "density"
+    of a whole list, usually based on the total amount of material in
+    it: if all items contain single words, phrases, or very short 
+    paragraphs, the list is usually compact.  This solution is an
+    alternative to allowing SimpleLists to have Mark styles and to
+    allowing a choice of content models in regular ListItems.
+
+    Why: To record the author's intent in interchange (similarly to
+    "augmented" material such as TOCs), even if it's sort of
+    presentational and even though it may safely be ignored in final
+    rendering.  If you take delivery of a document and need to
+    re-deliver it quickly, the original author's estimate is better than
+    other sources for using the information in rendering.  Algorithms
+    *may* get smarter in the future.
+
+A3. Add zero or more of this element as alternative to Sect<n+1>* 
+    and RefEntry* at end of all sections:
+
+	SimpleSect - - (Title, (%divcomponent.mix;)+)
+	%common.attrib;
+
+    What: A section-like, ListItem-like collection of paragraphs and
+    other components that is titled and that may appear only at the end
+    of a leveled section.  It is the "container" version of BridgeHead.
+
+    Why: To accommodate authors' crafting of information that is
+    contained and labeled but that doesn't have the "formal" role in a
+    document that a section does (for example, it doesn't appear in the
+    TOC).  Call it SimpleSect because it's "terminal" in the same way
+    that SimpleList is.
+
+A4. Use a PI; push back on vendors to support it.
+
+    Why: This doesn't belong in the DTD, and isn't desired for
+    interchange.  Any vendor *should* support line-break PIs.
+
+B1. Get definition and example from Fred.  Add a new element:
+
+	Limit - - (%phrase.char.mix;)*
+
+    What: Some limit on a value or system resource, such as the maximum
+    number of files allowed to be open at one time.
+
+    Why: This is different from all other computer terms, and it would
+    be useful, once you've navigated to a section, for seeing what
+    limits apply to the information you're looking up.
+
+B2. Add this attribute to Filename:
+
+	Class		(HeaderFile
+			|SymLink
+			|Directory)	#IMPLIED
+
+    ***What about providing a search path?  We can see how it goes later.
+
+    What: An optional indicator of the subclass of the filename.
+
+    Why: X/Open specifically wants HeaderFile, for (e.g.) adding angle
+    brackets around them for #includes and for seeing what header files
+    are needed for a function.
+
+
+C1. Add Symbol to %ssscript.char.mix;.
+
+    Why: X/Open needs symbols in them.  No problem to expand, where
+    there is a need.
+
+C2. Already done, probably in V2.2.1.
+
+D1. Document the potential uses of the Table tabstyle attribute.
+
+    What: X/Open needed to indicate how to position a table on the
+    page, for example, centered.
+
+    Why: We discovered that tabstyle exists, and suggested it would
+    be the proper place to store this information.  We need to alert
+    people to its existence.
+
+E1. Effectivity control is different from tracking of authorship and
+    revision.  Add a set of common attributes defined as NAMES for
+    effectivity, since it's immediately needed for rendering.  The
+    others aren't.  Add these common attributes:
+
+	OS		NAMES		#IMPLIED
+	Architecture	NAMES		#IMPLIED
+	Vendor		NAMES		#IMPLIED
+	UserLevel	NAMES		#IMPLIED
+	Revision	CDATA		#IMPLIED
+
+    Add this element:
+
+	Phrase - - (%para.char.mix;)*
+	%common.attrib;
+
+E3.  Add this common attribute (or restrict its application to not
+     put it on inlines except Phrase?):
+
+	RevisionFlag	(Changed
+			|Deleted
+			|Added)		#IMPLIED -- no default --
+
+     We need to do a survey on where these should all go.  Make new
+     subcommon.attrib subclasses.
+
+     Eduardo needs these (OS, Arch, UserLevel) within a month.  The
+     Phrase element is definitely needed.
+
+II.
+B1. It's better to put an ID on GlossEntry than to use an Anchor (an
+    inline element) inside the content of the relevant element.
+
+B2. Same as above.
+
+B3. Allow it.
+
+    Why: Some people do treat glossaries as appendix-type things,
+    and we shouldn't prevent them from putting true navigational
+    formal objects in the glossary.  However, they should be aware
+    that some presentations will treat glossaries as databases of
+    glossary entry records that aren't accessed all together.
+
+C1. Allow Glossary up front.
+
+    Why: It's not for us to be Glossary Police, and others were already
+    going to ask for the same thing.  Add it optionally after Preface*.
+
+C2. GlossDiv covers this.
+
+C3. You can already do this by putting InformalExample (which contains
+    lists and paragraphs) in Figure.  It's a trick, but not really
+    Tag Abuse.
+
+Main DocBook issues list
+========================
+
+***Admonitions in paragraphs:
+
+Yes.  Check for contexts that use paragraphs to make sure admonitions
+belong there too (and exclude them if necessary).  E.g.  sidebars and
+selves.
+
+Why: It doesn't pose any rendering problems, it isn't nonsensical, and
+some authors see the note as applying to the paragraph content.  Also
+allows paragraph continuations to be handled properly.
+
+***Formal objects in paragraphs:
+
+Yes.  Check especially carefully for contexts that shouldn't have
+formal objects in them (many!).
+
+It would be a reasonable processing expectation that paragraph-internal
+formal objects wouldn't float, but we're not mandating this.
+
+Why: No harm done again.  We're acknowledging (with this and
+LeafSect) that bottom-up writing and markup involve different
+organizational principles than top-down writing/outlining.
+
+***Frontispiece:
+
+Terry needs it for his book on Islamic architecture (which is outside
+the scope!).  But do technical docs need it?
+
+Yes.  Add a graphic somewhere in BookInfo.  Need to figure out where to
+put it and what its processing expectations are.  Is it a graphical
+abstract?  (Probably not.)
+
+Why: Common requirement.  Appropriately "meta."
+
+***Glossaries in appendices:
+
+No. Putting a glossary in an appendix makes it not a true glossary.
+
+Why: GlossList and Glossary (after appendices) cover the need
+sufficiently.
+
+***Replaceable should be in computer terms
+
+Yes.
+
+Why: E.g., functions that have a root and a variable part.
+
+***FirstTerm/GlossTerm linkend
+
+FirstTerm: Add linkend attribute, which may point to a relevant
+GlossEntry but might also point to something else.
+
+GlossTerm: Add a BaseForm or BaseName (but not BASE! :-) attribute
+for the text of the real GlossEntry's GlossTerm text.
+
+***Allow InlineGraphic in Title and many other places.
+
+Add inlineobj.class to a new title.char.mix and use it in titles.
+Also add it to phrase-sized elements.  (Look at all inline.char.mix
+elements.)
+
+***Allow some kind of Source element for Epigraph and BlockQuote
+
+Yes.  Add an optional Source element at the end of both.  Its
+content: TBD. (Author? PCDATA?)
+
+Why: Because you're typically going to render it and write it in
+that order.
+
+***BlockQuote can include Epigraph but shouldn't
+
+Yes, but this is backwards incompatible.  Warn now and change in 
+V4.0.
+
+***IndexTerm SpanEnd change for V3.0
+
+Change SpanEnd to StartRef.  Add Class attribute with Single,
+StartOfRange, EndOfRange.
+
+***ICADD attributes
+
+Use SGMLLINK to do the mapping?  Terry will look into it.
+
+***Modularizing all ATTLIST declarations
+
+Maybe next time around?  This time, let's just add local.<elemname>.attrib
+placeholders to all ATTLISTs.
+
+Why: It's very valuable for fixed attributes, and adding attributes
+is cheap.  It's nice to remove attributes too, but for now we're not
+willing to make the DTD that much uglier (MSs around each individual
+ATTLIST).
+
+***Add notations for URL methods 
+
+Ralph decided this wasn't the right way to go.  So we won't do it.
+
+Tracy will provide a WPG (WordPerfect Graphic) notation identifier for
+Terry.
+
+***SimpleList not in index division intro
+
+Leaving it out was an oversight.  It should be added back (bug fix)
+in V2.4.  Do bug fixes *not* in V2.3, but in V2.4.
+
+***Add PI and other keywords to SGMLTag Class attribute
+
+Add which ones?  PI, STARTTAG, ENDTAG, VALUE.
+
+***ScreenShot shouldn't have linespecific
+
+It doesn't!  Oops.
+
+***WriteItIn element
+
+For text that the user should write down; may put it in script font.
+Perhaps this should be a flavor of UserInput rather than Emphasis
+of some kind.
+
+Tracy Smith owes us more examples.  We'll consider it for next time.
+
+***Optional in Replaceable
+
+Sounds good!
+
+***Title requirements are inconsistent across book components
+
+But they're correct. Only the non-unique elements (like Chapter) 
+require titles.
+
+***OMITTAG minimization scheme for those who want to change to YES
+
+Yes, now that there are public-domain normalizers (e.g., spam).  The
+only requirement is not to make start-tags omissible.  This is a
+low-priority item.
+
+Jon wonders how aggressive the scheme can be made.  I'm more inclined to
+be conservative.
+
+General scheme: Major structural elements and some flat meta subelement
+series, but not heavily nested meta elements.  Most subelements of
+structured block/object/inline elements, unless they're really un-flat.
+Not objects or inlines themselves, except paragraphs.
+
+***RefSynopsisDiv content
+
+Should be expanded to whatever components RefSect1 can contain.
+
+Why: People will tend not to abuse the privilege, and what if you
+need to have a paragraph that *refers* to a synopsis elsewhere?
+
+***FuncSynopsis
+
+V2.4: Allow a new container element, FuncPrototype+, as an alternative
+to (FuncDef, (Void.....))+.
+
+V4.0: Remove the + from the group.  Backwards incompatible.  FUTURE USE.
+
+Why: The container is really really useful for rendering cases with
+multiple prototypes, and gives an opportunity to put common atts (e.g.
+ID) on individual prototypes that share header files etc.  But not
+necessary to make people use it if they only have one.  This is a
+tradeoff of convenience over perfect container consistency.
+
+***CmdSynopsis
+
+Broaden by changing main content to (Command|Arg|Group|SBR)+.
+Incorporate SBR (synopsis break, an empty element) into content
+of Arg and Group (and elsewhere?).  Make sure it can't be used in
+any linespecific contexts.
+
+Look for ADL (Assertion <something> Language) testing language; it
+generates complete synopsis markup.  Eventually, maybe we can leverage
+this for generating and validating synopses etc.  (Though it's really
+ugly.)
+
+Why: Tony, Fred, and Eve had cases where alternate commands and
+synopsis lines were presented, etc.  We want to avoid unnecessary
+use of Synopsis.
+
+***FPIs
+
+Beginning with the next version released (V2.3):
+
+Official Davenport:
+-//Davenport//DTD DocBook Vn.n[.n]//EN
+-//Davenport//ELEMENTS DocBook Information Pool Vn.n[.n]//EN
+-//Davenport//ELEMENTS DocBook Document Hierarchy Vn.n[.n]//EN
+. . .
+-//Davenport//TEXT DocBook SGML Declaration Vn.n[.n]//EN
+
+Variants (advisory):
+-//<real-owner>//DTD DocBook Vn.n[.n]-Based [Subset|Extension] 
+<description>//EN
+-//<real-owner>//ELEMENTS DocBook Vn.n[.n]-Based [Subset|Extension] 
+<description>//EN
+
+***LineAnnotation should contain more than #PCDATA
+
+Yes -- make it %para.char.mix; (or whatever is broadest).
+
+Why: You need to put at least Emphasis.
+
+***What counts as a renaming
+
+If you *dis*able any ISO entity sets, it's a subset.  But you can add
+any general entities you want.  Do this by supplying a file entity
+placeholder (that's INCLUDE!) that points to an empty file.  You can put
+your general entity set declarations and references in it.  We'll put
+this placeholder *after* the ISO entity stuff, so you can't use it to
+turn off any ISO entity sets.
+
+***synop.class usage in para.mix vs. para.char.mix
+
+This is up to Eve.  [I investigated this and discovered that
+para.char.mix is used in other paragraph-like contexts besides
+Para, and that they require synop.class.  Thus, the current usage
+will stand.]
+
+***Review content of inlines (words, phrases, computer terms, etc.)
+
+Eve will propose something on the list beforehand.  (A way to do
+the matrix, with some real content model suggestions.)
+
+***CALS fragment usage
+
+As long as behavior and markup model is identical (barring the known
+commonatts situation), use of the SGML Open module is perfectly acceptable.
+
+***Sidebar float
+
+They're floats by definition; shouldn't specify whether each one
+should float.  Don't add it.
+
+***ToC at beginning of chapter
+
+Add this.  It's generally useful.  Also add it at the Sect<n> level.
+
+***Copyright of DTD
+
+For V2.3 and above (till the situation changes), add ArborText to the
+list.
+
+***BiblioEntry and other meta-type elements in hier vs. pool
+
+They should probably be in the info pool.  There are too many
+interdependencies to put them in a separate module.  Since we're
+considering getting rid of the Article stuff, hold off on moving
+any Article-specific elements to the info pool.
+
+***Provide a "resolved" version of the DTD for newbies?
+
+It was scary to read before, too, and we don't want to maintain
+multiple versions.  The MSs (which contribute the worst of the
+unreadable changes) can't be removed without changing them into a
+million modules.  We should just make sure that a dtd2html version
+and other navigational devices are available.
+
+***More linkend?
+***XRefLabel attribute vs. element
+***Graphic attributes
+***ToC, LoT, Index allowed to be empty
+***Bibliography and ArtHeader stuff
+***Need additional attributes on Filename yet? (X/Open status check)
+
+Discuss on the list; perhaps settle the backwards-compatible ones
+in time for V2.4.
+
+
+
+

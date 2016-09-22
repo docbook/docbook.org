@@ -1,0 +1,953 @@
+                 Davenport Group meeting of 19-21 February 1997
+
+     ----------------------------------------------------------------------
+
+   Terry Allen hosted the meeting at Fujitsu's site in San Jose, California.
+   He also provided us with the most creative and enjoyable victuals ever
+   seen in a conference room. Thanks, Terry!
+
+     ----------------------------------------------------------------------
+
+Attendees
+
+   +--------------------------------------------------------------+
+   |       Name       |                  Company                  |
+   |------------------+-------------------------------------------|
+   | Terry Allen      | Fujitsu Software                          |
+   |------------------+-------------------------------------------|
+   | Christine Bahmer | ArborText                                 |
+   |------------------+-------------------------------------------|
+   | David Bass       | HAL Computer Systems                      |
+   |------------------+-------------------------------------------|
+   | Karl Best        | Adobe                                     |
+   |------------------+-------------------------------------------|
+   | Jon Bosak        | Sun                                       |
+   |------------------+-------------------------------------------|
+   | Mark Buckley     | Microsoft                                 |
+   |------------------+-------------------------------------------|
+   | Dennis Evans     | Sun                                       |
+   |------------------+-------------------------------------------|
+   | Lee Fogal        | Digital                                   |
+   |------------------+-------------------------------------------|
+   | Eduardo Gutentag | Sun                                       |
+   |------------------+-------------------------------------------|
+   | Eve Maler        | ArborText                                 |
+   |------------------+-------------------------------------------|
+   | Murray Maloney   | SoftQuad/Yuri Rubinsky Insight Foundation |
+   |------------------+-------------------------------------------|
+   | Marco Marino     | SMS                                       |
+   |------------------+-------------------------------------------|
+   | Nancy Paisner    | Borland                                   |
+   |------------------+-------------------------------------------|
+   | Sara Mitchell    | SMS                                       |
+   |------------------+-------------------------------------------|
+   | Michael Sabrio   | HP                                        |
+   |------------------+-------------------------------------------|
+   | Tracy Smith      | Novell                                    |
+   |------------------+-------------------------------------------|
+   | Norman Walsh     | O'Reilly & Associates                     |
+   +--------------------------------------------------------------+
+
+     ----------------------------------------------------------------------
+
+DocBook Design Team
+
+   The design team now has four members:
+
+     * Terry Allen, Fujitsu (DTD)
+     * Eve Maler, ArborText (DTD)
+     * Norm Walsh, O'Reilly & Associates (documentation)
+     * Dennis Evans, SunSoft (issue tracking)
+
+     ----------------------------------------------------------------------
+
+Issue Tracking
+
+   Dennis Evans introduced our new issue tracking system. The DocBook issues
+   for this meeting were addressed according to their priority levels. During
+   the meeting, we revised the issue tracking scheme as follows.
+
+   Each new request is classified into one of the following types:
+
+     * Bug; a problem in the SGML application (DTD or SGML declaration) as it
+       exists (BUG)
+     * Request for enhancement; a suggestion or a potential problem of
+       omission (RFE)
+     * Documentation request; a suggestion for or problem in the
+       documentation or sample files (DOC)
+
+   It is then assigned a perceived severity by either the submitter or the
+   design team; this severity is used to determine how soon it is dealt with
+   in Davenport meetings and/or on the mailing list:
+
+     * Severe or harms data; no workaround (1)
+     * Severe or harms data; workaround is unpalatable (2)
+     * Needs a fix; workaround (if any) is acceptable (3)
+     * Discretionary design fix (4)
+     * Unknown (5)
+
+   Once the issue is discussed, the solution is assigned a release priority;
+   if the solution is complex, the highest priority among the parts of the
+   solution is recorded in the priority field:
+
+     * Should generate an immediate patch (1)
+     * Should be fixed; kicks off a major release sooner than normal ( 2)
+     * Should be fixed at the next release, whether it is major or minor ( 3)
+     * Should be "Future Use"-announced at the next major release and fixed
+       in the major release after that (4)
+     * Unknown (5)
+     * The issue needs no fix (0)
+
+   We hope to make the issue-tracking database available at the Davenport
+   archive; currently it is stored in ASCII using a filesystem scheme.
+
+     ----------------------------------------------------------------------
+
+DocBook Issues
+
+   The following issues were discussed. The issue names are the names by
+   which they're known in our tracking system.
+
+   8bit-charset
+           We discussed this after Terry's Unicode talk; see the notes there.
+
+   areaset-coords
+           It is an oversight that the AreaSet element has a Coords
+           attribute; its contained Area elements should be the only elements
+           on which you can specify coordinates. There will be a "Future Use"
+           announcement in V4.0 that the attribute will be removed in V5.0.
+
+           Release priority: 4.
+
+   artheader-in-biblioentry, biblioentry
+           These issues are the same. ArtHeader (to be renamed ArticleInfo)
+           will be dropped in V4.0; its "Future Use" comment doesn't reflect
+           this, and should. The comment should be changed in the next V3.n
+           point release, if there is one, and a notice should be added
+           immediately to the 40chg.txt file as well, with a note about when
+           it was added.
+
+           This needs a release priority.
+
+   choice-list
+           A choice list represents branching instructions. We thought it
+           might be useful to allow a series of items to be presented as
+           mutually exclusive choices (e.g., by outputting the word "OR"
+           between them). It could be instantiated as an attribute value on
+           an ItemizedList or OrderedList. This could open a can of worms
+           because there are lots of other instructions (e.g., all the IETM
+           procedure/step logic).
+
+           Also, Sara Mitchell suggested that VariableLists might also
+           benefit from this logic, because SMS uses a sentence at the
+           beginning of a description of a command option to say that it's
+           mutually exclusive. However, in the world of computer syntax,
+           there are also lots of other logical instructions (repeatable,
+           required-exclusive, optional-exclusive).
+
+           We decided that, indeed, this is too big a can of worms. People
+           can continue doing what they've been doing.
+
+           Release priority: 0.
+
+           This issue may be related to funcsynopsis-description , which
+           suggests a way to store descriptions with synopses so that a
+           VariableList could be generated as one presentation option.
+
+   colophon
+           There's interest in adding a colophon element, so that DocBook can
+           handle the structures of traditional publishing. Author
+           descriptions are a similar structure. Murray will come up with a
+           list of suggested kinds of "back matter" information for us to
+           discuss.
+
+           This issue is still open.
+
+           See also the book-model-rationalization issue.
+
+   condition-att
+           Many DocBook customizations get rid of the effectivity attributes
+           and add a generic NMTOKENS or NAMES "condition" attribute. It's
+           more useful than marked sections, though not as useful as a
+           general condition-management system. Several people said they
+           would find this helpful. We decided to defer a decision until we
+           discuss design principles; this issue is still open.
+
+   contents-att-in-bookinfo-and-setinfo
+           We think the Contents attribute on BookInfo and SetInfo is unused.
+           Terry will ask the list whether anyone is using it, and we'll
+           consider "Future Use"-announcing in V4.0 that we'll remove it in
+           V5.0. This issue is still open.
+
+   element-attlist-param
+           This was already accepted at the previous meeting. Each ELEMENT
+           and ATTLIST declaration should be parameterized with marked
+           sections separately, rather than ELEMENT/ATTLIST pairs being
+           parameterized together. Eduardo points out that some tools
+           (Instant, Fred Dalrymple's tool to turn SGML into troff) don't
+           handle the high number of parameter entities already. We confirmed
+           that will still do the new scheme, but need to test it with tools.
+           Individual users will certainly want to use something like
+           SGMLNORM to flatten/normalize the DTD. Terry will also issue a
+           call for more beta testers. (Note that Fred has been a beta tester
+           in the past; he may be able to modify Instant to handle the
+           increased numbers.)
+
+           Release priority: 3.
+
+   figure-caption
+           We agreed that it's useful to allow captions on both figures as a
+           whole, and informal figures individually (either inside a figure,
+           or untitled in the flow of content). We need to allow the new
+           InformalFigure inside Figure, and allow a new Caption element
+           inside both of them. (See the other issue on graphics below.)
+
+           Release priority: 3.
+
+   fpi-naming
+           The ELEMENTS keyword is used contrary to the letter of 8879 in the
+           formal public identifiers of the DocBook DTD modules; since these
+           modules contain entity declarations and not just element and
+           attribute list declarations, they should use the DTD keyword.
+
+           We decided that the ELEMENTS keyword is more intuitive, and it
+           poses no tools problems. We'll keep it.
+
+           Release priority: 0.
+
+   funcsynopsis-description 
+           The idea raised was that we could store each parameter's
+           description inside a FuncSynopsis somewhere, and then generate
+           pop-ups, definition lists, or whatever else is needed. The group
+           wasn't inclined to add an ability to put explanatory text inside
+           ParamDef, particularly since it has a mixed content model. Much of
+           the benefit (e.g., popping up the description) can be gotten from
+           simply allowing a link from the parameter to its description.
+
+           This issue is still open.
+
+           We will add an issue to explore "universal linking" capability
+           that would allow many more (all?) elements to be "hot." See the
+           universal-linking issue below.
+
+   graphic-inlineequation-inlinegraphic 
+           InlineEquation contains Graphic, even though Graphic usually has a
+           processing expectation of being set off (whereas InlineGraphic has
+           a processing expectation of being inline). In discussing this
+           issue, we ended up dealing with the broader issue of Graphic
+           elements that get used as "informal figures."
+
+           We agreed to create an InformalFigure element that contains an
+           optional Alt element (text alternative) and one (or possibly more)
+           GraphicData elements, which would be empty. GraphicData would have
+           the Entityref etc. attributes, as well as the presentational
+           attributes. (There are other modeling issues; see the tree diagram
+           below.) The intent is to use InformalFigure instead of Graphic at
+           the "component" level, but we're not currently planning to remove
+           Graphic at that level. We have until V4.0 to decide whether we
+           want to "Future Use"-announce that it will be removed for this
+           purpose at V5.0.
+
+           Release priority: 3.
+
+           With respect to InlineEquation, now that we have GraphicData
+           available, we will start allowing the new GraphicData element
+           inside InlineEquation in addition to Graphic; in V4.0 we will
+           "Future Use"-announce that Graphic will be removed from this
+           context in V5.0.
+
+           This needs a release priority.
+
+           Each kind of nongraphic nontext data, such as video, sound,
+           applications, and so on might have its own *Data element, so it
+           could have unique presentational attributes. But this set is an
+           open one, so we'd be continuing to add *Data elements. Also, the
+           issue of how to control the data formats needed for different
+           outputs is still open. Marked sections seem unpalatable for this
+           purpose; maybe MIME would help somehow. There may be progress in
+           the HTML Document Object Model ERB by April or May, which may
+           suggest a solution.
+
+   %indexdivcomponent.mix-usage
+           This parameter entity is not very useful, and makes some
+           unnecessary constraints on index "introductory" content. We agreed
+           to remove it and change the references to it to point to
+           %divcomponent.mix.
+
+           Release priority: 3.
+
+   indexterm-in-flow
+           The issue of surrounding document content with indexing markup was
+           discussed pretty thoroughly on the list. Peter Flynn's approach
+           gets too difficult too fast; he was persuaded of this. We'll keep
+           the method of "invisible" index terms in text.
+
+           Release priority: 0.
+
+           Murray described the way he indexed his new SGML on the WEB book;
+           he wrote an index, complete with entries and subentries, and then
+           linked from the content to the relevant entries. The "authored
+           index" functioned as an indexing database or authority list, and
+           now could be reused for other publications. If it gets added to,
+           additional links to it could be made from SGML on the WEB so that,
+           when it's republished, it can have a more robust index. This
+           approach is different from the one that DocBook's IndexEntry
+           markup supports, since the labels inside an IndexEntry can point
+           to locations in the content, but you can't point from the content
+           to the entries.
+
+           It would be very helpful to have an indexing workshop next time
+           where Murray and Tracy describe their approaches in more detail,
+           and we can explore the various requirements and modeling choices
+           made around printed and online indexes.
+
+           ( SGML on the WEB was published by Prentice Hall PTR on
+           Valentine's Day, 1997, and will be available in stores soon. It
+           was written by Murray Maloney and the late Yuri Rubinsky.)
+
+   info-elements-for-artheader
+           At V3.0, all the *Info and equivalent elements were supposed to
+           have been expanded to contain elements such as Graphic,
+           LegalNotice, SubjectSet, etc. ArtHeader (to be renamed ArticleInfo
+           later) was not expanded in this way, and it should have been.
+           These elements should be added at the next release.
+
+           Release priority: 3.
+
+   limit-att-on-symbol, constant
+           These are the same issue, both arising out of X/Open
+           documentation. We were in error in adding a Class attribute value
+           of Limit onto Symbol; we should "Future Use"-announce this by 4.0
+           for removal in 5.0. (Terry will first ask the list for help on
+           understanding Limit on Symbol, in case we're missing something.)
+
+           Release priority: 4.
+
+           At the next release, we should burst out Constant as its own
+           element, instead of just a Class value on SystemItem (which value
+           should be removed in 5.0). Constant should offer a Class value of
+           Limit.
+
+           Release priority: 3.
+
+   linkend-for-lotentry
+           We should add a Linkend attribute to LOTentry, to synchronize the
+           model with TOCs. Augmented DocBook instances with filled-out TOCs
+           and indexes may now become more popular, if SGML on the Web
+           increases.
+
+           Release priority: 3.
+
+           Bob Lockwood has been creating an index augmentation tool; perhaps
+           we can get him to share the code and/or create a similar tool for
+           TOCs and LOTs.
+
+   msgtext-content
+           Currently, the MsgText element contains component.mix, which is
+           far too broad a content model. During the discussion of this
+           issue, it was suggested that MsgSet as a whole would be used by
+           many more DocBook users if it were simplified dramatically.
+           Ironically, Novell (which designed MsgSet originally) subsets it
+           internally. SunSoft also subsets it. Terry will ask for examples
+           of the subsets.
+
+           The specific issue of MsgText content is still open.
+
+   nav.class-in-book-components
+           The nav.class parameter entity isn't allowed with the same freedom
+           in book components as it is in sections. To date, DocBook assumes
+           that the input order of book components is the desired output
+           order; it does not use a database approach. It was suggested that
+           we maximally broaden all these content models; Eve suggested we be
+           wary of broadening the model and then needing to constrain it
+           again (making a backwards incompatibility) later. Terry will
+           propose a solution to rationalize book component models in concert
+           with the book-model-rationalization issue.
+
+           This issue is still open.
+
+   oo-inlines
+           ClassName is already available; is it appropriate to use for
+           object-oriented classes? If so, do we also need MethodName? Do we
+           need specialized kinds of synopses?
+
+           We're going to table this for now, and discuss the whole issue of
+           object-oriented markup next time. Somebody needs to shepherd this
+           (perhaps Norm?).
+
+           This issue is still open.
+
+   table-formatting
+           Digital controls the point size of table text and the positioning
+           (whether it moves into the gutter reserved for hanging heads) by
+           means of a single Width attribute with Normal, Wide, and Maximum
+           values. Others might have different ways to control table
+           formatting, and they might interact with pgwide (which presumes
+           that you're using multi-column output when you use this attribute)
+           in different ways. Thus, this isn't a good candidate for putting
+           directly into DocBook. We need to advise people how/where they can
+           customize the table module (tbl.table.att) to add any necessary
+           style controls.
+
+           Type: DOC. Severity: 3.
+
+           In the course of reviewing this issue, we discovered that the SGML
+           Open CALS table module has a bug: the ATTLIST declaration for
+           tables mentions "table" explicitly, rather than referencing
+           tbl.table.name. Eve will report this.
+
+   title-in-article
+           All other book component elements must have a Title outside of
+           their *Info containers; Article is an exception. We want to make
+           change this situation to allow optional div.title.content before
+           the ArtHeader/ArticleInfo at the next release (the optionality
+           follows the precedent of Book, which is similar to Article in that
+           they can both be delivered standalone).
+
+           We're using the "book" order (title as the first subelement)
+           rather than the "section" order (*Info as the optional first
+           subelement). We may want to change the order of section metadata
+           to match the Book/Article order. (We recalled that the reason for
+           this chosen order was purely software driven.)
+
+           Release priority: 3.
+
+           We also considered whether articles and all other divisions should
+           allow subtitles along with titles, outside the *Info element. We
+           agreed. The subtitle should be optional, should be between the
+           Title and TitleAbbrev, and should have the same content model as
+           Title. This should happen at the next release. See the figure
+           below.
+
+           Release priority: 3.
+
+   ubiquitous-removal
+           Currently, it's impossible to subset out all the elements that
+           happen to occur in ubiq.mix (IndexTerm and BeginPage) without
+           modifying every ELEMENT declaration that uses this in an inclusion
+           or exclusion. We decided to add a level of parameter entity for
+           "ubiquitous inclusions/exclusions" that references ubiq.mix and
+           actually contains the plus/minus sign and the parentheses. If you
+           redefine the new level of parameter entity as null, you can easily
+           subset out the ubiquitous elements. This change should be done at
+           the next release.
+
+           Release priority: 3.
+
+   underscore
+           We discussed this after Terry's Unicode talk; see the notes there.
+
+   varname-inline
+           At the last meeting, we decided to add a VarName element for the
+           name of a variable (not its value). We confirmed that our decision
+           was correct. The documentation should clearly state that this
+           isn't the "name that varies"; it's the handle you use to set or
+           get values.
+
+           Release priority: 3.
+
+   xml-compat
+           The most serious barrier to making DocBook XML-compatible is its
+           SGML exceptions (inclusions and exclusions on content models).
+           There are many other minor issues, which probably could be handled
+           easily; Eve will produce a list of the issues for the next
+           meeting, some of which we may want to clean up in DocBook to help
+           peole serve DocBook "XML" on the Web without its DTD.
+
+           Mark had earlier suggested that Davenport produce a new SGML/XML
+           application. Jon suggests that one way to go is a DocBook Lite
+           (subset) or DocBook Web (Web-enabled) application (DuckBook =
+           DocBook for the Web[bed]?). Some desiderata: Simpler, smaller,
+           easier to understand; has Web forms, XML links, HTMLish objects.
+           Terry will write up a design-goals strawman for the sponsors to
+           consider.
+
+           One possibility: get rid of or parameterize all domain-specific
+           markup, and provide a good general book model for the Web that
+           allows others to add their own domain-specific markup. Murray
+           imagines this as an architecture off which you can hang your own
+           Roles (much as HiP does for HTML Classes). Mark concurs and
+           suggests that you can really exploit object-oriented applications
+           with this.
+
+           Murray says that the model of this would not be DocBook
+           simplified, but HTML made robust; we would expect people to try to
+           abuse the model and to do "wrong" things, so we don't need to
+           constrain the model to prevent it.
+
+           The sponsors will discuss how to structure this effort and how to
+           announce it and ask for interest levels. Eve has offered (to the
+           extent possible) her tools and methodology for this proto-project.
+
+           Release priority: 5.
+
+   The following new issues were raised. We at least assigned an issue type
+   and a severity level to these issues.
+
+   article-as-faq
+           This comes from Peter Flynn, when he created the XML FAQ. We
+           agreed to add FAQ as a Class value to Article.
+
+           Type: RFE. Severity: 3. Release priority: 3.
+
+   base-in-url
+           Type: BUG. Severity: 1.
+
+   book-model-rationalization 
+           We need to clean up the content model of books, to simplify it and
+           make it less prescriptive. (At this time, we can then add support
+           for colophons and whatever else.) We need to do this work at the
+           next meeting.
+
+           Type: RFE. Severity: 4
+
+   browse-seqs
+           Type: RFE. Severity: 3.
+
+   citelink
+           Type: RFE. Severity: 3.
+
+   glossterm-in-text
+           Type: BUG. Severity: 5.
+
+   indexterm-in-glossary
+           Type: BUG. Severity: 2.
+
+   indexterm-storage
+           Type: BUG. Severity: 4.
+
+   inline-procedures
+           Type: RFE. Severity: 3.
+
+   margin-graphics
+           Type: RFE. Severity: 3.
+
+   nway-linking
+           Type: RFE. Severity: 2.
+
+   pgwide-on-figure
+           Type: RFE. Severity: 3.
+
+   qanda-set
+           Type: RFE. Severity: 3.
+
+   related-refs-in-metainfo
+           Type: RFE. Severity: 3.
+
+   url-in-email
+           Type: RFE. Severity: 3.
+
+   universal-linking 
+           If we add a generic Linkend ability to all elements, in most cases
+           there will be no processing expectations; a relationship among the
+           linked parts will simply be asserted. (Generic Uniform Linking
+           Protocol = GULP?) Certainly for technical inlines, this ability
+           would be useful, and is even weakly allowed already in the form of
+           MoreInfo.
+
+           This issue came up when we discussed allowing Parameters in
+           FuncSynopsis elements to point to their VarListEntry descriptions.
+
+           Type: RFE. Severity: 5.
+
+     ----------------------------------------------------------------------
+
+Old-Timers Reminisce
+
+   Guess you had to be there...
+
+     ----------------------------------------------------------------------
+
+Norm Walsh (O'Reilly & Associates) on DTDparse
+
+   To be able to produce DocBook documentation, he wanted not to maintain
+   content models separately from the real DTD. A two-step process is used to
+   integrate documentation (stored outside the DTD) with the content models
+   and other DTD fragments taken directly from the DTD. The first program in
+   the process resolves parameter entities and produces a flat "database"
+   representation of the DTD. The second program queries DTD details and
+   produces either DocBook RefEntry elements ("man pages") or an HTML tree.
+
+   You can see the HTML version at the Davenport archive (
+   http://www.ora.com/davenport/). You can choose from an alphabetical list
+   of elements or of parameter entities. You can see an element in one of
+   three views: "DTD element view" (with original parameter entity
+   references), "user element view" (with all entity references expanded),
+   and "tree view" (as an outline of the element's children in alphabetical
+   order).
+
+   DTDparse can be retrieved from http://www.ora.com/homepages/dtdparse/ .
+   HTML versions of TEI-Lite, HTML, and the ISO 12083 DTDs can also be found
+   on these pages.
+
+     ----------------------------------------------------------------------
+
+Christine Bahmer (ArborText) on DTDs for DTDs
+
+   She surveyed five "DTDs for DTDs" and one technique. She was tasked by
+   ArborText to look into these technologies for internal purposes, but
+   Davenport has begun looking at the same problem specifically for DocBook.
+
+   Three Forks technique from Terry Allen
+           This is Terry Allen's idea for storing DTD fragments (regular 8879
+           syntax) and documentation fragments (marked up in SGML) in the
+           same SGML document, and using marked sections to manage which half
+           is "turned on" at any one time.
+
+           (Terry will make the relevant example files available online. It's
+           named for the three-forks icon that appears in restaurant guides.
+           It refers to the fact that this technique is not an insertion of
+           the DTD into the documentation, or an insertion of the
+           documentation into the DTD, but a true merging of the two; it
+           takes the "third fork.")
+
+   DSD DTD from MGML
+           This is a very simple DTD for DTDs developed by Tim Bray. His
+           Minimal Generalized Markup Language was one of the precursors to
+           the XML subset of SGML, though the DSD design hasn't been adopted
+           by XML.
+
+   OmniMark DTD
+           This is a DTD for encoding DTDs in an SGML-document form so that
+           OmniMark can be used to process DTD statistics into WinHelp
+           topics. You take a regular DTD, process it into this form, and
+           then produce the help modules.
+
+   DPP DTD from TEI
+           This DTD encapsulates a very robust set of DTD constructs. Marked
+           sections allow you to turn off DTD constructs that are tied to
+           optional features (e.g., ranked elements). Its purpose is to allow
+           DTD pre-processing.
+
+   Declaration Set DTD from Passage (proprietary)
+           This was written to help the DTDs generated from Declaration Set
+           documents to adhere to the internal coding standards in the
+           company.
+
+   DTDoc DTD from IBM
+           Wayne Wohler wrote this DTD to reflect just about every production
+           in 8879.
+
+   We might have various requirements for encoding DTDs and documentation in
+   a more structured way:
+
+     * Authoring and managing DTD "document objects" in an SGML-aware
+       environment, to use the same tool as for regular documents
+     * Interchange of processing expectations
+     * Subsetting the documentation at the same time as subsetting a DTD
+     * Synchronizing DTD comments with all the pieces of documentation
+     * Creating and managing formatting/processing specifications
+
+   The audience liked Three Forks best; the true DTDs for DTDs tended to be
+   very verbose and most didn't provide the flexibility that any "real DTD"
+   offers. However, to make Three Forks useful, some structure would start to
+   creep in; for example, to add descriptions for individual attributes in an
+   ATTLIST declaration, you'd want to intersperse marked-up text in the
+   ATTLIST declaration, which suggests adding structured markup of some kind
+   for the obvious pieces of such a declaration.
+
+   We need to explore this issue more thoroughly.
+
+     ----------------------------------------------------------------------
+
+Terry Allen (Fujitsu) on Unicode for DocBook
+
+   (See Terry's presentation at
+   http://www.ora.com/davenport/meetnotes/feb97.unicode.html.)
+
+   Terry proposes that we possibly offer a set of likely SGML declarations
+   that use Rick Jeliffe's ERCS mechanism for "masking" the code points you
+   want/don't want. He specifically doesn't want to offer full 10646.
+
+   Murray suggests that we give people "the one way" to do extensive
+   character sets: that is, full 10646. This gives maximum interoperability.
+   Then, for people who want to subset it, the ERCS mechanism is there.
+
+   Eve points out that DocBook is just a DTD; DocBook "conformance" will
+   always allow the SGML declaration to be modified, especially since some
+   characteristics of the SGML declaration are directly dependent on the
+   instance and not the DTD. There are two different directions we can take:
+
+     * Agree that our "reference" SGML declaration is behind the times
+       because of the increasing tool support for extended character sets,
+       and upgrade it somehow to be more useful out of the box
+     * Agree that, as computer documentation producers, we need a general
+       solution for using and/or subsetting 10646 and/or Unicode, decide on a
+       preferred method or standard of dealing with the problem, and having
+       Davenport endorse it independently of DocBook
+
+   We provisionally agreed to provide our present SGML declaration and a full
+   10646 declaration, plus at least one other using Rick's method as an
+   example, with "advisory" wording. An issue: Do any tools support Rick's
+   method?
+
+   Rick's method also extended the syntax character set, so that (e.g.) you
+   can use Arabic ligatures as name characters. (Note that this would be
+   backwards incompatible, in a sense, if it invalidates short references
+   that DocBook users have set up, assuming that the users must use the new
+   declaration and not the original DocBook one. However, anyone using
+   shortref is likely to be a power user and can best make their own decision
+   about what to do.) Using the extended SGML declaration would allow
+   underscores in names. An issue: Has Rick accounted for potential conflicts
+   in what can be a name character? E.g., quotes and angle brackets shouldn't
+   be allowed.
+
+   Mark suggests that we "keep" the shortref feature but providing a null set
+   of shortref delimiters. (We believe this is the only way to turn in off;
+   it has no yes/no toggle.)
+
+     ----------------------------------------------------------------------
+
+Murray Maloney (SoftQuad/Yuri Rubinsky Insight Foundation) on Web accessibility
+
+   A meeting at the White House about accessibility resulted in the setting
+   up of an international accessibility committee housed at the W3C. WGBH and
+   others (check with Murray) were present. W3C has approached Mike Paciello
+   (executive director of the Insight Foundation) to head this committee. The
+   committee is now searching for funds. There will be technology
+   development, educational programs, etc. The Digital technologist who
+   developed DECtalk will be involved.
+
+   Murray Altheim (now of Sun) has written a user guide on the ICADD
+   attributes.
+
+   SoftQuad has a new product called a "visual dynamic keyboard." It's
+   similar to a DLL; it can make any application have a virtual keyboard
+   on-screen, which is useful for disabled people, as well as certain
+   applications such as WebTV. SoftQuad also acquires Alpha Software of
+   Burlington, MA, which has speech recognition software and other
+   accessibility software.
+
+   The Yuri Rubinsky Insight Foundation is looking for donations. You can
+   find out about making contributions, tax status, and so on at
+   www.yuri.org.
+
+     ----------------------------------------------------------------------
+
+Eve Maler (ArborText) on DocBook design principles
+
+   We provisionally decided on the following design principles, pending
+   sponsor approval.
+
+   Backwards-incompatible changes to processing expectations
+
+           Processing expectations should be normative, and we should
+           articulate what expectations we have. We should use standards
+           terminology (must, may, etc.). We should never add markup without
+           documenting any minimum expectations. By V4.0, we should review
+           all expectations and clarify as necessary, and thereafter apply
+           our syntactic standard to backwards-incompatible expectation
+           changes. ("Quality equals experience minus expectation.")
+
+   Documenting, not modeling, software
+
+           We should document software, not model it. This is due to the
+           sheer size of any effort to model software, the limited value of
+           the result, and questions about "which software" to model. (Any
+           attempt to define highly specific structures will always favor
+           some platforms or products over others.)
+
+   Timeliness of response to requests
+
+           We can't promise any particular response time on an answer to a
+           request; we can promise it will be recorded and considered at the
+           next group meeting, and we'll respond with our assessment of its
+           severity and deal with it accordingly.
+
+   Criteria for removing markup
+
+           (The DTD should mention the Web site, not the list, and should
+           mention that list info is at the Web site.) We may have many
+           reasons for markup removal:
+
+              * Design mistakes (e.g. Coords on AreaSet)
+              * Confusion over the purpose of the markup (e.g. Limit on
+                Symbol)
+              * Adjustments due to experience (Class attributes vs. inline
+                elements)
+              * Elegance and streamlining (e.g. Contents attribute on
+                SetInfo)
+              * Evolution of DTD usage (e.g. hardcoding list numbers in the
+                old days)
+              * Evolution of tools (e.g. XML-Link)
+
+   Requirements on submissions for new markup requests
+
+           We need a verbal description of the problem and the desired
+           change, an example of the content that would be involved, the
+           perceived severtiy, and if possible a proposed solution with any
+           processing expectations.
+
+           We may want to consider putting together a submission form.
+
+           (We may also want to create a DocBook interchange checklist
+           document that people can use as a template.)
+
+   One issue we discussed wasn't a principle in and of itself, but we wanted
+   to capture it as we go forward with the discussions: The DocBook
+   maintenance process has been quite inclusive, and requested changes get
+   accepted more often than not. However, users shouldn't expect that the
+   DocBook DTD will expand forever or that you have a "right" to use the
+   original DocBook FPI no matter what your information requirements are. In
+   many cases, you may need to create a variant to get the desired effect.
+   Assessment of the value of requested changes is subjective, based on
+   experience of attendees and sponsors; some factors are universality,
+   modernity, and immediate usefulness. There are many others.
+
+     ----------------------------------------------------------------------
+
+Joint review of standards
+
+  HTTP
+
+   Contributed by Murray Maloney, Jon Bosak, and Terry Allen:
+
+   The IETF has been working on HTTP 1.1 and have done some performance
+   testing. There has been a 3-4 times improvement in speed using the Apache
+   server. It's not stateless anymore; it has persistent connections.
+
+   There's been some discussion about how 1.0 and 1.1 servers should
+   interact. There will be the usual uncomfortable period until 1.1 "critical
+   mass" has been reached in the marketplace. Some people are saying that
+   HTTP 1.1 will never be deployed because it's too ambitious.
+
+  WebDAV (Distributed Authoring and Versioning)
+
+   Contributed by Terry Allen:
+
+   It started as an independent working group of vendors at the Boston WWW
+   conference on Developers' Day, working on distributed authoring and
+   versioning over the Web. Microsoft is part of this effort.
+
+   Terry notes that this group is doing many of the same things that the W3C
+   SGML group will need to address or endorse. The mailing list is
+   w3c-dist-auth@w3.org .
+
+  HTML
+
+   Contributed by Murray Maloney:
+
+   There are now three working groups related to HTML:
+
+     * The HTML WG. HTML 3.2 is officially out; the ERB is now working on
+       HTML 4.0. W3C now has working groups, interest groups, and
+       coordination groups; it no longer supposedly has editorial review
+       boards (ERBs) (except in the case of the SGML board!).
+     * The Cascading Style Sheets (CSS) WG is now chaired by Chris Lilley.
+       There's been some discussion of separating the work out into style
+       properties and syntaxes. This would enable JSS (the JavaScript Style
+       Sheet mechanism) and DSSSL to respond in the Web space. This group is
+       working on a positioning specification, which enables displaying
+       elements relative to screen geometry or other elements. There are
+       several other drafts in this WG and in the HTML WG being worked on for
+       4.0.
+     * The Document Object Model (DOM) WG is chaired by Lauren Wood of
+       SoftQuad and is being technically driven by Microsoft. The conceptual
+       model involves building groves and so on, even if "grove" isn't the
+       term used. Having such a model makes it easier to make a document
+       "programmable" (e.g., with Java).
+
+   Contributed by Jon Bosak:
+
+   WG8 felt it was necessary to do an ISO version of HTML. The original idea
+   was to standardize on a snapshot of HTML to satisfy the standards
+   compliance requirements of some organizations, but now some people are
+   suggesting extensions to the DTD in the ISO work. This is problematic.
+
+  XML
+
+   Contributed by Jon Bosak:
+
+   The work being done in the W3C SGML on the Web WG/ERB is proceeding in
+   three phases:
+
+    1. XML-Syntax
+
+    2. XML-Link (they're in the middle of this phase; the draft spec will be
+       delivered at the WWW conference being held in April in Santa Clara,
+       CA)
+
+    3. XML-Style
+
+   The WG/ERB is working with WG8 to produce an ISO 8879 technical
+   corrigendum to fix some problems that are standing in the way of XML
+   deployment.
+
+   There will be an XML workshop at the WWW conference, which will result in
+   a report on the last day, Developers' Day. There will also be a three-hour
+   Thursday evening session for developers of all technologies for structured
+   documents. This will include, e.g., developers of XML parsers and Peter
+   Murray-Rust, who's working on the XML-compatible Chemical Markup Language
+   and Java support for it.
+
+   There is a new mailing list for people working on XML implementation
+   issues. It is run out of the University of Nottingham and run by Peter
+   Murray-Rust. You can subscribe by sending a message containing subscribe
+   xml-dev name@address to majordomo@ic.ac.uk .
+
+  DSSSL
+
+   Jon Bosak is looking into helping DSSSL produce PostScript in batch mode.
+   It's been suggested that TeX is the way to do this.
+
+  HyTime
+
+   The HyTime technical corrigendum may or may not be finished; it has not
+   been released yet.
+
+  ISO Entity Sets
+
+   Quasi-official versions of the ISO 8879 "informative" character entity
+   sets can be found at http://www.ornl.gov/sgml/wg8/document/isolat1.gml
+   etc.
+
+     ----------------------------------------------------------------------
+
+Novell HelpWise demonstration
+
+   Tracy Smith demonstrated this system.
+
+   The problem they were trying to solve: 5000-7000 help topics with 5-15
+   different writers; coordination was difficult. Moving to online meant
+   authoring and managing lots of links.
+
+   They chose FrameMaker+SGML and Oracle. They wanted to get multiple
+   outputs, but SGML looked way too expensive for the result. They tried to
+   minimize the learning curve and discomfort of writers.
+
+   They break up SGML files into "topics" (same level as a DocBook Sect1).
+   They pull out metadata and link information into the database, and point
+   to it from the SGML file. They currently have about 12 different basic
+   topic types (glossary term, procedure, etc.). Topics have different
+   templates associated with them.
+
+   The tool stores and manages links of many kinds (to graphics, across
+   topics, etc.). The audience was very impressed with the interface (link
+   manager, etc.) and wanted to know if Novell is selling the system; it
+   isn't. The system was developed by two people in seven months.
+
+     ----------------------------------------------------------------------
+
+SoftQuad HiP demonstration
+
+   Murray Maloney demonstrated the HiP (HoTMetaL Intranet Publisher) product,
+   made available around Christmas 1996. It has a viewer (a separate plug-in
+   for each of Navigator and Internet Explorer), an editor (based on
+   HoTMetaL), and an information manager. The information manager has a
+   "hyperbolic" view of a home page and its associated pages and external
+   links. You can move the display around in a 3D fashion.
+
+   HiP uses CLASS attributes in HTML heavily to let you create your own
+   pseudo-elements (called "user-defined extensions"). In this way, you can
+   manipulate the information in more sophisticated ways. The editor hides
+   that these elements are originally DIV, or TD, or whatever; you edit them,
+   search on them, format them, and build TOCs from them, as if the class
+   value were directly the element name.
+
+     ----------------------------------------------------------------------
+
+Fujitsu OLIAS demonstration
+
+   Mr. Kamiya from Fujitsu demonstrated the capabilities of the latest
+   version of OLIAS. For example, it allows searching that can be scoped to
+   subsets of the entire documentation set.

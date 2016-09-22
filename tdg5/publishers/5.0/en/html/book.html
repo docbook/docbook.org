@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.3.6), see www.w3.org" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>book</title>
+<link rel="stylesheet" type="text/css" href="css/defguide.css" />
+<link rel="icon" href="figs/web/publishers-icon.png" type="image/png" />
+<script type="text/javascript" src="js/refentry.js">
+</script>
+</head>
+<body>
+<div class="navheader">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" summary="Navigation table">
+<tr>
+<td align="left">&#160;<a title="DocBook Publishers: The Definitive Guide" href="docbook.html"><img src="figs/web/nav/home-publishers.png" alt="Home" border="0" /></a>&#160;<a href="blockquote.html" title="blockquote"><img src="figs/web/nav/prev.png" alt="Prev" border="0" /></a>&#160;<a title="DocBook Element Reference" href="ref-elements.html"><img src="figs/web/nav/up.png" alt="Up" border="0" /></a>&#160;<a title="bridgehead" href="bridgehead.html"><img src="figs/web/nav/next.png" alt="Next" border=
+"0" /></a></td>
+<td align="right"><i>DocBook Publishers: The Definitive Guide</i> (Version <a href="ch00-online.html">1.0.0 for DocBook Publishers V1.0</a>)</td>
+</tr>
+</table>
+</div>
+<div class="refentry" id="element.db.book"><a class="indexterm" name="element.db.book.1" id="element.db.book.1"></a>
+<div class="refnamediv">
+<h2>book</h2>
+<p><span class="refname">book</span>&#160;—&#160;A book.</p>
+</div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<div class="element-synopsis">
+<ul>
+<li>Sequence of:
+<div class="element-synopsis">
+<ul>
+<li>One of:
+<div class="element-synopsis">
+<ul>
+<li>Sequence of:
+<div class="element-synopsis">
+<ul>
+<li>Interleave of:
+<div class="element-synopsis">
+<ul>
+<li><a href="title.html"><tt class="tag-element">title</tt></a>?</li>
+<li><a href="titleabbrev.html"><tt class="tag-element">titleabbrev</tt></a>?</li>
+<li><a href="subtitle.html"><tt class="tag-element">subtitle</tt></a>?</li>
+</ul>
+</div>
+</li>
+<li><a href="titleforbidden.info.html"><tt class="tag-element">info</tt></a>?&#160;<span class="pattern">(db.titleforbidden.info)</span></li>
+</ul>
+</div>
+</li>
+<li><a href="info.html"><tt class="tag-element">info</tt></a>?&#160;<span class="pattern">(db.info)</span></li>
+</ul>
+</div>
+</li>
+<li>One of:
+<div class="element-synopsis">
+<ul>
+<li>Zero or more of:
+<div class="element-synopsis">
+<ul>
+<li><a href="acknowledgements.html"><tt class="tag-element">acknowledgements</tt></a></li>
+<li><a href="appendix.html"><tt class="tag-element">appendix</tt></a></li>
+<li><a href="article.html"><tt class="tag-element">article</tt></a></li>
+<li><a href="bibliography.html"><tt class="tag-element">bibliography</tt></a></li>
+<li><a href="chapter.html"><tt class="tag-element">chapter</tt></a></li>
+<li><a href="colophon.html"><tt class="tag-element">colophon</tt></a></li>
+<li><a href="dedication.html"><tt class="tag-element">dedication</tt></a></li>
+<li><a href="glossary.html"><tt class="tag-element">glossary</tt></a></li>
+<li><a href="index.html"><tt class="tag-element">index</tt></a></li>
+<li><a href="part.html"><tt class="tag-element">part</tt></a></li>
+<li><a href="preface.html"><tt class="tag-element">preface</tt></a></li>
+<li><a href="toc.html"><tt class="tag-element">toc</tt></a></li>
+</ul>
+</div>
+</li>
+<li>Zero or more of:
+<div class="element-synopsis">
+<ul>
+<li><a href="topic.html"><tt class="tag-element">topic</tt></a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>Attributes</h3>
+</div>
+<p><a class="brokenlink" href="#common.attributes">Common attributes</a> and <a class="brokenlink" href="#common.linking.attributes">common linking attributes</a>.</p>
+<p>Additional attributes:</p>
+<div class="element-synopsis">
+<ul>
+<li>label</li>
+<li>status</li>
+</ul>
+</div>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>Additional Constraints</h3>
+</div>
+<div class="element-synopsis"></div>
+</div>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>Description</h3>
+</div>
+<p>A complete book. This is probably the most common document starting point in DocBook documents. The content model of <a href="book.html"><tt class="tag-element">book</tt></a> was made dramatically less restrictive in DocBook <span class="acronym">V3.1</span>.</p>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Processing expectations</h4>
+</div>
+<p>Formatted as a displayed block. Generally causes a forced page break, restarts page numbering, and may generate additional front and back matter (e.g., tables of contents and indexes) automatically. In a <a href="set.html"><tt class="tag-element">set</tt></a>, <a href="book.html"><tt class="tag-element">book</tt></a> almost always begins on the next available recto page.</p>
+<p>The input order of major components is taken to be the desired output order.</p>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Attributes</h4>
+</div>
+<p><a class="brokenlink" href="#common.attributes">Common attributes</a> and <a class="brokenlink" href="#common.linking.attributes">common linking attributes</a>.</p>
+<div class="variablelist">
+<dl>
+<dt id="element.db.book.6.4.3.1.1" class="attname">label</dt>
+<dd>
+<p>Specifies an identifying string for presentation purposes</p>
+</dd>
+<dt id="element.db.book.6.4.3.2.1" class="attname">status</dt>
+<dd>
+<p>Identifies the editorial or publication status of the element on which it occurs</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Parents</h4>
+</div>
+<p>These elements contain <a href="book.html"><tt class="tag-element">book</tt></a>: <span class="simplelist"><span class="member"><a href="set.html"><tt class="tag-element">set</tt></a></span></span>.</p>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h4>Children</h4>
+</div>
+<p>The following elements occur in book: <span class="simplelist"><span class="member"><a href="acknowledgements.html"><tt class="tag-element">acknowledgements</tt></a></span>, <span class="member"><a href="appendix.html"><tt class="tag-element">appendix</tt></a></span>, <span class="member"><a href="article.html"><tt class="tag-element">article</tt></a></span>, <span class="member"><a href="bibliography.html"><tt class="tag-element">bibliography</tt></a></span>, <span class="member"><a href=
+"chapter.html"><tt class="tag-element">chapter</tt></a></span>, <span class="member"><a href="colophon.html"><tt class="tag-element">colophon</tt></a></span>, <span class="member"><a href="dedication.html"><tt class="tag-element">dedication</tt></a></span>, <span class="member"><a href="glossary.html"><tt class="tag-element">glossary</tt></a></span>, <span class="member"><a href="index.html"><tt class="tag-element">index</tt></a></span>, <span class="member"><a href="info.html"><tt class=
+"tag-element">info</tt></a>&#160;<span class="pattern">(db.info)</span></span>, <span class="member"><a href="titleforbidden.info.html"><tt class="tag-element">info</tt></a>&#160;<span class="pattern">(db.titleforbidden.info)</span></span>, <span class="member"><a href="part.html"><tt class="tag-element">part</tt></a></span>, <span class="member"><a href="preface.html"><tt class="tag-element">preface</tt></a></span>, <span class="member"><a href="subtitle.html"><tt class=
+"tag-element">subtitle</tt></a></span>, <span class="member"><a href="title.html"><tt class="tag-element">title</tt></a></span>, <span class="member"><a href="titleabbrev.html"><tt class="tag-element">titleabbrev</tt></a></span>, <span class="member"><a href="toc.html"><tt class="tag-element">toc</tt></a></span>, <span class="member"><a href="topic.html"><tt class="tag-element">topic</tt></a></span></span>.</p>
+</div>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>See Also</h3>
+</div>
+<p><span class="simplelist"><span class="member"><a href="appendix.html"><tt class="tag-element">appendix</tt></a></span>, <span class="member"><a href="article.html"><tt class="tag-element">article</tt></a></span>, <span class="member"><a href="chapter.html"><tt class="tag-element">chapter</tt></a></span>, <span class="member"><a href="colophon.html"><tt class="tag-element">colophon</tt></a></span>, <span class="member"><a href="dedication.html"><tt class="tag-element">dedication</tt></a></span>,
+<span class="member"><a href="part.html"><tt class="tag-element">part</tt></a></span>, <span class="member"><a href="partintro.html"><tt class="tag-element">partintro</tt></a></span>, <span class="member"><a href="preface.html"><tt class="tag-element">preface</tt></a></span>, <span class="member"><a href="set.html"><tt class="tag-element">set</tt></a></span></span></p>
+</div>
+<div class="refsection">
+<div class="refsection-titlepage">
+<h3>Examples</h3>
+</div>
+<div class="programlisting">
+<pre>
+<span class="linenumber">  1</span><span class="linenumber-separator"> </span>&lt;book xmlns='http://docbook.org/ns/docbook'&gt;
+<span class="linenumber">  2</span><span class="linenumber-separator"> </span>&lt;title&gt;An Example Book&lt;/title&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;titleabbrev&gt;Example&lt;/titleabbrev&gt;
+<span class="linenumber">  4</span><span class="linenumber-separator"> </span>&lt;info&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>  &lt;legalnotice&gt;&lt;para&gt;No notice is required.&lt;/para&gt;&lt;/legalnotice&gt;
+<span class="linenumber">  6</span><span class="linenumber-separator"> </span>  &lt;author&gt;&lt;personname&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>    &lt;firstname&gt;Norman&lt;/firstname&gt;&lt;surname&gt;Walsh&lt;/surname&gt;
+<span class="linenumber">  8</span><span class="linenumber-separator"> </span>  &lt;/personname&gt;&lt;/author&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;/info&gt;
+<span class="linenumber"> 10</span><span class="linenumber-separator"> </span>&lt;dedication&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;para&gt;This book is dedicated to you.
+<span class="linenumber"> 12</span><span class="linenumber-separator"> </span>&lt;/para&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;/dedication&gt;
+<span class="linenumber"> 14</span><span class="linenumber-separator"> </span>&lt;preface&gt;&lt;title&gt;Foreword&lt;/title&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;para&gt;Some content is always required.
+<span class="linenumber"> 16</span><span class="linenumber-separator"> </span>&lt;/para&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;/preface&gt;
+<span class="linenumber"> 18</span><span class="linenumber-separator"> </span>&lt;chapter&gt;&lt;title&gt;A Chapter&lt;/title&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;para&gt;Content is required in chapters too.
+<span class="linenumber"> 20</span><span class="linenumber-separator"> </span>&lt;/para&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;/chapter&gt;
+<span class="linenumber"> 22</span><span class="linenumber-separator"> </span>&lt;appendix&gt;&lt;title&gt;Optional Appendix&lt;/title&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;para&gt;Appendixes are optional.
+<span class="linenumber"> 24</span><span class="linenumber-separator"> </span>&lt;/para&gt;
+<span class="linenumber">   </span><span class="linenumber-separator"> </span>&lt;/appendix&gt;
+<span class="linenumber"> 26</span><span class="linenumber-separator"> </span>&lt;/book&gt;
+</pre></div>
+</div>
+</div>
+<div class="navfooter">
+<table width="100%" summary="Navigation table">
+<tr>
+<td width="40%" align="left"><a title="blockquote" href="blockquote.html"><img src="figs/web/nav/prev.png" alt="Prev" border="0" /></a>&#160;</td>
+<td width="20%" align="center"><a title="DocBook Publishers: The Definitive Guide" href="docbook.html"><img src="figs/web/nav/home-publishers.png" alt="Home" border="0" /></a></td>
+<td width="40%" align="right">&#160;<a title="bridgehead" href="bridgehead.html"><img src="figs/web/nav/next.png" alt="Next" border="0" /></a></td>
+</tr>
+<tr>
+<td width="40%" align="left">blockquote&#160;</td>
+<td width="20%" align="center"><a title="DocBook Element Reference" href="ref-elements.html"><img src="figs/web/nav/up.png" alt="Up" border="0" /></a></td>
+<td width="40%" align="right">&#160;bridgehead</td>
+</tr>
+</table>
+</div>
+<div class="infofooter">Last revised by Norman Walsh on 6 Jun 2011 <span class="githash">(git hash: 6ffcc7640bbc5f852a318e452c9f210f03292cb9)</span></div>
+<div class="copyrightfooter">
+<p><a href="dbcpyright.html">Copyright</a> © 2011 Norman Walsh.</p>
+</div>
+</body>
+</html>

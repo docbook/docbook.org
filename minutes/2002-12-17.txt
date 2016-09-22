@@ -1,0 +1,166 @@
+| DocBook Technical Committee Meeting Minutes: 17 Dec 2002
+| ========================================================
+|
+| The DocBook Technical Committee will met on Tuesday, 17 December 2002
+| at 01:00p EST (10:00a PST, 18:00GMT, 19:00CET, 03:00JST+)
+| for 90 minutes.
+|
+| Agenda
+|
+| 1. Roll call
+
+  Steve Cogorno
+  Dennis Evans
+  Paul Grosso
+  Nancy Harrison
+  Scott Hudson
+  Bob Stayton
+  Norman Walsh
+
+Regrets:
+
+  Dick Hamilton
+
+Absent:
+
+  Sabine Ocker
+  Michael Smith
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+Accepted.
+
+| 4. Review of open action items {5 min}
+|
+|    a. Norm to follow-up on RFE 562343: <packagename> element
+
+Continue.
+
+|    b. Norm to post more detail about the PE reorganization with some documentation
+
+Abandoned in favor of Trang.
+
+ACTION: Norm to review using Trang to generate DTDs and W3C XML Schemas
+
+|    c. Norm to write better documentation for option/optional
+
+Continue.
+
+|    d. Bob to discuss instance-based xref text with Paul
+
+Completed.
+
+|    e. Mike to consider possible attribute values on literallayout for
+|       addressing RFE 613293 (generalize programlisting)
+
+Continued until he's present.
+
+| 5. Procedure/Task/Topic
+
+Proposal: We will add StepAlternatives to Step. A Step will contain either
+a single StepAlternatives or a single Substeps (or neither). The content model
+of StepAlternatives is Step+.
+
+StepAlternatives will have common attributes plus "performance" as per
+Substeps and Step.
+
+Accepted.
+
+Steve summarized RFE #621564.
+
+ACTION: Norm to make sure discussion of Task/Topic is on the agenda next month
+
+| 6. Instance-based cross-reference text
+
+We add a style attribute. Its use would be stylesheet dependent. One
+kind of use is 'named styles' which the stylesheet can apply. Another
+kind is a select process where individual components of the style
+attribute are pulled together appropriately.
+
+SC: XFormat or XRefFormat?
+
+We already have 'format' which is a notation for graphic formats.
+
+NH: In that case I would prefer style.
+
+Proposal: We will add an 'xrefstyle' attribute to xref, olink, link, and ulink.
+It's CDATA and its values are processor-defined.
+
+Accepted.
+
+| 7. CALS+HTML Table Model
+
+ACTION: Paul to summarize the differences between the two models,
+highlighting where there are potential ambiguities (places where there
+are two or more choices and at least one of them is wrong).
+
+ACTION: Norm to put this on the agenda again next month
+
+| 8. Simplified ToCs
+
+ACTION: Norm to post to the list again
+
+ACTION: Norm to check on the FU status of this change.
+
+| 9. Review of Requests for Enhancement
+|
+|    To browse a specific RFE, enter the URL (on one line):
+|
+|           http://sourceforge.net/tracker/index.php?func=detail&amp;
+|           group_id=21935&amp;atid=384107&amp;aid=XXXX
+|
+|    where XXXX is the RFE number.
+|
+|     616220 frontmatter body backmatter tags
+
+These containers don't seem to add any value. Rejected.
+
+Adjourned.
+
+|     623524 (Re)Consider "choicelist" markup
+|     638456 RFE add a <translator> tag
+|
+|    The following RFEs have been moved to the bottom of this agenda in order
+|    to make sure that all RFEs get fairly discussed.
+|
+|     413389 Enhance METHODNAME and VARNAME
+|     436067 splitting tech.char.class
+|     473365 Allow optional in funcprototype
+|     482818 Simplify ToC content model
+|     514435 Allow reference within refentry
+|     541444 caption in mediaobjectco
+|     558443 include storage info in metadata
+|     562343 <packagename> element
+|     564776 process/service/daemon/server markup
+|     565637 Associate non-inline image with link
+|     565716 URL and URN markup
+|     565905 Add xrefstyle attribute
+|     570068 Online values for pubwork
+|     571996 Add 'namespace' inline element
+|     571998 Add 'default' inline element
+|     573419 Add bidirectional text overrides
+|     573812 Allow blockinfo on blockquote
+|     574880 Add annotation element
+|     582705 Namespace convention for MathML Module
+|     582822 VARARG and FUNCDEF together
+|     613293 Generalize programlisting
+|
+|    The following RFEs are awaiting action items
+|
+|     431411 RFE 70: add generic linking capability
+|     472229 Allow HTML tables
+|     522552 Add title attribute to <ulink> element
+|     609061 Add new Step sibling element Alternative
+|     621564 New element Task and children
+|     640090 Add 'Steps' element for grouping steps
+|
+|    The following RFEs are identified as V6.0 or later
+|
+|     531851 Remove inline person name elements
+|     532088 Remove RevHistory from qandaentry
+|
+| [1] http://lists.oasis-open.org/archives/docbook-tc/200211/msg00012.html

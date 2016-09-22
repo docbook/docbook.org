@@ -1,0 +1,297 @@
+| DocBook Technical Committee Meeting Agenda: 20 Aug 2003
+| =======================================================
+|
+| The DocBook Technical Committee met on Wednesday, 20 Aug 2003 at
+| 05:00p EDT (02:00p PDT, 21:00GMT, 22:00BST, 23:00CEST, 06:00JST+,
+| 02:30a India+) for 90 minutes.
+|
+| Agenda
+|
+| 1. Roll call
+
+Jeff Beal
+Steve Cogorno [:10-]
+Paul Grosso [-:60]
+Nancy Harrison [:06-]
+Dick Hamilton
+Scott Hudson
+Michael Smith
+Norman Walsh
+
+Absent:
+
+Mark Johnson
+Bob Stayton
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+As amended by my note with the URI to the W3C entities.
+
+Accepted.
+
+| 3. Next meeting: 17 Sep 2003 (conflict for Norm)
+
+Proposed: moved to September 24, 2003. 
+
+Accepted.
+
+| 4. Review of the agenda
+
+Accepted.
+
+| 5. Review of open action items
+|
+|     a. Norm to follow-up on RFE 562343: &lt;packagename&gt; element
+Continued.
+|     b. Norm to write better documentation for option/optional
+Continued.
+|     c. Norm to ask Denis Evans for his opinions on REF #686733, allow
+|        bibliography under &lt;refentry&gt;
+Completed.
+|     d. Norm to post a summary of the Task content models as described.
+Overtaken by events
+|     e. Norm to write some stylesheets to demonstrate annotations
+Completed.
+|     f. Norm to respond to Bob's message on bibliographic inlines to
+|        see if we can get some email discussion going.
+Overtaken by events
+|     g. Norm to describe how topical indexes might be created with
+|        a custom stylesheet.
+Continued.
+|     h. Norm to describe how the prototype works and how it was constructed.
+Continued.
+|     i. Norm to begin putting it together DocBook V4.3
+Completed.
+|     j. Mike to provide a better proposal for choicelist markup.
+Continued.
+|
+| 6. DocBook V4.3
+
+No discussion about the beta.
+
+Do we want to make this a CR, or give users another month?
+
+Proposed: We'll wait a month to see if any issues surface.
+
+Accepted
+
+| 7. DocBook V5.0 (RELAX NG)
+
+Dick: wrt RELAX NG vs. XML Schema, are they interoperable?
+
+Norm: No, they aren't. It's an open question about how we want to
+      write the schema and to what extent our specific schema is
+      interoperable (feature wise).
+
+Keep on the agenda for next month.
+
+| 8. Annotations [2]
+
+Norm: Putting annotations in an element, so that for example, an annotation
+      child of a para changes the way that para is processed.
+
+Norm: There are also issues with respect to multiple annotations.
+
+Mike: We could use an out-of-line element, making it a cross reference.
+
+Norm: For the content, yes, but not for the element that is being annotated.
+
+Norm: If the solution is to make it completely out-of-line, then we don't need
+      any new markup at all.
+
+ACTION: Mike to reconsider the annotation problem and post his thoughts.
+
+| 9. Review of Requests for Enhancement
+
+|       686733 allow bibliography under &lt;refentry&gt;
+
+Dennis says &quot;This sort of doesn't make sense to me. I feel that adding
+an entire bibliography to a refentry is contrary to the concept of a
+refentry being a short, concise chunk that documents a specific item.&quot;
+
+Steve: I think lots of refentries are long and it makes sense to refer
+to other resources.
+
+Mike: The example from the refentry is for references to RFCs.
+
+Norm: There are glosslists, we could add bibliolist instead.
+
+Mike: I kind of like bibliolist.
+
+Jeff: I can imagine having a glosslist in the middle but not a bibliolist.
+
+Steve: We treat the bibliography as a special kind of chapter.
+
+Nancy: I don't like the idea of any of these things in refentrys, so
+I'm staying out of it.
+
+Dick: Putting a whole bibliography does seem odd.
+
+Norm: Does anyone oppose adding a bibliolist?
+
+Sentiment that that if people need it...
+
+ACTION: Norm to propose bibliolist.
+
+|       752632 Color control of CALS table ELEMENT
+
+Paul: I don't think it makes sense to add color control. And CALS is CALS.
+
+Norm: The HTML model does allow this, so if you need this, use HTML instead of CALS.
+
+Steve: We could reject it because we don't want to do presentation.
+
+Paul: You can also do it with processing instructions.
+
+Steve: Saying its someone elses model and we don't want to change it doesn't seem like
+       a good reason.
+
+Norm: We usually use alternate markup as an argument against change, and HTML
+      tables provide alternate markup.
+
+Steve: Yes, but going to the HTML model is a really big change.
+
+Mike: But adding extensions is also a big change.
+
+Steve: I don't think it's a good idea, but I'd suggest a remap attribute.
+
+Reject: We've got attributes like role that could be used for this purpose,
+        we've got PIs that could be used, and we have HTML tables if you
+        can support them. There are lots of alternatives that don't involve
+        changing a supported external standard.
+
+Accepted.
+
+- --- Norm raises an aside: what about caption
+
+Norm describes the issue of &quot;caption&quot; in HTML tables and his move to
+make caption mixed content to support it.
+
+Proposed: this is the best solution to a complex problem so that's what we'll do.
+
+Accepted.
+
+- ---
+
+|       755966 Add interpolate element
+
+The submitter appears to misunderstand the meaning of continuation on numbered lists.
+
+Proposed: reject.
+
+Accepted.
+
+|       780734 inline code
+
+Norm: I usually use 'literal' for this purpose, but that's not really very semantic.
+
+Steve: Why isn't literal good enough?
+
+Mike: It's not very intuitive to new users.
+
+Scott: And you could translate legacy HTML code more easily.
+
+Jeff: I've always used literal to mean a literal value (like a string or boolean).
+
+Norm: I wish we had some better markup for this.
+
+Jeff: We don't really have a good way, for example, to markup an inline assignment
+      statement. We have markup for the variable and the value and the operator,
+      but not for the whole expression.
+
+Steve: Literal is good enough, isn't it?
+
+Steve: Markup up function names, for example, makes a lot of sense, but marking
+       up the assignment doesn't seem to be very valuable. It's not as meaningful
+       as the function name. Why is searching for stuff in &lt;code&gt; really better
+       than &lt;literal&gt;?
+
+Mike: This is partly an issue of timing. It's not ideal to give priority to the
+      &quot;old&quot; elements.
+
+Norm: I think Mike's right, we need to try to be objective about the inlines on
+      their own merits.
+
+Steve: I don't see any value, but if others do then we should just go
+       ahead and do it.
+
+Mike: How many instances of a single line of code in a paragraph do
+      you really have? How often do you need it? But it's really a naming issue.
+
+Norm: So this is really just about the name? If we had to choose, we'd choose &quot;code&quot;
+      because it's more familiar to users.
+
+Norm: The fact that it's a naming issue makes me feel like maybe we
+      shouldn't do that.
+
+Mike: Even on the rendering side, I can imagine wanting to render code examples
+      differently than literals.
+
+Straw poll: should we add &lt;code&gt;:
+
+Jeff Beal       Y
+Steve Cogorno   N
+Paul Grosso     abstain
+Nancy Harrison  Y
+Dick Hamilton   N
+Scott Hudson    Y
+Michael Smith   Y
+Norman Walsh    abstain
+
+Norm: Would anyone object to adding code?
+
+None.
+
+Proposal: Add a code element.
+
+Accepted.
+
+Steve: We need to be very careful about how these are explained.
+
+Adjourned.
+
+|     To browse a specific RFE, enter the URL (on one line):
+|
+|       http://sourceforge.net/tracker/index.php?func=detail&amp;
+|       group_id=21935&amp;atid=384107&amp;aid=XXXX
+|
+|       697374 marking up keycaps according to their semantics
+|       740647 List or Table of Procedures.
+|       742373 Splitting Segmented List
+|       742624 refentry and bibliography
+|
+|       436067 splitting tech.char.class 
+|       473365 Allow optional in funcprototype 
+|       482818 Simplify ToC content model 
+|       514435 Allow reference within refentry 
+|       541444 caption in mediaobjectco 
+|       558443 include storage info in metadata 
+|       562343 &lt;packagename&gt; element 
+|       565637 Associate non-inline image with link 
+|       565716 URL and URN markup 
+|       573419 Add bidirectional text overrides 
+|       582822 VARARG and FUNCDEF together 
+|       623524 (Re)Consider &quot;choicelist&quot; markup 
+|       638456 RFE add a &lt;translator&gt; tag
+|       655526 funcprototype enhancement
+|       660044 Controlling line numbering in verbatims
+|       679316 Allow orgname tag within paragraphs
+|       686733 allow bibliography under &lt;refentry&gt;
+|
+|      The following RFEs are awaiting action items
+|
+|       413389 Enhance METHODNAME and VARNAME 
+|       431411 RFE 70: add generic linking capability
+|       522552 Add title attribute to &lt;ulink&gt; element
+|       574880 Add annotation element 
+|       613293 Generalize programlisting 
+|       621564 New element Task and children
+|
+|      The following RFEs are identified as V6.0 or later
+|
+|       531851 Remove inline person name elements
+|       532088 Remove RevHistory from qandaentry
+|
+|  ----
+|  [1] http://lists.oasis-open.org/archives/docbook/200307/msg00188.html
+|  [2] http://lists.oasis-open.org/archives/docbook-tc/200303/msg00001.html

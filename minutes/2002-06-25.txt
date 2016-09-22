@@ -1,0 +1,248 @@
+| DocBook Technical Committee Meeting Agenda: 25 Jun 2002
+| =======================================================
+|
+| The DocBook Technical Committee met on Tuesday, 25 June 2002 at
+| 01:00p EDT (10:00a PDT, 17:00GMT, 18:00BST, 19:00CEST, 02:00JST+)
+| for 90 minutes.
+|
+| Agenda
+|
+| 1. Roll call
+
+  Paul Grosso
+  Dick Hamilton
+  Sabine Ocker
+  Mike Smith
+  Bob Stayton
+  Norman Walsh
+
+Absent:
+
+  Dennis Evans
+
+Regrets:
+
+  Nancy Harrison
+  Tim Teebken (Provisional)
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+- Help (postponed in Tim's absence)
+- Per-instance generated text (at Bob's request)
++ Linking
++ Scheduling of releases
+
+| 4. Review of open action items {5 min}
+|
+|    a. Norm to write a concrete proposal for linking in DocBook 5.0
+|       Completed[2]
+|    b. Nancy to review DITA for help authoring and summarize.
+        Continued.
+|    c. Norm to consider scheduling for 4.3, 5.0, 6.0 etc.
+|       Continued.
+|    d. Norm and Paul to take up offline the particular issues of how
+|       to do the HTML/Table customization.
+|       Continued.
+|    e. Norm to follow-up on 'optionalparamdef'/'optionalmethodparam' after
+|       starting discussion on the list[3][4]
+|    f. Norm to follow-up with the submitter for more info about
+|       RFE #495853: add 'caption' to itemizedlist content-model
+|       asking the submitter for clarification
+|       Completed [5]
+|    g. Bob to write an RFE for instance-based generated xref text
+        Continued
+        ACTION: Bob to write a more detailed proposal
+|    h. Mike to file an bug report against the character entities (wrt identification)
+|       Completed and fixed [6]
+|    i. Norm to review the status of the XML Character Entities document.
+        Completed.
+|    j. Norm to identify the questionable mappings and fix outstanding bugs.
+        Continued.
+|    k. Tim to contact a representative from Microsoft to discuss help authoring
+        Continued.
+|    l. Norm to ask on the list about RFE #514425: Simplify info elements
+|       Completed [7]
+|    m. Norm to ask the list if the relative ordering of info elements and titles
+|       is an issue (worth fixing)
+|       Completed [8]
+|    n. Mike to follow-up with the submitter for more info about
+|       RFE #514435: Allow reference within refentry
+|
+| 5. Discuss XML Character Entities {10 min}
+|     - OASIS/W3C coordination
+
+     The MathML WG at the W3C is doing the same thing. Do we do this ourselves,
+     drop it on the floor, or do a coordinated release?
+
+     Proposed: Wait to see the result of the MathML erratum/update. Re-evaluate
+     after that's published. This effectively back-burners our spec
+     until they've finished.
+
+     Accepted.
+
+|     - iso-lat5
+
+     Proposed: Reject. We don't want to become the maintainers of a living,
+     growing set of entities. Our remit was to produce an XML set of ISO 8879
+     entities.
+
+     Accepted.
+
+     Note that installers are free to add additional entities in dbgenent.mod.
+     A DTD modified in this way can still be called "DocBook".
+
+5b. Linking in DocBook
+
+     This topic is actively being discussed on the list, so we aren't going to try
+     to make any final decisions today.
+
+     Question: is there anyone that feels the DocBook TC should *not* attempt
+     to solve this problem? Is there anyone that doesn't want to do this at all?
+
+     No. So we will do something.
+
+     Sabine reports that Sun is looking to expand linking capacity to better
+     support Sun documentation requirements.
+
+     Bob wonders about the ramifications of selecting XLink with
+     respect to XPointer conformance.
+
+     Some discussion of internet media types. In practice, doing this might make
+     our documents no longer appear to be XML to existing tools.
+
+     Some discussion of generated text.
+
+     Norm asserts that we need to clearly distinguish between DocBook issues and
+     style/presentation issues.
+
+5c. Scheduling of releases
+
+     We expect to vote on 4.2 at the next meeting.
+
+     Discussion of constraints on major releases. (We can do 5.0 whenever we want
+     because 4.0 is more than a year old. We can't do 6.0 until 1 year after we do
+     5.0, but we also can't make any backwards incompatible changes in 6.0 that we
+     don't announce in 5.0.)
+
+     Norm muses that he thinks a 5.0 release in the end-of-year time-frame feels
+     about right.
+
+     The current spec lists currently planned changes for 5.0 and 6.0.
+
+| 6. Discuss options to control per-instance generated text on xref {15 min}
+
+     Postponed.
+
+| 7. Discuss Help Authoring {10 min}
+
+     Postponed.
+
+| 8. Discuss Annotations {15 min}
+
+     Annotations would be associated with the element that contains them.
+     Mike points out that this would allow the content of an element that contained
+     an annotation to be presented with a special color or other distinctive
+     presentation.
+
+     Mike: if we want to add an element for associating expanded/spelled-out versions
+     of acronyms and abbreviations, we might want to provide a broader solution so
+     that we could support anything someone wanted to annotate.
+
+     Footnote has legacy connotations.
+
+     ACTION: Paul to send email describing some unresolved processing expectation
+     issues.
+
+| 9. Review of Requests for Enhancement {35 min}
+|
+|    To browse a specific RFE, enter the URL (on one line):
+|
+|         http://sourceforge.net/tracker/index.php?func=detail&amp;;
+|         group_id=21935&amp;atid=384107&amp;aid=XXXX
+|
+|    where XXXX is the RFE number.
+|
+|    473365 Allow optional in funcprototype
+
+     ACTION: Norm to continue discussion in email
+
+|    514244 Allowing xref inside link
+
+     Proposed: Postpone until we've decided on generalized linking.
+
+     Accepted.
+
+|    514425 Simplify info elements
+
+     Reject: it would be a significant backwards incompatibility hit and there
+     was no support on the list for this proposal.
+
+     Accepted.    
+
+|    514435 Allow reference within refentry
+
+     Refentry has always had the semantic of Unix manual pages where the
+     suggested nesting has no parallel.
+
+     The only apparent loss that would occur from unwrapping the suggested
+     markup and using nested sections and methodsynopsis elements is that you
+     would not be able to have a refpurpose for each method.
+
+     ACTION: Mike to ask the submitter if what he'd miss is the additional refpurpose
+             or is there more to it?
+
+     ACTION: Mike to start thread about this markup on the DocBook list
+
+|    533734 Allow methodsynopsis not to have parameters
+
+     Proposed: Accept this request.
+
+     Accepted.
+
+|    558443 include storage info in metadata
+
+     ACTION: Bob to investigate. Do the new Dublin Core elements suffice?
+
+|    560957 Allow Linkend and Endterm on Citation
+
+     Proposed: postpone until after generalized linking.
+
+     Accepted.
+
+Meeting adjourned. Next meeting is 16 July 2002.
+
+|    562343 <packagename> element
+|    564776 process/service/daemon/server markup
+|    565637 Associate non-inline image with link
+|    565716 URL and URN markup
+|    565905 Add xrefstyle attribute
+|    570068 Online values for pubwork
+|    571996 Add 'namespace' inline element
+|    571998 Add 'default' inline element
+|
+|    The following RFEs are awaiting action items
+|
+|    472229 Allow HTML tables
+|    431411 RFE 70: add generic linking capability
+|
+|    The following RFEs have been moved to the bottom of this agenda in order
+|    to make sure that all RFEs get fairly discussed.
+|
+|    413389 Enhance METHODNAME and VARNAME
+|    425730 Create an SVG module
+|    436067 splitting tech.char.class
+|    482818 Simplify ToC content model
+|    522552 Add title attribute to <ulink> element
+|
+| [1] http://lists.oasis-open.org/archives/docbook/200205/msg00083.html
+| [2] http://lists.oasis-open.org/archives/docbook/200206/msg00139.html
+| [3] http://lists.oasis-open.org/archives/docbook/200205/msg00078.html
+| [4] http://lists.oasis-open.org/archives/docbook/200206/msg00005.html
+| [5] http://sourceforge.net/tracker/index.php?func=detail&aid=495853&group_id=21935&atid=384107
+| [6] http://sourceforge.net/tracker/index.php?func=detail&aid=559737&group_id=21935&atid=462824
+| [7] http://lists.oasis-open.org/archives/docbook/200206/msg00043.html
+| [8] http://lists.oasis-open.org/archives/docbook/200206/msg00044.html

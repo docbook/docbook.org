@@ -1,0 +1,149 @@
+| DocBook Technical Committee Meeting Minutes: 18 Dec 2001
+| ========================================================
+| Agenda
+|
+| 1. Roll call
+
+Patricia Gee-Best
+Dennis Evans
+Nancy Harrison (:17)
+Dick Hamilton
+Sabine Ocker
+Michael Smith
+Bob Stayton
+Norman Walsh
+
+Quorum present; meeting called to order by the chair.
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Action: Norm to update web page to point to minutes of 30 Nov 2001.
+
+Accepted.
+
+| 3. Review of the agenda
+
+Issue 4b.
+
+| 4. Review of open action items
+|
+|    a. Norm to write a concrete proposal for linking in DocBook 5.0
+
+Continued, topic for next meeting.
+
+|    b. Norm to propose new "name and address" markup
+
+Mike posted a nice summary.
+Action: Still need to consider how to harmonize.
+
+|    c. Sabine to draft initial proposal for help topic authoring
+
+No feedback from help group will be forthcoming.
+
+|    d. Sabine to post a summary of continuing discussions about the
+|       content model of lists and procedures.
+
+Continued.
+
+|    e. Norm to post message to DocBook list about Bibliographys in Refentrys.
+
+Action: Norm to change to pending (RFE #XXXX), waiting for more feedback.
+
+|    f. Norm to post HTML Forms Module V1.1
+
+Action: continued.
+
+|    g. Mike Smith to formulate concrete proposal for OLink changes to the DTD.
+
+Completed.
+
+|    h. RFE 440667 Affiliation lacks CorpName: Norm to write concrete proposal
+
+Action: continued.
+
+|    i. RFE 441883 endterm behavior in link: Norm to attempt to improve the
+|       description and post on list
+
+Action: Bob to clarify the refentry for link.
+
+|    j. RFE 472229 Allow HTML tables: Norm to ask on list (namespace or alternatives)
+
+Completed.
+
+|    k. RFE 473365 Allow optional in funcprototype: Norm to ask on list
+
+Completed.
+
+|    l. RFE 482818 Simplify ToC content model: Norm to ask on list
+
+Completed. Mike followed up.
+
+| 4b.DocBook version naming scheme
+
+Modules will track the most current DTD, but will not be officially
+patched "backward" to previous versions of the DTD.
+
+We will rev the version number of modules when we update them to refer
+to new base DTDs.
+
+| 5. Name and Address markup and the QIC TC
+
+Postponed by request of the QIC Chair
+
+Action: review Mike's summary of the name
+
+| 6. DocBook community web page
+
+There was some concern over how this list is going to be characterized
+wrt how "official" it is.
+
+Action: Mike to propose explicit wording for the page and the
+information to be collected.
+
+| 7. Metadata
+
+Given that Dublin Core is not intended to be a metadata standard in
+its own right (i.e., you aren't supposed to make DC elements), there's
+no pressing urgency for us to refine our model to some other standard.
+
+Action: Bob to write a concrete proposal for the missing elements to
+map to Dublin Core.
+
+Action: Nancy to provide a list of places where we should allow more
+metadata.
+
+The next agenda will set forth time limits for discussions to assure
+that we make progress in both areas. Put the RFEs first next month
+with a time limit.
+
+Meeting adjourned by the chair.
+
+| 7b. Moving beyond DTDs.
+| 7c. Modularity
+
+| 8. Review of open RFEs[2]
+|
+|      To browse a specific RFE, enter the URL (on one line):
+|
+|         http://sourceforge.net/tracker/index.php?func=detail&;
+|         group_id=21935&atid=384107&aid=XXXX
+|
+|      where XXXX is the RFE number.
+|
+|    440667 Affiliation lacks CorpName
+|    470599 Need an imagedata to fit to max size
+|    472229 Allow HTML tables
+|    473365 Allow optional in funcprototype
+|    480957 New name and address markup
+|    482818 Simplify ToC content model
+|    486260 address in /article/articleinfo/author
+|    487482 Add legalnoticeinfo
+|    488368 Simplify single index entries
+|    488378 Support xml:lang
+|    488740 Book allows SetIndex
+|    491629 Add <personname> to %gen.char.class
+|    492099 two new olink attributes
+|    493564 Email should not allow e.g Inlinegraphic
+|
+| [1] http://lists.oasis-open.org/archives/docbook-tc/200111/msg00022.html
+| [2] http://sourceforge.net/tracker/index.php?group_id=21935&atid=384107

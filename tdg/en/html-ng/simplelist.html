@@ -1,0 +1,94 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>simplelist</title><link rel="stylesheet" href="defguide.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.64.1"><link rel="home" href="docbook.html" title="DocBook"><link rel="up" href="ref-elements.html" title="DocBook Element Reference"><link rel="previous" href="simpara.html" title="simpara"><link rel="next" href="simplemsgentry.html" title="simplemsgentry"></head><body><div class="navheader"><table border="0" cellpadding="0" cellspacing="0" width="100%" summary="Navigation table"><tr><td align="left">&nbsp;<a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a>&nbsp;<a title="simpara" href="simpara.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;<a title="DocBook Element Reference" href="ref-elements.html"><img src="figures/nav-up.png" alt="Up" border="0"></a>&nbsp;<a title="simplemsgentry" href="simplemsgentry.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td><td align="right"><i>DocBook: The Definitive Guide</i> 2.0.9 <span class="alpha-version">(<a href="co01.html"><em>Alpha</em></a>)</span> </td></tr></table></div><div class="refentry" lang="en"><a name="simplelist.element"></a><div class="titlepage"><div><h1 class="title">simplelist</h1></div><div><p class="releaseinfo">$Revision: 1.3 $</p></div><div><p class="pubdate">$Date: 2002/06/12 11:18:36 $</p></div></div><div class="refnamediv"><p>simplelist &#8212; An undecorated list of single words or short phrases</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><h3><span class="bold"><b>Content Model</b></span></h3><pre class="synopsis">simplelist ::=
+(<a href="member.html"><tt class="sgmltag-element">member</tt></a>+)</pre><h3><span class="bold"><b>Attributes</b></span></h3><p><a href="ref-elements.html#common.attributes" title="Common Attributes">Common attributes</a></p><table border="0" width="100%" cellpadding="2" style="border-collapse: collapse; border-left: 0.5pt solid black; border-right: 0.5pt solid black; border-bottom: 0.5pt solid black;" summary="Attributes"><thead><tr><td class="th" style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; "><p><span class="bold"><b>Name</b></span></p></td><td class="th" style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; "><p><span class="bold"><b>Type</b></span></p></td><td class="th" style="border-bottom: 0.5pt solid ; "><p><span class="bold"><b>Default</b></span></p></td></tr></thead><tbody><tr><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">columns</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">CDATA</td><td style="border-bottom: 0.5pt solid ; " align="left" valign="top"><span class="emphasis"><em>None</em></span></td></tr><tr><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top">type</td><td style="border-right: 0.5pt solid ; border-bottom: 0.5pt solid ; " align="left" valign="top"><table class="simplelist" border="0" summary="Simple list"><tr><td><i>Enumeration:</i></td></tr><tr><td>horiz</td></tr><tr><td>inline</td></tr><tr><td>vert</td></tr></table></td><td style="border-bottom: 0.5pt solid ; " align="left" valign="top">"vert"</td></tr></tbody></table><div class="docbookng-synopsis"><h3>DocBook NG &#8220;Bourbon&#8221; Content Model</h3><div class="define-first"><div class="element">simplelist ::=<ul><li>One or more of:</li><ul class="oneOrMore"><li><tt><a href="member.html">member</a></tt></li></ul></ul><h4>DocBook NG &#8220;Bourbon&#8221; Attributes</h4><p>Common attributes and common linking attributes.</p><p>Additional attributes: (Required attributes, if any, are <b>bold</b>)</p><ul><li>columns (integer)</li><li>type (enumeration)<ul><li>&#8220;horiz&#8221;</li><li>&#8220;vert&#8221;</li><li>&#8220;inline&#8221;</li></ul></li></ul></div></div></div></div><div class="refsect1" lang="en"><a name="d0e186123"></a><h2>Description</h2><p>
+A <a href="simplelist.html"><tt class="sgmltag-element">SimpleList</tt></a> is a list of words or phrases. It offers a
+convenient alternative to the other list elements for inline content.
+</p><div class="refsect2" lang="en"><a name="dbreproc.simplelist"></a><h3>Processing expectations</h3><p>
+Ironically, the processing expectations of a
+<a href="simplelist.html"><tt class="sgmltag-element">SimpleList</tt></a> are quite complex.
+</p><p>
+The presentation of a <a href="simplelist.html"><tt class="sgmltag-element">SimpleList</tt></a> is controlled by the
+<tt class="sgmltag-attribute">Type</tt> attribute, which has three possible
+values:
+
+<div class="variablelist"><dl><dt><span class="term"><tt class="literal">Inline</tt></span></dt><dd><p>
+    Indicates that the <a href="member.html"><tt class="sgmltag-element">Member</tt></a>s of the list should be
+    rendered as a comma separated, inline list.
+  </p></dd><dt><span class="term"><tt class="literal">Horiz</tt></span></dt><dd><p>
+    Indicates that the <a href="member.html"><tt class="sgmltag-element">Member</tt></a>s of the list should be
+    rendered in a tabular fashion with members running across the 
+    rows.
+  </p></dd><dt><span class="term"><tt class="literal">Vert</tt></span></dt><dd><p>
+    Indicates that the <a href="member.html"><tt class="sgmltag-element">Member</tt></a>s of the list should be
+    rendered in a tabular fashion with members running down the
+    columns.  This is the default.
+  </p></dd></dl></div>
+</p><p>
+In both of the tabular cases, the number of columns in the table is
+controlled by the <tt class="sgmltag-attribute">Columns</tt> attribute.
+</p></div><div class="refsect2" lang="en"><a name="d0e186184"></a><h3>Parents</h3><p>These elements contain simplelist:
+<span class="simplelist"><a href="answer.html"><tt class="sgmltag-element">answer</tt></a>, <a href="appendix.html"><tt class="sgmltag-element">appendix</tt></a>, <a href="article.html"><tt class="sgmltag-element">article</tt></a>, <a href="bibliodiv.html"><tt class="sgmltag-element">bibliodiv</tt></a>, <a href="bibliography.html"><tt class="sgmltag-element">bibliography</tt></a>, <a href="blockquote.html"><tt class="sgmltag-element">blockquote</tt></a>, <a href="callout.html"><tt class="sgmltag-element">callout</tt></a>, <a href="caption.html"><tt class="sgmltag-element">caption</tt></a>, <a href="caution.html"><tt class="sgmltag-element">caution</tt></a>, <a href="chapter.html"><tt class="sgmltag-element">chapter</tt></a>, <a href="colophon.html"><tt class="sgmltag-element">colophon</tt></a>, <a href="constraintdef.html"><tt class="sgmltag-element">constraintdef</tt></a>, <a href="dedication.html"><tt class="sgmltag-element">dedication</tt></a>, <a href="entry.html"><tt class="sgmltag-element">entry</tt></a>, <a href="example.html"><tt class="sgmltag-element">example</tt></a>, <a href="footnote.html"><tt class="sgmltag-element">footnote</tt></a>, <a href="glossary.html"><tt class="sgmltag-element">glossary</tt></a>, <a href="glossdef.html"><tt class="sgmltag-element">glossdef</tt></a>, <a href="glossdiv.html"><tt class="sgmltag-element">glossdiv</tt></a>, <a href="highlights.html"><tt class="sgmltag-element">highlights</tt></a>, <a href="important.html"><tt class="sgmltag-element">important</tt></a>, <a href="index.html"><tt class="sgmltag-element">index</tt></a>, <a href="indexdiv.html"><tt class="sgmltag-element">indexdiv</tt></a>, <a href="informalexample.html"><tt class="sgmltag-element">informalexample</tt></a>, <a href="legalnotice.html"><tt class="sgmltag-element">legalnotice</tt></a>, <a href="listitem.html"><tt class="sgmltag-element">listitem</tt></a>, <a href="msgexplan.html"><tt class="sgmltag-element">msgexplan</tt></a>, <a href="msgtext.html"><tt class="sgmltag-element">msgtext</tt></a>, <a href="note.html"><tt class="sgmltag-element">note</tt></a>, <a href="para.html"><tt class="sgmltag-element">para</tt></a>, <a href="partintro.html"><tt class="sgmltag-element">partintro</tt></a>, <a href="preface.html"><tt class="sgmltag-element">preface</tt></a>, <a href="procedure.html"><tt class="sgmltag-element">procedure</tt></a>, <a href="qandadiv.html"><tt class="sgmltag-element">qandadiv</tt></a>, <a href="qandaset.html"><tt class="sgmltag-element">qandaset</tt></a>, <a href="question.html"><tt class="sgmltag-element">question</tt></a>, <a href="refsect1.html"><tt class="sgmltag-element">refsect1</tt></a>, <a href="refsect2.html"><tt class="sgmltag-element">refsect2</tt></a>, <a href="refsect3.html"><tt class="sgmltag-element">refsect3</tt></a>, <a href="refsection.html"><tt class="sgmltag-element">refsection</tt></a>, <a href="refsynopsisdiv.html"><tt class="sgmltag-element">refsynopsisdiv</tt></a>, <a href="revdescription.html"><tt class="sgmltag-element">revdescription</tt></a>, <a href="sect1.html"><tt class="sgmltag-element">sect1</tt></a>, <a href="sect2.html"><tt class="sgmltag-element">sect2</tt></a>, <a href="sect3.html"><tt class="sgmltag-element">sect3</tt></a>, <a href="sect4.html"><tt class="sgmltag-element">sect4</tt></a>, <a href="sect5.html"><tt class="sgmltag-element">sect5</tt></a>, <a href="section.html"><tt class="sgmltag-element">section</tt></a>, <a href="setindex.html"><tt class="sgmltag-element">setindex</tt></a>, <a href="sidebar.html"><tt class="sgmltag-element">sidebar</tt></a>, <a href="simplesect.html"><tt class="sgmltag-element">simplesect</tt></a>, <a href="step.html"><tt class="sgmltag-element">step</tt></a>, <a href="taskprerequisites.html"><tt class="sgmltag-element">taskprerequisites</tt></a>, <a href="taskrelated.html"><tt class="sgmltag-element">taskrelated</tt></a>, <a href="tasksummary.html"><tt class="sgmltag-element">tasksummary</tt></a>, <a href="td.html"><tt class="sgmltag-element">td</tt></a>, <a href="textobject.html"><tt class="sgmltag-element">textobject</tt></a>, <a href="th.html"><tt class="sgmltag-element">th</tt></a>, <a href="tip.html"><tt class="sgmltag-element">tip</tt></a>, <a href="warning.html"><tt class="sgmltag-element">warning</tt></a></span>.</p></div><div class="refsect2" lang="en"><a name="d0e186371"></a><h3>Children</h3><p>The following elements occur in simplelist:
+<span class="simplelist"><a href="member.html"><tt class="sgmltag-element">member</tt></a></span>.</p></div></div><div class="refsect1" lang="en"><a name="d0e186381"></a><h2>Attributes</h2><div class="variablelist"><dl><dt><span class="term">columns</span></dt><dd><p>
+<tt class="sgmltag-attribute">Columns</tt> specifies the number of columns to 
+be used in the presentation of a <a href="simplelist.html"><tt class="sgmltag-element">SimpleList</tt></a> with a 
+<tt class="sgmltag-attribute">Type</tt> of <tt class="literal">Vert</tt> or <tt class="literal">Horiz</tt>.
+If <tt class="sgmltag-attribute">Columns</tt> is unspecified, <tt class="literal">1</tt>
+is assumed.
+</p></dd><dt><span class="term">type</span></dt><dd><p>
+<tt class="sgmltag-attribute">Type</tt> specifies how the <a href="member.html"><tt class="sgmltag-element">Member</tt></a>s 
+of the <a href="simplelist.html"><tt class="sgmltag-element">SimpleList</tt></a> are to be formatted. (This attribute
+would better fit DocBook semantics if it were named
+&#8220;<span class="quote"><tt class="sgmltag-attribute">Class</tt></span>&#8221;).
+</p></dd></dl></div></div><div class="refsect1" lang="en"><a name="d0e186431"></a><h2>See Also</h2><p><span class="simplelist"><a href="calloutlist.html"><tt class="sgmltag-element">calloutlist</tt></a>, <a href="itemizedlist.html"><tt class="sgmltag-element">itemizedlist</tt></a>, <a href="listitem.html"><tt class="sgmltag-element">listitem</tt></a>, <a href="orderedlist.html"><tt class="sgmltag-element">orderedlist</tt></a>, <a href="segmentedlist.html"><tt class="sgmltag-element">segmentedlist</tt></a>, <a href="variablelist.html"><tt class="sgmltag-element">variablelist</tt></a></span>.
+</p></div><div class="refsect1" lang="en"><a name="d0e186455"></a><h2>Examples</h2><div class="informalexample"><pre class="programlisting">&lt;!DOCTYPE para PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+          "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"&gt;
+&lt;para&gt;
+Here is a &lt;sgmltag&gt;SimpleList&lt;/sgmltag&gt;, rendered inline: 
+&lt;simplelist type='inline'&gt;
+&lt;member&gt;A&lt;/member&gt;
+&lt;member&gt;B&lt;/member&gt;
+&lt;member&gt;C&lt;/member&gt;
+&lt;member&gt;D&lt;/member&gt;
+&lt;member&gt;E&lt;/member&gt;
+&lt;member&gt;F&lt;/member&gt;
+&lt;member&gt;G&lt;/member&gt;
+&lt;/simplelist&gt;
+&lt;/para&gt;</pre></div><div class="example-output"><p>
+Here is a <a href="simplelist.html"><tt class="sgmltag-element">SimpleList</tt></a>, rendered inline: 
+<span class="simplelist">A, B, C, D, E, F, G</span>
+</p></div><div class="informalexample"><pre class="programlisting">&lt;!DOCTYPE para PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+          "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"&gt;
+&lt;para&gt;
+Here is the same &lt;sgmltag&gt;SimpleList&lt;/sgmltag&gt; rendered horizontally with 
+three columns:
+&lt;simplelist type='horiz' columns='3'&gt;
+&lt;member&gt;A&lt;/member&gt;
+&lt;member&gt;B&lt;/member&gt;
+&lt;member&gt;C&lt;/member&gt;
+&lt;member&gt;D&lt;/member&gt;
+&lt;member&gt;E&lt;/member&gt;
+&lt;member&gt;F&lt;/member&gt;
+&lt;member&gt;G&lt;/member&gt;
+&lt;/simplelist&gt;
+&lt;/para&gt;</pre></div><div class="example-output"><p>
+Here is the same <a href="simplelist.html"><tt class="sgmltag-element">SimpleList</tt></a> rendered horizontally with 
+three columns:
+<table class="simplelist" border="0" summary="Simple list"><tr><td>A</td><td>B</td><td>C</td></tr><tr><td>D</td><td>E</td><td>F</td></tr><tr><td>G</td><td>&nbsp;</td><td>&nbsp;</td></tr></table>
+</p></div><div class="informalexample"><pre class="programlisting">&lt;!DOCTYPE para PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+          "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"&gt;
+&lt;para&gt;
+Finally, here is the list rendered vertically:
+&lt;simplelist type='vert' columns='3'&gt;
+&lt;member&gt;A&lt;/member&gt;
+&lt;member&gt;B&lt;/member&gt;
+&lt;member&gt;C&lt;/member&gt;
+&lt;member&gt;D&lt;/member&gt;
+&lt;member&gt;E&lt;/member&gt;
+&lt;member&gt;F&lt;/member&gt;
+&lt;member&gt;G&lt;/member&gt;
+&lt;/simplelist&gt;
+&lt;/para&gt;</pre></div><div class="example-output"><p>
+Finally, here is the list rendered vertically:
+<table class="simplelist" border="0" summary="Simple list"><tr><td>A</td><td>D</td><td>G</td></tr><tr><td>B</td><td>E</td><td>&nbsp;</td></tr><tr><td>C</td><td>F</td><td>&nbsp;</td></tr></table>
+</p></div></div></div><div class="navfooter"><table width="100%" summary="Navigation table"><tr><td width="40%" align="left"><a title="simpara" href="simpara.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;</td><td width="20%" align="center"><a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a></td><td width="40%" align="right">&nbsp;<a title="simplemsgentry" href="simplemsgentry.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td></tr><tr><td width="40%" align="left">simpara&nbsp;</td><td width="20%" align="center"><a title="DocBook Element Reference" href="ref-elements.html"><img src="figures/nav-up.png" alt="Up" border="0"></a></td><td width="40%" align="right">&nbsp;simplemsgentry</td></tr></table></div><div class="copyrightfooter"><p><a href="dbcpyright.html">Copyright</a> &copy; 1999, 2000, 2001, 2002, 2003 <a href="http://www.oreilly.com/">O'Reilly &amp; Associates, Inc.</a> All rights reserved.</p></div></body></html>

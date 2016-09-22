@@ -1,0 +1,281 @@
+DocBook Technical Committee Meeting Minutes: 22 Oct 2003
+========================================================
+
+The DocBook Technical Committee met on Wednesday, 22 Oct 2003 at
+05:00p EDT (02:00p PDT, 21:00GMT, 22:00BST, 23:00CEST, 06:00JST+,
+02:30a India+) for 90 minutes.
+
+| Agenda
+|
+| 1. Roll call
+
+Steve Cogorno
+Paul Grosso
+Dick Hamilton
+Scott Hudson
+Mike Smith
+Bob Stayton
+Norman Walsh
+
+Regrets:
+
+Jeff Beal
+
+Absent:
+
+Mark Johnson
+Nancy Harrison
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Next meeting: 19 Nov 2003
+
+Action: Norm to find out about dialing in from Tokyo
+
+| 4. Review of the agenda
+
+Moved discussion of 810932 to 12b for Bob.
+
+| 5. Review of open action items
+|
+|     a. Norm to follow-up on RFE 562343: <packagename> element
+Continued
+|     b. Norm to write better documentation for option/optional
+Continued
+|     c. Norm to describe how the prototype works and how it was constructed.
+Continued
+|     d. Mike to provide a better proposal for choicelist markup.
+Continued
+|     e. Mike to reconsider the annotation problem and post his thoughts.
+Continued
+|     f. Norm to propose bibliolist.
+Completed.
+
+ACTION: Norm to put on the agenda for next month
+
+|     g. Norm to add a code element.
+Completed.
+|     h. Norm to update and republish DocBook 4.3.
+Completed.
+|     i  Norm to post his stylesheet that attempts to convert existing DocBook
+|        documents to the "V5" style markup.
+Continued
+|
+| 6. Add float and floatstyle to table and informal table?
+|    (Current float isn't present so I didn't add floatstyle)
+
+Norm describes the current state of play in 4.3 wrt float and floatstyle.
+
+Bob: add floatstyle to table but we won't propagate float to the other
+elements as it seems redundant.
+
+Dick: couldn't we just extend the values of float?
+
+We could abandon "floatstyle" and extend the possible values of "float".
+Then we'd add float to "example", "equation", and "table".
+
+Steve: Is this allowed for informal things? Most editorial styles
+forbid that because there's no way to refer to it.
+
+We could abandon "floatstyle" and extend the possible values of "float".
+Add float to "example", "equation", and "table".
+
+Proposal: abandon "floatstyle" and extend the legal values for "float".
+
+Accepted.
+
+Float is CDATA, you can any style value you want, the value "0" and
+"1" have legacy meanings: 0=don't float and 1=float any way the
+processor wants.
+
+Bob: Float is '0' by default.
+
+Proposal: make "float" #IMPLIED in 5.0
+
+Accepted.
+
+Proposal: add 'float' to example, equation, and table (with #IMPLIED)
+
+Accepted.
+
+Paul: what about floating things that cover multiple pages?
+
+Processing expectations can be tricky: consider floating a three page
+table to the top of the next page, then floating a quarter page
+graphic. We aren't specifying the precise semantics.
+
+Proposal: add 'float' to informalexample, informalequation, and informaltable
+(with #IMPLIED)
+
+Accepted.
+
+| 7. Elect secretary?
+
+Mike: I nominate Bob.
+
+Bob: I accept the nomination.
+
+Proposed: The DocBook TC elects Bob Stayton Secretary.
+
+Accepted. Congratulations, Bob!
+
+Action: Norm and Bob to coordinate before the next meeting.
+
+| 8. Remove uri from class values for systemitem (from july 2002)
+
+Since we added an element for URIs, we don't need a class value in
+systemitem.
+
+Accepted.
+
+| 9. F2F at XML 2003?
+
+No. No possibility of quorum.
+
+Norm notes that he'll be there. If enough people are interested, Norm
+would be happy to put together a BOF/Nocturn or something.
+
+| 10. DocBook V4.3
+
+Proposed: integrate the changes we discussed today and republish.
+Plan to vote on a CR1 release at the next meeting.
+
+| 11. DocBook V5.0 (RELAX NG)
+
+Norm describes some ideas for DocBook/TEI cross-pollination[2]
+
+| 12. Annotations
+
+Continued pending Mike's action item.
+
+12b. RFE 810932: Citations
+
+Bob introduces the proposal submitted by Bruce D'Arcus et. al.
+
+Steve: expresses concerns about the style implications. Notes that
+back-of-the-book bibliography styles (which aren't the same as
+citations) eventually drove his authors to bibliomixed.
+
+We'll publish this on the list for discussion and plan to invite one
+or more of the proposal authors to the next telcon for discussion.
+
+Dick: Should we treat this like graphics or math and import this from
+elsewhere?
+
+12c. RFE 824633: Classname should be allowed in firstterm
+
+We've added things to glossterm and not firstterm. That seems like a mistake.
+
+General agreement.
+
+Action: Norm to make sure that firstterm is isomorphic to glossterm.
+
+Steve: Should we remove firstterm altogether and add a first reference attribute?
+
+No one feels strongly about it. Leave as is.
+
+| 13. Review of Requests for Enhancement
+|
+|    [ Consult SourceForge, I haven't had a chance to review these ]
+|
+|     To browse a specific RFE, enter the URL (on one line):
+|
+|       http://sourceforge.net/tracker/index.php?func=detail&;
+|       group_id=21935&atid=384107&aid=XXXX
+|
+|       436067 splitting tech.char.class 
+
+Overtaken by events, we're planning to rework 5.0 completely.
+
+Proposal: close without action.
+
+Accepted.
+
+|       482818 Simplify ToC content model 
+
+Proposal: adopt the simplification[3] for 5.0.
+
+Accepted.
+
+|       514435 Allow reference within refentry 
+
+Proposal: reject
+
+Violates the general high-level structure of DocBook. Suggest
+reorganizing the content. We have adopted a proposal to allow multiple
+refpurposes in a refentry which may address some of the needs
+expressed in this proposal.
+
+Accepted.
+
+|       541444 caption in mediaobjectco 
+
+Norm expresses that we need a uniform story for titles and captions on 
+figures and graphics (and perhaps other formal objects).
+
+Action: Dick will consider the broader problem and develop a proposal
+        to attack the general problem.
+
+Leave open until later.
+
+|       543064 JavaObject tag
+
+Leave open until Jeff is present.
+
+|       562343 <packagename> element 
+
+Leave open pending Norm's action.
+
+|       565637 Associate non-inline image with link 
+
+Address as part of general linking in V5.0.
+
+|       574880 Add annotation element
+
+Leave open pending Mike's action.
+
+|       613293 Generalize programlisting
+
+Observations that there are ways to do this. Some reluctance to add
+new elements.
+
+We could add a new element. Or we could add a new element *and*
+simultaneously plan to remove programlisting and screen in the future
+(5.0?)
+
+Action: Steve to take this idea to the list.
+
+ADJOURNED.
+
+|       623524 (Re)Consider "choicelist" markup 
+|       675024 form, script, applet support
+|       686733 allow bibliography under <refentry>
+|       698026 cannot embed <superscript> within <guibutton>
+|       702185 add procedure as child of para
+|       711815 Tagging for subtler breaks or "pauses" within a chapter
+|       742373 Splitting Segmented List
+|       742624 refentry and bibliography
+|       798616 syntax="" or notation="" needed for code listings
+|       810932 Improved citation support
+|       824633 classname should be allowed in firstterm
+|
+|      The following RFEs are awaiting action items
+|
+|       413389 Enhance METHODNAME and VARNAME 
+|       431411 RFE 70: add generic linking capability
+|       522552 Add title attribute to <ulink> element
+|       574880 Add annotation element 
+|       613293 Generalize programlisting 
+|       621564 New element Task and children
+|
+|      The following RFEs are identified as V6.0 or later
+|
+|       531851 Remove inline person name elements
+|       532088 Remove RevHistory from qandaentry
+| ---
+|
+| [1] http://lists.oasis-open.org/archives/docbook/200309/msg00037.html
+[2] http://norman.walsh.name/2003/10/09/dei
+[3] http://lists.oasis-open.org/archives/docbook/200304/msg00051.html

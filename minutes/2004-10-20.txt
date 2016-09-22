@@ -1,0 +1,168 @@
+DocBook Technical Committee Meeting Minutes: 20 October 2004
+=============================================================
+
+The DocBook Technical Committee met on Wednesday, 20 October 2004 at
+05:00p EDT (02:00p PDT, 21:00GMT, 22:00BST, 23:00CEST, 06:00JST+,
+02:30a India+) for approximately 90 minutes.
+
+
+1. Roll call
+
+Present: Steven Cogorno, Adam Di Carlo, Gary Cornelius, Paul Grosso,
+Dick Hamilton, Nancy Harrison, Scott Hudson, Mark Johnson,
+Jirka Kosek, Larry Rowland, Bob Stayton, Norman Walsh 
+
+Regrets: none
+
+Absent: Mike Smith
+
+2. Accepted the minutes[1] of the previous meeting.
+
+3. Next meeting: originally scheduled for 17 November 2004,
+   but was changed to Monday 22 November to permit more
+   members to attend.
+
+4. Review of the agenda.
+   
+   No additions.
+
+5. Review of open action items
+
+  a. Mike to provide a better proposal for choicelist markup.
+     CONTINUE.
+ 
+  b. Norm to generate web pages for 4.2, 4.3, and 4.4x.
+     DONE.
+
+  c. Norm to release Simplified DocBook 1.1 CR2.
+     Almost DONE.
+ 
+  d. Norm to write to OASIS requesting restoration of 
+     Committee Specification or equivalent.  He should 
+     cite Bob's vendor example.
+     DONE.
+   
+  e. Norm to forward Larry's mail about table accessibility.
+     DONE.
+   
+  f. Norm to contact Mark Pilgrim, author of
+     Dive Into Accessibility, about accessibility issues.
+     DONE.
+   
+  g. Norm to produce DocBook 4.4CR1.
+     DONE.
+
+
+6. Status of DTD version 4.4 beta
+
+   Norm posted 4.4CR1 in September to docbook.org, but it appears
+   that the announcement did not go out, so little testing was done.
+   Adam mentioned some fixes needed to some public identifiers.
+   Will restart with 4.4CR2.
+   
+   ACTION: Norm to post 4.4CR2 very soon.
+
+7. Committee charter.  See latest draft [2]
+
+   With one minor editorial change to separate Fedora and Red Hat
+   in the list of users, the committee adopted the new charter
+   with unanimous consent.  At some future point we will need
+   to consider the committee IPR policy.
+
+8. "Committee Draft" vs. "OASIS Standard".
+
+   Norm says, "Committee Draft" is likely to make a comeback.
+   We plan to make the last version 4 DTD into an
+   OASIS Standard, but we can't yet say when we will have
+   the last version 4.
+
+9. Annotation proposal (Mike).  [3] [4]
+10. Accessibility.  [5] [6]
+
+   These two agenda items were discussed together.
+
+   Bob mentioned that the last meeting we discussed
+   simple (text only) annotations and complex (block
+   structures) annotations.  
+
+   Nancy asked about parentage of annotations, and
+   Norm said most places, like indexterm.
+
+   Jirka expressed concern about a stylesheet taking the
+   text value of an element and accidentally picking up
+   the annotation text.  But we already have that
+   problem with indexterms.
+
+   We discussed putting them out of line, but the committee found
+   that would make it too complicated for authors.
+
+   We discussed reusing textobject, but felt it unsuitable because
+   it currently is used for content such as program code.
+
+   Many felt the short annotation was most suitable for accessibility 
+   information.
+
+   These element names were nominated:
+
+     alt - short text-only 
+     annotation - contains block elements
+
+   A role attribute can be used to differentiate and customize
+   how annotations are used.
+
+   ACTION: Norm to recast his example implementation using these
+   two element names, and will restart a discussion on the list.
+
+   ACTION: Norm will resend Larry's table accessibility email
+   again since it was sent as an empty message last month.
+
+11. Discuss guidelines for accepting or rejecting requests.
+   
+    After some discussion, Larry summarized several possible guidelines:
+    a.  The change is within the scope of the charter.
+    b.  The change is consistent with the DocBook model.
+    c.  The change is beneficial to the community of users.
+
+    ACTION: Nancy will write up some text to be discussed
+    at the next meeting.
+
+12. Review of Requests for Enhancement
+
+      1028583 Allow both glossee and glossdef in glossentry 
+
+        The commitee felt the suggested change would not fit
+ the stated semantics of the glossary elements.
+ REJECTED.
+
+The meeting adjourned at 5:23 EDT.
+****************************************************************
+
+     The following RFEs are awaiting action items
+
+      973446 Replace Footnote with Annotation 
+      413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+      431411 RFE 70: add generic linking capability (Norm)
+      522552 Add title attribute to <ulink> element (Mike, annotations)
+      565637 Associate non-inline image with link (Norm, generic linking)
+      574880 Add annotation element (Mike)
+      623524 (Re)Consider "choicelist" markup (Mike)
+
+     The following RFEs are identified as V5.0 or later
+
+      974285 Check floatstyle/float attributes
+      958393 remove default class value from productname 
+      531851 Remove inline person name elements
+      532088 Remove RevHistory from qandaentry
+- ---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200409/msg00021.html
+[2] http://lists.oasis-open.org/archives/docbook-tc/200410/msg00015.html
+[3] http://lists.oasis-open.org/archives/docbook-tc/200406/msg00003.html
+[4] http://lists.oasis-open.org/archives/docbook-tc/200406/msg00005.html
+[5] http://lists.oasis-open.org/archives/docbook-tc/200408/msg00002.html
+[6] http://lists.oasis-open.org/archives/docbook-tc/200408/msg00003.html
+
+Bob Stayton
+Sagehill Enterprises
+DocBook Consulting
+bobs@sagehill.net

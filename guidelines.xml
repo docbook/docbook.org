@@ -1,0 +1,249 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='guidelines'>
+<info>
+<title>DocBook Mailing List Guidelines</title>
+<pubdate>07 Apr 2004</pubdate>
+</info>
+
+<para>This information<footnote><para>Credit where credit is due: I
+stole the vast majority of this document from Tony Graham's excellent
+posting on the DSSSL and XSL lists. Thanks, Tony!</para></footnote> is
+posted to the DocBook and DocBook Applications mailing lists (and
+their digests) at regular intervals under the subject line
+<quote>DocBook list guidelines</quote>.</para>
+
+<section><title>Posting</title>
+
+<para>Only subscribers can post to mailing lists, and only from the
+address they used when they subscribed. Mail from unsubscribed addresses
+is forwarded to a moderator and may be forwarded after some delay. Note,
+however, that due to the extraordinary volume of spam, some messages are
+likely to get lost entirely.</para>
+
+<para>Only text messages may be posted to the lists. If your mail
+client posts using HTML or some other <quote>enriched</quote> format,
+your message <emphasis>will be rejected</emphasis>. This decision was
+motivated by the fact that the overwhelming majority of spam that gets
+sent to the lists arrives as text/html.</para>
+
+<para>There are two DocBook-related lists: docbook and docbook-apps.
+The docbook list is for general questions about DocBook. The
+docbook-apps list is for questions about applications (stylesheets,
+transformation tools, publishing tools, processing requirements, etc.)
+that use or work with DocBook.</para>
+
+<para>Specifically:</para>
+
+<itemizedlist>
+<listitem>
+<para>Questions about DocBook markup (How do I markup a Widget? What's
+a FuncSynopsisInfo for?) should be sent to the docbook list.</para>
+</listitem>
+
+<listitem>
+<para>Questions about XSL or DSSSL stylesheets, publishing DocBook
+documents on your platform of choice, support for PostScript, PDF, or
+other types of output, questions about Windows or Unix applications
+that can consume or produce DocBook should be sent to the docbook-apps
+list.</para>
+</listitem>
+</itemizedlist>
+
+<para>Do not begin your subject line with <quote>help</quote> or
+<quote>subscribe</quote> since the list software will bounce the
+message because it looks like is an administrative request.</para>
+
+<para>Do not use un-informative subject lines like
+<quote>Urgent</quote>, <quote>Easy question</quote>, or
+<quote>Problem</quote>.  Instead, use a meaningful subject line that
+will make sense to the people whose help you are trying to get.</para>
+
+<para>Both subscribers to <email>docbook@lists.oasis-open.org</email> and
+<email>docbook-digest@lists.oasis-open.org</email> should post their messages to
+<email>docbook@lists.oasis-open.org</email>. The messages will be received by both
+subscribers to the list and subscribers to the digest.</para>
+
+<para>Both subscribers to <email>docbook-apps@lists.oasis-open.org</email> and
+<email>docbook-apps-digest@lists.oasis-open.org</email> should post their messages to
+<email>docbook-apps@lists.oasis-open.org</email>. The messages will be received by
+both subscribers to the list and subscribers to the digest.</para>
+
+<para>Do not start a new thread by replying to an unrelated message
+and just changing the subject line since the header of your message
+will contain references to the previous message and your new message
+will appear in the archive as one of the replies to the original
+message.  It is better to start a new message for a new thread.</para>
+
+</section>
+
+<section><title>Before You Post</title>
+
+<orderedlist>
+<listitem><para>Check that you are posting to the right list.</para>
+</listitem>
+
+<listitem><para>Make sure you are posting from the account that you
+used to subscribe. If you post from another account, your message will
+be delayed until it is approved by hand.</para>
+</listitem>
+
+<listitem><para>Check that your question isn't already answered in the
+mailing list archives at <link xlink:href="http://lists.oasis-open.org/archives/docbook/">http://lists.oasis-open.org/archives/docbook/</link>
+or <link xlink:href="http://lists.oasis-open.org/archives/docbook-apps/">http://lists.oasis-open.org/archives/docbook-apps/</link>.</para>
+</listitem>
+
+<listitem><para>If you are replying to a post, trim the quoted
+message to just the parts to which you are replying.</para>
+</listitem>
+</orderedlist>
+
+<para>The DocBook Technical Committee, as part of its commitment to
+maintaining DocBook, responds to Requests for Enhancement (RFEs)
+submitted by the DocBook user community. The likelihood that a
+submitted RFE will be implemented is determined by the degree to which
+it meets the following criteria:</para>
+
+<orderedlist numeration="loweralpha">
+<listitem><para>The change is within the scope of the TC's charter.</para>
+</listitem>
+<listitem><para>The change is consistent with the existing DocBook model.</para>
+</listitem>
+<listitem><para>The change is beneficial to the community of users.</para>
+</listitem>
+</orderedlist>
+
+<para>The implication of criterion (c) is that if only one user or company
+needs a particular change, the TC is likely to recommend a local
+customization to acheive the desired result.</para>
+
+</section>
+
+<section><title>Replies Go to the Author</title>
+
+<para>The DocBook lists don't set the <literal>Reply-to:</literal> header
+on messages (see
+<link xlink:href="http://www.unicom.com/pw/reply-to-harmful.html"><quote>Reply-To</quote> Munging Considered Harmful</link>)
+so <emphasis>replies go to the author by default</emphasis>.  If you
+want to reply to the list, make sure you include the list mailing
+address in your reply.</para>
+
+<para>Most mail readers make this easy by offering two forms of reply:
+reply/group-reply or reply/follow-up, for example.  If you want to
+post to the list, make sure you select group-reply or follow-up or
+whatever your mail reader calls it.
+</para>
+
+</section>
+
+<section><title>Use Short Quotes of Previous Messages in Replies</title>
+
+<para>Please do not quote entire messages just to add a few lines at
+the beginning or end.  Instead, quote the parts to which you are
+directly replying or quote enough to establish the context.</para>
+
+<para>Everybody on the list has already received the message that you
+are quoting, and anyone searching the archive will find your message
+and the previous message listed under the same thread.</para>
+
+<para>Subscribers to the mailing list will just ignore most of the quoted
+messages and move to the next post, but subscribers to the mailing
+list Digest will mostly have to page past the quoted messages to reach
+the next material in which they are interested in reading.</para>
+
+</section>
+<!--
+<section><title>Do Not Post Attachments</title>
+
+<para>Since mailing lists have in the past been unwittingly used for
+spreading viruses in e-mail attachments, all e-mail attachments are
+banned from the DocBook lists.</para>
+
+<para>Most relevant documents (SGML and XML files, stylesheets,
+documents, etc.) are text files, so this does not affect the majority
+of posts to the list since you can include the files' text in the body
+of your message.  If you need to refer to a binary file such as a PDF
+document, you should put the file on a Web site or FTP site and
+include the file's URL in your post.</para>
+
+</section>
+-->
+<section><title>Cross-Posting</title>
+
+<para>Cross-posting between the DocBook mailing lists or to other
+lists is often counter-productive unless everybody who replies to the
+thread is on both lists.  Cross-posts from non-subscribers continuing
+the thread will bounce, and mailing list subscribers who are not also
+on the other list will only see half of the thread, as will those on
+the other list who are not also on the mailing list.  Subscribers to
+both lists will see two copies of the message, annoying them as
+well.</para>
+
+</section>
+
+<section><title>Subscribing and Unsubscribing</title>
+
+<para>Subscriptions to the DocBook lists and their digest forms are
+managed by OASIS: <link xlink:href="http://www.oasis-open.org/mlmanage/index.php"/>.
+</para>
+
+</section>
+
+<section><title>Archive</title>
+
+<para>The DocBook mailing list messages are archived at
+<link xlink:href="http://lists.oasis-open.org/archives/docbook/">http://lists.oasis-open.org/archives/docbook/</link>.</para>
+
+<para>The DocBook Applications mailing list messages are archived at
+<link xlink:href="http://lists.oasis-open.org/archives/docbook-apps/">http://lists.oasis-open.org/archives/docbook-apps/</link>.</para>
+
+</section>
+
+<section><title>Reporting Bugs in Software</title>
+
+<para>Confirmed bugs in software should be reported to its author
+rather than to the mailing list, but it is appropriate to discuss
+suspected bugs and workarounds on the docbook-apps list
+<emphasis>only</emphasis>.</para>
+
+</section>
+
+<section><title>Further Information on DocBook</title>
+
+<informaltable>
+<tgroup cols="2">
+<tbody>
+<row>
+  <entry><link xlink:href="http://www.oasis-open.org/docbook">http://www.oasis-open.org/docbook</link></entry>
+  <entry>The DocBook Home Page</entry>
+</row>
+<row>
+  <entry><link xlink:href="http://www.docbook.org/">http://www.docbook.org/</link></entry>
+  <entry>DocBook: The Definitive Guide</entry>
+</row>
+<row>
+  <entry><link xlink:href="http://docbook.sourceforge.net/">http://docbook.sourceforge.net/</link></entry>
+  <entry><para>The DocBook project at SourceForge.</para>
+<para>The recommended way to report bugs in software maintined in the
+DocBook Project at SourceForge is with the project <quote>tracker</quote>
+mechanism. Please be sure to attach a test case that demonstrates
+the bug.</para></entry>
+</row>
+<row>
+  <entry><link xlink:href="http://nwalsh.com/docbook/xsl">http://nwalsh.com/docbook/xsl</link></entry>
+  <entry>DocBook XSL Stylesheets</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+
+<section><title>Contact</title>
+
+<para>If you have any questions or problems, please contact Norman
+Walsh, <email>ndw@nwalsh.com</email></para>
+
+</section>
+</article>

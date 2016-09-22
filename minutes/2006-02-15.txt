@@ -1,0 +1,177 @@
+DocBook Technical Committee Meeting Minutes: 15 February 2006
+=============================================================
+
+The DocBook Technical Committee met on Wednesday, 15 February 2006 at
+05:00p EST (02:00p PST, 22:00GMT, 22:00BST, 23:00CEST, 07:00JST+,
+03:30a India+) for 60 minutes.
+
+Agenda
+
+1. Roll call
+
+Present: Gary Cornelius, Paul Grosso, Mark Johnson, Dick
+Hamilton, Nancy Harrison, Scott Hudson, Gershon Joseph,
+Jirka Kosek, Larry Rowland, Bob Stayton, Norman Walsh
+
+Absent: Steve Cogorno, Kay Ethier, Alex Povzner
+
+Observers: Sandi Castle
+
+2. Accepted the minutes[1] of the previous meeting.
+
+3. Next meeting: 15 March 2006
+
+4. Review of the agenda.
+
+Added item 8b.
+
+5. Review of open action items
+
+    a.  The Java language has added java annotations, and Norm
+        wondered how these would be marked up in a synopsis.
+        The C# language also has annotations, Jirka pointed out.
+        ACTION: Norm to investigate this issue some more.
+ Jirka will take over this action item.
+
+    b.  Dick to write up a description of how authors
+        should handle elements that have been dropped.
+ COMPLETED.
+
+    c.  Norm to add the DTD default attribute syntax
+        to the V5 RNG grammar.
+ COMPLETED.
+
+    d.  Norm to express the default att values in the DTD version.
+ COMPLETED.
+
+    e.  Norm to remove the caveat note from the XSD version
+        that says it permits more than the RNG Grammar.
+ COMPLETED.
+
+    f.  Larry to test token string in both XSD and RNG validation.
+ COMPLETED.
+
+    g.  Norm to add multiple imageobject in imageobjectco
+        to V5.
+ COMPLETED.
+
+    h.  Norm to document new imageobjectco in The Definitive Guide.
+ COMPLETED.
+
+    i.  Scott to file an RFE about an issue in sdocbook 1.1.
+ COMPLETED.
+
+6.  DocBook namespace: conform to OASIS Artifact Standard
+    Identification Scheme for Metadata?
+
+The TC decided that the existing DocBook namespace was
+created before the standard was created, and so should
+be grandfathered in.
+
+7.  DocBook 4.5 standards progress.
+
+Norm reported that the ballots were sent, the vote
+is closed, and the vote was unanimously in favor
+of making DocBook 4.5 an OASIS Standard.
+
+ACTION: Norm to pursue moving it to a full OASIS vote.
+
+8.  DocBook 5 issues.
+
+A bug in the XSD version regarding xlink attributes
+being required was reported.
+
+ACTION: Norm to fix the XSD generation process.
+
+Larry praised Norm's work on the schemas for the
+extensive commenting in them.  Norm explained that
+the files use annotations in literate programming
+so he can extract information to the book DocBook:
+The Definitive Guide.
+
+ACTION: Dick to incorporate his guidelines for
+handling deleted elements into the comments and
+Definitive Guide.
+
+8b.  Open Reader
+
+Bob has been approached by the Open Reader project,
+which is developing an open source Ebook reader
+that extends the Open EBook Publishing Structure (OEBPS)
+that has not been in active development.  One
+new feature would be to be able to read DocBook
+natively.
+
+They would like to make Open Reader an OASIS standard.  Bob
+suggested to them that someone should join OASIS to drive
+the formation of a new TC from the membership.
+
+Several DocBook TC members expressed strong interest.
+The contact information is included here in the minutes. [2]
+Anyone that is interested can contact Bob for more
+information.
+
+9. Review of Requests for Enhancement
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;
+      group_id=21935&atid=384107&aid=XXXX
+
+      1306027  Support for annotations in synopsis elements
+
+Norm has withdrawn his action item.
+ACTION: Jirka will think about this item.
+
+      1416903  Front and back cover copy
+
+The TC recognized the need, and suggested a new element
+named cover to be included in bookinfo. Its content model
+would resemble that of sidebar.  More than one could be
+included, and a role attribute could be used to designate
+front, back, spine, or other location.  This would be
+for V5.
+
+ACTION: Norm to propose a content model for cover.
+
+      1428449  caption should be optional in sdocbook 1.1 informaltable
+
+ACTION: Norm to fix sdocbook and release a new version.
+
+      1351109  Put structfield and structname back to V5.0
+
+Bob suggested that if these programming constructs have
+elements, then other constructs in other programming
+languages should be considered as well, but that would
+lead to too many elements.
+
+Norm suggested that varname with a role attribute met this
+need.
+
+Larry: what about the parent-child relationship of structure
+and its name and fields?  The current schemas don't have
+a structure element with that relationship, so that would
+be a new feature.  It should have a new RFE.
+
+The request was denied.
+
+ACTION: Jirka to close out the RFE and respond to the
+submittor.
+
+- ---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200601/msg00007.html
+
+[2] Open Reader information:
+
+www.openreader.org
+
+Especially, read through the first five sections listed
+in the Technical area section at:
+
+http://www.openreader.org/index.php?option=com_content&task=category&sectionid=34&id=53&Itemid=157
+
+Bob Stayton
+Sagehill Enterprises
+DocBook Consulting
+bobs@sagehill.net

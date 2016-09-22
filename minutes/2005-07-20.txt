@@ -1,0 +1,166 @@
+DocBook Technical Committee Meeting Minutes: 20 July 2005
+=============================================================
+
+The DocBook Technical Committee met on Wednesday, 20 July 2005 at
+05:00p EDT (02:00p PDT, 21:00GMT, 22:00BST, 23:00CEST, 06:00JST+,
+02:30a India+) for 50 minutes.
+
+The teleconference phone number is +1.865.524.6352. The participant
+code is 7386368. Attendance at teleconferences is restricted to members
+(and prospective members) of the committee.
+
+Agenda
+
+1. Roll call
+
+Present: Paul Grosso, Dick Hamilton, Nancy Harrison,
+Jirka Kosek, Larry Rowland, Bob Stayton, Norman Walsh
+
+Regrets: Steve Cogorno, Scott Hudson, Mark Johnson,
+
+Absent: Adam Di Carlo, Gary Cornelius
+
+2. Accepted the minutes[1] of the previous meeting.
+
+3. Next meeting: 31 August 2005
+
+Still agreed on this changed date for the next meeting.
+
+4. Review of the agenda.
+
+Add item 10b: XIncludes in 5.0.
+
+5. Review of open action items
+
+   a. Norm to obtain OASIS namespace naming rules.
+      COMPLETED.
+
+   b. Norm to publish a version of the 5.0 spec before the next meeting.
+      COMPLETED.
+
+   c. Norm to publish 4.5 CR1.
+      COMPLETED.
+
+6.  Any update on new OASIS attendance rules?
+
+No news.
+
+7.  Adopt DTD version 4.5 as Committee Specification.
+
+Moved and seconded to adopt the candidate release
+of DocBook 4.5 DTD as a Committee Specification.
+No objections.
+
+ACTION: Norm to start the OASIS process to make this
+a Commitee Specification.
+
+[Norm learned later that we should have been putting it
+up for public review before adopting it as a Committee Spec.]
+
+8.  OASIS Artifact Identification Requirements [2]
+    (naming rules)
+
+Norm suggested that everyone read the draft spec and send
+comments to this mailing list:
+
+oasis-member-discuss@lists.oasis-open.org
+
+9.  Norm's DocBook V5 draft specification [3]
+
+No comments on the draft so far.
+
+ACTION: Norm to publish the draft as "5.0 alpha spec"
+on the OASIS website and docbook.org.
+
+10.  simplesect issues
+
+Discussion of the usage of simplesect in content models.
+Curently any simplesect elements must be at the end
+of the section container, and may not be followed
+by other sibling sections that are not simplesect.
+
+Decided to experiment with allowing following siblings
+to be normal sections.
+
+ACTION: Norm will add it to a new test release of 5.0.
+
+10b.  XIncludes in 5.0.
+
+Jirka expressed the need for validation of a document
+before XIncludes are resolved, as well as after.
+This is particularly useful for editing software.
+We agreed that a document could not be considered
+fully valid unless the XIncludes are resolved, but that
+as a convenience it would be nice to validate before
+XIncludes are resolved.
+
+Norm said the content models can be changed to include
+XInclude elements.  Jirka suggested that this be
+a separate schema with XInclude module, and that it
+be available in the standard DocBook schema distribution.
+It would not be a normative standard, but just
+a convenience for users.
+
+ACTION:  Norm will add it to the new test release of 5.0.
+
+11. Review of Requests for Enhancement
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;;
+      group_id=21935&atid=384107&aid=XXXX
+
+      1190435 Add rule tag
+      1190436 Add requirement tag
+      1194196 <qandaset> and <qandadiv>
+
+No response to queries for additional information on
+the preceding three RFEs.
+
+ACTION: Bob to ask each of the requestors again.
+
+      1226523 abbrev/acronym expansion(amplification)
+
+The group felt that the new alt and annotation markup
+in V 5.0 satisfied this request.  There are no plans
+to add them to version 4.
+
+      1237762 Allow para+ in formalpara
+
+The group felt that allowing multiple paras
+in formalpara would create confusion as to the
+boundary of the formalpara.  Some felt the
+existing sidebar element should be used for that purpose.
+
+ACTION: Norm will follow up with the requestor for
+more use case information.
+
+Meeting adjourned at 5:50 EDT.
+-----------------------------------------------------------------
+
+     The following RFEs are awaiting action items
+
+      413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+      431411 RFE 70: add generic linking capability (Norm)
+      565637 Associate non-inline image with link (Norm, generic linking)
+      623524 (Re)Consider "choicelist" markup
+
+     The following RFEs are identified as V5.0 or later
+
+      1097183 Allow Task as a sibling of sections
+      1084491 Add address, orgname, orgdiv to corpauthor, corpcredit, etc.
+      974285 Check floatstyle/float attributes
+      958393 remove default class value from productname
+      531851 Remove inline person name elements
+      532088 Remove RevHistory from qandaentry
+---
+
+[1] http://lists.oasis-open.org/archives/docbook/200506/msg00037.html
+[2]
+http://lists.oasis-open.org/archives/entity-resolution/200506/msg00016.html
+[3] http://lists.oasis-open.org/archives/docbook-tc/200506/msg00007.html
+
+Bob Stayton
+Sagehill Enterprises
+DocBook Consulting
+bobs@sagehill.net

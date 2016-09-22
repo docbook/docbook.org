@@ -1,0 +1,164 @@
+| DocBook Technical Committee Meeting Minutes: 30 Nov 2001
+| ========================================================
+|
+| Agenda
+|
+| 1. Roll call
+
+Patricia Gee-Best
+Dick Hamilton (prospective)
+Sabine Ocker
+Michael Smith
+Norman Walsh, chair
+
+Absent:
+
+Dennis Evans
+Bob Stayton (prospective)
+
+Regrets:
+
+Nancy (Paisner) Harrison
+
+Meeting called to order by the chair.
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 4. Review of the agenda
+
+None.
+
+| 5. Review of open RFEs[2]
+|
+|      To browse a specific RFE, enter the URL (on one line):
+|
+|         http://sourceforge.net/tracker/index.php?func=detail&;
+|         group_id=21935&atid=384107&aid=XXXX
+|
+|      where XXXX is the RFE number.
+|
+|    423598 Content models that allow BridgeHead
+
+Accepted. We will remove bridgehead from glossdiv, indexdiv, bibliodiv.
+
+|    440667 Affiliation lacks CorpName
+
+Open.
+
+Action: Norm to write concrete proposal.
+
+|    441883 endterm behavior in link
+
+Open.
+
+Document the redundancy.
+
+|    470599 Need an imagedata to fit to max size
+
+Open.
+
+Requested a use case from the submitter.
+
+|    472229 Allow HTML tables
+
+There's general support for this feature, but no consensus
+for how to achieve it. We could use the xhtml namespace, or
+we could force authors to make a top-level choice: either
+HTML tables or CALS tables, not both, in a document.
+
+Preference: Namespaces or strict alternatives
+                1                2.5
+
+Action: Norm to ask on DocBook list
+
+|    472984 end note support
+
+Rejected.
+
+Stylesheet issue.
+
+|    473193 Add text form for equations
+
+Closed.
+
+Superceded by 480954.
+
+|    473365 Allow optional in funcprototype
+
+Open.
+
+UNIX Reference pages usually address this problem by repeating the
+entire synopsis.
+
+Action: Norm to ask on DocBook list
+
+|    477073 Modularize the hierarchy further
+
+Rejected.
+
+|    480954 Extend textobject to insert external files
+
+Accepted.
+
+|    480955 Add coref
+
+Accepted.
+
+|    480957 New name and address markup
+
+Postponed until the next meeting.
+
+|    482810 MsgText has far too broad a content mode
+
+Accepted.
+
+|    482811 Remove title from bibliocomponent.mix
+
+Accepted.
+
+|    482812 Adjust content of CiteTitle
+
+Accepted.
+
+|    482815 Remove %synop.class; from %para.char.mix
+
+Accepted.
+
+|    482818 Simplify ToC content model
+
+Open.
+
+Action: Norm to ask on list
+
+|    482819 Keep 'cooked' and 'raw' separated
+
+Accepted.
+
+|    482922 Allow MsgText only inside MsgSet
+
+Accepted.
+
+At this point the committee ran out of time.
+Meeting adjourned by the chair.
+
+| 11. Review of pending RFEs
+|
+|    412476 Class on ProductName should be #IMPLIED
+|    413389 Enhance METHODNAME and VARNAME
+|    416415 Remove Constant class from SystemItem
+|    425730 Create an SVG module
+|    431411 RFE 70: add generic linking capability
+|    431412 RFE 113: proc. exp. of RevHistory order
+|    434838 add partintroinfo element
+|    435518 Allow bibliography in refsect1
+|    436067 splitting tech.char.class
+|    439938 specify link destination for area
+|    440081 No example for ReleaseInfo
+|    444337 epilogue in dtd?
+|    451030 xref to block
+|    456460 Ordering of attribute declarations
+|
+| [1] http://lists.oasis-open.org/archives/docbook-tc/200111/msg00008.html
+| [2] http://sourceforge.net/tracker/index.php?group_id=21935&atid=384107

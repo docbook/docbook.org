@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>The DocBook HTML Forms Document Type</title>
+<link rel="stylesheet" href="http://www.oasis-open.org/spectools/css/oasis-wd.css" type="text/css" />
+<meta name="generator" content="DocBook XSL Stylesheets V1.65.1" />
+<meta name="description" content="DocBook HTML Forms Document Type is a modular superset of DocBook XML V4.3. It is a DocBook extension that allows HTML Forms to be included in DocBook content." />
+<style type="text/css">
+/*<![CDATA[*/
+    span.paranum { color: #7F7F7F;
+                   font-style: italic;
+                   font-family: monospace;
+                 }
+/*]]>*/
+</style>
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="article" lang="en" xml:lang="en">
+<div class="titlepage">
+<p class="logo"><a href="http://www.oasis-open.org/"><img src="http://www.oasis-open.org/spectools/images/oasis.gif" alt="OASIS" border="0" /></a></p>
+<div>
+<h1 class="title"><a name="d0e1" id="d0e1"></a>The DocBook HTML Forms Document Type</h1>
+</div>
+<div>
+<h2>Working Draft&#160;1.2CR1,&#160;27 Jul 2004</h2>
+</div>
+<div>
+<dl>
+<dt><span class="docid-heading">Document identifier:</span></dt>
+<dd>
+<p>wd-docbook-htmlforms-1.2CR1 (<a href="wd-docbook-htmlforms-1.2CR1.xml" target="_top">XML</a>, <a href="wd-docbook-htmlforms-1.2CR1.html" target="_top">HTML</a>, <a href="wd-docbook-htmlforms-1.2CR1.pdf" target="_top">PDF</a>)</p>
+</dd>
+</dl>
+</div>
+<div>
+<dl>
+<dt><span class="loc-heading">Location:</span></dt>
+<dd>
+<p><a href="http://www.oasis-open.org/docbook/specs">http://www.oasis-open.org/docbook/specs</a></p>
+</dd>
+</dl>
+</div>
+<div>
+<dl>
+<dt><span class="editor-heading">Editor:</span></dt>
+<dd>
+<p><span class="firstname">Norman</span> <span class="surname">Walsh</span>, Sun Microsystems, Inc.&#160;<tt class="email">&lt;<a href="mailto:Norman.Walsh@Sun.COM">Norman.Walsh@Sun.COM</a>&gt;</tt></p>
+</dd>
+</dl>
+</div>
+<div>
+<dl>
+<dt><a name="d0e58" id="d0e58"></a><span class="abstract-heading">Abstract:</span></dt>
+<dd>
+<p>DocBook HTML Forms Document Type is a modular superset of <a href="http://docbook.org/xml/" target="_top">DocBook XML V4.3</a>. It is a DocBook extension that allows HTML Forms to be included in DocBook content.</p>
+</dd>
+</dl>
+</div>
+<div>
+<dl>
+<dt><a name="d0e65" id="d0e65"></a><span class="status-heading">Status:</span></dt>
+<dd>
+<p>This is a working draft constructed by the editor. It is not an official committee work product and may not reflect the consensus opinion of the committee.</p>
+<p>Please send comments on this specification to the <tt class="email">&lt;<a href="mailto:docbook@lists.oasis-open.org">docbook@lists.oasis-open.org</a>&gt;</tt> list. To subscribe, send an email message to <tt class="email">&lt;<a href="mailto:docbook-request@lists.oasis-open.org">docbook-request@lists.oasis-open.org</a>&gt;</tt> with the word "<span class="quote"><tt class="literal">subscribe</tt></span>" as the body of the message.</p>
+</dd>
+</dl>
+</div>
+<div>
+<p class="copyright">Copyright © 2001, 2002, 2003, 2004 The Organization for the Advancement of Structured Information Standards [OASIS]. All Rights Reserved.</p>
+</div>
+<hr /></div>
+<div class="toc">
+<h2>Table of Contents</h2>
+<dl>
+<dt><span class="section"><a href="#s.intro">1. Introduction</a></span></dt>
+<dt><span class="section"><a href="#s.terminology">2. Terminology</a></span></dt>
+<dt><span class="section"><a href="#docbook">3. The DocBook HTML Forms Document Type V1.2CR1</a></span></dt>
+<dd>
+<dl>
+<dt><span class="section"><a href="#usage">3.1. Usage</a></span></dt>
+</dl>
+</dd>
+<dt><span class="section"><a href="#s.changes1">4. Changes in DocBook HTML Forms V1.2CR1</a></span></dt>
+<dt><span class="section"><a href="#d0e186">5. Release Notes</a></span></dt>
+</dl>
+<h3>Appendixes</h3>
+<dl>
+<dt><span class="appendix"><a href="#a.committee">A. OASIS DocBook Technical Committee (Non-Normative)</a></span></dt>
+<dt><span class="appendix"><a href="#a.notices">B. Notices</a></span></dt>
+<dt><span class="appendix"><a href="#a.ipr">C. Intellectual Property Rights</a></span></dt>
+<dt><span class="appendix"><a href="#a.revhistory">D. Revision History</a></span></dt>
+<dt><span class="bibliography"><a href="#bibl">References</a></span></dt>
+</dl>
+</div>
+<hr />
+<div class="section" lang="en" xml:lang="en">
+<div class="titlepage">
+<div>
+<h2 class="title" style="clear: both"><a name="s.intro" id="s.intro"></a>1.&#160;Introduction</h2>
+</div>
+</div>
+<p>DocBook is general purpose document type particularly well suited to books and papers about computer hardware and software (though it is by no means limited to these applications).</p>
+<p>DocBook HTML Forms is an extension to provide support for HTML Forms in DocBook documents.</p>
+<p>The <a href="mailto:docbook-tc@oasis-open.org" target="_top">DocBook Technical Committee</a> maintains the DocBook HTML Forms schema. DocBook HTML Forms is officially available as an [<a href="#xml-rec"><span class="abbrev">XML</span></a>] Document Type Definition (DTD).</p>
+<p>The Version 1.2 release is based on [<a href="#bib.docbook43"><span class="abbrev">DocBook V4.3</span></a>].</p>
+<p>The DocBook Technical Committee welcomes bug reports and requests for enhancement (RFEs) from the user community. The current list of outstanding requests is available through the <a href="http://sourceforge.net/" target="_top">SourceForge</a> <a href="http://sourceforge.net/tracker//?atid=384107&amp;group_id=21935&amp;func=browse" target="_top">tracker</a> interface. This is also the preferred mechanism for submitting new requests. Old RFEs, from a previous legacy tracking system, are <a href=
+"http://www.oasis-open.org/docbook/old-rfes.html" target="_top">archived</a> for reference.</p>
+</div>
+<div class="section" lang="en" xml:lang="en">
+<div class="titlepage">
+<div>
+<h2 class="title" style="clear: both"><a name="s.terminology" id="s.terminology"></a>2.&#160;Terminology</h2>
+</div>
+</div>
+<p>The key words <i class="glossterm">must</i>, <i class="glossterm">must not</i>, <i class="glossterm">required</i>, <i class="glossterm">shall</i>, <i class="glossterm">shall not</i>, <i class="glossterm">should</i>, <i class="glossterm">should not</i>, <i class="glossterm">recommended</i>, <i class="glossterm">may</i>, and <i class="glossterm">optional</i> in this Working Draft are to be interpreted as described in [<a href="#rfc2119"><span class="abbrev">RFC 2119</span></a>]. Note that for reasons of
+style, these words are not capitalized in this document.</p>
+</div>
+<div class="section" lang="en" xml:lang="en">
+<div class="titlepage">
+<div>
+<h2 class="title" style="clear: both"><a name="docbook" id="docbook"></a>3.&#160;The DocBook HTML Forms Document Type V1.2CR1</h2>
+</div>
+</div>
+<p>The DocBook HTML Forms Document Type is a superset of [<a href="#bib.docbook43"><span class="abbrev">DocBook V4.3</span></a>]. It is distributed from the <a href="http://www.oasis-open.org/docbook/" target="_top">DocBook site</a> at <a href="http://www.oasis-open.org/" target="_top">OASIS</a>. It is also available from the mirror on <a href="http://docbook.org/" target="_top">http://docbook.org/</a>.</p>
+<div class="section" lang="en" xml:lang="en">
+<div class="titlepage">
+<div>
+<h3 class="title"><a name="usage" id="usage"></a>3.1.&#160;Usage</h3>
+</div>
+</div>
+<p>To use this module, specify the public and system identifiers of this module in your document type declaration. For example, to use this module to write a book, use the following document type declaration:</p>
+<pre class="screen">
+&lt;!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook HTML Forms Module V1.2CR1//EN"
+               "http://www.oasis-open.org/docbook/xml/htmlforms/1.2CR1/dbforms.dtd"&gt;
+</pre>
+<p>Naturally, you can include an internal subset if you wish.</p>
+<p>To incorporate this module into a higher-level customization layer, use the public and system identifiers of this module in your customization layer. For example:</p>
+<pre class="screen">
+&lt;!DOCTYPE % docbookforms PUBLIC "-//OASIS//DTD DocBook HTML Forms Module V1.2CR1//EN"
+                        "http://www.oasis-open.org/docbook/xml/htmlforms/1.2CR1/dbforms.dtd"&gt;
+%docbookforms;
+</pre></div>
+</div>
+<div class="section" lang="en" xml:lang="en">
+<div class="titlepage">
+<div>
+<h2 class="title" style="clear: both"><a name="s.changes1" id="s.changes1"></a>4.&#160;Changes in DocBook HTML Forms V1.2CR1</h2>
+</div>
+</div>
+<p>This release updates DocBook HTML Forms to be a customization of DocBook XML V4.3.</p>
+<p>There are no substantive changes to the forms-specific markup.</p>
+</div>
+<div class="section" lang="en" xml:lang="en">
+<div class="titlepage">
+<div>
+<h2 class="title" style="clear: both"><a name="d0e186" id="d0e186"></a>5.&#160;Release Notes</h2>
+</div>
+</div>
+<p>None.</p>
+</div>
+<div class="appendix" lang="en" xml:lang="en">
+<h2 class="title" style="clear: both"><a name="a.committee" id="a.committee"></a>A.&#160;OASIS DocBook Technical Committee (Non-Normative)</h2>
+<p>The following individuals were members of the committee during the formulation of this Working Draft:</p>
+<div class="itemizedlist">
+<ul type="disc" compact="compact">
+<li>
+<p>Steve Cogorno</p>
+</li>
+<li>
+<p>Adam Di Carlo</p>
+</li>
+<li>
+<p>Paul Grosso</p>
+</li>
+<li>
+<p>Dick Hamilton</p>
+</li>
+<li>
+<p>Nancy Harrison</p>
+</li>
+<li>
+<p>Scott Hudson</p>
+</li>
+<li>
+<p>Mark Johnson</p>
+</li>
+<li>
+<p>Jirka Kosek</p>
+</li>
+<li>
+<p>Larry Rowland</p>
+</li>
+<li>
+<p>Michael Smith</p>
+</li>
+<li>
+<p>Robert Stayton, Secretary</p>
+</li>
+<li>
+<p>Norman Walsh, Chair, Editor</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="appendix" lang="en" xml:lang="en">
+<h2 class="title" style="clear: both"><a name="a.notices" id="a.notices"></a>B.&#160;Notices</h2>
+<p>Copyright © The Organization for the Advancement of Structured Information Standards [OASIS] 2001, 2002, 2003, 2004. All Rights Reserved.</p>
+<p>OASIS takes no position regarding the validity or scope of any intellectual property or other rights that might be claimed to pertain to the implementation or use of the technology described in this document or the extent to which any license under such rights might or might not be available; neither does it represent that it has made any effort to identify any such rights. Information on OASIS's procedures with respect to rights in OASIS specifications can be found at the OASIS website. Copies of
+claims of rights made available for publication and any assurances of licenses to be made available, or the result of an attempt made to obtain a general license or permission for the use of such proprietary rights by implementors or users of this specification, can be obtained from the OASIS Executive Director.</p>
+<p>OASIS invites any interested party to bring to its attention any copyrights, patents or patent applications, or other proprietary rights which may cover technology that may be required to implement this specification. Please address the information to the OASIS Executive Director.</p>
+<p>This document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to
+OASIS, except as needed for the purpose of developing OASIS specifications, in which case the procedures for copyrights defined in the OASIS Intellectual Property Rights document must be followed, or as required to translate it into languages other than English.</p>
+<p>The limited permissions granted above are perpetual and will not be revoked by OASIS or its successors or assigns.</p>
+<p>This document and the information contained herein is provided on an "<span class="quote">AS IS</span>" basis and OASIS DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</p>
+<p>OASIS has been notified of intellectual property rights claimed in regard to some or all of the contents of this specification. For more information consult the online list of claimed rights.</p>
+</div>
+<div class="appendix" lang="en" xml:lang="en">
+<h2 class="title" style="clear: both"><a name="a.ipr" id="a.ipr"></a>C.&#160;Intellectual Property Rights</h2>
+<p>For information on wether any patents have been disclosed that may be essential to implementing this specification, and any offers of patent licensing terms, please refer to the Intellectual Property Rights section of the DocBook web page (<a href="http://www.oasis-open.org/committees/docbook/" target="_top">http://www.oasis-open.org/committees/docbook/</a>)</p>
+</div>
+<div class="appendix" lang="en" xml:lang="en">
+<h2 class="title" style="clear: both"><a name="a.revhistory" id="a.revhistory"></a>D.&#160;Revision History</h2>
+<div class="revhistory">
+<table border="1" width="100%" summary="Revision history">
+<tr>
+<td align="left">Revision 1.2CR1</td>
+<td align="left">27 Jul 2004</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="bibliography">
+<div class="titlepage">
+<div>
+<h2 class="title"><a name="bibl" id="bibl"></a>References</h2>
+</div>
+</div>
+<div class="bibliodiv">
+<h3 class="title">Normative</h3>
+<div class="bibliomixed"><a name="xml-rec" id="xml-rec"></a>
+<p class="bibliomixed">[<span class="abbrev">XML</span>] Tim Bray, Jean Paoli, C. M. Sperberg-McQueen, <span class="foreignphrase"><i class="foreignphrase">et. al.</i></span>, editors. <span class="citetitle"><i class="citetitle"><a href="http://www.w3.org/TR/REC-xml" target="_top">Extensible Markup Language (XML) 1.0 (Third Edition)</a></i></span>. World Wide Web Consortium, 04 Feb 2004.</p>
+</div>
+<div class="bibliomixed"><a name="rfc2119" id="rfc2119"></a>
+<p class="bibliomixed">[<span class="abbrev">RFC 2119</span>] IETF (Internet Engineering Task Force). <span class="citetitle"><i class="citetitle"><a href="http://www.ietf.org/rfc/rfc2119.txt" target="_top">RFC 2119: Key words for use in RFCs to Indicate Requirement Levels</a></i></span>. S. Bradner. 1997.</p>
+</div>
+<div class="bibliomixed"><a name="bib.docbook43" id="bib.docbook43"></a>
+<p class="bibliomixed">[<span class="abbrev">DocBook V4.3</span>] Norman Walsh, editor. <span class="citetitle"><i class="citetitle"><a href="http://docbook.org/specs/wd-docbook-docbook-4.3.html" target="_top">The DocBook Document Type: Version 4.3</a></i></span>. OASIS, 2004.</p>
+</div>
+</div>
+<div class="bibliodiv">
+<h3 class="title">Non-Normative</h3>
+<div class="bibliomixed"><a name="iso-14977" id="iso-14977"></a>
+<p class="bibliomixed">[<span class="abbrev">EBNF</span>] <span class="citetitle"><i class="citetitle">ISO/IEC 14977:1996, Information Technology -- Syntactic Metalanguage -- Extended BNF</i></span>, ISO/IEC, 1996.</p>
+</div>
+<div class="bibliomixed"><a name="rfc2234" id="rfc2234"></a>
+<p class="bibliomixed">[<span class="abbrev">RFC 2234</span>] IETF (Internet Engineering Task Force). <span class="citetitle"><i class="citetitle"><a href="http://www.ietf.org/rfc/rfc2234.txt" target="_top">RFC 2234: Augmented BNF for Syntax Specifications: ABNF</a></i></span>. D. Crocker and P. Overell. 1997.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

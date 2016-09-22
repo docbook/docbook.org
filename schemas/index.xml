@@ -1,0 +1,51 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='schemas'>
+<info>
+<title>DocBook Schemas</title>
+</info>
+
+<para>DocBook is a schema (available in several languages including
+RELAX NG, W3C XML Schemas, and XML DTDs)
+maintained by the
+<link xlink:href="mailto:docbook-tc@oasis-open.org">DocBook Technical
+Committee</link> of <link
+xlink:href="http://www.oasis-open.org/">OASIS</link>. It is particularly
+well suited to books and papers about computer hardware and software
+(though it is by no means limited to these applications).
+</para>
+<para>Historically, DocBook was a DTD. Some older versions are only
+available in that format.</para>
+
+<section>
+<title>DocBook V5.x</title>
+
+<para>The V5.x schemas are the focus of current development work.
+</para>
+
+<para>DocBook V5.0 is an
+<link xlink:href="http://www.oasis-open.org/specs/#dbv5.0">OASIS Standard</link>.</para>
+</section>
+
+<section>
+<title>DocBook V4.x</title>
+
+<para><link xlink:href="4x">DocBook V4.5</link> is the last of the DTD-based versions
+of DocBook. It is described normatively with XML and SGML DTDs. (There
+are no official XML versions of DocBook prior to V4.1.2.)
+</para>
+
+<para>DocBook V4.5 is also an
+<link xlink:href="http://www.oasis-open.org/specs/#dbv4.5">OASIS Standard</link>.</para>
+</section>
+
+<section>
+<title>Specifications</title>
+
+<para>Each release of DocBook includes a specification. The list
+of current (and historical) specifications is
+<link xlink:href="/specs">available online</link>.</para>
+</section>
+
+</article>

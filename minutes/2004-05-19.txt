@@ -1,0 +1,171 @@
+DocBook Technical Committee Meeting Minutes: 19 May 2004
+=============================================================
+
+The DocBook Technical Committee met on Wednesday, 19 May 2004 at
+05:00p EDT (02:00p PDT, 21:00GMT, 22:00BST, 23:00CEST, 06:00JST+,
+02:30a India+) for 90 minutes.
+
+
+1. Roll call
+Present: Steven Cogorno, Gary Cornelius, Adam Di Carlo, Paul Grosso,
+Nancy Harrison, Scott Hudson, Mark Johnson,
+Jirka Kosek, Larry Rowland, Mike Smith, Bob Stayton,
+Norman Walsh
+
+Absent: Dick Hamilton
+
+2. Accepted the minutes[1] of the previous meeting
+
+3. Next meeting: 16 June 2004.  No regrets.
+
+4. Review of the agenda.
+   Treat 5c as an agenda item.
+
+5. Review of open action items
+
+    a. Mike to provide a better proposal for choicelist markup.
+       CONTINUED.
+    b. Mike to reconsider the annotation problem and post his thoughts.
+       CONTINUED.
+    c. Dick to examine the use of alt, possibly as part
+       of the annotation discussion.
+       COMPLETED.
+    d. Norm to summarize the OASIS requirements document for
+       the document management system and the ensuing discussion.
+       OBSOLETE.
+    e. Norm to complete the reference pages for the
+       new 4.3 elements on the docbook.org site.
+       NEARLY COMPLETED.
+    f. Norm to publish flattened version of the 4.3 XML DTD.
+       CONTINUED.
+    g. Norm to post a reference to the paper written
+       with Sebastian Rahtz regarding TEI.
+       COMPLETED by Jirka:
+
+http://www.idealliance.org/papers/dx_xmle04/papers/03-08-01/03-08-01.html
+    h. Norm to produce a draft spec of 5.0.
+       CONTINUED.
+    i. Norm to ask Karl about creating stable OASIS URIs.
+       CONTINUED.
+    j. Norm to investigate and propose where biblioref should
+       be permitted.
+       COMPLETED.
+    k. Norm to suggest how to implement subscript and superscript
+       inside gui* (maybe not using %smallcptr.class.mix).
+       COMPLETED.
+    l. Dick to determine if RFE 541444 "caption in
+       mediaobjectco" is closed.
+       CONTINUED.
+
+5c.  Alt text.
+
+This item originally was requesting adding a way to specify
+alt text for equations, but the discussion covered the use
+of alt text in other places as well.
+
+Larry (speaking for Dick) suggested looking at version 5.0
+for adding an annotation feature, including merging footnote
+into an annotation with a footnote role attribute.
+Using textobject was one suggestion, but it can contain
+markup that might not work in an HTML alt value.
+
+One proposal is for an alt element that can contain only
+#PCDATA, and no markup.  This would restrict it to plain
+text on data entry for use in an HTML attribute value.
+
+Mike thought that defining an element based on the restriction
+of current browsers was bad design.  Why not let the processor
+convert it to plain text if needed?
+
+How many places would we need alt-like text?
+
+Nancy pointed out two basic needs for alt-like text:
+a) Limited-capability browsers.
+b) Accessibility for individuals with disabilities (section 508).
+
+ACTION: Larry to look into section 508 accessibility issues
+with DocBook elements.
+
+ACTION: Norm to contact Dave Pawson about accessibility issues.
+
+6. Where is biblioref permitted?
+   %xref.char.class is smaller than %link.char.class
+
+Norm proposed adding the new biblioref element wherever
+the xref element is permitted, since it is a specialized
+version of xref.  ACCEPTED.
+
+7. RFE 698026: cannot embed <superscript> within <guibutton>
+
+Norm proposed explicitly adding subscript and superscript to each
+gui* element's content model.  This was instead of adding
+it to the smallcptr.char.mix parameter entity, which would
+have added it to many elements.  ACCEPTED.
+
+8. DTD versions 4.3.1 and 4.4.
+
+Since we have several element and attribute changes, the
+committee decided to create a DTD version 4.4 instead
+of just a bug fix release 4.3.1.
+
+ACTION: Bob to review minutes for approved changes.
+
+ACTION: Norm to create a beta 4.4 DTD for the next meeting.
+
+9. Request for canonical URIs for Docbook DTDs. [2]
+    (carried forward from last month)
+
+Continued.
+
+
+10. Review of Requests for Enhancement
+
+a.  698026 cannot embed <superscript> within <guibutton>
+
+(see agenda item 7 above).
+
+b. 950206 Nested bibliodivs
+
+The group was not sure this request was within the scope
+of DocBook usage.
+
+ACTION: Adam to ask the submitter for more information.
+
+c. 955428 Add wordsize effectivity attribute (added to agenda)
+
+Sun and HP have found a need for a separate effectivity
+attribute to indicate computer processor word size.
+Most felt this was within the docbook domain, but there
+was concern about adding yet another global attribute, and
+if it was too specialized.
+There was also a desire for a better name.
+
+ACTION: Bob to add to next month's agenda.
+
+11.  Official release of other DocBook modules.
+
+ACTION: Norm to create official releases for Simplified DocBook 1.1,
+MathML, and others that are dependent on DocBook 4.3.
+
+*************************************
+Meeting adjourned.
+*************************************
+
+     The following RFEs are awaiting action items
+
+      413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+      431411 RFE 70: add generic linking capability (Norm)
+      522552 Add title attribute to <ulink> element (Mike, annotations)
+      541444 caption in mediaobjectco (closed?) (Dick)
+      565637 Associate non-inline image with link (Norm, generic linking)
+      574880 Add annotation element (Mike)
+      623524 (Re)Consider "choicelist" markup (Mike)
+
+     The following RFEs are identified as V6.0 or later
+
+      531851 Remove inline person name elements
+      532088 Remove RevHistory from qandaentry
+- ---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200404/msg00008.html
+[2] http://lists.oasis-open.org/archives/docbook/200404/msg00032.html

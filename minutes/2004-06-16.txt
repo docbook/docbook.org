@@ -1,0 +1,201 @@
+DocBook Technical Committee Meeting Minutes: 16 June 2004
+=============================================================
+
+The DocBook Technical Committee met on Wednesday, 16 June 2004 at
+05:00p EDT (02:00p PDT, 21:00GMT, 22:00BST, 23:00CEST, 06:00JST+,
+02:30a India+).
+
+1. Roll call
+Present: Steven Cogorno, Gary Cornelius, Paul Grosso,
+Nancy Harrison, Scott Hudson, Mark Johnson,
+Jirka Kosek, Mike Smith, Bob Stayton, Norman Walsh 
+
+Regrets: Dick Hamilton, Larry Rowland
+
+Absent: Adam Di Carlo 
+
+2. Accepted the minutes[1] of the previous meeting
+
+3. Next meeting: 21 July 2004.
+
+4. Review of the agenda.
+   No additions.
+
+5. Review of open action items
+
+    a. Mike to provide a better proposal for choicelist markup.
+       CONTINUED.
+    b. Mike to reconsider the annotation problem and post his thoughts.
+       COMPLETED.
+    c. Norm to publish flattened version of the 4.3 XML DTD.
+       CONTINUED.
+    d. Norm to produce a draft spec of 5.0.
+       CONTINUED.
+    e. Norm to ask Karl about creating stable OASIS URIs.
+       CONTINUED.
+    f. Dick to determine if RFE 541444 "caption in 
+       mediaobjectco" is closed.
+       COMPLETED.
+    g. Larry to look into section 508 accessibility issues
+       with DocBook elements.
+       CONTINUED.
+    h. Norm to contact Dave Pawson about accessibility issues.
+       COMPLETED.
+    i. Adam to ask the submitter for more information.
+       about 950206 Nested bibliodivs
+       CONTINUED.
+    j. Norm to create official releases for Simplified DocBook 1.1,
+       MathML, and others that are dependent on DocBook 4.3.
+       CONTINUED.
+
+6. DTD version 4.4 beta
+
+Adam sent email about the use of 'XML' in the SGML DTD.
+Norm said that since version 4.2 the SGML DTD is a wrapper around
+the XML DTD, so references to the XML components are correct,
+because there are no corresponding SGML components.
+
+Adam also mentioned the ChangeLog for the SGML version fails to
+point out some changes because they are in the XML components.
+
+ACTION: Norm to work with Adam and others to figure out how to
+track such changes.
+
+7. html:form should be available in more places
+   than in %divcomponent.mix;  [2] [3]
+
+Since HTML permits a form element to appear in many places,
+there is some agreement with the proposal.
+
+ACTION:  Bob to identify elements in DocBook that correspond to
+valid locations in HTML.
+
+ACTION: In a similar case, Scott will investigate places where
+anchor should be permitted.
+
+8.  SGML 4.3 tweaks
+
+    Two complaints against SGML DTD 4.3. [4]
+
+New xml:base attribute has a colon character which is not
+included in the standard SGML name character set.
+Since xml:base is an XML feature, it was proposed that
+it be removed from the SGML version of the DTD.
+
+ACTION: Norm to query the mailing list about removing xml:base
+from the SGML version of 4.4.
+
+The other problem was conflict in the SGML version of the
+DTD between the enumerated frame attribute in the CALS table model
+and the enumerated rules attribute in the HTML table model after they
+were merged in 4.3.  This was not a problem in the XML version.
+Three ideas were suggested:
+  1. remove the HTML table model from the SGML version
+  2. remove the rules attribute
+  3. make the rules attribute CDATA, not enumerated.
+
+Number 3 was tentatively accepted.
+
+ACTION: Norm to query the mailing list about the impact
+of this change for 4.4.
+
+9. floatstyle attribute status:
+
+Background:
+   In November 2002 we voted to add a new floatstyle CDATA
+   attribute to the four formal elements. [5]
+
+   In September 2003 we confirmed that floatstyle should be
+   added to the four formal elements in 4.3. [6]
+
+   In October 2003 we voted to abandon the new floatstyle
+   attribute on formal items, add a float attribute to
+   example, equation, and table with CDATA type #IMPLIED,
+   and change the float attribute on figure to CDATA leaving
+   the default value of 0 for now and changing it to #IMPLIED
+   in 5.0.  [7]
+
+   But floatstyle got into 4.3 on the four formal elements,
+   so should this be revisited yet again?
+
+The committee decided that we would leave it alone for
+all versions 4 of the DTD, and reconsider it for version 5.
+
+10. Request for canonical URIs for Docbook DTDs. [8]
+    (carried forward from last month)
+
+Postponed until next meeting.
+
+11. RFE 955428: Add wordsize effectivity attribute
+
+    Sun and HP have found a need for a separate effectivity
+    attribute to indicate computer processor word size.
+    Most felt this was within the docbook domain, but there
+    was concern about adding yet another global attribute,
+    and if it was too specialized.  There was also a desire
+    for a better name.
+
+After much discussion, the proposal to add a global
+'wordsize' effectivity attribute was ACCEPTED.  It will
+be added to version 4.4.
+
+ACTION: Bob to add to next agenda a discussion of guidelines
+for accepting or rejecting requests.
+
+12. alt text for accessibility.
+
+Postponed until next meeting.
+
+13. Review of Requests for Enhancement
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;
+      group_id=21935&atid=384107&aid=XXXX
+
+      950206 Nested bibliodivs
+
+             Postponed, pending Adam's action item.
+
+      958393 remove default class value from productname 
+
+             Agreed that this should be removed in 5.0, but it
+      would be backwards incompatible for version 4.
+
+      971095 Allow <authorgroup> anywhere <author> is allowed 
+
+      The committee felt that this falls into the category
+      of bibliographic information, which the group decided
+      earlier to not include in general text.  REJECTED.
+
+ACTION: Mike to communicate the decision to the submittor.
+
+ACTION: Bob to add Mike's annotations proposal  to next month's agenda.
+
+Meeting adjourned at 3:12 PDT.
+**************************************************************************
+
+     The following RFEs are awaiting action items
+
+      413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+      431411 RFE 70: add generic linking capability (Norm)
+      522552 Add title attribute to <ulink> element (Mike, annotations)
+      541444 caption in mediaobjectco (closed?) (Dick)
+      565637 Associate non-inline image with link (Norm, generic linking)
+      574880 Add annotation element (Mike)
+      623524 (Re)Consider "choicelist" markup (Mike)
+
+     The following RFEs are identified as V6.0 or later
+
+      531851 Remove inline person name elements
+      532088 Remove RevHistory from qandaentry
+- ---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200405/msg00004.html
+[2] http://lists.oasis-open.org/archives/docbook-apps/200406/msg00081.html
+[3] http://lists.oasis-open.org/archives/docbook-apps/200406/msg00084.html
+[4] http://lists.oasis-open.org/archives/docbook/200406/msg00002.html
+[5] http://lists.oasis-open.org/archives/docbook-tc/200211/msg00012.html
+[6] http://lists.oasis-open.org/archives/docbook-tc/200309/msg00003.html
+[7] http://lists.oasis-open.org/archives/docbook/200310/msg00082.html
+[8] http://lists.oasis-open.org/archives/docbook/200404/msg00032.html

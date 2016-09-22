@@ -1,0 +1,16 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='rfe'>
+<info>
+<title>Report a bug!</title>
+</info>
+
+<para>The DocBook “Request for Enhancements” (RFE)
+database has been moved to a Tracker at the
+<link xlink:href="http://sourceforge.net/projects/docbook/">DocBook
+SourceForge</link> site.</para>
+
+</article>
+
+

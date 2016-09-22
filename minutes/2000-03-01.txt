@@ -1,0 +1,77 @@
+OASIS Docbook TC
+1 March '00
+
+1.50 P.M.
+
+Attending, voting members:
+
+Norman Walsh, Arbortext, chairman
+Terry Allen, Commerce One
+Dennis Evans, Sun
+Tony Graham, Mulberry; for a while
+Michael Sabrio, Hewlett-Packard
+
+Attending, visitor:
+
+Eduardo Gutentag, Sun; for a while
+Sunthar Visuvalingam, InformIT
+
+The committee met for the first time after reappointment by the
+ACTC.
+
+Norm called the meeting to order.
+
+The committee agreed to appoint Terry to take minutes for this
+session.
+
+The committee discussed a list of groups of elements Norm constructed
+for another purpose, as a basis for beginning remodularization
+of parameter entities, and worked through dbhier.mod, reexamining
+the contents of book component elements and their compenent-level
+contents, except for *Info elements.
+
+Norm moved that we abandon the docbook-eb list; the motion passed
+without objection.  Minutes, draft and final, are to be sent to 
+docbook-tc.
+
+Terry moved that we adjourn this first meeting at 5 P.M., meet
+again on 2 March, 9.30-12.00 A.M.; and meet again in Paris, 14 June,
+9.30 A.M.-12.00 P.M., and 1-5 P.M., and 15 June, 9.30 A.M.-12.00 P.M,
+local time.  The motion passed without objection.
+
+The committee discussed briefly design goals for the use of XML Schema.
+
+
+Action Items:  
+ - Norm to ask that docbook-eb be eliminated
+ - Terry to ask the docbook list whether anyone is using ModeSpec
+ - Terry to ask PAC about process for Docbook
+
+2 March '00
+9.40 A.M.
+
+Attending, voting members:
+
+Norm Walsh, Arbortext, chairman
+Terry Allen, Commerce One
+Dennis Evans, Sun
+Tony Graham, Mulberry; for a while
+Michael Sabrio, Hewlett-Packard
+
+Attending, visitor:
+
+Sunthar Visuvalingam, InformIT
+
+Norm called the meeting to order.
+
+Terry moved that the committee agree to an email ballot,
+at the call of the chair, on advancing Docbook 4.0, when ready,
+from the status of a Draft Specification of the Docbook TC
+to a Specification of the Docbook TC (at which point it would
+be ready for OASIS member approval as an OASIS Standard).
+
+Discussion continued on parameterization issues.
+
+The motion was approved without objection.
+
+The meeting adjourned at 10.40.

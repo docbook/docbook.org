@@ -1,0 +1,93 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>productionset</title><link rel="stylesheet" href="defguide.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.64.1"><link rel="home" href="docbook.html" title="DocBook"><link rel="up" href="ref-elements.html" title="DocBook Element Reference"><link rel="previous" href="productionrecap.html" title="productionrecap"><link rel="next" href="productname.html" title="productname"></head><body><div class="navheader"><table border="0" cellpadding="0" cellspacing="0" width="100%" summary="Navigation table"><tr><td align="left">&nbsp;<a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a>&nbsp;<a title="productionrecap" href="productionrecap.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;<a title="DocBook Element Reference" href="ref-elements.html"><img src="figures/nav-up.png" alt="Up" border="0"></a>&nbsp;<a title="productname" href="productname.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td><td align="right"><i>DocBook: The Definitive Guide</i> 2.0.9 <span class="alpha-version">(<a href="co01.html"><em>Alpha</em></a>)</span> </td></tr></table></div><div class="refentry" lang="en"><a name="productionset.element"></a><div class="titlepage"><div><h1 class="title"><img src="figures/rev_ebnf.png" alt="[EBNF]" align="right">productionset</h1></div><div><p class="releaseinfo">$Revision: 1.3 $</p></div><div><p class="pubdate">$Date: 2002/06/12 11:18:29 $</p></div></div><div class="refnamediv"><p>productionset &#8212; A set of EBNF productions</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><h3><span class="bold"><b>Content Model</b></span></h3><pre class="synopsis">productionset ::=
+((<a href="title.html"><tt class="sgmltag-element">title</tt></a>,<a href="titleabbrev.html"><tt class="sgmltag-element">titleabbrev</tt></a>?)?,
+ (<a href="production.html"><tt class="sgmltag-element">production</tt></a>|<a href="productionrecap.html"><tt class="sgmltag-element">productionrecap</tt></a>)+)</pre><h3><span class="bold"><b>Attributes</b></span></h3><p><a href="ref-elements.html#common.attributes" title="Common Attributes">Common attributes</a></p><div class="docbookng-synopsis"><h3>DocBook NG &#8220;Bourbon&#8221; Content Model</h3><div class="define-first"><div class="element">productionset ::=<ul><li>Sequence of:</li><ul class="group"><li>One of: </li><ul class="choice"><li>Sequence of:</li><ul class="group"><li>Interleave of:</li><ul class="interleave"><li><tt><a href="title.html">title</a></tt>?</li><li><tt><a href="titleabbrev.html">titleabbrev</a></tt>?</li></ul><li><tt><a href="info.html">info</a></tt>? (db.info.titleforbidden)</li></ul><li><tt><a href="info.html">info</a></tt> (db.info.titleonly)</li></ul><li>One or more of:</li><ul class="oneOrMore"><li><tt><a href="production.html">production</a></tt></li><li><tt><a href="productionrecap.html">productionrecap</a></tt></li></ul></ul></ul><h4>DocBook NG &#8220;Bourbon&#8221; Attributes</h4><p>Common attributes and common linking attributes.</p></div></div></div></div><div class="refsect1" lang="en"><a name="d0e140375"></a><h2>Description</h2><p>This element is only available if you are using the
+<a href="appc.html#ebnf.module" title="EBNF Module">EBNF Module</a>.</p><p>A <a href="productionset.html"><tt class="sgmltag-element">ProductionSet</tt></a> is a collection of
+<i class="glossterm">Extended Backus-Naur Form</i> (EBNF)
+<a href="production.html"><tt class="sgmltag-element">Production</tt></a>s.</p><p>EBNF is a notation for describing the grammar of context-free
+languages. Even if you aren't conversant in the programming language
+concepts of context-free languages and grammars, it's not really
+as hard to understand as it sounds.</p><p>A set of EBNF productions describes the legal arrangements of
+tokens in a language. Consider arithmetic expressions as a simple
+example.</p><p>The expression
+&#8220;<span class="quote"><tt class="literal">3 + 4</tt></span>&#8221;
+is valid and so is
+&#8220;<span class="quote"><tt class="literal">3 + 4 - 5</tt></span>&#8221;, but
+&#8220;<span class="quote"><tt class="literal">3 - + - 4</tt></span>&#8221; is not, nor is
+&#8220;<span class="quote"><tt class="literal">3 + 4 6</tt></span>&#8221;. We can use EBNF to
+describe all the possible legal arrangements:</p><table width="100%" cellpadding="5" bgcolor="#F5DCB3" border="1" class="productionset" summary="EBNF for Arithemetic Expressions"><tr><th align="left" valign="top" class="productionset">Arithemetic Expressions</th></tr><tr><td><table border="0" width="99%" cellpadding="0" bgcolor="#F5DCB3" class="productionset" summary="EBNF productions"><tr><td align="left" valign="top" width="3%">[1]</td><td align="right" valign="top" width="10%"><a name="ebnf.expression"></a>Expression</td><td valign="top" width="5%" align="center"><tt>::=</tt></td><td valign="top" width="52%"><a href="ebnf.arith">ArithExpression</a> |
+       <a href="ebnf.mult">MultExpression</a>
+  
+  </td><td align="left" valign="top" width="30%">/*&nbsp;Does this grammar actually get precedence right?
+  &nbsp;*/<br></td></tr><tr><td align="left" valign="top" width="3%">[2]</td><td align="right" valign="top" width="10%"><a name="ebnf.arith"></a>ArithExpression</td><td valign="top" width="5%" align="center"><tt>::=</tt></td><td valign="top" width="52%"><a href="ebnf.expression">Expression</a>
+       '+'
+       <a href="ebnf.mult">MultExpression</a> |
+       <a href="ebnf.expression">Expression</a>
+       '-'
+       <a href="ebnf.mult">MultExpression</a>
+  </td><td align="left" valign="top" width="30%">&nbsp;</td></tr><tr><td align="left" valign="top" width="3%">[3]</td><td align="right" valign="top" width="10%"><a name="ebnf.mult"></a>MultExpression</td><td valign="top" width="5%" align="center"><tt>::=</tt></td><td valign="top" width="52%"><a href="ebnf.mult">MultExpression</a>
+       '*'
+       <a href="ebnf.mult">MultExpression</a> |
+       <a href="ebnf.mult">MultExpression</a>
+       '/'
+       <a href="ebnf.mult">MultExpression</a> |
+       <a href="ebnf.number">Number</a>
+  </td><td align="left" valign="top" width="30%">[&nbsp;Err: <a href="productionset.html#div0">Division by Zero</a>&nbsp;]</td></tr><tr><td align="left" valign="top" width="3%">[4]</td><td align="right" valign="top" width="10%"><a name="ebnf.number"></a>Number</td><td valign="top" width="5%" align="center"><tt>::=</tt></td><td valign="top" width="52%">[0-9]+</td><td align="left" valign="top" width="30%">&nbsp;</td></tr></table></td></tr></table><div class="constraintdef"><a name="div0"></a>
+<p><b>Division by Zero</b></p>
+<p>Division by zero is an error. Constraints, such as this one,
+are used to express conditions that cannot be expressed in the grammar.</p>
+</div><div class="refsect2" lang="en"><a name="d0e140499"></a><h3>Processing expectations</h3><p>
+Formatted as a displayed block. The detailed processing expecations with respect to
+individual productions, left-hand sides, and right-hand sides are quite
+complex.
+</p><p><a href="production.html"><tt class="sgmltag-element">Production</tt></a>s should be numbered.</p></div><div class="refsect2" lang="en"><a name="d0e140508"></a><h3>Parents</h3><p>These elements contain productionset:
+<span class="simplelist"><a href="appendix.html"><tt class="sgmltag-element">appendix</tt></a>, <a href="article.html"><tt class="sgmltag-element">article</tt></a>, <a href="bibliodiv.html"><tt class="sgmltag-element">bibliodiv</tt></a>, <a href="bibliography.html"><tt class="sgmltag-element">bibliography</tt></a>, <a href="blockquote.html"><tt class="sgmltag-element">blockquote</tt></a>, <a href="callout.html"><tt class="sgmltag-element">callout</tt></a>, <a href="chapter.html"><tt class="sgmltag-element">chapter</tt></a>, <a href="glossary.html"><tt class="sgmltag-element">glossary</tt></a>, <a href="glossdiv.html"><tt class="sgmltag-element">glossdiv</tt></a>, <a href="index.html"><tt class="sgmltag-element">index</tt></a>, <a href="listitem.html"><tt class="sgmltag-element">listitem</tt></a>, <a href="msgexplan.html"><tt class="sgmltag-element">msgexplan</tt></a>, <a href="msgtext.html"><tt class="sgmltag-element">msgtext</tt></a>, <a href="partintro.html"><tt class="sgmltag-element">partintro</tt></a>, <a href="preface.html"><tt class="sgmltag-element">preface</tt></a>, <a href="procedure.html"><tt class="sgmltag-element">procedure</tt></a>, <a href="refsect1.html"><tt class="sgmltag-element">refsect1</tt></a>, <a href="refsect2.html"><tt class="sgmltag-element">refsect2</tt></a>, <a href="refsect3.html"><tt class="sgmltag-element">refsect3</tt></a>, <a href="refsection.html"><tt class="sgmltag-element">refsection</tt></a>, <a href="refsynopsisdiv.html"><tt class="sgmltag-element">refsynopsisdiv</tt></a>, <a href="sect1.html"><tt class="sgmltag-element">sect1</tt></a>, <a href="sect2.html"><tt class="sgmltag-element">sect2</tt></a>, <a href="sect3.html"><tt class="sgmltag-element">sect3</tt></a>, <a href="sect4.html"><tt class="sgmltag-element">sect4</tt></a>, <a href="sect5.html"><tt class="sgmltag-element">sect5</tt></a>, <a href="section.html"><tt class="sgmltag-element">section</tt></a>, <a href="setindex.html"><tt class="sgmltag-element">setindex</tt></a>, <a href="simplesect.html"><tt class="sgmltag-element">simplesect</tt></a>, <a href="step.html"><tt class="sgmltag-element">step</tt></a>, <a href="taskprerequisites.html"><tt class="sgmltag-element">taskprerequisites</tt></a>, <a href="taskrelated.html"><tt class="sgmltag-element">taskrelated</tt></a>, <a href="tasksummary.html"><tt class="sgmltag-element">tasksummary</tt></a></span>.</p></div><div class="refsect2" lang="en"><a name="d0e140614"></a><h3>Children</h3><p>The following elements occur in productionset:
+<span class="simplelist"><a href="production.html"><tt class="sgmltag-element">production</tt></a>, <a href="productionrecap.html"><tt class="sgmltag-element">productionrecap</tt></a>, <a href="title.html"><tt class="sgmltag-element">title</tt></a>, <a href="titleabbrev.html"><tt class="sgmltag-element">titleabbrev</tt></a></span>.</p></div></div><div class="refsect1" lang="en"><a name="d0e140633"></a><h2>Examples</h2><div class="informalexample"><pre class="programlisting">&lt;!DOCTYPE simplesect PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+          "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"&gt;
+&lt;simplesect&gt;&lt;title&gt;EBNF Grammar&lt;/title&gt;
+
+&lt;productionset&gt;&lt;title&gt;Arithemetic Expressions&lt;/title&gt;
+&lt;production id="ebnf.expression"&gt;
+  &lt;lhs&gt;Expression&lt;/lhs&gt;
+  &lt;rhs&gt;&lt;nonterminal def="#ebnf.arith"&gt;ArithExpression&lt;/nonterminal&gt; |
+       &lt;nonterminal def="#ebnf.mult"&gt;MultExpression&lt;/nonterminal&gt;
+  &lt;lineannotation&gt;Does this grammar actually get precedence right?
+  &lt;/lineannotation&gt;
+  &lt;/rhs&gt;
+&lt;/production&gt;
+&lt;production id="ebnf.arith"&gt;
+  &lt;lhs&gt;ArithExpression&lt;/lhs&gt;
+  &lt;rhs&gt;&lt;nonterminal def="#ebnf.expression"&gt;Expression&lt;/nonterminal&gt;
+       '+'
+       &lt;nonterminal def="#ebnf.mult"&gt;MultExpression&lt;/nonterminal&gt; |
+       &lt;nonterminal def="#ebnf.expression"&gt;Expression&lt;/nonterminal&gt;
+       '-'
+       &lt;nonterminal def="#ebnf.mult"&gt;MultExpression&lt;/nonterminal&gt;
+  &lt;/rhs&gt;
+&lt;/production&gt;
+&lt;production id="ebnf.mult"&gt;
+  &lt;lhs&gt;MultExpression&lt;/lhs&gt;
+  &lt;rhs&gt;&lt;nonterminal def="#ebnf.mult"&gt;MultExpression&lt;/nonterminal&gt;
+       '*'
+       &lt;nonterminal def="#ebnf.mult"&gt;MultExpression&lt;/nonterminal&gt; |
+       &lt;nonterminal def="#ebnf.mult"&gt;MultExpression&lt;/nonterminal&gt;
+       '/'
+       &lt;nonterminal def="#ebnf.mult"&gt;MultExpression&lt;/nonterminal&gt; |
+       &lt;nonterminal def="#ebnf.number"&gt;Number&lt;/nonterminal&gt;
+  &lt;/rhs&gt;
+  &lt;constraint linkend="div0"/&gt;
+&lt;/production&gt;
+&lt;production id="ebnf.number"&gt;
+  &lt;lhs&gt;Number&lt;/lhs&gt;
+  &lt;rhs&gt;[0-9]+&lt;/rhs&gt;
+&lt;/production&gt;
+&lt;/productionset&gt;
+
+&lt;constraintdef id="div0"&gt;
+&lt;title&gt;Division by Zero&lt;/title&gt;
+&lt;para&gt;Division by zero is an error.&lt;/para&gt;
+&lt;/constraintdef&gt;
+&lt;/simplesect&gt;
+
+</pre></div></div></div><div class="navfooter"><table width="100%" summary="Navigation table"><tr><td width="40%" align="left"><a title="productionrecap" href="productionrecap.html"><img src="figures/nav-prev.png" alt="Prev" border="0"></a>&nbsp;</td><td width="20%" align="center"><a title="DocBook" href="docbook.html"><img src="figures/nav-home.png" alt="Home" border="0"></a></td><td width="40%" align="right">&nbsp;<a title="productname" href="productname.html"><img src="figures/nav-next.png" alt="Next" border="0"></a></td></tr><tr><td width="40%" align="left">productionrecap&nbsp;</td><td width="20%" align="center"><a title="DocBook Element Reference" href="ref-elements.html"><img src="figures/nav-up.png" alt="Up" border="0"></a></td><td width="40%" align="right">&nbsp;productname</td></tr></table></div><div class="copyrightfooter"><p><a href="dbcpyright.html">Copyright</a> &copy; 1999, 2000, 2001, 2002, 2003 <a href="http://www.oreilly.com/">O'Reilly &amp; Associates, Inc.</a> All rights reserved.</p></div></body></html>

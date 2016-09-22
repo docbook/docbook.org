@@ -1,0 +1,98 @@
+From server@amber.ora.com Mon Nov 27 15:44:49 1995
+Return-Path: <server@amber.ora.com>
+Received: from ruby.ora.com by jasper.ora.com.noname (4.1/SMI-4.1)
+	id AA27262; Mon, 27 Nov 95 15:44:48 EST
+Errors-To: listown@online.ora.com
+Received: from amber.ora.com (amber.ora.com [198.112.208.11]) by ruby.ora.com (8.6.12/8.6.11) with ESMTP id PAA29858; Mon, 27 Nov 1995 15:46:36 -0500
+Received: (from server@localhost) by amber.ora.com (8.6.12/8.6.11) id OAA19894; Mon, 27 Nov 1995 14:53:40 -0500
+Date: Mon, 27 Nov 1995 14:53:40 -0500
+Message-Id: <9511271939.AA25342@atiaus.arbortext.com>
+Errors-To: listown@online.ora.com
+Reply-To: paul@arbortext.com
+Originator: davenport@online.ora.com
+Sender: davenport@online.ora.com
+Precedence: bulk
+From: paul@arbortext.com (Paul Grosso)
+To: Multiple recipients of list <davenport@online.ora.com>
+Subject: math tagging [was November Davenport meeting: notes on DocBook issues]
+X-Listprocessor-Version: 6.0c -- ListProcessor by Anastasios Kotsikonas
+X-Comment: Davenport Group General Distribution List
+X-Comment: To unsubscribe send message to listproc@online.ora.com "unsubscribe davenport"
+
+> From server@amber.ora.com Mon Nov 27 13:00:17 1995
+> Date: Mon, 27 Nov 1995 10:38:44 -0500
+> Reply-To: eve@doctools.com
+> Sender: davenport@online.ora.com
+> From: Eve Maler <eve@doctools.com>
+> To: Multiple recipients of list <davenport@online.ora.com>
+> Subject: November Davenport meeting: notes on DocBook issues
+> 
+
+> Math fragments:
+>   Terry tried summation as a test case.  In TeX and eqn, it's marked up
+>   mostly visually.  There's a bit of content-based choice.  In 12083,
+>   nothing semantic is added to TeX and eqn methods.  Thus, an SGML 12083
+>   migration for math seems to have little benefit.  Besides 12083, there
+>   are other fragments: ArborText math (more semantics) and Anders's
+>   (Euromath?) (many more semantics).  Math is not a monolithic
+>   discipline; what math do we want to cover anyway?  Just "computing math"?
+> 
+>   Murray suggests: Bump this up to SGML Open and ask what they
+>   recommend.  The Digital Library project of Univ of Illinois is leaning
+>   towards 12083, so maybe we don't have to get more semantic if that
+>   body doesn't feel it's necessary.
+
+> For research/future meetings:
+>   Math; SGML Open's position on a math fragment; status of Euromath/Anders
+
+The "ArborText" math is (with just a couple exceptions) the earlier AAP
+math tag definitions.
+
+The 12083 math is the result of the revision of the AAP math.  Eric
+van Herwijnen, editor of 12083, is holding a 12083 discussion session
+in Boston the week of SGML 95.  One of the topics will be possible
+review of 12083 math.  (That's not to say it will be revised--in fact,
+I'm against any major revision--but the discussion will raise the issue.)
+
+Anders Berglund is (and has been) editor of ISO TR 9573 which has defined
+a math tagging that was referenced by CALS, though there remains little
+support for it.  CALS now refers to it as one of several choices (and 
+also mentions 12083 as a choice).  Someone--maybe WordPerfect--has announced
+some support for 9573 recently.
+
+Euromath is something else.  Paul Ellison of Univ of Exeter
+(P.A.Ellison@exeter.ac.uk), Nico Poppelier of Elsevier
+(N.POPPELIER@ELSEVIER.nl), Bjorn von Sydow Chalmers University, Sweden
+(sydow@cs.chalmers.se), Richard Timoney of Trinity College, Dublin
+(richardt@maths.tcd.ie), and Tibor Tscheke of STEP (step@step.de) are
+some folks who should be able to give you better pointers and info
+about Euromath.
+
+I chaired the AAP review several years ago that included input from
+various sources and many mathematicians, and if there was any clear
+result, it was that this is a religious issue almost as bad as table
+tagging but even harder to support arbitrary tagging.  Most mathematicians
+and typesetters agreed that one could not define all math tagging in
+terms of semantics, and that after a possibly semantic core, one had
+to have mostly geometric tagging.  The 12083 math came out of this effort.
+
+SGML Open might be a reasonable organization to do a survey of this
+issue, but it depends on member support.  (Things only get done when
+we have someone volunteer as subcommittee chair that gets things done.)
+
+In terms of support, there is some for ISO TR 9573, some for the original
+AAP tagging, and some--not a lot, but generally growing--support for 12083.
+Of those talking about added support (or users wanting added support), I
+generally hear about 12083.
+
+Then there is the large crowd that just wants to interchange the math
+in their SGML documents using TeX.
+
+paul
+
+Paul Grosso
+VP Research, ArborText, Inc. and Chief Technical Officer, SGML Open
+
+Email: paul@arbortext.com  
+
+

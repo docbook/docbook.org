@@ -1,0 +1,18 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='db4x'>
+<info>
+<title>DocBook 4.x</title>
+</info>
+
+<para>DocBook V4.x is defined normatively with XML and SGML DTDs.
+</para>
+
+<para>The Technical Committee provides the DocBook 4.x schemas in other
+schema languages, including RELAX NG and W3C XML Schema, but the XML DTD
+is the normative schema.</para>
+
+<?schemas release="^4.*"?>
+
+</article>

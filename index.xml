@@ -1,0 +1,69 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='home'>
+<info>
+<title>DocBook.org</title>
+</info>
+
+<para><inlinemediaobject xml:id="db5cover">
+<alt>[DB Cover]</alt>
+<imageobject>
+<imagedata fileref="graphics/smallcover.gif" align="left"/>
+</imageobject>
+</inlinemediaobject>This is the
+official home page for
+<citetitle xlink:href="http://oreilly.com/catalog/9780596805012/">DocBook 5: The Definitive Guide</citetitle>.
+The definitive guide is the official documentation for DocBook. The latest edition covers DocBook V5.0.
+It was published by
+<link xlink:href="http://www.oreilly.com/">O'Reilly Media</link> and
+<link xlink:href="http://xmlpress.net/">XML Press</link>.</para>
+
+<para>In support of DocBook users everywhere, this book and its source
+XML are available <link xlink:href="tdg5/">online</link>. Of course,
+you're always free to buy a copy, too, if you'd like :-).</para>
+
+<para>The previous edition of the book covered both SGML and XML and was aimed at the DocBook V3.x and
+DocBook V4.x schemas. It's no longer being actively developed, and has gone out of print, but it is
+still <link xlink:href="tdg/">available online.</link>
+<?br clear=all?>
+</para>
+
+<para><inlinemediaobject xml:id="xslcover">
+<alt>[XSL Cover]</alt>
+<imageobject>
+<imagedata fileref="graphics/xslcover.png" align="right"/>
+</imageobject>
+</inlinemediaobject><link xlink:href="http://www.sagehill.net/book-description.html"><citetitle>DocBook XSL:
+The Complete Guide</citetitle></link> by Bob Stayton and published by
+<link xlink:href="http://www.sagehill.net/">Sagehill Enterprises</link> is the
+definitive guide to using the DocBook XSL stylesheets. It provides the
+necessary documentation to realize the full potential of DocBook
+publishing. It covers all aspects of DocBook publishing tools,
+including installing, using, and customizing the stylesheets and
+processing tools.
+</para>
+
+<para role="swag"><inlinemediaobject xml:id="button">
+<alt>[Button]</alt>
+<imageobject>
+<imagedata fileref="graphics/button.jpg" align="left"/>
+</imageobject>
+</inlinemediaobject><link xlink:href="http://www.cafepress.com/dbswag">Also
+available</link>: buttons, shirts, and other swag.
+Wear your duck on your sleeve! Well, your chest anyway.
+<?br clear=all?>
+</para>
+
+<para><phrase role="jetbrains"><link xlink:href="http://jetbrains.com/">JetBrains</link> supports
+the DocBook project with <link xlink:href="http://jetbrains.com/idea/">IntelliJ IDEA</link>.
+</phrase>
+<phrase role="oxygen"><link xlink:href="http://oxygenxml.com/">SyncRO Soft SRL</link>
+supports the DocBook project with
+<link xlink:href="http://oxygenxml.com/">&lt;oXygen/&gt; xml editor</link>.
+</phrase>
+</para>
+
+<?whatsnew?>
+
+</article>

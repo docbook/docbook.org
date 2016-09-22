@@ -1,0 +1,113 @@
+| Agenda
+| ------
+| 
+| 1. Roll call
+
+Dennis Evans
+Sabine Ocker
+Michael Sabrio
+Michael Smith
+Norman Walsh
+
+Called to order by the chair, 13:02
+
+| 2. Accepting the minutes[1] of the previous meeting
+
+Accepted.
+
+| 3. Review of the agenda
+
+Added to any other business.
+
+| Continuation of the previous agenda[2]:
+| 
+| 7. Adapting DocBook for more topic-oriented manuals
+
+M. Sabrio: What we have above 'section' is very book-oriented.
+
+Norm provided a description of Website: independent pages with an
+external navigation document.
+
+M. Smith observes that this is what HTML Help really uses.
+
+M. Smith provided a brief summary of the Darwin (DIDA) project
+at IBM
+
+M. Smith and Dennis observed that there's a perception problem: people
+think DocBook is just about books.
+
+Norm suggested that perhaps we should create a Topic and allow
+the content model of Set to be book+ or topic+.
+
+Dennis will ask the local help author for more information.
+
+| 8. Addition of section.class parameter entity [5]
+
+M. Smith points out that this would allow greater flexibility in
+creating customization layers.
+
+Norm observes that historically we don't have one because sections
+used to be numbered.
+
+Proposal: add a section.class parameter entity (similar to
+refentry.class, chapter.class, etc.).
+
+Accepted.
+
+| 9. Expand the content model of filename (and perhaps some related elements)
+|    to be broader than smallcptr.char.mix. [6][7]
+
+Proposed: we will go back to cptr.char.mix, we will not create a new
+PE that's bigger than smallcptr.char.mix but smaller than cptr.char.mix.
+
+Accepted.
+
+Proposed: post the list of changed elements to the list. Wait a month
+for everyone to consider the issues and vote on this at the next
+meeting.
+
+These are the elements effected: Action, Command, Database, Filename,
+Hardware, Interface, KeyCap, Literal, Option, Parameter, Property, and
+SystemItem.
+
+| 10. Content model issues relating to lists and procedures.[8][9]
+
+This issue continues to be discussed. No conclusion is immediately
+obvious. Proponents of various proposals agreed to take them to the
+list for further discussion. We'll revisit the issue again at the next
+meeting.
+
+| 11. Any other business
+
+Proposed: accept EBNF, HTMLForms, and MathML layers as official V1.0
+work products.
+
+Accepted.
+
+Proposed: publish a version of the Simplified DocBook DTD as an
+official test release with the goal of eventually making it an
+official work product.
+
+Accepted.
+
+Adjourned 14:05 by the chair.
+
+| Upcoming Meetings[1]
+| -----------------
+| 19 Jun 2001 Teleconference at 13:00EDT for one hour
+| 17 Jul 2001 Teleconference at 13:00EDT for one hour
+| 21 Aug 2001 Teleconference at 13:00EDT for one hour
+| 18 Sep 2001 Teleconference at 13:00EDT for one hour
+| 16 Oct 2001 Teleconference at 13:00EDT for one hour
+| 20 Nov 2001 Teleconference at 13:00EDT for one hour
+| 14 Dec 2001: Face-to-face colocated with XML/MT 2001 (Orlando, FL)
+| 
+| Teleconferences will continue on the third Tuesday of each month.
+| 
+| [1] http://lists.oasis-open.org/archives/docbook-tc/200105/msg00005.html
+| [2] http://lists.oasis-open.org/archives/docbook-tc/200105/msg00004.html
+| [5] http://lists.oasis-open.org/archives/docbook-tc/200103/msg00005.html
+| [6] http://lists.oasis-open.org/archives/docbook-tc/200103/msg00006.html
+| [7] http://lists.oasis-open.org/archives/docbook/200101/msg00059.html
+| [8] http://lists.oasis-open.org/archives/docbook-tc/200103/msg00001.html
+| [9] http://lists.oasis-open.org/archives/docbook/200104/msg00016.html

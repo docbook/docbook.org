@@ -1,0 +1,184 @@
+DocBook Technical Committee Meeting Minutes: 26 January 2005
+=============================================================
+
+The DocBook Technical Committee met on Wednesday, 26 January 2005 at
+05:00p EST (02:00p PST, 22:00GMT, 22:00BST, 23:00CEST, 07:00JST+,
+03:30a India+) for 90 minutes.
+
+1. Roll call
+   Present: Steve Cogorno, Gary Cornelius, Paul Grosso,
+   Nancy Harrison, Scott Hudson, Dick Hamilton,
+   Jirka Kosek, Larry Rowland, Bob Stayton, Norman Walsh 
+   
+   Absent: Adam Di Carlo, Mark Johnson
+   
+2. Accepted the minutes[1] of the previous meeting.
+
+3. Next meeting: 16 February 2005
+
+   No regrets.
+
+4. Review of the agenda.
+   
+   Added item 13: description of DocBook V5.
+
+5. Review of open action items
+
+   a. Bob to review minutes to ensure new features are tested.
+      COMPLETED.
+
+   b. Norm to make a new CR release with Jirka's xml/docbook.cat patch.
+      COMPLETED.
+
+   c. Mike to move the module tests into separate subdirectories,
+      one for each module.
+      COMPLETED.
+
+   d. Mike to move the template.xml file out of 'tests'
+      COMPLETED.
+
+   e. Mike to move the test suite process so that it's a target
+      in the tests/Makefile.
+      CONTINUED.
+
+   f. Norm to write a concrete summary of the annotation proposal.
+      CONTINUED.
+
+   g. Norm to post a summary of pointers to changes and the stuff
+      I've written about DocBook V5.0.
+      CONTINUED.
+
+   h. Norm to post to the list that 5.0 will probably not have SGML
+      support.
+      COMPLETED.
+
+   i. Norm to think about how to extend corpauthor
+      COMPLETED. Norm suggests DTD V5 as the appropriate place
+      to make these kind of changes.
+
+
+7. Status of DTD version 4.4  [2]
+   Add rowheader attribute.
+   Add isrn class to biblioid in 4.4?
+
+   Norm published 4.4CR4 on 22 December, and no comments for a month.
+   It does include the rowheader attribute, but it won't include
+   the isrn class value on biblioid.
+
+   Norm proposed 4.4CR4 as a Committee Specifications.  Approved.
+
+ACTION: Norm to publish it and make the announcement.
+
+8. OASIS webpages status. 
+   Latest 4.4 DTD not available, only 4.4CR2. [3]
+
+   Norm reports that he now has an acceptable process for updating
+   the webpages. 
+
+ACTION: Norm to update the OASIS webpages.
+
+9. Annotation proposal (Mike).  [4] [5]
+
+    Continued to next meeting.
+
+ACTION: Norm to write a concrete proposal.
+
+10. Task markup as sibling to sections (Mike) [6] [7]
+    
+    Steve pointed out that the original proposal for task was as
+    a sibling of section.  This feature was dropped somewhere
+    along the way, and the DTD since 4.3 has had task as a
+    block element only.  
+
+    Changing it from a block to a section sibling would be
+    backwards incompatible.  Having task as both a block
+    element and section sibling could be ambiguous.  One
+    suggestion was to add a new tasksection element. There
+    was some resistance to creating elements as section
+    siblings that are not sections.
+
+    The committee decided that changing task would be better
+    discussed for the V5 DTD.
+
+11. Discuss guidelines for accepting or rejecting requests. [8] [9]
+
+    The new charter provides some guidelines.
+    Nancy suggested something more specific regarding a request
+    that comes from more than one source.  Larry said the wording
+    is very important, and the phrase "of benefit to the
+    general community" is useful.  
+
+ACTION: Nancy to rewrite the proposal and send it to the docbook
+        mailing list for discussion.
+
+13.  DTD V5 news
+
+     Norm has published a draft V5 version of DocBook The
+     Definitive Guide.  He has been able to build various
+     schema formats, including a DTD.
+
+ACTION: Norm to write a spec of V5 changes.
+
+    Jirka asked about the namespace for DocBook V5.
+
+ACTION: Norm to get OASIS naming rules.
+
+12. Review of Requests for Enhancement
+
+    To browse a specific RFE, enter the URL (on one line):
+
+      http://sourceforge.net/tracker/index.php?func=detail&;;
+      group_id=21935&atid=384107&aid=XXXX
+
+      1084491 Add address, orgname, orgdiv to corpauthor, corpcredit, etc. 
+              CONTINUED.
+
+      1097183 Allow Task as a sibling of sections 
+              Move to V5 list.
+
+      1095721 Allow text in inlineequation 
+
+      Use this for math that can be expressed with existing
+      DocBook markup, such as text, emphasis, superscript
+      and subscript.  Alt isn't suitable as it is PCDATA only.
+      Norm suggests a new element to define an appropriate
+      content model.  Larry suggested <mathphrase>.
+
+ACTION: Larry to write a proposal for text math in equation
+       elements.
+     
+------------------------------------------------------------------
+Meeting adjourned.
+
+     The following RFEs are awaiting action items
+
+      973446 Replace Footnote with Annotation 
+      413389 Enhance METHODNAME and VARNAME (Norm, generic linking)
+      431411 RFE 70: add generic linking capability (Norm)
+      522552 Add title attribute to <ulink> element (Mike, annotations)
+      565637 Associate non-inline image with link (Norm, generic linking)
+      574880 Add annotation element (Mike)
+      623524 (Re)Consider "choicelist" markup (Mike)
+
+     The following RFEs are identified as V5.0 or later
+
+      974285 Check floatstyle/float attributes
+      958393 remove default class value from productname 
+      531851 Remove inline person name elements
+      532088 Remove RevHistory from qandaentry
+- ---
+
+[1] http://lists.oasis-open.org/archives/docbook-tc/200412/msg00008.html
+[2] http://lists.oasis-open.org/archives/docbook/200412/msg00043.html
+[3] http://www.oasis-open.org/docbook/xml/
+[4] http://lists.oasis-open.org/archives/docbook-tc/200406/msg00003.html
+[5] http://lists.oasis-open.org/archives/docbook-tc/200406/msg00005.html
+[6] http://lists.oasis-open.org/archives/docbook-tc/200501/msg00000.html
+[7] http://lists.oasis-open.org/archives/docbook-tc/200501/msg00002.html
+[8] http://lists.oasis-open.org/archives/docbook/200411/msg00043.html
+[9] http://lists.oasis-open.org/archives/docbook/200411/msg00046.html
+
+Bob Stayton
+Sagehill Enterprises
+DocBook Consulting
+bobs@sagehill.net

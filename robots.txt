@@ -1,0 +1,6 @@
+# robots.txt -*- Robots -*-
+
+User-agent: *
+Disallow: /cgi-bin
+
+# EOF
