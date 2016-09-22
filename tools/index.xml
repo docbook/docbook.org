@@ -15,7 +15,10 @@ stylesheets for transforming DocBook into HTML, EPUB, PDF, and a wide
 variety of other formats.</para>
 
 <para>Recent versions of these stylesheets can be found on the
-<link xlink:href="http://cdn.docbook.org/">DocBook CDN</link>.</para>
+<link xlink:href="http://cdn.docbook.org/">DocBook CDN</link>.
+If you’re interested in contributing, development is on
+<link xlink:href="http://github.com/docbook/">GitHub</link>.
+</para>
 
 </article>
 
