@@ -6,3 +6,8 @@ This repository contains the sources for [[http://docbook.org][DocBook.org]].
 
 Changes to this repository are processed by Travis CI published to
 DocBook.org automagically.
+
+** Contact us
+
+To report problems or request changes, please file an issue
+on the [[https://github.com/docbook/docbook.org/issues][GitHub issue]] tracker.
