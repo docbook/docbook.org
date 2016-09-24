@@ -81,7 +81,7 @@ def pages = [
 
 /* Create a task for each page to update it if necessary */
 pages.each { page ->
-  task "$page" (dependsOn: ['menus_home','setupDocBook'], type: XMLCalabashTask) {
+  task "$page" (dependsOn: ['menus_home','gitlog','setupDocBook'], type: XMLCalabashTask) {
     inputs.file "${page}.xml"
     inputs.file "etc/menu.xml"
     inputs.file "style/webpage.xpl"
@@ -128,8 +128,18 @@ task dirpages(dependsOn: ['menus_home', 'dirlistings'], type: XMLCalabashTask) {
   pipeline "style/dirlistings.xpl"
 }
 
+/* Get the current git log in XML */
+task gitlog(type: Exec) {
+  if (System.getProperty('os.name').toLowerCase().contains('windows')) {
+    commandLine "cmd", "/c", "perl", "bin/git-log-summary"
+  } else {
+    commandLine "bin/git-log-summary"
+  }
+  standardOutput = new FileOutputStream(new File("etc/git-log-summary.xml"))
+}
+
 /* The default task. It just depends on all the necessary pages */
-task website(dependsOn: [dirpages,pages]) {
+task website(dependsOn: ["dirpages",pages]) {
   /* Nothing to see here */
 }
 task clean
