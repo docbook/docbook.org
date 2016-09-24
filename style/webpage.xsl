@@ -10,7 +10,8 @@
 		xmlns:t="http://docbook.org/xslt/ns/template"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                exclude-result-prefixes="atom h db f rel t xlink xs"
+                xmlns:r="http://nwalsh.com/ns/git-repo-info"
+                exclude-result-prefixes="atom h db f r rel t xlink xs"
 		version="2.0">
 
 <xsl:import href="../build/docbook/xslt/base/html/final-pass.xsl"/>
@@ -39,6 +40,9 @@
 	      as="element()"/>
 
 <xsl:variable name="whatsnew" select="document('../atom/whatsnew.xml')/*"
+	      as="element()"/>
+
+<xsl:variable name="gitlog" select="document('../etc/git-log-summary.xml')/*"
 	      as="element()"/>
 
 <!-- ============================================================ -->
@@ -118,9 +122,21 @@
 
     <xsl:call-template name="t:process-footnotes"/>
 
-    <xsl:comment>
-      <xsl:text>#include virtual="/include/footer.html"</xsl:text>
-    </xsl:comment>
+    <footer>
+      <xsl:variable name="gitfn" select="substring-after(base-uri(/), $gitlog/@root)"/>
+      <xsl:variable name="commit" select="($gitlog/r:commit[r:file = $gitfn])[1]"/>
+      <xsl:variable name="date" select="$commit/r:date cast as xs:dateTime"/>
+      <xsl:variable name="committer" select="substring-before($commit/r:committer, ' &lt;')"/>
+
+      <xsl:if test="exists($date)">
+        <xsl:text>Last updated on </xsl:text>
+        <xsl:value-of select="format-dateTime($date, '[D01] [MNn,*-3] [Y0001]')"/>
+        <xsl:text> at </xsl:text>
+        <xsl:value-of select="format-dateTime($date, '[h01]:[m01][P] [z]')"/>
+        <xsl:text> by </xsl:text>
+        <xsl:value-of select="$committer"/>
+      </xsl:if>
+    </footer>
   </div>
 </xsl:template>
 
