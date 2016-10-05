@@ -1,5 +1,77 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>4d0b0ccbf15edf8c5aea52cf1ce3aa4c9daeef96</hash>
+<date>2016-10-05T10:33:24-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #12 from ndw/master</message>
+</commit>
+
+<commit>
+<hash>7c2a24bbca03be3e0d9b7e94161781d51cddbd07</hash>
+<date>2016-10-05T10:11:36-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge branch 'master' of github.com:ndw/docbook.org</message>
+</commit>
+
+<commit>
+<hash>69a884321d24bf6ddd251ee163c9658ac0ec80ca</hash>
+<file>.gitignore</file>
+<file>build.gradle</file>
+<file>docs/transclusion/index.xml</file>
+<file>etc/menu.xml</file>
+<date>2016-10-05T10:02:08-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Fix issue #11 by adding a link to the transclusion doc</message>
+</commit>
+
+<commit>
+<hash>758d00913bb0d7873ed0d94f7a541f7d22776a65</hash>
+<file>.gitignore</file>
+<file>build.gradle</file>
+<file>docs/howto/index.xml</file>
+<date>2016-10-05T09:35:55-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Fix issue #9 by adding a link to the HOWTO</message>
+</commit>
+
+<commit>
+<hash>e294f33b624bbece2c26d512d108609cd1fc7c9f</hash>
+<file>style/webpage.xsl</file>
+<date>2016-10-05T09:34:50-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Don't crash on files that aren't yet in github</message>
+</commit>
+
+<commit>
+<hash>28edde6660ecc45079f795356949b28e2336452c</hash>
+<file>.gitignore</file>
+<file>build.gradle</file>
+<file>docs/transclusion/index.xml</file>
+<file>etc/menu.xml</file>
+<date>2016-10-05T10:02:08-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Fix issue #11 by adding a link to the transclusion doc</message>
+</commit>
+
+<commit>
+<hash>fc49c84aed63068fc7b5878a69127a70ed438304</hash>
+<file>.gitignore</file>
+<file>build.gradle</file>
+<file>docs/howto/index.xml</file>
+<date>2016-10-05T09:35:55-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Fix issue #9 by adding a link to the HOWTO</message>
+</commit>
+
+<commit>
+<hash>ae611ac5b59db85ea68e2e636b430503e7c6892b</hash>
+<file>style/webpage.xsl</file>
+<date>2016-10-05T09:34:50-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Don't crash on files that aren't yet in github</message>
+</commit>
+
+<commit>
 <hash>b4bf1954bef415da6eaf47e63be67f471210db37</hash>
 <date>2016-09-24T11:02:13+01:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
