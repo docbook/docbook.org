@@ -1,0 +1,12 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='howto'>
+<info>
+<title>Transition Guide</title>
+</info>
+
+<para>A transition guide,
+<link xlink:href="howto.html">DocBook V5.0: The Transition Guide</link>
+exists to help you plan your transition from DocBook V4.x to V5.x</para>
+</article>
