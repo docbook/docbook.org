@@ -1,0 +1,15 @@
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 version="5.0"
+	 xml:id='transclusion'>
+<info>
+<title>Transclusion</title>
+</info>
+
+<para>Transclusion is an important consideration in document management.
+We’ve documented some of
+<link xlink:href="../transclusion-requirements/transclusion-requirements.html">requirements</link>
+and
+<link xlink:href="transclusion.html">a proposal</link>
+for the semantics of transclusions in DocBook.</para>
+</article>
