@@ -125,10 +125,11 @@
     <footer>
       <xsl:variable name="gitfn" select="substring-after(base-uri(/), $gitlog/@root)"/>
       <xsl:variable name="commit" select="($gitlog/r:commit[r:file = $gitfn])[1]"/>
-      <xsl:variable name="date" select="$commit/r:date cast as xs:dateTime"/>
+      <xsl:variable name="cdate" select="$commit/r:date"/>
       <xsl:variable name="committer" select="substring-before($commit/r:committer, ' &lt;')"/>
 
-      <xsl:if test="exists($date)">
+      <xsl:if test="exists($cdate)">
+        <xsl:variable name="date" select="$cdate cast as xs:dateTime"/>
         <xsl:text>Last updated on </xsl:text>
         <xsl:value-of select="format-dateTime($date, '[D01] [MNn,*-3] [Y0001]')"/>
         <xsl:text> at </xsl:text>
