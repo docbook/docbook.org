@@ -77,7 +77,8 @@ def pages = [
              'tdg5/publishers/index',
              'tdg51/index',
              'tools/index',
-             'docs/howto/index'
+             'docs/howto/index',
+             'docs/transclusion/index'
             ]
 
 /* Create a task for each page to update it if necessary */
