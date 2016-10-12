@@ -113,6 +113,7 @@
 <dir path="xml/5.1CR1"  date="2013-06-25T00:11:57Z" release='5.1' version="5.1CR1" type="xml"  kind="cr"/>
 <dir path="xml/5.1CR2"  date="2013-12-12T01:38:43Z" release='5.1' version="5.1CR2" type="xml"  kind="cr"/>
 <dir path="xml/5.1CR3"  date="2014-07-16T00:40:38Z" release='5.1' version="5.1CR3" type="xml"  kind="cr"/>
+<dir path="xml/5.2b01"  date="2016-10-12T00:00:00Z" release='5.2' version="5.2b01" type="xml"  kind="beta"/>
 </module>
 
 <module name="DocBook XSD">

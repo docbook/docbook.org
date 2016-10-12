@@ -1,5 +1,48 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>ad246fba824d20e25a7df13c0eead55693f9f5d1</hash>
+<date>2016-10-12T19:26:48+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Merge pull request #15 from kosek/5.2b01</message>
+</commit>
+
+<commit>
+<hash>a503bd48862f79a4b55cf4da557bfe6e6f65e0c9</hash>
+<file>etc/releases.xml</file>
+<file>schemas/5x.xml</file>
+<date>2016-10-12T19:25:13+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Listing 5.2 as a new released version</message>
+</commit>
+
+<commit>
+<hash>5be0493ae9a04496c6fb8264b68d7da0f2f54bf0</hash>
+<file>xml/5.2b01/catalog.xml</file>
+<file>xml/5.2b01/docbook.nvdl</file>
+<file>xml/5.2b01/index.html</file>
+<file>xml/5.2b01/rng/assembly.rnc</file>
+<file>xml/5.2b01/rng/assembly.rng</file>
+<file>xml/5.2b01/rng/dbits.rnc</file>
+<file>xml/5.2b01/rng/dbits.rng</file>
+<file>xml/5.2b01/rng/docbook.rnc</file>
+<file>xml/5.2b01/rng/docbook.rng</file>
+<file>xml/5.2b01/rng/docbookxi.rnc</file>
+<file>xml/5.2b01/rng/docbookxi.rng</file>
+<file>xml/5.2b01/rng/index.html</file>
+<file>xml/5.2b01/sch/assembly.sch</file>
+<file>xml/5.2b01/sch/dbits.sch</file>
+<file>xml/5.2b01/sch/docbook.sch</file>
+<file>xml/5.2b01/sch/docbookxi.sch</file>
+<file>xml/5.2b01/sch/index.html</file>
+<file>xml/5.2b01/tools/db4-entities.pl</file>
+<file>xml/5.2b01/tools/db4-upgrade.xsl</file>
+<file>xml/5.2b01/tools/index.html</file>
+<date>2016-10-12T19:10:40+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>First beta release of V5.2</message>
+</commit>
+
+<commit>
 <hash>6572c4079527c05a6fcc05e7d20fb962c670e54b</hash>
 <date>2016-10-12T19:01:40+02:00</date>
 <committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
