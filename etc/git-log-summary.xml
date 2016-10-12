@@ -1,5 +1,12 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>6572c4079527c05a6fcc05e7d20fb962c670e54b</hash>
+<date>2016-10-12T19:01:40+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Merge pull request #14 from docbook/revert-13-5.2-b01</message>
+</commit>
+
+<commit>
 <hash>c7613ab15b2b2ecb472bb3f1f949b889275687ee</hash>
 <file>xml/5.2-b01/catalog.xml</file>
 <file>xml/5.2-b01/docbook.nvdl</file>
