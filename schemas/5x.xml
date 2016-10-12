@@ -20,9 +20,17 @@ schema languages, including W3C XML Schema and an
 XML DTD, but the RELAX NG Schema is the normative schema.</para>
 
 <section>
+<title>DocBook V5.2</title>
+
+<para>DocBook V5.2 is under development. There have been no official releases.</para>
+
+<?schemas release="^5\.2.*"?>
+</section>
+
+<section>
 <title>DocBook V5.1</title>
 
-<para>DocBook V5.1 is under development. There have been no official releases.</para>
+<para>DocBook V5.1 is OASIS Committee Specification and it has been submitted to become OASIS standard.</para>
 
 <?schemas release="^5\.1.*"?>
 </section>
