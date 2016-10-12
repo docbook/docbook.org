@@ -1,5 +1,35 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>dcf2d1c859d0f0e39d139802165456ceafe0b20c</hash>
+<date>2016-10-12T18:57:52+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Merge pull request #13 from kosek/5.2-b01</message>
+</commit>
+
+<commit>
+<hash>ba284113b1652c11c01198c2852c3179cd37f7b7</hash>
+<file>xml/5.2-b01/catalog.xml</file>
+<file>xml/5.2-b01/docbook.nvdl</file>
+<file>xml/5.2-b01/rng/assembly.rnc</file>
+<file>xml/5.2-b01/rng/assembly.rng</file>
+<file>xml/5.2-b01/rng/dbits.rnc</file>
+<file>xml/5.2-b01/rng/dbits.rng</file>
+<file>xml/5.2-b01/rng/docbook.rnc</file>
+<file>xml/5.2-b01/rng/docbook.rng</file>
+<file>xml/5.2-b01/rng/docbookxi.rnc</file>
+<file>xml/5.2-b01/rng/docbookxi.rng</file>
+<file>xml/5.2-b01/sch/assembly.sch</file>
+<file>xml/5.2-b01/sch/dbits.sch</file>
+<file>xml/5.2-b01/sch/docbook.sch</file>
+<file>xml/5.2-b01/sch/docbookxi.sch</file>
+<file>xml/5.2-b01/tools/db4-entities.pl</file>
+<file>xml/5.2-b01/tools/db4-upgrade.xsl</file>
+<date>2016-10-12T18:50:43+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Added first beta version of 5.2</message>
+</commit>
+
+<commit>
 <hash>4d0b0ccbf15edf8c5aea52cf1ce3aa4c9daeef96</hash>
 <date>2016-10-05T10:33:24-05:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
