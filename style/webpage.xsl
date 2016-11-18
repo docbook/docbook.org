@@ -91,11 +91,13 @@
     </xsl:message>
   </xsl:if>
 
-  <xsl:variable name="menu"
-                select="concat('../menus/',
-                        if (@xml:id = 'search') then 'home' else @xml:id,
-                        '.html')"/>
-  <xsl:apply-templates select="doc($menu)" mode="to-xhtml"/>
+  <xsl:if test="not(@xml:id = $off-menu-pages)">
+    <xsl:variable name="menu"
+                  select="concat('../menus/',
+                          if (@xml:id = 'search') then 'home' else @xml:id,
+                          '.html')"/>
+    <xsl:apply-templates select="doc($menu)" mode="to-xhtml"/>
+  </xsl:if>
 
   <div class="{local-name(.)}">
     <!-- HACK! -->
