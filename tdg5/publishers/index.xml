@@ -3,36 +3,12 @@
 	 version="5.0"
 	 xml:id='tdg5p'>
 <info>
+<meta xmlns="http://www.w3.org/1999/xhtml"
+      http-equiv="refresh" content="0; /tdg" />
 <title>DocBook Publishers: The Definitive Guide</title>
 </info>
 
-<para><citetitle>DocBook Publishers:
-The Definitive Guide</citetitle> is a special edition of
-<link xlink:href="/tdg5/">DocBook: The Definitive Guide</link> designed
-especially to cover the <link xlink:href="/schemas/pub5x">Publishers Schema</link>.</para>
-
-<para>This is an early, experimental version. The elements and content models
-are correct, the descriptions are (mostly) correct. But the prose is still
-quite incomplete. Also, there are known formatting and linking problems.
-</para>
-
-<para>Permission is granted to copy, distribute and/or modify this
-document under the terms of the GNU Free Documentation License, as
-spelled out in the book's <link xlink:href="5.0/en/html/dbcpyright.html">legal
-notice</link>.</para>
-
-<para>Versions available:</para>
-
-<itemizedlist>
-<listitem>
-<para><link xlink:href="5.0/en/html/docbook.html">Version 1.0.0</link> is
-a <emphasis>beta</emphasis> version of Publishers 1.0 (based on DocBook V5.0).</para>
-</listitem>
-<listitem>
-<para><link xlink:href="5.1b3/en/html/docbook.html">Version 1.1.0</link> is
-an even more experimental <emphasis>beta</emphasis> version of Publishers 1.1b1
-(based on DocBook V5.1b3).</para>
-</listitem>
-</itemizedlist>
+<para>Online versions of <citetitle>DocBook Publishers: The Definitive Guide</citetitle>
+have been moved.</para>
 
 </article>

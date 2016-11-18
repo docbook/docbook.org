@@ -3,63 +3,12 @@
 	 version="5.0"
 	 xml:id='tdg51'>
 <info>
+<meta xmlns="http://www.w3.org/1999/xhtml"
+      http-equiv="refresh" content="0; /tdg" />
 <title>DocBook 5.1: The Definitive Guide</title>
 </info>
 
-<para><link xlink:href="http://www.oreilly.com/catalog/docbook"><citetitle>DocBook 5:
-The Definitive Guide</citetitle></link> is Copyright © 2010-2013 Norman Walsh.
-</para>
-
-<para>Permission is granted to copy, distribute and/or modify this
-document under the terms of the GNU Free Documentation License, as
-spelled out in the book's <link xlink:href="en/html/dbcpyright.html">legal
-notice</link>.</para>
-
-<para>Versions available:</para>
-
-<itemizedlist>
-<listitem>
-<para><link xlink:href="en/html/docbook.html">Version 1.4.14</link> is
-<citetitle>DocBook 5: The Definitive Guide</citetitle>. It is a
-<quote>work in progress</quote> and purports to document DocBook V5.1CR3.
-</para>
-
-<para>The current OASIS Standard version of DocBook is V5.0. Documentation
-for DocBook V5.0 is <link xlink:href="../tdg5/">also available</link>.
-</para>
-
-</listitem>
-
-<!--
-<listitem>
-<para>A <link xlink:href="en/tdg5-0.0.25.zip">ZIP archive of HTML pages</link>.
-This is the same as the online version. Note that the root page is
-docbook.html, not index.html.</para>
-</listitem>
--->
-
-<listitem>
-<para>Ji&#x0159;&#x00ED; Kosek built a Microsoft
-HTML Help version of <link xlink:href="en/tdg5-en-1.3.chm">V1.3</link>.
-</para>
-</listitem>
-
-</itemizedlist>
-
-<!--
-<para><emphasis>Please</emphasis> do not download copies of the
-website with some recursive web slurping tool.</para>
--->
-
-<!--
-<section xml:id="diffs"><title>Changes</title>
-
-<para>A summary of the differences between DocBook V4.4 and
-DocBook v5.0 <link xlink:href="showdiff.html">is available</link>.
-This summary is only informational and may not be completely
-accurate.</para>
-
-</section>
--->
+<para>Online versions of <citetitle>DocBook: The Definitive Guide</citetitle>
+have been moved.</para>
 
 </article>
