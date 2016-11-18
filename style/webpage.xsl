@@ -60,6 +60,10 @@
   </xsl:if>
 </xsl:template>
 
+<xsl:template match="*" mode="m:head-content">
+  <xsl:copy-of select="db:info/h:*"/>
+</xsl:template>
+
 <xsl:template match="db:toc">
   <ul>
     <xsl:for-each select="../db:section">
@@ -76,18 +80,24 @@
   <xsl:variable name="header" select="doc('../include/header.html')"/>
   <xsl:apply-templates select="$header" mode="to-xhtml"/>
 
-  <xsl:if test="not($sitemenu//h:li[@id = current()/@xml:id]) and @xml:id != 'search'">
+  <xsl:variable name="off-menu-pages"
+                select="('search', 'tdg5', 'tdg5p', 'tdg51')"/>
+
+  <xsl:if test="not($sitemenu//h:li[@id = current()/@xml:id])
+                and not(@xml:id = $off-menu-pages)">
     <xsl:message terminate="yes">
       <xsl:text>Error: page is not in the menu: </xsl:text>
       <xsl:value-of select="@xml:id"/>
     </xsl:message>
   </xsl:if>
 
-  <xsl:variable name="menu"
-                select="concat('../menus/',
-                        if (@xml:id = 'search') then 'home' else @xml:id,
-                        '.html')"/>
-  <xsl:apply-templates select="doc($menu)" mode="to-xhtml"/>
+  <xsl:if test="not(@xml:id = $off-menu-pages)">
+    <xsl:variable name="menu"
+                  select="concat('../menus/',
+                          if (@xml:id = 'search') then 'home' else @xml:id,
+                          '.html')"/>
+    <xsl:apply-templates select="doc($menu)" mode="to-xhtml"/>
+  </xsl:if>
 
   <div class="{local-name(.)}">
     <!-- HACK! -->
