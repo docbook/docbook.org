@@ -1,5 +1,40 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>47ba6794eff96709ed9662c281ba39016380d0b7</hash>
+<date>2017-03-30T20:29:29+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Merge pull request #18 from kosek/master</message>
+</commit>
+
+<commit>
+<hash>e01ae5198a6de628a9c4a1d0fa1cb19304d2e7a7</hash>
+<file>etc/releases.xml</file>
+<file>xml/5.1/catalog.xml</file>
+<file>xml/5.1/docbook.nvdl</file>
+<file>xml/5.1/index.html</file>
+<file>xml/5.1/rng/assembly.rnc</file>
+<file>xml/5.1/rng/assembly.rng</file>
+<file>xml/5.1/rng/dbits.rnc</file>
+<file>xml/5.1/rng/dbits.rng</file>
+<file>xml/5.1/rng/docbook.rnc</file>
+<file>xml/5.1/rng/docbook.rng</file>
+<file>xml/5.1/rng/docbookxi.rnc</file>
+<file>xml/5.1/rng/docbookxi.rng</file>
+<file>xml/5.1/rng/index.html</file>
+<file>xml/5.1/sch/assembly.sch</file>
+<file>xml/5.1/sch/dbits.sch</file>
+<file>xml/5.1/sch/docbook.sch</file>
+<file>xml/5.1/sch/docbookxi.sch</file>
+<file>xml/5.1/sch/index.html</file>
+<file>xml/5.1/tools/db4-entities.pl</file>
+<file>xml/5.1/tools/db4-upgrade.xsl</file>
+<file>xml/5.1/tools/index.html</file>
+<date>2017-02-21T18:48:37+01:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Added link to V5.1 schemas</message>
+</commit>
+
+<commit>
 <hash>2e566878983a656872437fad06cd179e4d6016a1</hash>
 <date>2016-11-18T13:48:30-06:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
