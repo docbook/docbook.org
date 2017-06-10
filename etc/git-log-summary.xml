@@ -1,5 +1,48 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>90b233e6d86f249d1361dc6de7b59320bdeb1124</hash>
+<date>2017-06-10T18:07:02+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Merge pull request #20 from kosek/master</message>
+</commit>
+
+<commit>
+<hash>7a5ed2941ff16e969df6ad49ba8eb07f33e38eb8</hash>
+<file>etc/releases.xml</file>
+<file>xml/5.2b02/index.html</file>
+<file>xml/5.2b02/rng/index.html</file>
+<file>xml/5.2b02/sch/index.html</file>
+<file>xml/5.2b02/tools/index.html</file>
+<date>2017-06-10T18:01:59+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Adding links to 5.2b02 schema</message>
+</commit>
+
+<commit>
+<hash>baaabd04e9650b56efeb0f95d5e8b622374ec36e</hash>
+<file>xml/5.2b02/catalog.xml</file>
+<file>xml/5.2b02/docbook.nvdl</file>
+<file>xml/5.2b02/index.html</file>
+<file>xml/5.2b02/rng/assembly.rnc</file>
+<file>xml/5.2b02/rng/assembly.rng</file>
+<file>xml/5.2b02/rng/dbits.rnc</file>
+<file>xml/5.2b02/rng/dbits.rng</file>
+<file>xml/5.2b02/rng/docbook.rnc</file>
+<file>xml/5.2b02/rng/docbook.rng</file>
+<file>xml/5.2b02/rng/docbookxi.rnc</file>
+<file>xml/5.2b02/rng/docbookxi.rng</file>
+<file>xml/5.2b02/sch/assembly.sch</file>
+<file>xml/5.2b02/sch/dbits.sch</file>
+<file>xml/5.2b02/sch/docbook.sch</file>
+<file>xml/5.2b02/sch/docbookxi.sch</file>
+<file>xml/5.2b02/tools/db4-entities.pl</file>
+<file>xml/5.2b02/tools/db4-upgrade.xsl</file>
+<date>2017-06-10T17:55:45+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Added 5.2b02 schemas</message>
+</commit>
+
+<commit>
 <hash>47ba6794eff96709ed9662c281ba39016380d0b7</hash>
 <date>2017-03-30T20:29:29+02:00</date>
 <committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
