@@ -2579,6 +2579,30 @@
     <file>catalog.xml</file>
     <file>docbook.nvdl</file>
   </dir>
+  <dir dir='5.2b03' path='xml/5.2b03' release='5.2b03' type='xml'>
+    <dir dir='rng' path='xml/5.2b03/rng' release='5.2b03' type='rng'>
+      <file>assembly.rnc</file>
+      <file>assembly.rng</file>
+      <file>dbits.rnc</file>
+      <file>dbits.rng</file>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.2b03/sch' release='5.2b03' type='sch'>
+      <file>assembly.sch</file>
+      <file>dbits.sch</file>
+      <file>docbook.sch</file>
+      <file>docbookxi.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.2b03/tools' release='5.2b03' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <file>catalog.xml</file>
+    <file>docbook.nvdl</file>
+  </dir>
   <dir dir='dbrdfalite' path='xml/dbrdfalite'>
     <dir dir='5.1CR1' path='xml/dbrdfalite/5.1CR1' release='5.1CR1' type='xml' module='dbrdfalite'>
       <file>dbrdfalite.rnc</file>

@@ -1,5 +1,40 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>ea80b012183d6c94592ad2b4d96bbffea6280bc6</hash>
+<date>2017-11-06T16:25:44+01:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Merge pull request #21 from kosek/master</message>
+</commit>
+
+<commit>
+<hash>97f1bbabcbcb2a9a250b38e235691d65cb5d4b1a</hash>
+<file>etc/releases.xml</file>
+<file>xml/5.2b03/catalog.xml</file>
+<file>xml/5.2b03/docbook.nvdl</file>
+<file>xml/5.2b03/index.html</file>
+<file>xml/5.2b03/rng/assembly.rnc</file>
+<file>xml/5.2b03/rng/assembly.rng</file>
+<file>xml/5.2b03/rng/dbits.rnc</file>
+<file>xml/5.2b03/rng/dbits.rng</file>
+<file>xml/5.2b03/rng/docbook.rnc</file>
+<file>xml/5.2b03/rng/docbook.rng</file>
+<file>xml/5.2b03/rng/docbookxi.rnc</file>
+<file>xml/5.2b03/rng/docbookxi.rng</file>
+<file>xml/5.2b03/rng/index.html</file>
+<file>xml/5.2b03/sch/assembly.sch</file>
+<file>xml/5.2b03/sch/dbits.sch</file>
+<file>xml/5.2b03/sch/docbook.sch</file>
+<file>xml/5.2b03/sch/docbookxi.sch</file>
+<file>xml/5.2b03/sch/index.html</file>
+<file>xml/5.2b03/tools/db4-entities.pl</file>
+<file>xml/5.2b03/tools/db4-upgrade.xsl</file>
+<file>xml/5.2b03/tools/index.html</file>
+<date>2017-11-06T16:22:05+01:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Added new schema beta release 5.2b03</message>
+</commit>
+
+<commit>
 <hash>90b233e6d86f249d1361dc6de7b59320bdeb1124</hash>
 <date>2017-06-10T18:07:02+02:00</date>
 <committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
