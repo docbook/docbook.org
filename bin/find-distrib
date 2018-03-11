@@ -2,15 +2,27 @@
 
 use strict;
 use English;
+use Getopt::Std;
 use Time::Local;
+use vars qw($opt_o);
+
+my $usage = "Usage: $0 [-o output]\n";
+
+die $usage if ! getopts('o:');
+
+if ($opt_o) {
+    close (STDOUT);
+    open (STDOUT, ">$opt_o");
+}
 
 my @roots = ('rng', 'sgml', 'xml', 'xsd', 'docbook-ng', 'release');
-
 print "<releases xmlns='http://nwalsh.com/ns/releases'>\n";
 foreach my $root (@roots) {
     findDirs($root);
 }
 print "</releases>\n";
+
+close (STDOUT);
 
 # ============================================================
 
@@ -25,7 +37,7 @@ sub findDirs {
 
     return if $dir eq 'xml/simple/sdocbook';
 
-    if ($dir =~ /\/(\d(\.\d+)+([a-z]+[0-9]*)?)$/i) {
+    if ($dir =~ /\/(\d(\.\d+)+([a-z]+[0-9]*(-[0-9]+)?)?)$/i) {
 	$found = $1;
 	$justfound = 1;
 	$type = $1 if $dir =~ /^([^\/]+)\/.*$/;
