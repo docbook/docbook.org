@@ -1,5 +1,30 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>575bed9fc97d0a43e09c544854cc5539cba77f3d</hash>
+<date>2018-03-11T09:51:11-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #23 from ndw/dev</message>
+</commit>
+
+<commit>
+<hash>4c55b7adc87b65d1529f156f2ed101f94dd15e59</hash>
+<file>style/webpage.xsl</file>
+<date>2018-03-11T09:48:42-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Use https</message>
+</commit>
+
+<commit>
+<hash>d15fa68b5f3be19723678efc858d65bee8211e53</hash>
+<file>bin/find-distrib</file>
+<file>build.gradle</file>
+<file>gradle.properties</file>
+<date>2018-03-11T09:48:32-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Update build</message>
+</commit>
+
+<commit>
 <hash>ea80b012183d6c94592ad2b4d96bbffea6280bc6</hash>
 <date>2017-11-06T16:25:44+01:00</date>
 <committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>

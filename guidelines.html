@@ -2,13 +2,13 @@
    <head>
       <title>DocBook Mailing List Guidelines</title>
       <meta charset="utf-8"></meta>
-      <meta name="generator" content="DocBook XSL 2.0 Stylesheets V2.0.20"></meta>
+      <meta name="generator" content="DocBook XSL 2.0 Stylesheets V2.3.1"></meta>
+      <link href="https://cdn.docbook.org/resources/2.0.0/css/prism.css" rel="stylesheet" type="text/css"></link>
+      <link href="https://cdn.docbook.org/resources/2.0.0/css/db-prism.css" rel="stylesheet" type="text/css"></link>
       <link rel="stylesheet" type="text/css" href="/css/website.css"></link>
       <link xmlns:m="http://docbook.org/xslt/ns/mode" rel="stylesheet" type="text/css" href="/css/tabs.css"></link>
       <link xmlns:m="http://docbook.org/xslt/ns/mode" rel="stylesheet" type="text/css" href="/css/website.css"></link>
-      <link xmlns:m="http://docbook.org/xslt/ns/mode" rel="icon" href="http://docbook.org/graphics/docbook-icon16.png" type="image/png"></link><script type="text/javascript" src="https://docbook.github.io/release/2.0.20/resources/js/dbmodnizr.js"></script><link href="https://docbook.github.io/release/2.0.20/resources/css/prism.css" rel="stylesheet" type="text/css"></link>
-      <link href="https://docbook.github.io/release/2.0.20/resources/css/db-prism.css" rel="stylesheet" type="text/css"></link>
-   </head>
+      <link xmlns:m="http://docbook.org/xslt/ns/mode" rel="icon" href="https://docbook.org/graphics/docbook-icon16.png" type="image/png"></link><script type="text/javascript" src="https://cdn.docbook.org/resources/2.0.0/js/dbmodnizr.js"></script></head>
    <body>
       <div class="header">
          
@@ -49,247 +49,267 @@
             <div class="section-titlepage">
                <h2>Posting</h2>
             </div>
-            <p>Only subscribers can post to mailing lists, and only from the
-               address they used when they subscribed. Mail from unsubscribed addresses
-               is forwarded to a moderator and may be forwarded after some delay. Note,
-               however, that due to the extraordinary volume of spam, some messages are
-               likely to get lost entirely.
-            </p>
-            <p>Only text messages may be posted to the lists. If your mail
-               client posts using HTML or some other “<span class="quote">enriched</span>” format,
-               your message <em>will be rejected</em>. This decision was
-               motivated by the fact that the overwhelming majority of spam that gets
-               sent to the lists arrives as text/html.
-            </p>
-            <p>There are two DocBook-related lists: docbook and docbook-apps.
-               The docbook list is for general questions about DocBook. The
-               docbook-apps list is for questions about applications (stylesheets,
-               transformation tools, publishing tools, processing requirements, etc.)
-               that use or work with DocBook.
-            </p>
-            <p>Specifically:</p>
-            <div class="itemizedlist">
-               <ul>
-                  <li>
-                     <p>Questions about DocBook markup (How do I markup a Widget? What's
-                        a FuncSynopsisInfo for?) should be sent to the docbook list.
-                     </p>
-                  </li>
-                  <li>
-                     <p>Questions about XSL or DSSSL stylesheets, publishing DocBook
-                        documents on your platform of choice, support for PostScript, PDF, or
-                        other types of output, questions about Windows or Unix applications
-                        that can consume or produce DocBook should be sent to the docbook-apps
-                        list.
-                     </p>
-                  </li>
-               </ul>
+            <div class="content">
+               <p>Only subscribers can post to mailing lists, and only from the
+                  address they used when they subscribed. Mail from unsubscribed addresses
+                  is forwarded to a moderator and may be forwarded after some delay. Note,
+                  however, that due to the extraordinary volume of spam, some messages are
+                  likely to get lost entirely.
+               </p>
+               <p>Only text messages may be posted to the lists. If your mail
+                  client posts using HTML or some other “<span class="quote">enriched</span>” format,
+                  your message <em>will be rejected</em>. This decision was
+                  motivated by the fact that the overwhelming majority of spam that gets
+                  sent to the lists arrives as text/html.
+               </p>
+               <p>There are two DocBook-related lists: docbook and docbook-apps.
+                  The docbook list is for general questions about DocBook. The
+                  docbook-apps list is for questions about applications (stylesheets,
+                  transformation tools, publishing tools, processing requirements, etc.)
+                  that use or work with DocBook.
+               </p>
+               <p>Specifically:</p>
+               <div class="itemizedlist">
+                  <ul>
+                     <li>
+                        <p>Questions about DocBook markup (How do I markup a Widget? What's
+                           a FuncSynopsisInfo for?) should be sent to the docbook list.
+                        </p>
+                     </li>
+                     <li>
+                        <p>Questions about XSL or DSSSL stylesheets, publishing DocBook
+                           documents on your platform of choice, support for PostScript, PDF, or
+                           other types of output, questions about Windows or Unix applications
+                           that can consume or produce DocBook should be sent to the docbook-apps
+                           list.
+                        </p>
+                     </li>
+                  </ul>
+               </div>
+               <p>Do not begin your subject line with “<span class="quote">help</span>” or
+                  “<span class="quote">subscribe</span>” since the list software will bounce the
+                  message because it looks like is an administrative request.
+               </p>
+               <p>Do not use un-informative subject lines like
+                  “<span class="quote">Urgent</span>”, “<span class="quote">Easy question</span>”, or
+                  “<span class="quote">Problem</span>”.  Instead, use a meaningful subject line that
+                  will make sense to the people whose help you are trying to get.
+               </p>
+               <p>Both subscribers to <code class="email">&lt;<a href="mailto:docbook@lists.oasis-open.org">docbook@lists.oasis-open.org</a>&gt;</code> and
+                  <code class="email">&lt;<a href="mailto:docbook-digest@lists.oasis-open.org">docbook-digest@lists.oasis-open.org</a>&gt;</code> should post their messages to
+                  <code class="email">&lt;<a href="mailto:docbook@lists.oasis-open.org">docbook@lists.oasis-open.org</a>&gt;</code>. The messages will be received by both
+                  subscribers to the list and subscribers to the digest.
+               </p>
+               <p>Both subscribers to <code class="email">&lt;<a href="mailto:docbook-apps@lists.oasis-open.org">docbook-apps@lists.oasis-open.org</a>&gt;</code> and
+                  <code class="email">&lt;<a href="mailto:docbook-apps-digest@lists.oasis-open.org">docbook-apps-digest@lists.oasis-open.org</a>&gt;</code> should post their messages to
+                  <code class="email">&lt;<a href="mailto:docbook-apps@lists.oasis-open.org">docbook-apps@lists.oasis-open.org</a>&gt;</code>. The messages will be received by
+                  both subscribers to the list and subscribers to the digest.
+               </p>
+               <p>Do not start a new thread by replying to an unrelated message
+                  and just changing the subject line since the header of your message
+                  will contain references to the previous message and your new message
+                  will appear in the archive as one of the replies to the original
+                  message.  It is better to start a new message for a new thread.
+               </p>
             </div>
-            <p>Do not begin your subject line with “<span class="quote">help</span>” or
-               “<span class="quote">subscribe</span>” since the list software will bounce the
-               message because it looks like is an administrative request.
-            </p>
-            <p>Do not use un-informative subject lines like
-               “<span class="quote">Urgent</span>”, “<span class="quote">Easy question</span>”, or
-               “<span class="quote">Problem</span>”.  Instead, use a meaningful subject line that
-               will make sense to the people whose help you are trying to get.
-            </p>
-            <p>Both subscribers to <code class="email">&lt;<a href="mailto:docbook@lists.oasis-open.org">docbook@lists.oasis-open.org</a>&gt;</code> and
-               <code class="email">&lt;<a href="mailto:docbook-digest@lists.oasis-open.org">docbook-digest@lists.oasis-open.org</a>&gt;</code> should post their messages to
-               <code class="email">&lt;<a href="mailto:docbook@lists.oasis-open.org">docbook@lists.oasis-open.org</a>&gt;</code>. The messages will be received by both
-               subscribers to the list and subscribers to the digest.
-            </p>
-            <p>Both subscribers to <code class="email">&lt;<a href="mailto:docbook-apps@lists.oasis-open.org">docbook-apps@lists.oasis-open.org</a>&gt;</code> and
-               <code class="email">&lt;<a href="mailto:docbook-apps-digest@lists.oasis-open.org">docbook-apps-digest@lists.oasis-open.org</a>&gt;</code> should post their messages to
-               <code class="email">&lt;<a href="mailto:docbook-apps@lists.oasis-open.org">docbook-apps@lists.oasis-open.org</a>&gt;</code>. The messages will be received by
-               both subscribers to the list and subscribers to the digest.
-            </p>
-            <p>Do not start a new thread by replying to an unrelated message
-               and just changing the subject line since the header of your message
-               will contain references to the previous message and your new message
-               will appear in the archive as one of the replies to the original
-               message.  It is better to start a new message for a new thread.
-            </p>
          </section>
          <section id="guidelines.4" class="section">
             <div class="section-titlepage">
                <h2>Before You Post</h2>
             </div>
-            <div class="orderedlist">
-               <ol style="list-style: decimal;">
-                  <li>
-                     <p>Check that you are posting to the right list.</p>
-                  </li>
-                  <li>
-                     <p>Make sure you are posting from the account that you
-                        used to subscribe. If you post from another account, your message will
-                        be delayed until it is approved by hand.
-                     </p>
-                  </li>
-                  <li>
-                     <p>Check that your question isn't already answered in the
-                        mailing list archives at <a href="http://lists.oasis-open.org/archives/docbook/">http://lists.oasis-open.org/archives/docbook/</a>
-                        or <a href="http://lists.oasis-open.org/archives/docbook-apps/">http://lists.oasis-open.org/archives/docbook-apps/</a>.
-                     </p>
-                  </li>
-                  <li>
-                     <p>If you are replying to a post, trim the quoted
-                        message to just the parts to which you are replying.
-                     </p>
-                  </li>
-               </ol>
+            <div class="content">
+               <div class="orderedlist">
+                  <ol style="list-style: decimal;">
+                     <li>
+                        <p>Check that you are posting to the right list.</p>
+                     </li>
+                     <li>
+                        <p>Make sure you are posting from the account that you
+                           used to subscribe. If you post from another account, your message will
+                           be delayed until it is approved by hand.
+                        </p>
+                     </li>
+                     <li>
+                        <p>Check that your question isn't already answered in the
+                           mailing list archives at <a href="http://lists.oasis-open.org/archives/docbook/">http://lists.oasis-open.org/archives/docbook/</a>
+                           or <a href="http://lists.oasis-open.org/archives/docbook-apps/">http://lists.oasis-open.org/archives/docbook-apps/</a>.
+                        </p>
+                     </li>
+                     <li>
+                        <p>If you are replying to a post, trim the quoted
+                           message to just the parts to which you are replying.
+                        </p>
+                     </li>
+                  </ol>
+               </div>
+               <p>The DocBook Technical Committee, as part of its commitment to
+                  maintaining DocBook, responds to Requests for Enhancement (RFEs)
+                  submitted by the DocBook user community. The likelihood that a
+                  submitted RFE will be implemented is determined by the degree to which
+                  it meets the following criteria:
+               </p>
+               <div class="orderedlist">
+                  <ol style="list-style: lower-alpha;">
+                     <li>
+                        <p>The change is within the scope of the TC's charter.</p>
+                     </li>
+                     <li>
+                        <p>The change is consistent with the existing DocBook model.</p>
+                     </li>
+                     <li>
+                        <p>The change is beneficial to the community of users.</p>
+                     </li>
+                  </ol>
+               </div>
+               <p>The implication of criterion (c) is that if only one user or company
+                  needs a particular change, the TC is likely to recommend a local
+                  customization to acheive the desired result.
+               </p>
             </div>
-            <p>The DocBook Technical Committee, as part of its commitment to
-               maintaining DocBook, responds to Requests for Enhancement (RFEs)
-               submitted by the DocBook user community. The likelihood that a
-               submitted RFE will be implemented is determined by the degree to which
-               it meets the following criteria:
-            </p>
-            <div class="orderedlist">
-               <ol style="list-style: lower-alpha;">
-                  <li>
-                     <p>The change is within the scope of the TC's charter.</p>
-                  </li>
-                  <li>
-                     <p>The change is consistent with the existing DocBook model.</p>
-                  </li>
-                  <li>
-                     <p>The change is beneficial to the community of users.</p>
-                  </li>
-               </ol>
-            </div>
-            <p>The implication of criterion (c) is that if only one user or company
-               needs a particular change, the TC is likely to recommend a local
-               customization to acheive the desired result.
-            </p>
          </section>
          <section id="guidelines.5" class="section">
             <div class="section-titlepage">
                <h2>Replies Go to the Author</h2>
             </div>
-            <p>The DocBook lists don't set the <code class="literal">Reply-to:</code> header
-               on messages (see
-               <a href="http://www.unicom.com/pw/reply-to-harmful.html">“<span class="quote">Reply-To</span>” Munging Considered Harmful</a>)
-               so <em>replies go to the author by default</em>.  If you
-               want to reply to the list, make sure you include the list mailing
-               address in your reply.
-            </p>
-            <p>Most mail readers make this easy by offering two forms of reply:
-               reply/group-reply or reply/follow-up, for example.  If you want to
-               post to the list, make sure you select group-reply or follow-up or
-               whatever your mail reader calls it.
-               
-            </p>
+            <div class="content">
+               <p>The DocBook lists don't set the <code class="literal">Reply-to:</code> header
+                  on messages (see
+                  <a href="http://www.unicom.com/pw/reply-to-harmful.html">“<span class="quote">Reply-To</span>” Munging Considered Harmful</a>)
+                  so <em>replies go to the author by default</em>.  If you
+                  want to reply to the list, make sure you include the list mailing
+                  address in your reply.
+               </p>
+               <p>Most mail readers make this easy by offering two forms of reply:
+                  reply/group-reply or reply/follow-up, for example.  If you want to
+                  post to the list, make sure you select group-reply or follow-up or
+                  whatever your mail reader calls it.
+                  
+               </p>
+            </div>
          </section>
          <section id="guidelines.6" class="section">
             <div class="section-titlepage">
                <h2>Use Short Quotes of Previous Messages in Replies</h2>
             </div>
-            <p>Please do not quote entire messages just to add a few lines at
-               the beginning or end.  Instead, quote the parts to which you are
-               directly replying or quote enough to establish the context.
-            </p>
-            <p>Everybody on the list has already received the message that you
-               are quoting, and anyone searching the archive will find your message
-               and the previous message listed under the same thread.
-            </p>
-            <p>Subscribers to the mailing list will just ignore most of the quoted
-               messages and move to the next post, but subscribers to the mailing
-               list Digest will mostly have to page past the quoted messages to reach
-               the next material in which they are interested in reading.
-            </p>
+            <div class="content">
+               <p>Please do not quote entire messages just to add a few lines at
+                  the beginning or end.  Instead, quote the parts to which you are
+                  directly replying or quote enough to establish the context.
+               </p>
+               <p>Everybody on the list has already received the message that you
+                  are quoting, and anyone searching the archive will find your message
+                  and the previous message listed under the same thread.
+               </p>
+               <p>Subscribers to the mailing list will just ignore most of the quoted
+                  messages and move to the next post, but subscribers to the mailing
+                  list Digest will mostly have to page past the quoted messages to reach
+                  the next material in which they are interested in reading.
+               </p>
+            </div>
          </section>
          <section id="guidelines.7" class="section">
             <div class="section-titlepage">
                <h2>Cross-Posting</h2>
             </div>
-            <p>Cross-posting between the DocBook mailing lists or to other
-               lists is often counter-productive unless everybody who replies to the
-               thread is on both lists.  Cross-posts from non-subscribers continuing
-               the thread will bounce, and mailing list subscribers who are not also
-               on the other list will only see half of the thread, as will those on
-               the other list who are not also on the mailing list.  Subscribers to
-               both lists will see two copies of the message, annoying them as
-               well.
-            </p>
+            <div class="content">
+               <p>Cross-posting between the DocBook mailing lists or to other
+                  lists is often counter-productive unless everybody who replies to the
+                  thread is on both lists.  Cross-posts from non-subscribers continuing
+                  the thread will bounce, and mailing list subscribers who are not also
+                  on the other list will only see half of the thread, as will those on
+                  the other list who are not also on the mailing list.  Subscribers to
+                  both lists will see two copies of the message, annoying them as
+                  well.
+               </p>
+            </div>
          </section>
          <section id="guidelines.8" class="section">
             <div class="section-titlepage">
                <h2>Subscribing and Unsubscribing</h2>
             </div>
-            <p>Subscriptions to the DocBook lists and their digest forms are
-               managed by OASIS: <a href="http://www.oasis-open.org/mlmanage/index.php">http://www.oasis-open.org/mlmanage/index.php</a>.
-               
-            </p>
+            <div class="content">
+               <p>Subscriptions to the DocBook lists and their digest forms are
+                  managed by OASIS: <a href="http://www.oasis-open.org/mlmanage/index.php">http://www.oasis-open.org/mlmanage/index.php</a>.
+                  
+               </p>
+            </div>
          </section>
          <section id="guidelines.9" class="section">
             <div class="section-titlepage">
                <h2>Archive</h2>
             </div>
-            <p>The DocBook mailing list messages are archived at
-               <a href="http://lists.oasis-open.org/archives/docbook/">http://lists.oasis-open.org/archives/docbook/</a>.
-            </p>
-            <p>The DocBook Applications mailing list messages are archived at
-               <a href="http://lists.oasis-open.org/archives/docbook-apps/">http://lists.oasis-open.org/archives/docbook-apps/</a>.
-            </p>
+            <div class="content">
+               <p>The DocBook mailing list messages are archived at
+                  <a href="http://lists.oasis-open.org/archives/docbook/">http://lists.oasis-open.org/archives/docbook/</a>.
+               </p>
+               <p>The DocBook Applications mailing list messages are archived at
+                  <a href="http://lists.oasis-open.org/archives/docbook-apps/">http://lists.oasis-open.org/archives/docbook-apps/</a>.
+               </p>
+            </div>
          </section>
          <section id="guidelines.10" class="section">
             <div class="section-titlepage">
                <h2>Reporting Bugs in Software</h2>
             </div>
-            <p>Confirmed bugs in software should be reported to its author
-               rather than to the mailing list, but it is appropriate to discuss
-               suspected bugs and workarounds on the docbook-apps list
-               <em>only</em>.
-            </p>
+            <div class="content">
+               <p>Confirmed bugs in software should be reported to its author
+                  rather than to the mailing list, but it is appropriate to discuss
+                  suspected bugs and workarounds on the docbook-apps list
+                  <em>only</em>.
+               </p>
+            </div>
          </section>
          <section id="guidelines.11" class="section">
             <div class="section-titlepage">
                <h2>Further Information on DocBook</h2>
             </div>
-            <figure id="guidelines.11.2" class="informaltable-wrapper">
-               <div class="informaltable">
-                  <table border="0" style="border-collapse: collapse;border-top: 1px solid ; border-bottom: 1px solid ; border-left: 1px solid ; border-right: 1px solid ; ">
-                     <colgroup>
-                        <col class="tcol1" width="50%"></col>
-                        <col class="tcol2" width="50%"></col>
-                     </colgroup>
-                     <tbody>
-                        <tr>
-                           <td><a href="http://www.oasis-open.org/docbook">http://www.oasis-open.org/docbook</a></td>
-                           <td>The DocBook Home Page</td>
-                        </tr>
-                        <tr>
-                           <td><a href="http://www.docbook.org/">http://www.docbook.org/</a></td>
-                           <td>DocBook: The Definitive Guide</td>
-                        </tr>
-                        <tr>
-                           <td><a href="http://docbook.sourceforge.net/">http://docbook.sourceforge.net/</a></td>
-                           <td>
-                              <p>The DocBook project at SourceForge.</p>
-                              
-                              <p>The recommended way to report bugs in software maintined in the
-                                 DocBook Project at SourceForge is with the project “<span class="quote">tracker</span>”
-                                 mechanism. Please be sure to attach a test case that demonstrates
-                                 the bug.
-                              </p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td><a href="http://nwalsh.com/docbook/xsl">http://nwalsh.com/docbook/xsl</a></td>
-                           <td>DocBook XSL Stylesheets</td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
-            </figure>
+            <div class="content">
+               <figure id="guidelines.11.2" class="informaltable-wrapper">
+                  <div class="informaltable">
+                     <table border="0" style="border-collapse: collapse;border-top: 1px solid ; border-bottom: 1px solid ; border-left: 1px solid ; border-right: 1px solid ; ">
+                        <colgroup>
+                           <col class="tcol1" width="50%"></col>
+                           <col class="tcol2" width="50%"></col>
+                        </colgroup>
+                        <tbody>
+                           <tr>
+                              <td><a href="http://www.oasis-open.org/docbook">http://www.oasis-open.org/docbook</a></td>
+                              <td>The DocBook Home Page</td>
+                           </tr>
+                           <tr>
+                              <td><a href="http://www.docbook.org/">http://www.docbook.org/</a></td>
+                              <td>DocBook: The Definitive Guide</td>
+                           </tr>
+                           <tr>
+                              <td><a href="http://docbook.sourceforge.net/">http://docbook.sourceforge.net/</a></td>
+                              <td>
+                                 <p>The DocBook project at SourceForge.</p>
+                                 
+                                 <p>The recommended way to report bugs in software maintined in the
+                                    DocBook Project at SourceForge is with the project “<span class="quote">tracker</span>”
+                                    mechanism. Please be sure to attach a test case that demonstrates
+                                    the bug.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td><a href="http://nwalsh.com/docbook/xsl">http://nwalsh.com/docbook/xsl</a></td>
+                              <td>DocBook XSL Stylesheets</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </figure>
+            </div>
          </section>
          <section id="guidelines.12" class="section">
             <div class="section-titlepage">
                <h2>Contact</h2>
             </div>
-            <p>If you have any questions or problems, please contact Norman
-               Walsh, <code class="email">&lt;<a href="mailto:ndw@nwalsh.com">ndw@nwalsh.com</a>&gt;</code></p>
+            <div class="content">
+               <p>If you have any questions or problems, please contact Norman
+                  Walsh, <code class="email">&lt;<a href="mailto:ndw@nwalsh.com">ndw@nwalsh.com</a>&gt;</code></p>
+            </div>
          </section>
          <div class="footnotes">
             <hr width="100" align="left" class="footnotes-divider"></hr>
@@ -309,5 +329,5 @@
             </div>
          </div>
          <footer>Last updated on 22 Sep 2016 at 09:38a.m. GMT+01:00 by Norman Walsh</footer>
-      </div><script src="https://docbook.github.io/release/2.0.20/resources/js/prism.js"></script></body>
+      </div><script src="https://cdn.docbook.org/resources/2.0.0/js/prism.js"></script></body>
 </html>

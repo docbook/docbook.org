@@ -2656,7 +2656,7 @@
       <file>dbforms.rnc</file>
       <file>dbforms.rng</file>
     </dir>
-    <dir dir='5.1b6-1' path='xml/htmlforms/5.1b6-1'>
+    <dir dir='5.1b6-1' path='xml/htmlforms/5.1b6-1' release='5.1b6-1' type='xml' module='htmlforms'>
       <file>dbforms.rnc</file>
       <file>dbforms.rng</file>
     </dir>
@@ -2837,7 +2837,7 @@
       <file>sdocbook.rnc</file>
       <file>sdocbook.rng</file>
     </dir>
-    <dir dir='5.1b6-1' path='xml/simple/5.1b6-1'>
+    <dir dir='5.1b6-1' path='xml/simple/5.1b6-1' release='5.1b6-1' type='xml' module='simple'>
       <file>sdocbook.rnc</file>
       <file>sdocbook.rng</file>
     </dir>
@@ -2855,7 +2855,7 @@
       <file>slides.rnc</file>
       <file>slides.rng</file>
     </dir>
-    <dir dir='5.1b6-1' path='xml/slides/5.1b6-1'>
+    <dir dir='5.1b6-1' path='xml/slides/5.1b6-1' release='5.1b6-1' type='xml' module='slides'>
       <file>slides-full.rnc</file>
       <file>slides-full.rng</file>
       <file>slides.rnc</file>
@@ -2891,7 +2891,7 @@
       <file>website.rnc</file>
       <file>website.rng</file>
     </dir>
-    <dir dir='5.1b6-1' path='xml/website/5.1b6-1'>
+    <dir dir='5.1b6-1' path='xml/website/5.1b6-1' release='5.1b6-1' type='xml' module='website'>
       <file>website-full.rnc</file>
       <file>website-full.rng</file>
       <file>website.rnc</file>

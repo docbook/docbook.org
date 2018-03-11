@@ -2,13 +2,13 @@
    <head>
       <title>DocBook 4.x Customizations</title>
       <meta charset="utf-8"></meta>
-      <meta name="generator" content="DocBook XSL 2.0 Stylesheets V2.0.20"></meta>
+      <meta name="generator" content="DocBook XSL 2.0 Stylesheets V2.3.1"></meta>
+      <link href="https://cdn.docbook.org/resources/2.0.0/css/prism.css" rel="stylesheet" type="text/css"></link>
+      <link href="https://cdn.docbook.org/resources/2.0.0/css/db-prism.css" rel="stylesheet" type="text/css"></link>
       <link rel="stylesheet" type="text/css" href="/css/website.css"></link>
       <link xmlns:m="http://docbook.org/xslt/ns/mode" rel="stylesheet" type="text/css" href="/css/tabs.css"></link>
       <link xmlns:m="http://docbook.org/xslt/ns/mode" rel="stylesheet" type="text/css" href="/css/website.css"></link>
-      <link xmlns:m="http://docbook.org/xslt/ns/mode" rel="icon" href="http://docbook.org/graphics/docbook-icon16.png" type="image/png"></link><script type="text/javascript" src="https://docbook.github.io/release/2.0.20/resources/js/dbmodnizr.js"></script><link href="https://docbook.github.io/release/2.0.20/resources/css/prism.css" rel="stylesheet" type="text/css"></link>
-      <link href="https://docbook.github.io/release/2.0.20/resources/css/db-prism.css" rel="stylesheet" type="text/css"></link>
-   </head>
+      <link xmlns:m="http://docbook.org/xslt/ns/mode" rel="icon" href="https://docbook.org/graphics/docbook-icon16.png" type="image/png"></link><script type="text/javascript" src="https://cdn.docbook.org/resources/2.0.0/js/dbmodnizr.js"></script></head>
    <body>
       <div class="header">
          
@@ -57,170 +57,180 @@
             <div class="section-titlepage">
                <h2>Simplified DocBook</h2>
             </div>
-            <p>This is a community project; it <em>is not</em> an
-               official product of the DocBook Technical Committee.
-            </p>
-            <p>Over the years, the notion of a "simple" DocBook subset has come up
-               many times.  It has been observed that the number of elements in
-               DocBook can be a little overwhelming to the new user.
-               
-            </p>
-            <p>Simplified DocBook is a small subset of DocBook.
-               The <a href="sdocbook/">online summary</a> shows just how
-               small this subset is.
-               
-            </p>
-            <p>This DTD is an attempt to make a small subset of DocBook.
-               The goals of this subset are:
-               
-            </p>
-            <div class="itemizedlist">
+            <div class="content">
+               <p>This is a community project; it <em>is not</em> an
+                  official product of the DocBook Technical Committee.
+               </p>
+               <p>Over the years, the notion of a "simple" DocBook subset has come up
+                  many times.  It has been observed that the number of elements in
+                  DocBook can be a little overwhelming to the new user.
+                  
+               </p>
+               <p>Simplified DocBook is a small subset of DocBook.
+                  The <a href="sdocbook/">online summary</a> shows just how
+                  small this subset is.
+                  
+               </p>
+               <p>This DTD is an attempt to make a small subset of DocBook.
+                  The goals of this subset are:
+                  
+               </p>
+               <div class="itemizedlist">
+                  <ul>
+                     <li>
+                        <p>Documents written in the subset must be 100% legal DocBook
+                           documents.
+                           
+                        </p>
+                     </li>
+                     <li>
+                        <p>This subset for single documents (articles, white papers, etc.),
+                           so there's no need for books or sets, just 'articles'.
+                           
+                        </p>
+                     </li>
+                     <li>
+                        <p>The markup should be the smallest practical subset, if you need
+                           richly structured markup, use full DocBook. In
+                           particular, the subset often selects a single element from a family of
+                           related elements; for example, <code class="tag-element">programlisting</code> is
+                           provided, but <code class="tag-element">screen</code> is not.
+                           
+                        </p>
+                     </li>
+                     <li>
+                        <p>The DTD must work in online browsers (it's XML not SGML). It
+                           must be small enough to download more-or-less painlessly.
+                           
+                        </p>
+                     </li>
+                  </ul>
+               </div>
+               <h3>Current releases</h3>
                <ul>
-                  <li>
-                     <p>Documents written in the subset must be 100% legal DocBook
-                        documents.
-                        
-                     </p>
+                  <li><a href="/xml/simple/1.1">1.1</a>, 02 Apr 2005 (a customization of xml/4.3)
                   </li>
-                  <li>
-                     <p>This subset for single documents (articles, white papers, etc.),
-                        so there's no need for books or sets, just 'articles'.
-                        
-                     </p>
+                  <li><a href="/xml/simple/1.0">1.0</a>, 18 Dec 2003 (a customization of xml/4.2)
                   </li>
-                  <li>
-                     <p>The markup should be the smallest practical subset, if you need
-                        richly structured markup, use full DocBook. In
-                        particular, the subset often selects a single element from a family of
-                        related elements; for example, <code class="tag-element">programlisting</code> is
-                        provided, but <code class="tag-element">screen</code> is not.
-                        
-                     </p>
+               </ul>
+               <h3>Candidate releases</h3>
+               <ul>
+                  <li><a href="/xml/simple/1.2CR1">1.2CR1</a>, 09 Mar 2006 (a customization of xml/4.5CR2)
                   </li>
-                  <li>
-                     <p>The DTD must work in online browsers (it's XML not SGML). It
-                        must be small enough to download more-or-less painlessly.
-                        
-                     </p>
+                  <li><a href="/xml/simple/1.1b3">1.1b3</a>, 31 Mar 2004 (a customization of xml/4.3)
+                  </li>
+                  <li><a href="/xml/simple/1.1CR2">1.1CR2</a>, 21 Oct 2004 (a customization of xml/4.3)
+                  </li>
+                  <li><a href="/xml/simple/1.1CR1">1.1CR1</a>, 27 Jul 2004 (a customization of xml/4.3)
+                  </li>
+               </ul>
+               <h3>Beta releases</h3>
+               <ul>
+                  <li><a href="/xml/simple/1.1b2">1.1b2</a>, 17 Mar 2004 (a customization of xml/4.3CR2)
+                  </li>
+                  <li><a href="/xml/simple/1.1b1">1.1b1</a>, 21 Dec 2003 (a customization of xml/4.3CR2)
                   </li>
                </ul>
             </div>
-            <h3>Current releases</h3>
-            <ul>
-               <li><a href="/xml/simple/1.1">1.1</a>, 02 Apr 2005 (a customization of xml/4.3)
-               </li>
-               <li><a href="/xml/simple/1.0">1.0</a>, 18 Dec 2003 (a customization of xml/4.2)
-               </li>
-            </ul>
-            <h3>Candidate releases</h3>
-            <ul>
-               <li><a href="/xml/simple/1.2CR1">1.2CR1</a>, 09 Mar 2006 (a customization of xml/4.5CR2)
-               </li>
-               <li><a href="/xml/simple/1.1b3">1.1b3</a>, 31 Mar 2004 (a customization of xml/4.3)
-               </li>
-               <li><a href="/xml/simple/1.1CR2">1.1CR2</a>, 21 Oct 2004 (a customization of xml/4.3)
-               </li>
-               <li><a href="/xml/simple/1.1CR1">1.1CR1</a>, 27 Jul 2004 (a customization of xml/4.3)
-               </li>
-            </ul>
-            <h3>Beta releases</h3>
-            <ul>
-               <li><a href="/xml/simple/1.1b2">1.1b2</a>, 17 Mar 2004 (a customization of xml/4.3CR2)
-               </li>
-               <li><a href="/xml/simple/1.1b1">1.1b1</a>, 21 Dec 2003 (a customization of xml/4.3CR2)
-               </li>
-            </ul>
          </section>
          <section id="forms" class="section">
             <div class="section-titlepage">
                <h2>HTML Forms</h2>
             </div>
-            <p>This is a community project; it <em>is not</em> an
-               official product of the DocBook Technical Committee.
-            </p>
-            <p>The “forms” schema adds HTML forms elements to DocBook.</p>
-            <h3>Current releases</h3>
-            <ul>
-               <li><a href="/xml/htmlforms/1.1">1.1</a> (a customization of xml/4.1.2)
-               </li>
-               <li><a href="/xml/htmlforms/1.0">1.0</a> (a customization of xml/4.1.2)
-               </li>
-            </ul>
-            <h3>Candidate releases</h3>
-            <ul>
-               <li><a href="/xml/htmlforms/1.2CR1">1.2CR1</a> (a customization of xml/4.3)
-               </li>
-            </ul>
-            <h3>Beta releases</h3>
-            <ul>
-               <li><a href="/xml/htmlforms/1.2b1">1.2b1</a> (a customization of xml/4.3)
-               </li>
-            </ul>
+            <div class="content">
+               <p>This is a community project; it <em>is not</em> an
+                  official product of the DocBook Technical Committee.
+               </p>
+               <p>The “forms” schema adds HTML forms elements to DocBook.</p>
+               <h3>Current releases</h3>
+               <ul>
+                  <li><a href="/xml/htmlforms/1.1">1.1</a> (a customization of xml/4.1.2)
+                  </li>
+                  <li><a href="/xml/htmlforms/1.0">1.0</a> (a customization of xml/4.1.2)
+                  </li>
+               </ul>
+               <h3>Candidate releases</h3>
+               <ul>
+                  <li><a href="/xml/htmlforms/1.2CR1">1.2CR1</a> (a customization of xml/4.3)
+                  </li>
+               </ul>
+               <h3>Beta releases</h3>
+               <ul>
+                  <li><a href="/xml/htmlforms/1.2b1">1.2b1</a> (a customization of xml/4.3)
+                  </li>
+               </ul>
+            </div>
          </section>
          <section id="mathml" class="section">
             <div class="section-titlepage">
                <h2>MathML</h2>
             </div>
-            <p>This is an official product of the DocBook Technical Committee.</p>
-            <p>The “MathML” schema adds MathML elements to DocBook equations.</p>
-            <h3>Current releases</h3>
-            <ul>
-               <li><a href="/xml/mathml/1.0">1.0</a> (a customization of xml/4.1.2)
-               </li>
-            </ul>
-            <h3>Candidate releases</h3>
-            <ul>
-               <li><a href="/xml/mathml/1.1CR1">1.1CR1</a> (a customization of xml/4.3)
-               </li>
-            </ul>
-            <h3>Beta releases</h3>
-            <ul>
-               <li><a href="/xml/mathml/1.1b1">1.1b1</a> (a customization of xml/4.3)
-               </li>
-            </ul>
+            <div class="content">
+               <p>This is an official product of the DocBook Technical Committee.</p>
+               <p>The “MathML” schema adds MathML elements to DocBook equations.</p>
+               <h3>Current releases</h3>
+               <ul>
+                  <li><a href="/xml/mathml/1.0">1.0</a> (a customization of xml/4.1.2)
+                  </li>
+               </ul>
+               <h3>Candidate releases</h3>
+               <ul>
+                  <li><a href="/xml/mathml/1.1CR1">1.1CR1</a> (a customization of xml/4.3)
+                  </li>
+               </ul>
+               <h3>Beta releases</h3>
+               <ul>
+                  <li><a href="/xml/mathml/1.1b1">1.1b1</a> (a customization of xml/4.3)
+                  </li>
+               </ul>
+            </div>
          </section>
          <section id="svg" class="section">
             <div class="section-titlepage">
                <h2>SVG</h2>
             </div>
-            <p>This is an official product of the DocBook Technical Committee.</p>
-            <p>The “SVG” schema adds SVG elements elements to DocBook graphics.</p>
-            <h3>Current releases</h3>There are no current releases.
-            <h3>Candidate releases</h3>There are no current candidate releases.
-            <h3>Beta releases</h3>
-            <ul>
-               <li><a href="/xml/svg/1.1b1">1.1b1</a> (a customization of xml/4.3)
-               </li>
-               <li><a href="/xml/svg/1.1CR1">1.1CR1</a> (a customization of xml/4.3)
-               </li>
-            </ul>
+            <div class="content">
+               <p>This is an official product of the DocBook Technical Committee.</p>
+               <p>The “SVG” schema adds SVG elements elements to DocBook graphics.</p>
+               <h3>Current releases</h3>There are no current releases.
+               <h3>Candidate releases</h3>There are no current candidate releases.
+               <h3>Beta releases</h3>
+               <ul>
+                  <li><a href="/xml/svg/1.1b1">1.1b1</a> (a customization of xml/4.3)
+                  </li>
+                  <li><a href="/xml/svg/1.1CR1">1.1CR1</a> (a customization of xml/4.3)
+                  </li>
+               </ul>
+            </div>
          </section>
          <section id="ebnf" class="section">
             <div class="section-titlepage">
                <h2>EBNF</h2>
             </div>
-            <p>This is an official product of the DocBook Technical Committee.</p>
-            <p>The “EBNF” schema adds EBNF (Extended Backus-Naur Forms)
-               elements elements to DocBook.
-            </p>
-            <h3>Current releases</h3>
-            <ul>
-               <li><a href="/xml/ebnf/1.0">1.0</a> (a customization of xml/4.1.2)
-               </li>
-            </ul>
-            <h3>Candidate releases</h3>
-            <ul>
-               <li><a href="/xml/ebnf/1.2CR1">1.2CR1</a> (a customization of xml/4.3)
-               </li>
-               <li><a href="/xml/ebnf/1.1CR1">1.1CR1</a> (a customization of xml/4.2)
-               </li>
-            </ul>
-            <h3>Beta releases</h3>
-            <ul>
-               <li><a href="/xml/ebnf/1.2b1">1.2b1</a> (a customization of xml/4.3)
-               </li>
-            </ul>
+            <div class="content">
+               <p>This is an official product of the DocBook Technical Committee.</p>
+               <p>The “EBNF” schema adds EBNF (Extended Backus-Naur Forms)
+                  elements elements to DocBook.
+               </p>
+               <h3>Current releases</h3>
+               <ul>
+                  <li><a href="/xml/ebnf/1.0">1.0</a> (a customization of xml/4.1.2)
+                  </li>
+               </ul>
+               <h3>Candidate releases</h3>
+               <ul>
+                  <li><a href="/xml/ebnf/1.2CR1">1.2CR1</a> (a customization of xml/4.3)
+                  </li>
+                  <li><a href="/xml/ebnf/1.1CR1">1.1CR1</a> (a customization of xml/4.2)
+                  </li>
+               </ul>
+               <h3>Beta releases</h3>
+               <ul>
+                  <li><a href="/xml/ebnf/1.2b1">1.2b1</a> (a customization of xml/4.3)
+                  </li>
+               </ul>
+            </div>
          </section>
          <footer>Last updated on 22 Sep 2016 at 09:38a.m. GMT+01:00 by Norman Walsh</footer>
-      </div><script src="https://docbook.github.io/release/2.0.20/resources/js/prism.js"></script></body>
+      </div><script src="https://cdn.docbook.org/resources/2.0.0/js/prism.js"></script></body>
 </html>
