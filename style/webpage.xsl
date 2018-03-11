@@ -104,17 +104,18 @@
     <!-- HACK! -->
     <xsl:if test="@xml:id='home' or @xml:id='search'">
       <div class="google{@xml:id}">
-	<form id="searchbox_008085259838719972531:tqmky0g0tbo"
-	      action="https://docbook.org/search/">
-          <a href="https://plus.google.com/107681893264362804687" rel="publisher">Google+</a>
-	  <input type="hidden" name="cx" value="008085259838719972531:tqmky0g0tbo" />
-	  <input name="q" type="text" size="30" />
-	  <input type="submit" name="sa" value="DocBook Search" />
-	  <xsl:text>&#160;</xsl:text>
-	  <input type="hidden" name="cof" value="FORID:9" />
-	</form>
-	<script type="text/javascript"
-		src="https://www.google.com/coop/cse/brand?form=searchbox_008085259838719972531%3Atqmky0g0tbo"></script>
+<script>
+  (function() {
+    var cx = '005330143887867289341:ay6bz2z7_we';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<div class="gcse-search"></div>
       </div>
     </xsl:if>
 
