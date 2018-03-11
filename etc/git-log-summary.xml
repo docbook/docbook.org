@@ -1,5 +1,20 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>2be0cc2499a1e6c796ee0f7495cec2c61065bead</hash>
+<date>2018-03-11T10:44:25-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #25 from ndw/dev</message>
+</commit>
+
+<commit>
+<hash>b6cf8fbab6279e2c384adc7a0a00df25e33abb0f</hash>
+<file>atom/whatsnew.xml</file>
+<date>2018-03-11T10:33:12-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Added 5.1 OASIS standard to release notes</message>
+</commit>
+
+<commit>
 <hash>a29d9c6151d76b064ac1a9d7ffebc2d2ff04b131</hash>
 <date>2018-03-11T10:21:52-05:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
