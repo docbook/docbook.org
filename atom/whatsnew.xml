@@ -11,6 +11,26 @@
   </author>
 
   <entry>
+    <title>DocBook V5.1</title>
+    <link rel="alternate" type="text/html"
+	  href="http://docbook.org/schemas/5x"/>
+    <id>http://docbook.org/schemas/5x</id>
+    <published>2012-04-24T11:18:26Z</published>
+    <updated>2016-11-22T12:00:00Z</updated>
+    <category term="docbook" scheme="http://technorati.com/tag/"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+	<p>DocBook V5.1 is the official OASIS Standard release of
+	DocBook V5.1. It is a RELAX NG reimplementation of DocBook.
+        This release adds support for assemblies (modular documentation)
+        and resolves a number of issues. See
+        <a href="https://docs.oasis-open.org/docbook/docbook/v5.1/os/docbook-v5.1-os.pdf">DocBook
+        Version 5.1</a> at <a href="https://oasis-open.org/">OASIS</a>.</p>
+      </div>
+    </summary>
+  </entry>
+
+  <entry>
     <title>DocBook XSD V5.1CR3</title>
     <link rel="alternate" type="text/html"
 	  href="http://docbook.org/xsd/5.1CR3/"/>
