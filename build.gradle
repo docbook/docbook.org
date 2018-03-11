@@ -51,7 +51,6 @@ def pages = [
              'schemas/5x-custom',
              'schemas/archives',
              'schemas/index',
-             'search/index',
              'specs/index',
              'tdg/errata',
              'tdg/index',
