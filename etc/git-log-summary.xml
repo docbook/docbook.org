@@ -1,5 +1,31 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>a29d9c6151d76b064ac1a9d7ffebc2d2ff04b131</hash>
+<date>2018-03-11T10:21:52-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #24 from ndw/dev</message>
+</commit>
+
+<commit>
+<hash>d00863bd2df3e251d1dd8e483408fb6035375116</hash>
+<file>build.gradle</file>
+<file>search/index.xml</file>
+<file>style/webpage.xsl</file>
+<date>2018-03-11T10:16:04-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>'/search' page is no longer necessary</message>
+</commit>
+
+<commit>
+<hash>771fc141d9c68af5ba276fecd4fd674297cfc76e</hash>
+<file>css/website.css</file>
+<file>style/webpage.xsl</file>
+<date>2018-03-11T10:12:52-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Update Google custom search</message>
+</commit>
+
+<commit>
 <hash>575bed9fc97d0a43e09c544854cc5539cba77f3d</hash>
 <date>2018-03-11T09:51:11-05:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
