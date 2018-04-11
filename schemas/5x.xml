@@ -30,7 +30,7 @@ XML DTD, but the RELAX NG Schema is the normative schema.</para>
 <section>
 <title>DocBook V5.1</title>
 
-<para>DocBook V5.1 is OASIS Committee Specification and it has been submitted to become OASIS standard.</para>
+<para>DocBook V5.1 became an OASIS standard on 22 November 2016.</para>
 
 <?schemas release="^5\.1.*"?>
 </section>
