@@ -1,5 +1,14 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>051a4cce91fcd290f7517c2cc72bc1b1daa4093c</hash>
+<file>schemas/5x.xml</file>
+<date>2018-04-11T10:02:49-07:00</date>
+<committer-name>bobstayton</committer-name>
+<committer-email>bobs@sagehill.net</committer-email>
+<message>indicate 5.1 as an OASIS Standard</message>
+</commit>
+
+<commit>
 <hash>2be0cc2499a1e6c796ee0f7495cec2c61065bead</hash>
 <date>2018-03-11T10:44:25-05:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
