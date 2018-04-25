@@ -14,7 +14,7 @@
                 exclude-result-prefixes="atom h db f r rel t xlink xs"
 		version="2.0">
 
-<xsl:import href="../build/docbook/xslt/base/html/final-pass.xsl"/>
+<xsl:import href="https://cdn.docbook.org/release/latest/xslt/base/html/final-pass.xsl"/>
 
 <xsl:output name="final"
 	    method="xhtml"
@@ -52,11 +52,12 @@
 
   <link rel="stylesheet" type="text/css" href="/css/tabs.css" />
   <link rel="stylesheet" type="text/css" href="/css/website.css" />
-  <link rel="icon" href="http://docbook.org/graphics/docbook-icon16.png"
+  <link rel="icon" href="https://docbook.org/graphics/docbook-icon16.png"
 	type="image/png"/>
 
   <xsl:if test="@xml:id='home'">
-    <link rel="alternate" type="application/atom+xml" title="Atom" href="http://docbook.org/atom/whatsnew.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Atom"
+          href="https://docbook.org/atom/whatsnew.xml" />
   </xsl:if>
 </xsl:template>
 
@@ -81,7 +82,7 @@
   <xsl:apply-templates select="$header" mode="to-xhtml"/>
 
   <xsl:variable name="off-menu-pages"
-                select="('search', 'tdg5', 'tdg5p', 'tdg51')"/>
+                select="('tdg5', 'tdg5p', 'tdg51')"/>
 
   <xsl:if test="not($sitemenu//h:li[@id = current()/@xml:id])
                 and not(@xml:id = $off-menu-pages)">
@@ -92,28 +93,26 @@
   </xsl:if>
 
   <xsl:if test="not(@xml:id = $off-menu-pages)">
-    <xsl:variable name="menu"
-                  select="concat('../menus/',
-                          if (@xml:id = 'search') then 'home' else @xml:id,
-                          '.html')"/>
+    <xsl:variable name="menu" select="concat('../menus/', @xml:id, '.html')"/>
     <xsl:apply-templates select="doc($menu)" mode="to-xhtml"/>
   </xsl:if>
 
   <div class="{local-name(.)}">
     <!-- HACK! -->
-    <xsl:if test="@xml:id='home' or @xml:id='search'">
+    <xsl:if test="@xml:id='home'">
       <div class="google{@xml:id}">
-	<form id="searchbox_008085259838719972531:tqmky0g0tbo"
-	      action="http://docbook.org/search/">
-          <a href="https://plus.google.com/107681893264362804687" rel="publisher">Google+</a>
-	  <input type="hidden" name="cx" value="008085259838719972531:tqmky0g0tbo" />
-	  <input name="q" type="text" size="30" />
-	  <input type="submit" name="sa" value="DocBook Search" />
-	  <xsl:text>&#160;</xsl:text>
-	  <input type="hidden" name="cof" value="FORID:9" />
-	</form>
-	<script type="text/javascript"
-		src="http://www.google.com/coop/cse/brand?form=searchbox_008085259838719972531%3Atqmky0g0tbo"></script>
+        <script>
+          (function() {
+            var cx = '005330143887867289341:ay6bz2z7_we';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+        </script>
+        <div class="gcse-search"></div>
       </div>
     </xsl:if>
 
@@ -364,6 +363,10 @@
 	  <xsl:attribute name="href"
 			 select="substring-after($uri, 'http://docbook.org')"/>
 	</xsl:when>
+	<xsl:when test="starts-with($uri, 'https://docbook.org/')">
+	  <xsl:attribute name="href"
+			 select="substring-after($uri, 'https://docbook.org')"/>
+	</xsl:when>
 	<xsl:when test="$uri != ''">
 	  <xsl:attribute name="href" select="$uri"/>
 	</xsl:when>
@@ -425,7 +428,7 @@
     var googleSearchPath = "/cse";
   </script>
   <script type="text/javascript"
-	  src="http://www.google.com/afsonline/show_afs_search.js">
+	  src="https://www.google.com/afsonline/show_afs_search.js">
   </script>
 </xsl:template>
 

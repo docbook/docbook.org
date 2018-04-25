@@ -63,15 +63,11 @@ h1,h2,h3,h4,h5 {
 }
 
 .googlehome {
-    position: absolute;
-    right: 10px;
-    width: 200;
-}
-
-.googlesearch {
-    position: absolute;
-    right: 10px;
-    width: 200;
+    display: inline-box;
+    padding-top: 0;
+    margin-top: -1em;
+    float: right;
+    width: 40%;
 }
 
 img[align="left"] {
