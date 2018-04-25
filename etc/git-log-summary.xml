@@ -1,5 +1,47 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>8b92e65f73ef1c00f1a7d74ca658f1ae1c14c5f7</hash>
+<date>2018-04-25T22:58:38+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Merge pull request #26 from kosek/master</message>
+</commit>
+
+<commit>
+<hash>22a93f0ca34bdf648b771bb83bbe86ea32b05464</hash>
+<date>2018-04-25T22:33:48+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Merge branch 'master' of https://github.com/docbook/docbook.org</message>
+</commit>
+
+<commit>
+<hash>83d5cb7d62a1999006db751dc20284ea5fe55251</hash>
+<file>etc/releases.xml</file>
+<file>xml/5.2b04/catalog.xml</file>
+<file>xml/5.2b04/docbook.nvdl</file>
+<file>xml/5.2b04/index.html</file>
+<file>xml/5.2b04/rng/assembly.rnc</file>
+<file>xml/5.2b04/rng/assembly.rng</file>
+<file>xml/5.2b04/rng/dbits.rnc</file>
+<file>xml/5.2b04/rng/dbits.rng</file>
+<file>xml/5.2b04/rng/docbook.rnc</file>
+<file>xml/5.2b04/rng/docbook.rng</file>
+<file>xml/5.2b04/rng/docbookxi.rnc</file>
+<file>xml/5.2b04/rng/docbookxi.rng</file>
+<file>xml/5.2b04/rng/index.html</file>
+<file>xml/5.2b04/sch/assembly.sch</file>
+<file>xml/5.2b04/sch/dbits.sch</file>
+<file>xml/5.2b04/sch/docbook.sch</file>
+<file>xml/5.2b04/sch/docbookxi.sch</file>
+<file>xml/5.2b04/sch/index.html</file>
+<file>xml/5.2b04/tools/db4-entities.pl</file>
+<file>xml/5.2b04/tools/db4-upgrade.xsl</file>
+<file>xml/5.2b04/tools/index.html</file>
+<date>2018-04-25T22:31:53+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Added another beta release V5.2b04</message>
+</commit>
+
+<commit>
 <hash>051a4cce91fcd290f7517c2cc72bc1b1daa4093c</hash>
 <file>schemas/5x.xml</file>
 <date>2018-04-11T10:02:49-07:00</date>
