@@ -1,5 +1,20 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>a891d0cfadcbcf1d909e57739f3325adf0796245</hash>
+<date>2018-06-01T13:29:18-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #28 from ndw/master</message>
+</commit>
+
+<commit>
+<hash>6ea3421d20ecbdb0afd561d30ebd33d283786430</hash>
+<file>style/webpage.xsl</file>
+<date>2018-06-01T13:28:29-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Added exclude-result-prefix for 'm'</message>
+</commit>
+
+<commit>
 <hash>8b92e65f73ef1c00f1a7d74ca658f1ae1c14c5f7</hash>
 <date>2018-04-25T22:58:38+02:00</date>
 <committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
