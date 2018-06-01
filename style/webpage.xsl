@@ -11,7 +11,7 @@
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xmlns:r="http://nwalsh.com/ns/git-repo-info"
-                exclude-result-prefixes="atom h db f r rel t xlink xs"
+                exclude-result-prefixes="atom m h db f r rel t xlink xs"
 		version="2.0">
 
 <xsl:import href="https://cdn.docbook.org/release/latest/xslt/base/html/final-pass.xsl"/>
