@@ -1,0 +1,6 @@
+The HTML files herein were edited by hand on 2 June 2018 to fix
+problems having to do with http vs https and the fact that it is no
+longer possible to use .htaccess to change the directory document.
+
+If you rebuild them from the XML sources, make sure you fix those
+problems!!!

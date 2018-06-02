@@ -1,6 +1,6 @@
 <html><head>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-   <title>DocBook V5.0</title><meta name="generator" content="DocBook XSL Stylesheets V1.74.0-pre"><link rel="stylesheet" type="text/css" href="howto.css"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article" lang="en"><div class="titlepage"><h1>DocBook V5.0</h1><h2>The Transition Guide</h2><h3>28&nbsp;October&nbsp;2007</h3><div class="metadata"><h4>This version:</h4><dl class="urilist"><dt><span>http://docbook.org/docs/howto/2007-10-28/</span> (<a href="http://docbook.org/docs/howto/2007-10-28/">HTML</a>, <a href="http://docbook.org/docs/howto/2007-10-28/howto.xml">XML</a>, <a href="http://docbook.org/docs/howto/2007-10-28/howto.pdf">PDF</a>)</dt></dl><h4>Latest version:</h4><dl class="urilist"><dt><span>http://docbook.org/docs/howto/</span> (<a href="http://docbook.org/docs/howto/">HTML</a>, <a href="http://docbook.org/docs/howto/howto.xml">XML</a>, <a href="http://docbook.org/docs/howto/howto.pdf">PDF</a>)</dt></dl><h4>Previous versions:</h4><dl class="urilist"><dt><span>http://docbook.org/docs/howto/2006-10-22/</span> (<a href="http://docbook.org/docs/howto/2006-10-22/">HTML</a>, <a href="http://docbook.org/docs/howto/2006-10-22/howto.xml">XML</a>, <a href="http://docbook.org/docs/howto/2006-10-22/howto.pdf">PDF</a>)</dt><dt><span>http://docbook.org/docs/howto/2006-05-16/</span> (<a href="http://docbook.org/docs/howto/2006-05-16/">HTML</a>, <a href="http://docbook.org/docs/howto/2006-05-16/howto.xml">XML</a>, <a href="http://docbook.org/docs/howto/2006-05-16/howto.pdf">PDF</a>)</dt><dt><span>http://docbook.org/docs/howto/2006-03-01/</span> (<a href="http://docbook.org/docs/howto/2006-03-01/">HTML</a>, <a href="http://docbook.org/docs/howto/2006-03-01/howto.xml">XML</a>, <a href="http://docbook.org/docs/howto/2006-03-01/howto.pdf">PDF</a>)</dt></dl><h4>Authors and other credited contributors:</h4><dl class="authorlist"><dt><span class="personname">Jirka Kosek</span>, <code class="email">&lt;<a class="email" href="mailto:jirka@kosek.cz">jirka@kosek.cz</a>&gt;</code></dt><dt><span class="personname">Norman Walsh</span>, <code class="email">&lt;<a class="email" href="mailto:ndw@nwalsh.com">ndw@nwalsh.com</a>&gt;</code></dt><dt><span class="personname">Dick Hamilton</span>, <code class="email">&lt;<a class="email" href="mailto:rlhamilton@frii.com">rlhamilton@frii.com</a>&gt;</code></dt><dt><span class="personname">Michael(tm) Smith</span>, <code class="email">&lt;<a class="email" href="mailto:smith@sideshowbarker.net">smith@sideshowbarker.net</a>&gt;</code> (contributor)</dt></dl></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#introduction">Introduction</a></span></dt><dd><dl><dt><span class="section"><a href="#introduction-ns">Finally in a namespace</a></span></dt><dt><span class="section"><a href="#introduction-rng">Relaxing with DocBook</a></span></dt><dt><span class="section"><a href="#introduction-why-to-switch">Why switch to DocBook V5.0?</a></span></dt><dt><span class="section"><a href="#introduction-schemas">Schema jungle</a></span></dt></dl></dd><dt><span class="section"><a href="#tools">Tool chain</a></span></dt><dd><dl><dt><span class="section"><a href="#editors">Editing DocBook V5.0</a></span></dt><dt><span class="section"><a href="#validators">Validating DocBook V5.0</a></span></dt><dt><span class="section"><a href="#processing">Processing DocBook V5.0</a></span></dt></dl></dd><dt><span class="section"><a href="#changes">Markup changes</a></span></dt><dd><dl><dt><span class="section"><a href="#changes-linking">Improved cross-referencing and linking</a></span></dt><dt><span class="section"><a href="#changes-renamed">Renamed elements</a></span></dt><dt><span class="section"><a href="#changes-removed">Removed elements</a></span></dt></dl></dd><dt><span class="section"><a href="#convert4to5">Converting DocBook V4.x documents to DocBook V5.0</a></span></dt><dd><dl><dt><span class="section"><a href="#entities">What About Entities?</a></span></dt></dl></dd><dt><span class="section"><a href="#customizations">Customizing DocBook V5.0</a></span></dt><dd><dl><dt><span class="section"><a href="#relaxngorg">DocBook RELAX NG schema organization</a></span></dt><dt><span class="section"><a href="#customconsiderations">General customization considerations</a></span></dt><dt><span class="section"><a href="#cust-elements">Elements</a></span></dt><dt><span class="section"><a href="#cust-attributes">Attributes</a></span></dt><dt><span class="section"><a href="#cust-naming">Naming and versioning DocBook customizations</a></span></dt></dl></dd><dt><span class="section"><a href="#faq">FAQ</a></span></dt><dt><span class="bibliography"><a href="#references">Bibliography</a></span></dt></dl></div>
+   <title>DocBook V5.0</title><meta name="generator" content="DocBook XSL Stylesheets V1.74.0-pre"><link rel="stylesheet" type="text/css" href="howto.css"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article" lang="en"><div class="titlepage"><h1>DocBook V5.0</h1><h2>The Transition Guide</h2><h3>28&nbsp;October&nbsp;2007</h3><div class="metadata"><h4>This version:</h4><dl class="urilist"><dt><span>http://docbook.org/docs/howto/2007-10-28/</span> (<a href="https://docbook.org/docs/howto/2007-10-28/howto.html">HTML</a>, <a href="https://docbook.org/docs/howto/2007-10-28/howto.xml">XML</a>, <a href="https://docbook.org/docs/howto/2007-10-28/howto.pdf">PDF</a>)</dt></dl><h4>Latest version:</h4><dl class="urilist"><dt><span>http://docbook.org/docs/howto/</span> (<a href="https://docbook.org/docs/howto/">HTML</a>, <a href="https://docbook.org/docs/howto/howto.xml">XML</a>, <a href="https://docbook.org/docs/howto/howto.pdf">PDF</a>)</dt></dl><h4>Previous versions:</h4><dl class="urilist"><dt><span>http://docbook.org/docs/howto/2006-10-22/</span> (<a href="https://docbook.org/docs/howto/2006-10-22/howto.html">HTML</a>, <a href="https://docbook.org/docs/howto/2006-10-22/howto.xml">XML</a>, <a href="https://docbook.org/docs/howto/2006-10-22/howto.pdf">PDF</a>)</dt><dt><span>http://docbook.org/docs/howto/2006-05-16/</span> (<a href="https://docbook.org/docs/howto/2006-05-16/howto.html">HTML</a>, <a href="https://docbook.org/docs/howto/2006-05-16/howto.xml">XML</a>, <a href="https://docbook.org/docs/howto/2006-05-16/howto.pdf">PDF</a>)</dt><dt><span>http://docbook.org/docs/howto/2006-03-01/</span> (<a href="https://docbook.org/docs/howto/2006-03-01/howto.html">HTML</a>, <a href="https://docbook.org/docs/howto/2006-03-01/howto.xml">XML</a>, <a href="https://docbook.org/docs/howto/2006-03-01/howto.pdf">PDF</a>)</dt></dl><h4>Authors and other credited contributors:</h4><dl class="authorlist"><dt><span class="personname">Jirka Kosek</span>, <code class="email">&lt;<a class="email" href="mailto:jirka@kosek.cz">jirka@kosek.cz</a>&gt;</code></dt><dt><span class="personname">Norman Walsh</span>, <code class="email">&lt;<a class="email" href="mailto:ndw@nwalsh.com">ndw@nwalsh.com</a>&gt;</code></dt><dt><span class="personname">Dick Hamilton</span>, <code class="email">&lt;<a class="email" href="mailto:rlhamilton@frii.com">rlhamilton@frii.com</a>&gt;</code></dt><dt><span class="personname">Michael(tm) Smith</span>, <code class="email">&lt;<a class="email" href="mailto:smith@sideshowbarker.net">smith@sideshowbarker.net</a>&gt;</code> (contributor)</dt></dl></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#introduction">Introduction</a></span></dt><dd><dl><dt><span class="section"><a href="#introduction-ns">Finally in a namespace</a></span></dt><dt><span class="section"><a href="#introduction-rng">Relaxing with DocBook</a></span></dt><dt><span class="section"><a href="#introduction-why-to-switch">Why switch to DocBook V5.0?</a></span></dt><dt><span class="section"><a href="#introduction-schemas">Schema jungle</a></span></dt></dl></dd><dt><span class="section"><a href="#tools">Tool chain</a></span></dt><dd><dl><dt><span class="section"><a href="#editors">Editing DocBook V5.0</a></span></dt><dt><span class="section"><a href="#validators">Validating DocBook V5.0</a></span></dt><dt><span class="section"><a href="#processing">Processing DocBook V5.0</a></span></dt></dl></dd><dt><span class="section"><a href="#changes">Markup changes</a></span></dt><dd><dl><dt><span class="section"><a href="#changes-linking">Improved cross-referencing and linking</a></span></dt><dt><span class="section"><a href="#changes-renamed">Renamed elements</a></span></dt><dt><span class="section"><a href="#changes-removed">Removed elements</a></span></dt></dl></dd><dt><span class="section"><a href="#convert4to5">Converting DocBook V4.x documents to DocBook V5.0</a></span></dt><dd><dl><dt><span class="section"><a href="#entities">What About Entities?</a></span></dt></dl></dd><dt><span class="section"><a href="#customizations">Customizing DocBook V5.0</a></span></dt><dd><dl><dt><span class="section"><a href="#relaxngorg">DocBook RELAX NG schema organization</a></span></dt><dt><span class="section"><a href="#customconsiderations">General customization considerations</a></span></dt><dt><span class="section"><a href="#cust-elements">Elements</a></span></dt><dt><span class="section"><a href="#cust-attributes">Attributes</a></span></dt><dt><span class="section"><a href="#cust-naming">Naming and versioning DocBook customizations</a></span></dt></dl></dd><dt><span class="section"><a href="#faq">FAQ</a></span></dt><dt><span class="bibliography"><a href="#references">Bibliography</a></span></dt></dl></div>
 
 
 <p>This document is targeted at DocBook users who are considering
@@ -146,7 +146,7 @@ and errata will be published if necessary. </p>
 the current version of DocBook V5.0 provides significant improvements
 over DocBook V4.x. For example there is general markup for annotations,
 a new and flexible system for linking, and unified markup for information
-sections using the <a href="http://docbook.org/tdg5/en/html/info.html"><code class="sgmltag-element">info</code></a> element.</p>
+sections using the <a href="https://docbook.org/tdg5/en/html/info.html"><code class="sgmltag-element">info</code></a> element.</p>
 </li><li>
 <p><span class="emphasis"><em>DocBook V5.0 is more extensible.</em></span> Having
 DocBook V5.0 in a separate namespace allows you to easily mix DocBook
@@ -165,7 +165,7 @@ than it would be using a DTD.</p>
 
 <p>Schemas for DocBook V5.0 are available in several formats at
 <a class="ulink" href="http://www.oasis-open.org/docbook/xml/5.0CR7/" target="_top">http://www.oasis-open.org/docbook/xml/5.0CR7/</a> (or the
-mirror at <a class="ulink" href="http://docbook.org/xml/5.0CR7/" target="_top">http://docbook.org/xml/5.0CR7/</a>).
+mirror at <a class="ulink" href="https://docbook.org/xml/5.0CR7/" target="_top">http://docbook.org/xml/5.0CR7/</a>).
 Only the RELAX NG schema is normative
 and it is preferred over the other schema languages. However, for your
 convenience there are also DTD and W3C XML Schema versions provided for DocBook
@@ -190,11 +190,11 @@ against Schematron schema.</p>
 <div class="section" lang="en"><div class="titlepage"><div><div><h4 class="title"><a name="schemas"></a>Where to get the schemas</h4></div></div></div>
 
 
-<p>The latest versions of schemas can be obtained from <a class="ulink" href="http://docbook.org/schemas/5x.html" target="_top">http://docbook.org/schemas/5x.html</a>. At the time of this
+<p>The latest versions of schemas can be obtained from <a class="ulink" href="https://docbook.org/schemas/5x.html" target="_top">http://docbook.org/schemas/5x.html</a>. At the time of this
 writing the latest version is 5.0CR7 and individual schemas are
 available at the following locations:</p>
 
-<div class="variablelist"><dl><dt><span class="term">RELAX NG schema</span></dt><dd><p><a class="ulink" href="http://docbook.org/xml/5.0CR7/rng/docbook.rng" target="_top">http://docbook.org/xml/5.0CR7/rng/docbook.rng</a></p></dd><dt><span class="term">RELAX NG schema in compact syntax</span></dt><dd><p><a class="ulink" href="http://docbook.org/xml/5.0CR7/rng/docbook.rnc" target="_top">http://docbook.org/xml/5.0CR7/rng/docbook.rnc</a></p></dd><dt><span class="term">DTD</span></dt><dd><p><a class="ulink" href="http://docbook.org/xml/5.0CR7/dtd/docbook.dtd" target="_top">http://docbook.org/xml/5.0CR7/dtd/docbook.dtd</a></p></dd><dt><span class="term">W3C XML Schema</span></dt><dd><p><a class="ulink" href="http://docbook.org/xml/5.0CR7/xsd/docbook.xsd" target="_top">http://docbook.org/xml/5.0CR7/xsd/docbook.xsd</a></p></dd><dt><span class="term">Schematron schema with additional checks</span></dt><dd><p><a class="ulink" href="http://docbook.org/xml/5.0CR7/sch/docbook.sch" target="_top">http://docbook.org/xml/5.0CR7/sch/docbook.sch</a></p></dd></dl></div>
+<div class="variablelist"><dl><dt><span class="term">RELAX NG schema</span></dt><dd><p><a class="ulink" href="https://docbook.org/xml/5.0CR7/rng/docbook.rng" target="_top">http://docbook.org/xml/5.0CR7/rng/docbook.rng</a></p></dd><dt><span class="term">RELAX NG schema in compact syntax</span></dt><dd><p><a class="ulink" href="https://docbook.org/xml/5.0CR7/rng/docbook.rnc" target="_top">http://docbook.org/xml/5.0CR7/rng/docbook.rnc</a></p></dd><dt><span class="term">DTD</span></dt><dd><p><a class="ulink" href="https://docbook.org/xml/5.0CR7/dtd/docbook.dtd" target="_top">http://docbook.org/xml/5.0CR7/dtd/docbook.dtd</a></p></dd><dt><span class="term">W3C XML Schema</span></dt><dd><p><a class="ulink" href="https://docbook.org/xml/5.0CR7/xsd/docbook.xsd" target="_top">http://docbook.org/xml/5.0CR7/xsd/docbook.xsd</a></p></dd><dt><span class="term">Schematron schema with additional checks</span></dt><dd><p><a class="ulink" href="https://docbook.org/xml/5.0CR7/sch/docbook.sch" target="_top">http://docbook.org/xml/5.0CR7/sch/docbook.sch</a></p></dd></dl></div>
 
 <p>These schemas are also available from the mirror at
 <a class="ulink" href="http://www.oasis-open.org/docbook/xml/5.0CR7/" target="_top">http://www.oasis-open.org/docbook/xml/5.0CR7/</a>.</p>
@@ -205,7 +205,7 @@ available at the following locations:</p>
 
 
 <p>Detailed documentation about each DocBook V5.0 element is
-presented in <a class="ulink" href="http://docbook.org/tdg5/en/html/pt02.html" target="_top">the reference part
+presented in <a class="ulink" href="https://docbook.org/tdg5/en/html/pt02.html" target="_top">the reference part
 of <em class="citetitle">DocBook: The Definitive Guide</em></a>.</p>
 
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
@@ -493,7 +493,7 @@ stylesheets (their name is starting with
   situations. To overcome those limitations, Bob Stayton created a
   build system for taking the non-namespace-aware DocBook XSL
   stylesheets and generating namespace-aware versions from them.
-  The DocBook <a class="ulink" href="http://docbook.sourceforge.net/release/xsl-ns/current/" target="_top">XSL-NS stylesheets</a> are the result.</p>
+  The DocBook <a class="ulink" href="https://docbook.sourceforge.net/release/xsl-ns/current/" target="_top">XSL-NS stylesheets</a> are the result.</p>
 
 <p>The DocBook XSL-NS stylesheets are released side-by-side
   with the DocBook XSL stylesheets, as a separate <a class="ulink" href="https://sourceforge.net/project/showfiles.php?group_id=21935&amp;package_id=219178" target="_top"><span class="package">docbook-xsl-ns</span></a> package. They are the
@@ -526,7 +526,7 @@ have, there's no specific schedule.</p>
 
 <p>There are not very many XSLT 2.0 implementations available.
 But, if you want to try the new stylesheets, grab a snapshot of
-the development version from <a class="ulink" href="http://docbook.sourceforge.net/snapshots/docbook-xsl2-snapshot.zip" target="_top">http://docbook.sourceforge.net/snapshots/docbook-xsl2-snapshot.zip</a>
+the development version from <a class="ulink" href="https://docbook.sourceforge.net/snapshots/docbook-xsl2-snapshot.zip" target="_top">http://docbook.sourceforge.net/snapshots/docbook-xsl2-snapshot.zip</a>
 and unpack it somewhere. Then download and install Saxon&nbsp;8 from <a class="ulink" href="http://saxon.sf.net" target="_top">http://saxon.sf.net</a>.</p>
 
 <p>To transform a DocBook V5.0 document to a single HTML page use the command:</p>
@@ -560,7 +560,7 @@ attribute is renamed <code class="sgmltag-attribute">xml:id</code> in order
 to comply with [<a class="citation" href="#d5e968"><span class="citation">XMLID</span></a>].</p>
 
 <p>Now you can use almost any inline element as the source of a link,
-not just <a href="http://docbook.org/tdg5/en/html/xref.html"><code class="sgmltag-element">xref</code></a> or <a href="http://docbook.org/tdg5/en/html/link.html"><code class="sgmltag-element">link</code></a>. For example, the following
+not just <a href="https://docbook.org/tdg5/en/html/xref.html"><code class="sgmltag-element">xref</code></a> or <a href="https://docbook.org/tdg5/en/html/link.html"><code class="sgmltag-element">link</code></a>. For example, the following
 DocBook 4.x content:</p> 
 
 <pre class="programlisting">&lt;section id="dir"&gt;
@@ -600,15 +600,15 @@ document):</p>
     is my favourite text editor.&lt;/para&gt;
   &#8230;</pre>
 
-<p>The <a href="http://docbook.org/tdg/en/html/ulink.html"><code class="sgmltag-element">ulink</code></a> element was removed from DocBook V5.0
-in favor of XLink linking. Instead of the DocBook V4.x <a href="http://docbook.org/tdg/en/html/ulink.html"><code class="sgmltag-element">ulink</code></a>
+<p>The <a href="https://docbook.org/tdg/en/html/ulink.html"><code class="sgmltag-element">ulink</code></a> element was removed from DocBook V5.0
+in favor of XLink linking. Instead of the DocBook V4.x <a href="https://docbook.org/tdg/en/html/ulink.html"><code class="sgmltag-element">ulink</code></a>
 element:</p>
 
 <pre class="programlisting">&lt;ulink url="http://docbook.org"&gt;DocBook site&lt;/ulink&gt;</pre>
 
-<p>you can now use <a href="http://docbook.org/tdg5/en/html/link.html"><code class="sgmltag-element">link</code></a></p>
+<p>you can now use <a href="https://docbook.org/tdg5/en/html/link.html"><code class="sgmltag-element">link</code></a></p>
 
-<pre class="programlisting">&lt;link xl:href="http://docbook.org"&gt;DocBook site&lt;/link&gt;</pre>
+<pre class="programlisting">&lt;link xl:href="https://docbook.org"&gt;DocBook site&lt;/link&gt;</pre>
 
 <p>XLink links may contain a fragment identifier, which you can 
 use instead of <code class="sgmltag-attribute">linkend</code> to form
@@ -632,14 +632,14 @@ reduce the total number of elements available in DocBook.</p>
 
 <div class="table"><a name="t.renamed"></a><p class="title"><b>Table&nbsp;1.&nbsp;Renamed elements</b></p><div class="table-contents">
 
-<table summary="Renamed elements" border="1"><colgroup><col width="50%"><col width="50%"></colgroup><thead><tr><th>Old name</th><th>New name</th></tr></thead><tbody><tr><td><a href="http://docbook.org/tdg/en/html/sgmltag.html"><code class="sgmltag-element">sgmltag</code></a></td><td><a href="http://docbook.org/tdg5/en/html/tag.html"><code class="sgmltag-element">tag</code></a></td></tr><tr><td><a href="http://docbook.org/tdg/en/html/bookinfo.html"><code class="sgmltag-element">bookinfo</code></a>, <a href="http://docbook.org/tdg/en/html/articleinfo.html"><code class="sgmltag-element">articleinfo</code></a>,
-<a href="http://docbook.org/tdg/en/html/chapterinfo.html"><code class="sgmltag-element">chapterinfo</code></a>, <code class="sgmltag-element">*info</code></td><td><a href="http://docbook.org/tdg5/en/html/info.html"><code class="sgmltag-element">info</code></a></td></tr><tr><td><a href="http://docbook.org/tdg/en/html/authorblurb.html"><code class="sgmltag-element">authorblurb</code></a></td><td><a href="http://docbook.org/tdg5/en/html/personblurb.html"><code class="sgmltag-element">personblurb</code></a></td></tr><tr><td><a href="http://docbook.org/tdg/en/html/collabname.html"><code class="sgmltag-element">collabname</code></a>, <a href="http://docbook.org/tdg/en/html/corpauthor.html"><code class="sgmltag-element">corpauthor</code></a>,
-<a href="http://docbook.org/tdg/en/html/corpcredit.html"><code class="sgmltag-element">corpcredit</code></a>, <a href="http://docbook.org/tdg/en/html/corpname.html"><code class="sgmltag-element">corpname</code></a></td><td><a href="http://docbook.org/tdg5/en/html/orgname.html"><code class="sgmltag-element">orgname</code></a></td></tr><tr><td><a href="http://docbook.org/tdg/en/html/isbn.html"><code class="sgmltag-element">isbn</code></a>, <a href="http://docbook.org/tdg/en/html/issn.html"><code class="sgmltag-element">issn</code></a>,
-<a href="http://docbook.org/tdg/en/html/pubsnumber.html"><code class="sgmltag-element">pubsnumber</code></a></td><td><a href="http://docbook.org/tdg5/en/html/biblioid.html"><code class="sgmltag-element">biblioid</code></a></td></tr><tr><td><a href="http://docbook.org/tdg/en/html/lot.html"><code class="sgmltag-element">lot</code></a>, <a href="http://docbook.org/tdg/en/html/lotentry.html"><code class="sgmltag-element">lotentry</code></a>, <a href="http://docbook.org/tdg/en/html/tocback.html"><code class="sgmltag-element">tocback</code></a>,
-<a href="http://docbook.org/tdg/en/html/tocchap.html"><code class="sgmltag-element">tocchap</code></a>, <a href="http://docbook.org/tdg/en/html/tocfront.html"><code class="sgmltag-element">tocfront</code></a>, <a href="http://docbook.org/tdg/en/html/toclevel1.html"><code class="sgmltag-element">toclevel1</code></a>,
-<a href="http://docbook.org/tdg/en/html/toclevel2.html"><code class="sgmltag-element">toclevel2</code></a>, <a href="http://docbook.org/tdg/en/html/toclevel3.html"><code class="sgmltag-element">toclevel3</code></a>, <a href="http://docbook.org/tdg/en/html/toclevel4.html"><code class="sgmltag-element">toclevel4</code></a>,
-<a href="http://docbook.org/tdg/en/html/toclevel5.html"><code class="sgmltag-element">toclevel5</code></a>, <a href="http://docbook.org/tdg/en/html/tocpart.html"><code class="sgmltag-element">tocpart</code></a></td><td><a href="http://docbook.org/tdg5/en/html/tocdiv.html"><code class="sgmltag-element">tocdiv</code></a></td></tr><tr><td><a href="http://docbook.org/tdg/en/html/graphic.html"><code class="sgmltag-element">graphic</code></a>, <a href="http://docbook.org/tdg/en/html/graphicco.html"><code class="sgmltag-element">graphicco</code></a>,
-<a href="http://docbook.org/tdg/en/html/inlinegraphic.html"><code class="sgmltag-element">inlinegraphic</code></a>, <a href="http://docbook.org/tdg/en/html/mediaobjectco.html"><code class="sgmltag-element">mediaobjectco</code></a></td><td><a href="http://docbook.org/tdg5/en/html/mediaobject.html"><code class="sgmltag-element">mediaobject</code></a> and <a href="http://docbook.org/tdg5/en/html/inlinemediaobject.html"><code class="sgmltag-element">inlinemediaobject</code></a></td></tr><tr><td><a href="http://docbook.org/tdg/en/html/ulink.html"><code class="sgmltag-element">ulink</code></a></td><td><a href="http://docbook.org/tdg5/en/html/link.html"><code class="sgmltag-element">link</code></a></td></tr><tr><td><a href="http://docbook.org/tdg/en/html/ackno.html"><code class="sgmltag-element">ackno</code></a></td><td><a href="http://docbook.org/tdg5/en/html/acknowledgements.html"><code class="sgmltag-element">acknowledgements</code></a></td></tr></tbody></table>
+<table summary="Renamed elements" border="1"><colgroup><col width="50%"><col width="50%"></colgroup><thead><tr><th>Old name</th><th>New name</th></tr></thead><tbody><tr><td><a href="https://docbook.org/tdg/en/html/sgmltag.html"><code class="sgmltag-element">sgmltag</code></a></td><td><a href="https://docbook.org/tdg5/en/html/tag.html"><code class="sgmltag-element">tag</code></a></td></tr><tr><td><a href="https://docbook.org/tdg/en/html/bookinfo.html"><code class="sgmltag-element">bookinfo</code></a>, <a href="https://docbook.org/tdg/en/html/articleinfo.html"><code class="sgmltag-element">articleinfo</code></a>,
+<a href="https://docbook.org/tdg/en/html/chapterinfo.html"><code class="sgmltag-element">chapterinfo</code></a>, <code class="sgmltag-element">*info</code></td><td><a href="https://docbook.org/tdg5/en/html/info.html"><code class="sgmltag-element">info</code></a></td></tr><tr><td><a href="https://docbook.org/tdg/en/html/authorblurb.html"><code class="sgmltag-element">authorblurb</code></a></td><td><a href="https://docbook.org/tdg5/en/html/personblurb.html"><code class="sgmltag-element">personblurb</code></a></td></tr><tr><td><a href="https://docbook.org/tdg/en/html/collabname.html"><code class="sgmltag-element">collabname</code></a>, <a href="https://docbook.org/tdg/en/html/corpauthor.html"><code class="sgmltag-element">corpauthor</code></a>,
+<a href="https://docbook.org/tdg/en/html/corpcredit.html"><code class="sgmltag-element">corpcredit</code></a>, <a href="https://docbook.org/tdg/en/html/corpname.html"><code class="sgmltag-element">corpname</code></a></td><td><a href="https://docbook.org/tdg5/en/html/orgname.html"><code class="sgmltag-element">orgname</code></a></td></tr><tr><td><a href="https://docbook.org/tdg/en/html/isbn.html"><code class="sgmltag-element">isbn</code></a>, <a href="https://docbook.org/tdg/en/html/issn.html"><code class="sgmltag-element">issn</code></a>,
+<a href="https://docbook.org/tdg/en/html/pubsnumber.html"><code class="sgmltag-element">pubsnumber</code></a></td><td><a href="https://docbook.org/tdg5/en/html/biblioid.html"><code class="sgmltag-element">biblioid</code></a></td></tr><tr><td><a href="https://docbook.org/tdg/en/html/lot.html"><code class="sgmltag-element">lot</code></a>, <a href="https://docbook.org/tdg/en/html/lotentry.html"><code class="sgmltag-element">lotentry</code></a>, <a href="https://docbook.org/tdg/en/html/tocback.html"><code class="sgmltag-element">tocback</code></a>,
+<a href="https://docbook.org/tdg/en/html/tocchap.html"><code class="sgmltag-element">tocchap</code></a>, <a href="https://docbook.org/tdg/en/html/tocfront.html"><code class="sgmltag-element">tocfront</code></a>, <a href="https://docbook.org/tdg/en/html/toclevel1.html"><code class="sgmltag-element">toclevel1</code></a>,
+<a href="https://docbook.org/tdg/en/html/toclevel2.html"><code class="sgmltag-element">toclevel2</code></a>, <a href="https://docbook.org/tdg/en/html/toclevel3.html"><code class="sgmltag-element">toclevel3</code></a>, <a href="https://docbook.org/tdg/en/html/toclevel4.html"><code class="sgmltag-element">toclevel4</code></a>,
+<a href="https://docbook.org/tdg/en/html/toclevel5.html"><code class="sgmltag-element">toclevel5</code></a>, <a href="https://docbook.org/tdg/en/html/tocpart.html"><code class="sgmltag-element">tocpart</code></a></td><td><a href="https://docbook.org/tdg5/en/html/tocdiv.html"><code class="sgmltag-element">tocdiv</code></a></td></tr><tr><td><a href="https://docbook.org/tdg/en/html/graphic.html"><code class="sgmltag-element">graphic</code></a>, <a href="https://docbook.org/tdg/en/html/graphicco.html"><code class="sgmltag-element">graphicco</code></a>,
+<a href="https://docbook.org/tdg/en/html/inlinegraphic.html"><code class="sgmltag-element">inlinegraphic</code></a>, <a href="https://docbook.org/tdg/en/html/mediaobjectco.html"><code class="sgmltag-element">mediaobjectco</code></a></td><td><a href="https://docbook.org/tdg5/en/html/mediaobject.html"><code class="sgmltag-element">mediaobject</code></a> and <a href="https://docbook.org/tdg5/en/html/inlinemediaobject.html"><code class="sgmltag-element">inlinemediaobject</code></a></td></tr><tr><td><a href="https://docbook.org/tdg/en/html/ulink.html"><code class="sgmltag-element">ulink</code></a></td><td><a href="https://docbook.org/tdg5/en/html/link.html"><code class="sgmltag-element">link</code></a></td></tr><tr><td><a href="https://docbook.org/tdg/en/html/ackno.html"><code class="sgmltag-element">ackno</code></a></td><td><a href="https://docbook.org/tdg5/en/html/acknowledgements.html"><code class="sgmltag-element">acknowledgements</code></a></td></tr></tbody></table>
 </div></div><br class="table-break">
 
 </div>
@@ -648,34 +648,34 @@ reduce the total number of elements available in DocBook.</p>
 
 
 <p>The following elements were removed from DocBook V5.0 without
-direct replacements: <a href="http://docbook.org/tdg/en/html/action.html"><code class="sgmltag-element">action</code></a>, <a href="http://docbook.org/tdg/en/html/beginpage.html"><code class="sgmltag-element">beginpage</code></a>, <a href="http://docbook.org/tdg/en/html/highlights.html"><code class="sgmltag-element">highlights</code></a>,
-<a href="http://docbook.org/tdg/en/html/interface.html"><code class="sgmltag-element">interface</code></a>, <a href="http://docbook.org/tdg/en/html/invpartnumber.html"><code class="sgmltag-element">invpartnumber</code></a>, <a href="http://docbook.org/tdg/en/html/medialabel.html"><code class="sgmltag-element">medialabel</code></a>, <a href="http://docbook.org/tdg/en/html/modespec.html"><code class="sgmltag-element">modespec</code></a>,
-<a href="http://docbook.org/tdg/en/html/structfield.html"><code class="sgmltag-element">structfield</code></a>, <a href="http://docbook.org/tdg/en/html/structname.html"><code class="sgmltag-element">structname</code></a>.
+direct replacements: <a href="https://docbook.org/tdg/en/html/action.html"><code class="sgmltag-element">action</code></a>, <a href="https://docbook.org/tdg/en/html/beginpage.html"><code class="sgmltag-element">beginpage</code></a>, <a href="https://docbook.org/tdg/en/html/highlights.html"><code class="sgmltag-element">highlights</code></a>,
+<a href="https://docbook.org/tdg/en/html/interface.html"><code class="sgmltag-element">interface</code></a>, <a href="https://docbook.org/tdg/en/html/invpartnumber.html"><code class="sgmltag-element">invpartnumber</code></a>, <a href="https://docbook.org/tdg/en/html/medialabel.html"><code class="sgmltag-element">medialabel</code></a>, <a href="https://docbook.org/tdg/en/html/modespec.html"><code class="sgmltag-element">modespec</code></a>,
+<a href="https://docbook.org/tdg/en/html/structfield.html"><code class="sgmltag-element">structfield</code></a>, <a href="https://docbook.org/tdg/en/html/structname.html"><code class="sgmltag-element">structname</code></a>.
 If you use one or more of these elements, here are some suggestions
 as to how to re-code them in DocBook V5.0.
 </p>
 
 <div class="table"><a name="t.removed"></a><p class="title"><b>Table&nbsp;2.&nbsp;Recommended mapping for removed elements</b></p><div class="table-contents">
 
-<table summary="Recommended mapping for removed elements" border="1"><colgroup><col width="50%"><col width="50%"></colgroup><thead><tr><th>Old name</th><th>Recommended mapping</th></tr></thead><tbody><tr><td><a href="http://docbook.org/tdg/en/html/action.html"><code class="sgmltag-element">action</code></a></td><td>Use <code class="computeroutput">&lt;<a href="http://docbook.org/tdg5/en/html/phrase.html"><code class="sgmltag-element">phrase</code></a> remap="action"&gt;</code>.</td></tr><tr><td><a href="http://docbook.org/tdg/en/html/beginpage.html"><code class="sgmltag-element">beginpage</code></a></td><td>Remove: <a href="http://docbook.org/tdg/en/html/beginpage.html"><code class="sgmltag-element">beginpage</code></a> is advisory only
+<table summary="Recommended mapping for removed elements" border="1"><colgroup><col width="50%"><col width="50%"></colgroup><thead><tr><th>Old name</th><th>Recommended mapping</th></tr></thead><tbody><tr><td><a href="https://docbook.org/tdg/en/html/action.html"><code class="sgmltag-element">action</code></a></td><td>Use <code class="computeroutput">&lt;<a href="https://docbook.org/tdg5/en/html/phrase.html"><code class="sgmltag-element">phrase</code></a> remap="action"&gt;</code>.</td></tr><tr><td><a href="https://docbook.org/tdg/en/html/beginpage.html"><code class="sgmltag-element">beginpage</code></a></td><td>Remove: <a href="https://docbook.org/tdg/en/html/beginpage.html"><code class="sgmltag-element">beginpage</code></a> is advisory only
 and has tended to cause confusion.  A processing instruction or
-comment should be a workable replacement if one is needed.</td></tr><tr><td><a href="http://docbook.org/tdg/en/html/highlights.html"><code class="sgmltag-element">highlights</code></a></td><td>Use <a href="http://docbook.org/tdg5/en/html/abstract.html"><code class="sgmltag-element">abstract</code></a>.  Note that because <a href="http://docbook.org/tdg/en/html/highlights.html"><code class="sgmltag-element">highlights</code></a> has a broader content model, you may
-need to wrap contents in a <a href="http://docbook.org/tdg5/en/html/para.html"><code class="sgmltag-element">para</code></a> inside
-<a href="http://docbook.org/tdg5/en/html/abstract.html"><code class="sgmltag-element">abstract</code></a>.</td></tr><tr><td><a href="http://docbook.org/tdg/en/html/interface.html"><code class="sgmltag-element">interface</code></a></td><td>Use one of the &#8220;<span class="quote">gui*</span>&#8221; elements
-(<a href="http://docbook.org/tdg5/en/html/guibutton.html"><code class="sgmltag-element">guibutton</code></a>, <a href="http://docbook.org/tdg5/en/html/guiicon.html"><code class="sgmltag-element">guiicon</code></a>, <a href="http://docbook.org/tdg5/en/html/guilabel.html"><code class="sgmltag-element">guilabel</code></a>,
-<a href="http://docbook.org/tdg5/en/html/guimenu.html"><code class="sgmltag-element">guimenu</code></a>, <a href="http://docbook.org/tdg5/en/html/guimenuitem.html"><code class="sgmltag-element">guimenuitem</code></a>, or
-<a href="http://docbook.org/tdg5/en/html/guisubmenu.html"><code class="sgmltag-element">guisubmenu</code></a>).</td></tr><tr><td><a href="http://docbook.org/tdg/en/html/invpartnumber.html"><code class="sgmltag-element">invpartnumber</code></a></td><td>Use <code class="computeroutput">&lt;<a href="http://docbook.org/tdg5/en/html/biblioid.html"><code class="sgmltag-element">biblioid</code></a> class="other"
+comment should be a workable replacement if one is needed.</td></tr><tr><td><a href="https://docbook.org/tdg/en/html/highlights.html"><code class="sgmltag-element">highlights</code></a></td><td>Use <a href="https://docbook.org/tdg5/en/html/abstract.html"><code class="sgmltag-element">abstract</code></a>.  Note that because <a href="https://docbook.org/tdg/en/html/highlights.html"><code class="sgmltag-element">highlights</code></a> has a broader content model, you may
+need to wrap contents in a <a href="https://docbook.org/tdg5/en/html/para.html"><code class="sgmltag-element">para</code></a> inside
+<a href="https://docbook.org/tdg5/en/html/abstract.html"><code class="sgmltag-element">abstract</code></a>.</td></tr><tr><td><a href="https://docbook.org/tdg/en/html/interface.html"><code class="sgmltag-element">interface</code></a></td><td>Use one of the &#8220;<span class="quote">gui*</span>&#8221; elements
+(<a href="https://docbook.org/tdg5/en/html/guibutton.html"><code class="sgmltag-element">guibutton</code></a>, <a href="https://docbook.org/tdg5/en/html/guiicon.html"><code class="sgmltag-element">guiicon</code></a>, <a href="https://docbook.org/tdg5/en/html/guilabel.html"><code class="sgmltag-element">guilabel</code></a>,
+<a href="https://docbook.org/tdg5/en/html/guimenu.html"><code class="sgmltag-element">guimenu</code></a>, <a href="https://docbook.org/tdg5/en/html/guimenuitem.html"><code class="sgmltag-element">guimenuitem</code></a>, or
+<a href="https://docbook.org/tdg5/en/html/guisubmenu.html"><code class="sgmltag-element">guisubmenu</code></a>).</td></tr><tr><td><a href="https://docbook.org/tdg/en/html/invpartnumber.html"><code class="sgmltag-element">invpartnumber</code></a></td><td>Use <code class="computeroutput">&lt;<a href="https://docbook.org/tdg5/en/html/biblioid.html"><code class="sgmltag-element">biblioid</code></a> class="other"
 otherclass="medialabel"&gt;</code>.  The
-<a href="http://docbook.org/tdg5/en/html/productnumber.html"><code class="sgmltag-element">productnumber</code></a> element is another alternative.</td></tr><tr><td><a href="http://docbook.org/tdg/en/html/medialabel.html"><code class="sgmltag-element">medialabel</code></a></td><td>Use <code class="computeroutput">&lt;<a href="http://docbook.org/tdg5/en/html/citetitle.html"><code class="sgmltag-element">citetitle</code></a>
+<a href="https://docbook.org/tdg5/en/html/productnumber.html"><code class="sgmltag-element">productnumber</code></a> element is another alternative.</td></tr><tr><td><a href="https://docbook.org/tdg/en/html/medialabel.html"><code class="sgmltag-element">medialabel</code></a></td><td>Use <code class="computeroutput">&lt;<a href="https://docbook.org/tdg5/en/html/citetitle.html"><code class="sgmltag-element">citetitle</code></a>
 pubwork="<em class="replaceable"><code>mediatype</code></em>"&gt;</code>,
 where <em class="replaceable"><code>mediatype</code></em> is the type of media being
-labeled (e.g.,<code class="sgmltag-attvalue">cdrom</code> or <code class="sgmltag-attvalue">dvd</code>).</td></tr><tr><td><a href="http://docbook.org/tdg/en/html/modespec.html"><code class="sgmltag-element">modespec</code></a></td><td>No longer needed.  The current processing model for
-<a href="http://docbook.org/tdg5/en/html/olink.html"><code class="sgmltag-element">olink</code></a> renders <a href="http://docbook.org/tdg/en/html/modespec.html"><code class="sgmltag-element">modespec</code></a>
-unnecessary.</td></tr><tr><td><a href="http://docbook.org/tdg/en/html/structfield.html"><code class="sgmltag-element">structfield</code></a>, <a href="http://docbook.org/tdg/en/html/structname.html"><code class="sgmltag-element">structname</code></a></td><td>Use <a href="http://docbook.org/tdg5/en/html/varname.html"><code class="sgmltag-element">varname</code></a>. If you need to distinguish between the
-two, use <code class="computeroutput">&lt;<a href="http://docbook.org/tdg5/en/html/varname.html"><code class="sgmltag-element">varname</code></a>
+labeled (e.g.,<code class="sgmltag-attvalue">cdrom</code> or <code class="sgmltag-attvalue">dvd</code>).</td></tr><tr><td><a href="https://docbook.org/tdg/en/html/modespec.html"><code class="sgmltag-element">modespec</code></a></td><td>No longer needed.  The current processing model for
+<a href="https://docbook.org/tdg5/en/html/olink.html"><code class="sgmltag-element">olink</code></a> renders <a href="https://docbook.org/tdg/en/html/modespec.html"><code class="sgmltag-element">modespec</code></a>
+unnecessary.</td></tr><tr><td><a href="https://docbook.org/tdg/en/html/structfield.html"><code class="sgmltag-element">structfield</code></a>, <a href="https://docbook.org/tdg/en/html/structname.html"><code class="sgmltag-element">structname</code></a></td><td>Use <a href="https://docbook.org/tdg5/en/html/varname.html"><code class="sgmltag-element">varname</code></a>. If you need to distinguish between the
+two, use <code class="computeroutput">&lt;<a href="https://docbook.org/tdg5/en/html/varname.html"><code class="sgmltag-element">varname</code></a>
 remap="<em class="replaceable"><code>structname or
 structfield</code></em>"&gt;</code>.  In some contexts, it
-may also be appropriate to use <a href="http://docbook.org/tdg5/en/html/property.html"><code class="sgmltag-element">property</code></a> for <a href="http://docbook.org/tdg/en/html/structfield.html"><code class="sgmltag-element">structfield</code></a>.</td></tr></tbody></table>
+may also be appropriate to use <a href="https://docbook.org/tdg5/en/html/property.html"><code class="sgmltag-element">property</code></a> for <a href="https://docbook.org/tdg/en/html/structfield.html"><code class="sgmltag-element">structfield</code></a>.</td></tr></tbody></table>
 </div></div><br class="table-break">
 
 </div>
@@ -766,7 +766,7 @@ to the DocBook V5.0 DTD.</p>
 
 <div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3>
 <p>Steps 2 and 5 from previous procedure can be automated using the
-<a class="ulink" href="http://docbook.svn.sourceforge.net/viewvc/docbook/trunk/contrib/tools/cloak" target="_top">cloak
+<a class="ulink" href="https://docbook.svn.sourceforge.net/viewvc/docbook/trunk/contrib/tools/cloak" target="_top">cloak
 script</a> written by Michael Smith.</p>
 </div>
 
@@ -827,7 +827,7 @@ on standard output.</p>
       An important design characteristic of the schema is that
       duplication is minimized.  This is done through the use of
       named patterns for common groupings that can be re-used.
-      For example, the <a href="http://docbook.org/tdg5/en/html/imagedata.html"><code class="sgmltag-element">imagedata</code></a> and <a href="http://docbook.org/tdg5/en/html/videodata.html"><code class="sgmltag-element">videodata</code></a>
+      For example, the <a href="https://docbook.org/tdg5/en/html/imagedata.html"><code class="sgmltag-element">imagedata</code></a> and <a href="https://docbook.org/tdg5/en/html/videodata.html"><code class="sgmltag-element">videodata</code></a>
       elements each have an <code class="sgmltag-attribute">align</code> attribute
       that takes the same set of enumerated values.  Rather than
       repeating those values, a single pattern,
@@ -861,8 +861,8 @@ on standard output.</p>
             Elements that have different content models in different
             contexts will also have patterns in the form
             <code class="varname">db.<em class="replaceable"><code>context.elementname</code></em></code>.  For example, <code class="varname">db.figure.info</code>
-            defines the content model for the <a href="http://docbook.org/tdg5/en/html/info.html"><code class="sgmltag-element">info</code></a> element
-            when it appears as a child of the <a href="http://docbook.org/tdg5/en/html/figure.html"><code class="sgmltag-element">figure</code></a> element.
+            defines the content model for the <a href="https://docbook.org/tdg5/en/html/info.html"><code class="sgmltag-element">info</code></a> element
+            when it appears as a child of the <a href="https://docbook.org/tdg5/en/html/figure.html"><code class="sgmltag-element">figure</code></a> element.
             <em class="replaceable"><code>Context</code></em> may have several parts.
             For example, <code class="varname">db.cals.entrytbl.thead</code>.
           </p>
@@ -876,7 +876,7 @@ on standard output.</p>
             For example,
             <code class="varname">db.olink.localinfo.attribute</code> defines the content
             model of the <code class="sgmltag-attribute">localinfo</code> attribute when
-            it appears in <a href="http://docbook.org/tdg5/en/html/olink.html"><code class="sgmltag-element">olink</code></a>.
+            it appears in <a href="https://docbook.org/tdg5/en/html/olink.html"><code class="sgmltag-element">olink</code></a>.
             There are a few attributes that do not have individual named
             patterns.  For example, the effectivity attributes are grouped
             into <code class="varname">db.effectivity.attributes</code> and not identified
@@ -908,7 +908,7 @@ on standard output.</p>
             <code class="varname">db.verbatim.continuation.enumeration</code> defines
             the enumeration values for the
             <code class="sgmltag-attribute">continuation</code> attribute that is used
-            in verbatim contexts like <a href="http://docbook.org/tdg5/en/html/screen.html"><code class="sgmltag-element">screen</code></a>.
+            in verbatim contexts like <a href="https://docbook.org/tdg5/en/html/screen.html"><code class="sgmltag-element">screen</code></a>.
             Unlike elements and attributes, there is not necessarily a
             named pattern for enumerated attributes outside their context.
             For example, there is no <code class="varname">db.class.enumeration</code>
@@ -950,15 +950,15 @@ on standard output.</p>
                     <code class="varname">db.bibliography</code>,
                     <code class="varname">db.index</code>, and
                     <code class="varname">db.toc</code>, and is used inside the
-                    content model for <a href="http://docbook.org/tdg5/en/html/chapter.html"><code class="sgmltag-element">chapter</code></a>, <a href="http://docbook.org/tdg5/en/html/appendix.html"><code class="sgmltag-element">appendix</code></a>,
-                    and <a href="http://docbook.org/tdg5/en/html/preface.html"><code class="sgmltag-element">preface</code></a>.
+                    content model for <a href="https://docbook.org/tdg5/en/html/chapter.html"><code class="sgmltag-element">chapter</code></a>, <a href="https://docbook.org/tdg5/en/html/appendix.html"><code class="sgmltag-element">appendix</code></a>,
+                    and <a href="https://docbook.org/tdg5/en/html/preface.html"><code class="sgmltag-element">preface</code></a>.
                   </p>
                 </dd><dt><span class="term">contentmodel</span></dt><dd>
                   <p>
                     Shared content models, for example,
                     <code class="varname">db.admonition.contentmodel</code>, which contains
-                    the content model for <a href="http://docbook.org/tdg5/en/html/tip.html"><code class="sgmltag-element">tip</code></a>, <a href="http://docbook.org/tdg5/en/html/warning.html"><code class="sgmltag-element">warning</code></a>,
-                    <a href="http://docbook.org/tdg5/en/html/note.html"><code class="sgmltag-element">note</code></a>, etc.
+                    the content model for <a href="https://docbook.org/tdg5/en/html/tip.html"><code class="sgmltag-element">tip</code></a>, <a href="https://docbook.org/tdg5/en/html/warning.html"><code class="sgmltag-element">warning</code></a>,
+                    <a href="https://docbook.org/tdg5/en/html/note.html"><code class="sgmltag-element">note</code></a>, etc.
                   </p>
                 </dd></dl></div><p>
           </p>
@@ -1019,8 +1019,8 @@ include "docbook.rnc" inherit = db
         <a class="xref" href="#ex-add-element-1" title="Example&nbsp;4.&nbsp;Adding a new element by duplicating an existing one">Example&nbsp;4</a>
         adds a new element,
         <code class="sgmltag-element">person</code>, with the same
-        content model as <a href="http://docbook.org/tdg5/en/html/author.html"><code class="sgmltag-element">author</code></a>.  The new element will be
-        allowed to appear wherever <a href="http://docbook.org/tdg5/en/html/author.html"><code class="sgmltag-element">author</code></a> can appear.
+        content model as <a href="https://docbook.org/tdg5/en/html/author.html"><code class="sgmltag-element">author</code></a>.  The new element will be
+        allowed to appear wherever <a href="https://docbook.org/tdg5/en/html/author.html"><code class="sgmltag-element">author</code></a> can appear.
       </p>
       <p>
         The <code class="varname">db.author</code> pattern is copied
@@ -1071,7 +1071,7 @@ db.author |= dbx.person</pre>
       only limited control over where the element is allowed.  It
       works well when you want to allow the element in the same places
       as an existing element, and for this example that works
-      nicely, since <a href="http://docbook.org/tdg5/en/html/author.html"><code class="sgmltag-element">author</code></a> is allowed in four different
+      nicely, since <a href="https://docbook.org/tdg5/en/html/author.html"><code class="sgmltag-element">author</code></a> is allowed in four different
       named patterns, each of which would have had to be redefined to
       allow <code class="sgmltag-element">person</code>.
       But, if you can't find an existing element that is allowed in
@@ -1146,7 +1146,7 @@ db.os.inlines |= dbx.asm.inlines</pre>
       <p>
         Deleting elements is straightforward, but takes some
         care and planning.  <a class="xref" href="#ex-delete-element" title="Example&nbsp;6.&nbsp;Deleting an element">Example&nbsp;6</a> deletes
-        the <a href="http://docbook.org/tdg5/en/html/important.html"><code class="sgmltag-element">important</code></a> admonition element by redefining
+        the <a href="https://docbook.org/tdg5/en/html/important.html"><code class="sgmltag-element">important</code></a> admonition element by redefining
         it with a content model of <code class="varname">notAllowed</code>.
         Note that in this example, the redefinition is inside
         the <code class="sgmltag-element">include</code> element.
@@ -1157,9 +1157,9 @@ db.os.inlines |= dbx.asm.inlines</pre>
         Be careful; If you delete an element that is a required part
         of another element's content model, you can make it
         impossible to create a valid document.
-        For example, if you delete the <a href="http://docbook.org/tdg5/en/html/title.html"><code class="sgmltag-element">title</code></a>
-        element, you won't be able to validate a <a href="http://docbook.org/tdg5/en/html/book.html"><code class="sgmltag-element">book</code></a>
-        because a <a href="http://docbook.org/tdg5/en/html/book.html"><code class="sgmltag-element">book</code></a> requires a <a href="http://docbook.org/tdg5/en/html/title.html"><code class="sgmltag-element">title</code></a>.
+        For example, if you delete the <a href="https://docbook.org/tdg5/en/html/title.html"><code class="sgmltag-element">title</code></a>
+        element, you won't be able to validate a <a href="https://docbook.org/tdg5/en/html/book.html"><code class="sgmltag-element">book</code></a>
+        because a <a href="https://docbook.org/tdg5/en/html/book.html"><code class="sgmltag-element">book</code></a> requires a <a href="https://docbook.org/tdg5/en/html/title.html"><code class="sgmltag-element">title</code></a>.
       </p>
 <div class="example"><a name="ex-delete-element"></a><p class="title"><b>Example&nbsp;6.&nbsp;Deleting an element</b></p><div class="example-contents">
 <pre class="programlisting"><span class="rolelabel">r<br>n<br>g</span>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -1185,10 +1185,10 @@ include "docbook.rnc" inherit = db {
       
       <p>
          <a class="xref" href="#ex-modify-element" title="Example&nbsp;7.&nbsp;Modifying the content model of an element">Example&nbsp;7</a>
-         expands the definition of <a href="http://docbook.org/tdg5/en/html/author.html"><code class="sgmltag-element">author</code></a> to include two
+         expands the definition of <a href="https://docbook.org/tdg5/en/html/author.html"><code class="sgmltag-element">author</code></a> to include two
          new elements, <code class="sgmltag-element">born</code> and
          <code class="sgmltag-element">died</code>.
-         The <a href="http://docbook.org/tdg5/en/html/author.html"><code class="sgmltag-element">author</code></a> element allows two content models,
+         The <a href="https://docbook.org/tdg5/en/html/author.html"><code class="sgmltag-element">author</code></a> element allows two content models,
          <code class="varname">db.person.author.contentmodel</code>, which
          defines an author who is a person, and
          <code class="varname">db.org.author.contentmodel</code>, which
@@ -1256,7 +1256,7 @@ uses <code class="varname">db.org.author.contentmodel</code>:
         <a class="xref" href="#ex-add-attr" title="Example&nbsp;8.&nbsp;Adding attributes">Example&nbsp;8</a>
         adds the optional attributes <code class="sgmltag-attribute">born</code>
         and <code class="sgmltag-attribute">died</code> to the attribute
-        list for <a href="http://docbook.org/tdg5/en/html/author.html"><code class="sgmltag-element">author</code></a>.
+        list for <a href="https://docbook.org/tdg5/en/html/author.html"><code class="sgmltag-element">author</code></a>.
         The <code class="varname">db.author.attlist</code>
         named pattern is redefined with the
         <code class="sgmltag-attribute">combine</code> attribute set to
@@ -1297,7 +1297,7 @@ db.author.attlist &amp;=
       Unlike
       <a class="xref" href="#ex-modify-element" title="Example&nbsp;7.&nbsp;Modifying the content model of an element">Example&nbsp;7</a>,
       <a class="xref" href="#ex-add-attr" title="Example&nbsp;8.&nbsp;Adding attributes">Example&nbsp;8</a> allows
-      the new attributes to appear on any <a href="http://docbook.org/tdg5/en/html/author.html"><code class="sgmltag-element">author</code></a>
+      the new attributes to appear on any <a href="https://docbook.org/tdg5/en/html/author.html"><code class="sgmltag-element">author</code></a>
       element, not just those using the person content model.
     </p>
     <p>
@@ -1541,7 +1541,7 @@ and SVG together?</a></dt><dt>3.4. <a href="#faq-customization-links">Are there 
 available?</a></dt></dl></td></tr>
 <tr class="question"><td align="left" valign="top"><a name="faq-customization-mathml"></a><a name="d5e882"></a><p><b>3.1.</b></p></td><td align="left" valign="top"><p>How can I extend the DocBook schema with MathML elements?</p></td></tr>
 <tr class="answer"><td align="left" valign="top"></td><td align="left" valign="top"><p>The basic DocBook schema allows elements from the MathML namespace
-to appear inside the <a href="http://docbook.org/tdg5/en/html/equation.html"><code class="sgmltag-element">equation</code></a> element.  This means that you can
+to appear inside the <a href="https://docbook.org/tdg5/en/html/equation.html"><code class="sgmltag-element">equation</code></a> element.  This means that you can
 validate a DocBook+MathML document, but MathML content will be ignored
 during the validation. You will also not be able to use guided editing
 for the MathML content.</p><p>If you need strict validation of MathML content or guided
@@ -1604,7 +1604,7 @@ DocBook schema.</p>
 
 <tr class="question"><td align="left" valign="top"><a name="faq-customization-svg"></a><a name="d5e906"></a><p><b>3.2.</b></p></td><td align="left" valign="top"><p>How can I extend the DocBook schema with SVG elements?</p></td></tr>
 <tr class="answer"><td align="left" valign="top"></td><td align="left" valign="top"><p>The situation is the same as with MathML support. You can use
-elements from the SVG namespace inside the <a href="http://docbook.org/tdg5/en/html/imageobject.html"><code class="sgmltag-element">imageobject</code></a>
+elements from the SVG namespace inside the <a href="https://docbook.org/tdg5/en/html/imageobject.html"><code class="sgmltag-element">imageobject</code></a>
 element.</p><div class="procedure"><a name="d5e911"></a><p class="title"><b>Procedure&nbsp;2.&nbsp;Extending the DocBook schema with the SVG schema</b></p><ol type="1"><li>
 <p>Download the SVG RELAX NG schema from <a class="ulink" href="http://www.w3.org/Graphics/SVG/1.1/rng/rng.zip" target="_top">http://www.w3.org/Graphics/SVG/1.1/rng/rng.zip</a> and unpack it
 somewhere (e.g. into an <code class="filename">svg</code> subdirectory).</p>
