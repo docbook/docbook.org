@@ -1,5 +1,34 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>cb6448937644920d060ccb4b90f01af0675d9f67</hash>
+<date>2018-06-02T17:46:27+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Merge pull request #29 from ndw/master</message>
+</commit>
+
+<commit>
+<hash>8a532a4ebf16097762c39faa76094b281f9246fa</hash>
+<file>docs/howto/2005-10-27/howto.html</file>
+<file>docs/howto/2005-12-28/howto.html</file>
+<file>docs/howto/2006-03-01/howto.html</file>
+<file>docs/howto/2006-05-16/howto.html</file>
+<file>docs/howto/2006-10-22/howto.html</file>
+<file>docs/howto/2007-10-28/howto.html</file>
+<file>docs/howto/2008-02-06/howto.html</file>
+<file>docs/howto/2009-06-16/howto.html</file>
+<file>docs/howto/howto.html</file>
+<file>docs/transclusion-requirements/2010-12-09/transclusion-requirements.html</file>
+<file>docs/transclusion-requirements/transclusion-requirements.html</file>
+<file>docs/transclusion/2010-12-09/transclusion.html</file>
+<file>docs/transclusion/2011-04-20/transclusion.html</file>
+<file>docs/transclusion/README-README-README</file>
+<file>docs/transclusion/transclusion.html</file>
+<date>2018-06-02T10:27:13-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>HACK: Fix URIs by hand in the HTML.</message>
+</commit>
+
+<commit>
 <hash>a891d0cfadcbcf1d909e57739f3325adf0796245</hash>
 <date>2018-06-01T13:29:18-05:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
