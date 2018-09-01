@@ -188,7 +188,7 @@
         <link rel="stylesheet" type="text/css" href="/css/tabs.css" />
         <link rel="stylesheet" type="text/css" href="/css/docbook.css" />
         <link rel="stylesheet" type="text/css" href="/css/website.css" />
-        <link rel="icon" href="http://docbook.org/graphics/docbook-icon16.png"
+        <link rel="icon" href="https://docbook.org/graphics/docbook-icon16.png"
               type="image/png"/>
       </head>
       <body class="listing">
@@ -271,7 +271,7 @@
         <link rel="stylesheet" type="text/css" href="/css/tabs.css" />
         <link rel="stylesheet" type="text/css" href="/css/docbook.css" />
         <link rel="stylesheet" type="text/css" href="/css/website.css" />
-        <link rel="icon" href="http://docbook.org/graphics/docbook-icon16.png"
+        <link rel="icon" href="https://docbook.org/graphics/docbook-icon16.png"
               type="image/png"/>
       </head>
       <body class="listing">
