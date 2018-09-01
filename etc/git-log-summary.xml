@@ -1,5 +1,20 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>84c92bac79e77b22f59158e8551757c0c0863c04</hash>
+<date>2018-09-01T16:41:22+01:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #31 from ndw/master</message>
+</commit>
+
+<commit>
+<hash>b3eb3a7de5be5ffcfc5442203377de4124d9ae66</hash>
+<file>style/dirlistings.xsl</file>
+<date>2018-09-01T13:06:47+01:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Make icon link https:</message>
+</commit>
+
+<commit>
 <hash>fde15ae85110cead1ba48dfaec2e85ecd1596ee6</hash>
 <date>2018-08-13T16:37:51+02:00</date>
 <committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
