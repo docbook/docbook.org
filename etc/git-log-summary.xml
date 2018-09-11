@@ -1,5 +1,41 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>595b768389c5305dbad3caba76797882ff986635</hash>
+<file>xml/5.0.1/ChangeLog</file>
+<file>xml/5.0.1/README</file>
+<file>xml/5.0.1/VERSION</file>
+<file>xml/5.0.1/catalog.xml</file>
+<file>xml/5.0.1/docbook-5.0.1.zip</file>
+<file>xml/5.0.1/docbook.nvdl</file>
+<file>xml/5.0.1/docs/docbook-5.0-spec-cd-01.html</file>
+<file>xml/5.0.1/docs/docbook-5.0-spec-cd-01.pdf</file>
+<file>xml/5.0.1/docs/docbook-5.0-spec-cd-01.xml</file>
+<file>xml/5.0.1/docs/howto.html</file>
+<file>xml/5.0.1/docs/howto.pdf</file>
+<file>xml/5.0.1/docs/howto.xml</file>
+<file>xml/5.0.1/docs/images/emacs.png</file>
+<file>xml/5.0.1/docs/images/oxygen1.png</file>
+<file>xml/5.0.1/docs/images/oxygen2.png</file>
+<file>xml/5.0.1/docs/images/oxygen3.png</file>
+<file>xml/5.0.1/docs/images/xxe.png</file>
+<file>xml/5.0.1/dtd/docbook.dtd</file>
+<file>xml/5.0.1/rng/docbook.rnc</file>
+<file>xml/5.0.1/rng/docbook.rng</file>
+<file>xml/5.0.1/rng/docbookxi.rnc</file>
+<file>xml/5.0.1/rng/docbookxi.rng</file>
+<file>xml/5.0.1/sch/docbook.sch</file>
+<file>xml/5.0.1/tools/db4-entities.pl</file>
+<file>xml/5.0.1/tools/db4-upgrade.xsl</file>
+<file>xml/5.0.1/xsd/docbook.xsd</file>
+<file>xml/5.0.1/xsd/xlink.xsd</file>
+<file>xml/5.0.1/xsd/xml.xsd</file>
+<date>2018-09-11T10:32:04-07:00</date>
+<committer-name>bobstayton</committer-name>
+<committer-email>bobs@sagehill.net</committer-email>
+<message>add schema files for DocBook version 5.0.1</message>
+</commit>
+
+<commit>
 <hash>84c92bac79e77b22f59158e8551757c0c0863c04</hash>
 <date>2018-09-01T16:41:22+01:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>

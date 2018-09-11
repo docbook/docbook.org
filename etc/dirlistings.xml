@@ -1702,6 +1702,50 @@
     <file>htmltblx.mod</file>
     <file>soextblx.dtd</file>
   </dir>
+  <dir dir='5.0.1' path='xml/5.0.1' release='5.0.1' type='xml'>
+    <dir dir='docs' path='xml/5.0.1/docs' release='5.0.1' type='docs'>
+      <dir dir='images' path='xml/5.0.1/docs/images'>
+        <file>emacs.png</file>
+        <file>oxygen1.png</file>
+        <file>oxygen2.png</file>
+        <file>oxygen3.png</file>
+        <file>xxe.png</file>
+      </dir>
+      <file>docbook-5.0-spec-cd-01.html</file>
+      <file>docbook-5.0-spec-cd-01.pdf</file>
+      <file>docbook-5.0-spec-cd-01.xml</file>
+      <file>howto.html</file>
+      <file>howto.pdf</file>
+      <file>howto.xml</file>
+    </dir>
+    <dir dir='dtd' path='xml/5.0.1/dtd' release='5.0.1' type='dtd'>
+      <file>docbook.dtd</file>
+    </dir>
+    <dir dir='rng' path='xml/5.0.1/rng' release='5.0.1' type='rng'>
+      <file>docbook.rnc</file>
+      <file>docbook.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>docbookxi.rng</file>
+    </dir>
+    <dir dir='sch' path='xml/5.0.1/sch' release='5.0.1' type='sch'>
+      <file>docbook.sch</file>
+    </dir>
+    <dir dir='tools' path='xml/5.0.1/tools' release='5.0.1' type='tools'>
+      <file>db4-entities.pl</file>
+      <file>db4-upgrade.xsl</file>
+    </dir>
+    <dir dir='xsd' path='xml/5.0.1/xsd' release='5.0.1' type='xsd'>
+      <file>docbook.xsd</file>
+      <file>xlink.xsd</file>
+      <file>xml.xsd</file>
+    </dir>
+    <file>ChangeLog</file>
+    <file>README</file>
+    <file>VERSION</file>
+    <file>catalog.xml</file>
+    <file>docbook-5.0.1.zip</file>
+    <file>docbook.nvdl</file>
+  </dir>
   <dir dir='5.0' path='xml/5.0' release='5.0' type='xml'>
     <dir dir='dtd' path='xml/5.0/dtd' release='5.0' type='dtd'>
       <file>dbits.dtd</file>
