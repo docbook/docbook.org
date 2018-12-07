@@ -11,6 +11,26 @@
   </author>
 
   <entry>
+    <title>DocBook V5.0.1 Committee Specification</title>
+    <link rel="alternate" type="text/html"
+	  href="http://docbook.org/schemas/5x"/>
+    <id>http://docbook.org/schemas/5x</id>
+    <published>2018-11-04T11:18:26Z</published>
+    <updated>2018-11-04T11:18:26Z</updated>
+    <category term="docbook" scheme="http://technorati.com/tag/"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+	<p>DocBook V5.0.1 is a minor change to DocBook V5.0. 
+        This release updates the Schematron rules to match the
+        Schematron standard that changed after 5.0 was released.
+        The 5.0.1 version will work with modern Schematron tools without error.
+        <a href="http://docs.oasis-open.org/docbook/docbook/v5.0.1/cs01/docbook-v5.0.1-cs01.html">DocBook
+        Version 5.0.1</a> at <a href="https://oasis-open.org/">OASIS</a>.</p>
+      </div>
+    </summary>
+  </entry>
+
+  <entry>
     <title>DocBook V5.1</title>
     <link rel="alternate" type="text/html"
 	  href="http://docbook.org/schemas/5x"/>

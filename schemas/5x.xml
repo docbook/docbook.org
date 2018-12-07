@@ -14,6 +14,8 @@ long, slow evolution. The Technical Committee has taken this
 opportunity to simplify a number of content models and tighten
 constraints where RELAX NG makes that possible.
 </para>
+<para>The most significant change for the 5.1 version is the addition of assemblies
+to DocBook to better support modular authoring practices.</para>
 
 <para>The Technical Committee provides the DocBook 5.0 and 5.1 schemas in other
 schema languages, including W3C XML Schema and an

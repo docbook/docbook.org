@@ -1,5 +1,28 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>9f47c2796b0e4bbb402e97ac99b6306f47f83639</hash>
+<file>atom/whatsnew.xml</file>
+<date>2018-12-07T08:45:19-08:00</date>
+<committer-name>bobstayton</committer-name>
+<committer-email>bobs@sagehill.net</committer-email>
+<message>fix well formedness error in whatsnew.xml</message>
+</commit>
+
+<commit>
+<hash>cc7ca7d96e0902bce8385b22b5827f0ac8ef952d</hash>
+<file>atom/whatsnew.xml</file>
+<file>schemas/5x.xml</file>
+<file>schemas/index.xml</file>
+<file>specs/index.xml</file>
+<file>xml/5.1/docbook-v5.1-os.zip</file>
+<file>xml/5.1/index.html</file>
+<date>2018-12-06T10:22:43-08:00</date>
+<committer-name>bobstayton</committer-name>
+<committer-email>bobs@sagehill.net</committer-email>
+<message>Updated schema information for 5.0.1 and 5.1</message>
+</commit>
+
+<commit>
 <hash>d370f4b55cd22cabebe265f929504fc4782ba000</hash>
 <date>2018-09-11T22:33:42+02:00</date>
 <committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>

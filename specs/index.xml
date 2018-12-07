@@ -13,125 +13,30 @@ Technical Committee.</para>
 <title>DocBook V5.x</title>
 
 <itemizedlist>
-<listitem>
-<para>The DocBook Schema, Committee Draft 5.0, 14&#160;Mar&#160;2008
-(<link xlink:href="docbook-5.0-spec-cd-03.html">HTML</link>,
-<link xlink:href="docbook-5.0-spec-cd-03.pdf">PDF</link>,
-<link xlink:href="docbook-5.0-spec-cd-03.xml">XML</link>).
-</para>
-</listitem>
+    <listitem>
+        <para>DocBook Version 5.1, 22&#160;Nov&#160;2016
+            (<link xlink:href="http://docs.oasis-open.org/docbook/docbook/v5.1/os/docbook-v5.1-os.html">HTML</link>,
+            <link xlink:href="http://docs.oasis-open.org/docbook/docbook/v5.1/os/docbook-v5.1-os.pdf">PDF</link>,
+            <link xlink:href="http://docs.oasis-open.org/docbook/docbook/v5.1/os/docbook-v5.1-os.xml">XML</link>).
+        </para>
+    </listitem>
+    <listitem>
+        <para>The DocBook Schema Version 5.0.1          
+            Committee Specification 01, 7&#160;Nov&#160;2018
+            (<link xlink:href="http://docs.oasis-open.org/docbook/docbook/v5.0.1/cs01/docbook-v5.0.1-cs01.html">HTML</link>,
+            <link xlink:href="http://docs.oasis-open.org/docbook/docbook/v5.0.1/cs01/docbook-v5.0.1-cs01.pdf">PDF</link>,
+            <link xlink:href="http://docs.oasis-open.org/docbook/docbook/v5.0.1/cs01/docbook-v5.0.1-cs01.docx">DOCX</link>).
+        </para>
+    </listitem>
+    <listitem>
+        <para>The DocBook Schema Version 5.0, 1&#160;Nov&#160;2009
+            (<link xlink:href="http://docs.oasis-open.org/docbook/specs/docbook-5.0-spec-os.html">HTML</link>,
+            <link xlink:href="http://docs.oasis-open.org/docbook/specs/docbook-5.0-spec-os.pdf">PDF</link>,
+            <link xlink:href="http://docs.oasis-open.org/docbook/specs/docbook-5.0-spec-os.xml">XML</link>).
+        </para>
+    </listitem>
+    
 
-<listitem>
-<para>The DocBook Schema, Working Draft 5.0CR7, 28&#160;Sep&#160;2007
-(<link xlink:href="docbook-5.0CR7-spec-wd-01.html">HTML</link>,
-<link xlink:href="docbook-5.0CR7-spec-wd-01.pdf">PDF</link>,
-<link xlink:href="docbook-5.0CR7-spec-wd-01.xml">XML</link>).
-</para>
-</listitem>
-
-<listitem>
-<para>The DocBook Schema, Working Draft 5.0CR6, 27&#160;Sep&#160;2007
-(<link xlink:href="docbook-5.0CR6-spec-wd-01.html">HTML</link>,
-<link xlink:href="docbook-5.0CR6-spec-wd-01.pdf">PDF</link>,
-<link xlink:href="docbook-5.0CR6-spec-wd-01.xml">XML</link>).
-</para>
-</listitem>
-
-<listitem>
-<para>The DocBook Schema, Working Draft 5.0CR5, 12&#160;Jul&#160;2007
-(<link xlink:href="docbook-5.0CR5-spec-wd-01.html">HTML</link>,
-<link xlink:href="docbook-5.0CR5-spec-wd-01.pdf">PDF</link>,
-<link xlink:href="docbook-5.0CR5-spec-wd-01.xml">XML</link>).
-</para>
-</listitem>
-
-<listitem>
-<para>The DocBook Schema, Working Draft 5.0CR4, 21&#160;May&#160;2007
-(<link xlink:href="docbook-5.0CR4-spec-wd-01.html">HTML</link>,
-<link xlink:href="docbook-5.0CR4-spec-wd-01.pdf">PDF</link>,
-<link xlink:href="docbook-5.0CR4-spec-wd-01.xml">XML</link>).
-</para>
-</listitem>
-
-<listitem>
-<para>The DocBook Schema, Working Draft 5.0CR3, 22&#160;Mar&#160;2007
-(<link xlink:href="docbook-5.0CR3-spec-wd-01.html">HTML</link>,
-<link xlink:href="docbook-5.0CR3-spec-wd-01.pdf">PDF</link>,
-<link xlink:href="docbook-5.0CR3-spec-wd-01.xml">XML</link>).
-</para>
-</listitem>
-
-<listitem>
-<para>The DocBook Schema, Working Draft 5.0CR2, 13&#160;Mar&#160;2007
-(<link xlink:href="docbook-5.0CR2-spec-wd-01.html">HTML</link>,
-<link xlink:href="docbook-5.0CR2-spec-wd-01.pdf">PDF</link>,
-<link xlink:href="docbook-5.0CR2-spec-wd-01.xml">XML</link>).
-</para>
-</listitem>
-
-<listitem>
-<para>The DocBook Schema, Working Draft 5.0CR1, 21&#160;Dec&#160;2006
-(<link xlink:href="docbook-5.0CR1-spec-wd-01.html">HTML</link>,
-<link xlink:href="docbook-5.0CR1-spec-wd-01.pdf">PDF</link>,
-<link xlink:href="docbook-5.0CR1-spec-wd-01.xml">XML</link>).
-</para>
-</listitem>
-
-<listitem>
-<para>The DocBook Schema, Working Draft 5.0b6, 2&#160;Jun&#160;2006
-(<link xlink:href="docbook-5.0b6-spec-wd-01.html">HTML</link>,
-<link xlink:href="docbook-5.0b6-spec-wd-01.pdf">PDF</link>,
-<link xlink:href="docbook-5.0b6-spec-wd-01.xml">XML</link>).
-</para>
-</listitem>
-
-<listitem>
-<para>The DocBook Schema, Working Draft 5.0b5, 12&#160;Apr&#160;2006
-(<link xlink:href="docbook-5.0b5-spec-wd-01.html">HTML</link>,
-<link xlink:href="docbook-5.0b5-spec-wd-01.pdf">PDF</link>,
-<link xlink:href="docbook-5.0b5-spec-wd-01.xml">XML</link>).
-</para>
-</listitem>
-
-<listitem>
-<para>The DocBook Schema, Working Draft 5.0b4, 9&#160;Mar&#160;2006
-(<link xlink:href="docbook-5.0b4-spec-wd-01.html">HTML</link>,
-<link xlink:href="docbook-5.0b4-spec-wd-01.pdf">PDF</link>,
-<link xlink:href="docbook-5.0b4-spec-wd-01.xml">XML</link>).
-</para>
-</listitem>
-
-<listitem>
-<para>The DocBook Schema, Working Draft 5.0b3, 1&#160;Feb&#160;2006
-(<link xlink:href="wd-docbook-docbook-5.0b3.html">HTML</link>,
-<link xlink:href="wd-docbook-docbook-5.0b3.pdf">PDF</link>,
-<link xlink:href="wd-docbook-docbook-5.0b3.xml">XML</link>).
-</para>
-</listitem>
-
-<listitem>
-<para>The DocBook Schema, Working Draft 5.0b2, 12&#160;Jan&#160;2006
-(<link xlink:href="wd-docbook-docbook-5.0b2.html">HTML</link>,
-<link xlink:href="wd-docbook-docbook-5.0b2.pdf">PDF</link>,
-<link xlink:href="wd-docbook-docbook-5.0b2.xml">XML</link>).
-</para>
-</listitem>
-
-<listitem>
-<para>The DocBook Schema, Working Draft 5.0b1, 27&#160;Oct&#160;2005
-(<link xlink:href="wd-docbook-docbook-5.0b1.html">HTML</link>,
-<link xlink:href="wd-docbook-docbook-5.0b1.pdf">PDF</link>,
-<link xlink:href="wd-docbook-docbook-5.0b1.xml">XML</link>).
-</para>
-</listitem>
-
-<listitem>
-<para>The DocBook Schema, Working Draft 5.0a1, 29&#160;June&#160;2005
-(<link xlink:href="wd-docbook-docbook-5.0a1.html">HTML</link>,
-<link xlink:href="wd-docbook-docbook-5.0a1.pdf">PDF</link>,
-<link xlink:href="wd-docbook-docbook-5.0a1.xml">XML</link>).
-</para>
-</listitem>
 </itemizedlist>
 </section>
 

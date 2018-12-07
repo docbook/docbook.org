@@ -19,17 +19,22 @@ well suited to books and papers about computer hardware and software
 available in that format.</para>
 
 <section>
-<title>DocBook V5.x</title>
+    <title><link xlink:href="5x">DocBook V5.x</link></title>
 
-<para>The V5.x schemas are the focus of current development work.
+    <para>The <link xlink:href="5x">V5.x schemas</link> are the focus of current development work.
 </para>
 
-<para>DocBook V5.0 is an
-<link xlink:href="http://www.oasis-open.org/specs/#dbv5.0">OASIS Standard</link>.</para>
+    <para>DocBook V5.0 is an
+        <link xlink:href="https://www.oasis-open.org/standards#dbv5.0">OASIS Standard</link>.</para>
+    <para>DocBook V5.0.1 is an
+        <link xlink:href="http://www.oasis-open.org/standards#docbook-v5.0.1">OASIS Committee Specification</link>.</para>
+    <para>DocBook V5.1 is an
+        <link xlink:href="https://www.oasis-open.org/standards#docbook-5.1">OASIS Standard</link>.</para>
+    
 </section>
 
 <section>
-<title>DocBook V4.x</title>
+    <title><link xlink:href="4x">DocBook V4.x</link></title>
 
 <para><link xlink:href="4x">DocBook V4.5</link> is the last of the DTD-based versions
 of DocBook. It is described normatively with XML and SGML DTDs. (There
