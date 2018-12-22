@@ -1,5 +1,51 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>501e6d2988ab2f531b5da0ed859acf3960f33053</hash>
+<date>2018-12-22T16:38:39+00:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #35 from ndw/fix-build</message>
+</commit>
+
+<commit>
+<hash>40565b728bff99b51c42bdc77ee22cb3ff6a6ec2</hash>
+<file>style/dirlistings.xsl</file>
+<date>2018-12-22T16:33:14+00:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Add 'docs' and 'images' to dir listings</message>
+</commit>
+
+<commit>
+<hash>cb97afcf24ebb626c7ae74c597006db65da98272</hash>
+<file>xml/5.1/index.html</file>
+<file>xml/5.1/rng/index.html</file>
+<file>xml/5.1/sch/index.html</file>
+<file>xml/5.1/tools/index.html</file>
+<file>xml/5.2b01/index.html</file>
+<file>xml/5.2b01/rng/index.html</file>
+<file>xml/5.2b01/sch/index.html</file>
+<file>xml/5.2b01/tools/index.html</file>
+<file>xml/5.2b02/index.html</file>
+<file>xml/5.2b02/rng/index.html</file>
+<file>xml/5.2b02/sch/index.html</file>
+<file>xml/5.2b02/tools/index.html</file>
+<file>xml/5.2b03/index.html</file>
+<file>xml/5.2b03/rng/index.html</file>
+<file>xml/5.2b03/sch/index.html</file>
+<file>xml/5.2b03/tools/index.html</file>
+<file>xml/5.2b04/index.html</file>
+<file>xml/5.2b04/rng/index.html</file>
+<file>xml/5.2b04/sch/index.html</file>
+<file>xml/5.2b04/tools/index.html</file>
+<file>xml/5.2b05/index.html</file>
+<file>xml/5.2b05/rng/index.html</file>
+<file>xml/5.2b05/sch/index.html</file>
+<file>xml/5.2b05/tools/index.html</file>
+<date>2018-12-22T16:32:56+00:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Remove generated files from git</message>
+</commit>
+
+<commit>
 <hash>9f47c2796b0e4bbb402e97ac99b6306f47f83639</hash>
 <file>atom/whatsnew.xml</file>
 <date>2018-12-07T08:45:19-08:00</date>

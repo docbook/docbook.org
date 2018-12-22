@@ -167,6 +167,13 @@
         <xsl:text></xsl:text>
       </xsl:when>
 
+      <xsl:when test="@dir = 'docs'">
+        <xsl:text> Documentation</xsl:text>
+      </xsl:when>
+      <xsl:when test="@dir = 'images'">
+        <xsl:text> Images</xsl:text>
+      </xsl:when>
+
       <xsl:otherwise>
         <xsl:message>
           <xsl:text>Unknown type: </xsl:text>
