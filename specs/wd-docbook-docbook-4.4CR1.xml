@@ -110,7 +110,7 @@ of outstanding requests is available through the
 <ulink url="&tracker;/?atid=384107&amp;group_id=21935&amp;func=browse">tracker</ulink>
 interface. This is also the preferred mechanism for submitting new requests.
 Old RFEs, from a previous legacy tracking system, are
-<ulink url="http://www.oasis-open.org/docbook/old-rfes.html">archived</ulink>
+<ulink url="https://www.oasis-open.org/docbook/old-rfes.html">archived</ulink>
 for reference.</para>
 
 </section>
@@ -136,10 +136,10 @@ document.</para>
 <ulink url="&root;xml/">XML</ulink> and
 <ulink url="&root;sgml/">SGML</ulink>
 from the
-<ulink url="http://www.oasis-open.org/docbook/">DocBook site</ulink> at
-<ulink url="http://www.oasis-open.org/">OASIS</ulink>. DocBook is also available from
+<ulink url="https://www.oasis-open.org/docbook/">DocBook site</ulink> at
+<ulink url="https://www.oasis-open.org/">OASIS</ulink>. DocBook is also available from
 the mirror on
-<ulink url="http://docbook.org/"/>.
+<ulink url="https://docbook.org/"/>.
 </para>
 
 <section id="s.cscr1">
@@ -248,25 +248,25 @@ DocBook and DocBook XML.
 
 <itemizedlist spacing="compact">
 <listitem><para>Added <sgmltag>package</sgmltag> element per the
-<ulink url="http://docbook.org/minutes/2004-02-18.txt">Febuary, 2004</ulink> 
+<ulink url="https://docbook.org/minutes/2004-02-18.txt">Febuary, 2004</ulink> 
 meeting.
 </para></listitem>
 
 <listitem><para>Allow <sgmltag>imageobjectco</sgmltag> as a child of
 <sgmltag>mediaobject</sgmltag> (this effectively makes
 <sgmltag>mediaobjectco</sgmltag> unnecessary) per the
-<ulink url="http://docbook.org/minutes/2004-02-18.txt">Febuary, 2004</ulink> 
+<ulink url="https://docbook.org/minutes/2004-02-18.txt">Febuary, 2004</ulink> 
 meeting.
 </para></listitem>
 
 <listitem><para>Added <sgmltag>biblioref</sgmltag> element per the
-<ulink url="http://docbook.org/minutes/2004-05-19.txt">May, 2004</ulink> 
+<ulink url="https://docbook.org/minutes/2004-05-19.txt">May, 2004</ulink> 
 meeting.
 </para></listitem>
 
 <listitem><para>Added <sgmltag class="attribute">spacing</sgmltag> attribute
 to <sgmltag>variablelist</sgmltag> per the
-<ulink url="http://docbook.org/minutes/2004-04-21.txt">April, 2004</ulink> 
+<ulink url="https://docbook.org/minutes/2004-04-21.txt">April, 2004</ulink> 
 meeting.
 </para></listitem>
 
@@ -274,7 +274,7 @@ meeting.
 <sgmltag>subscript</sgmltag> to the content model of the
 <sgmltag>gui<replaceable>*</replaceable></sgmltag> elements
 per the
-<ulink url="http://docbook.org/minutes/2004-05-19.txt">May, 2004</ulink> 
+<ulink url="https://docbook.org/minutes/2004-05-19.txt">May, 2004</ulink> 
 meeting.
 </para></listitem>
 </itemizedlist>
@@ -693,7 +693,7 @@ the online list of claimed rights.</para>
 essential to implementing this specification, and any offers of patent
 licensing terms, please refer to the Intellectual Property Rights section
 of the DocBook web page
-(<ulink url="http://www.oasis-open.org/committees/docbook/"/>)
+(<ulink url="https://www.oasis-open.org/committees/docbook/"/>)
 </para>
 
 </appendix>

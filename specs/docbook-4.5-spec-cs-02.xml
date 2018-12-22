@@ -2,7 +2,7 @@
 <!ENTITY standard "Committee Specification">
 <!ENTITY tracker "http://sourceforge.net/tracker">
 <!ENTITY RFE "&tracker;/index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;">
-<!ENTITY root "http://www.oasis-open.org/docbook/">
+<!ENTITY root "https://www.oasis-open.org/docbook/">
 ]>
 <article lang="en" status="&standard;">
 <articleinfo>
@@ -59,7 +59,7 @@ no backwards-incompatible changes.</para>
 
 <legalnotice role="status">
 <para>This &standard; was
-<ulink url="http://www.oasis-open.org/committees/ballot.php?id=994">approved</ulink>
+<ulink url="https://www.oasis-open.org/committees/ballot.php?id=994">approved</ulink>
 for publication by the
 OASIS DocBook Technical Committee. It represents the
 consensus of the committee.
@@ -106,7 +106,7 @@ also valid DocBook 4.5 documents.</para>
 <para>The Committee decided to produce a DocBook V4.5, incorporating
 a few recent backwards-compatible changes, in order to publish DocBook
 as a Committee Draft and eventually as an OASIS Standard through
-<ulink url="http://www.oasis-open.org/committees/process_2005.03.23.php">the
+<ulink url="https://www.oasis-open.org/committees/process_2005.03.23.php">the
 new process</ulink>.</para>
 
 <para>The DocBook Technical Committee welcomes bug reports and
@@ -116,7 +116,7 @@ of outstanding requests is available through the
 <ulink url="&tracker;/?atid=384107&amp;group_id=21935&amp;func=browse">tracker</ulink>
 interface. This is also the preferred mechanism for submitting new requests.
 Old RFEs, from a previous legacy tracking system, are
-<ulink url="http://www.oasis-open.org/docbook/old-rfes.html">archived</ulink>
+<ulink url="https://www.oasis-open.org/docbook/old-rfes.html">archived</ulink>
 for reference.</para>
 
 </section>
@@ -142,12 +142,12 @@ document.</para>
 <ulink url="&root;xml/">XML</ulink> and
 <ulink url="&root;sgml/">SGML</ulink>
 from the
-<ulink url="http://www.oasis-open.org/docbook/">DocBook site</ulink> at
-<ulink url="http://www.oasis-open.org/">OASIS</ulink>.
+<ulink url="https://www.oasis-open.org/docbook/">DocBook site</ulink> at
+<ulink url="https://www.oasis-open.org/">OASIS</ulink>.
 It is also available in <ulink url="&root;rng/">RELAX NG</ulink> and
 <ulink url="&root;xsd/">W3C XML Schema</ulink> formats.
 The DocBook site is mirrored on
-<ulink url="http://docbook.org/"/>.
+<ulink url="https://docbook.org/"/>.
 </para>
 
 <section id="s.cs">
@@ -211,21 +211,21 @@ the <ulink url="&root;minutes">meeting minutes</ulink>.</para>
 <para><ulink url="&RFE;aid=1055480">RFE 1055480</ulink>:
 Allow <sgmltag>revnumber</sgmltag> to be optional in
 <sgmltag>revision</sgmltag> per the
-<ulink url="http://docbook.org/minutes/2004-11-22.txt">November, 2004</ulink> 
+<ulink url="https://docbook.org/minutes/2004-11-22.txt">November, 2004</ulink> 
 meeting.</para>
 </listitem>
 
 <listitem id="rfe.1070458">
 <para><ulink url="&RFE;aid=1070458">RFE 1070458</ulink>:
 Allow <sgmltag>colophon</sgmltag> in <sgmltag>article</sgmltag> per the
-<ulink url="http://docbook.org/minutes/2004-11-22.txt">November, 2004</ulink> 
+<ulink url="https://docbook.org/minutes/2004-11-22.txt">November, 2004</ulink> 
 meeting.</para>
 </listitem>
 
 <listitem id="rfe.1070770">
 <para><ulink url="&RFE;aid=1070770">RFE 1070770</ulink>:
 Allow <sgmltag>procedure</sgmltag> in <sgmltag>example</sgmltag> per the
-<ulink url="http://docbook.org/minutes/2004-11-22.txt">November, 2004</ulink> 
+<ulink url="https://docbook.org/minutes/2004-11-22.txt">November, 2004</ulink> 
 meeting.</para>
 </listitem>
 
@@ -237,26 +237,26 @@ Add <sgmltag class="attvalue">isrn</sgmltag> as a value of
 <sgmltag>citebiblioid</sgmltag>,
 <sgmltag>bibliosource</sgmltag>, and
 <sgmltag>bibliorelation</sgmltag> per the
-<ulink url="http://docbook.org/minutes/2004-12-15.txt">December, 2004</ulink> 
+<ulink url="https://docbook.org/minutes/2004-12-15.txt">December, 2004</ulink> 
 meeting.</para>
 </listitem>
 
 <listitem><para>Added <sgmltag>mathphrase</sgmltag>
 per the
-<ulink url="http://docbook.org/minutes/2005-02-16.txt">February, 2005</ulink> 
+<ulink url="https://docbook.org/minutes/2005-02-16.txt">February, 2005</ulink> 
 meeting.
 </para></listitem>
 
 <listitem><para>Added <sgmltag>termdef</sgmltag>
 per the
-<ulink url="http://docbook.org/minutes/2005-03-16.txt">March, 2005</ulink> 
+<ulink url="https://docbook.org/minutes/2005-03-16.txt">March, 2005</ulink> 
 meeting.
 </para></listitem>
 
 <listitem><para>Allow common attributes on HTML table elements
 (<sgmltag>tr</sgmltag>, <sgmltag>td</sgmltag>, etc.)
 per the
-<ulink url="http://docbook.org/minutes/2005-04-20.txt">April, 2005</ulink> 
+<ulink url="https://docbook.org/minutes/2005-04-20.txt">April, 2005</ulink> 
 meeting.
 </para></listitem>
 </itemizedlist>
@@ -536,7 +536,7 @@ the online list of claimed rights.</para>
 essential to implementing this specification, and any offers of patent
 licensing terms, please refer to the Intellectual Property Rights section
 of the DocBook web page
-(<ulink url="http://www.oasis-open.org/committees/docbook/"/>)
+(<ulink url="https://www.oasis-open.org/committees/docbook/"/>)
 </para>
 
 </appendix>
