@@ -1,5 +1,13 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>465f1c824277062981f0dff092202eab7ab13a3d</hash>
+<date>2019-02-11T10:47:22-08:00</date>
+<committer-name>bobstayton</committer-name>
+<committer-email>bobs@sagehill.net</committer-email>
+<message>Merge pull request #37 from docbook/bobs_issue_93</message>
+</commit>
+
+<commit>
 <hash>2ea872baad769c7dbead9474458e9d454a419dee</hash>
 <file>xml/5.2b06/catalog.xml</file>
 <file>xml/5.2b06/docbook.nvdl</file>
