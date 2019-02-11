@@ -1,5 +1,30 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>2ea872baad769c7dbead9474458e9d454a419dee</hash>
+<file>xml/5.2b06/catalog.xml</file>
+<file>xml/5.2b06/docbook.nvdl</file>
+<file>xml/5.2b06/index.html</file>
+<file>xml/5.2b06/rng/assembly.rnc</file>
+<file>xml/5.2b06/rng/assembly.rng</file>
+<file>xml/5.2b06/rng/dbits.rnc</file>
+<file>xml/5.2b06/rng/dbits.rng</file>
+<file>xml/5.2b06/rng/docbook.rnc</file>
+<file>xml/5.2b06/rng/docbook.rng</file>
+<file>xml/5.2b06/rng/docbookxi.rnc</file>
+<file>xml/5.2b06/rng/docbookxi.rng</file>
+<file>xml/5.2b06/sch/assembly.sch</file>
+<file>xml/5.2b06/sch/dbits.sch</file>
+<file>xml/5.2b06/sch/docbook.sch</file>
+<file>xml/5.2b06/sch/docbookxi.sch</file>
+<file>xml/5.2b06/tools/db4-entities.pl</file>
+<file>xml/5.2b06/tools/db4-upgrade.xsl</file>
+<date>2019-02-11T10:39:37-08:00</date>
+<committer-name>bobstayton</committer-name>
+<committer-email>bobs@sagehill.net</committer-email>
+<message>add docbook beta 6 with assembly fixes</message>
+</commit>
+
+<commit>
 <hash>501e6d2988ab2f531b5da0ed859acf3960f33053</hash>
 <date>2018-12-22T16:38:39+00:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>

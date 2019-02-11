@@ -2341,6 +2341,30 @@
     <file>README</file>
     <file>VERSION</file>
   </dir>
+  <dir dir='5.2b06' path='xml/5.2b06' release='5.2b06' type='xml'>
+    <dir dir='rng' path='xml/5.2b06/rng' release='5.2b06' type='rng'>
+      <file>docbook.rng</file>
+      <file>dbits.rng</file>
+      <file>docbook.rnc</file>
+      <file>docbookxi.rng</file>
+      <file>docbookxi.rnc</file>
+      <file>assembly.rng</file>
+      <file>assembly.rnc</file>
+      <file>dbits.rnc</file>
+    </dir>
+    <dir dir='tools' path='xml/5.2b06/tools' release='5.2b06' type='tools'>
+      <file>db4-upgrade.xsl</file>
+      <file>db4-entities.pl</file>
+    </dir>
+    <dir dir='sch' path='xml/5.2b06/sch' release='5.2b06' type='sch'>
+      <file>docbook.sch</file>
+      <file>docbookxi.sch</file>
+      <file>assembly.sch</file>
+      <file>dbits.sch</file>
+    </dir>
+    <file>catalog.xml</file>
+    <file>docbook.nvdl</file>
+  </dir>
   <dir dir='5.0CR2' path='xml/5.0CR2' release='5.0CR2' type='xml'>
     <dir dir='dtd' path='xml/5.0CR2/dtd' release='5.0CR2' type='dtd'>
       <file>docbook.dtd</file>
