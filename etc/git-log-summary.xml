@@ -1,5 +1,48 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>fe3e34dc1d2327a26bbda766a33359e69ce98cb7</hash>
+<date>2019-11-04T11:14:15+00:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #38 from ndw/master</message>
+</commit>
+
+<commit>
+<hash>eedd6b0faa43edd154b478f9cd85fe8fafb73313</hash>
+<file>docs/transclusion/index.xml</file>
+<date>2019-11-04T11:09:43+00:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Added pointer to documents repo</message>
+</commit>
+
+<commit>
+<hash>d713a2c3471e340d2f017a2e49259cb466df71ab</hash>
+<file>.gitignore</file>
+<date>2019-11-04T11:09:30+00:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Ignore new HTML files</message>
+</commit>
+
+<commit>
+<hash>78e41b2330737c6b9fac2400ab5927dbb8ee899e</hash>
+<file>xml/5.2b06/index.html</file>
+<date>2019-11-04T11:09:14+00:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Remove accidentally committed HTML file</message>
+</commit>
+
+<commit>
+<hash>4e3760b865caa93202d83d170b14b321b936e442</hash>
+<file>docs/transclusion/2015-01-08/transclusion.html</file>
+<file>docs/transclusion/transclusion-requirements.html</file>
+<file>docs/transclusion/transclusion.html</file>
+<file>docs/transclusion/transclusion.pdf</file>
+<file>docs/transclusion/transclusion.xml</file>
+<date>2019-11-04T10:54:17+00:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Updated to more-recent versions</message>
+</commit>
+
+<commit>
 <hash>465f1c824277062981f0dff092202eab7ab13a3d</hash>
 <date>2019-02-11T10:47:22-08:00</date>
 <committer-name>bobstayton</committer-name>

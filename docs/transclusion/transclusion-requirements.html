@@ -1,0 +1,142 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Requirements for transclusion in DocBook</title><meta charset="utf-8" /><meta name="generator" content="DocBook XSL 2.0 Stylesheets V2.4.3" /><link href="https://cdn.docbook.org/resources/2.1.1/css/default.css" rel="stylesheet" type="text/css" /><link href="https://cdn.docbook.org/resources/2.1.1/css/db-prism.css" rel="stylesheet" type="text/css" /><script type="text/javascript" src="https://cdn.docbook.org/resources/2.1.1/js/dbmodnizr.js"></script></head><body><article id="transclusion-requirements" class="article"><header class="article-titlepage"><h2>Requirements for transclusion in DocBook</h2><div class="authorgroup"><div class="author"><h3><span class="personname"><span class="firstname">Jirka</span> <span class="surname">Kosek</span></span></h3></div></div><div><p>09 Dec 2010</p></div></header><div class="lists-of-titles"><div class="toc"><div class="title">Table of Contents</div><ul class="toc"><li><span><a href="#uc-1"><span class="label">1. </span>UC-1: Shared strings</a></span><ul class="toc"><li><span><a href="#uc-1.3"><span class="label">1.1. </span>Current solutions</a></span></li></ul></li><li><span><a href="#uc-2"><span class="label">2. </span>UC-2: Shared strings in attribute values</a></span><ul class="toc"><li><span><a href="#uc-2.3"><span class="label">2.1. </span>Current solutions</a></span></li></ul></li><li><span><a href="#uc-3"><span class="label">3. </span>UC-3: Conditional shared text</a></span><ul class="toc"><li><span><a href="#uc-3.3"><span class="label">3.1. </span>Current solutions</a></span></li></ul></li><li><span><a href="#uc-4"><span class="label">4. </span>UC-4: Modularized documents</a></span><ul class="toc"><li><span><a href="#uc-4.3"><span class="label">4.1. </span>Current solutions</a></span></li></ul></li><li><span><a href="#uc-5"><span class="label">5. </span>UC-5: Repeated transclusion in one “<span class="quote">master</span>” document</a></span><ul class="toc"><li><span><a href="#uc-5.6"><span class="label">5.1. </span>Current solution</a></span></li></ul></li><li><span><a href="#uc-6"><span class="label">6. </span>UC-6: Transclusion of foreign content</a></span><ul class="toc"><li><span><a href="#uc-6.4"><span class="label">6.1. </span>Current solution</a></span></li></ul></li><li><span><a href="#evaluation"><span class="label">7. </span>Evaluation of current technologies</a></span></li></ul></div></div><div class="content"><p>This document summarizes uses-cases for transclusion of content
+in DocBook documents. This document should help DocBook TC in deciding
+whether existing standards like XInclude are sufficient for the task
+or whether DocBook specific mechanism should be designed.</p><div class="note admonition"><h3>Note</h3><div class="admonition-body"><p>DocBook TC has not yet decided whether DocBook specific
+mechanism is really required or not. But draft proposal of such transclusion
+mechanism is available at <a href="https://docbook.org/docs/transclusion/">https://docbook.org/docs/transclusion/</a>.</p></div></div><section id="uc-1" class="section"><div class="section-titlepage"><h2>1. UC-1: Shared strings</h2></div><div class="content"><p>Many technical publication use repeating boilerplate text for
+things like product names or product versions. It is useful if such
+text is defined only once per document (or set of documents) and then
+just referenced. This approach prevents typos and makes updates and
+rebranding of content very easy.</p><section id="uc-1.3" class="section"><div class="section-titlepage"><h3>1.1. Current solutions</h3></div><div class="content"><section id="uc-1.3.2" class="section"><div class="section-titlepage"><h4>1.1.1. Entities</h4></div><div class="content"><p>This use-case can be solved by using <a href="https://www.w3.org/TR/REC-xml/#sec-internal-ent">internal
+entities</a>. This is well supported in processing tools and to
+some extent in authoring tools. However entities are somewhat hard to
+maintain when you use modular documents at the same time. Also
+entities and their references are not part of XDM so they do not
+survive XSLT processing which makes various “<span class="quote">document
+massaging</span>” tasks challenging.</p><figure id="uc-1.3.2.3" class="example-wrapper"><div class="title">Example 1. Using entities for shared strings</div><div class="example"><pre class="programlisting language-none line-numbers "><code>&lt;!ENTITY product-version "3.14"&gt;
+&lt;!ENTITY product-name "FooWiz"&gt;
+&lt;!ENTITY corp-name "ACME Inc."&gt;
+
+…
+&lt;para&gt;The latest version of &lt;application&gt;&amp;product-name;&lt;/application&gt;
+from &amp;corp-name; is &amp;product-version;.&lt;/para&gt;</code></pre></div></figure></div></section><section id="uc-1.3.3" class="section"><div class="section-titlepage"><h4>1.1.2. XInclude</h4></div><div class="content"><p><a href="https://www.w3.org/TR/xinclude/">XInclude</a>
+when combined with proper XPointer schema can be used for transclusion
+of single element or even only its text content. In this setup there
+can be separate file with definition of shared texts which are then
+reused in other documents.</p><figure id="uc-1.3.3.3" class="example-wrapper"><div class="title">Example 2. Definition file for further XInclude referencing</div><div class="example"><pre class="programlisting language-none line-numbers"><code>&lt;article xmlns="http://docbook.org/ns/docbook" version="5.0"&gt;
+  &lt;title&gt;Shared texts&lt;/title&gt;
+  &lt;para&gt;&lt;phrase xml:id="product-version"&gt;3.14&lt;/phrase&gt;&lt;/para&gt;
+  &lt;para&gt;&lt;phrase xml:id="product-name"&gt;FooWiz&lt;/phrase&gt;&lt;/para&gt;
+  &lt;para&gt;&lt;phrase xml:id="corp-name"&gt;ACME Inc.&lt;/phrase&gt;&lt;/para&gt;
+&lt;/article&gt;</code></pre></div></figure><p>The problem is that support for different XPointer schemes
+varies between implementations. Almost all implementations support
+referencing to element specified by its ID as shown in the following
+example.</p><figure id="uc-1.3.3.5" class="example-wrapper"><div class="title">Example 3. Using XIncludes for shared texts</div><div class="example"><pre class="programlisting language-none line-numbers"><code>&lt;… xmlns:xi="http://www.w3.org/2001/XInclude"&gt;
+…
+  &lt;para&gt;The latest version of &lt;application&gt;&lt;xi:include href="shared-texts.xml" xpointer="product-name"/&gt;&lt;/application&gt;
+    from &lt;xi:include href="shared-texts.xml" xpointer="corp-name"/&gt;
+    is &lt;xi:include href="shared-texts.xml" xpointer="product-version"/&gt;.&lt;/para&gt;
+…</code></pre></div></figure><p>This solution has two problems. The actual reference to shared
+texts is very verbose because each <code class="tag-element">xi:include</code>
+element contains reference to the file with shared text
+definitions. Second problem is that such reference doesn't include
+only text of referenced element but whole element including <code class="tag-attribute">xml:id</code> attribute. This leads to excessive
+markup and duplicated IDs in the composed document.</p><p>Solution is to use more advanced XPointer scheme. This leads to
+the more arcane markup, support in tools is very bad, but there are no
+duplicated IDs and excessive markup.</p><figure id="uc-1.3.3.8" class="example-wrapper"><div class="title">Example 4. Using XIncludes for shared texts without duplicating
+source elements</div><div class="example"><pre class="programlisting language-none line-numbers"><code>&lt;… xmlns:xi="http://www.w3.org/2001/XInclude"&gt;
+…
+  &lt;para&gt;The latest version of &lt;application&gt;&lt;xi:include href="shared-texts.xml" xpointer="xpath(id('product-name')/text())"/&gt;&lt;/application&gt;
+    from &lt;xi:include href="shared-texts.xml" xpointer="xpath(id('corp-name')/text())"/&gt;
+    is &lt;xi:include href="shared-texts.xml" xpointer="xpath(id('product-version')/text())"/&gt;.&lt;/para&gt;
+…</code></pre></div></figure></div></section></div></section></div></section><section id="uc-2" class="section"><div class="section-titlepage"><h2>2. UC-2: Shared strings in attribute values</h2></div><div class="content"><p>This use-cases is similar to <a href="#uc-1">UC-1</a>. The only
+difference now is that shared text can appear in an attribute
+value. This is not very common requirement for DocBook document, but
+because of differences between element and attribute values in XML
+separate use-cases is created.</p><section id="uc-2.3" class="section"><div class="section-titlepage"><h3>2.1. Current solutions</h3></div><div class="content"><section id="uc-2.3.2" class="section"><div class="section-titlepage"><h4>2.1.1. Entities</h4></div><div class="content"><p>This use-case can be solved only by using <a href="https://www.w3.org/TR/REC-xml/#sec-internal-ent">internal
+entities</a>. This is well supported in processing tools and to
+some extent in authoring tools.</p><figure id="uc-2.3.2.3" class="example-wrapper"><div class="title">Example 5. Using entities for shared strings in attribute values</div><div class="example"><pre class="programlisting language-none line-numbers "><code>&lt;!ENTITY product-version "3.14"&gt;
+&lt;!ENTITY product-name "FooWiz"&gt;
+…
+&lt;section xreflabel="Installation of &amp;product-name; &amp;product-version;"&gt;
+…</code></pre></div></figure></div></section></div></section></div></section><section id="uc-3" class="section"><div class="section-titlepage"><h2>3. UC-3: Conditional shared text</h2></div><div class="content"><p>Some documents use conditional content. Shared text then can be
+also subject to conditional processing.</p><section id="uc-3.3" class="section"><div class="section-titlepage"><h3>3.1. Current solutions</h3></div><div class="content"><section id="uc-3.3.2" class="section"><div class="section-titlepage"><h4>3.1.1. Conditional sections</h4></div><div class="content"><p>This use-case can be solved by using <a href="https://www.w3.org/TR/REC-xml/#sec-condition-sect">conditional
+sections</a> which can enclose entity definitions.</p><div class="remark">Do we need example here? It is rarely used feature.</div></div></section><section id="uc-3.3.3" class="section"><div class="section-titlepage"><h4>3.1.2. XInclude and profiling</h4></div><div class="content"><p>As typical XInclude scenarios include complete elements not just
+their content, it is possible to define several parallel elements
+with different profiling attributes set, enclose them with another
+element and then do inclusion.</p><figure id="uc-3.3.3.3" class="example-wrapper"><div class="title">Example 6. Definition file for further XInclude referencing with
+conditional text</div><div class="example"><pre class="programlisting language-none line-numbers"><code>&lt;article xmlns="http://docbook.org/ns/docbook" version="5.0"&gt;
+  &lt;title&gt;Shared texts&lt;/title&gt;
+  …
+  &lt;para&gt;&lt;phrase xml:id="product-name"&gt;&lt;phrase os="win"&gt;Windows
+        Protector&lt;/phrase&gt;&lt;phrase os="linux"&gt;Linux
+        Protector&lt;/phrase&gt;&lt;/phrase&gt;&lt;/para&gt;
+  …
+&lt;/article&gt;</code></pre></div></figure></div></section></div></section></div></section><section id="uc-4" class="section"><div class="section-titlepage"><h2>4. UC-4: Modularized documents</h2></div><div class="content"><p>For large documents it is often impractical to edit them as
+a single large XML file. It is practical to split large document
+(e.g. book) into few smaller ones (e.g. chapters) and just include
+them into “<span class="quote">master</span>” document. This approach is also useful
+for reusing of boilerplate texts like legalnotices.</p><section id="uc-4.3" class="section"><div class="section-titlepage"><h3>4.1. Current solutions</h3></div><div class="content"><section id="uc-4.3.2" class="section"><div class="section-titlepage"><h4>4.1.1. Entities</h4></div><div class="content"><p>This use-case can be solved by using <a href="https://www.w3.org/TR/REC-xml/#sec-external-ent">external
+entities</a>. This is well supported in processing tools and to
+some extent in authoring tools. Also
+entities and their references are not part of XDM so they do not
+survive XSLT processing which makes various “<span class="quote">document
+massaging</span>” task challenging. External entities doesn't work
+very well if there are multiple levels of inclusions as entities can
+be declared only in the “<span class="quote">main</span>” document.</p><figure id="uc-4.3.2.3" class="example-wrapper"><div class="title">Example 7. Using entities for modularized documents</div><div class="example"><pre class="programlisting language-none line-numbers "><code>…
+&lt;!ENTITY chapter1 SYSTEM "chapter1.xml"&gt;
+&lt;!ENTITY chapter2 SYSTEM "chapter2.xml"&gt;
+…
+&lt;book …&gt;
+  &lt;info&gt;
+    &lt;title&gt;A Book&lt;/title&gt;
+  &lt;/info&gt;
+  
+  &amp;chapter1;
+  &amp;chapter2;
+
+  &lt;index/&gt;
+&lt;/book&gt;</code></pre></div></figure></div></section><section id="uc-4.3.3" class="section"><div class="section-titlepage"><h4>4.1.2. XInclude</h4></div><div class="content"><p><a href="https://www.w3.org/TR/xinclude/">XInclude</a>
+works very well for this use-case.</p><figure id="uc-4.3.3.3" class="example-wrapper"><div class="title">Example 8. Using XIncludes for modularized documents</div><div class="example"><pre class="programlisting language-none line-numbers"><code>&lt;book … xmlns:xi="http://www.w3.org/2001/XInclude"&gt;
+  &lt;info&gt;
+    &lt;title&gt;A Book&lt;/title&gt;
+  &lt;/info&gt;
+  
+  &lt;xi:include href="chapter1.xml"/&gt;
+  &lt;xi:include href="chapter2.xml"/&gt;
+
+  &lt;index/&gt;
+&lt;/book&gt;</code></pre></div></figure></div></section></div></section></div></section><section id="uc-5" class="section"><div class="section-titlepage"><h2>5. UC-5: Repeated transclusion in one “<span class="quote">master</span>” document</h2></div><div class="content"><p>Some types of documentation are highly modular and composed from large
+number of small units. These units can be whole chapters, smaller
+self-standing units like section or topic, or it can be quite small
+chunk of content like admonition. If each such unit is used only once
+in document then there is no problem and we are working only with highly
+modular document (see <a href="#uc-4">UC-4</a>). But if one unit is
+included more then once then we can face several problems.</p><p>If elements in units have assigned unique IDs (by using <code class="tag-attribute">xml:id</code> attribute) then resulting document
+after transclusion contains duplicate IDs. This makes file technically
+invalid and processing tools have difficulties in interpreting
+cross-references found in document.</p><p>There are different strategies which can be used to managed
+units and IDs which are transcluded more then once:</p><div class="itemizedlist"><ul><li><p>Do nothing. This of course doesn't solve problem and
+result of processing is unpredictable.</p></li><li><p>Preserve duplicated IDs only on their first occurrence
+(in document order). Other then first occurrences of ID are
+deleted. All links will then point to the first location in final
+composed document.</p></li><li><p>Make each ID unique within transcluded unit (for
+example by prepending unit specific prefix to each ID). In this cases
+targets of all cross-references have to be adjusted. Several
+adjustment strategies are possible – link to the first occurrence,
+link to the “<span class="quote">closest occurrence</span>” (e.g. find minimum
+subtree rooted at ancestors that contains link
+target).</p></li></ul></div><section id="uc-5.6" class="section"><div class="section-titlepage"><h3>5.1. Current solution</h3></div><div class="content"><p>Unfortunately there is no satisfying solution to this
+use-case. DocBook XSL stylesheet can be customized to link only to the
+first occurrence of ID (see <a href="http://www.sagehill.net/docbookxsl/DuplicateIDs.html">http://www.sagehill.net/docbookxsl/DuplicateIDs.html</a>).</p></div></section></div></section><section id="uc-6" class="section"><div class="section-titlepage"><h2>6. UC-6: Transclusion of foreign content</h2></div><div class="content"><p>Sometimes it is necessary to include foreign content into
+DocBook document. Examples of such foreign content are:</p><div class="itemizedlist"><ul><li><p>listing of program source;</p></li><li><p>content in different vocabulary like DITA or TEI which has
+to be transformed into DocBook prior transclusion.</p></li></ul></div><section id="uc-6.4" class="section"><div class="section-titlepage"><h3>6.1. Current solution</h3></div><div class="content"><p>Text files with programlistings can be transcluded by DocBook
+<code class="tag-element">textdata</code> element or using <code class="code">parse="text"</code>
+functionality of XInclude. There is no standardized way of
+transclusion of different vocabularies. Currently this has to be solved on
+application level.</p></div></section></div></section><section id="evaluation" class="section"><div class="section-titlepage"><h2>7. Evaluation of current technologies</h2></div><div class="content"><p>It is evident that the existing technologies are not able to
+handle use-cases <a href="#uc-5">UC-5</a> and <a href="#uc-6">UC-6</a>. All other use-cases except <a href="#uc-2">UC-2</a>
+can be technically solved using XInclude. However XInclude usage is
+quite cumbersome. It seems that DocBook specific transclusion
+mechanism is needed. Proposal of such mechanism is now discussed by
+DocBook TC and it is available for wider review and comments at <a href="https://docbook.org/docs/transclusion/">https://docbook.org/docs/transclusion/</a>.</p></div></section></div></article><script src="https://cdn.docbook.org/resources/2.1.1/js/prism.js"></script></body></html>
