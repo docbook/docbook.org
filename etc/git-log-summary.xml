@@ -1,5 +1,26 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>ea693fda1095d5efc36037f053b7653bdbc81d69</hash>
+<date>2019-11-04T11:29:53+00:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #39 from ndw/buildfix</message>
+</commit>
+
+<commit>
+<hash>8d07683b554caaa74aca16cfcc83d592089ce702</hash>
+<file>.travis.yml</file>
+<file>build.gradle</file>
+<file>gradle/wrapper/gradle-wrapper.jar</file>
+<file>gradle/wrapper/gradle-wrapper.properties</file>
+<file>gradlew</file>
+<file>gradlew.bat</file>
+<file>style/webpage.xsl</file>
+<date>2019-11-04T11:24:13+00:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Modernize build infrastructure</message>
+</commit>
+
+<commit>
 <hash>fe3e34dc1d2327a26bbda766a33359e69ce98cb7</hash>
 <date>2019-11-04T11:14:15+00:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
