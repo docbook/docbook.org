@@ -14,7 +14,7 @@
                 exclude-result-prefixes="atom m h db f r rel t xlink xs"
 		version="2.0">
 
-<xsl:import href="https://cdn.docbook.org/release/latest/xslt/base/html/final-pass.xsl"/>
+<xsl:import href="https://cdn.docbook.org/release/xsl20/current/xslt/base/html/final-pass.xsl"/>
 
 <xsl:output name="final"
 	    method="xhtml"
