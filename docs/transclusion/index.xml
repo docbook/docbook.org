@@ -6,10 +6,17 @@
 <title>Transclusion</title>
 </info>
 
-<para>Transclusion is an important consideration in document management.
-We’ve documented some of
+<para>Transclusion is an important consideration in document
+management. We’ve documented some of
 <link xlink:href="../transclusion-requirements/transclusion-requirements.html">requirements</link>
-and
-<link xlink:href="transclusion.html">a proposal</link>
-for the semantics of transclusions in DocBook.</para>
+and <link xlink:href="transclusion.html">a proposal</link> for the
+semantics of transclusions in DocBook.</para>
+
+<note>
+<para>These documents are maintained in the
+<link xlink:href="https://github.com/docbook/documents/">documents</link>
+repository. They are published here for convenience and historical
+consistency.</para>
+</note>
+
 </article>
