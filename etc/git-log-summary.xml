@@ -1,5 +1,20 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>a46448431f71a7a1e01df2d08ddcc72e1788b219</hash>
+<date>2020-04-20T11:54:13+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Merge pull request #43 from kosek/master</message>
+</commit>
+
+<commit>
+<hash>5452baf94055ce0664c4b8cb02780e4d7247e5b1</hash>
+<file>etc/releases.xml</file>
+<date>2020-04-20T11:53:32+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Added release metadata</message>
+</commit>
+
+<commit>
 <hash>f34185e62d2c41246e63eb7ded1bbbed2f377be0</hash>
 <date>2020-04-20T11:50:12+02:00</date>
 <committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
