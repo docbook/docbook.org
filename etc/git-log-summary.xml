@@ -1,5 +1,36 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>f34185e62d2c41246e63eb7ded1bbbed2f377be0</hash>
+<date>2020-04-20T11:50:12+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Merge pull request #42 from kosek/master</message>
+</commit>
+
+<commit>
+<hash>bd0d5676a22f42d0a4761037abb0e8f66bc9a20d</hash>
+<file>xml/5.2b08/catalog.xml</file>
+<file>xml/5.2b08/docbook.nvdl</file>
+<file>xml/5.2b08/index.html</file>
+<file>xml/5.2b08/rng/assembly.rnc</file>
+<file>xml/5.2b08/rng/assembly.rng</file>
+<file>xml/5.2b08/rng/dbits.rnc</file>
+<file>xml/5.2b08/rng/dbits.rng</file>
+<file>xml/5.2b08/rng/docbook.rnc</file>
+<file>xml/5.2b08/rng/docbook.rng</file>
+<file>xml/5.2b08/rng/docbookxi.rnc</file>
+<file>xml/5.2b08/rng/docbookxi.rng</file>
+<file>xml/5.2b08/sch/assembly.sch</file>
+<file>xml/5.2b08/sch/dbits.sch</file>
+<file>xml/5.2b08/sch/docbook.sch</file>
+<file>xml/5.2b08/sch/docbookxi.sch</file>
+<file>xml/5.2b08/tools/db4-entities.pl</file>
+<file>xml/5.2b08/tools/db4-upgrade.xsl</file>
+<date>2020-04-20T11:46:55+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Added new schema release 5.2b08</message>
+</commit>
+
+<commit>
 <hash>ea693fda1095d5efc36037f053b7653bdbc81d69</hash>
 <date>2019-11-04T11:29:53+00:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
