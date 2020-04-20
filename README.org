@@ -7,6 +7,8 @@ This repository contains the sources for [[http://docbook.org][DocBook.org]].
 Changes to this repository are processed by Travis CI published to
 DocBook.org automagically.
 
+Please note that it can take more than 10 minutes to propagate changes from this repo to the website. Do not panic!
+
 ** Contact us
 
 To report problems or request changes, please file an issue
