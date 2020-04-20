@@ -1,5 +1,13 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>dea8ec0b0fa90f47cfb854647fc5a3a9422fc3e0</hash>
+<file>README.org</file>
+<date>2020-04-20T12:11:13+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Added note about delay in publishing process</message>
+</commit>
+
+<commit>
 <hash>a46448431f71a7a1e01df2d08ddcc72e1788b219</hash>
 <date>2020-04-20T11:54:13+02:00</date>
 <committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
