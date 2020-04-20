@@ -1,5 +1,20 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>32f9882bfb543796fe5cb4a4543d34bbda921557</hash>
+<date>2020-04-20T19:44:43+02:00</date>
+<committer>Jirka Kosek &lt;jirka@kosek.cz&gt;</committer>
+<message>Merge pull request #44 from ndw/fix-checkin</message>
+</commit>
+
+<commit>
+<hash>8895a987e71727f2fd9635083b6d73538f72c9c1</hash>
+<file>xml/5.2b08/index.html</file>
+<date>2020-04-20T18:36:14+01:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Built file</message>
+</commit>
+
+<commit>
 <hash>dea8ec0b0fa90f47cfb854647fc5a3a9422fc3e0</hash>
 <file>README.org</file>
 <date>2020-04-20T12:11:13+02:00</date>
