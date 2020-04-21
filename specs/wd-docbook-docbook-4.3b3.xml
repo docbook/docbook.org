@@ -73,7 +73,7 @@ message.
 </para>
 
 <para>The errata page for this specification is at
-<ulink url="http://www.oasis-open.org/docbook/specs/docbook-errata.html"/>.
+<ulink url="https://www.oasis-open.org/docbook/specs/docbook-errata.html"/>.
 </para>
 </legalnotice>
 </articleinfo>
@@ -105,7 +105,7 @@ of outstanding requests is available through the
 <ulink url="&tracker;/?atid=384107&amp;group_id=21935&amp;func=browse">tracker</ulink>
 interface. This is also the preferred mechanism for submitting new requests.
 Old RFEs, from a previous legacy tracking system, are
-<ulink url="http://www.oasis-open.org/docbook/old-rfes.html">archived</ulink>
+<ulink url="https://www.oasis-open.org/docbook/old-rfes.html">archived</ulink>
 for reference.</para>
 
 </section>
@@ -128,11 +128,11 @@ document.</para>
 <title>The DocBook Document Type V4.3</title>
 
 <para>The DocBook document type is distributed for
-<ulink url="http://www.oasis-open.org/docbook/xml/">XML</ulink> and
-<ulink url="http://www.oasis-open.org/docbook/sgml/">SGML</ulink>
+<ulink url="https://www.oasis-open.org/docbook/xml/">XML</ulink> and
+<ulink url="https://www.oasis-open.org/docbook/sgml/">SGML</ulink>
 from the
-<ulink url="http://www.oasis-open.org/docbook/">DocBook site</ulink> at
-<ulink url="http://www.oasis-open.org/">OASIS</ulink>.
+<ulink url="https://www.oasis-open.org/docbook/">DocBook site</ulink> at
+<ulink url="https://www.oasis-open.org/">OASIS</ulink>.
 </para>
 
 <section id="s.b3">
@@ -143,7 +143,7 @@ from the
 
 <para>Each of the changes made between DocBook V4.2b2 and DocBook XML V4.3b3
 is summarized here. For complete details, consult the individual RFEs and
-the <ulink url="http://www.oasis-open.org/docbook/#meetings">meeting
+the <ulink url="https://www.oasis-open.org/docbook/#meetings">meeting
 minutes</ulink>.</para>
 
 </section>
@@ -203,7 +203,7 @@ duplicate attribute declarations for some table-related elements.
 
 <para>Each of the changes made between DocBook V4.2 and DocBook XML V4.3b2
 is summarized here. For complete details, consult the individual RFEs and
-the <ulink url="http://www.oasis-open.org/docbook/#meetings">meeting
+the <ulink url="https://www.oasis-open.org/docbook/#meetings">meeting
 minutes</ulink>.</para>
 
 <para>There was no public beta 1 release.</para>
@@ -292,7 +292,7 @@ them into DocBook V5.0.
 
 <para>Each of the changes proposed is summarized here. For complete
 details, consult the individual RFEs and the <ulink
-url="http://www.oasis-open.org/docbook/#meetings">meeting
+url="https://www.oasis-open.org/docbook/#meetings">meeting
 minutes</ulink>.</para>
 
 <itemizedlist spacing="compact">
@@ -366,7 +366,7 @@ into DocBook V6.0.
 
 <para>Each of the changes proposed is summarized here. For complete
 details, consult the individual RFEs and the <ulink
-url="http://www.oasis-open.org/docbook/#meetings">meeting
+url="https://www.oasis-open.org/docbook/#meetings">meeting
 minutes</ulink>.</para>
 
 <itemizedlist spacing="compact">
@@ -511,7 +511,7 @@ the online list of claimed rights.</para>
 essential to implementing this specification, and any offers of patent
 licensing terms, please refer to the Intellectual Property Rights section
 of the DocBook web page
-(<ulink url="http://www.oasis-open.org/committees/docbook/"/>)
+(<ulink url="https://www.oasis-open.org/committees/docbook/"/>)
 </para>
 
 </appendix>

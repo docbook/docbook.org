@@ -22,7 +22,7 @@ or whether DocBook specific mechanism should be designed.</para>
 <para>DocBook TC has not yet decided whether DocBook specific
 mechanism is really required or not. But draft proposal of such transclusion
 mechanism is available at <link
-xlink:href="http://docbook.org/docs/transclusion/"/>.</para>
+xlink:href="https://docbook.org/docs/transclusion/"/>.</para>
 </note>
 
 <section xml:id="uc-1" xreflabel="UC-1">
@@ -355,7 +355,7 @@ can be technically solved using XInclude. However XInclude usage is
 quite cumbersome. It seems that DocBook specific transclusion
 mechanism is needed. Proposal of such mechanism is now discussed by
 DocBook TC and it is available for wider review and comments at <link
-xlink:href="http://docbook.org/docs/transclusion/"/>.</para>
+xlink:href="https://docbook.org/docs/transclusion/"/>.</para>
 
 </section>
 

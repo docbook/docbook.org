@@ -41,7 +41,7 @@ Standards [OASIS]. All Rights Reserved.
 <abstract>
 
 <para>DocBook SVG Document Type is a modular superset of <ulink
-url="http://www.oasis-open.org/docbook/xml/">DocBook XML V4.3</ulink>.
+url="https://www.oasis-open.org/docbook/xml/">DocBook XML V4.3</ulink>.
 It is a DocBook extension to allow Scalable Vector Graphics (SVG) in
 DocBook images. SVG is an XML document type designed for describing
 two-dimensional graphics (vector graphic shapes, images, and
@@ -73,7 +73,7 @@ message.
 
 <!--
 <para>The errata page for this specification is at
-<ulink url="http://www.oasis-open.org/docbook/specs/svg-errata.html"/>.
+<ulink url="https://www.oasis-open.org/docbook/specs/svg-errata.html"/>.
 </para>
 -->
 
@@ -112,7 +112,7 @@ of outstanding requests is available through the
 <ulink url="&tracker;/?atid=384107&amp;group_id=21935&amp;func=browse">tracker</ulink>
 interface. This is also the preferred mechanism for submitting new requests.
 Old RFEs, from a previous legacy tracking system, are
-<ulink url="http://www.oasis-open.org/docbook/old-rfes.html">archived</ulink>
+<ulink url="https://www.oasis-open.org/docbook/old-rfes.html">archived</ulink>
 for reference.</para>
 
 </section>
@@ -137,10 +137,10 @@ document.</para>
 <para>The DocBook SVG Document Type is a superset of
 <xref linkend="bib.docbook43"/>.
 It is distributed from the
-<ulink url="http://www.oasis-open.org/docbook/">DocBook site</ulink> at
-<ulink url="http://www.oasis-open.org/">OASIS</ulink>. It is also available from
+<ulink url="https://www.oasis-open.org/docbook/">DocBook site</ulink> at
+<ulink url="https://www.oasis-open.org/">OASIS</ulink>. It is also available from
 the mirror on
-<ulink url="http://docbook.org/"/>.
+<ulink url="https://docbook.org/"/>.
 </para>
 
 <para>This module integrates SVG into DocBook by incorporating the SVG
@@ -318,7 +318,7 @@ the online list of claimed rights.</para>
 essential to implementing this specification, and any offers of patent
 licensing terms, please refer to the Intellectual Property Rights section
 of the DocBook web page
-(<ulink url="http://www.oasis-open.org/docbook/"/>)
+(<ulink url="https://www.oasis-open.org/docbook/"/>)
 </para>
 
 </appendix>

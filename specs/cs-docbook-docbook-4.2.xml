@@ -67,7 +67,7 @@ message.
 </para>
 
 <para>The errata page for this specification is at
-<ulink url="http://www.oasis-open.org/docbook/specs/&name;-4.2-errata.html"/>.
+<ulink url="https://www.oasis-open.org/docbook/specs/&name;-4.2-errata.html"/>.
 </para>
 </legalnotice>
 </articleinfo>
@@ -99,7 +99,7 @@ of outstanding requests is available through the
 <ulink url="&tracker;/?atid=384107&amp;group_id=21935&amp;func=browse">tracker</ulink>
 interface. This is also the preferred mechanism for submitting new requests.
 Old RFEs, from a previous legacy tracking system, are
-<ulink url="http://www.oasis-open.org/docbook/old-rfes.html">archived</ulink>
+<ulink url="https://www.oasis-open.org/docbook/old-rfes.html">archived</ulink>
 for reference.</para>
 
 </section>
@@ -122,11 +122,11 @@ document.</para>
 <title>The DocBook Document Type V4.2</title>
 
 <para>The DocBook document type is distributed for
-<ulink url="http://www.oasis-open.org/docbook/xml/">XML</ulink> and
-<ulink url="http://www.oasis-open.org/docbook/sgml/">SGML</ulink>
+<ulink url="https://www.oasis-open.org/docbook/xml/">XML</ulink> and
+<ulink url="https://www.oasis-open.org/docbook/sgml/">SGML</ulink>
 from the
-<ulink url="http://www.oasis-open.org/docbook/">DocBook site</ulink> at
-<ulink url="http://www.oasis-open.org/">OASIS</ulink>
+<ulink url="https://www.oasis-open.org/docbook/">DocBook site</ulink> at
+<ulink url="https://www.oasis-open.org/">OASIS</ulink>
 </para>
 
 <section id="s.changes4">
@@ -188,7 +188,7 @@ that ignore marked sections.</para>
 
 <para>Instead of producing a syntax error, the new mechanism simply points all
 of the DTD modules to a file that contains no declarations. The content of this
-file, <ulink url="http://www.oasis-open.org/docbook/xml/configerror.txt"/>,
+file, <ulink url="https://www.oasis-open.org/docbook/xml/configerror.txt"/>,
 explains the cause of the error.</para>
 </listitem>
 </itemizedlist>
@@ -200,7 +200,7 @@ explains the cause of the error.</para>
 
 <para>Each of the changes made between DocBook V4.1 and DocBook XML V4.1.2
 is summarized here. For complete details, consult the individual RFEs and
-the <ulink url="http://www.oasis-open.org/docbook/#meetings">meeting
+the <ulink url="https://www.oasis-open.org/docbook/#meetings">meeting
 minutes</ulink>.</para>
 
 <section id="s.bugs">
@@ -369,13 +369,13 @@ Core Metadata Element Set</ulink>, Version 1.0.</para>
 <section><title>Relationship to the QIC Technical Committee</title>
 
 <para>DocBook and the
-<ulink url="http://www.oasis-open.org/committees/ciq/">Customer Information
+<ulink url="https://www.oasis-open.org/committees/ciq/">Customer Information
 Quality</ulink> (QIC) TC both define markup for names and addresses. In general,
 the requirements for bibliographic name metadata in DocBook are far less complex
 than the requirements for maintaining customer information.</para>
 
 <para>DocBook name and address markup is a proper subset of the QIC
-<ulink url="http://www.oasis-open.org/committees/ciq/ciq.shtml#5">xNL</ulink>
+<ulink url="https://www.oasis-open.org/committees/ciq/ciq.shtml#5">xNL</ulink>
 markup with the following simple transformation:</para>
 
 <informaltable frame="all">
@@ -539,7 +539,7 @@ them into DocBook V5.0.
 
 <para>Each of the changes proposed is summarized here. For complete
 details, consult the individual RFEs and the <ulink
-url="http://www.oasis-open.org/docbook/#meetings">meeting
+url="https://www.oasis-open.org/docbook/#meetings">meeting
 minutes</ulink>.</para>
 
 <itemizedlist spacing="compact">
@@ -613,7 +613,7 @@ into DocBook V6.0.
 
 <para>Each of the changes proposed is summarized here. For complete
 details, consult the individual RFEs and the <ulink
-url="http://www.oasis-open.org/docbook/#meetings">meeting
+url="https://www.oasis-open.org/docbook/#meetings">meeting
 minutes</ulink>.</para>
 
 <itemizedlist spacing="compact">
@@ -761,7 +761,7 @@ the online list of claimed rights.</para>
 essential to implementing this specification, and any offers of patent
 licensing terms, please refer to the Intellectual Property Rights section
 of the DocBook web page
-(<ulink url="http://www.oasis-open.org/committees/docbook/"/>)
+(<ulink url="https://www.oasis-open.org/committees/docbook/"/>)
 </para>
 
 </appendix>
