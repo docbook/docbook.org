@@ -212,8 +212,8 @@ than it would be using a DTD (see <xref linkend="customizations"/>).</para>
 <title>Schema jungle</title>
 
 <para>Schemas for DocBook V5.0 are available in several formats at
-<link xl:href="http://www.oasis-open.org/docbook/xml/&version;/"/> (or the
-mirror at <link xl:href="http://docbook.org/xml/&version;/"/>).
+<link xl:href="https://www.oasis-open.org/docbook/xml/&version;/"/> (or the
+mirror at <link xl:href="https://docbook.org/xml/&version;/"/>).
 Only the RELAX NG schema is normative
 and it is preferred over the other schema languages.  However, for your
 convenience there are also DTD and W3C XML Schema versions provided for DocBook
@@ -370,35 +370,35 @@ Schematron schemas.</para>
 <title>Where to get the schemas</title>
 
 <para>The latest versions of schemas can be obtained from <link
-xl:href="http://docbook.org/schemas/5x.html"/>. At the time this was
+xl:href="https://docbook.org/schemas/5x.html"/>. At the time this was
 written the latest version was &version;. Individual schemas are
 available at the following locations:</para>
 
 <variablelist>
 <varlistentry>
 <term>RELAX NG schema</term>
-<listitem><para><link xl:href="http://docbook.org/xml/&version;/rng/docbook.rng"/></para></listitem>
+<listitem><para><link xl:href="https://docbook.org/xml/&version;/rng/docbook.rng"/></para></listitem>
 </varlistentry>
 <varlistentry>
 <term>RELAX NG schema in compact syntax</term>
-<listitem><para><link xl:href="http://docbook.org/xml/&version;/rng/docbook.rnc"/></para></listitem>
+<listitem><para><link xl:href="https://docbook.org/xml/&version;/rng/docbook.rnc"/></para></listitem>
 </varlistentry>
 <varlistentry>
 <term>DTD</term>
-<listitem><para><link xl:href="http://docbook.org/xml/&version;/dtd/docbook.dtd"/></para></listitem>
+<listitem><para><link xl:href="https://docbook.org/xml/&version;/dtd/docbook.dtd"/></para></listitem>
 </varlistentry>
 <varlistentry>
 <term>W3C XML Schema</term>
-<listitem><para><link xl:href="http://docbook.org/xml/&version;/xsd/docbook.xsd"/></para></listitem>
+<listitem><para><link xl:href="https://docbook.org/xml/&version;/xsd/docbook.xsd"/></para></listitem>
 </varlistentry>
 <varlistentry>
 <term>Schematron schema with additional checks</term>
-<listitem><para><link xl:href="http://docbook.org/xml/&version;/sch/docbook.sch"/></para></listitem>
+<listitem><para><link xl:href="https://docbook.org/xml/&version;/sch/docbook.sch"/></para></listitem>
 </varlistentry>
 </variablelist>
 
 <para>These schemas are also available from the mirror at
-<link xl:href="http://www.oasis-open.org/docbook/xml/&version;/"/>.</para>
+<link xl:href="https://www.oasis-open.org/docbook/xml/&version;/"/>.</para>
 
 </section>
 
@@ -407,7 +407,7 @@ available at the following locations:</para>
 
 <para>Detailed documentation about each DocBook V5.0 element is
 presented in <link
-xl:href="http://docbook.org/tdg5/en/html/pt02.html">the reference part
+xl:href="https://docbook.org/tdg5/en/html/pt02.html">the reference part
 of <citetitle>DocBook: The Definitive Guide</citetitle></link>.</para>
 
 <note>
@@ -856,11 +856,11 @@ document):</para>
 in favor of XLink linking. Instead of the DocBook V4.x <tag condition="v4">ulink</tag>
 element:</para>
 
-<programlisting><![CDATA[<ulink url="http://docbook.org">DocBook site</ulink>]]></programlisting>
+<programlisting><![CDATA[<ulink url="https://docbook.org">DocBook site</ulink>]]></programlisting>
 
 <para>you can now use <tag>link</tag></para>
 
-<programlisting><![CDATA[<link xl:href="http://docbook.org">DocBook site</link>]]></programlisting>
+<programlisting><![CDATA[<link xl:href="https://docbook.org">DocBook site</link>]]></programlisting>
 
 <para>XLink links may contain a fragment identifier, which you can 
 use instead of <tag class="attribute">linkend</tag> to form
@@ -1392,7 +1392,7 @@ linkend="convert4to5"/>.
     web-accessible location like
     <uri>http://docbook.org/xml/&version;/rng/docbook.rng</uri> and
     then use <link
-    xl:href="http://www.oasis-open.org/committees/download.php/14809/xml-catalogs.html">XML
+    xl:href="https://www.oasis-open.org/committees/download.php/14809/xml-catalogs.html">XML
     catalogs</link> to resolve this location to your local copy of the
     schema for improved performance. Unfortunately, at the time of
     this writing not all RELAX NG validators support XML catalogs.</para></footnote>

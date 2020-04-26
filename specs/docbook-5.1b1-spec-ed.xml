@@ -28,7 +28,7 @@ $Id: docbook.xml 8654 2010-06-24 12:45:12Z nwalsh $
 
 <org>
   <orgname>OASIS</orgname>
-  <orgdiv xlink:href="http://www.oasis-open.org/committees/workgroup.php?wg_abbrev=docbook">OASIS DocBook Technical Committee</orgdiv>
+  <orgdiv xlink:href="https://www.oasis-open.org/committees/workgroup.php?wg_abbrev=docbook">OASIS DocBook Technical Committee</orgdiv>
 </org>
 
 <othercredit class="other" otherclass="chair">
@@ -61,7 +61,7 @@ $Id: docbook.xml 8654 2010-06-24 12:45:12Z nwalsh $
 
 <!--
 <bibliorelation type="replaces" condition="online"
-    xlink:href="http://docbook.org/specs/docbook-5.0-spec-cd-05.html"/>
+    xlink:href="https://docbook.org/specs/docbook-5.0-spec-cd-05.html"/>
 -->
 
 <bibliorelation type="references" condition="online"
@@ -186,7 +186,7 @@ developer of this specification, and should be used only to refer to
 the organization and its official outputs. OASIS welcomes reference
 to, and implementation and use of, specifications, while reserving the
 right to enforce its marks against misleading uses. Please see
-<link xlink:href="http://www.oasis-open.org/who/trademark.php"/>
+<link xlink:href="https://www.oasis-open.org/who/trademark.php"/>
 for above guidance.</para>
 </legalnotice>
 </info>

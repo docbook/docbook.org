@@ -2,8 +2,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom"
       xml:lang="EN-us">
   <title>DocBook.org</title>
-  <link rel="alternate" type="text/html" href="http://docbook.org/"/>
-  <link rel="self" href="http://docbook.org/atom/whatsnew.xml"/>
+  <link rel="alternate" type="text/html" href="https://docbook.org/"/>
+  <link rel="self" href="https://docbook.org/atom/whatsnew.xml"/>
   <id>http://docbook.org/atom/whatsnew.xml</id>
   <updated>2010-05-21T19:23:36Z</updated>
   <author>
@@ -13,7 +13,7 @@
   <entry>
     <title>DocBook V5.0.1 Committee Specification</title>
     <link rel="alternate" type="text/html"
-	  href="http://docbook.org/schemas/5x"/>
+	  href="https://docbook.org/schemas/5x"/>
     <id>http://docbook.org/schemas/5x</id>
     <published>2018-11-04T11:18:26Z</published>
     <updated>2018-11-04T11:18:26Z</updated>
@@ -33,7 +33,7 @@
   <entry>
     <title>DocBook V5.1</title>
     <link rel="alternate" type="text/html"
-	  href="http://docbook.org/schemas/5x"/>
+	  href="https://docbook.org/schemas/5x"/>
     <id>http://docbook.org/schemas/5x</id>
     <published>2012-04-24T11:18:26Z</published>
     <updated>2016-11-22T12:00:00Z</updated>
@@ -53,7 +53,7 @@
   <entry>
     <title>DocBook XSD V5.1CR3</title>
     <link rel="alternate" type="text/html"
-	  href="http://docbook.org/xsd/5.1CR3/"/>
+	  href="https://docbook.org/xsd/5.1CR3/"/>
     <id>http://docbook.org/schemas/xsd-5.0b2</id>
     <published>2014-07-23T23:42:01Z</published>
     <updated>2014-07-23T23:42:01Z</updated>
@@ -72,7 +72,7 @@
   <entry>
     <title>DocBook V5.1CR3</title>
     <link rel="alternate" type="text/html"
-	  href="http://docbook.org/xml/5.1CR3/"/>
+	  href="https://docbook.org/xml/5.1CR3/"/>
     <id>http://docbook.org/xml/5.1CR3</id>
     <published>2012-04-24T11:18:26Z</published>
     <updated>2014-07-16T01:16:26Z</updated>
@@ -90,7 +90,7 @@
   <entry>
     <title>DocBook 5.1: The Definitive Guide V1.4.14</title>
     <link rel="alternate" type="text/html"
-	  href="http://docbook.org/tdg51/"/>
+	  href="https://docbook.org/tdg51/"/>
     <id>http://docbook.org/tdg51/</id>
     <published>2005-10-28T14:58:12Z</published>
     <updated>2014-07-16T01:17:13Z</updated>
@@ -127,7 +127,7 @@
   <entry>
     <title>DocBook schema updates</title>
     <link rel="alternate" type="text/html"
-	  href="http://docbook.org/schemas/"/>
+	  href="https://docbook.org/schemas/"/>
     <id>http://docbook.org/schemas/</id>
     <published>2012-01-16T20:30:00Z</published>
     <updated>2012-01-16T20:30:00Z</updated>
@@ -144,7 +144,7 @@
   <entry>
     <title>DocBook XSD V5.0b2 and Publishers XSD V1.0b2</title>
     <link rel="alternate" type="text/html"
-	  href="http://docbook.org/schemas/xsd-5.0b2/"/>
+	  href="https://docbook.org/schemas/xsd-5.0b2/"/>
     <id>http://docbook.org/schemas/xsd-5.0b2</id>
     <published>2011-12-22T19:19:44Z</published>
     <updated>2011-12-22T19:19:44Z</updated>
@@ -164,7 +164,7 @@
   <entry>
     <title>DocBook Meetup in Prague!</title>
     <link rel="alternate" type="text/html"
-	  href="http://docbook.org/meetups"/>
+	  href="https://docbook.org/meetups"/>
     <id>http://docbook.org/meetups/</id>
     <published>2011-10-21T12:23:30Z</published>
     <updated>2011-10-21T12:23:30Z</updated>
@@ -183,7 +183,7 @@
   <entry>
     <title>DocBook Publishers: The Definitive Guide V1.1.0</title>
     <link rel="alternate" type="text/html"
-	  href="http://docbook.org/tdg5/publishers/5.1b3/en/html"/>
+	  href="https://docbook.org/tdg5/publishers/5.1b3/en/html"/>
     <id>http://docbook.org/tdg5/publishers/5.1b3/en/html</id>
     <published>2011-06-17T14:19:00Z</published>
     <updated>2011-06-17T14:19:00</updated>
@@ -201,7 +201,7 @@
   <entry>
     <title>DocBook Publishers V1.1b1</title>
     <link rel="alternate" type="text/html"
-	  href="http://docbook.org/xml/publishers/1.1b1/"/>
+	  href="https://docbook.org/xml/publishers/1.1b1/"/>
     <id>http://docbook.org/xml/publishers/1.1b1</id>
     <published>2011-06-17T14:22:44Z</published>
     <updated>2011-06-17T14:22:44</updated>
@@ -217,7 +217,7 @@
   <entry>
     <title>DocBook Publishers: The Definitive Guide</title>
     <link rel="alternate" type="text/html"
-	  href="http://docbook.org/docs/#publishers"/>
+	  href="https://docbook.org/docs/#publishers"/>
     <id>http://docbook.org/docs/#publishers</id>
     <published>2011-06-16T15:10:00Z</published>
     <updated>2011-06-16T15:10:00</updated>
@@ -235,7 +235,7 @@
   <entry>
     <title>Transclusion in DocBook</title>
     <link rel="alternate" type="text/html"
-	  href="http://docbook.org/docs/#transclusion"/>
+	  href="https://docbook.org/docs/#transclusion"/>
     <id>http://docbook.org/docs/#transclusion</id>
     <published>2010-12-09T12:00:00Z</published>
     <updated>2011-04-17T02:26:00</updated>
@@ -252,7 +252,7 @@
   <entry>
     <title>DocBook 5: The Definitive Guide V1.0.1</title>
     <link rel="alternate" type="text/html"
-	  href="http://docbook.org/tdg5/"/>
+	  href="https://docbook.org/tdg5/"/>
     <id>http://docbook.org/tdg5/</id>
     <published>2010-04-28T12:00:00Z</published>
     <updated>2011-01-19T23:22:44</updated>
@@ -269,7 +269,7 @@
   <entry>
     <title>DocBook V5.1b2</title>
     <link rel="alternate" type="text/html"
-	  href="http://docbook.org/xml/5.1b2/"/>
+	  href="https://docbook.org/xml/5.1b2/"/>
     <id>http://docbook.org/xml/5.1b2</id>
     <published>2010-07-27T18:22:44</published>
     <updated>2010-07-27T18:22:44</updated>
@@ -290,7 +290,7 @@
   <entry>
     <title>DocBook V5.1b1</title>
     <link rel="alternate" type="text/html"
-	  href="http://docbook.org/xml/5.1b1/"/>
+	  href="https://docbook.org/xml/5.1b1/"/>
     <id>http://docbook.org/xml/5.1b1</id>
     <published>2010-07-02T14:37:10Z</published>
     <updated>2010-07-02T14:37:10Z</updated>
@@ -328,7 +328,7 @@
   <entry>
     <title>DocBook V5.0</title>
     <link rel="alternate" type="text/html"
-	  href="http://docbook.org/schemas/5x"/>
+	  href="https://docbook.org/schemas/5x"/>
     <id>http://docbook.org/schemas/5x</id>
     <published>2005-10-28T14:58:12Z</published>
     <updated>2009-11-01T14:39:23Z</updated>
@@ -349,7 +349,7 @@
   <entry>
     <title>DocBook: The Definitive Guide V2.0.17</title>
     <link rel="alternate" type="text/html"
-	  href="http://docbook.org/tdg/"/>
+	  href="https://docbook.org/tdg/"/>
     <id>http://docbook.org/tdg/</id>
     <published>2005-10-28T14:58:12Z</published>
     <updated>2006-10-11T15:23:13Z</updated>
@@ -368,7 +368,7 @@
   <entry>
     <title>DocBook V4.5</title>
     <link rel="alternate" type="text/html"
-	  href="http://docbook.org/schemas/4x"/>
+	  href="https://docbook.org/schemas/4x"/>
     <id>http://docbook.org/schemas/4x</id>
     <published>2005-10-28T14:58:12Z</published>
     <updated>2006-10-03T14:55:42</updated>
