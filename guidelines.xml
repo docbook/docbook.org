@@ -185,7 +185,7 @@ well.</para>
 <section><title>Subscribing and Unsubscribing</title>
 
 <para>Subscriptions to the DocBook lists and their digest forms are
-managed by OASIS: <link xlink:href="http://www.oasis-open.org/mlmanage/index.php"/>.
+managed by OASIS: <link xlink:href="https://www.oasis-open.org/mlmanage/index.php"/>.
 </para>
 
 </section>
@@ -215,7 +215,7 @@ suspected bugs and workarounds on the docbook-apps list
 <tgroup cols="2">
 <tbody>
 <row>
-  <entry><link xlink:href="http://www.oasis-open.org/docbook">http://www.oasis-open.org/docbook</link></entry>
+  <entry><link xlink:href="https://www.oasis-open.org/docbook">http://www.oasis-open.org/docbook</link></entry>
   <entry>The DocBook Home Page</entry>
 </row>
 <row>

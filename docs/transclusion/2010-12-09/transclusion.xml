@@ -17,7 +17,7 @@
 of DocBook transclusion mechanism. Please be aware that this is early
 stage draft – everything described below might change or disappear
 completely. This proposal tries to resolve <citetitle
-xlink:href="http://docbook.org/docs/transclusion-requirements/">Requirements
+xlink:href="https://docbook.org/docs/transclusion-requirements/">Requirements
 for transclusion in DocBook</citetitle>.  DocBook TC welcomes any
 feedback on this draft, especially from users and developers of
 DocBook authoring and processing tools. Plese direct your comments to
@@ -491,9 +491,9 @@ be prepared in advance.</para>
 
 <para>The above DocBook transclusion proposal solves all
 <link
-xlink:href="http://docbook.org/docs/transclusion-requirements/">use
+xlink:href="https://docbook.org/docs/transclusion-requirements/">use
 cases</link> except <link
-xlink:href="http://docbook.org/docs/transclusion-requirements/#uc-2">UC-2</link>. Transclusions
+xlink:href="https://docbook.org/docs/transclusion-requirements/#uc-2">UC-2</link>. Transclusions
 are more usable and can solve various problems introduced by multiple
 inclusion of the same content. Some of those problems can be solved by
 using XInclude – but syntax is cumbersome and there is no good

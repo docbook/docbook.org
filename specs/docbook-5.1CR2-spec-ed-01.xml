@@ -22,7 +22,7 @@
 
 <org>
   <orgname>OASIS</orgname>
-  <orgdiv xlink:href="http://www.oasis-open.org/committees/workgroup.php?wg_abbrev=docbook">OASIS DocBook Technical Committee</orgdiv>
+  <orgdiv xlink:href="https://www.oasis-open.org/committees/workgroup.php?wg_abbrev=docbook">OASIS DocBook Technical Committee</orgdiv>
 </org>
 
 <othercredit class="other" otherclass="chair">
@@ -55,10 +55,10 @@
 
 <!--
 <bibliorelation type="replaces" condition="online"
-    xlink:href="http://docbook.org/specs/docbook-5.0-spec-cs-02.html"/>
+    xlink:href="https://docbook.org/specs/docbook-5.0-spec-cs-02.html"/>
 
 <bibliorelation type="replaces" condition="print"
-    xlink:href="http://docbook.org/specs/docbook-5.0-spec-cs-02.pdf"/>
+    xlink:href="https://docbook.org/specs/docbook-5.0-spec-cs-02.pdf"/>
 <bibliorelation type="references" condition="print"
     xlink:href="http://docs.oasis-open.org/docbook/specs/docbook-4.5-spec.pdf"/>
 -->
@@ -87,11 +87,11 @@ XML DTD, but the RELAX NG Schema is the normative schema.</para>
 <legalnotice role="status">
 <para>This document was last revised or approved by the DocBook Technical Committee on the above date. The level of approval is also listed above. Check the &quot;Latest Version&quot; location noted above for possible later revisions of this document.</para>
 
-<para>Technical Committee members should send comments on this specification to the Technical Committee' email list. Others should send comments to the Technical Committee by using the “Send A Comment” button on the Technical Committee's web page at <link xlink:href="http://www.oasis-open.org/committees/docbook/">http://www.oasis-open.org/committees/docbook/</link>.</para>
+<para>Technical Committee members should send comments on this specification to the Technical Committee' email list. Others should send comments to the Technical Committee by using the “Send A Comment” button on the Technical Committee's web page at <link xlink:href="https://www.oasis-open.org/committees/docbook/">http://www.oasis-open.org/committees/docbook/</link>.</para>
 
-<para>For information on whether any patents have been disclosed that may be essential to implementing this specification, and any offers of patent licensing terms, please refer to the Intellectual Property Rights section of the Technical Committee web page <link xlink:href="http://www.oasis-open.org/committees/docbook/ipr.php">http://www.oasis-open.org/committees/docbook/ipr.php</link>.</para>
+<para>For information on whether any patents have been disclosed that may be essential to implementing this specification, and any offers of patent licensing terms, please refer to the Intellectual Property Rights section of the Technical Committee web page <link xlink:href="https://www.oasis-open.org/committees/docbook/ipr.php">http://www.oasis-open.org/committees/docbook/ipr.php</link>.</para>
 
-<para>The non-normative errata page for this specification is located at <link xlink:href="http://www.oasis-open.org/committees/docbook/">http://www.oasis-open.org/committees/docbook/</link>.</para>
+<para>The non-normative errata page for this specification is located at <link xlink:href="https://www.oasis-open.org/committees/docbook/">http://www.oasis-open.org/committees/docbook/</link>.</para>
 </legalnotice>
 
 <legalnotice role="notices">
@@ -163,7 +163,7 @@ developer of this specification, and should be used only to refer to
 the organization and its official outputs. OASIS welcomes reference
 to, and implementation and use of, specifications, while reserving the
 right to enforce its marks against misleading uses. Please see
-<link xlink:href="http://www.oasis-open.org/who/trademark.php"/>
+<link xlink:href="https://www.oasis-open.org/who/trademark.php"/>
 for above guidance.</para>
 </legalnotice>
 </info>
@@ -176,7 +176,7 @@ particularly well suited to books and papers about computer hardware
 and software (though it is by no means limited to these applications).
 </para>
 
-<para>The <link xlink:href="http://www.oasis-open.org/committees/docbook">DocBook
+<para>The <link xlink:href="https://www.oasis-open.org/committees/docbook">DocBook
 Technical Committee</link> maintains the DocBook schema. Starting
 with V5.0, DocBook is normatively available as a
 <xref linkend="iso19757-2"/> Schema (with some additional
@@ -256,7 +256,7 @@ The Definitive Guide</link>. O'Reilly Media. April 2010.</citetitle>
 </bibliomixed>
 <bibliomixed xml:id="bib.docbooktdg51"><abbrev>DocBook 5.1: TDG</abbrev>
 Norman Walsh.
-<citetitle><link xlink:href="http://docbook.org/tdg51/en/html/">DocBook 5.1:
+<citetitle><link xlink:href="https://docbook.org/tdg51/en/html/">DocBook 5.1:
 The Definitive Guide</link>.</citetitle>
 </bibliomixed>
 </bibliolist>
@@ -287,9 +287,9 @@ World Wide Web Consortium, 2000.
 <link xlink:href="&root;rng/">RELAX NG Schema</link> is distributed
 from the
 <link xlink:href="http://docs.oasis-open.org/docbook/">DocBook site</link> at
-<link xlink:href="http://www.oasis-open.org/">OASIS</link>.
+<link xlink:href="https://www.oasis-open.org/">OASIS</link>.
 DocBook is also available from the mirror on
-<link xlink:href="http://docbook.org/"/>.
+<link xlink:href="https://docbook.org/"/>.
 </para>
 
 <section xml:id="s.assembly">
@@ -353,7 +353,7 @@ what relationships exist between them and, at least for print
 presentation, what linear order is to be imposed upon them.</para>
 
 <para>DocBook uses an
-<link xlink:href="http://docbook.org/tdg51/en/html/ch06.html">assemblies</link>
+<link xlink:href="https://docbook.org/tdg51/en/html/ch06.html">assemblies</link>
 for this purpose.
 </para>
 

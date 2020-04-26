@@ -2,7 +2,7 @@
 <!ENTITY standard "Working Draft">
 <!ENTITY tracker "http://sourceforge.net/tracker">
 <!ENTITY RFE "&tracker;/index.php?func=detail&amp;group_id=21935&amp;atid=384107&amp;">
-<!ENTITY root "http://www.oasis-open.org/docbook/">
+<!ENTITY root "https://www.oasis-open.org/docbook/">
 ]>
 <article xmlns="http://docbook.org/ns/docbook"
 	 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -123,7 +123,7 @@ of outstanding requests is available through the
 <link xlink:href="&tracker;/?atid=384107&amp;group_id=21935&amp;func=browse">tracker</link>
 interface. This is also the preferred mechanism for submitting new requests.
 Old RFEs, from a previous legacy tracking system, are
-<link xlink:href="http://www.oasis-open.org/docbook/old-rfes.html">archived</link>
+<link xlink:href="https://www.oasis-open.org/docbook/old-rfes.html">archived</link>
 for reference.</para>
 
 </section>
@@ -148,10 +148,10 @@ document.</para>
 <para>The DocBook
 <link xlink:href="&root;rng/">RELAX NG Schema</link> is distributed
 from the
-<link xlink:href="http://www.oasis-open.org/docbook/">DocBook site</link> at
-<link xlink:href="http://www.oasis-open.org/">OASIS</link>.
+<link xlink:href="https://www.oasis-open.org/docbook/">DocBook site</link> at
+<link xlink:href="https://www.oasis-open.org/">OASIS</link>.
 DocBook is also available from the mirror on
-<link xlink:href="http://docbook.org/"/>.
+<link xlink:href="https://docbook.org/"/>.
 </para>
 
 <section xml:id="s.50b6">
@@ -1132,7 +1132,7 @@ the online list of claimed rights.</para>
 essential to implementing this specification, and any offers of patent
 licensing terms, please refer to the Intellectual Property Rights section
 of the DocBook web page
-(<link xlink:href="http://www.oasis-open.org/committees/docbook/"/>)
+(<link xlink:href="https://www.oasis-open.org/committees/docbook/"/>)
 </para>
 
 </appendix>

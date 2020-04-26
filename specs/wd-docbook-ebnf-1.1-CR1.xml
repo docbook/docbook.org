@@ -38,7 +38,7 @@
 <abstract>
 
 <para>DocBook EBNF Document Type is a modular superset of
-<ulink url="http://www.oasis-open.org/docbook/xml/">DocBook XML V4.2</ulink>.
+<ulink url="https://www.oasis-open.org/docbook/xml/">DocBook XML V4.2</ulink>.
 It is a DocBook extension to support Extended Backus-Naur Form (EBNF) productions.
 </para>
 </abstract>
@@ -68,7 +68,7 @@ message.
 
 <!--
 <para>The errata page for this specification is at
-<ulink url="http://www.oasis-open.org/docbook/specs/ebnf-errata.html"/>.
+<ulink url="https://www.oasis-open.org/docbook/specs/ebnf-errata.html"/>.
 </para>
 -->
 
@@ -103,7 +103,7 @@ of outstanding requests is available through the
 <ulink url="&tracker;/?atid=384107&amp;group_id=21935&amp;func=browse">tracker</ulink>
 interface. This is also the preferred mechanism for submitting new requests.
 Old RFEs, from a previous legacy tracking system, are
-<ulink url="http://www.oasis-open.org/docbook/old-rfes.html">archived</ulink>
+<ulink url="https://www.oasis-open.org/docbook/old-rfes.html">archived</ulink>
 for reference.</para>
 
 </section>
@@ -128,8 +128,8 @@ document.</para>
 <para>The DocBook EBNF Document Type is a superset of
 <xref linkend="bib.docbook42"/>.
 It is distributed from the
-<ulink url="http://www.oasis-open.org/docbook/">DocBook site</ulink> at
-<ulink url="http://www.oasis-open.org/">OASIS</ulink>.
+<ulink url="https://www.oasis-open.org/docbook/">DocBook site</ulink> at
+<ulink url="https://www.oasis-open.org/">OASIS</ulink>.
 </para>
 
 <section id="usage">
@@ -262,7 +262,7 @@ the online list of claimed rights.</para>
 essential to implementing this specification, and any offers of patent
 licensing terms, please refer to the Intellectual Property Rights section
 of the DocBook web page
-(<ulink url="http://www.oasis-open.org/docbook/"/>)
+(<ulink url="https://www.oasis-open.org/docbook/"/>)
 </para>
 
 </appendix>

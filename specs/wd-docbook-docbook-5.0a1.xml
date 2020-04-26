@@ -116,7 +116,7 @@ of outstanding requests is available through the
 <ulink url="&tracker;/?atid=384107&amp;group_id=21935&amp;func=browse">tracker</ulink>
 interface. This is also the preferred mechanism for submitting new requests.
 Old RFEs, from a previous legacy tracking system, are
-<ulink url="http://www.oasis-open.org/docbook/old-rfes.html">archived</ulink>
+<ulink url="https://www.oasis-open.org/docbook/old-rfes.html">archived</ulink>
 for reference.</para>
 
 </section>
@@ -140,10 +140,10 @@ document.</para>
 
 <para>The DocBook <ulink url="&root;rng/">RELAX NG Schema</ulink> is distributed
 from the
-<ulink url="http://www.oasis-open.org/docbook/">DocBook site</ulink> at
-<ulink url="http://www.oasis-open.org/">OASIS</ulink>.
+<ulink url="https://www.oasis-open.org/docbook/">DocBook site</ulink> at
+<ulink url="https://www.oasis-open.org/">OASIS</ulink>.
 DocBook is also available from the mirror on
-<ulink url="http://docbook.org/"/>.
+<ulink url="https://docbook.org/"/>.
 </para>
 
 <section id="s.cs">
@@ -894,7 +894,7 @@ the online list of claimed rights.</para>
 essential to implementing this specification, and any offers of patent
 licensing terms, please refer to the Intellectual Property Rights section
 of the DocBook web page
-(<ulink url="http://www.oasis-open.org/committees/docbook/"/>)
+(<ulink url="https://www.oasis-open.org/committees/docbook/"/>)
 </para>
 
 </appendix>
