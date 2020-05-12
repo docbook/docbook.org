@@ -1,5 +1,38 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>3d455d674e56521d264d1695d2e3fe1b8279caab</hash>
+<date>2020-05-12T13:59:53+01:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #46 from ndw/ver52b09</message>
+</commit>
+
+<commit>
+<hash>aea8272998be5a3c0f47813bb802551834845bb9</hash>
+<file>xml/5.2b09/catalog.xml</file>
+<file>xml/5.2b09/docbook.nvdl</file>
+<file>xml/5.2b09/rng/assembly.rnc</file>
+<file>xml/5.2b09/rng/assembly.rng</file>
+<file>xml/5.2b09/rng/assemblyxi.rnc</file>
+<file>xml/5.2b09/rng/assemblyxi.rng</file>
+<file>xml/5.2b09/rng/dbits.rnc</file>
+<file>xml/5.2b09/rng/dbits.rng</file>
+<file>xml/5.2b09/rng/docbook.rnc</file>
+<file>xml/5.2b09/rng/docbook.rng</file>
+<file>xml/5.2b09/rng/docbookxi.rnc</file>
+<file>xml/5.2b09/rng/docbookxi.rng</file>
+<file>xml/5.2b09/sch/assembly.sch</file>
+<file>xml/5.2b09/sch/assemblyxi.sch</file>
+<file>xml/5.2b09/sch/dbits.sch</file>
+<file>xml/5.2b09/sch/docbook.sch</file>
+<file>xml/5.2b09/sch/docbookxi.sch</file>
+<file>xml/5.2b09/tools/db4-entities.pl</file>
+<file>xml/5.2b09/tools/db4-upgrade.xsl</file>
+<date>2020-05-12T13:55:57+01:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>DocBook 5.2b09 released</message>
+</commit>
+
+<commit>
 <hash>e6e74538a8f210d3d03f66b7e04d4bfd8252a294</hash>
 <date>2020-04-26T16:28:17+01:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
