@@ -1,5 +1,13 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>2addfce464ffc44c4adf857468c362b1c2acc610</hash>
+<date>2020-05-12T15:36:18-07:00</date>
+<committer-name>bobstayton</committer-name>
+<committer-email>bobs@sagehill.net</committer-email>
+<message>Merge pull request #48 from docbook/bobs_52b09_update2</message>
+</commit>
+
+<commit>
 <hash>17467630a4773ed30db1e2800cd26ffc7491bba9</hash>
 <file>xml/5.2b09/docbook-52b09.zip</file>
 <date>2020-05-12T15:35:02-07:00</date>
