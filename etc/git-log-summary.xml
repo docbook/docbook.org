@@ -1,5 +1,14 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>17467630a4773ed30db1e2800cd26ffc7491bba9</hash>
+<file>xml/5.2b09/docbook-52b09.zip</file>
+<date>2020-05-12T15:35:02-07:00</date>
+<committer-name>bobstayton</committer-name>
+<committer-email>bobs@sagehill.net</committer-email>
+<message>replace source zip file with built zip file</message>
+</commit>
+
+<commit>
 <hash>4370c444466b614e092cbbc5815847ed2329baa1</hash>
 <date>2020-05-12T10:39:56-07:00</date>
 <committer-name>bobstayton</committer-name>
