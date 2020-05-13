@@ -1,5 +1,20 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
 <commit>
+<hash>97c900d5308d007bdcb2a291164b6d311503be0b</hash>
+<date>2020-05-13T10:41:04+01:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #49 from ndw/pub52b09</message>
+</commit>
+
+<commit>
+<hash>79643308418536003c5d158ba406db34f1e02df6</hash>
+<file>etc/releases.xml</file>
+<date>2020-05-13T10:29:10+01:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Publish the 5.2b09 release on the 5.2 Schemas page</message>
+</commit>
+
+<commit>
 <hash>2addfce464ffc44c4adf857468c362b1c2acc610</hash>
 <date>2020-05-12T15:36:18-07:00</date>
 <committer-name>bobstayton</committer-name>
