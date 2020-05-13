@@ -121,6 +121,7 @@
 <dir path="xml/5.2b04"  date="2018-04-25T00:00:00Z" release='5.2' version="5.2b04" type="xml"  kind="beta"/>
 <dir path="xml/5.2b05"  date="2018-08-13T00:00:00Z" release='5.2' version="5.2b05" type="xml"  kind="beta"/>
 <dir path="xml/5.2b08"  date="2020-04-20T00:00:00Z" release='5.2' version="5.2b08" type="xml"  kind="beta"/>
+<dir path="xml/5.2b09"  date="2020-05-12T13:00:00Z" release='5.2' version="5.2b09" type="xml"  kind="beta"/>
 </module>
 
 <module name="DocBook XSD">
