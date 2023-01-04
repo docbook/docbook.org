@@ -58,6 +58,7 @@
   <xsl:if test="@xml:id='home'">
     <link rel="alternate" type="application/atom+xml" title="Atom"
           href="https://docbook.org/atom/whatsnew.xml" />
+    <link rel="me" href="https://botsin.space/@docbook" />
   </xsl:if>
 </xsl:template>
 
