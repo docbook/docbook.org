@@ -1,142 +1,65 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-      <title>Errata for DocBook: The Definitive Guide</title>
-      <meta charset="utf-8"></meta>
-      <meta name="generator" content="DocBook XSL 2.0 Stylesheets V2.4.3"></meta>
-      <link href="https://cdn.docbook.org/resources/2.1.1/css/default.css" rel="stylesheet" type="text/css"></link>
-      <link href="https://cdn.docbook.org/resources/2.1.1/css/db-prism.css" rel="stylesheet" type="text/css"></link>
-      <link rel="stylesheet" type="text/css" href="/css/website.css"></link>
-      <link rel="stylesheet" type="text/css" href="/css/tabs.css"></link>
-      <link rel="stylesheet" type="text/css" href="/css/website.css"></link>
-      <link rel="icon" href="https://docbook.org/graphics/docbook-icon16.png" type="image/png"></link><script type="text/javascript" src="https://cdn.docbook.org/resources/2.1.1/js/dbmodnizr.js"></script></head>
-   <body>
-      <article id="R.1" class="article">
-         <header class="article-titlepage">
-            <h2>Errata for DocBook: The Definitive Guide</h2>
-         </header>
-         <div class="lists-of-titles">
-            <div class="toc">
-               <div class="title">Table of Contents</div>
-               <ul class="toc">
-                  <li><span><a href="#R.1.4"><span class="label"></span>Errata for the first edition</a></span></li>
-               </ul>
-            </div>
-         </div>
-         <div class="content">
-            <p>We invite your participation in the evolution of this book as a
-               standard like its subject, the DocBook DTD. As DocBook continues to
-               evolve, we will continue to update the online version of this book.
-               The printed edition will also be updated in the regular way that
-               O'Reilly updates its books, fixing errors and adding essential
-               technical information as it reprints the book until a new edition is
-               necessary.
-               </p>
-            <p>If you find an error or omission in <em class="citetitle">DocBook: The
-                  Definitive Guide</em>, please
-               <a href="mailto:bookcomments@docbook.org">let us know</a>.
-               </p>
-            <section id="R.1.4" class="section">
-               <div class="section-titlepage">
-                  <h2>Errata for the first edition</h2>
-               </div>
-               <div class="content">
-                  <div class="itemizedlist">
-                     <ul>
-                        <li>
-                           <p><strong class="emphasis">The XSL stylesheet in
-                                 <a href="html/ch04.html#EX-XSL">Example 4-4</a> has
-                                 out-dated namespace URIs</strong></p>
-                           <p>The XSL WG changed the URI before going to Proposed Recommendation.
-                              The correct URIs are now as follows:</p>
-                           <pre class="programlisting language-none line-numbers"><code>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<!DOCTYPE html>
+<html><head><title>Errata for DocBook: The Definitive Guide</title><meta charset="utf-8"><meta name="generator" content="DocBook XSL 2.0 Stylesheets V2.4.3"><link href="https://cdn.docbook.org/resources/2.1.1/css/default.css" rel="stylesheet" type="text/css"><link href="https://cdn.docbook.org/resources/2.1.1/css/db-prism.css" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="/css/website.css"><link rel="stylesheet" type="text/css" href="/css/tabs.css"><link rel="stylesheet" type="text/css" href="/css/website.css"><link rel="icon" href="https://docbook.org/graphics/docbook-icon16.png" type="image/png"><script type="text/javascript" src="https://cdn.docbook.org/resources/2.1.1/js/dbmodnizr.js"></script></head><body><article id="R.1" class="article"><header class="article-titlepage"><h2>Errata for DocBook: The Definitive Guide</h2></header><div class="lists-of-titles"><div class="toc"><div class="title">Table of Contents</div><ul class="toc"><li><span><a href="#R.1.4"><span class="label"></span>Errata for the first edition</a></span></li></ul></div></div><div class="content"><p>We invite your participation in the evolution of this book as a
+standard like its subject, the DocBook DTD. As DocBook continues to
+evolve, we will continue to update the online version of this book.
+The printed edition will also be updated in the regular way that
+O'Reilly updates its books, fixing errors and adding essential
+technical information as it reprints the book until a new edition is
+necessary.
+</p><p>If you find an error or omission in <em class="citetitle">DocBook: The
+Definitive Guide</em>, please
+<a href="mailto:bookcomments@docbook.org">let us know</a>.
+</p><section id="R.1.4" class="section"><div class="section-titlepage"><h2>Errata for the first edition</h2></div><div class="content"><div class="itemizedlist"><ul><li><p><strong class="emphasis">The XSL stylesheet in
+<a href="html/ch04.html#EX-XSL">Example 4-4</a> has
+out-dated namespace URIs</strong></p><p>The XSL WG changed the URI before going to Proposed Recommendation.
+The correct URIs are now as follows:</p><pre class="programlisting language-none line-numbers">
+<code>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:fo="http://www.w3.org/1999/XSL/Format"&gt;
 
-</code></pre>
-                           <p>Fixed in online version 1.0.2.</p>
-                        </li>
-                        <li>
-                           <p><strong class="emphasis">In 
-                                 <a href="html/ch05.html#FG-DOCBOOK-FLOWCHART">Figure 5-1</a>,
-                                 the “<span class="quote">Z</span>” in “<span class="quote">dbhierZ.redecl</span>” should be a
-                                 numeral “<span class="quote">2</span>”.</strong></p>
-                           <p>Fixed in online version 1.0.2.</p>
-                        </li>
-                        <li>
-                           <p><strong class="emphasis">In 
-                                 <a href="html/ch04.html#SIMPLE.DOCUMENT">Example 4-6</a>,
-                                 “<span class="quote">bold</span>” should read “<span class="quote">strong</span>”.</strong></p>
-                           <p>The line that reads:</p>
-                           <pre class="programlisting language-none line-numbers"><code>&lt;emphasis role=bold&gt;This&lt;/emphasis&gt; paragraph contains
+</code></pre><p>Fixed in online version 1.0.2.</p></li><li><p><strong class="emphasis">In 
+<a href="html/ch05.html#FG-DOCBOOK-FLOWCHART">Figure 5-1</a>,
+the “<span class="quote">Z</span>” in “<span class="quote">dbhierZ.redecl</span>” should be a
+numeral “<span class="quote">2</span>”.</strong></p><p>Fixed in online version 1.0.2.</p></li><li><p><strong class="emphasis">In 
+<a href="html/ch04.html#SIMPLE.DOCUMENT">Example 4-6</a>,
+“<span class="quote">bold</span>” should read “<span class="quote">strong</span>”.</strong></p><p>The line that reads:</p><pre class="programlisting language-none line-numbers">
+<code>&lt;emphasis role=bold&gt;This&lt;/emphasis&gt; paragraph contains
 
-</code></pre>
-                           <p>Should read:</p>
-                           <pre class="programlisting language-none line-numbers"><code>&lt;emphasis role=strong&gt;This&lt;/emphasis&gt; paragraph contains
+</code></pre><p>Should read:</p><pre class="programlisting language-none line-numbers">
+<code>&lt;emphasis role=strong&gt;This&lt;/emphasis&gt; paragraph contains
 
-</code></pre>
-                           <p>Fixed in online version 1.0.2.</p>
-                        </li>
-                        <li>
-                           <p><strong class="emphasis">In 
-                                 <a href="html/ch04.html#dsssl.expr.conditional">Section 4.3.6.7</a>,
-                                 the examples for <code class="literal">case</code> and  <code class="literal">cond</code>
-                                 are missing several closing parentheses.</strong></p>
-                           <p>The text should read as follows. Note the additional closing
-                              parenthesis at the end of each intermediate constant/condition
-                              clause:</p>
-                           <div class="variablelist">
-                              <dl>
-                                 <dt><span class="term"><code class="literal">case</code></span></dt>
-                                 <dd>
-                                    <p>
-                                       
-                                       <code class="literal">case</code> selects from among several alternatives:
-                                       </p>
-                                    <pre class="programlisting language-none line-numbers"><code>
+</code></pre><p>Fixed in online version 1.0.2.</p></li><li><p><strong class="emphasis">In 
+<a href="html/ch04.html#dsssl.expr.conditional">Section 4.3.6.7</a>,
+the examples for <code class="literal">case</code> and  <code class="literal">cond</code>
+are missing several closing parentheses.</strong></p><p>The text should read as follows. Note the additional closing
+parenthesis at the end of each intermediate constant/condition
+clause:</p><div class="variablelist"><dl><dt><span class="term"><code class="literal">case</code></span></dt><dd><p>
+
+<code class="literal">case</code> selects from among several alternatives:
+</p><pre class="programlisting language-none line-numbers">
+<code>
 (case <em class="replaceable"><code>expression</code></em>
   ((<em class="replaceable"><code>constant1</code></em>) (<em class="replaceable"><code>expression1</code></em>))
   ((<em class="replaceable"><code>constant2</code></em>) (<em class="replaceable"><code>expression2</code></em>))
   ((<em class="replaceable"><code>constant3</code></em>) (<em class="replaceable"><code>expression3</code></em>))
   (else <em class="replaceable"><code>else-expression</code></em>))
-</code></pre>
-                                    <p>
-                                       The value of the expression is compared against each of the constants
-                                       in turn and the expression associated with the first matching constant
-                                       is evaulated.
-                                       </p>
-                                 </dd>
-                                 <dt><span class="term"><code class="literal">cond</code></span></dt>
-                                 <dd>
-                                    <p>
-                                       
-                                       <code class="literal">cond</code> also selects from among several alternatives,
-                                       but the selection is performed by evaluating each expression:
-                                       </p>
-                                    <pre class="programlisting language-none line-numbers"><code>
+</code></pre><p>
+The value of the expression is compared against each of the constants
+in turn and the expression associated with the first matching constant
+is evaulated.
+</p></dd><dt><span class="term"><code class="literal">cond</code></span></dt><dd><p>
+
+<code class="literal">cond</code> also selects from among several alternatives,
+but the selection is performed by evaluating each expression:
+</p><pre class="programlisting language-none line-numbers">
+<code>
 (cond
   ((<em class="replaceable"><code>condition1</code></em>) (<em class="replaceable"><code>expression1</code></em>))
   ((<em class="replaceable"><code>condition2</code></em>) (<em class="replaceable"><code>expression2</code></em>))
   ((<em class="replaceable"><code>condition3</code></em>) (<em class="replaceable"><code>expression3</code></em>))
   (else <em class="replaceable"><code>else-expression</code></em>))
-</code></pre>
-                                    <p>
-                                       The value of each conditional is calculated in turn. The expression
-                                       associated with the first condition that is true is evaluated.
-                                       </p>
-                                 </dd>
-                              </dl>
-                           </div>
-                           <p>Fixed in online version 1.0.2.</p>
-                        </li>
-                        <li>
-                           <p><strong class="emphasis">Remove the “<span class="quote">de</span>”
-                                 in the French example preceding 
-                                 <a href="html/ch04.html#TBL.LANG">Table 4-1</a>.</strong></p>
-                           <p>Fixed in online version 1.0.2.</p>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </section>
-         </div>
-      </article><script src="https://cdn.docbook.org/resources/2.1.1/js/prism.js"></script></body>
-</html>
+</code></pre><p>
+The value of each conditional is calculated in turn. The expression
+associated with the first condition that is true is evaluated.
+</p></dd></dl></div><p>Fixed in online version 1.0.2.</p></li><li><p><strong class="emphasis">Remove the “<span class="quote">de</span>”
+in the French example preceding 
+<a href="html/ch04.html#TBL.LANG">Table 4-1</a>.</strong></p><p>Fixed in online version 1.0.2.</p></li></ul></div></div></section></div></article><script src="https://cdn.docbook.org/resources/2.1.1/js/prism.js"></script></body></html>

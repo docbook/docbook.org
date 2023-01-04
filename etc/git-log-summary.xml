@@ -1,4 +1,35 @@
-<git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/docbook/docbook.org/'>
+<git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/Users/ndw/Websites/docbook.org/'>
+<commit>
+<hash>c6eb91efa8cfa959996643a92cf48cb28487e1d5</hash>
+<file>.travis.yml</file>
+<date>2023-01-04T10:01:37+00:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Defunct</message>
+</commit>
+
+<commit>
+<hash>f4afc45feb8a34b37fd381bf990c05e681062f36</hash>
+<file>style/webpage.xsl</file>
+<date>2023-01-04T10:01:08+00:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Add mastodon rel=me link</message>
+</commit>
+
+<commit>
+<hash>706b1b53f83e6c6a6f40d22653e2c91be7b7a65f</hash>
+<file>xml/5.2b08/index.html</file>
+<file>xml/5.2b08/rng/index.html</file>
+<file>xml/5.2b08/sch/index.html</file>
+<file>xml/5.2b08/tools/index.html</file>
+<file>xml/5.2b09/index.html</file>
+<file>xml/5.2b09/rng/index.html</file>
+<file>xml/5.2b09/sch/index.html</file>
+<file>xml/5.2b09/tools/index.html</file>
+<date>2023-01-04T10:00:57+00:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>From a while back</message>
+</commit>
+
 <commit>
 <hash>97c900d5308d007bdcb2a291164b6d311503be0b</hash>
 <date>2020-05-13T10:41:04+01:00</date>
